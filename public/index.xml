@@ -7,34 +7,7 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>zh-hans</language>
     <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
-    <lastBuildDate>Fri, 12 May 2023 14:18:26 +0800</lastBuildDate><atom:link href="http://www.heyuan110.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Test2</title>
-      <link>http://www.heyuan110.com/posts/test2/</link>
-      <pubDate>Fri, 12 May 2023 14:18:26 +0800</pubDate>
-      
-      <guid>http://www.heyuan110.com/posts/test2/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>My First Post</title>
-      <link>http://www.heyuan110.com/posts/my-first-post/</link>
-      <pubDate>Fri, 12 May 2023 13:48:00 +0800</pubDate>
-      
-      <guid>http://www.heyuan110.com/posts/my-first-post/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title>Test</title>
-      <link>http://www.heyuan110.com/posts/test/</link>
-      <pubDate>Thu, 11 May 2023 21:21:55 +0800</pubDate>
-      
-      <guid>http://www.heyuan110.com/posts/test/</guid>
-      <description>welcome to my blog</description>
-    </item>
-    
+    <lastBuildDate>Sat, 04 Jul 2020 00:16:54 +0000</lastBuildDate><atom:link href="http://www.heyuan110.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>《Docker 系列》</title>
       <link>http://www.heyuan110.com/docker-categories/</link>
@@ -131,6 +104,34 @@ Traceroute程序的设计是利用ICMP及IP header的TTL（Time To Live）栏位
       
       <guid>http://www.heyuan110.com/linux-categories/</guid>
       <description> Shell脚本中$符开头变量解释 </description>
+    </item>
+    
+    <item>
+      <title>Linux(MacOS)命令笔记</title>
+      <link>http://www.heyuan110.com/posts/linux/2020-03-19-linux-mac-commands/</link>
+      <pubDate>Thu, 19 Mar 2020 10:55:52 +0000</pubDate>
+      
+      <guid>http://www.heyuan110.com/posts/linux/2020-03-19-linux-mac-commands/</guid>
+      <description>&lt;p&gt;linux中许多常用命令是必须掌握的，很多用过没有记录下来很快就忘记，再次使用又到处搜索，本文主要列出我日常使用过的一些命令，会持续更新。&lt;/p&gt;</description>
+    </item>
+    
+    <item>
+      <title>关于</title>
+      <link>http://www.heyuan110.com/about/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>http://www.heyuan110.com/about/</guid>
+      <description>联系方式： 邮箱：bruce.he@qq.com </description>
+    </item>
+    
+    <item>
+      <title>多版本Python环境管理-Conda</title>
+      <link>http://www.heyuan110.com/posts/python/2020-01-11-python-conda/</link>
+      <pubDate>Sat, 11 Jan 2020 20:33:33 +0000</pubDate>
+      
+      <guid>http://www.heyuan110.com/posts/python/2020-01-11-python-conda/</guid>
+      <description>随着Python3被越来越多开发者接受和应用，存在着需要在python2和python3环境切换的需要，利好消息，Conda能完美解决python这个问题。
+Conda是什么 Anaconda安装 </description>
     </item>
     
   </channel>

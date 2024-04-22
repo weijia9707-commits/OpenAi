@@ -32,5 +32,25 @@
 server { server_name heyuan110.com; rewrite ^/(.*) http://www.heyuan110.com/$1 permanent; } server { listen 80; server_name www.heyuan110.com; gzip on; gzip_min_length 1k; gzip_buffers 16 64k; gzip_http_version 1.1; gzip_comp_level 4; gzip_types text/plain application/javascript application/x-javascript text/css application/xml; gzip_vary on; access_log /var/log/nginx/access.log; error_log /var/log/nginx/error.log; location ~* /news/show/* { return 301 https://$host$request_uri; } location / { proxy_pass http://web; proxy_connect_timeout 600; proxy_read_timeout 600; proxy_send_timeout 600; proxy_buffer_size 64k; proxy_buffers 4 32k; proxy_busy_buffers_size 64k; proxy_temp_file_write_size 64k; proxy_set_header Host $host; proxy_set_header X-Real-IP $remote_addr; proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for; proxy_redirect off; } location = /robots.</description>
     </item>
     
+    <item>
+      <title>Nginx自签名SSL证书配置https</title>
+      <link>http://www.heyuan110.com/posts/linux/nginx/2022-06-12-https-ssl/</link>
+      <pubDate>Tue, 18 Mar 2014 23:15:02 +0000</pubDate>
+      
+      <guid>http://www.heyuan110.com/posts/linux/nginx/2022-06-12-https-ssl/</guid>
+      <description>安装openssl ssl证书有很多第三方厂商，可购买也有一些提供免费证书。ssl证书也可自签，通常会用到openssl。检查是否安装openssl openssl version -a, 如未安装请执行：
+sudo apt-get install openssl sudo apt-get install openssl-devel 生成私钥和证书 生成私钥,命令行执行openssl genrsa -des3 -out app.key 1024，截图如下
+很清晰了吧，下面继续生成签署申请openssl req -new -key app.key -out app.csr执行这个后下面会需要填一些信息，截图如下，密码的地方可以都输同一个
+生成服务器的私钥 openssl rsa -in app.key -out app_server.key ,截图如下
+给网站服务器签署证书 openssl req -new -x509 -days 3650 -key app_server.key -out app_server.crt
+执行后步骤和第一部差不多，填写完，需要注意的是Common Name一定要填对。
+至此我们得到了四个文件,下面配置Nginx
+配置Nginx 将app_server.crt和app_server.key两个文件拷贝到/etc/nginx/conf.d目录下，打开test_nginx.conf(nginx配置文件) sudo vi test_nginx.conf
+端口设置为443：
+ssl on; ssl_certificate /etc/nginx/conf.d/app_server.crt; ssl_certificate_key /etc/nginx/conf.d/app_server.key; 注意crt和key文件是绝对路径,需重启nginx。
+配置完成截图
+重启nginx，sudo service nginx restart。</description>
+    </item>
+    
   </channel>
 </rss>
