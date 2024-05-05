@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>java on Bruce&#39;s Blog</title>
+    <link>http://www.heyuan110.com/tags/java/</link>
+    <description>Recent content in java on Bruce&#39;s Blog</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>zh-hans</language>
+    <copyright>This work is licensed under a Creative Commons Attribution-NonCommercial 4.0 International License.</copyright>
+    <lastBuildDate>Sat, 04 May 2024 21:00:00 +0000</lastBuildDate><atom:link href="http://www.heyuan110.com/tags/java/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Java学习笔记</title>
+      <link>http://www.heyuan110.com/posts/java/2024-05-05-learn-java/</link>
+      <pubDate>Sat, 04 May 2024 21:00:00 +0000</pubDate>
+      
+      <guid>http://www.heyuan110.com/posts/java/2024-05-05-learn-java/</guid>
+      <description>一、背景 1995年SUN 公司推出，最早叫 Oak(橡树)，后改名叫 Java，Java之父詹姆斯（James），SUN 在2009年被 ORACLE收购。
+二、整体学习路线 Java 技术体系（JAVA SE、JAVA EE、JAVA ME）。 Java基本啥都能干，但主要做互联网系统的开发.
+参考：
+1. Java视频教程从入门到精通（完整版）
+2. Java程序员学习路线图
+三、JDK javac：编译工具 java ：执行工具 JVM(Java Virtual Machine)：Java 虚拟机，真正运行 Java程序的地方 核心类库：Java 自己写好的程序 JRE（Java Runtime Environment）:Java的运行环境 JDK(Java Development Kit): Java开发工具包(包含上面所有)
+四、IDE IDEA IDEA几种常见的快捷键，以及他们的作用
+快捷键 功能效果 main/psvm、sout、… 快速键入相关代码 Ctrl + D 复制当前行数据到下一行 Ctrl + Y 删除所在行，建议用Ctrl + X Ctrl + ALT + L 格式化代码 ALT + SHIFT + ↑ , ALT + SHIFT + ↓ 上下移动当前代码 Ctrl + / , Ctrl + Shift + / 对代码进行注释(讲注释的时候再说) 五、JAVA SE基础 参考学习教程： 1.</description>
+    </item>
+    
+  </channel>
+</rss>
