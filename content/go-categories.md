@@ -5,4 +5,4 @@ date: "2020-06-20"
 
 
 - 一：**基础知识**
-    - [JGo语言学习](/posts/go/talk/2019-01-25-learn-go/)
+    - [Go语言学习](/posts/go/talk/2019-01-25-learn-go/)
