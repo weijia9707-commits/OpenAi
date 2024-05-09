@@ -788,15 +788,416 @@ Java中的成员变量按照有无static修饰分为两种：**类变量、实�
 
 ![image-20240506173944381](image-20240506173944381.png)
 
+**继承可以提高代码的复用性**。
+
+#### 权限修饰符
+
+权限修饰符是用来限制类的成员（成员变量、成员方法、构造器...）能够被访问的范围。
+
+四个权限修饰符：public（公有的）、private（私有的），protected（受保护的）、缺省的（不写任何修饰符）
+
+![image-20240506174422400](image-20240506174422400.png)
+
+```java
+public class Fu {
+    // 1、私有:只能在本类中访问
+    private void privateMethod(){
+        System.out.println("==private==");
+    }
+
+    // 2、缺省：本类，同一个包下的类
+    void method(){
+        System.out.println("==缺省==");
+    }
+
+    // 3、protected: 本类，同一个包下的类，任意包下的子类
+    protected void protectedMethod(){
+        System.out.println("==protected==");
+    }
+
+    // 4、public： 本类，同一个包下的类，任意包下的子类，任意包下的任意类
+    public void publicMethod(){
+        System.out.println("==public==");
+    }
+
+    public void test(){
+        //在本类中，所有权限都可以被访问到
+        privateMethod(); //正确
+        method(); //正确
+        protectedMethod(); //正确
+        publicMethod(); //正确
+    }
+}
+```
+
+接下来，在和Fu类同一个包下，创建一个测试类Demo，演示同一个包下可以访问到哪些权限修饰的方法。
+
+```java
+public class Demo {
+    public static void main(String[] args) {
+        Fu f = new Fu();
+        // f.privateMethod();	//私有方法无法使用
+        f.method();
+        f.protectedMethod();
+        f.publicMethod();
+    }
+}
+```
+
+接下来，在另一个包下创建一个Fu类的子类，演示不同包下的子类中可以访问哪些权限修饰的方法。
+
+```java
+public class Zi extends Fu {
+    //在不同包下的子类中，只能访问到public、protected修饰的方法
+    public void test(){
+        // privateMethod(); // 报错
+        // method(); // 报错
+        protectedMethod();	//正确
+        publicMethod();	//正确
+    }
+}
+```
+
+接下来，在和Fu类不同的包下，创建一个测试类Demo2，演示一下不同包的无关类，能访问到哪些权限修饰的方法；
+
+```java
+public class Demo2 {
+    public static void main(String[] args) {
+        Fu f = new Fu();
+        // f.privateMethod(); // 报错
+        // f.method();		  //报错
+        // f.protecedMethod();//报错
+        f.publicMethod();	//正确
+
+        Zi zi = new Zi();
+        // zi.protectedMethod();
+    }
+}
+```
+
+#### 单继承、Object
+
+Java语言只支持单继承，不支持多继承，但是可以多层继承
+
+#### 方法重写
+
+当子类觉得父类方法不好用，或者无法满足父类需求时，子类可以重写一个方法名称、参数列表一样的方法，去覆盖父类的这个方法，这就是方法重写。
+
+**注意**：重写后，方法的访问遵循就近原则
+
+写一个A类作为父类，定义两个方法print1和print2
+
+```java
+public class A {
+    public void print1(){
+        System.out.println("111");
+    }
+
+    public void print2(int a, int b){
+        System.out.println("111111");
+    }
+}
+```
+
+再写一个B类作为A类的子类，重写print1和print2方法。
+
+```java
+public class B extends A{
+    // 方法重写
+    @Override // 安全，可读性好
+    public void print1(){
+        System.out.println("666");
+    }
 
 
-### 11 封装
+    // 方法重写
+    @Override
+    public void print2(int a, int b){
+        System.out.println("666666");
+    }
+}
+```
+
+重写注意点：
+
+- 1.重写的方法上面，可以加一个注解@Override,用于标注这个方法是复写的父类方法
+- 2.子类复写父类方法时，访问权限必须大于或者等于父类方法的权限
+	public > protected > 缺省
+- 3. 重写的方法返回值类型，必须与被重写的方法返回值类型一样，或者范围更小
+- 4. 私有方法、静态方法不能被重写，如果重写会报错。
+
+#### 子类中访问成员特点
+
+子类中访问其他成员（成员变量、成员方法），依据就近原则。
+
+#### 子类中访问构造器的特点
+
+- 子类全部构造器，都会先调用父类构造器，再执行自己
+
+- 如果不想使用默认的`super()`方式调用父类构造器，还可以手动使用`super(参数)`调用父类有参数构造器。
+
+  ![image-20240506201217549](image-20240506201217549.png)
+
+```
+访问本类成员：
+	this.成员变量	//访问本类成员变量
+	this.成员方法	//调用本类成员方法
+	this()		   //调用本类空参数构造器
+    this(参数)	  //调用本类有参数构造器
+	
+访问父类成员：
+	super.成员变量	//访问父类成员变量
+	super.成员方法	//调用父类成员方法
+	super()		   //调用父类空参数构造器
+    super(参数)	  //调用父类有参数构造器
+    
+注意：this和super访问构造方法，只能用到构造方法的第一句，否则会报错。
+```
+
+### 11 多态
+
+多态是在继承、实现情况下的一种现象，表现为：对象多态、行为多态。
+
+比如：Teacher和Student都是People的子类，代码可以写成下面的样子
+
+![image-20240507102216180](image-20240507102216180.png)
+
+在多态形式下，右边的代码是解耦合的，便于扩展和维护。
+
+定义方法时，使用父类类型作为形参，可以接收一切子类对象，扩展行更强，更便利。
+
+```java
+public class Test2 {
+    public static void main(String[] args) {
+        // 目标：掌握使用多态的好处
+		Teacher t = new Teacher();
+		go(t);
+
+        Student s = new Student();
+        go(s);
+    }
+
+    //参数People p既可以接收Student对象，也能接收Teacher对象。
+    public static void go(People p){
+        System.out.println("开始------------------------");
+        p.run();
+        System.out.println("结束------------------------");
+    }
+}
+```
+
+多态形式下不能直接调用子类特有方法，但是转型后是可以调用。父类变量转换为子类类型。格式如下：
+
+```java
+//如果p接收的是子类对象
+if(父类变量 instance 子类){
+    //则可以将p转换为子类类型
+    子类 变量名 = (子类)父类变量;
+}
+```
+
+![image-20240507102955810](image-20240507102955810.png)
+
+如果类型转换错了，就会出现类型转换异常ClassCastException。
+
+### 12 final关键字
+
+final关键字是最终的意思，可以修饰类、修饰方法、修饰变量
+
+- final修饰类：该类称为最终类，特点是不能被继承
+
+![image-20240507103455642](image-20240507103455642.png)
+
+- final修饰方法：该方法称之为最终方法，特点是不能被重写。
+
+![image-20240507103643803](image-20240507103643803.png)
+
+- final修饰变量：该变量只能被赋值一次。
+
+![image-20240507103754028](image-20240507103754028.png)
+
+![image-20240507103805016](image-20240507103805016.png)
+
+#### 常量
+
+被 static final 修饰的成员变量，称之为常量，通常用于记录系统的配置信息。
+
+代码来演示一下：
+
+```java
+public class Constant {
+    //常量: 定义一个常量表示学校名称
+    //为了方便在其他类中被访问所以一般还会加上public修饰符
+    //常量命名规范：建议都采用大写字母命名，多个单词之前有_隔开
+    public static final String SCHOOL_NAME = "test";
+}
+```
+
+```java
+public class FinalDemo2 {
+    public static void main(String[] args) {
+        //由于常量是static的所以，在使用时直接用类名就可以调用
+        System.out.println(Constant.SCHOOL_NAME);
+        System.out.println(Constant.SCHOOL_NAME);
+        System.out.println(Constant.SCHOOL_NAME);
+        System.out.println(Constant.SCHOOL_NAME);
+        System.out.println(Constant.SCHOOL_NAME);
+        System.out.println(Constant.SCHOOL_NAME);
+        System.out.println(Constant.SCHOOL_NAME);
+    }
+}
+```
+
+程序编译后，常量会“宏替换”，出现常量的地方，全都会被替换为其记住的字面量。把代码反编译后，其实代码是下面的样子:
+
+```java
+public class FinalDemo2 {
+    public static void main(String[] args) {
+        System.out.println("test");
+        System.out.println("test"E);
+        System.out.println("test");
+        System.out.println("test");
+        System.out.println("test");
+        System.out.println("test");
+        System.out.println("test");
+    }
+}
+```
+
+### 13 抽象
+
+关键字abstract（抽象），它可以修饰类（叫抽象类）也可以修饰方法（叫抽象方法，不允许有方法体）
+
+```java
+//abstract修饰类，这个类就是抽象类
+public abstract class A{
+    //abstract修饰方法，这个方法就是抽象方法
+    public abstract void test();
+}
+```
+
+- 抽象类是不能创建对象的，如果抽象类的对象就会报错。
+
+- 抽象类虽然不能创建对象，但是它可以作为父类让子类继承,且子类继承父类必须重写父类的所有抽象方法。
+
+  ```java
+  //B类继承A类，必须复写test方法
+  public class B extends A {
+      @Override
+      public void test() {
+  
+      }
+  }
+  ```
+
+- 子类继承父类如果不复写父类的抽象方法，要想不出错，这个子类也必须是抽象类
+
+```java
+//B类基础A类，此时B类也是抽象类，这个时候就可以不重写A类的抽象方法
+public abstract class B extends A {
+
+}
+```
+
+抽象类的使用场景和好处
+
+```
+1.用抽象类可以把父类中相同的代码，包括方法声明都抽取到父类，这样能更好的支持多态，一提高代码的灵活性。
+
+2.反过来用，我们不知道系统未来具体的业务实现时，我们可以先定义抽象类，将来让子类去实现，以方便系统的扩展。
+```
+
+### 14 模版方法模式
+
+设计模式是解决某一类问题的最优方案。**模板方法模式主要解决方法中存在重复代码的问题**
+
+比如A类和B类都有sing()方法，sing()方法的开头和结尾都是一样的，只是中间一段内容不一样。此时A类和B类的sing()方法中就存在一些相同的代码。
+
+![image-20240509170815163](image-20240509170815163.png)
+
+怎么解决上面的重复代码问题呢？ 我们可以写一个抽象类C类，在C类中写一个doSing()的抽象方法。再写一个sing()方法，代码如下：
+
+![image-20240509170840515](image-20240509170840515.png)
+
+最后，再写一个测试类Test
+
+```
+public class Test {
+    public static void main(String[] args) {
+        // 目标：搞清楚模板方法设计模式能解决什么问题，以及怎么写。
+        B b = new B();
+        b.sing();
+    }
+}
+```
+
+模板方法模式解决了多个子类中有相同代码的问题。具体实现步骤如下:
+
+- 第1步：定义一个抽象类，把子类中相同的代码写成一个模板方法。
+- 第2步：把模板方法中不能确定的代码写成抽象方法，并在模板方法中调用。
+- 第3步：子类继承抽象类，只需要父类抽象方法就可以了。
+
+### 15 接口interface
+
+java提供了一个关键字interface，用它来定义接口这种特殊结构，格式如下：
+
+```
+public interface 接口名{
+    //成员变量（常量）
+    //成员方法（抽象方法）
+}
+```
+
+![image-20240509171311349](image-20240509171311349.png)
+
+接口要注意下面两点：
+
+- 接口是用来被类实现（implements）的，我们称之为实现类。
+- 一个类是可以实现多个接口的（接口可以理解成干爹），类实现接口必须重写所有接口的全部抽象方法，否则这个类也必须是抽象类
+
+接口的好处：
+
+- 弥补了类单继承的不足，一个类同时可以实现多个接口。
+- 让程序可以面向接口编程，这样程序员可以灵活方便的切换各种业务实现。
+
+案例演示，假设有一个Studnet学生类，还有一个Driver司机的接口，还有一个Singer歌手的接口。现在要写一个A类，想让他既是学生，偶然也是司机能够开车，偶尔也是歌手能够唱歌。那我们代码就可以这样设计，如下：
+
+![image-20240509172146952](image-20240509172146952.png)
+
+一个接口可以继承多个接口，接口同时也可以被类实现。
+
+### 16 内部类
+
+ 内部类是类中的五大成分之一（成员变量、方法、构造器、内部类、代码块），如果一个类定义在另一个类的内部，这个类就是内部类。
+
+当一个类的内部，包含一个完整的事物，且这个事物没有必要单独设计时，就可以把这个事物设计成内部类。
+
+内部类有四种形式，分别是成员内部类、静态内部类、局部内部类、匿名内部类。
+
+匿名内部类使用相对较多一点，匿名内部类是一种特殊的局部内部类；所谓匿名，指的是程序员不需要为这个类声明名字。
+
+匿名内部类的格式：
+
+```
+new 父类/接口(参数值){
+    @Override
+    重写父类/接口的方法;
+}
+```
+
+匿名内部类本质上是一个没有名字的子类对象、或者接口的实现类对象。
+
+![image-20240509173407482](image-20240509173407482.png)
+
+匿名内部类的作用：简化了创建子类对象、实现类对象的书写格式。
+
+**只有在调用方法时，当方法的形参是一个接口或者抽象类，为了简化代码书写，而直接传递匿名内部类对象给方法。**这样就可以少写一个类。比如，看下面代码：
+
+![image-20240509173532567](image-20240509173532567.png)
 
 
 
 
-
-### 12 多态
 
 
 
