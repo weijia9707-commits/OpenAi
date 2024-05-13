@@ -1,10 +1,10 @@
 ---
-title:      "Java学习笔记（二）"
-date:       2024-05-13 12:00:00
-author:     "bruce"
+title: "Java学习笔记（二）"
+date: 2024-05-13T15:13:10+08:00
+Auth: bruce
 toc: true
-tags:
-    - java
+tags: 
+  - java
 ---
 
 ![image](java-logo.jpg)
