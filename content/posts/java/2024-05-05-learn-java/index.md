@@ -1,5 +1,5 @@
 ---
-title:      "Java学习笔记"
+title:      "Java学习笔记（一）"
 date:       2024-05-04 21:00:00
 author:     "bruce"
 toc: true
@@ -1530,41 +1530,158 @@ public class Test2 {
 }
 ```
 
+### 21 日期类
 
+#### 1. Date类
 
+Java中是由Date类的对象表示日期或者时间。Date对象记录的时间是用毫秒值来表示的。
 
+Java语言规定，1970年1月1日0时0分0秒认为是时间的起点，此时记作0，那么1000（1秒=1000毫秒）就表示1970年1月1日0时0分1秒，依次类推。
 
+![image-20240510161315322](image-20240510161315322.png)
 
+Date类的构造方法，和常见的成员方法
 
+![image-20240510161655966](image-20240510161655966.png)
 
+![image-20240510161727189](image-20240510161727189.png)
 
+#### 2. SimpleDateFormat
 
+- 把Date对象转换为指定格式的日期字符串这个操作，叫做**日期格式化**
+- 反过来把指定格式的日期符串转换为Date对象的操作，叫做**日期解析
 
-## 七、 集合技术 & I/O 技术
+![image-20240510161847571](image-20240510161847571.png)
 
+注意：创建SimpleDateFormat对象时，在构造方法的参数位置传递日期格式，而日期格式是由一些特定的字母拼接而来的。我们需要记住常用的几种日期/时间格式
 
+```
+字母	   表示含义
+yyyy	年
+MM		月
+dd		日
+HH		时
+mm		分
+ss		秒
+SSS		毫秒
 
+"2022年12月12日" 的格式是 "yyyy年MM月dd日"
+"2022-12-12 12:12:12" 的格式是 "yyyy-MM-dd HH:mm:ss"
+按照上面的格式可以任意拼接，但是字母不能写错
+```
 
+上代码演示一下
 
-## 八、 网络编程 & 多线程技术
+![image-20240510161942363](image-20240510161942363.png)
 
+#### 3. Calendar类
 
+Calendar类表示日历，它提供了一些比Date类更好用的方法。
 
+![image-20240510162355817](image-20240510162355817.png)
 
+用Date类就不太好做，而用Calendar就特别方便。因为Calendar类提供了方法可以直接对日历中的年、月、日、时、分、秒等进行运算。
 
-## 九、 JDK特性 & 基础加强
+![image-20240510162422251](image-20240510162422251.png)
 
+#### 4. JDK8日期、时间、日期时间
 
+为什么以前的Date类就可以表示日期，为什么要有新增的日期类呢？
 
+![image-20240510162617601](image-20240510162617601.png)
 
+JDK8新增的日期类分得更细致一些，比如表示年月日用LocalDate类、表示时间秒用LocalTime类、而表示年月日时分秒用LocalDateTime类等；除了这些类还提供了对时区、时间间隔进行操作的类等。它们几乎把对日期/时间的所有操作都通过了API方法，用起来特别方便。
 
-## 十、JAVA WEB
+![image-20240510162700984](image-20240510162700984.png)
 
+- LocalDate类的基本使用
 
+  ![image-20240510163143116](image-20240510163143116.png)
 
+- LocalTime类的基本使用
 
+- LocalDateTime类的基本使用
+
+  ![image-20240510163231996](image-20240510163231996.png)
+
+#### 5. JDK8日期（时区）
+
+由于世界各个国家与地区的经度不同，各地区的时间也有所不同，因此会划分为不同的时区。每一个时区的时间也不太一样。
+
+![image-20240510163335612](image-20240510163335612.png)
+
+![image-20240510163445694](image-20240510163445694.png)
+
+#### 6. JDK8日期（Instant类）
+
+通过获取Instant的对象可以拿到此刻的时间，该时间由两部分组成：从1970-01-01 00:00:00 开始走到此刻的总秒数+不够1秒的纳秒数。
+
+该类提供的方法如下图所示，可以用来获取当前时间，也可以对时间进行加、减、获取等操作。
+
+![image-20240510163610933](image-20240510163610933.png)
+
+作用：可以用来记录代码的执行时间，或用于记录用户操作某个事件的时间点。
+
+![image-20240510163651157](image-20240510163651157.png)
+
+#### 7. JDK8日期（格式化器）
+
+![image-20240513144441716](image-20240513144441716.png)
+
+![image-20240513144513507](image-20240513144513507.png)
+
+演示一下
+
+```java
+/**
+ *  目标：掌握JDK 8新增的DateTimeFormatter格式化器的用法。
+ */
+public class Test6_DateTimeFormatter {
+    public static void main(String[] args) {
+        // 1、创建一个日期时间格式化器对象出来。
+        DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy年MM月dd日 HH:mm:ss");
+
+        // 2、对时间进行格式化
+        LocalDateTime now = LocalDateTime.now();
+        System.out.println(now);
+
+        String rs = formatter.format(now); // 正向格式化
+        System.out.println(rs);
+
+        // 3、格式化时间，其实还有一种方案。
+        String rs2 = now.format(formatter); // 反向格式化
+        System.out.println(rs2);
+
+        // 4、解析时间：解析时间一般使用LocalDateTime提供的解析方法来解析。
+        String dateStr = "2029年12月12日 12:12:11";
+        LocalDateTime ldt = LocalDateTime.parse(dateStr, formatter);
+        System.out.println(ldt);
+    }
+}
+```
+
+#### 8. JDK8日期（Period类）
+
+![image-20240513144701091](image-20240513144701091.png)
+
+先来演示Period类的用法，它的方法如下图所示。可以用来计算两个日期之间相隔的年、相隔的月、相隔的日。**只能两个计算LocalDate对象之间的间隔**
+
+![image-20240513144742162](image-20240513144742162.png)
+
+#### 9. JDK8日期（Duration类）
+
+**可以用于计算两个时间对象相差的天数、小时数、分数、秒数、纳秒数；支持LocalTime、LocalDateTime、Instant等时间**
+
+![image-20240513144902194](image-20240513144902194.png)
 
 ---
+
+
+
+[下一篇《Java学习笔记（二）》](../2024-05-05-learn-java2/index.md)
+
+
+
 ## *参考*
 
 [Java程序员学习路线图](https://yun.itheima.com/subject/javamap/index.html)
