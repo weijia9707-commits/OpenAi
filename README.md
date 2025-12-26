@@ -1,6 +1,6 @@
 # Bruce's Blog
 
-个人技术博客，使用 [Hugo](https://gohugo.io/) 构建，部署在 GitHub Pages。
+Bruce的博客，使用 [Hugo](https://gohugo.io/) 构建，部署在 GitHub Pages。
 
 🌐 **访问地址**: [www.heyuan110.com](https://www.heyuan110.com/)
 
