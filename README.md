@@ -6,7 +6,7 @@
 
 ## 技术栈
 
-- **静态网站生成器**: Hugo v0.140.2+
+- **静态网站生成器**: Hugo v0.153.2+
 - **主题**: [hermit-V2](https://github.com/1bl4z3r/hermit-V2)
 - **部署**: GitHub Pages + GitHub Actions
 
@@ -22,7 +22,7 @@
 
 ### 前置要求
 
-- [Hugo Extended](https://gohugo.io/installation/) v0.140.2 或更高版本
+- [Hugo Extended](https://gohugo.io/installation/) v0.153.2 或更高版本
 - Git
 
 ### 克隆项目
