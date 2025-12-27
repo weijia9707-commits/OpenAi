@@ -1,0 +1,1228 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>正则表达式测试工具 - 在线正则验证/匹配/提取 | Web Toolbox</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="免费在线正则表达式测试工具，支持JS正则表达式验证、正则匹配、文本提取。可生成多种编程语言(JavaScript、Python、Java、Go、PHP、Ruby、C#)的正则代码示例。">
+    <meta name="keywords" content="正则表达式,正则测试,regex,正则验证,正则匹配,正则提取,JavaScript正则,Python正则,在线正则工具">
+    <meta name="author" content="Web Toolbox">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/regex-tester.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="正则表达式测试工具 - 在线正则验证/匹配/提取">
+    <meta property="og:description" content="免费在线正则表达式测试工具，支持多种编程语言代码生成。">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/regex-tester.html">
+    <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/regex-tester.png">
+    <meta property="og:site_name" content="Web Toolbox">
+    <meta property="og:locale" content="zh_CN">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="正则表达式测试工具 - 在线正则验证/匹配/提取">
+    <meta name="twitter:description" content="免费在线正则表达式测试工具，支持多种编程语言代码生成。">
+    <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/regex-tester.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "正则表达式测试工具",
+        "description": "免费在线正则表达式测试工具，支持JS正则表达式验证、正则匹配、文本提取，可生成多种编程语言的正则代码示例。",
+        "url": "https://www.heyuan110.com/web-toolbox/regex-tester.html",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Any",
+        "permissions": "browser",
+        "offers": {
+            "@type": "Offer",
+            "price": "0",
+            "priceCurrency": "CNY"
+        }
+    }
+    </script>
+
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #fff;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        /* 顶部导航 */
+        .top-nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 25px;
+            padding: 15px 25px;
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .nav-brand {
+            font-size: 1.3rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .back-link {
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+
+        .back-link:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* 主布局 */
+        .main-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        @media (max-width: 900px) {
+            .main-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* 卡片样式 */
+        .card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            overflow: hidden;
+        }
+
+        .card-header {
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .card-title {
+            font-size: 1rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .card-body {
+            padding: 20px;
+        }
+
+        /* 正则输入区 */
+        .regex-input-wrapper {
+            display: flex;
+            align-items: center;
+            background: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            padding: 5px;
+            margin-bottom: 15px;
+        }
+
+        .regex-delimiter {
+            padding: 12px 15px;
+            color: #00d4ff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1.2rem;
+        }
+
+        .regex-input {
+            flex: 1;
+            background: transparent;
+            border: none;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 1rem;
+            padding: 12px 0;
+            outline: none;
+        }
+
+        .regex-input::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* 修饰符 */
+        .flags-row {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .flag-btn {
+            padding: 8px 16px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 8px;
+            background: transparent;
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .flag-btn:hover {
+            border-color: #00d4ff;
+            color: #fff;
+        }
+
+        .flag-btn.active {
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            border-color: transparent;
+            color: #fff;
+        }
+
+        .flag-code {
+            font-family: 'JetBrains Mono', monospace;
+            font-weight: 600;
+        }
+
+        /* 文本区域 */
+        .text-area {
+            width: 100%;
+            min-height: 200px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            color: #fff;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            resize: vertical;
+            outline: none;
+        }
+
+        .text-area:focus {
+            border-color: #00d4ff;
+        }
+
+        .text-area::placeholder {
+            color: rgba(255, 255, 255, 0.4);
+        }
+
+        /* 高亮文本显示 */
+        .highlight-container {
+            min-height: 200px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            padding: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            white-space: pre-wrap;
+            word-break: break-all;
+            overflow-y: auto;
+            max-height: 300px;
+        }
+
+        .highlight-container .match {
+            background: rgba(0, 212, 255, 0.3);
+            border-bottom: 2px solid #00d4ff;
+            padding: 2px 0;
+        }
+
+        .highlight-container .group {
+            background: rgba(123, 44, 191, 0.3);
+            border-bottom: 2px solid #7b2cbf;
+        }
+
+        /* 匹配结果 */
+        .match-results {
+            margin-top: 15px;
+        }
+
+        .match-stats {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 15px;
+            flex-wrap: wrap;
+        }
+
+        .stat-badge {
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            font-size: 0.85rem;
+        }
+
+        .stat-badge .value {
+            color: #00d4ff;
+            font-weight: 600;
+            margin-left: 5px;
+        }
+
+        .matches-list {
+            max-height: 200px;
+            overflow-y: auto;
+        }
+
+        .match-item {
+            display: flex;
+            gap: 15px;
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 8px;
+            margin-bottom: 8px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+        }
+
+        .match-index {
+            color: rgba(255, 255, 255, 0.5);
+            min-width: 30px;
+        }
+
+        .match-text {
+            color: #00e676;
+            word-break: break-all;
+        }
+
+        .match-groups {
+            color: #ff9800;
+            font-size: 0.8rem;
+        }
+
+        /* 常用正则 */
+        .presets-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 10px;
+        }
+
+        .preset-btn {
+            padding: 10px 15px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-align: left;
+        }
+
+        .preset-btn:hover {
+            background: rgba(0, 212, 255, 0.1);
+            border-color: #00d4ff;
+            color: #fff;
+        }
+
+        /* 代码生成 */
+        .lang-tabs {
+            display: flex;
+            gap: 5px;
+            flex-wrap: wrap;
+            margin-bottom: 15px;
+        }
+
+        .lang-tab {
+            padding: 8px 16px;
+            border: none;
+            border-radius: 8px;
+            background: rgba(255, 255, 255, 0.05);
+            color: rgba(255, 255, 255, 0.7);
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .lang-tab:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        .lang-tab.active {
+            background: linear-gradient(135deg, #00d4ff, #7b2cbf);
+            color: #fff;
+        }
+
+        .code-block {
+            background: rgba(0, 0, 0, 0.4);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .code-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 10px 15px;
+            background: rgba(0, 0, 0, 0.3);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .code-lang {
+            font-size: 0.8rem;
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        .copy-btn {
+            padding: 5px 12px;
+            border: none;
+            border-radius: 5px;
+            background: rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.8);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .code-content {
+            padding: 15px;
+            font-family: 'JetBrains Mono', monospace;
+            font-size: 0.85rem;
+            line-height: 1.6;
+            overflow-x: auto;
+            white-space: pre;
+            color: #e0e0e0;
+        }
+
+        .code-content .keyword {
+            color: #ff79c6;
+        }
+
+        .code-content .string {
+            color: #f1fa8c;
+        }
+
+        .code-content .comment {
+            color: #6272a4;
+        }
+
+        .code-content .function {
+            color: #50fa7b;
+        }
+
+        /* 参考文档 */
+        .reference-section {
+            margin-top: 25px;
+        }
+
+        .reference-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(20px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            margin-bottom: 20px;
+            overflow: hidden;
+        }
+
+        .reference-header {
+            padding: 15px 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .reference-header:hover {
+            background: rgba(0, 0, 0, 0.3);
+        }
+
+        .reference-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .toggle-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .reference-header.open .toggle-icon {
+            transform: rotate(180deg);
+        }
+
+        .reference-body {
+            padding: 20px;
+            display: none;
+        }
+
+        .reference-body.open {
+            display: block;
+        }
+
+        .meta-table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+
+        .meta-table th,
+        .meta-table td {
+            padding: 12px 15px;
+            text-align: left;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .meta-table th {
+            background: rgba(0, 0, 0, 0.2);
+            font-weight: 600;
+            color: #00d4ff;
+        }
+
+        .meta-table tr:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .meta-char {
+            font-family: 'JetBrains Mono', monospace;
+            color: #ff79c6;
+            font-weight: 600;
+        }
+
+        .intro-text {
+            line-height: 1.8;
+            color: rgba(255, 255, 255, 0.85);
+        }
+
+        .intro-text p {
+            margin-bottom: 15px;
+        }
+
+        .intro-text code {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-family: 'JetBrains Mono', monospace;
+            color: #00d4ff;
+        }
+
+        /* 错误提示 */
+        .error-message {
+            background: rgba(255, 82, 82, 0.2);
+            border: 1px solid #ff5252;
+            border-radius: 8px;
+            padding: 12px 15px;
+            color: #ff5252;
+            font-size: 0.9rem;
+            margin-top: 10px;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        /* 滚动条 */
+        ::-webkit-scrollbar {
+            width: 8px;
+            height: 8px;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 4px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: rgba(255, 255, 255, 0.3);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 顶部导航 -->
+        <nav class="top-nav">
+            <div class="nav-brand">🔍 正则表达式测试工具</div>
+            <a href="index.html" class="back-link">
+                <span>←</span>
+                <span>返回工具箱</span>
+            </a>
+        </nav>
+
+        <!-- 主区域 -->
+        <div class="main-grid">
+            <!-- 左侧：正则输入 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>✏️</span>
+                        <span>正则表达式</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <div class="regex-input-wrapper">
+                        <span class="regex-delimiter">/</span>
+                        <input type="text" id="regexInput" class="regex-input" placeholder="输入正则表达式，例如: \d+">
+                        <span class="regex-delimiter">/</span>
+                        <span id="flagsDisplay" class="regex-delimiter" style="color: #7b2cbf;">g</span>
+                    </div>
+
+                    <div class="flags-row">
+                        <button class="flag-btn active" data-flag="g" title="全局匹配">
+                            <span class="flag-code">g</span>
+                            <span>全局</span>
+                        </button>
+                        <button class="flag-btn" data-flag="i" title="忽略大小写">
+                            <span class="flag-code">i</span>
+                            <span>忽略大小写</span>
+                        </button>
+                        <button class="flag-btn" data-flag="m" title="多行模式">
+                            <span class="flag-code">m</span>
+                            <span>多行</span>
+                        </button>
+                        <button class="flag-btn" data-flag="s" title="单行模式(.匹配换行)">
+                            <span class="flag-code">s</span>
+                            <span>单行</span>
+                        </button>
+                        <button class="flag-btn" data-flag="u" title="Unicode模式">
+                            <span class="flag-code">u</span>
+                            <span>Unicode</span>
+                        </button>
+                    </div>
+
+                    <div id="errorMessage" class="error-message"></div>
+
+                    <div style="margin-top: 20px;">
+                        <div class="card-title" style="margin-bottom: 10px;">
+                            <span>📌</span>
+                            <span>常用正则表达式</span>
+                        </div>
+                        <div class="presets-grid">
+                            <button class="preset-btn" data-regex="^1[3-9]\d{9}$" data-name="手机号码">📱 手机号码</button>
+                            <button class="preset-btn" data-regex="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" data-name="邮箱地址">📧 邮箱地址</button>
+                            <button class="preset-btn" data-regex="https?://[^\s]+" data-name="网址URL">🔗 网址URL</button>
+                            <button class="preset-btn" data-regex="^\d{15}|\d{18}$" data-name="身份证号">🪪 身份证号</button>
+                            <button class="preset-btn" data-regex="^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$" data-name="IPv4地址">🌐 IPv4地址</button>
+                            <button class="preset-btn" data-regex="[\u4e00-\u9fa5]+" data-name="中文字符">🈶 中文字符</button>
+                            <button class="preset-btn" data-regex="^\d{4}-\d{2}-\d{2}$" data-name="日期格式">📅 日期格式</button>
+                            <button class="preset-btn" data-regex="#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})" data-name="颜色代码">🎨 颜色代码</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 右侧：测试文本 -->
+            <div class="card">
+                <div class="card-header">
+                    <div class="card-title">
+                        <span>📝</span>
+                        <span>测试文本</span>
+                    </div>
+                </div>
+                <div class="card-body">
+                    <textarea id="testText" class="text-area" placeholder="输入要测试的文本..."></textarea>
+                </div>
+            </div>
+        </div>
+
+        <!-- 匹配结果 -->
+        <div class="card" style="margin-bottom: 25px;">
+            <div class="card-header">
+                <div class="card-title">
+                    <span>✨</span>
+                    <span>匹配结果</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="main-grid" style="margin-bottom: 0;">
+                    <div>
+                        <div class="card-title" style="margin-bottom: 10px; font-size: 0.9rem;">高亮显示</div>
+                        <div id="highlightResult" class="highlight-container">匹配的内容将在此高亮显示...</div>
+                    </div>
+                    <div>
+                        <div class="card-title" style="margin-bottom: 10px; font-size: 0.9rem;">匹配列表</div>
+                        <div class="match-stats">
+                            <span class="stat-badge">匹配数量:<span id="matchCount" class="value">0</span></span>
+                            <span class="stat-badge">捕获组:<span id="groupCount" class="value">0</span></span>
+                        </div>
+                        <div id="matchesList" class="matches-list"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 代码生成 -->
+        <div class="card" style="margin-bottom: 25px;">
+            <div class="card-header">
+                <div class="card-title">
+                    <span>💻</span>
+                    <span>代码生成</span>
+                </div>
+            </div>
+            <div class="card-body">
+                <div class="lang-tabs">
+                    <button class="lang-tab active" data-lang="javascript">JavaScript</button>
+                    <button class="lang-tab" data-lang="python">Python</button>
+                    <button class="lang-tab" data-lang="java">Java</button>
+                    <button class="lang-tab" data-lang="go">Go</button>
+                    <button class="lang-tab" data-lang="php">PHP</button>
+                    <button class="lang-tab" data-lang="ruby">Ruby</button>
+                    <button class="lang-tab" data-lang="csharp">C#</button>
+                </div>
+                <div class="code-block">
+                    <div class="code-header">
+                        <span id="codeLang" class="code-lang">JavaScript</span>
+                        <button id="copyCodeBtn" class="copy-btn">📋 复制代码</button>
+                    </div>
+                    <pre id="codeContent" class="code-content"></pre>
+                </div>
+            </div>
+        </div>
+
+        <!-- 参考文档 -->
+        <div class="reference-section">
+            <!-- 正则介绍 -->
+            <div class="reference-card">
+                <div class="reference-header" onclick="toggleReference(this)">
+                    <span class="reference-title">📖 正则表达式介绍</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="reference-body">
+                    <div class="intro-text">
+                        <p><strong>正则表达式</strong>（Regular Expression，简称 regex 或 regexp）是一种用于匹配字符串中字符组合的模式。正则表达式是由一系列字符和特殊字符组成的字符串，用于描述一个搜索模式。</p>
+                        <p>正则表达式广泛应用于：</p>
+                        <ul style="margin-left: 20px; margin-bottom: 15px;">
+                            <li><strong>文本搜索和替换</strong> - 在文本编辑器中查找和替换内容</li>
+                            <li><strong>数据验证</strong> - 验证邮箱、手机号、身份证等格式</li>
+                            <li><strong>数据提取</strong> - 从文本中提取特定模式的数据</li>
+                            <li><strong>词法分析</strong> - 编译器和解释器的词法分析阶段</li>
+                        </ul>
+                        <p>一个简单的例子：正则表达式 <code>\d+</code> 可以匹配一个或多个数字，如 "123"、"4567" 等。</p>
+                        <p>正则表达式的基本组成：</p>
+                        <ul style="margin-left: 20px;">
+                            <li><strong>普通字符</strong> - 直接匹配自身，如 <code>a</code> 匹配字母 "a"</li>
+                            <li><strong>元字符</strong> - 具有特殊含义的字符，如 <code>.</code>、<code>*</code>、<code>+</code> 等</li>
+                            <li><strong>字符类</strong> - 用方括号定义的字符集合，如 <code>[a-z]</code></li>
+                            <li><strong>量词</strong> - 指定匹配次数，如 <code>{2,4}</code> 表示匹配 2 到 4 次</li>
+                            <li><strong>分组和捕获</strong> - 用圆括号将部分表达式组合，如 <code>(abc)+</code></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 元字符 -->
+            <div class="reference-card">
+                <div class="reference-header" onclick="toggleReference(this)">
+                    <span class="reference-title">🔤 元字符列表</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="reference-body">
+                    <table class="meta-table">
+                        <thead>
+                            <tr>
+                                <th>元字符</th>
+                                <th>描述</th>
+                                <th>示例</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="meta-char">.</td><td>匹配除换行符外的任意单个字符</td><td><code>a.c</code> 匹配 "abc"、"a1c"</td></tr>
+                            <tr><td class="meta-char">^</td><td>匹配字符串的开始位置</td><td><code>^Hello</code> 匹配以 "Hello" 开头</td></tr>
+                            <tr><td class="meta-char">$</td><td>匹配字符串的结束位置</td><td><code>world$</code> 匹配以 "world" 结尾</td></tr>
+                            <tr><td class="meta-char">*</td><td>匹配前面的元素零次或多次</td><td><code>ab*c</code> 匹配 "ac"、"abc"、"abbc"</td></tr>
+                            <tr><td class="meta-char">+</td><td>匹配前面的元素一次或多次</td><td><code>ab+c</code> 匹配 "abc"、"abbc"，不匹配 "ac"</td></tr>
+                            <tr><td class="meta-char">?</td><td>匹配前面的元素零次或一次</td><td><code>colou?r</code> 匹配 "color" 或 "colour"</td></tr>
+                            <tr><td class="meta-char">\d</td><td>匹配任意数字，等价于 [0-9]</td><td><code>\d+</code> 匹配 "123"</td></tr>
+                            <tr><td class="meta-char">\D</td><td>匹配任意非数字字符</td><td><code>\D+</code> 匹配 "abc"</td></tr>
+                            <tr><td class="meta-char">\w</td><td>匹配字母、数字、下划线</td><td><code>\w+</code> 匹配 "hello_123"</td></tr>
+                            <tr><td class="meta-char">\W</td><td>匹配非字母、数字、下划线</td><td><code>\W</code> 匹配 "@"、"#"</td></tr>
+                            <tr><td class="meta-char">\s</td><td>匹配任意空白字符</td><td><code>\s+</code> 匹配空格、制表符</td></tr>
+                            <tr><td class="meta-char">\S</td><td>匹配任意非空白字符</td><td><code>\S+</code> 匹配 "hello"</td></tr>
+                            <tr><td class="meta-char">\b</td><td>匹配单词边界</td><td><code>\bword\b</code> 精确匹配 "word"</td></tr>
+                            <tr><td class="meta-char">[...]</td><td>字符类，匹配方括号内任一字符</td><td><code>[aeiou]</code> 匹配任意元音</td></tr>
+                            <tr><td class="meta-char">[^...]</td><td>否定字符类，匹配不在方括号内的字符</td><td><code>[^0-9]</code> 匹配非数字</td></tr>
+                            <tr><td class="meta-char">(...)</td><td>捕获分组</td><td><code>(\d+)-(\d+)</code> 捕获两组数字</td></tr>
+                            <tr><td class="meta-char">(?:...)</td><td>非捕获分组</td><td><code>(?:ab)+</code> 匹配但不捕获</td></tr>
+                            <tr><td class="meta-char">|</td><td>或运算符，匹配左边或右边的表达式</td><td><code>cat|dog</code> 匹配 "cat" 或 "dog"</td></tr>
+                            <tr><td class="meta-char">{n}</td><td>精确匹配 n 次</td><td><code>\d{4}</code> 匹配4位数字</td></tr>
+                            <tr><td class="meta-char">{n,}</td><td>匹配至少 n 次</td><td><code>\d{2,}</code> 匹配2位及以上数字</td></tr>
+                            <tr><td class="meta-char">{n,m}</td><td>匹配 n 到 m 次</td><td><code>\d{2,4}</code> 匹配2到4位数字</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- 修饰符 -->
+            <div class="reference-card">
+                <div class="reference-header" onclick="toggleReference(this)">
+                    <span class="reference-title">🚩 修饰符说明</span>
+                    <span class="toggle-icon">▼</span>
+                </div>
+                <div class="reference-body">
+                    <table class="meta-table">
+                        <thead>
+                            <tr>
+                                <th>修饰符</th>
+                                <th>名称</th>
+                                <th>描述</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr><td class="meta-char">g</td><td>global</td><td>全局匹配，查找所有匹配项而非在第一个匹配后停止</td></tr>
+                            <tr><td class="meta-char">i</td><td>ignoreCase</td><td>忽略大小写匹配</td></tr>
+                            <tr><td class="meta-char">m</td><td>multiline</td><td>多行模式，^ 和 $ 匹配每行的开始和结束</td></tr>
+                            <tr><td class="meta-char">s</td><td>dotAll</td><td>单行模式，使 . 可以匹配换行符</td></tr>
+                            <tr><td class="meta-char">u</td><td>unicode</td><td>启用 Unicode 匹配模式</td></tr>
+                            <tr><td class="meta-char">y</td><td>sticky</td><td>粘性匹配，仅从 lastIndex 指示的位置开始匹配</td></tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // DOM 元素
+        const regexInput = document.getElementById('regexInput');
+        const testText = document.getElementById('testText');
+        const flagsDisplay = document.getElementById('flagsDisplay');
+        const highlightResult = document.getElementById('highlightResult');
+        const matchesList = document.getElementById('matchesList');
+        const matchCount = document.getElementById('matchCount');
+        const groupCount = document.getElementById('groupCount');
+        const errorMessage = document.getElementById('errorMessage');
+        const codeContent = document.getElementById('codeContent');
+        const codeLang = document.getElementById('codeLang');
+        const copyCodeBtn = document.getElementById('copyCodeBtn');
+        const flagBtns = document.querySelectorAll('.flag-btn');
+        const presetBtns = document.querySelectorAll('.preset-btn');
+        const langTabs = document.querySelectorAll('.lang-tab');
+
+        let currentLang = 'javascript';
+        let activeFlags = ['g'];
+
+        // 修饰符切换
+        flagBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                const flag = btn.dataset.flag;
+                btn.classList.toggle('active');
+
+                if (btn.classList.contains('active')) {
+                    if (!activeFlags.includes(flag)) {
+                        activeFlags.push(flag);
+                    }
+                } else {
+                    activeFlags = activeFlags.filter(f => f !== flag);
+                }
+
+                flagsDisplay.textContent = activeFlags.join('');
+                runTest();
+            });
+        });
+
+        // 常用正则
+        presetBtns.forEach(btn => {
+            btn.addEventListener('click', () => {
+                regexInput.value = btn.dataset.regex;
+                runTest();
+            });
+        });
+
+        // 语言切换
+        langTabs.forEach(tab => {
+            tab.addEventListener('click', () => {
+                langTabs.forEach(t => t.classList.remove('active'));
+                tab.classList.add('active');
+                currentLang = tab.dataset.lang;
+                generateCode();
+            });
+        });
+
+        // 输入事件
+        regexInput.addEventListener('input', runTest);
+        testText.addEventListener('input', runTest);
+
+        // 执行测试
+        function runTest() {
+            const pattern = regexInput.value;
+            const text = testText.value;
+            const flags = activeFlags.join('');
+
+            // 清空错误
+            errorMessage.classList.remove('show');
+            errorMessage.textContent = '';
+
+            if (!pattern) {
+                highlightResult.innerHTML = text || '匹配的内容将在此高亮显示...';
+                matchesList.innerHTML = '';
+                matchCount.textContent = '0';
+                groupCount.textContent = '0';
+                generateCode();
+                return;
+            }
+
+            try {
+                const regex = new RegExp(pattern, flags);
+                const matches = [];
+                let match;
+                let lastIndex = 0;
+                let highlighted = '';
+                let maxGroups = 0;
+
+                // 全局匹配
+                if (flags.includes('g')) {
+                    while ((match = regex.exec(text)) !== null) {
+                        matches.push({
+                            text: match[0],
+                            index: match.index,
+                            groups: match.slice(1)
+                        });
+                        if (match[1]) maxGroups = Math.max(maxGroups, match.length - 1);
+
+                        // 防止无限循环
+                        if (match.index === regex.lastIndex) {
+                            regex.lastIndex++;
+                        }
+                    }
+                } else {
+                    match = regex.exec(text);
+                    if (match) {
+                        matches.push({
+                            text: match[0],
+                            index: match.index,
+                            groups: match.slice(1)
+                        });
+                        if (match[1]) maxGroups = match.length - 1;
+                    }
+                }
+
+                // 高亮显示
+                if (matches.length > 0) {
+                    let pos = 0;
+                    matches.forEach(m => {
+                        highlighted += escapeHtml(text.slice(pos, m.index));
+                        highlighted += `<span class="match">${escapeHtml(m.text)}</span>`;
+                        pos = m.index + m.text.length;
+                    });
+                    highlighted += escapeHtml(text.slice(pos));
+                    highlightResult.innerHTML = highlighted || '无匹配结果';
+                } else {
+                    highlightResult.innerHTML = escapeHtml(text) || '无匹配结果';
+                }
+
+                // 匹配列表
+                matchesList.innerHTML = matches.map((m, i) => `
+                    <div class="match-item">
+                        <span class="match-index">#${i + 1}</span>
+                        <span class="match-text">${escapeHtml(m.text)}</span>
+                        ${m.groups.length > 0 ? `<span class="match-groups">Groups: ${m.groups.map(g => `"${g || ''}"`).join(', ')}</span>` : ''}
+                    </div>
+                `).join('');
+
+                matchCount.textContent = matches.length;
+                groupCount.textContent = maxGroups;
+
+            } catch (e) {
+                errorMessage.textContent = '正则表达式语法错误: ' + e.message;
+                errorMessage.classList.add('show');
+                highlightResult.innerHTML = escapeHtml(text) || '匹配的内容将在此高亮显示...';
+                matchesList.innerHTML = '';
+                matchCount.textContent = '0';
+                groupCount.textContent = '0';
+            }
+
+            generateCode();
+        }
+
+        // HTML转义
+        function escapeHtml(text) {
+            const div = document.createElement('div');
+            div.textContent = text;
+            return div.innerHTML;
+        }
+
+        // 生成代码
+        function generateCode() {
+            const pattern = regexInput.value || '\\d+';
+            const flags = activeFlags.join('');
+            const text = testText.value || 'Hello 123 World 456';
+
+            const langNames = {
+                javascript: 'JavaScript',
+                python: 'Python',
+                java: 'Java',
+                go: 'Go',
+                php: 'PHP',
+                ruby: 'Ruby',
+                csharp: 'C#'
+            };
+
+            codeLang.textContent = langNames[currentLang];
+
+            const escapedPattern = pattern.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
+            const escapedText = text.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
+
+            const codeTemplates = {
+                javascript: `// JavaScript 正则表达式示例
+const pattern = /${pattern}/${flags};
+const text = "${escapedText}";
+
+// 测试是否匹配
+const isMatch = pattern.test(text);
+console.log("是否匹配:", isMatch);
+
+// 获取所有匹配
+const matches = text.match(pattern);
+console.log("匹配结果:", matches);
+
+// 使用 exec 获取详细信息
+let match;
+while ((match = pattern.exec(text)) !== null) {
+    console.log("匹配:", match[0], "位置:", match.index);
+}
+
+// 替换匹配内容
+const replaced = text.replace(pattern, "[REPLACED]");
+console.log("替换结果:", replaced);`,
+
+                python: `# Python 正则表达式示例
+import re
+
+pattern = r"${pattern}"
+text = "${escapedText}"
+flags = ${flags.includes('i') ? 're.IGNORECASE' : '0'}${flags.includes('m') ? ' | re.MULTILINE' : ''}${flags.includes('s') ? ' | re.DOTALL' : ''}
+
+# 编译正则表达式
+regex = re.compile(pattern, flags)
+
+# 测试是否匹配
+is_match = bool(regex.search(text))
+print("是否匹配:", is_match)
+
+# 获取所有匹配
+matches = regex.findall(text)
+print("匹配结果:", matches)
+
+# 获取匹配详细信息
+for match in regex.finditer(text):
+    print(f"匹配: {match.group()} 位置: {match.start()}-{match.end()}")
+
+# 替换匹配内容
+replaced = regex.sub("[REPLACED]", text)
+print("替换结果:", replaced)`,
+
+                java: `// Java 正则表达式示例
+import java.util.regex.*;
+
+public class RegexExample {
+    public static void main(String[] args) {
+        String pattern = "${escapedPattern}";
+        String text = "${escapedText}";
+
+        // 编译正则表达式
+        int flags = ${flags.includes('i') ? 'Pattern.CASE_INSENSITIVE' : '0'}${flags.includes('m') ? ' | Pattern.MULTILINE' : ''}${flags.includes('s') ? ' | Pattern.DOTALL' : ''};
+        Pattern regex = Pattern.compile(pattern, flags);
+        Matcher matcher = regex.matcher(text);
+
+        // 测试是否匹配
+        boolean isMatch = matcher.find();
+        System.out.println("是否匹配: " + isMatch);
+
+        // 获取所有匹配
+        matcher.reset();
+        while (matcher.find()) {
+            System.out.println("匹配: " + matcher.group() +
+                             " 位置: " + matcher.start() + "-" + matcher.end());
+        }
+
+        // 替换匹配内容
+        String replaced = matcher.replaceAll("[REPLACED]");
+        System.out.println("替换结果: " + replaced);
+    }
+}`,
+
+                go: `// Go 正则表达式示例
+package main
+
+import (
+    "fmt"
+    "regexp"
+)
+
+func main() {
+    pattern := \`${pattern}\`
+    text := "${escapedText}"
+
+    // 编译正则表达式
+    regex := regexp.MustCompile(${flags.includes('i') ? '"(?i)" + pattern' : 'pattern'})
+
+    // 测试是否匹配
+    isMatch := regex.MatchString(text)
+    fmt.Println("是否匹配:", isMatch)
+
+    // 获取所有匹配
+    matches := regex.FindAllString(text, -1)
+    fmt.Println("匹配结果:", matches)
+
+    // 获取匹配位置
+    locations := regex.FindAllStringIndex(text, -1)
+    for i, loc := range locations {
+        fmt.Printf("匹配 #%d: %s 位置: %d-%d\\n",
+            i+1, text[loc[0]:loc[1]], loc[0], loc[1])
+    }
+
+    // 替换匹配内容
+    replaced := regex.ReplaceAllString(text, "[REPLACED]")
+    fmt.Println("替换结果:", replaced)
+}`,
+
+                php: `<?php
+// PHP 正则表达式示例
+$pattern = '/${pattern}/${flags}';
+$text = "${escapedText}";
+
+// 测试是否匹配
+$isMatch = preg_match($pattern, $text);
+echo "是否匹配: " . ($isMatch ? "true" : "false") . "\\n";
+
+// 获取所有匹配
+preg_match_all($pattern, $text, $matches);
+echo "匹配结果: ";
+print_r($matches[0]);
+
+// 获取匹配位置
+preg_match_all($pattern, $text, $matches, PREG_OFFSET_CAPTURE);
+foreach ($matches[0] as $i => $match) {
+    echo "匹配 #" . ($i + 1) . ": " . $match[0] . " 位置: " . $match[1] . "\\n";
+}
+
+// 替换匹配内容
+$replaced = preg_replace($pattern, "[REPLACED]", $text);
+echo "替换结果: " . $replaced . "\\n";
+?>`,
+
+                ruby: `# Ruby 正则表达式示例
+pattern = /${pattern}/${flags.includes('i') ? 'i' : ''}${flags.includes('m') ? 'm' : ''}
+text = "${escapedText}"
+
+# 测试是否匹配
+is_match = !!(text =~ pattern)
+puts "是否匹配: #{is_match}"
+
+# 获取所有匹配
+matches = text.scan(pattern)
+puts "匹配结果: #{matches}"
+
+# 获取匹配位置
+text.to_enum(:scan, pattern).each do |m|
+  puts "匹配: #{$&} 位置: #{$\`.size}"
+end
+
+# 替换匹配内容
+replaced = text.gsub(pattern, "[REPLACED]")
+puts "替换结果: #{replaced}"`,
+
+                csharp: `// C# 正则表达式示例
+using System;
+using System.Text.RegularExpressions;
+
+class Program {
+    static void Main() {
+        string pattern = @"${pattern}";
+        string text = "${escapedText}";
+
+        // 编译正则表达式
+        RegexOptions options = ${flags.includes('i') ? 'RegexOptions.IgnoreCase' : 'RegexOptions.None'}${flags.includes('m') ? ' | RegexOptions.Multiline' : ''}${flags.includes('s') ? ' | RegexOptions.Singleline' : ''};
+        Regex regex = new Regex(pattern, options);
+
+        // 测试是否匹配
+        bool isMatch = regex.IsMatch(text);
+        Console.WriteLine($"是否匹配: {isMatch}");
+
+        // 获取所有匹配
+        MatchCollection matches = regex.Matches(text);
+        Console.WriteLine($"匹配数量: {matches.Count}");
+
+        foreach (Match match in matches) {
+            Console.WriteLine($"匹配: {match.Value} 位置: {match.Index}");
+        }
+
+        // 替换匹配内容
+        string replaced = regex.Replace(text, "[REPLACED]");
+        Console.WriteLine($"替换结果: {replaced}");
+    }
+}`
+            };
+
+            codeContent.textContent = codeTemplates[currentLang];
+        }
+
+        // 复制代码
+        copyCodeBtn.addEventListener('click', () => {
+            navigator.clipboard.writeText(codeContent.textContent).then(() => {
+                const originalText = copyCodeBtn.textContent;
+                copyCodeBtn.textContent = '✅ 已复制';
+                setTimeout(() => {
+                    copyCodeBtn.textContent = originalText;
+                }, 2000);
+            });
+        });
+
+        // 折叠/展开参考文档
+        function toggleReference(header) {
+            header.classList.toggle('open');
+            const body = header.nextElementSibling;
+            body.classList.toggle('open');
+        }
+
+        // 初始化
+        generateCode();
+
+        // 示例文本
+        testText.value = `Hello World 123
+Email: test@example.com
+Phone: 13812345678
+URL: https://www.example.com
+IP: 192.168.1.1
+Date: 2024-12-27`;
+        regexInput.value = '\\d+';
+        runTest();
+    </script>
+</body>
+</html>
