@@ -8,6 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <!-- JsBarcode 条形码库 -->
     <script src="https://cdn.jsdelivr.net/npm/jsbarcode@3.11.6/dist/JsBarcode.all.min.js"></script>
+    <!-- QRCode Styling 二维码库 -->
+    <script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.5.0/lib/qr-code-styling.js"></script>
     <style>
         * {
             margin: 0;
@@ -541,6 +543,7 @@
         <div class="nav-item" data-panel="uuid"><span class="icon">🆔</span>UUID/GUID 生成</div>
         <div class="nav-item" data-panel="htpasswd"><span class="icon">🔒</span>htpasswd 生成</div>
         <div class="nav-item" data-panel="barcode"><span class="icon">📊</span>条形码生成器</div>
+        <div class="nav-item" data-panel="qrcode"><span class="icon">📱</span>二维码生成器</div>
         <div class="nav-item" data-panel="ip-convert"><span class="icon">🖥️</span>IP/数字地址转换</div>
         <div class="nav-item" data-panel="image-base64"><span class="icon">🖼️</span>图片转 Base64</div>
     </nav>
@@ -1176,6 +1179,124 @@
                     <label>条形码预览</label>
                     <div style="background: #fff; padding: 20px; border-radius: 8px; text-align: center;">
                         <svg id="barcode-canvas"></svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 二维码生成器 -->
+        <div class="tool-panel" id="panel-qrcode">
+            <div class="tool-header">
+                <h2>📱 二维码生成器</h2>
+                <p>生成自定义样式的二维码，支持多种形状和颜色</p>
+            </div>
+            <div class="tool-card">
+                <div class="input-group">
+                    <label>二维码内容</label>
+                    <textarea id="qrcode-text" placeholder="请输入文本、网址或其他内容..." style="min-height: 80px;">https://github.com</textarea>
+                </div>
+
+                <div class="options-row">
+                    <div class="input-group">
+                        <label>尺寸: <span id="qr-size-value">300</span>px</label>
+                        <input type="range" id="qr-size" min="100" max="500" value="300" oninput="document.getElementById('qr-size-value').textContent = this.value">
+                    </div>
+                    <div class="input-group">
+                        <label>容错级别</label>
+                        <select id="qr-error-level">
+                            <option value="L">L - 7% 容错</option>
+                            <option value="M" selected>M - 15% 容错</option>
+                            <option value="Q">Q - 25% 容错</option>
+                            <option value="H">H - 30% 容错</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <h3 style="margin-bottom: 15px; font-size: 1rem;">🎨 样式设置</h3>
+
+                <div class="options-row">
+                    <div class="input-group">
+                        <label>码点样式</label>
+                        <select id="qr-dots-type">
+                            <option value="square">方形</option>
+                            <option value="dots">圆点</option>
+                            <option value="rounded" selected>圆角方形</option>
+                            <option value="extra-rounded">超圆角</option>
+                            <option value="classy">经典</option>
+                            <option value="classy-rounded">圆角经典</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>码点颜色</label>
+                        <input type="color" id="qr-dots-color" value="#000000" style="width: 100%; height: 38px; cursor: pointer;">
+                    </div>
+                </div>
+
+                <div class="options-row">
+                    <div class="input-group">
+                        <label>定位角样式</label>
+                        <select id="qr-corners-type">
+                            <option value="square">方形</option>
+                            <option value="dot">圆形</option>
+                            <option value="extra-rounded" selected>圆角</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <label>定位角颜色</label>
+                        <input type="color" id="qr-corners-color" value="#000000" style="width: 100%; height: 38px; cursor: pointer;">
+                    </div>
+                </div>
+
+                <div class="options-row">
+                    <div class="input-group">
+                        <label>背景颜色</label>
+                        <input type="color" id="qr-bg-color" value="#ffffff" style="width: 100%; height: 38px; cursor: pointer;">
+                    </div>
+                    <div class="input-group">
+                        <label>透明背景</label>
+                        <select id="qr-bg-transparent">
+                            <option value="no" selected>否</option>
+                            <option value="yes">是</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <h3 style="margin-bottom: 15px; font-size: 1rem;">🖼️ Logo 设置 (可选)</h3>
+
+                <div class="options-row">
+                    <div class="input-group">
+                        <label>上传 Logo</label>
+                        <input type="file" id="qr-logo" accept="image/*" style="padding: 8px;">
+                    </div>
+                    <div class="input-group">
+                        <label>Logo 大小: <span id="qr-logo-size-value">0.4</span></label>
+                        <input type="range" id="qr-logo-size" min="0.1" max="0.5" step="0.05" value="0.4" oninput="document.getElementById('qr-logo-size-value').textContent = this.value">
+                    </div>
+                </div>
+
+                <div class="divider"></div>
+                <h3 style="margin-bottom: 15px; font-size: 1rem;">🌈 预设主题</h3>
+                <div class="btn-group" style="margin-bottom: 15px;">
+                    <button class="btn btn-secondary" onclick="applyQRTheme('classic')">经典黑白</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('blue')">科技蓝</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('gradient')">渐变紫</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('green')">清新绿</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('sunset')">日落橙</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('pink')">甜美粉</button>
+                </div>
+
+                <div class="btn-group">
+                    <button class="btn btn-primary" onclick="generateQRCode()">📱 生成二维码</button>
+                    <button class="btn btn-success" onclick="downloadQRCode('png')">💾 下载 PNG</button>
+                    <button class="btn btn-success" onclick="downloadQRCode('svg')">💾 下载 SVG</button>
+                </div>
+
+                <div class="input-group" style="margin-top: 20px;">
+                    <label>二维码预览</label>
+                    <div id="qrcode-preview" style="background: #fff; padding: 20px; border-radius: 8px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center;">
+                        <span style="color: #999;">点击"生成二维码"按钮预览</span>
                     </div>
                 </div>
             </div>
@@ -1972,6 +2093,175 @@
                 }
             });
         }
+
+        // ==================== 二维码生成器 ====================
+        let qrCode = null;
+        let qrLogoUrl = null;
+
+        // 生成二维码
+        function generateQRCode() {
+            const text = document.getElementById('qrcode-text').value;
+            if (!text) {
+                showToast('请输入二维码内容', true);
+                return;
+            }
+
+            const size = parseInt(document.getElementById('qr-size').value);
+            const errorLevel = document.getElementById('qr-error-level').value;
+            const dotsType = document.getElementById('qr-dots-type').value;
+            const dotsColor = document.getElementById('qr-dots-color').value;
+            const cornersType = document.getElementById('qr-corners-type').value;
+            const cornersColor = document.getElementById('qr-corners-color').value;
+            const bgColor = document.getElementById('qr-bg-color').value;
+            const bgTransparent = document.getElementById('qr-bg-transparent').value === 'yes';
+            const logoSize = parseFloat(document.getElementById('qr-logo-size').value);
+
+            const options = {
+                width: size,
+                height: size,
+                type: 'svg',
+                data: text,
+                dotsOptions: {
+                    color: dotsColor,
+                    type: dotsType
+                },
+                cornersSquareOptions: {
+                    color: cornersColor,
+                    type: cornersType
+                },
+                cornersDotOptions: {
+                    color: cornersColor,
+                    type: cornersType === 'dot' ? 'dot' : 'square'
+                },
+                backgroundOptions: {
+                    color: bgTransparent ? 'transparent' : bgColor
+                },
+                qrOptions: {
+                    errorCorrectionLevel: errorLevel
+                }
+            };
+
+            // 添加 Logo
+            if (qrLogoUrl) {
+                options.image = qrLogoUrl;
+                options.imageOptions = {
+                    crossOrigin: 'anonymous',
+                    margin: 5,
+                    imageSize: logoSize
+                };
+            }
+
+            // 清空预览区域
+            const preview = document.getElementById('qrcode-preview');
+            preview.innerHTML = '';
+
+            // 创建新的二维码
+            qrCode = new QRCodeStyling(options);
+            qrCode.append(preview);
+
+            showToast('二维码生成成功！');
+        }
+
+        // 下载二维码
+        function downloadQRCode(format) {
+            if (!qrCode) {
+                showToast('请先生成二维码', true);
+                return;
+            }
+            qrCode.download({
+                name: 'qrcode',
+                extension: format
+            });
+        }
+
+        // 应用预设主题
+        function applyQRTheme(theme) {
+            const themes = {
+                classic: {
+                    dotsType: 'square',
+                    dotsColor: '#000000',
+                    cornersType: 'square',
+                    cornersColor: '#000000',
+                    bgColor: '#ffffff'
+                },
+                blue: {
+                    dotsType: 'rounded',
+                    dotsColor: '#1e40af',
+                    cornersType: 'extra-rounded',
+                    cornersColor: '#1e3a8a',
+                    bgColor: '#f0f9ff'
+                },
+                gradient: {
+                    dotsType: 'classy-rounded',
+                    dotsColor: '#7c3aed',
+                    cornersType: 'extra-rounded',
+                    cornersColor: '#5b21b6',
+                    bgColor: '#faf5ff'
+                },
+                green: {
+                    dotsType: 'dots',
+                    dotsColor: '#059669',
+                    cornersType: 'dot',
+                    cornersColor: '#047857',
+                    bgColor: '#ecfdf5'
+                },
+                sunset: {
+                    dotsType: 'extra-rounded',
+                    dotsColor: '#ea580c',
+                    cornersType: 'extra-rounded',
+                    cornersColor: '#c2410c',
+                    bgColor: '#fff7ed'
+                },
+                pink: {
+                    dotsType: 'rounded',
+                    dotsColor: '#db2777',
+                    cornersType: 'extra-rounded',
+                    cornersColor: '#be185d',
+                    bgColor: '#fdf2f8'
+                }
+            };
+
+            const t = themes[theme];
+            if (t) {
+                document.getElementById('qr-dots-type').value = t.dotsType;
+                document.getElementById('qr-dots-color').value = t.dotsColor;
+                document.getElementById('qr-corners-type').value = t.cornersType;
+                document.getElementById('qr-corners-color').value = t.cornersColor;
+                document.getElementById('qr-bg-color').value = t.bgColor;
+                document.getElementById('qr-bg-transparent').value = 'no';
+                showToast(`已应用「${getThemeName(theme)}」主题`);
+            }
+        }
+
+        function getThemeName(theme) {
+            const names = {
+                classic: '经典黑白',
+                blue: '科技蓝',
+                gradient: '渐变紫',
+                green: '清新绿',
+                sunset: '日落橙',
+                pink: '甜美粉'
+            };
+            return names[theme] || theme;
+        }
+
+        // Logo 上传处理
+        document.addEventListener('DOMContentLoaded', function() {
+            const logoInput = document.getElementById('qr-logo');
+            if (logoInput) {
+                logoInput.addEventListener('change', function(e) {
+                    const file = e.target.files[0];
+                    if (file) {
+                        const reader = new FileReader();
+                        reader.onload = function(event) {
+                            qrLogoUrl = event.target.result;
+                            showToast('Logo 已加载');
+                        };
+                        reader.readAsDataURL(file);
+                    }
+                });
+            }
+        });
 
         // 初始化条形码
         window.onload = function() {
