@@ -1,0 +1,1280 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ICO 图标制作 - Web Toolbox</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: #fff;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, #f093fb, #f5576c, #ffd89b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 12px;
+        }
+
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 1.1rem;
+        }
+
+        .steps {
+            display: flex;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 40px;
+            flex-wrap: wrap;
+        }
+
+        .step {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            padding: 12px 20px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            transition: all 0.3s;
+        }
+
+        .step.active {
+            background: rgba(240, 147, 251, 0.2);
+            border-color: rgba(240, 147, 251, 0.5);
+        }
+
+        .step.completed {
+            background: rgba(34, 197, 94, 0.2);
+            border-color: rgba(34, 197, 94, 0.5);
+        }
+
+        .step-number {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: 600;
+            font-size: 0.9rem;
+        }
+
+        .step.active .step-number {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+        }
+
+        .step.completed .step-number {
+            background: #22c55e;
+        }
+
+        .step-text {
+            font-size: 0.95rem;
+            color: #a1a1aa;
+        }
+
+        .step.active .step-text,
+        .step.completed .step-text {
+            color: #fff;
+        }
+
+        .main-content {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 40px;
+        }
+
+        .upload-area {
+            border: 2px dashed rgba(255, 255, 255, 0.2);
+            border-radius: 16px;
+            padding: 60px 40px;
+            text-align: center;
+            transition: all 0.3s;
+            cursor: pointer;
+            margin-bottom: 30px;
+        }
+
+        .upload-area:hover,
+        .upload-area.dragover {
+            border-color: #f093fb;
+            background: rgba(240, 147, 251, 0.1);
+        }
+
+        .upload-area.has-image {
+            border-style: solid;
+            border-color: rgba(34, 197, 94, 0.5);
+            background: rgba(34, 197, 94, 0.1);
+            padding: 30px;
+        }
+
+        .upload-icon {
+            font-size: 4rem;
+            margin-bottom: 20px;
+        }
+
+        .upload-title {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .upload-hint {
+            color: #71717a;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+        }
+
+        .upload-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 28px;
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .upload-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(240, 147, 251, 0.4);
+        }
+
+        #fileInput {
+            display: none;
+        }
+
+        /* 裁剪区域 */
+        .crop-section {
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        .crop-section.show {
+            display: block;
+        }
+
+        .section-title {
+            font-size: 1.1rem;
+            color: #fff;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .crop-container {
+            position: relative;
+            display: inline-block;
+            max-width: 100%;
+            background: repeating-conic-gradient(#2a2a3e 0% 25%, #1a1a2e 0% 50%) 50% / 20px 20px;
+            border-radius: 12px;
+            overflow: hidden;
+            margin-bottom: 16px;
+        }
+
+        .crop-image {
+            display: block;
+            max-width: 100%;
+            max-height: 400px;
+        }
+
+        .crop-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0, 0, 0, 0.6);
+            pointer-events: none;
+        }
+
+        .crop-box {
+            position: absolute;
+            border: 2px solid #f093fb;
+            background: transparent;
+            cursor: move;
+            box-shadow: 0 0 0 9999px rgba(0, 0, 0, 0.6);
+        }
+
+        .crop-box::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            border: 1px dashed rgba(255, 255, 255, 0.5);
+        }
+
+        /* 裁剪框网格线 */
+        .crop-grid {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            pointer-events: none;
+        }
+
+        .crop-grid::before,
+        .crop-grid::after {
+            content: '';
+            position: absolute;
+            background: rgba(255, 255, 255, 0.3);
+        }
+
+        .crop-grid::before {
+            top: 33.33%;
+            left: 0;
+            right: 0;
+            height: 1px;
+            box-shadow: 0 calc(33.33% * 2 - 33.33%) 0 rgba(255, 255, 255, 0.3);
+        }
+
+        .crop-grid::after {
+            left: 33.33%;
+            top: 0;
+            bottom: 0;
+            width: 1px;
+            box-shadow: calc(33.33% * 2 - 33.33%) 0 0 rgba(255, 255, 255, 0.3);
+        }
+
+        /* 调整大小手柄 */
+        .crop-handle {
+            position: absolute;
+            width: 12px;
+            height: 12px;
+            background: #fff;
+            border: 2px solid #f093fb;
+            border-radius: 50%;
+        }
+
+        .crop-handle.nw { top: -6px; left: -6px; cursor: nw-resize; }
+        .crop-handle.ne { top: -6px; right: -6px; cursor: ne-resize; }
+        .crop-handle.sw { bottom: -6px; left: -6px; cursor: sw-resize; }
+        .crop-handle.se { bottom: -6px; right: -6px; cursor: se-resize; }
+
+        .crop-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            flex-wrap: wrap;
+            gap: 16px;
+            margin-top: 16px;
+        }
+
+        .crop-size-info {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+        }
+
+        .crop-buttons {
+            display: flex;
+            gap: 12px;
+        }
+
+        .crop-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 8px;
+            font-size: 0.95rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .crop-btn.primary {
+            background: linear-gradient(135deg, #f093fb, #f5576c);
+            color: #fff;
+        }
+
+        .crop-btn.secondary {
+            background: rgba(255, 255, 255, 0.1);
+            color: #a1a1aa;
+        }
+
+        .crop-btn:hover {
+            transform: translateY(-2px);
+        }
+
+        .crop-btn.primary:hover {
+            box-shadow: 0 8px 20px rgba(240, 147, 251, 0.4);
+        }
+
+        /* 预览区域 */
+        .preview-section {
+            display: none;
+            margin-bottom: 30px;
+        }
+
+        .preview-section.show {
+            display: block;
+        }
+
+        .preview-box {
+            background: repeating-conic-gradient(#2a2a3e 0% 25%, #1a1a2e 0% 50%) 50% / 20px 20px;
+            border-radius: 12px;
+            padding: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 150px;
+        }
+
+        .preview-box img {
+            max-width: 200px;
+            max-height: 200px;
+            border-radius: 8px;
+        }
+
+        .image-info {
+            margin-top: 12px;
+            font-size: 0.85rem;
+            color: #71717a;
+            text-align: center;
+        }
+
+        /* 尺寸选择 */
+        .size-section {
+            margin-bottom: 30px;
+        }
+
+        .size-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(90px, 1fr));
+            gap: 12px;
+        }
+
+        .size-option {
+            position: relative;
+        }
+
+        .size-option input {
+            position: absolute;
+            opacity: 0;
+            cursor: pointer;
+        }
+
+        .size-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 6px;
+            padding: 14px 10px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .size-label:hover {
+            border-color: rgba(240, 147, 251, 0.5);
+        }
+
+        .size-option input:checked + .size-label {
+            background: rgba(240, 147, 251, 0.2);
+            border-color: #f093fb;
+        }
+
+        .size-icon {
+            font-size: 1.2rem;
+        }
+
+        .size-text {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+        }
+
+        .size-option input:checked + .size-label .size-text {
+            color: #fff;
+            font-weight: 500;
+        }
+
+        .multi-size-tip {
+            margin-top: 16px;
+            padding: 12px 16px;
+            background: rgba(59, 130, 246, 0.1);
+            border: 1px solid rgba(59, 130, 246, 0.3);
+            border-radius: 10px;
+            font-size: 0.9rem;
+            color: #93c5fd;
+        }
+
+        .generate-section {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .generate-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 16px 40px;
+            background: linear-gradient(135deg, #22c55e, #16a34a);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+
+        .generate-btn:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(34, 197, 94, 0.4);
+        }
+
+        .generate-btn:disabled {
+            opacity: 0.5;
+            cursor: not-allowed;
+        }
+
+        .result-section {
+            display: none;
+            margin-top: 30px;
+            padding: 30px;
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 16px;
+            text-align: center;
+        }
+
+        .result-section.show {
+            display: block;
+        }
+
+        .result-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .result-title {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .result-info {
+            color: #a1a1aa;
+            margin-bottom: 20px;
+        }
+
+        .download-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            padding: 14px 32px;
+            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.3s;
+            text-decoration: none;
+        }
+
+        .download-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(59, 130, 246, 0.4);
+        }
+
+        .ico-preview-grid {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            flex-wrap: wrap;
+            margin: 20px 0;
+        }
+
+        .ico-preview-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .ico-preview-box {
+            background: repeating-conic-gradient(#2a2a3e 0% 25%, #1a1a2e 0% 50%) 50% / 10px 10px;
+            border-radius: 8px;
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .ico-size-label {
+            font-size: 0.8rem;
+            color: #71717a;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: #71717a;
+        }
+
+        footer a {
+            color: #f093fb;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 1.8rem;
+            }
+
+            .steps {
+                gap: 10px;
+            }
+
+            .step {
+                padding: 10px 14px;
+                font-size: 0.85rem;
+            }
+
+            .main-content {
+                padding: 24px;
+            }
+
+            .upload-area {
+                padding: 40px 20px;
+            }
+
+            .size-grid {
+                grid-template-columns: repeat(4, 1fr);
+            }
+
+            .crop-info {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .crop-buttons {
+                justify-content: center;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <a href="index.html" class="back-link">← 返回工具箱</a>
+            <h1>🎨 ICO 图标制作</h1>
+            <p class="subtitle">将 PNG、JPG、GIF 图片转换为 ICO 图标文件</p>
+        </header>
+
+        <div class="steps">
+            <div class="step active" id="step1">
+                <span class="step-number">1</span>
+                <span class="step-text">选择图片</span>
+            </div>
+            <div class="step" id="step2">
+                <span class="step-number">2</span>
+                <span class="step-text">裁剪调整</span>
+            </div>
+            <div class="step" id="step3">
+                <span class="step-number">3</span>
+                <span class="step-text">选择尺寸</span>
+            </div>
+            <div class="step" id="step4">
+                <span class="step-number">4</span>
+                <span class="step-text">生成下载</span>
+            </div>
+        </div>
+
+        <div class="main-content">
+            <!-- 上传区域 -->
+            <div class="upload-area" id="uploadArea" onclick="document.getElementById('fileInput').click()">
+                <div class="upload-icon">📁</div>
+                <div class="upload-title">点击或拖拽图片到这里</div>
+                <div class="upload-hint">支持 PNG、JPG、GIF 格式</div>
+                <button class="upload-btn" onclick="event.stopPropagation(); document.getElementById('fileInput').click()">
+                    <span>📷</span>
+                    <span>选择图片</span>
+                </button>
+                <input type="file" id="fileInput" accept="image/png,image/jpeg,image/gif" onchange="handleFileSelect(event)">
+            </div>
+
+            <!-- 裁剪区域 -->
+            <div class="crop-section" id="cropSection">
+                <div class="section-title">
+                    <span>✂️</span>
+                    <span>裁剪图片（拖动调整正方形区域）</span>
+                </div>
+                <div style="text-align: center;">
+                    <div class="crop-container" id="cropContainer">
+                        <img id="cropImage" class="crop-image" src="" alt="裁剪">
+                        <div class="crop-box" id="cropBox">
+                            <div class="crop-grid"></div>
+                            <div class="crop-handle nw" data-handle="nw"></div>
+                            <div class="crop-handle ne" data-handle="ne"></div>
+                            <div class="crop-handle sw" data-handle="sw"></div>
+                            <div class="crop-handle se" data-handle="se"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="crop-info">
+                    <div class="crop-size-info" id="cropSizeInfo">裁剪区域: 100 × 100 px</div>
+                    <div class="crop-buttons">
+                        <button class="crop-btn secondary" onclick="resetCrop()">
+                            <span>↺</span>
+                            <span>重置</span>
+                        </button>
+                        <button class="crop-btn secondary" onclick="skipCrop()">
+                            <span>⏭️</span>
+                            <span>跳过裁剪</span>
+                        </button>
+                        <button class="crop-btn primary" onclick="applyCrop()">
+                            <span>✓</span>
+                            <span>确认裁剪</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 预览区域 -->
+            <div class="preview-section" id="previewSection">
+                <div class="section-title">
+                    <span>👁️</span>
+                    <span>最终图片预览</span>
+                </div>
+                <div class="preview-box">
+                    <img id="previewImage" src="" alt="预览">
+                </div>
+                <div class="image-info" id="imageInfo"></div>
+            </div>
+
+            <!-- 尺寸选择 -->
+            <div class="size-section">
+                <div class="section-title">
+                    <span>📐</span>
+                    <span>选择 ICO 图标尺寸</span>
+                </div>
+                <div class="size-grid" id="sizeGrid">
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="16" checked>
+                        <div class="size-label">
+                            <div class="size-icon">🔹</div>
+                            <div class="size-text">16×16</div>
+                        </div>
+                    </label>
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="32" checked>
+                        <div class="size-label">
+                            <div class="size-icon">🔸</div>
+                            <div class="size-text">32×32</div>
+                        </div>
+                    </label>
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="48" checked>
+                        <div class="size-label">
+                            <div class="size-icon">🔶</div>
+                            <div class="size-text">48×48</div>
+                        </div>
+                    </label>
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="64">
+                        <div class="size-label">
+                            <div class="size-icon">🟠</div>
+                            <div class="size-text">64×64</div>
+                        </div>
+                    </label>
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="128">
+                        <div class="size-label">
+                            <div class="size-icon">🟡</div>
+                            <div class="size-text">128×128</div>
+                        </div>
+                    </label>
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="256">
+                        <div class="size-label">
+                            <div class="size-icon">🟢</div>
+                            <div class="size-text">256×256</div>
+                        </div>
+                    </label>
+                    <label class="size-option">
+                        <input type="checkbox" name="size" value="512">
+                        <div class="size-label">
+                            <div class="size-icon">🔵</div>
+                            <div class="size-text">512×512</div>
+                        </div>
+                    </label>
+                </div>
+                <div class="multi-size-tip">
+                    💡 提示：可以同时选择多个尺寸，生成的 ICO 文件将包含所有选中的尺寸。
+                </div>
+            </div>
+
+            <!-- 生成按钮 -->
+            <div class="generate-section">
+                <button class="generate-btn" id="generateBtn" onclick="generateICO()" disabled>
+                    <span>✨</span>
+                    <span>生成 ICO 图标</span>
+                </button>
+            </div>
+
+            <!-- 结果区域 -->
+            <div class="result-section" id="resultSection">
+                <div class="result-icon">🎉</div>
+                <div class="result-title">ICO 图标生成成功！</div>
+                <div class="result-info" id="resultInfo"></div>
+                <div class="ico-preview-grid" id="icoPreviewGrid"></div>
+                <a class="download-btn" id="downloadBtn" download="favicon.ico">
+                    <span>💾</span>
+                    <span>下载 ICO 文件</span>
+                </a>
+            </div>
+        </div>
+
+        <footer>
+            <p>纯前端处理，图片不会上传到服务器</p>
+            <p style="margin-top: 8px;">
+                <a href="index.html">← 返回 Web Toolbox</a>
+            </p>
+        </footer>
+    </div>
+
+    <script>
+        let originalImage = null;
+        let croppedImage = null;
+        let fileName = 'favicon';
+
+        // 裁剪相关变量
+        let cropBox, cropImage, cropContainer;
+        let isDragging = false;
+        let isResizing = false;
+        let currentHandle = null;
+        let startX, startY, startLeft, startTop, startWidth, startHeight;
+        let imageScale = 1;
+
+        // 拖拽上传
+        const uploadArea = document.getElementById('uploadArea');
+
+        uploadArea.addEventListener('dragover', (e) => {
+            e.preventDefault();
+            uploadArea.classList.add('dragover');
+        });
+
+        uploadArea.addEventListener('dragleave', () => {
+            uploadArea.classList.remove('dragover');
+        });
+
+        uploadArea.addEventListener('drop', (e) => {
+            e.preventDefault();
+            uploadArea.classList.remove('dragover');
+            const files = e.dataTransfer.files;
+            if (files.length > 0) {
+                handleFile(files[0]);
+            }
+        });
+
+        function handleFileSelect(event) {
+            const file = event.target.files[0];
+            if (file) {
+                handleFile(file);
+            }
+        }
+
+        function handleFile(file) {
+            if (!file.type.match(/^image\/(png|jpeg|gif)$/)) {
+                alert('请选择 PNG、JPG 或 GIF 格式的图片！');
+                return;
+            }
+
+            fileName = file.name.replace(/\.[^/.]+$/, '') || 'favicon';
+
+            const reader = new FileReader();
+            reader.onload = (e) => {
+                const img = new Image();
+                img.onload = () => {
+                    originalImage = img;
+                    croppedImage = null;
+                    showCropArea(img, file);
+                    updateSteps(2);
+                };
+                img.src = e.target.result;
+            };
+            reader.readAsDataURL(file);
+        }
+
+        function showCropArea(img, file) {
+            // 更新上传区域
+            uploadArea.classList.add('has-image');
+            uploadArea.innerHTML = `
+                <div style="display: flex; align-items: center; gap: 20px; flex-wrap: wrap; justify-content: center;">
+                    <img src="${img.src}" style="max-height: 60px; border-radius: 8px;">
+                    <div style="text-align: left;">
+                        <div style="color: #22c55e; font-weight: 500; margin-bottom: 4px;">✓ 图片已选择</div>
+                        <div style="color: #71717a; font-size: 0.9rem;">${file.name} (${img.width}×${img.height})</div>
+                    </div>
+                    <button class="upload-btn" onclick="event.stopPropagation(); document.getElementById('fileInput').click()">
+                        <span>🔄</span>
+                        <span>重新选择</span>
+                    </button>
+                </div>
+                <input type="file" id="fileInput" accept="image/png,image/jpeg,image/gif" onchange="handleFileSelect(event)" style="display:none;">
+            `;
+
+            // 显示裁剪区域
+            cropImage = document.getElementById('cropImage');
+            cropBox = document.getElementById('cropBox');
+            cropContainer = document.getElementById('cropContainer');
+
+            cropImage.src = img.src;
+            cropImage.onload = () => {
+                initCropBox();
+            };
+
+            document.getElementById('cropSection').classList.add('show');
+            document.getElementById('previewSection').classList.remove('show');
+            document.getElementById('generateBtn').disabled = true;
+        }
+
+        function initCropBox() {
+            const rect = cropImage.getBoundingClientRect();
+            const containerRect = cropContainer.getBoundingClientRect();
+
+            // 计算缩放比例
+            imageScale = originalImage.width / cropImage.offsetWidth;
+
+            // 初始化正方形裁剪框（居中，大小为较小边的80%）
+            const minSide = Math.min(cropImage.offsetWidth, cropImage.offsetHeight);
+            const boxSize = Math.floor(minSide * 0.8);
+
+            const left = (cropImage.offsetWidth - boxSize) / 2;
+            const top = (cropImage.offsetHeight - boxSize) / 2;
+
+            cropBox.style.left = left + 'px';
+            cropBox.style.top = top + 'px';
+            cropBox.style.width = boxSize + 'px';
+            cropBox.style.height = boxSize + 'px';
+
+            updateCropInfo();
+            setupCropEvents();
+        }
+
+        function setupCropEvents() {
+            // 移动裁剪框
+            cropBox.addEventListener('mousedown', (e) => {
+                if (e.target.classList.contains('crop-handle')) return;
+                isDragging = true;
+                startX = e.clientX;
+                startY = e.clientY;
+                startLeft = cropBox.offsetLeft;
+                startTop = cropBox.offsetTop;
+                e.preventDefault();
+            });
+
+            // 调整大小手柄
+            document.querySelectorAll('.crop-handle').forEach(handle => {
+                handle.addEventListener('mousedown', (e) => {
+                    isResizing = true;
+                    currentHandle = e.target.dataset.handle;
+                    startX = e.clientX;
+                    startY = e.clientY;
+                    startLeft = cropBox.offsetLeft;
+                    startTop = cropBox.offsetTop;
+                    startWidth = cropBox.offsetWidth;
+                    startHeight = cropBox.offsetHeight;
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            });
+
+            document.addEventListener('mousemove', handleMouseMove);
+            document.addEventListener('mouseup', () => {
+                isDragging = false;
+                isResizing = false;
+                currentHandle = null;
+            });
+
+            // 触摸事件支持
+            cropBox.addEventListener('touchstart', (e) => {
+                if (e.target.classList.contains('crop-handle')) return;
+                isDragging = true;
+                startX = e.touches[0].clientX;
+                startY = e.touches[0].clientY;
+                startLeft = cropBox.offsetLeft;
+                startTop = cropBox.offsetTop;
+                e.preventDefault();
+            });
+
+            document.querySelectorAll('.crop-handle').forEach(handle => {
+                handle.addEventListener('touchstart', (e) => {
+                    isResizing = true;
+                    currentHandle = e.target.dataset.handle;
+                    startX = e.touches[0].clientX;
+                    startY = e.touches[0].clientY;
+                    startLeft = cropBox.offsetLeft;
+                    startTop = cropBox.offsetTop;
+                    startWidth = cropBox.offsetWidth;
+                    startHeight = cropBox.offsetHeight;
+                    e.preventDefault();
+                    e.stopPropagation();
+                });
+            });
+
+            document.addEventListener('touchmove', (e) => {
+                if (e.touches.length > 0) {
+                    handleMouseMove({ clientX: e.touches[0].clientX, clientY: e.touches[0].clientY });
+                }
+            });
+
+            document.addEventListener('touchend', () => {
+                isDragging = false;
+                isResizing = false;
+                currentHandle = null;
+            });
+        }
+
+        function handleMouseMove(e) {
+            if (!isDragging && !isResizing) return;
+
+            const dx = e.clientX - startX;
+            const dy = e.clientY - startY;
+            const imgWidth = cropImage.offsetWidth;
+            const imgHeight = cropImage.offsetHeight;
+
+            if (isDragging) {
+                let newLeft = startLeft + dx;
+                let newTop = startTop + dy;
+
+                // 边界限制
+                newLeft = Math.max(0, Math.min(newLeft, imgWidth - cropBox.offsetWidth));
+                newTop = Math.max(0, Math.min(newTop, imgHeight - cropBox.offsetHeight));
+
+                cropBox.style.left = newLeft + 'px';
+                cropBox.style.top = newTop + 'px';
+            }
+
+            if (isResizing) {
+                let newWidth, newHeight, newLeft, newTop;
+                const delta = Math.max(Math.abs(dx), Math.abs(dy));
+                const sign = (dx + dy) > 0 ? 1 : -1;
+
+                switch (currentHandle) {
+                    case 'se':
+                        newWidth = Math.max(50, startWidth + delta * sign);
+                        newHeight = newWidth;
+                        newLeft = startLeft;
+                        newTop = startTop;
+                        break;
+                    case 'sw':
+                        newWidth = Math.max(50, startWidth - delta * sign);
+                        newHeight = newWidth;
+                        newLeft = startLeft + startWidth - newWidth;
+                        newTop = startTop;
+                        break;
+                    case 'ne':
+                        newWidth = Math.max(50, startWidth + delta * sign);
+                        newHeight = newWidth;
+                        newLeft = startLeft;
+                        newTop = startTop + startHeight - newHeight;
+                        break;
+                    case 'nw':
+                        newWidth = Math.max(50, startWidth - delta * sign);
+                        newHeight = newWidth;
+                        newLeft = startLeft + startWidth - newWidth;
+                        newTop = startTop + startHeight - newHeight;
+                        break;
+                }
+
+                // 边界限制
+                if (newLeft < 0) {
+                    newWidth += newLeft;
+                    newLeft = 0;
+                }
+                if (newTop < 0) {
+                    newHeight += newTop;
+                    newTop = 0;
+                }
+                if (newLeft + newWidth > imgWidth) {
+                    newWidth = imgWidth - newLeft;
+                }
+                if (newTop + newHeight > imgHeight) {
+                    newHeight = imgHeight - newTop;
+                }
+
+                // 保持正方形
+                const minSize = Math.min(newWidth, newHeight);
+                newWidth = newHeight = minSize;
+
+                cropBox.style.left = newLeft + 'px';
+                cropBox.style.top = newTop + 'px';
+                cropBox.style.width = newWidth + 'px';
+                cropBox.style.height = newHeight + 'px';
+            }
+
+            updateCropInfo();
+        }
+
+        function updateCropInfo() {
+            const realWidth = Math.round(cropBox.offsetWidth * imageScale);
+            const realHeight = Math.round(cropBox.offsetHeight * imageScale);
+            document.getElementById('cropSizeInfo').textContent = `裁剪区域: ${realWidth} × ${realHeight} px`;
+        }
+
+        function resetCrop() {
+            initCropBox();
+        }
+
+        function skipCrop() {
+            // 使用原图，自动裁剪为正方形（居中）
+            const canvas = document.createElement('canvas');
+            const size = Math.min(originalImage.width, originalImage.height);
+            canvas.width = size;
+            canvas.height = size;
+            const ctx = canvas.getContext('2d');
+
+            const sx = (originalImage.width - size) / 2;
+            const sy = (originalImage.height - size) / 2;
+            ctx.drawImage(originalImage, sx, sy, size, size, 0, 0, size, size);
+
+            const croppedDataUrl = canvas.toDataURL('image/png');
+            const img = new Image();
+            img.onload = () => {
+                croppedImage = img;
+                showFinalPreview(img);
+            };
+            img.src = croppedDataUrl;
+        }
+
+        function applyCrop() {
+            // 获取裁剪区域
+            const left = cropBox.offsetLeft * imageScale;
+            const top = cropBox.offsetTop * imageScale;
+            const width = cropBox.offsetWidth * imageScale;
+            const height = cropBox.offsetHeight * imageScale;
+
+            // 创建裁剪后的图片
+            const canvas = document.createElement('canvas');
+            canvas.width = width;
+            canvas.height = height;
+            const ctx = canvas.getContext('2d');
+            ctx.drawImage(originalImage, left, top, width, height, 0, 0, width, height);
+
+            const croppedDataUrl = canvas.toDataURL('image/png');
+            const img = new Image();
+            img.onload = () => {
+                croppedImage = img;
+                showFinalPreview(img);
+            };
+            img.src = croppedDataUrl;
+        }
+
+        function showFinalPreview(img) {
+            document.getElementById('previewImage').src = img.src;
+            document.getElementById('imageInfo').textContent = `尺寸: ${img.width} × ${img.height} px（正方形）`;
+
+            document.getElementById('cropSection').classList.remove('show');
+            document.getElementById('previewSection').classList.add('show');
+            document.getElementById('generateBtn').disabled = false;
+
+            updateSteps(3);
+        }
+
+        function updateSteps(currentStep) {
+            for (let i = 1; i <= 4; i++) {
+                const step = document.getElementById(`step${i}`);
+                step.classList.remove('active', 'completed');
+                if (i < currentStep) {
+                    step.classList.add('completed');
+                } else if (i === currentStep) {
+                    step.classList.add('active');
+                }
+            }
+        }
+
+        function getSelectedSizes() {
+            const checkboxes = document.querySelectorAll('input[name="size"]:checked');
+            return Array.from(checkboxes).map(cb => parseInt(cb.value)).sort((a, b) => a - b);
+        }
+
+        async function generateICO() {
+            const imageToUse = croppedImage || originalImage;
+            if (!imageToUse) {
+                alert('请先选择并裁剪图片！');
+                return;
+            }
+
+            const sizes = getSelectedSizes();
+            if (sizes.length === 0) {
+                alert('请至少选择一个尺寸！');
+                return;
+            }
+
+            const btn = document.getElementById('generateBtn');
+            btn.disabled = true;
+            btn.innerHTML = '<span>⏳</span><span>生成中...</span>';
+
+            try {
+                const images = [];
+                const previewGrid = document.getElementById('icoPreviewGrid');
+                previewGrid.innerHTML = '';
+
+                for (const size of sizes) {
+                    const canvas = document.createElement('canvas');
+                    canvas.width = size;
+                    canvas.height = size;
+                    const ctx = canvas.getContext('2d');
+                    ctx.drawImage(imageToUse, 0, 0, size, size);
+
+                    const dataUrl = canvas.toDataURL('image/png');
+                    const pngData = await dataURLToUint8Array(dataUrl);
+                    images.push({ size, data: pngData });
+
+                    const previewItem = document.createElement('div');
+                    previewItem.className = 'ico-preview-item';
+                    const displaySize = Math.min(size, 80);
+                    previewItem.innerHTML = `
+                        <div class="ico-preview-box" style="width: ${displaySize + 20}px; height: ${displaySize + 20}px;">
+                            <img src="${dataUrl}" style="width: ${displaySize}px; height: ${displaySize}px;">
+                        </div>
+                        <div class="ico-size-label">${size}×${size}</div>
+                    `;
+                    previewGrid.appendChild(previewItem);
+                }
+
+                const icoData = createICO(images);
+                const blob = new Blob([icoData], { type: 'image/x-icon' });
+                const url = URL.createObjectURL(blob);
+
+                const downloadBtn = document.getElementById('downloadBtn');
+                downloadBtn.href = url;
+                downloadBtn.download = `${fileName}.ico`;
+
+                const totalSize = (blob.size / 1024).toFixed(1);
+                document.getElementById('resultInfo').innerHTML =
+                    `包含 ${sizes.length} 个尺寸 (${sizes.join(', ')}) | 文件大小: ${totalSize} KB`;
+
+                document.getElementById('resultSection').classList.add('show');
+                updateSteps(4);
+
+                document.getElementById('resultSection').scrollIntoView({ behavior: 'smooth' });
+
+            } catch (error) {
+                console.error('生成失败:', error);
+                alert('生成 ICO 失败，请重试！');
+            }
+
+            btn.disabled = false;
+            btn.innerHTML = '<span>✨</span><span>生成 ICO 图标</span>';
+        }
+
+        async function dataURLToUint8Array(dataUrl) {
+            const response = await fetch(dataUrl);
+            const blob = await response.blob();
+            const arrayBuffer = await blob.arrayBuffer();
+            return new Uint8Array(arrayBuffer);
+        }
+
+        function createICO(images) {
+            const headerSize = 6;
+            const entrySize = 16;
+            const numImages = images.length;
+            const dirSize = headerSize + (entrySize * numImages);
+
+            let totalSize = dirSize;
+            for (const img of images) {
+                totalSize += img.data.length;
+            }
+
+            const buffer = new ArrayBuffer(totalSize);
+            const view = new DataView(buffer);
+            const uint8 = new Uint8Array(buffer);
+
+            view.setUint16(0, 0, true);
+            view.setUint16(2, 1, true);
+            view.setUint16(4, numImages, true);
+
+            let offset = dirSize;
+            for (let i = 0; i < numImages; i++) {
+                const img = images[i];
+                const entryOffset = headerSize + (i * entrySize);
+
+                view.setUint8(entryOffset + 0, img.size >= 256 ? 0 : img.size);
+                view.setUint8(entryOffset + 1, img.size >= 256 ? 0 : img.size);
+                view.setUint8(entryOffset + 2, 0);
+                view.setUint8(entryOffset + 3, 0);
+                view.setUint16(entryOffset + 4, 1, true);
+                view.setUint16(entryOffset + 6, 32, true);
+                view.setUint32(entryOffset + 8, img.data.length, true);
+                view.setUint32(entryOffset + 12, offset, true);
+
+                uint8.set(img.data, offset);
+                offset += img.data.length;
+            }
+
+            return buffer;
+        }
+
+        document.getElementById('sizeGrid').addEventListener('change', () => {
+            if (croppedImage) {
+                updateSteps(3);
+            }
+        });
+    </script>
+</body>
+</html>
