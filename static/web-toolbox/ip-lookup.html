@@ -582,6 +582,63 @@
             queryIP();
         }
 
+        // 检测是否为有效IP地址
+        function isValidIP(str) {
+            const ipv4Regex = /^(\d{1,3}\.){3}\d{1,3}$/;
+            if (ipv4Regex.test(str)) {
+                const parts = str.split('.').map(Number);
+                return parts.every(p => p >= 0 && p <= 255);
+            }
+            return false;
+        }
+
+        // 检测是否为域名
+        function isDomain(str) {
+            const domainRegex = /^[a-zA-Z0-9]([a-zA-Z0-9-]{0,61}[a-zA-Z0-9])?(\.[a-zA-Z]{2,})+$/;
+            return domainRegex.test(str);
+        }
+
+        // 域名解析为IP - 使用多个DNS服务
+        async function resolveDomain(domain) {
+            const dnsApis = [
+                {
+                    name: 'Cloudflare DoH',
+                    resolve: async (domain) => {
+                        const response = await fetch(`https://cloudflare-dns.com/dns-query?name=${domain}&type=A`, {
+                            headers: { 'Accept': 'application/dns-json' }
+                        });
+                        const data = await response.json();
+                        if (data.Answer && data.Answer.length > 0) {
+                            const aRecord = data.Answer.find(r => r.type === 1);
+                            if (aRecord) return aRecord.data;
+                        }
+                        throw new Error('无法解析域名');
+                    }
+                },
+                {
+                    name: 'Google DoH',
+                    resolve: async (domain) => {
+                        const response = await fetch(`https://dns.google/resolve?name=${domain}&type=A`);
+                        const data = await response.json();
+                        if (data.Answer && data.Answer.length > 0) {
+                            const aRecord = data.Answer.find(r => r.type === 1);
+                            if (aRecord) return aRecord.data;
+                        }
+                        throw new Error('无法解析域名');
+                    }
+                }
+            ];
+
+            for (const api of dnsApis) {
+                try {
+                    return await api.resolve(domain);
+                } catch (e) {
+                    console.log(`DNS ${api.name} 失败:`, e.message);
+                }
+            }
+            throw new Error('域名解析失败，请检查域名是否正确');
+        }
+
         // 多API查询策略 - 优先使用 HTTPS API
         const ipApis = [
             {
@@ -609,26 +666,26 @@
                 }
             },
             {
-                name: 'freeipapi.com',
+                name: 'ip-api.io',
                 query: async (input) => {
-                    const response = await fetch(`https://freeipapi.com/api/json/${input}`);
+                    const response = await fetch(`https://ip-api.io/json/${input}`);
                     const data = await response.json();
-                    if (data.error) {
-                        throw new Error(data.error || '查询失败');
+                    if (!data.ip) {
+                        throw new Error(data.message || '查询失败');
                     }
                     return {
-                        ip: data.ipAddress,
-                        country: data.countryName,
-                        countryCode: data.countryCode,
-                        region: data.regionName,
-                        city: data.cityName,
-                        zip: data.zipCode,
+                        ip: data.ip,
+                        country: data.country_name,
+                        countryCode: data.country_code,
+                        region: data.region_name,
+                        city: data.city,
+                        zip: data.zip,
                         lat: data.latitude,
                         lon: data.longitude,
-                        timezone: data.timeZone,
-                        isp: null,
-                        org: null,
-                        as: null
+                        timezone: data.time_zone,
+                        isp: data.isp,
+                        org: data.organisation,
+                        as: data.asn ? `AS${data.asn}` : null
                     };
                 }
             }
@@ -649,11 +706,32 @@
             hideError();
             document.getElementById('resultCard').classList.remove('show');
 
+            let ipToQuery = input;
+            let originalInput = input;
+
+            // 如果输入是域名，先解析为IP
+            if (isDomain(input)) {
+                try {
+                    ipToQuery = await resolveDomain(input);
+                    console.log(`域名 ${input} 解析为 IP: ${ipToQuery}`);
+                } catch (e) {
+                    showError(e.message);
+                    btn.classList.remove('loading');
+                    btn.disabled = false;
+                    return;
+                }
+            } else if (!isValidIP(input)) {
+                showError('请输入有效的IP地址或域名');
+                btn.classList.remove('loading');
+                btn.disabled = false;
+                return;
+            }
+
             let lastError = null;
 
             for (const api of ipApis) {
                 try {
-                    const data = await api.query(input);
+                    const data = await api.query(ipToQuery);
 
                     // 显示结果
                     const ip = data.ip;
