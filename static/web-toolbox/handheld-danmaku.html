@@ -1,0 +1,723 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>手持弹幕 - 在线LED滚动字幕生成器 | Web Toolbox</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="免费在线手持弹幕工具，支持自定义滚动文字、播放速度、字体大小和颜色。适用于演唱会应援、活动表白、聚会互动等场景，手机横屏效果更佳。">
+    <meta name="keywords" content="手持弹幕,LED弹幕,滚动字幕,演唱会应援,表白神器,在线弹幕,手机弹幕,LED屏幕,滚动文字,弹幕生成器">
+    <meta name="author" content="heyuan110">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/handheld-danmaku.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/handheld-danmaku.html">
+    <meta property="og:title" content="手持弹幕 - 在线LED滚动字幕生成器">
+    <meta property="og:description" content="免费在线手持弹幕工具，适用于演唱会应援、活动表白、聚会互动等场景。">
+    <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/handheld-danmaku.png">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Web Toolbox">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="手持弹幕 - 在线LED滚动字幕生成器">
+    <meta name="twitter:description" content="免费在线手持弹幕工具，适用于演唱会应援、活动表白等场景。">
+    <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/handheld-danmaku.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "手持弹幕",
+        "url": "https://www.heyuan110.com/web-toolbox/handheld-danmaku.html",
+        "description": "在线手持弹幕工具，支持自定义滚动文字、播放速度、字体大小和颜色",
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "author": {"@type": "Person", "name": "heyuan110"}
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            min-height: 100vh;
+            color: #e4e4e7;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 30px 20px;
+        }
+
+        /* 返回按钮 */
+        .back-home {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #a1a1aa;
+            text-decoration: none;
+            font-size: 0.9rem;
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.2s ease;
+            margin-bottom: 20px;
+        }
+
+        .back-home:hover {
+            background: rgba(255, 255, 255, 0.1);
+            color: #fff;
+        }
+
+        /* 标题 */
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(120deg, #00d4ff, #7c3aed, #f472b6);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 10px;
+        }
+
+        .subtitle {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+        }
+
+        /* 设置面板 */
+        .settings-panel {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 20px;
+        }
+
+        .setting-group {
+            margin-bottom: 20px;
+        }
+
+        .setting-group:last-child {
+            margin-bottom: 0;
+        }
+
+        .setting-label {
+            display: block;
+            margin-bottom: 8px;
+            color: #d4d4d8;
+            font-size: 0.9rem;
+            font-weight: 500;
+        }
+
+        .setting-row {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        /* 文本输入 */
+        .text-input {
+            width: 100%;
+            padding: 14px 18px;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 10px;
+            color: #e4e4e7;
+            font-size: 1.1rem;
+            outline: none;
+            transition: all 0.2s ease;
+        }
+
+        .text-input:focus {
+            border-color: #7c3aed;
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+        }
+
+        .text-input::placeholder {
+            color: #71717a;
+        }
+
+        /* 滑块 */
+        .slider-container {
+            flex: 1;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .slider {
+            flex: 1;
+            height: 8px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 4px;
+            outline: none;
+            -webkit-appearance: none;
+        }
+
+        .slider::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            width: 22px;
+            height: 22px;
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+            border-radius: 50%;
+            cursor: pointer;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.4);
+            transition: transform 0.2s ease;
+        }
+
+        .slider::-webkit-slider-thumb:hover {
+            transform: scale(1.1);
+        }
+
+        .slider-value {
+            min-width: 50px;
+            text-align: center;
+            font-size: 0.95rem;
+            color: #e4e4e7;
+            background: rgba(0, 0, 0, 0.3);
+            padding: 6px 10px;
+            border-radius: 6px;
+        }
+
+        /* 颜色选择器 */
+        .color-picker-group {
+            display: flex;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+
+        .color-item {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .color-item span {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+        }
+
+        .color-picker {
+            width: 60px;
+            height: 60px;
+            border: 3px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            cursor: pointer;
+            overflow: hidden;
+            transition: all 0.2s ease;
+        }
+
+        .color-picker:hover {
+            transform: scale(1.05);
+            border-color: rgba(255, 255, 255, 0.4);
+        }
+
+        .color-picker input {
+            width: 100%;
+            height: 100%;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* 预设颜色 */
+        .preset-colors {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        .preset-color {
+            width: 32px;
+            height: 32px;
+            border-radius: 8px;
+            cursor: pointer;
+            border: 2px solid transparent;
+            transition: all 0.2s ease;
+        }
+
+        .preset-color:hover {
+            transform: scale(1.15);
+            border-color: rgba(255, 255, 255, 0.5);
+        }
+
+        /* 启动按钮 */
+        .start-btn {
+            width: 100%;
+            padding: 16px 30px;
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+            color: #fff;
+            border: none;
+            border-radius: 12px;
+            font-size: 1.2rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .start-btn:hover {
+            background: linear-gradient(135deg, #8b5cf6, #818cf8);
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(124, 58, 237, 0.4);
+        }
+
+        .start-btn:active {
+            transform: translateY(0);
+        }
+
+        /* 提示信息 */
+        .tips {
+            background: rgba(34, 197, 94, 0.1);
+            border: 1px solid rgba(34, 197, 94, 0.3);
+            border-radius: 10px;
+            padding: 15px 20px;
+            margin-top: 20px;
+        }
+
+        .tips-title {
+            color: #22c55e;
+            font-weight: 600;
+            margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .tips ul {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            padding-left: 20px;
+        }
+
+        .tips li {
+            margin-bottom: 5px;
+        }
+
+        /* 简介 */
+        .intro {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-top: 25px;
+        }
+
+        .intro h2 {
+            font-size: 1.2rem;
+            color: #fff;
+            margin-bottom: 12px;
+        }
+
+        .intro p {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            line-height: 1.8;
+        }
+
+        /* ============ 弹幕全屏模式 ============ */
+        .danmaku-fullscreen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: 9999;
+            display: none;
+            overflow: hidden;
+            cursor: none;
+        }
+
+        .danmaku-fullscreen.active {
+            display: block;
+        }
+
+        .danmaku-text {
+            position: absolute;
+            white-space: nowrap;
+            font-weight: bold;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+            transform: translateX(100vw);
+            top: 50%;
+            transform-origin: center center;
+        }
+
+        /* 退出提示 */
+        .exit-hint {
+            position: fixed;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+            background: rgba(0, 0, 0, 0.6);
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+            pointer-events: none;
+            z-index: 10000;
+        }
+
+        .danmaku-fullscreen.active .exit-hint {
+            animation: showHint 4s ease forwards;
+        }
+
+        @keyframes showHint {
+            0%, 10% { opacity: 1; }
+            90%, 100% { opacity: 0; }
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 15px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .settings-panel {
+                padding: 20px;
+            }
+
+            .color-picker-group {
+                gap: 15px;
+            }
+
+            .color-picker {
+                width: 50px;
+                height: 50px;
+            }
+
+            .setting-row {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .slider-value {
+                min-width: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-home">← 返回工具箱</a>
+
+        <header>
+            <h1>手持弹幕</h1>
+            <p class="subtitle">演唱会应援、活动表白、聚会互动必备神器</p>
+        </header>
+
+        <div class="settings-panel">
+            <!-- 弹幕内容 -->
+            <div class="setting-group">
+                <label class="setting-label">弹幕内容</label>
+                <input type="text" id="danmakuText" class="text-input" placeholder="输入要显示的文字..." value="在线工具" maxlength="50">
+            </div>
+
+            <!-- 播放速度 -->
+            <div class="setting-group">
+                <label class="setting-label">播放速度</label>
+                <div class="setting-row">
+                    <div class="slider-container">
+                        <input type="range" id="speedSlider" class="slider" min="2" max="15" value="5">
+                        <span class="slider-value" id="speedValue">5 s</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 文字大小 -->
+            <div class="setting-group">
+                <label class="setting-label">文字大小</label>
+                <div class="setting-row">
+                    <div class="slider-container">
+                        <input type="range" id="sizeSlider" class="slider" min="30" max="150" value="70">
+                        <span class="slider-value" id="sizeValue">70</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- 颜色选择 -->
+            <div class="setting-group">
+                <label class="setting-label">颜色设置</label>
+                <div class="color-picker-group">
+                    <div class="color-item">
+                        <span>文字颜色</span>
+                        <div class="color-picker">
+                            <input type="color" id="textColor" value="#ffffff">
+                        </div>
+                    </div>
+                    <div class="color-item">
+                        <span>背景颜色</span>
+                        <div class="color-picker">
+                            <input type="color" id="bgColor" value="#000000">
+                        </div>
+                    </div>
+                </div>
+                <div class="preset-colors" id="presetColors">
+                    <div class="preset-color" style="background: #ff0000;" data-text="#ffffff" data-bg="#ff0000" title="红色背景"></div>
+                    <div class="preset-color" style="background: #00ff00;" data-text="#000000" data-bg="#00ff00" title="绿色背景"></div>
+                    <div class="preset-color" style="background: #0000ff;" data-text="#ffffff" data-bg="#0000ff" title="蓝色背景"></div>
+                    <div class="preset-color" style="background: #ff00ff;" data-text="#ffffff" data-bg="#ff00ff" title="紫色背景"></div>
+                    <div class="preset-color" style="background: #ffff00;" data-text="#000000" data-bg="#ffff00" title="黄色背景"></div>
+                    <div class="preset-color" style="background: #00ffff;" data-text="#000000" data-bg="#00ffff" title="青色背景"></div>
+                    <div class="preset-color" style="background: #ff6b6b;" data-text="#ffffff" data-bg="#ff6b6b" title="珊瑚红"></div>
+                    <div class="preset-color" style="background: #000000;" data-text="#00ff00" data-bg="#000000" title="黑客风格"></div>
+                </div>
+            </div>
+
+            <!-- 启动按钮 -->
+            <button class="start-btn" id="startBtn">
+                <span>开始弹幕</span>
+            </button>
+        </div>
+
+        <div class="tips">
+            <div class="tips-title">使用提示</div>
+            <ul>
+                <li><strong>双击屏幕</strong> 可退出弹幕模式</li>
+                <li>建议将手机 <strong>横屏</strong> 使用，效果更佳</li>
+                <li>播放速度数值越大，滚动越慢</li>
+                <li>点击预设颜色可快速应用配色方案</li>
+            </ul>
+        </div>
+
+        <div class="intro">
+            <h2>关于手持弹幕</h2>
+            <p>手持弹幕是一种新型的互动沟通工具，可以方便地为各种户外活动、演出嘉年华等活动增加趣味性和互动性。手持弹幕具有轻便、易携带、易操作等优点，可以让每个参与者都变成活动的一部分。同时，手持弹幕还可以通过预先编写的文本、表情等形式，表达参与者的情感和想法，实现沟通互动。在社交媒体时代，手持弹幕的使用也带来了更广泛的社交效应，增加了活动的互动性和传播度。无论是举办方还是参与者，手持弹幕都是一个非常有价值的互动工具。</p>
+        </div>
+    </div>
+
+    <!-- 弹幕全屏区域 -->
+    <div class="danmaku-fullscreen" id="danmakuScreen">
+        <div class="danmaku-text" id="danmakuDisplay"></div>
+        <div class="exit-hint">双击屏幕退出弹幕</div>
+    </div>
+
+    <script>
+        // 获取元素
+        const danmakuText = document.getElementById('danmakuText');
+        const speedSlider = document.getElementById('speedSlider');
+        const speedValue = document.getElementById('speedValue');
+        const sizeSlider = document.getElementById('sizeSlider');
+        const sizeValue = document.getElementById('sizeValue');
+        const textColor = document.getElementById('textColor');
+        const bgColor = document.getElementById('bgColor');
+        const startBtn = document.getElementById('startBtn');
+        const danmakuScreen = document.getElementById('danmakuScreen');
+        const danmakuDisplay = document.getElementById('danmakuDisplay');
+        const presetColors = document.getElementById('presetColors');
+
+        let animationId = null;
+        let isRunning = false;
+
+        // 更新滑块显示值
+        speedSlider.addEventListener('input', () => {
+            speedValue.textContent = speedSlider.value + ' s';
+        });
+
+        sizeSlider.addEventListener('input', () => {
+            sizeValue.textContent = sizeSlider.value;
+        });
+
+        // 预设颜色点击
+        presetColors.addEventListener('click', (e) => {
+            const preset = e.target.closest('.preset-color');
+            if (preset) {
+                textColor.value = preset.dataset.text;
+                bgColor.value = preset.dataset.bg;
+            }
+        });
+
+        // 开始弹幕
+        startBtn.addEventListener('click', startDanmaku);
+
+        function startDanmaku() {
+            const text = danmakuText.value.trim();
+            if (!text) {
+                alert('请输入弹幕内容');
+                danmakuText.focus();
+                return;
+            }
+
+            // 设置弹幕样式
+            const speed = parseFloat(speedSlider.value);
+            const size = parseInt(sizeSlider.value);
+            const tColor = textColor.value;
+            const bColor = bgColor.value;
+
+            danmakuScreen.style.backgroundColor = bColor;
+            danmakuDisplay.textContent = text;
+            danmakuDisplay.style.color = tColor;
+            danmakuDisplay.style.fontSize = size + 'px';
+
+            // 显示弹幕屏幕
+            danmakuScreen.classList.add('active');
+            isRunning = true;
+
+            // 尝试全屏
+            tryFullscreen();
+
+            // 开始动画
+            startAnimation(speed);
+
+            // 阻止页面滚动
+            document.body.style.overflow = 'hidden';
+        }
+
+        function startAnimation(speed) {
+            // 计算动画参数
+            const screenWidth = window.innerWidth;
+            const textWidth = danmakuDisplay.offsetWidth;
+            const totalDistance = screenWidth + textWidth;
+
+            // 初始位置（屏幕右侧外）
+            let currentX = screenWidth;
+
+            // 计算每帧移动距离
+            const fps = 60;
+            const pixelsPerFrame = totalDistance / (speed * fps);
+
+            function animate() {
+                if (!isRunning) return;
+
+                currentX -= pixelsPerFrame;
+
+                // 文字完全移出左侧后重置
+                if (currentX < -textWidth) {
+                    currentX = screenWidth;
+                }
+
+                // 居中显示（垂直）
+                danmakuDisplay.style.transform = `translateX(${currentX}px) translateY(-50%)`;
+
+                animationId = requestAnimationFrame(animate);
+            }
+
+            animate();
+        }
+
+        // 双击退出
+        danmakuScreen.addEventListener('dblclick', stopDanmaku);
+
+        // 键盘 ESC 退出
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && isRunning) {
+                stopDanmaku();
+            }
+        });
+
+        function stopDanmaku() {
+            isRunning = false;
+            if (animationId) {
+                cancelAnimationFrame(animationId);
+                animationId = null;
+            }
+
+            danmakuScreen.classList.remove('active');
+            document.body.style.overflow = '';
+
+            // 退出全屏
+            if (document.fullscreenElement) {
+                document.exitFullscreen().catch(() => {});
+            }
+        }
+
+        // 尝试进入全屏
+        function tryFullscreen() {
+            const elem = danmakuScreen;
+            if (elem.requestFullscreen) {
+                elem.requestFullscreen().catch(() => {});
+            } else if (elem.webkitRequestFullscreen) {
+                elem.webkitRequestFullscreen();
+            } else if (elem.msRequestFullscreen) {
+                elem.msRequestFullscreen();
+            }
+        }
+
+        // 监听全屏变化
+        document.addEventListener('fullscreenchange', () => {
+            if (!document.fullscreenElement && isRunning) {
+                // 用户手动退出全屏时也停止弹幕
+                // 不自动停止，允许非全屏模式
+            }
+        });
+
+        // 窗口大小变化时重新计算
+        window.addEventListener('resize', () => {
+            if (isRunning) {
+                // 重新开始动画以适应新尺寸
+                cancelAnimationFrame(animationId);
+                startAnimation(parseFloat(speedSlider.value));
+            }
+        });
+
+        // 从 localStorage 恢复上次设置
+        function loadSettings() {
+            const saved = localStorage.getItem('danmakuSettings');
+            if (saved) {
+                try {
+                    const settings = JSON.parse(saved);
+                    if (settings.text) danmakuText.value = settings.text;
+                    if (settings.speed) {
+                        speedSlider.value = settings.speed;
+                        speedValue.textContent = settings.speed + ' s';
+                    }
+                    if (settings.size) {
+                        sizeSlider.value = settings.size;
+                        sizeValue.textContent = settings.size;
+                    }
+                    if (settings.textColor) textColor.value = settings.textColor;
+                    if (settings.bgColor) bgColor.value = settings.bgColor;
+                } catch (e) {}
+            }
+        }
+
+        // 保存设置
+        function saveSettings() {
+            const settings = {
+                text: danmakuText.value,
+                speed: speedSlider.value,
+                size: sizeSlider.value,
+                textColor: textColor.value,
+                bgColor: bgColor.value
+            };
+            localStorage.setItem('danmakuSettings', JSON.stringify(settings));
+        }
+
+        // 输入变化时保存
+        [danmakuText, speedSlider, sizeSlider, textColor, bgColor].forEach(el => {
+            el.addEventListener('change', saveSettings);
+        });
+
+        // 页面加载时恢复设置
+        loadSettings();
+    </script>
+</body>
+</html>
