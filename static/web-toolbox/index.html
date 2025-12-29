@@ -257,6 +257,145 @@
             color: #a1a1aa;
         }
 
+        /* 搜索框样式 */
+        .search-container {
+            max-width: 500px;
+            margin: 0 auto 40px;
+            position: relative;
+        }
+
+        .search-input {
+            width: 100%;
+            padding: 14px 20px 14px 50px;
+            font-size: 1rem;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 12px;
+            background: rgba(255, 255, 255, 0.05);
+            color: #e4e4e7;
+            outline: none;
+            transition: all 0.3s ease;
+        }
+
+        .search-input::placeholder {
+            color: #71717a;
+        }
+
+        .search-input:focus {
+            border-color: rgba(124, 58, 237, 0.6);
+            box-shadow: 0 0 0 3px rgba(124, 58, 237, 0.2);
+            background: rgba(255, 255, 255, 0.08);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 18px;
+            top: 50%;
+            transform: translateY(-50%);
+            font-size: 1.2rem;
+            color: #71717a;
+            pointer-events: none;
+        }
+
+        .search-clear {
+            position: absolute;
+            right: 14px;
+            top: 50%;
+            transform: translateY(-50%);
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            color: #a1a1aa;
+            width: 24px;
+            height: 24px;
+            border-radius: 50%;
+            cursor: pointer;
+            display: none;
+            align-items: center;
+            justify-content: center;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .search-clear:hover {
+            background: rgba(255, 255, 255, 0.2);
+            color: #fff;
+        }
+
+        .search-clear.visible {
+            display: flex;
+        }
+
+        .search-result-count {
+            text-align: center;
+            color: #71717a;
+            font-size: 0.9rem;
+            margin-bottom: 16px;
+            min-height: 24px;
+        }
+
+        /* 热门搜索词 */
+        .hot-tags {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 30px;
+        }
+
+        .hot-tags-label {
+            color: #71717a;
+            font-size: 0.85rem;
+            display: flex;
+            align-items: center;
+            gap: 4px;
+        }
+
+        .hot-tag {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #a1a1aa;
+            padding: 6px 14px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            cursor: pointer;
+            transition: all 0.2s ease;
+        }
+
+        .hot-tag:hover {
+            background: rgba(124, 58, 237, 0.2);
+            border-color: rgba(124, 58, 237, 0.5);
+            color: #c4b5fd;
+        }
+
+        .hot-tag.active {
+            background: rgba(124, 58, 237, 0.3);
+            border-color: rgba(124, 58, 237, 0.6);
+            color: #e9d5ff;
+        }
+
+        .tool-card.hidden {
+            display: none;
+        }
+
+        .tool-card.highlight {
+            border-color: rgba(124, 58, 237, 0.8);
+            box-shadow: 0 0 20px rgba(124, 58, 237, 0.3);
+        }
+
+        .no-results {
+            text-align: center;
+            padding: 60px 20px;
+            color: #71717a;
+        }
+
+        .no-results-icon {
+            font-size: 3rem;
+            margin-bottom: 16px;
+        }
+
+        .no-results-text {
+            font-size: 1.1rem;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 2rem;
@@ -280,7 +419,27 @@
             <span class="badge">100% 前端 · 无需后端 · 开箱即用</span>
         </header>
 
-        <div class="tools-grid">
+        <!-- 搜索框 -->
+        <div class="search-container">
+            <span class="search-icon">🔍</span>
+            <input type="text" class="search-input" id="searchInput" placeholder="搜索工具名称、功能或关键词..." autocomplete="off">
+            <button class="search-clear" id="searchClear" title="清除">✕</button>
+        </div>
+        <div class="search-result-count" id="resultCount"></div>
+
+        <!-- 热门搜索词 -->
+        <div class="hot-tags" id="hotTags">
+            <span class="hot-tags-label">🔥 热门：</span>
+            <span class="hot-tag" data-query="图片">图片</span>
+            <span class="hot-tag" data-query="视频">视频</span>
+            <span class="hot-tag" data-query="转换">转换</span>
+            <span class="hot-tag" data-query="加密">加密</span>
+            <span class="hot-tag" data-query="JSON">JSON</span>
+            <span class="hot-tag" data-query="计算">计算</span>
+            <span class="hot-tag" data-query="下载">下载</span>
+        </div>
+
+        <div class="tools-grid" id="toolsGrid">
             <!-- M3U8 下载器 -->
             <div class="tool-card">
                 <img src="screenshots/m3u8-downloader.png" alt="M3U8 视频下载器截图" class="tool-screenshot">
@@ -769,5 +928,111 @@
             </div>
         </footer>
     </div>
+
+    <script>
+        // 工具搜索功能
+        (function() {
+            const searchInput = document.getElementById('searchInput');
+            const searchClear = document.getElementById('searchClear');
+            const resultCount = document.getElementById('resultCount');
+            const toolsGrid = document.getElementById('toolsGrid');
+            const toolCards = document.querySelectorAll('.tool-card');
+            const hotTags = document.querySelectorAll('.hot-tag');
+            const totalCount = toolCards.length;
+
+            // 显示工具总数
+            resultCount.textContent = `共 ${totalCount} 个工具`;
+
+            // 搜索函数
+            function searchTools(query, fromTag = false) {
+                query = query.trim().toLowerCase();
+                let visibleCount = 0;
+
+                toolCards.forEach(card => {
+                    const title = card.querySelector('.tool-title')?.textContent.toLowerCase() || '';
+                    const desc = card.querySelector('.tool-desc')?.textContent.toLowerCase() || '';
+                    const features = card.querySelector('.tool-features')?.textContent.toLowerCase() || '';
+                    const content = title + ' ' + desc + ' ' + features;
+
+                    if (query === '' || content.includes(query)) {
+                        card.classList.remove('hidden');
+                        visibleCount++;
+                        // 高亮匹配的卡片
+                        if (query !== '' && title.includes(query)) {
+                            card.classList.add('highlight');
+                        } else {
+                            card.classList.remove('highlight');
+                        }
+                    } else {
+                        card.classList.add('hidden');
+                        card.classList.remove('highlight');
+                    }
+                });
+
+                // 更新结果计数
+                if (query === '') {
+                    resultCount.textContent = `共 ${totalCount} 个工具`;
+                } else {
+                    resultCount.textContent = `找到 ${visibleCount} / ${totalCount} 个工具`;
+                }
+
+                // 显示/隐藏清除按钮
+                searchClear.classList.toggle('visible', query !== '');
+
+                // 更新热门标签状态
+                hotTags.forEach(tag => {
+                    if (fromTag && tag.dataset.query.toLowerCase() === query) {
+                        tag.classList.add('active');
+                    } else {
+                        tag.classList.remove('active');
+                    }
+                });
+            }
+
+            // 输入事件 - 实时搜索
+            searchInput.addEventListener('input', function() {
+                searchTools(this.value);
+            });
+
+            // 清除按钮
+            searchClear.addEventListener('click', function() {
+                searchInput.value = '';
+                searchTools('');
+                searchInput.focus();
+            });
+
+            // 按 Esc 清除搜索
+            searchInput.addEventListener('keydown', function(e) {
+                if (e.key === 'Escape') {
+                    this.value = '';
+                    searchTools('');
+                }
+            });
+
+            // 热门标签点击事件
+            hotTags.forEach(tag => {
+                tag.addEventListener('click', function() {
+                    const query = this.dataset.query;
+                    // 如果点击已激活的标签，则清除搜索
+                    if (this.classList.contains('active')) {
+                        searchInput.value = '';
+                        searchTools('');
+                    } else {
+                        searchInput.value = query;
+                        searchTools(query, true);
+                    }
+                });
+            });
+
+            // 全局快捷键 Ctrl/Cmd + K 聚焦搜索框
+            document.addEventListener('keydown', function(e) {
+                if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                    e.preventDefault();
+                    searchInput.focus();
+                    searchInput.select();
+                }
+            });
+        })();
+    </script>
 </body>
 </html>
