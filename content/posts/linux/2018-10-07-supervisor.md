@@ -1,6 +1,8 @@
 ---
 title: Supervisor安装配置与使用
 date: 2018-10-07 00:35:04
+author: "bruce"
+description: "Supervisor进程管理工具完整教程，实现Linux服务器上多进程的统一启动、监控和管理"
 toc: true
 tags:
     - supervisor

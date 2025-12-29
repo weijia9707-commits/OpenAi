@@ -1,6 +1,8 @@
 ---
 title: MacOSX 隐藏和显示隐藏文件
 date: 2013-06-18 17:44:50
+author: "bruce"
+description: "macOS系统中显示和隐藏隐藏文件的方法，提供Shell脚本和图形界面工具下载"
 tags:
     - mac
 ---

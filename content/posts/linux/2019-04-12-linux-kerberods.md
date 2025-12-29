@@ -1,6 +1,8 @@
 ---
 title: 挖矿病毒kerberods的入侵和处理
 date: 2019-04-12 16:15:53
+author: "bruce"
+description: "记录Linux服务器遭受kerberods挖矿病毒入侵的排查和处理过程，CPU持续100%问题的解决方案"
 toc: true
 tags:
     - Jenkins

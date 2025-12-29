@@ -1,6 +1,8 @@
 ---
 title: Nginx实现部分页面https
 date: 2016-04-22 20:33:37
+author: "bruce"
+description: "Nginx配置部分页面HTTPS加密访问，通过location和proxy_pass实现HTTP/HTTPS自动跳转"
 tags:
     - nginx
     - https

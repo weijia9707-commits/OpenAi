@@ -1,6 +1,8 @@
 ---
 title: Linux(MacOS)命令笔记
 date: 2020-03-19 10:55:52
+author: "bruce"
+description: "Linux和macOS常用命令速查，包括netstat、lsof等网络和系统管理命令，持续更新"
 toc: true
 tags:
     - linux

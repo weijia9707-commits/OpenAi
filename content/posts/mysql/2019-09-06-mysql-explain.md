@@ -1,6 +1,8 @@
 ---
 title: MySQL里EXPLAIN解读
 date: 2019-09-06 20:10:21
+author: "bruce"
+description: "MySQL EXPLAIN命令详解，分析SQL执行计划，理解id、select_type、type等关键字段含义"
 tags:
     - mysql
     - sql

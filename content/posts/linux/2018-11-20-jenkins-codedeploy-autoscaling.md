@@ -1,6 +1,8 @@
 ---
 title: Jenkins + AWS CodeDeploy + AutoScaling 持续集成
 date: 2018-11-20 11:05:40
+author: "bruce"
+description: "基于Jenkins、AWS CodeDeploy和AutoScaling搭建CI/CD持续集成流水线，实现蓝绿部署和灰度发布"
 toc: true
 tags:
     - Jenkins

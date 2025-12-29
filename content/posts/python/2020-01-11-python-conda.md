@@ -1,6 +1,8 @@
 ---
 title: 多版本Python环境管理-Conda
 date: 2020-01-11 20:33:33
+author: "bruce"
+description: "使用Conda管理多版本Python环境，实现Python2和Python3的灵活切换"
 tags:
     - python
     - conda

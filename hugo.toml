@@ -3,11 +3,32 @@ languageCode = 'zh-hans'
 title = "Bruce's Blog"
 theme = 'hermit-V2'
 
+# SEO 相关配置
+enableRobotsTXT = false  # 使用自定义 robots.txt
+canonifyURLs = true
+
+[sitemap]
+  changeFreq = 'weekly'
+  filename = 'sitemap.xml'
+  priority = 0.5
+
+[outputs]
+  home = ["HTML", "RSS", "JSON"]
+  section = ["HTML", "RSS"]
+  taxonomy = ["HTML", "RSS"]
+  term = ["HTML", "RSS"]
+
 [params]
-  description="AI,AI Agent,Claude Code,AI 编程,LLM,Prompt Engineering,技术博客,程序员博客,后端架构,系统设计,源码分析,系列教程,Java,Spring Boot,Vue,Go,Golang"
-  # images = [""]
+  description = "Bruce的技术博客，分享AI、Claude Code、Java、Go、Docker、Linux等技术文章，专注于AI编程、后端架构和系统设计"
+  keywords = "AI,AI Agent,Claude Code,AI编程,LLM,Prompt Engineering,技术博客,Java,Go,Docker,Linux"
+  images = ["/images/og-image.png"]
+
   themeColor = "#494f5c"
   accentColor = "#018472"
+
+  [params.author]
+    name = "Bruce"
+    about = "/about/"
 
   homeSubtitle = "--------------------------------------------------------- 常笑笑自己! ---------------------------------------------------------"
   footerHideThemeName = true

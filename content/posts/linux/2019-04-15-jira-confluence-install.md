@@ -1,6 +1,8 @@
 ---
 title: Ubuntu16.04环境Jira和Confluence搭建
 date: 2019-04-15 13:53:32
+author: "bruce"
+description: "Ubuntu16.04上搭建Jira项目管理和Confluence知识库系统，实现账号体系整合和团队协作"
 toc: true
 tags:
     - jira

@@ -2,9 +2,10 @@
 title: "向量数据库"
 date: 2025-03-11T14:40:02+08:00
 author: "bruce"
+description: "详解向量数据库的基本概念，包括向量、向量嵌入的原理，以及向量数据库在推荐系统、搜索引擎等AI应用中的实际用途"
 toc: true
 images:
-tags: 
+tags:
   - AI
   - VectorDatabase
 ---

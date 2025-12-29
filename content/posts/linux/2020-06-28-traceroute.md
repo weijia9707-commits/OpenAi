@@ -2,6 +2,7 @@
 title:      "Traceroute命令"
 date:       2020-06-28 12:12:04
 author:     "bruce"
+description: "Traceroute网络诊断命令详解，追踪数据包从本机到目标主机的路由路径和每跳延迟"
 toc: true
 tags:
     - traceroute

@@ -2,6 +2,7 @@
 title:      "Elasticsearch学习"
 date:       2018-09-12 18:52:59
 author:     "bruce"
+description: "Elasticsearch入门教程，理解索引、类型、文档等核心概念，掌握常用查询命令和API操作"
 toc: true
 tags:
     - elasticsearch

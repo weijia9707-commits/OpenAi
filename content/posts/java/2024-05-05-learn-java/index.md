@@ -2,6 +2,7 @@
 title:      "Java学习笔记（一）"
 date:       2024-05-04 21:00:00
 author:     "bruce"
+description: "Java入门学习笔记，涵盖Java发展历史、技术体系、JDK/JRE/JVM概念解析，以及IDEA开发环境配置"
 toc: true
 tags:
     - java

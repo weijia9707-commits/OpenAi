@@ -1,9 +1,10 @@
 ---
 title: "Java学习笔记（二）"
 date: 2024-05-13T15:13:10+08:00
-Auth: bruce
+author: bruce
+description: "Java进阶学习笔记，详解Arrays工具类的常用方法，包括数组遍历、拷贝、排序等操作，以及集合和I/O技术"
 toc: true
-tags: 
+tags:
   - java
 ---
 

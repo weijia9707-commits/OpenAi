@@ -1,8 +1,8 @@
 ---
-
 title:      "Docker学习笔记"
 date:       2019-05-13 20:33:33
 author:     "bruce"
+description: "Docker入门教程，详解镜像、容器、仓库三大核心概念，理解分层存储原理和容器化技术基础"
 toc: true
 tags:
     - docker

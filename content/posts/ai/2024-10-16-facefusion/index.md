@@ -2,8 +2,9 @@
 title: "全面解析FaceFusion：从原理到实战"
 date: 2024-10-16T14:56:30+08:00
 author: "bruce"
+description: "深入解析FaceFusion人脸融合技术，涵盖技术原理、硬件选型、环境搭建和实战应用，带你了解这项前沿的AI图像处理技术"
 toc: true
-tags: 
+tags:
   - AI
   - FaceFusion
 ---

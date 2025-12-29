@@ -2,6 +2,7 @@
 title:      "Shell脚本中$符开头变量解释"
 date:       2019-05-13 20:16:54
 author:     "bruce"
+description: "详解Shell脚本中$$、$!、$?、$-、$*、$@、$#、$0等特殊变量的含义和使用方法"
 toc: true
 tags:
     - shell

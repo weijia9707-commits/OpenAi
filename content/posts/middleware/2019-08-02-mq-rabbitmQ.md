@@ -1,7 +1,8 @@
 ---
 title: 消息队列-RabbitMQ
-subtitle: 
 date: 2019-08-02 11:47:04
+author: "bruce"
+description: "RabbitMQ消息队列入门教程，详解AMQP协议、交换机类型、队列绑定和消息投递工作流程"
 toc: true
 tags:
     - 消息队列

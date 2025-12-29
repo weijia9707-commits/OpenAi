@@ -1,7 +1,8 @@
 ---
 title:      "Nexus3构建Docker私服"
-date: 		2019-06-12 20:50:36
+date:       2019-06-12 20:50:36
 author:     "bruce"
+description: "使用Nexus3搭建企业级Docker私有镜像仓库，配置hosted、proxy、group三种仓库类型，实现镜像的推送和拉取"
 toc: true
 tags:
     - docker

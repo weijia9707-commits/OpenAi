@@ -1,8 +1,8 @@
 ---
-
 title:      "数据仓库Amazon Redshift"
 date:       2018-08-09 14:06:44
 author:     "bruce"
+description: "Amazon Redshift数据仓库使用指南，涵盖VACUUM优化、性能调优和常用运维操作"
 toc: true
 tags:
     - redshift

@@ -1,7 +1,9 @@
 ---
 title:      "Nginx报No route to host错误"
 date: 2020-07-03T13:19:44+08:00
-tags: 
+author: "bruce"
+description: "解决Nginx代理AWS ELB时出现No route to host错误，使用jdomain模块实现DNS动态解析"
+tags:
   - nginx
   - linux
 ---

@@ -2,6 +2,7 @@
 title:      "Docker常用命令"
 date:       2019-11-14 20:37:13
 author:     "bruce"
+description: "Docker常用命令速查手册，涵盖服务管理、镜像操作、容器管理等日常运维必备命令"
 toc: true
 tags:
     - docker

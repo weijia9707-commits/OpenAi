@@ -1,0 +1,30 @@
+# Bruce's Blog
+
+> Bruce的技术博客，分享AI、Claude Code、Java、Go、Docker、Linux等技术文章
+
+## 网站信息
+
+- 作者: Bruce
+- 网站: https://www.heyuan110.com/
+- GitHub: https://github.com/heyuan110
+- X/Twitter: https://x.com/heyuan110
+
+## 主要内容分类
+
+- AI系列: AI编程、Claude Code、LLM、Prompt Engineering
+- Java系列: Java基础、Spring Boot、微服务架构
+- Go系列: Go语言学习和实践
+- Docker系列: Docker容器化技术
+- Linux系列: Linux运维、Shell脚本、Nginx配置
+
+## 核心主题
+
+本博客专注于以下技术领域:
+1. AI和大语言模型应用开发
+2. 后端架构设计与实现
+3. DevOps和云原生技术
+4. 系统设计和源码分析
+
+## 联系方式
+
+如需引用或合作，请通过GitHub或X联系作者。

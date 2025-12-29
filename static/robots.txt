@@ -57,3 +57,7 @@ Allow: /
 # Sitemaps
 Sitemap: https://www.heyuan110.com/sitemap.xml
 Sitemap: https://www.heyuan110.com/web-toolbox/sitemap.xml
+
+# LLMs.txt - AI爬虫专用
+# https://llmstxt.org/
+LLMs: https://www.heyuan110.com/llms.txt
