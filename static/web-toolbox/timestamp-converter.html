@@ -1,0 +1,1033 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>时间戳转换工具 - Unix时间戳在线转换 | 在线工具箱</title>
+    <meta name="description" content="在线时间戳转换工具，支持Unix时间戳与日期时间互转，显示多时区时间，提供各编程语言获取时间戳代码示例。">
+    <meta name="keywords" content="时间戳,Unix时间戳,时间戳转换,日期转时间戳,时间戳转日期,北京时间,UTC时间">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🕐</text></svg>">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f172a;
+            --bg-secondary: #1e293b;
+            --bg-card: #334155;
+            --bg-hover: #475569;
+            --text-primary: #f1f5f9;
+            --text-secondary: #94a3b8;
+            --accent: #3b82f6;
+            --accent-light: #60a5fa;
+            --success: #22c55e;
+            --warning: #f59e0b;
+            --border: #475569;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: linear-gradient(135deg, var(--bg-primary) 0%, #1a1a2e 100%);
+            color: var(--text-primary);
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        /* 头部 */
+        .header {
+            text-align: center;
+            padding: 30px 0;
+            border-bottom: 1px solid var(--border);
+            margin-bottom: 30px;
+        }
+
+        .header h1 {
+            font-size: 2rem;
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        .back-link {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--accent);
+        }
+
+        /* 当前时间戳显示 */
+        .current-timestamp {
+            background: linear-gradient(135deg, var(--accent), #8b5cf6);
+            border-radius: 16px;
+            padding: 25px;
+            text-align: center;
+            margin-bottom: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .current-timestamp::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.05'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E");
+            opacity: 0.5;
+        }
+
+        .current-timestamp-label {
+            font-size: 0.9rem;
+            opacity: 0.9;
+            margin-bottom: 5px;
+        }
+
+        .current-timestamp-value {
+            font-size: 2.5rem;
+            font-weight: bold;
+            font-family: 'Monaco', 'Consolas', monospace;
+            letter-spacing: 2px;
+            position: relative;
+        }
+
+        .current-timestamp-ms {
+            font-size: 1.2rem;
+            opacity: 0.8;
+            margin-top: 5px;
+            font-family: 'Monaco', 'Consolas', monospace;
+        }
+
+        .current-datetime {
+            margin-top: 15px;
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        .copy-btn {
+            position: absolute;
+            top: 15px;
+            right: 15px;
+            background: rgba(255,255,255,0.2);
+            border: none;
+            color: white;
+            padding: 8px 15px;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: background 0.2s;
+        }
+
+        .copy-btn:hover {
+            background: rgba(255,255,255,0.3);
+        }
+
+        /* 转换区域 */
+        .converter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-bottom: 30px;
+        }
+
+        .converter-card {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid var(--border);
+        }
+
+        .converter-card h2 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-light);
+        }
+
+        .input-group {
+            margin-bottom: 15px;
+        }
+
+        .input-group label {
+            display: block;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            margin-bottom: 5px;
+        }
+
+        .input-row {
+            display: flex;
+            gap: 10px;
+        }
+
+        .input-row input, .input-row select {
+            flex: 1;
+        }
+
+        input, select {
+            width: 100%;
+            padding: 12px 15px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-primary);
+            font-size: 1rem;
+            transition: border-color 0.2s, box-shadow 0.2s;
+        }
+
+        input:focus, select:focus {
+            outline: none;
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.2);
+        }
+
+        .btn {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.95rem;
+            font-weight: 500;
+            transition: all 0.2s;
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+        }
+
+        .btn-primary {
+            background: linear-gradient(135deg, var(--accent), var(--accent-light));
+            color: white;
+        }
+
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(59, 130, 246, 0.4);
+        }
+
+        .btn-secondary {
+            background: var(--bg-card);
+            color: var(--text-primary);
+            border: 1px solid var(--border);
+        }
+
+        .btn-secondary:hover {
+            background: var(--bg-hover);
+        }
+
+        .result-box {
+            background: var(--bg-card);
+            border-radius: 8px;
+            padding: 15px;
+            margin-top: 15px;
+            min-height: 80px;
+        }
+
+        .result-label {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+            margin-bottom: 8px;
+        }
+
+        .result-value {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 1.1rem;
+            color: var(--success);
+            word-break: break-all;
+        }
+
+        .result-extra {
+            margin-top: 10px;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+        }
+
+        /* 时区对照 */
+        .timezone-section {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .timezone-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-light);
+        }
+
+        .timezone-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 15px;
+        }
+
+        .timezone-item {
+            background: var(--bg-card);
+            padding: 15px;
+            border-radius: 8px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .timezone-name {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .timezone-time {
+            font-family: 'Monaco', 'Consolas', monospace;
+            font-size: 1rem;
+            color: var(--text-primary);
+        }
+
+        /* 代码示例 */
+        .code-section {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .code-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-light);
+        }
+
+        .code-tabs {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .code-tab {
+            padding: 8px 16px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.85rem;
+            transition: all 0.2s;
+        }
+
+        .code-tab:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        .code-tab.active {
+            background: var(--accent);
+            border-color: var(--accent);
+            color: white;
+        }
+
+        .code-content {
+            background: #1a1a2e;
+            border-radius: 8px;
+            padding: 20px;
+            position: relative;
+            overflow-x: auto;
+        }
+
+        .code-content pre {
+            margin: 0;
+            font-family: 'Monaco', 'Consolas', 'Courier New', monospace;
+            font-size: 0.9rem;
+            line-height: 1.6;
+            color: #e2e8f0;
+        }
+
+        .code-content .copy-code {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            padding: 5px 10px;
+            background: var(--bg-card);
+            border: none;
+            border-radius: 4px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 0.8rem;
+        }
+
+        .code-content .copy-code:hover {
+            background: var(--bg-hover);
+            color: var(--text-primary);
+        }
+
+        /* 说明区域 */
+        .info-section {
+            background: var(--bg-secondary);
+            border-radius: 12px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 1px solid var(--border);
+        }
+
+        .info-section h2 {
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            color: var(--accent-light);
+        }
+
+        .info-section h3 {
+            font-size: 1rem;
+            color: var(--warning);
+            margin: 20px 0 10px;
+        }
+
+        .info-section p {
+            color: var(--text-secondary);
+            margin-bottom: 10px;
+            font-size: 0.95rem;
+        }
+
+        .info-section ul {
+            color: var(--text-secondary);
+            margin-left: 20px;
+            font-size: 0.95rem;
+        }
+
+        .info-section li {
+            margin-bottom: 5px;
+        }
+
+        /* 响应式 */
+        @media (max-width: 768px) {
+            .converter-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .current-timestamp-value {
+                font-size: 1.8rem;
+            }
+
+            .header h1 {
+                font-size: 1.5rem;
+            }
+
+            .input-row {
+                flex-direction: column;
+            }
+        }
+
+        /* Toast 提示 */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            background: var(--success);
+            color: white;
+            padding: 12px 24px;
+            border-radius: 8px;
+            font-size: 0.9rem;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* 语法高亮 */
+        .hljs-keyword { color: #c792ea; }
+        .hljs-string { color: #c3e88d; }
+        .hljs-number { color: #f78c6c; }
+        .hljs-comment { color: #676e95; }
+        .hljs-function { color: #82aaff; }
+        .hljs-class { color: #ffcb6b; }
+    </style>
+</head>
+<body>
+    <a href="index.html" class="back-link">← 返回工具箱</a>
+
+    <div class="container">
+        <header class="header">
+            <h1>🕐 时间戳转换工具</h1>
+            <p>时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，本工具支持时间戳与日期时间互转，以及多时区对照。</p>
+        </header>
+
+        <!-- 当前时间戳 -->
+        <div class="current-timestamp">
+            <button class="copy-btn" onclick="copyCurrentTimestamp()">复制</button>
+            <div class="current-timestamp-label">当前 Unix 时间戳（秒）</div>
+            <div class="current-timestamp-value" id="currentTimestamp">0</div>
+            <div class="current-timestamp-ms" id="currentTimestampMs">毫秒：0</div>
+            <div class="current-datetime" id="currentDatetime">--</div>
+        </div>
+
+        <!-- 转换工具 -->
+        <div class="converter-grid">
+            <!-- 时间戳转日期 -->
+            <div class="converter-card">
+                <h2>⏱️ 时间戳 → 日期时间</h2>
+                <div class="input-group">
+                    <label>输入时间戳</label>
+                    <div class="input-row">
+                        <input type="text" id="timestampInput" placeholder="例如：1703836800">
+                        <select id="timestampUnit">
+                            <option value="s">秒 (s)</option>
+                            <option value="ms">毫秒 (ms)</option>
+                        </select>
+                    </div>
+                </div>
+                <button class="btn btn-primary" onclick="timestampToDate()">转换</button>
+                <button class="btn btn-secondary" onclick="useCurrentTimestamp()">使用当前时间戳</button>
+                <div class="result-box">
+                    <div class="result-label">转换结果</div>
+                    <div class="result-value" id="timestampResult">--</div>
+                    <div class="result-extra" id="timestampExtra"></div>
+                </div>
+            </div>
+
+            <!-- 日期转时间戳 -->
+            <div class="converter-card">
+                <h2>📅 日期时间 → 时间戳</h2>
+                <div class="input-group">
+                    <label>选择日期时间</label>
+                    <input type="datetime-local" id="datetimeInput" step="1">
+                </div>
+                <div class="input-group">
+                    <label>时区</label>
+                    <select id="timezoneSelect">
+                        <option value="local">本地时区</option>
+                        <option value="Asia/Shanghai">北京时间 (UTC+8)</option>
+                        <option value="UTC">UTC (UTC+0)</option>
+                        <option value="America/New_York">纽约时间 (UTC-5/-4)</option>
+                        <option value="America/Los_Angeles">洛杉矶时间 (UTC-8/-7)</option>
+                        <option value="Europe/London">伦敦时间 (UTC+0/+1)</option>
+                        <option value="Europe/Paris">巴黎时间 (UTC+1/+2)</option>
+                        <option value="Asia/Tokyo">东京时间 (UTC+9)</option>
+                    </select>
+                </div>
+                <button class="btn btn-primary" onclick="dateToTimestamp()">转换</button>
+                <button class="btn btn-secondary" onclick="useCurrentDatetime()">使用当前时间</button>
+                <div class="result-box">
+                    <div class="result-label">转换结果</div>
+                    <div class="result-value" id="datetimeResult">--</div>
+                    <div class="result-extra" id="datetimeExtra"></div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 时区对照 -->
+        <div class="timezone-section">
+            <h2>🌍 各时区当前时间</h2>
+            <div class="timezone-grid" id="timezoneGrid">
+                <!-- 由 JS 生成 -->
+            </div>
+        </div>
+
+        <!-- 代码示例 -->
+        <div class="code-section">
+            <h2>💻 获取当前时间戳代码示例</h2>
+            <div class="code-tabs" id="codeTabs">
+                <!-- 由 JS 生成 -->
+            </div>
+            <div class="code-content">
+                <button class="copy-code" onclick="copyCode()">复制代码</button>
+                <pre id="codeDisplay"></pre>
+            </div>
+        </div>
+
+        <!-- 说明信息 -->
+        <div class="info-section">
+            <h2>📖 关于时间戳</h2>
+            <p>Unix 时间戳（Unix timestamp）是从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数，不考虑闰秒。它被广泛应用于各种编程语言和数据库系统中。</p>
+
+            <h3>🌞 关于夏令时</h3>
+            <p>1986年至1991年，中华人民共和国在全国范围实行了六年夏令时，每年从4月中旬的第一个星期日2时整（北京时间）到9月中旬第一个星期日的凌晨2时整（北京夏令时）。夏令时实施期间，将时间向后调快一小时。1992年4月5日后不再实行。</p>
+
+            <h3>⚠️ JDK 的夏令时问题</h3>
+            <p>夏令时的起止是政令对日历描述的人为干预，每年均可能发生变化。JDK 通过穷举所有变化并配置在系统中来处理这个问题。详见：Timezone Data Versions in the JRE Software。</p>
+            <p>不同版本下 Asia/Shanghai 时区夏令时起始时间不同，早期维护者认为中国标准时间的夏令时切换发生在0时，而后来又经证明发生在2时，新版本 JDK 及时修正了这个问题。</p>
+
+            <h3>📌 常见时间戳</h3>
+            <ul>
+                <li><strong>0</strong> → 1970-01-01 00:00:00 UTC（Unix 纪元）</li>
+                <li><strong>1000000000</strong> → 2001-09-09 01:46:40 UTC（十亿秒纪念）</li>
+                <li><strong>2147483647</strong> → 2038-01-19 03:14:07 UTC（32位系统最大值）</li>
+            </ul>
+        </div>
+    </div>
+
+    <div class="toast" id="toast">已复制到剪贴板</div>
+
+    <script>
+        // 代码示例数据
+        const codeExamples = {
+            'JavaScript': `// 获取当前时间戳（秒）
+Math.round(new Date() / 1000)
+
+// 获取当前时间戳（毫秒）
+Date.now()
+// 或
+new Date().getTime()`,
+
+            'Python': `import time
+
+# 获取当前时间戳（秒）
+time.time()
+
+# 使用 arrow 库
+import arrow
+arrow.utcnow().timestamp()`,
+
+            'Java': `// Java < 8
+System.currentTimeMillis() / 1000
+
+// Java >= 8
+import java.time.Instant;
+Instant.now().getEpochSecond()
+
+// Joda-Time
+DateTime.now().getMillis() / 1000`,
+
+            'Go': `import "time"
+
+// 获取当前时间戳（秒）
+time.Now().Unix()
+
+// 获取当前时间戳（毫秒）
+time.Now().UnixMilli()
+
+// 获取当前时间戳（纳秒）
+time.Now().UnixNano()`,
+
+            'PHP': `<?php
+// 获取当前时间戳（秒）
+time();
+
+// 使用 Carbon 库
+use Carbon\\Carbon;
+Carbon::now()->timestamp;`,
+
+            'Swift': `import Foundation
+
+// 获取当前时间戳（秒）
+NSDate().timeIntervalSince1970
+
+// 或使用 Date
+Date().timeIntervalSince1970`,
+
+            'C#': `// .NET Core / .NET 5+
+DateTimeOffset.UtcNow.ToUnixTimeSeconds()
+
+// 毫秒
+DateTimeOffset.UtcNow.ToUnixTimeMilliseconds()`,
+
+            'Ruby': `# 获取当前时间戳（秒）
+Time.now.to_i
+
+# 获取当前时间戳（毫秒）
+(Time.now.to_f * 1000).to_i`,
+
+            'Shell': `# Bash / Zsh
+date +%s
+
+# 毫秒（GNU date）
+date +%s%3N
+
+# macOS
+date +%s`,
+
+            'C': `#include <sys/time.h>
+#include <stdio.h>
+
+int main() {
+    struct timeval tv;
+    gettimeofday(&tv, NULL);
+
+    // 秒
+    printf("%ld\\n", tv.tv_sec);
+
+    // 毫秒
+    printf("%lld\\n", tv.tv_sec * 1000LL + tv.tv_usec / 1000);
+
+    return 0;
+}`,
+
+            'Objective-C': `// 获取当前时间戳（秒）
+[[NSDate date] timeIntervalSince1970]`,
+
+            'MySQL': `-- 获取当前时间戳
+SELECT UNIX_TIMESTAMP(NOW());
+
+-- 时间戳转日期
+SELECT FROM_UNIXTIME(1703836800);`,
+
+            'SQLite': `-- 获取当前时间戳
+SELECT strftime('%s', 'now');
+
+-- 时间戳转日期
+SELECT datetime(1703836800, 'unixepoch');`,
+
+            'Dart': `// 获取当前时间戳（秒）
+(DateTime.now().millisecondsSinceEpoch / 1000).truncate()
+
+// 获取当前时间戳（毫秒）
+DateTime.now().millisecondsSinceEpoch`,
+
+            'Rust': `use std::time::{SystemTime, UNIX_EPOCH};
+
+fn main() {
+    let timestamp = SystemTime::now()
+        .duration_since(UNIX_EPOCH)
+        .unwrap()
+        .as_secs();
+    println!("{}", timestamp);
+}`,
+
+            'Kotlin': `// 获取当前时间戳（秒）
+System.currentTimeMillis() / 1000
+
+// Java 8+ API
+import java.time.Instant
+Instant.now().epochSecond`,
+
+            'Lua': `-- 获取当前时间戳（秒）
+os.time()`,
+
+            'Erlang': `%% 获取当前时间戳
+calendar:datetime_to_gregorian_seconds(
+    calendar:universal_time()
+) - 719528 * 24 * 3600.`,
+
+            'Groovy': `// 获取当前时间戳（秒）
+(new Date().time / 1000).longValue()
+
+// 毫秒
+new Date().time`
+        };
+
+        // 时区列表
+        const timezones = [
+            { name: '北京时间', zone: 'Asia/Shanghai', offset: 'UTC+8' },
+            { name: '东京时间', zone: 'Asia/Tokyo', offset: 'UTC+9' },
+            { name: '新加坡时间', zone: 'Asia/Singapore', offset: 'UTC+8' },
+            { name: '悉尼时间', zone: 'Australia/Sydney', offset: 'UTC+10/+11' },
+            { name: 'UTC 时间', zone: 'UTC', offset: 'UTC+0' },
+            { name: '伦敦时间', zone: 'Europe/London', offset: 'UTC+0/+1' },
+            { name: '巴黎时间', zone: 'Europe/Paris', offset: 'UTC+1/+2' },
+            { name: '莫斯科时间', zone: 'Europe/Moscow', offset: 'UTC+3' },
+            { name: '纽约时间', zone: 'America/New_York', offset: 'UTC-5/-4' },
+            { name: '洛杉矶时间', zone: 'America/Los_Angeles', offset: 'UTC-8/-7' },
+            { name: '芝加哥时间', zone: 'America/Chicago', offset: 'UTC-6/-5' },
+            { name: '温哥华时间', zone: 'America/Vancouver', offset: 'UTC-8/-7' }
+        ];
+
+        let currentLang = 'JavaScript';
+
+        // 初始化
+        function init() {
+            updateCurrentTimestamp();
+            setInterval(updateCurrentTimestamp, 100);
+
+            initTimezoneGrid();
+            initCodeTabs();
+            setDefaultDatetime();
+
+            // 输入框回车触发转换
+            document.getElementById('timestampInput').addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') timestampToDate();
+            });
+        }
+
+        // 更新当前时间戳
+        function updateCurrentTimestamp() {
+            const now = Date.now();
+            const seconds = Math.floor(now / 1000);
+
+            document.getElementById('currentTimestamp').textContent = seconds;
+            document.getElementById('currentTimestampMs').textContent = `毫秒：${now}`;
+
+            const date = new Date(now);
+            const beijingTime = date.toLocaleString('zh-CN', {
+                timeZone: 'Asia/Shanghai',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+            document.getElementById('currentDatetime').textContent = `北京时间：${beijingTime}`;
+
+            // 更新时区时间
+            updateTimezones();
+        }
+
+        // 初始化时区网格
+        function initTimezoneGrid() {
+            const grid = document.getElementById('timezoneGrid');
+            grid.innerHTML = timezones.map(tz => `
+                <div class="timezone-item">
+                    <div class="timezone-name">${tz.name} (${tz.offset})</div>
+                    <div class="timezone-time" data-zone="${tz.zone}">--:--:--</div>
+                </div>
+            `).join('');
+        }
+
+        // 更新时区时间
+        function updateTimezones() {
+            const now = new Date();
+            document.querySelectorAll('[data-zone]').forEach(el => {
+                const zone = el.dataset.zone;
+                try {
+                    el.textContent = now.toLocaleString('zh-CN', {
+                        timeZone: zone,
+                        hour: '2-digit',
+                        minute: '2-digit',
+                        second: '2-digit',
+                        hour12: false
+                    });
+                } catch (e) {
+                    el.textContent = '--:--:--';
+                }
+            });
+        }
+
+        // 初始化代码标签
+        function initCodeTabs() {
+            const tabs = document.getElementById('codeTabs');
+            tabs.innerHTML = Object.keys(codeExamples).map(lang => `
+                <div class="code-tab ${lang === currentLang ? 'active' : ''}"
+                     onclick="switchCode('${lang}')">${lang}</div>
+            `).join('');
+
+            showCode(currentLang);
+        }
+
+        // 切换代码
+        function switchCode(lang) {
+            currentLang = lang;
+            document.querySelectorAll('.code-tab').forEach(tab => {
+                tab.classList.toggle('active', tab.textContent === lang);
+            });
+            showCode(lang);
+        }
+
+        // 显示代码
+        function showCode(lang) {
+            const code = codeExamples[lang] || '';
+            document.getElementById('codeDisplay').textContent = code;
+        }
+
+        // 复制代码
+        function copyCode() {
+            const code = document.getElementById('codeDisplay').textContent;
+            copyToClipboard(code);
+        }
+
+        // 设置默认日期时间
+        function setDefaultDatetime() {
+            const now = new Date();
+            const local = new Date(now.getTime() - now.getTimezoneOffset() * 60000);
+            document.getElementById('datetimeInput').value = local.toISOString().slice(0, 19);
+        }
+
+        // 时间戳转日期
+        function timestampToDate() {
+            const input = document.getElementById('timestampInput').value.trim();
+            const unit = document.getElementById('timestampUnit').value;
+
+            if (!input) {
+                showResult('timestampResult', '请输入时间戳', 'timestampExtra', '');
+                return;
+            }
+
+            let timestamp = parseInt(input);
+            if (isNaN(timestamp)) {
+                showResult('timestampResult', '无效的时间戳', 'timestampExtra', '');
+                return;
+            }
+
+            // 转换为毫秒
+            if (unit === 's') {
+                timestamp *= 1000;
+            }
+
+            const date = new Date(timestamp);
+            if (isNaN(date.getTime())) {
+                showResult('timestampResult', '无效的时间戳', 'timestampExtra', '');
+                return;
+            }
+
+            const beijingTime = date.toLocaleString('zh-CN', {
+                timeZone: 'Asia/Shanghai',
+                year: 'numeric',
+                month: '2-digit',
+                day: '2-digit',
+                hour: '2-digit',
+                minute: '2-digit',
+                second: '2-digit',
+                hour12: false
+            });
+
+            const utcTime = date.toISOString();
+            const localTime = date.toLocaleString('zh-CN');
+
+            showResult(
+                'timestampResult',
+                `北京时间：${beijingTime}`,
+                'timestampExtra',
+                `UTC 时间：${utcTime}<br>本地时间：${localTime}<br>星期${['日','一','二','三','四','五','六'][date.getDay()]}`
+            );
+        }
+
+        // 日期转时间戳
+        function dateToTimestamp() {
+            const input = document.getElementById('datetimeInput').value;
+            const timezone = document.getElementById('timezoneSelect').value;
+
+            if (!input) {
+                showResult('datetimeResult', '请选择日期时间', 'datetimeExtra', '');
+                return;
+            }
+
+            let date;
+            if (timezone === 'local') {
+                date = new Date(input);
+            } else if (timezone === 'UTC') {
+                date = new Date(input + 'Z');
+            } else {
+                // 对于特定时区，需要计算偏移
+                const tempDate = new Date(input);
+                const formatter = new Intl.DateTimeFormat('en-US', {
+                    timeZone: timezone,
+                    year: 'numeric',
+                    month: '2-digit',
+                    day: '2-digit',
+                    hour: '2-digit',
+                    minute: '2-digit',
+                    second: '2-digit',
+                    hour12: false
+                });
+
+                // 简化处理：假设输入是该时区的本地时间
+                const localDate = new Date(input);
+                const utcDate = new Date(localDate.toLocaleString('en-US', { timeZone: 'UTC' }));
+                const tzDate = new Date(localDate.toLocaleString('en-US', { timeZone: timezone }));
+                const offset = tzDate - utcDate;
+                date = new Date(localDate.getTime() - offset);
+            }
+
+            if (isNaN(date.getTime())) {
+                showResult('datetimeResult', '无效的日期时间', 'datetimeExtra', '');
+                return;
+            }
+
+            const seconds = Math.floor(date.getTime() / 1000);
+            const milliseconds = date.getTime();
+
+            showResult(
+                'datetimeResult',
+                `秒：${seconds}`,
+                'datetimeExtra',
+                `毫秒：${milliseconds}<br>ISO 格式：${date.toISOString()}`
+            );
+        }
+
+        // 使用当前时间戳
+        function useCurrentTimestamp() {
+            document.getElementById('timestampInput').value = Math.floor(Date.now() / 1000);
+            document.getElementById('timestampUnit').value = 's';
+            timestampToDate();
+        }
+
+        // 使用当前日期时间
+        function useCurrentDatetime() {
+            setDefaultDatetime();
+            dateToTimestamp();
+        }
+
+        // 显示结果
+        function showResult(resultId, value, extraId, extra) {
+            document.getElementById(resultId).innerHTML = value;
+            if (extraId) {
+                document.getElementById(extraId).innerHTML = extra;
+            }
+        }
+
+        // 复制当前时间戳
+        function copyCurrentTimestamp() {
+            const timestamp = document.getElementById('currentTimestamp').textContent;
+            copyToClipboard(timestamp);
+        }
+
+        // 复制到剪贴板
+        function copyToClipboard(text) {
+            navigator.clipboard.writeText(text).then(() => {
+                showToast('已复制到剪贴板');
+            }).catch(() => {
+                // 降级方案
+                const textarea = document.createElement('textarea');
+                textarea.value = text;
+                document.body.appendChild(textarea);
+                textarea.select();
+                document.execCommand('copy');
+                document.body.removeChild(textarea);
+                showToast('已复制到剪贴板');
+            });
+        }
+
+        // 显示提示
+        function showToast(message) {
+            const toast = document.getElementById('toast');
+            toast.textContent = message;
+            toast.classList.add('show');
+            setTimeout(() => toast.classList.remove('show'), 2000);
+        }
+
+        // 启动
+        init();
+    </script>
+</body>
+</html>
