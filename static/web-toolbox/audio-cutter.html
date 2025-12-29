@@ -1199,10 +1199,11 @@
             // 监听播放进度，到达终点时自动暂停
             previewEndHandler = (time) => {
                 if (time >= currentRegion.end) {
-                    wavesurfer.pause();
-                    wavesurfer.setTime(currentRegion.end);
+                    // 重要：必须先取消监听再调用 setTime，否则会无限递归
                     wavesurfer.un('timeupdate', previewEndHandler);
                     previewEndHandler = null;
+                    wavesurfer.pause();
+                    wavesurfer.setTime(currentRegion.end);
                 }
             };
             wavesurfer.on('timeupdate', previewEndHandler);
@@ -1274,7 +1275,8 @@
                         if (done) break;
                         chunks.push(value);
                         received += value.length;
-                        const percent = Math.round((received / total) * 100);
+                        // 限制百分比不超过100%（Content-Length可能不准确）
+                        const percent = Math.min(100, Math.round((received / total) * 100));
                         loadingText.textContent = `正在下载${label}... ${percent}%`;
                     }
 
