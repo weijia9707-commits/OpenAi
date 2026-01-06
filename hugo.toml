@@ -1,6 +1,6 @@
 baseURL = "https://www.heyuan110.com/"
 languageCode = "zh-hans"
-title = "AI实战与工程笔记"
+title = "Bruce's Blog"
 theme = "hermit-V2"
 
 # SEO / Indexing
