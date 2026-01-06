@@ -8,6 +8,8 @@ images:
 tags:
   - AI
   - VectorDatabase
+categories:
+  - AI基础与理论
 ---
 
 ![VectorDatabase](vector-db.jpg)

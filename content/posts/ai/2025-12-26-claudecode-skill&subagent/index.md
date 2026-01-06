@@ -10,6 +10,8 @@ tags:
   - Claude Code
   - Skill
   - SubAgent
+categories:
+  - AI工具与工程实战
 ---
 
 ![ClaudeCode Skill](cc-skill-agent.jpeg)
