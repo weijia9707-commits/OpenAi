@@ -1,6 +1,6 @@
 ---
 title: "Claude Code创始人的几个最佳实践"
-date: 2026-01-07T18:00:00+08:00
+date: 2026-01-06T18:00:00+08:00
 author: "bruce"
 description: "Claude Code 创始人在 X 上分享的几条使用心得，关于并行工作、模型选择、CLAUDE.md 维护和验证循环"
 toc: true

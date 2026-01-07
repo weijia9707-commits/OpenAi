@@ -1,6 +1,6 @@
 ---
 title: "Skill与MCP的区别：两种扩展AI能力的方式"
-date: 2026-01-07T17:00:00+08:00
+date: 2026-01-06T17:00:00+08:00
 author: "bruce"
 description: "深入对比 Claude Code 中 Skill 和 MCP 两种扩展 AI Agent 能力的方式，分析它们的设计理念、工作原理和适用场景"
 toc: true
