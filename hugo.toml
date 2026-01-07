@@ -73,26 +73,16 @@ canonifyURLs = true
     url = "https://github.com/heyuan110"
 
 [menu]
-  # AI 四大栏目：使用 categories taxonomy 自动聚合
+  # AI 两大分类
   [[menu.main]]
-    name = "AI基础与理论"
-    url = "categories/ai基础与理论/"
+    name = "AI原理"
+    url = "categories/ai原理/"
     weight = 10
 
   [[menu.main]]
-    name = "AI工具与工程实战"
-    url = "categories/ai工具与工程实战/"
+    name = "AI实战"
+    url = "categories/ai实战/"
     weight = 11
-
-  [[menu.main]]
-    name = "Prompt学习与优化"
-    url = "categories/prompt学习与优化/"
-    weight = 12
-
-  [[menu.main]]
-    name = "AI实战项目案例"
-    url = "categories/ai实战项目案例/"
-    weight = 13
 
   # 通用入口（老内容仍可通过“文章/标签”访问）
   [[menu.main]]
