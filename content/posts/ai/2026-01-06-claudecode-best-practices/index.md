@@ -11,7 +11,7 @@ tags:
   - 最佳实践
   - Anthropic
 categories:
-  - AI工具与工程实战
+  - AI实战
 ---
 
 ![Claude Code Best Practices](claude-code-best-practices.png)

@@ -9,7 +9,7 @@ tags:
   - AI
   - VectorDatabase
 categories:
-  - AI基础与理论
+  - AI原理
 ---
 
 ![VectorDatabase](vector-db.jpg)

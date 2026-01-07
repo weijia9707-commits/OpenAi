@@ -11,7 +11,7 @@ tags:
   - Skill
   - SubAgent
 categories:
-  - AI工具与工程实战
+  - AI原理
 ---
 
 ![ClaudeCode Skill](cc-skill-agent.jpeg)

@@ -11,7 +11,7 @@ tags:
   - Skill
   - MCP
 categories:
-  - AI基础与理论
+  - AI原理
 ---
 
 ![Skill vs MCP](skill-vs-mcp.png)

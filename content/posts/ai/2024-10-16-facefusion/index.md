@@ -8,7 +8,7 @@ tags:
   - AI
   - FaceFusion
 categories:
-  - AI实战项目案例
+  - AI实战
 ---
 
 ![FaceFusion](FaceFusion.png)
