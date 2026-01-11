@@ -134,7 +134,7 @@ mkdir -p .claude/skills/finance-report
 
 **SKILL.md 内容**：
 
-```markdown
+````markdown
 ---
 name: finance-report
 description: 分析财务数据并生成月度财报分析报告，包含核心指标、同比环比分析、异常预警和改进建议
@@ -206,7 +206,7 @@ description: 分析财务数据并生成月度财报分析报告，包含核心�
 - 百分比变化用 +/- 号标注
 - 异常项用 ⚠️ 符号高亮
 - 建议要基于数据，不要空谈
-```
+````
 
 **怎么用**：
 
@@ -226,7 +226,7 @@ mkdir -p .claude/skills/interview-questions
 
 **SKILL.md 内容**：
 
-```markdown
+````markdown
 ---
 name: interview-questions
 description: 根据岗位 JD 生成结构化的面试问题，覆盖专业能力、软技能、文化匹配度
@@ -320,7 +320,7 @@ description: 根据岗位 JD 生成结构化的面试问题，覆盖专业能力
 - 追问方向要列出，方便面试官深挖
 - 权重可根据岗位特点调整
 - 避免违法违规问题（年龄、婚育、宗教等）
-```
+````
 
 **怎么用**：
 
@@ -340,7 +340,7 @@ mkdir -p .claude/skills/amazon-listing-pro
 
 **SKILL.md 内容**：
 
-```markdown
+````markdown
 ---
 name: amazon-listing-pro
 description: 精通亚马逊 A9/COSMO/Rufus 算法，基于竞品分析和关键词数据，生成高转化率的 Listing 文案
@@ -522,7 +522,7 @@ description: 精通亚马逊 A9/COSMO/Rufus 算法，基于竞品分析和关键
 2. **合规优先**：合规检查具有最高优先级，任何违规内容必须修正
 3. **综合视角**：吸取所有竞品优点，规避它们共同的缺点，不要只抄袭某一个竞品
 4. **数据驱动**：所有决策必须基于提供的数据，不能凭空假设市场情况
-```
+````
 
 **怎么用**：
 
