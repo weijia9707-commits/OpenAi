@@ -2,6 +2,7 @@ baseURL = "https://www.heyuan110.com/"
 languageCode = "zh-hans"
 title = "Bruce's Blog"
 theme = "hermit-V2"
+googleAnalytics = "G-CT8E5N460D"
 
 # SEO / Indexing
 enableRobotsTXT = true
