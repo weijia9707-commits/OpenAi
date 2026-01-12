@@ -14,7 +14,7 @@ categories:
   - AI实战
 ---
 
-![Skills Secret](skills-secret-gemini.jpg)
+![Skills Secret](skills-secret-compressed.jpg)
 
 ## 引言
 
@@ -38,7 +38,7 @@ Claude Code 虽然名字里带个 Code，但它绝不仅仅是写代码的工具
 
 Skills 可以根据你的需要，存储在不同位置，作用范围也不同：
 
-![Skills 存储位置](skills-storage.png)
+![Skills 存储位置](skills-storage-compressed.jpg)
 
 想象一下：
 
@@ -131,7 +131,7 @@ description: 这是一个用来解释东西的工具，可以把难懂的变简�
 
 ### 第三步：目录架构（⚠️ 大多数人倒在这里）
 
-![目录结构](directory-structure.png)
+![目录结构](directory-structure-compressed.jpg)
 
 这张图目前大家只需要关注三个部分：
 
