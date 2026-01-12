@@ -8,6 +8,10 @@ googleAnalytics = "G-CT8E5N460D"
 enableRobotsTXT = true
 canonifyURLs = true
 
+[services]
+  [services.googleAnalytics]
+    id = 'G-CT8E5N460D'
+
 [sitemap]
   changeFreq = "weekly"
   filename = "sitemap.xml"
