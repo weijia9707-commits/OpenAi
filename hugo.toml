@@ -8,6 +8,8 @@ googleAnalytics = "G-CT8E5N460D"
 enableRobotsTXT = true
 canonifyURLs = true
 
+
+# GA4
 [services]
   [services.googleAnalytics]
     id = 'G-CT8E5N460D'
