@@ -14,7 +14,7 @@ categories:
   - AI实战
 ---
 
-![Claude Code Best Practices](claude-code-best-practices.png)
+![Claude Code Best Practices](claude-code-best-practices.webp)
 
 Claude Code 的创始人最近在 X 上分享了几条使用心得，看完之后深有同感。不是那种官方文档式的教程，而是实际用下来的体会。
 

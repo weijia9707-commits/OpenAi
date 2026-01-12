@@ -14,7 +14,7 @@ categories:
   - AI实战
 ---
 
-![Memory Guide](memory-guide.jpg)
+![Memory Guide](memory-guide.webp)
 
 ## 一、每次都要自我介绍，烦不烦？
 

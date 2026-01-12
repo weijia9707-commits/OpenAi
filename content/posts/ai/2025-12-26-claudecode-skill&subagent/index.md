@@ -14,7 +14,7 @@ categories:
   - AI原理
 ---
 
-![ClaudeCode Skill](cc-skill-agent.jpeg)
+![ClaudeCode Skill](cc-skill-agent.webp)
 
 AI Agent 要变强，有两条完全不同的路。
 

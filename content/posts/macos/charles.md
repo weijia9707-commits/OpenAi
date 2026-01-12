@@ -29,7 +29,7 @@ Charles是Mac下常用的网络抓包工具，常用来模拟数据和网络辅�
 
 打开charles软件,选择Proxy->Proxy Settings到如下界面:
 
-![charles_proxysettings](/images/charles/charles_proxysettings.png)
+![charles_proxysettings](/images/charles/charles_proxysettings.jpg)
 
 
 以iPhone手机为例，打开: 设置->无线局域网，选择一个网络进入，滚动到下面看到有'HTTP代理'模块，选择手动模式，按照如下图填好配置.
@@ -39,14 +39,14 @@ Charles是Mac下常用的网络抓包工具，常用来模拟数据和网络辅�
 服务器地址填写电脑的局域网ip，打开系统设置->网络，就能看到本机ip了
 填写好了，随便打开一个app，在charles软件里应该会弹出一个提示框，是否同意通过本机代理上网，点是就好了。下面是我设置好代理后，打开手机上app，在charles软件里看到的。
 
-![charles_maoyan](/images/charles/charles_maoyan.png)
+![charles_maoyan](/images/charles/charles_maoyan.jpg)
 
 
 ## 二.模拟慢网速请求
 
 App开发完后，我们要测试多环境，特别是在慢网速下的case，之前我有写过一篇关于[慢网速测试](http://www.heyuan110.com/2015/06/16/Mac%E6%B5%8B%E8%AF%95%E6%A8%A1%E6%8B%9F%E6%85%A2%E7%BD%91%E9%80%9F/)，现在用charles也可以达到这目的。选择Proxy->Throtting Setting，打开后如下图设置
 
-![charles_throttling](/images/charles/charles_throttling.png)
+![charles_throttling](/images/charles/charles_throttling.jpg)
 
 如果要针对某一个地址限速，在Hosts里可以add要限速的url.
 
@@ -73,7 +73,7 @@ App开发完后，我们要测试多环境，特别是在慢网速下的case，�
 
 选择Tools->Rewrite，设置如下图:
 
-![charles_rewrite](/images/charles/charles_rewrite.png)
+![charles_rewrite](/images/charles/charles_rewrite.jpg)
 
 
 ## 六.设置请求的黑名单
@@ -89,19 +89,19 @@ App开发完后，我们要测试多环境，特别是在慢网速下的case，�
 dns欺骗，说简单点就是把域名解析到一个假的ip，
 可以不必一定要用locahost,127.0.0.1,装个B把127.0.0.1对应到baidu.com来调试~
 选择Tools->DNS Spoofing，设置如下图:
-![charles_dns](/images/charles/charles_dns.png)
+![charles_dns](/images/charles/charles_dns.jpg)
 
 ## 八.缓存请求返回的内容
 
 这个我用来干过做缓存数据用，让app在没有server的时候也能跑，
 选择Tools->Mirror，设置如下图:
 
-![charles_mirror](/images/charles/charles_mirror.png)
+![charles_mirror](/images/charles/charles_mirror.jpg)
 
 上面这些是我在开发过程中经常会用到的，基本能很好解决和后台联调的问题，我没有把每个地方都列的很细，基本都是只提到点，相信大家知道这个点去操作都很容易就上手，但我更想说的是，这些都只是工具，最好还是能了解web原理基础，理解HTTP协议。
 
 另外介绍一个模拟请求的工具，Chrome下的插件postman，很方便就能模拟post,get,put,delete等请求，模拟文本，上传文件请求，附上一张截图:
-![post_man](/images/charles/post_man.png)
+![post_man](/images/charles/post_man.jpg)
 
 有了这些工具的辅助，相信你对接口的调试再也不会叫苦啦...
 
@@ -126,10 +126,10 @@ PS:补充breakpoints调试
 - 调试
  
  请求断点的url时会弹出断点调试窗口，如下图 
-![post_man](/images/charles/charles_breakpoints3.png)
+![post_man](/images/charles/charles_breakpoints3.jpg)
 
 这里可以看到编辑request和response，如下图（这里演示的url只打了response的断点）
-![post_man](/images/charles/charles_breakpoints4.png)
+![post_man](/images/charles/charles_breakpoints4.jpg)
 
 编辑完成点execute，搞定!
 

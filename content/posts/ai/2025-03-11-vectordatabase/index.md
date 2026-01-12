@@ -13,7 +13,7 @@ categories:
   - AI原理
 ---
 
-![VectorDatabase](vector-db.jpg)
+![VectorDatabase](vector-db.webp)
 
 ## 1. 向量数据库为什么突然火了？
 

@@ -14,7 +14,7 @@ categories:
   - AI实战
 ---
 
-![Skill Guide](skill-guide.png)
+![Skill Guide](skill-guide.webp)
 
 ## 一、Skill 为什么突然火了
 

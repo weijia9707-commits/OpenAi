@@ -14,7 +14,7 @@ categories:
   - AI原理
 ---
 
-![Skill vs MCP](skill-vs-mcp.png)
+![Skill vs MCP](skill-vs-mcp.webp)
 
 用 Claude Code 久了，你会发现它有两套看起来很像但本质不同的能力扩展系统：**Skill** 和 **MCP**。
 

@@ -11,7 +11,7 @@ categories:
   - AI实战
 ---
 
-![FaceFusion](FaceFusion.png)
+![FaceFusion](FaceFusion.webp)
 
 ## 这东西是干嘛的
 

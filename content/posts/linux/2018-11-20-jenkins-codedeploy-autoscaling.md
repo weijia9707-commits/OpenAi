@@ -50,7 +50,7 @@ https://console.aws.amazon.com/iam/
 
 2)、为Auto Scaling 创建启动配置(下图为已经设置好的启动配置模板)
 
-![](media/15426810514625/15426813227709.jpg)
+![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426813227709.jpg)
 
 3)、为EC2实例启动时添加必要的用户数据(主要为应用程序事先搭建好基础环境)
 
