@@ -1,0 +1,1347 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>X/TikTok 视频下载器 - 免费在线下载社交媒体视频 | Web Toolbox</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="免费在线下载 X (Twitter) 和 TikTok 视频，支持无水印下载、高清画质，一键保存到本地。纯前端运行，安全无需登录。">
+    <meta name="keywords" content="TikTok下载,Twitter视频下载,X视频下载,抖音国际版下载,无水印视频,社交媒体下载,免费工具">
+    <meta name="author" content="heyuan110">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/social-video-downloader.html">
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>📥</text></svg>">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/social-video-downloader.html">
+    <meta property="og:title" content="X/TikTok 视频下载器 - 免费在线下载社交媒体视频">
+    <meta property="og:description" content="免费在线下载 X (Twitter) 和 TikTok 视频，支持无水印下载、高清画质。">
+    <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/social-video-downloader.png">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="Web Toolbox">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="X/TikTok 视频下载器 - 免费在线下载">
+    <meta name="twitter:description" content="免费在线下载 X 和 TikTok 视频，支持无水印高清下载。">
+    <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/social-video-downloader.png">
+
+    <!-- JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "X/TikTok 视频下载器",
+        "url": "https://www.heyuan110.com/web-toolbox/social-video-downloader.html",
+        "description": "免费在线下载 X (Twitter) 和 TikTok 视频",
+        "applicationCategory": "MultimediaApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "author": {"@type": "Person", "name": "heyuan110"}
+    }
+    </script>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --bg-primary: #0f0f1a;
+            --bg-secondary: #1a1a2e;
+            --bg-card: #252542;
+            --bg-hover: #2d2d4a;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b8;
+            --accent-tiktok: #fe2c55;
+            --accent-x: #1d9bf0;
+            --accent-gradient: linear-gradient(135deg, #fe2c55 0%, #1d9bf0 100%);
+            --success: #00c853;
+            --warning: #ffab00;
+            --error: #ff5252;
+            --border: rgba(255, 255, 255, 0.1);
+            --shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', sans-serif;
+            background: var(--bg-primary);
+            background-image:
+                radial-gradient(ellipse at top left, rgba(254, 44, 85, 0.1) 0%, transparent 50%),
+                radial-gradient(ellipse at bottom right, rgba(29, 155, 240, 0.1) 0%, transparent 50%);
+            min-height: 100vh;
+            color: var(--text-primary);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        /* 头部 */
+        .header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 16px;
+            margin-bottom: 20px;
+        }
+
+        .logo-icon {
+            width: 64px;
+            height: 64px;
+            background: var(--accent-gradient);
+            border-radius: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 32px;
+            box-shadow: 0 4px 20px rgba(254, 44, 85, 0.3);
+        }
+
+        .header h1 {
+            font-size: 2.5rem;
+            font-weight: 700;
+            background: var(--accent-gradient);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .header p {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .platforms {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            margin-top: 24px;
+        }
+
+        .platform-badge {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            padding: 8px 16px;
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .platform-badge.tiktok { border-color: rgba(254, 44, 85, 0.3); }
+        .platform-badge.x { border-color: rgba(29, 155, 240, 0.3); }
+
+        /* 输入区域 */
+        .input-section {
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            padding: 32px;
+            margin-bottom: 32px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+        }
+
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        .input-wrapper input {
+            width: 100%;
+            padding: 20px 60px 20px 24px;
+            font-size: 16px;
+            border: 2px solid var(--border);
+            border-radius: 16px;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            transition: all 0.3s ease;
+        }
+
+        .input-wrapper input:focus {
+            outline: none;
+            border-color: var(--accent-tiktok);
+            box-shadow: 0 0 0 4px rgba(254, 44, 85, 0.1);
+        }
+
+        .input-wrapper input::placeholder {
+            color: var(--text-secondary);
+        }
+
+        .input-wrapper .paste-btn {
+            position: absolute;
+            right: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            padding: 10px 16px;
+            background: rgba(255, 255, 255, 0.1);
+            border: none;
+            border-radius: 10px;
+            color: var(--text-secondary);
+            cursor: pointer;
+            font-size: 14px;
+            transition: all 0.2s ease;
+        }
+
+        .input-wrapper .paste-btn:hover {
+            background: rgba(255, 255, 255, 0.15);
+            color: var(--text-primary);
+        }
+
+        .btn-download {
+            width: 100%;
+            padding: 18px 32px;
+            font-size: 18px;
+            font-weight: 600;
+            border: none;
+            border-radius: 16px;
+            background: var(--accent-gradient);
+            color: white;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 12px;
+        }
+
+        .btn-download:hover:not(:disabled) {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 30px rgba(254, 44, 85, 0.4);
+        }
+
+        .btn-download:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
+            transform: none;
+        }
+
+        .btn-download.loading {
+            background: var(--bg-card);
+        }
+
+        /* 加载动画 */
+        .spinner {
+            width: 24px;
+            height: 24px;
+            border: 3px solid rgba(255, 255, 255, 0.3);
+            border-top-color: white;
+            border-radius: 50%;
+            animation: spin 0.8s linear infinite;
+        }
+
+        @keyframes spin {
+            to { transform: rotate(360deg); }
+        }
+
+        /* 结果区域 */
+        .result-section {
+            display: none;
+            background: var(--bg-secondary);
+            border-radius: 24px;
+            padding: 32px;
+            border: 1px solid var(--border);
+            box-shadow: var(--shadow);
+            animation: fadeIn 0.4s ease;
+        }
+
+        .result-section.show {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .result-header {
+            display: flex;
+            align-items: center;
+            gap: 16px;
+            margin-bottom: 24px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .result-platform {
+            width: 48px;
+            height: 48px;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 24px;
+        }
+
+        .result-platform.tiktok { background: rgba(254, 44, 85, 0.2); }
+        .result-platform.x { background: rgba(29, 155, 240, 0.2); }
+
+        .result-info h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+
+        .result-info p {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        /* 视频预览 */
+        .video-preview {
+            position: relative;
+            margin-bottom: 24px;
+            border-radius: 16px;
+            overflow: hidden;
+            background: var(--bg-card);
+        }
+
+        .video-preview video,
+        .video-preview img {
+            width: 100%;
+            max-height: 400px;
+            object-fit: contain;
+            display: block;
+        }
+
+        .video-placeholder {
+            height: 200px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            color: var(--text-secondary);
+            gap: 12px;
+        }
+
+        .video-placeholder span {
+            font-size: 48px;
+        }
+
+        /* 下载选项 */
+        .download-options {
+            display: grid;
+            gap: 12px;
+        }
+
+        .download-option {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 16px 20px;
+            background: var(--bg-card);
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            transition: all 0.2s ease;
+        }
+
+        .download-option:hover {
+            background: var(--bg-hover);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .option-info {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .option-icon {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 20px;
+        }
+
+        .option-icon.video { background: rgba(254, 44, 85, 0.2); }
+        .option-icon.audio { background: rgba(29, 155, 240, 0.2); }
+        .option-icon.image { background: rgba(0, 200, 83, 0.2); }
+
+        .option-details h4 {
+            font-size: 0.95rem;
+            font-weight: 600;
+            margin-bottom: 2px;
+        }
+
+        .option-details p {
+            font-size: 0.8rem;
+            color: var(--text-secondary);
+        }
+
+        .option-badge {
+            padding: 4px 10px;
+            background: rgba(0, 200, 83, 0.2);
+            color: var(--success);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 600;
+            margin-left: 8px;
+        }
+
+        .btn-option {
+            padding: 10px 20px;
+            background: var(--accent-gradient);
+            border: none;
+            border-radius: 10px;
+            color: white;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.2s ease;
+            font-size: 0.9rem;
+        }
+
+        .btn-option:hover {
+            transform: scale(1.05);
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3);
+        }
+
+        /* 错误提示 */
+        .error-message {
+            display: none;
+            padding: 16px 20px;
+            background: rgba(255, 82, 82, 0.1);
+            border: 1px solid rgba(255, 82, 82, 0.3);
+            border-radius: 12px;
+            color: var(--error);
+            margin-bottom: 20px;
+            animation: shake 0.4s ease;
+        }
+
+        .error-message.show {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        @keyframes shake {
+            0%, 100% { transform: translateX(0); }
+            25% { transform: translateX(-5px); }
+            75% { transform: translateX(5px); }
+        }
+
+        /* 使用说明 */
+        .tips-section {
+            margin-top: 40px;
+            padding: 24px;
+            background: rgba(255, 255, 255, 0.03);
+            border-radius: 16px;
+            border: 1px solid var(--border);
+        }
+
+        .tips-section h3 {
+            font-size: 1.1rem;
+            margin-bottom: 16px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .tips-list {
+            list-style: none;
+        }
+
+        .tips-list li {
+            padding: 10px 0;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
+            font-size: 0.95rem;
+        }
+
+        .tips-list li::before {
+            content: "✓";
+            color: var(--success);
+            font-weight: bold;
+            flex-shrink: 0;
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 1px solid var(--border);
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+        }
+
+        .footer a {
+            color: var(--accent-tiktok);
+            text-decoration: none;
+        }
+
+        .footer a:hover {
+            text-decoration: underline;
+        }
+
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            margin-bottom: 12px;
+            color: var(--text-secondary);
+            text-decoration: none;
+            font-size: 0.9rem;
+            transition: color 0.2s;
+        }
+
+        .back-link:hover {
+            color: var(--text-primary);
+        }
+
+        /* 历史记录 */
+        .history-section {
+            margin-top: 40px;
+        }
+
+        .history-header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            margin-bottom: 16px;
+        }
+
+        .history-header h3 {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-clear-history {
+            padding: 6px 12px;
+            background: transparent;
+            border: 1px solid var(--border);
+            border-radius: 6px;
+            color: var(--text-secondary);
+            font-size: 0.8rem;
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .btn-clear-history:hover {
+            background: rgba(255, 82, 82, 0.1);
+            border-color: var(--error);
+            color: var(--error);
+        }
+
+        .history-list {
+            display: grid;
+            gap: 8px;
+        }
+
+        .history-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 12px 16px;
+            background: var(--bg-secondary);
+            border-radius: 10px;
+            border: 1px solid var(--border);
+            cursor: pointer;
+            transition: all 0.2s;
+        }
+
+        .history-item:hover {
+            background: var(--bg-card);
+            border-color: rgba(255, 255, 255, 0.2);
+        }
+
+        .history-item .platform-icon {
+            font-size: 1.2rem;
+        }
+
+        .history-item .url {
+            flex: 1;
+            font-size: 0.85rem;
+            color: var(--text-secondary);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .history-item .time {
+            font-size: 0.75rem;
+            color: var(--text-secondary);
+            opacity: 0.6;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            .container {
+                padding: 20px 16px;
+            }
+
+            .header h1 {
+                font-size: 1.8rem;
+            }
+
+            .platforms {
+                flex-direction: column;
+                align-items: center;
+                gap: 12px;
+            }
+
+            .input-section {
+                padding: 20px;
+            }
+
+            .input-wrapper input {
+                padding: 16px 50px 16px 16px;
+                font-size: 14px;
+            }
+
+            .download-option {
+                flex-direction: column;
+                align-items: stretch;
+                gap: 12px;
+            }
+
+            .btn-option {
+                width: 100%;
+                text-align: center;
+            }
+        }
+
+        /* Toast 提示 */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(100px);
+            padding: 14px 28px;
+            background: var(--bg-card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            color: var(--text-primary);
+            font-size: 0.95rem;
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        .toast.success { border-color: var(--success); }
+        .toast.error { border-color: var(--error); }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <a href="index.html" class="back-link">← 返回工具箱</a>
+
+        <header class="header">
+            <div class="logo">
+                <div class="logo-icon">📥</div>
+            </div>
+            <h1>社交媒体视频下载器</h1>
+            <p>免费下载 X (Twitter) 和 TikTok 视频，支持无水印高清画质</p>
+            <div class="platforms">
+                <div class="platform-badge x">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+                    X (Twitter)
+                </div>
+                <div class="platform-badge tiktok">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5 20.1a6.34 6.34 0 0 0 10.86-4.43v-7a8.16 8.16 0 0 0 4.77 1.52v-3.4a4.85 4.85 0 0 1-1-.1z"/></svg>
+                    TikTok
+                </div>
+            </div>
+        </header>
+
+        <section class="input-section">
+            <div class="error-message" id="errorMessage">
+                <span>⚠️</span>
+                <span id="errorText">请输入有效的 X 或 TikTok 链接</span>
+            </div>
+
+            <div class="input-wrapper">
+                <input type="text" id="urlInput" placeholder="粘贴 X 或 TikTok 视频链接..." autocomplete="off">
+                <button class="paste-btn" id="pasteBtn">📋 粘贴</button>
+            </div>
+
+            <button class="btn-download" id="downloadBtn">
+                <span>🔍</span>
+                <span>解析视频</span>
+            </button>
+        </section>
+
+        <section class="result-section" id="resultSection">
+            <div class="result-header">
+                <div class="result-platform" id="resultPlatform">
+                    <span id="platformIcon">🎬</span>
+                </div>
+                <div class="result-info">
+                    <h3 id="resultTitle">视频信息</h3>
+                    <p id="resultMeta">正在加载...</p>
+                </div>
+            </div>
+
+            <div class="video-preview" id="videoPreview">
+                <div class="video-placeholder">
+                    <span>🎬</span>
+                    <p>视频预览</p>
+                </div>
+            </div>
+
+            <div class="download-options" id="downloadOptions">
+                <!-- 动态生成下载选项 -->
+            </div>
+        </section>
+
+        <!-- 历史记录 -->
+        <section class="history-section" id="historySection" style="display: none;">
+            <div class="history-header">
+                <h3>📜 历史记录</h3>
+                <button class="btn-clear-history" id="clearHistoryBtn">清空</button>
+            </div>
+            <div class="history-list" id="historyList"></div>
+        </section>
+
+        <section class="tips-section">
+            <h3>💡 使用说明</h3>
+            <ul class="tips-list">
+                <li>复制 X (Twitter) 或 TikTok 的视频分享链接</li>
+                <li>粘贴链接后点击"解析视频"按钮</li>
+                <li>选择需要的画质和格式进行下载</li>
+                <li>TikTok 支持无水印版本下载</li>
+                <li>所有处理均在浏览器端完成，安全可靠</li>
+            </ul>
+        </section>
+
+        <footer class="footer">
+            <p>Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a></p>
+            <p style="margin-top: 8px; font-size: 0.8rem; opacity: 0.6;">仅供学习交流使用，请勿用于商业用途</p>
+        </footer>
+    </div>
+
+    <div class="toast" id="toast"></div>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // DOM 元素
+        const urlInput = document.getElementById('urlInput');
+        const downloadBtn = document.getElementById('downloadBtn');
+        const pasteBtn = document.getElementById('pasteBtn');
+        const resultSection = document.getElementById('resultSection');
+        const errorMessage = document.getElementById('errorMessage');
+        const errorText = document.getElementById('errorText');
+        const videoPreview = document.getElementById('videoPreview');
+        const downloadOptions = document.getElementById('downloadOptions');
+        const resultPlatform = document.getElementById('resultPlatform');
+        const platformIcon = document.getElementById('platformIcon');
+        const resultTitle = document.getElementById('resultTitle');
+        const resultMeta = document.getElementById('resultMeta');
+        const historySection = document.getElementById('historySection');
+        const historyList = document.getElementById('historyList');
+        const clearHistoryBtn = document.getElementById('clearHistoryBtn');
+        const toast = document.getElementById('toast');
+
+        // 历史记录
+        const HISTORY_KEY = 'social_video_history';
+        let history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
+
+        // 平台检测正则
+        const patterns = {
+            tiktok: /(?:tiktok\.com|vm\.tiktok\.com|vt\.tiktok\.com)\/(?:@[\w.]+\/video\/)?(\d+)?/i,
+            x: /(?:twitter\.com|x\.com)\/\w+\/status\/(\d+)/i
+        };
+
+        // CORS 代理列表（用于绕过跨域限制）
+        const corsProxies = [
+            'https://api.codetabs.com/v1/proxy?quest=',
+            'https://corsproxy.io/?',
+            'https://api.allorigins.win/raw?url='
+        ];
+
+        // 初始化
+        function init() {
+            renderHistory();
+            bindEvents();
+        }
+
+        // 绑定事件
+        function bindEvents() {
+            downloadBtn.addEventListener('click', handleDownload);
+            pasteBtn.addEventListener('click', handlePaste);
+            clearHistoryBtn.addEventListener('click', clearHistory);
+
+            urlInput.addEventListener('keypress', (e) => {
+                if (e.key === 'Enter') handleDownload();
+            });
+
+            urlInput.addEventListener('input', () => {
+                hideError();
+            });
+        }
+
+        // 粘贴按钮
+        async function handlePaste() {
+            try {
+                const text = await navigator.clipboard.readText();
+                urlInput.value = text;
+                urlInput.focus();
+                showToast('已粘贴链接', 'success');
+            } catch (err) {
+                showToast('无法访问剪贴板', 'error');
+            }
+        }
+
+        // 检测平台
+        function detectPlatform(url) {
+            if (patterns.tiktok.test(url)) return 'tiktok';
+            if (patterns.x.test(url)) return 'x';
+            return null;
+        }
+
+        // 显示错误
+        function showError(msg) {
+            errorText.textContent = msg;
+            errorMessage.classList.add('show');
+        }
+
+        // 隐藏错误
+        function hideError() {
+            errorMessage.classList.remove('show');
+        }
+
+        // Toast 提示
+        function showToast(msg, type = '') {
+            toast.textContent = msg;
+            toast.className = 'toast show ' + type;
+            setTimeout(() => {
+                toast.classList.remove('show');
+            }, 3000);
+        }
+
+        // 设置加载状态
+        function setLoading(loading) {
+            downloadBtn.disabled = loading;
+            if (loading) {
+                downloadBtn.classList.add('loading');
+                downloadBtn.innerHTML = '<div class="spinner"></div><span>解析中...</span>';
+            } else {
+                downloadBtn.classList.remove('loading');
+                downloadBtn.innerHTML = '<span>🔍</span><span>解析视频</span>';
+            }
+        }
+
+        // 主下载处理
+        async function handleDownload() {
+            const url = urlInput.value.trim();
+
+            if (!url) {
+                showError('请输入视频链接');
+                return;
+            }
+
+            const platform = detectPlatform(url);
+            if (!platform) {
+                showError('请输入有效的 X 或 TikTok 链接');
+                return;
+            }
+
+            hideError();
+            setLoading(true);
+            resultSection.classList.remove('show');
+
+            try {
+                let result;
+                if (platform === 'tiktok') {
+                    result = await fetchTikTokVideo(url);
+                } else {
+                    result = await fetchXVideo(url);
+                }
+
+                if (result && result.success) {
+                    displayResult(result, platform);
+                    addToHistory(url, platform);
+                } else {
+                    showError(result?.error || '解析失败，请稍后重试');
+                }
+            } catch (err) {
+                console.error('解析错误:', err);
+                showError('解析失败: ' + (err.message || '网络错误'));
+            } finally {
+                setLoading(false);
+            }
+        }
+
+        // TikTok 视频解析
+        async function fetchTikTokVideo(url) {
+            // 尝试多个 API
+            const apis = [
+                { name: 'tikwm', fn: fetchTikTokTikwm },
+                { name: 'tikcdn', fn: fetchTikTokTikcdn }
+            ];
+
+            for (const api of apis) {
+                try {
+                    const result = await api.fn(url);
+                    if (result.success) return result;
+                } catch (err) {
+                    console.log(`${api.name} API failed:`, err);
+                }
+            }
+
+            // 所有 API 失败，提供外部服务链接
+            return {
+                success: true,
+                platform: 'tiktok',
+                title: 'TikTok 视频',
+                author: '点击下方链接下载',
+                isExternal: true,
+                externalServices: [
+                    {
+                        name: 'SnapTik',
+                        url: `https://snaptik.app/zh?url=${encodeURIComponent(url)}`,
+                        icon: '🎵'
+                    },
+                    {
+                        name: 'SSSTik',
+                        url: `https://ssstik.io/zh?url=${encodeURIComponent(url)}`,
+                        icon: '💾'
+                    },
+                    {
+                        name: 'TikMate',
+                        url: `https://tikmate.app/?url=${encodeURIComponent(url)}`,
+                        icon: '📥'
+                    }
+                ]
+            };
+        }
+
+        // tikwm.com API
+        async function fetchTikTokTikwm(url) {
+            const apiUrl = `https://www.tikwm.com/api/?url=${encodeURIComponent(url)}`;
+            const response = await fetch(apiUrl);
+            const data = await response.json();
+
+            if (data.code === 0 && data.data) {
+                const video = data.data;
+                return {
+                    success: true,
+                    platform: 'tiktok',
+                    title: video.title || 'TikTok 视频',
+                    author: video.author?.nickname || video.author?.unique_id || '未知作者',
+                    thumbnail: video.cover || video.origin_cover,
+                    duration: formatDuration(video.duration || 0),
+                    downloads: [
+                        {
+                            type: 'video',
+                            label: '无水印视频',
+                            quality: 'HD',
+                            url: video.play,
+                            badge: '推荐'
+                        },
+                        {
+                            type: 'video',
+                            label: '原始视频',
+                            quality: '带水印',
+                            url: video.wmplay
+                        },
+                        {
+                            type: 'audio',
+                            label: '音频文件',
+                            quality: 'MP3',
+                            url: video.music
+                        }
+                    ].filter(d => d.url)
+                };
+            }
+            return { success: false, error: data.msg || '解析失败' };
+        }
+
+        // tikcdn API
+        async function fetchTikTokTikcdn(url) {
+            const apiUrl = `https://tikcdn.io/ssstik/${encodeURIComponent(url)}`;
+            const response = await fetch(apiUrl);
+
+            if (response.ok) {
+                // 这个 API 直接返回视频
+                return {
+                    success: true,
+                    platform: 'tiktok',
+                    title: 'TikTok 视频',
+                    author: '无水印版本',
+                    downloads: [
+                        {
+                            type: 'video',
+                            label: '无水印视频',
+                            quality: 'HD',
+                            url: apiUrl,
+                            badge: '推荐'
+                        }
+                    ]
+                };
+            }
+            return { success: false, error: '解析失败' };
+        }
+
+        // X (Twitter) 视频解析
+        async function fetchXVideo(url) {
+            // 从 URL 中提取推文 ID 和用户名
+            const match = url.match(/(?:twitter\.com|x\.com)\/(\w+)\/status\/(\d+)/);
+            if (!match) {
+                return { success: false, error: '无效的推文链接' };
+            }
+            const username = match[1];
+            const tweetId = match[2];
+
+            // 尝试多个 API
+            const apis = [
+                { name: 'cobalt', fn: () => fetchXCobalt(url) },
+                { name: 'twitsave', fn: () => fetchXTwitsave(url) },
+                { name: 'twittervid', fn: () => fetchXTwitterVid(url, tweetId) }
+            ];
+
+            for (const api of apis) {
+                try {
+                    console.log(`尝试 ${api.name} API...`);
+                    const result = await api.fn();
+                    if (result.success && result.downloads && result.downloads.length > 0) {
+                        result.author = username;
+                        return result;
+                    }
+                } catch (err) {
+                    console.log(`${api.name} API 失败:`, err.message);
+                }
+            }
+
+            // 所有 API 失败，提供外部服务链接
+            return {
+                success: true,
+                platform: 'x',
+                title: 'X (Twitter) 视频',
+                author: username,
+                isExternal: true,
+                externalServices: [
+                    {
+                        name: 'Cobalt',
+                        url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`,
+                        icon: '⚡'
+                    },
+                    {
+                        name: 'SaveTwitter',
+                        url: `https://ssstwitter.com/zh?url=${encodeURIComponent(url)}`,
+                        icon: '🔗'
+                    },
+                    {
+                        name: 'TwitterVid',
+                        url: `https://twittervid.com/?url=${encodeURIComponent(url)}`,
+                        icon: '💾'
+                    },
+                    {
+                        name: 'SaveTweetVid',
+                        url: `https://www.savetweetvid.com/?url=${encodeURIComponent(url)}`,
+                        icon: '📥'
+                    }
+                ]
+            };
+        }
+
+        // Cobalt API (开源服务)
+        async function fetchXCobalt(url) {
+            // 尝试多个 cobalt 实例
+            const instances = [
+                'https://api.cobalt.tools',
+                'https://cobalt-api.hyper.lol'
+            ];
+
+            for (const instance of instances) {
+                try {
+                    const response = await fetch(`${instance}/api/json`, {
+                        method: 'POST',
+                        headers: {
+                            'Accept': 'application/json',
+                            'Content-Type': 'application/json'
+                        },
+                        body: JSON.stringify({
+                            url: url,
+                            vCodec: 'h264',
+                            vQuality: 'max',
+                            aFormat: 'mp3'
+                        })
+                    });
+
+                    if (response.ok) {
+                        const data = await response.json();
+                        if (data.status === 'stream' || data.status === 'redirect') {
+                            return {
+                                success: true,
+                                platform: 'x',
+                                title: 'X (Twitter) 视频',
+                                downloads: [{
+                                    type: 'video',
+                                    label: '高清视频',
+                                    quality: 'HD',
+                                    url: data.url,
+                                    badge: '推荐'
+                                }]
+                            };
+                        } else if (data.status === 'picker' && data.picker) {
+                            // 多个媒体文件
+                            return {
+                                success: true,
+                                platform: 'x',
+                                title: 'X (Twitter) 视频',
+                                downloads: data.picker.map((item, idx) => ({
+                                    type: item.type || 'video',
+                                    label: `媒体 ${idx + 1}`,
+                                    quality: item.type === 'photo' ? '图片' : 'HD',
+                                    url: item.url,
+                                    badge: idx === 0 ? '推荐' : null
+                                }))
+                            };
+                        }
+                    }
+                } catch (err) {
+                    console.log(`Cobalt ${instance} 失败:`, err.message);
+                }
+            }
+            return { success: false };
+        }
+
+        // Twitsave API
+        async function fetchXTwitsave(url) {
+            try {
+                // 使用 CORS 代理
+                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://twitsave.com/info?url=${encodeURIComponent(url)}`)}`;
+                const response = await fetch(proxyUrl);
+                const html = await response.text();
+
+                // 解析 HTML 提取视频链接
+                const videoMatch = html.match(/https:\/\/video\.twimg\.com\/[^"'\s]+\.mp4[^"'\s]*/g);
+                if (videoMatch && videoMatch.length > 0) {
+                    // 去重并按质量排序
+                    const uniqueUrls = [...new Set(videoMatch)];
+                    return {
+                        success: true,
+                        platform: 'x',
+                        title: 'X (Twitter) 视频',
+                        downloads: uniqueUrls.slice(0, 3).map((videoUrl, idx) => ({
+                            type: 'video',
+                            label: idx === 0 ? '最高画质' : `画质 ${idx + 1}`,
+                            quality: idx === 0 ? 'HD' : 'SD',
+                            url: videoUrl.replace(/&amp;/g, '&'),
+                            badge: idx === 0 ? '推荐' : null
+                        }))
+                    };
+                }
+            } catch (err) {
+                console.log('Twitsave 失败:', err.message);
+            }
+            return { success: false };
+        }
+
+        // TwitterVid API
+        async function fetchXTwitterVid(url, tweetId) {
+            try {
+                const proxyUrl = `https://api.allorigins.win/raw?url=${encodeURIComponent(`https://twittervid.com/api/video/${tweetId}`)}`;
+                const response = await fetch(proxyUrl);
+                const data = await response.json();
+
+                if (data && data.videos && data.videos.length > 0) {
+                    return {
+                        success: true,
+                        platform: 'x',
+                        title: 'X (Twitter) 视频',
+                        thumbnail: data.thumbnail,
+                        downloads: data.videos.map((video, idx) => ({
+                            type: 'video',
+                            label: video.quality || `画质 ${idx + 1}`,
+                            quality: video.quality || 'HD',
+                            url: video.url,
+                            badge: idx === 0 ? '推荐' : null
+                        }))
+                    };
+                }
+            } catch (err) {
+                console.log('TwitterVid 失败:', err.message);
+            }
+            return { success: false };
+        }
+
+        // 格式化时长
+        function formatDuration(seconds) {
+            if (!seconds) return '';
+            const mins = Math.floor(seconds / 60);
+            const secs = seconds % 60;
+            return `${mins}:${secs.toString().padStart(2, '0')}`;
+        }
+
+        // 显示结果
+        function displayResult(result, platform) {
+            // 设置平台图标
+            resultPlatform.className = 'result-platform ' + platform;
+            platformIcon.textContent = platform === 'tiktok' ? '🎵' : '𝕏';
+
+            // 设置标题和信息
+            resultTitle.textContent = result.title || '视频信息';
+            resultMeta.textContent = `@${result.author}${result.duration ? ' · ' + result.duration : ''}`;
+
+            // 视频预览
+            if (result.thumbnail) {
+                videoPreview.innerHTML = `<img src="${result.thumbnail}" alt="视频封面" onerror="this.parentElement.innerHTML='<div class=\\'video-placeholder\\'><span>🎬</span><p>封面加载失败</p></div>'">`;
+            } else if (result.downloads && result.downloads[0]?.url) {
+                videoPreview.innerHTML = `
+                    <video controls preload="metadata">
+                        <source src="${result.downloads[0].url}" type="video/mp4">
+                        您的浏览器不支持视频播放
+                    </video>
+                `;
+            } else {
+                videoPreview.innerHTML = '<div class="video-placeholder"><span>🎬</span><p>暂无预览</p></div>';
+            }
+
+            // 下载选项
+            downloadOptions.innerHTML = '';
+
+            if (result.isExternal) {
+                // X 视频 - 使用外部服务
+                result.externalServices.forEach(service => {
+                    const option = document.createElement('div');
+                    option.className = 'download-option';
+                    option.innerHTML = `
+                        <div class="option-info">
+                            <div class="option-icon video">${service.icon}</div>
+                            <div class="option-details">
+                                <h4>${service.name}</h4>
+                                <p>点击跳转到下载页面</p>
+                            </div>
+                        </div>
+                        <a href="${service.url}" target="_blank" class="btn-option">打开 ↗</a>
+                    `;
+                    downloadOptions.appendChild(option);
+                });
+            } else if (result.downloads) {
+                // TikTok 视频 - 直接下载
+                result.downloads.forEach(item => {
+                    const option = document.createElement('div');
+                    option.className = 'download-option';
+                    option.innerHTML = `
+                        <div class="option-info">
+                            <div class="option-icon ${item.type}">${item.type === 'video' ? '🎬' : item.type === 'audio' ? '🎵' : '🖼️'}</div>
+                            <div class="option-details">
+                                <h4>${item.label}${item.badge ? `<span class="option-badge">${item.badge}</span>` : ''}</h4>
+                                <p>${item.quality}</p>
+                            </div>
+                        </div>
+                        <button class="btn-option" onclick="downloadFile('${item.url}', '${item.label}')">下载</button>
+                    `;
+                    downloadOptions.appendChild(option);
+                });
+            }
+
+            resultSection.classList.add('show');
+            resultSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
+        }
+
+        // 下载文件
+        window.downloadFile = async function(url, filename) {
+            try {
+                showToast('开始下载...', 'success');
+
+                // 尝试直接下载
+                const link = document.createElement('a');
+                link.href = url;
+                link.download = filename.replace(/[^\w\u4e00-\u9fa5]/g, '_') + '.mp4';
+                link.target = '_blank';
+                link.rel = 'noopener noreferrer';
+                document.body.appendChild(link);
+                link.click();
+                document.body.removeChild(link);
+
+            } catch (err) {
+                // 如果直接下载失败，打开新窗口
+                window.open(url, '_blank');
+                showToast('已在新窗口打开，请右键保存', 'success');
+            }
+        };
+
+        // 历史记录相关
+        function addToHistory(url, platform) {
+            const item = {
+                url,
+                platform,
+                time: Date.now()
+            };
+
+            // 避免重复
+            history = history.filter(h => h.url !== url);
+            history.unshift(item);
+
+            // 最多保留 10 条
+            if (history.length > 10) history = history.slice(0, 10);
+
+            localStorage.setItem(HISTORY_KEY, JSON.stringify(history));
+            renderHistory();
+        }
+
+        function renderHistory() {
+            if (history.length === 0) {
+                historySection.style.display = 'none';
+                return;
+            }
+
+            historySection.style.display = 'block';
+            historyList.innerHTML = history.map(item => `
+                <div class="history-item" onclick="document.getElementById('urlInput').value='${item.url}';document.getElementById('downloadBtn').click();">
+                    <span class="platform-icon">${item.platform === 'tiktok' ? '🎵' : '𝕏'}</span>
+                    <span class="url">${item.url}</span>
+                    <span class="time">${formatTime(item.time)}</span>
+                </div>
+            `).join('');
+        }
+
+        function clearHistory() {
+            history = [];
+            localStorage.removeItem(HISTORY_KEY);
+            renderHistory();
+            showToast('历史记录已清空', 'success');
+        }
+
+        function formatTime(timestamp) {
+            const date = new Date(timestamp);
+            const now = new Date();
+            const diff = now - date;
+
+            if (diff < 60000) return '刚刚';
+            if (diff < 3600000) return Math.floor(diff / 60000) + '分钟前';
+            if (diff < 86400000) return Math.floor(diff / 3600000) + '小时前';
+            return date.toLocaleDateString('zh-CN');
+        }
+
+        // 启动
+        init();
+    })();
+    </script>
+</body>
+</html>
