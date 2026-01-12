@@ -11,6 +11,7 @@
 | M3U8 视频下载器 | <a href="https://heyuan110.github.io/web-toolbox/m3u8-downloader.html" target="_blank">打开 / Open</a> |
 | JSON 查看器 | <a href="https://heyuan110.github.io/web-toolbox/json-viewer.html" target="_blank">打开 / Open</a> |
 | SQLite 查看器 | <a href="https://heyuan110.github.io/web-toolbox/sqlite-viewer.html" target="_blank">打开 / Open</a> |
+| X/TikTok 视频下载器 | <a href="https://heyuan110.github.io/web-toolbox/social-video-downloader.html" target="_blank">打开 / Open</a> |
 
 > 💡 需要先启用 GitHub Pages：仓库 Settings → Pages → Source 选择 `main` 分支 → Save
 
@@ -23,6 +24,7 @@
 | `m3u8-downloader.html` | M3U8 视频下载器 | 批量下载 M3U8 视频，支持预览、暂停续传 |
 | `json-viewer.html` | JSON 查看器 | 格式化显示 JSON，支持折叠展开、搜索 |
 | `sqlite-viewer.html` | SQLite 查看器 | 浏览器内打开 SQLite 数据库，执行 SQL 查询 |
+| `social-video-downloader.html` | X/TikTok 视频下载器 | 下载 X (Twitter) 和 TikTok 视频，支持多种画质 |
 
 ---
 
@@ -62,6 +64,19 @@
 
 ![SQLite 查看器](screenshots/sqlite-viewer.png)
 
+### X/TikTok 视频下载器
+下载 X (Twitter) 和 TikTok 平台的视频内容。
+
+**功能特点：**
+- 支持 X (Twitter) 和 TikTok 视频链接
+- 多 API 回退策略确保高可用性
+- TikTok 支持无水印/有水印/音频下载
+- X 视频支持多种画质选择
+- 本地历史记录保存
+- 响应式深色主题界面
+
+![X/TikTok 视频下载器](screenshots/social-video-downloader.png)
+
 ---
 
 ## English
@@ -100,6 +115,19 @@ View and query SQLite databases directly in browser.
 
 ![SQLite Viewer](screenshots/sqlite-viewer.png)
 
+### X/TikTok Video Downloader
+Download videos from X (Twitter) and TikTok platforms.
+
+**Features:**
+- Support X (Twitter) and TikTok video links
+- Multi-API fallback strategy for high availability
+- TikTok: watermark-free/watermarked/audio downloads
+- X: multiple quality options
+- Local history storage
+- Responsive dark theme UI
+
+![X/TikTok Video Downloader](screenshots/social-video-downloader.png)
+
 ---
 
 ## 使用方法 / Usage
@@ -112,6 +140,7 @@ Just open the HTML file in your browser:
 open m3u8-downloader.html
 open json-viewer.html
 open sqlite-viewer.html
+open social-video-downloader.html
 ```
 
 ---
