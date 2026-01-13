@@ -19,13 +19,13 @@ categories:
 
 Vercel 近期开源了一款名为 **Agent Browser** 的命令行工具，这是一个专为 AI 代理设计的浏览器自动化解决方案。它结合了 Rust 的高性能与 Node.js 的灵活性，为 AI 工作流提供了可靠的浏览器交互能力。
 
-## 什么是 Agent Browser？
+## 一、什么是 Agent Browser？
 
 Agent Browser 是一个无头浏览器自动化 CLI 工具，主要面向 AI 代理场景。与传统的浏览器自动化工具不同，它采用了**快照驱动**的交互模式，特别适合 AI 代理的工作方式。
 
 核心理念：让 AI 代理能够像人一样"看到"网页，并与之交互。
 
-## 核心特性
+## 二、核心特性
 
 ### 1. 高性能架构
 
@@ -68,9 +68,9 @@ agent-browser snapshot -i --json
 - Cookie、存储管理
 - 多会话隔离
 
-## 安装与使用
+## 三、安装与使用
 
-### 安装
+### 1. 安装
 
 ```bash
 # 通过 npm 安装
@@ -80,7 +80,7 @@ npm install -g agent-browser
 agent-browser install
 ```
 
-### 典型工作流
+### 2. 典型工作流
 
 Agent Browser 的推荐使用方式是**快照-交互-验证**循环：
 
@@ -99,7 +99,7 @@ agent-browser fill @e3 "Hello World"
 agent-browser snapshot -i --json
 ```
 
-### 高级用法示例
+### 3. 高级用法示例
 
 **登录并保存会话状态**：
 
@@ -122,7 +122,7 @@ agent-browser open https://site1.com --session session1
 agent-browser open https://site2.com --session session2
 ```
 
-## 技术架构
+## 四、技术架构
 
 ```
 ┌─────────────────┐     ┌──────────────────────┐
@@ -142,7 +142,7 @@ agent-browser open https://site2.com --session session2
 - **资源高效**：守护进程复用浏览器实例
 - **跨平台**：支持 Windows、macOS、Linux
 
-## 与 Claude Code 集成
+## 五、与 Claude Code 集成
 
 Agent Browser 还提供了专门的 **Claude Code Skill**，可以无缝集成到 AI 编程助手中。安装后，Claude Code 可以直接调用浏览器自动化能力，实现：
 
@@ -151,7 +151,7 @@ Agent Browser 还提供了专门的 **Claude Code Skill**，可以无缝集成�
 - 截图和数据抓取
 - 网页内容分析
 
-### 安装 Skill 到本地
+### 1. 安装 Skill 到本地
 
 **第一步**：创建 skill 目录
 
@@ -196,7 +196,7 @@ agent-browser close             # Close browser
 
 安装完成后，重启 Claude Code 即可使用。在对话中输入 `/agent-browser` 即可调用该 skill。
 
-### Skill 常用命令速查
+### 2. Skill 常用命令速查
 
 | 命令 | 说明 |
 |------|------|
@@ -208,7 +208,7 @@ agent-browser close             # Close browser
 | `agent-browser wait @e1` | 等待元素出现 |
 | `agent-browser close` | 关闭浏览器 |
 
-### 实战示例：自动登录
+### 3. 实战示例：自动登录
 
 ```bash
 # 打开登录页
@@ -230,14 +230,14 @@ agent-browser wait --load networkidle
 agent-browser state save auth.json
 ```
 
-## 适用场景
+## 六、适用场景
 
 - **AI 代理开发**：构建能够浏览网页的 AI 助手
 - **自动化测试**：Web 应用的 E2E 测试
 - **数据抓取**：结构化网页数据提取
 - **RPA 流程**：自动化重复性网页操作
 
-## 总结
+## 七、总结
 
 Agent Browser 填补了 AI 代理领域浏览器自动化工具的空白。它的快照驱动模式非常契合 AI 的工作方式——获取当前状态，做出决策，执行操作。
 
