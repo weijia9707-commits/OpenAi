@@ -1,6 +1,6 @@
 ---
 title: "Claude Code从入门到精通：终端里的全能AI助手完全指南"
-date: 2025-01-14T14:38:00+08:00
+date: 2026-01-14T14:38:00+08:00
 author: "bruce"
 description: "全面介绍 Anthropic 官方 AI 工具 Claude Code，从基础概念到高级用法，涵盖安装配置、日常使用、CLAUDE.md、Skills、Subagent 等核心功能。无论你是开发者、产品经理、运维人员还是行政财务，都能从中找到提升效率的方法。"
 toc: true
