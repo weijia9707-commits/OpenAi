@@ -1,14 +1,30 @@
 # Robots.txt for www.heyuan110.com
-# 允许所有搜索引擎和AI爬虫访问
+# 优化版本 - 支持搜索引擎和 AI 爬虫 (GEO - Generative Engine Optimization)
+# 更新日期: 2025-01
 
+# ============================================
+# 默认规则 - 允许所有爬虫
+# ============================================
 User-agent: *
 Allow: /
+Crawl-delay: 1
 
-# 搜索引擎爬虫
+# ============================================
+# 主流搜索引擎
+# ============================================
 User-agent: Googlebot
 Allow: /
 
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
+Allow: /
+
 User-agent: Bingbot
+Allow: /
+
+User-agent: Slurp
 Allow: /
 
 User-agent: Baiduspider
@@ -29,35 +45,126 @@ Allow: /
 User-agent: DuckDuckBot
 Allow: /
 
-# AI 爬虫 (GEO - Generative Engine Optimization)
+User-agent: Applebot
+Allow: /
+
+# ============================================
+# AI 爬虫 - OpenAI / ChatGPT
+# ============================================
 User-agent: GPTBot
 Allow: /
 
 User-agent: ChatGPT-User
 Allow: /
 
+User-agent: OAI-SearchBot
+Allow: /
+
+# ============================================
+# AI 爬虫 - Google AI
+# ============================================
 User-agent: Google-Extended
 Allow: /
 
+User-agent: GoogleOther
+Allow: /
+
+# ============================================
+# AI 爬虫 - Anthropic / Claude
+# ============================================
 User-agent: anthropic-ai
 Allow: /
 
 User-agent: Claude-Web
 Allow: /
 
+User-agent: ClaudeBot
+Allow: /
+
+# ============================================
+# AI 爬虫 - 其他 AI 服务
+# ============================================
 User-agent: PerplexityBot
 Allow: /
 
 User-agent: Cohere-ai
 Allow: /
 
+User-agent: cohere-ai
+Allow: /
+
 User-agent: CCBot
 Allow: /
 
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: Meta-ExternalFetcher
+Allow: /
+
+User-agent: FacebookBot
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: ImagesiftBot
+Allow: /
+
+User-agent: Omgilibot
+Allow: /
+
+User-agent: Timpibot
+Allow: /
+
+User-agent: VelenPublicWebCrawler
+Allow: /
+
+User-agent: Webzio-Extended
+Allow: /
+
+User-agent: AI2Bot
+Allow: /
+
+User-agent: Ai2Bot-Dolma
+Allow: /
+
+User-agent: iaskspider
+Allow: /
+
+User-agent: Kangaroo Bot
+Allow: /
+
+User-agent: PetalBot
+Allow: /
+
+# ============================================
+# 禁止抓取的路径（无意义内容）
+# ============================================
+User-agent: *
+Disallow: /404.html
+Disallow: /*.json$
+Disallow: /page/
+Disallow: /tags/page/
+Disallow: /categories/page/
+
+# ============================================
 # Sitemaps
+# ============================================
 Sitemap: https://www.heyuan110.com/sitemap.xml
 Sitemap: https://www.heyuan110.com/web-toolbox/sitemap.xml
 
-# LLMs.txt - AI爬虫专用
-# https://llmstxt.org/
+# ============================================
+# LLMs.txt - AI 爬虫专用信息文件
+# 规范: https://llmstxt.org/
+# ============================================
 LLMs: https://www.heyuan110.com/llms.txt
