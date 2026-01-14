@@ -15,7 +15,7 @@ tags:
 
 显示：`sh showallfiles.sh`
 
-![xgt](/images/showorhidefiles/2.jpg)
+![xgt](/images/showorhidefiles/2.webp)
 
 
 下载sh文件：[sh.zip](/download/showorhidefiles-sh.zip)
@@ -24,7 +24,7 @@ tags:
 
 所以写了个小工具有界面哦，截图
 
-![xgt](/images/showorhidefiles/1.png)
+![xgt](/images/showorhidefiles/1.webp)
 
 下载工具：[ShowFiles](/download/showorhidefiles-app.zip)
 
