@@ -43,6 +43,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "支持哪些平台？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持抖音、快手、小红书、微博、B站等主流社交平台"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么有些视频无法下载？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可能是私密视频、已删除或平台限制，本工具仅支持公开视频"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "下载的视频有水印吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "工具会尝试获取无水印版本，但部分平台可能仍有水印"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "视频会经过第三方服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "解析需要通过服务端，但视频直接从原平台下载"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "下载视频是否合法？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "仅供个人学习使用，请尊重原作者版权，勿用于商业用途"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -650,6 +700,134 @@
 
         .toast.success { border-color: var(--success); }
         .toast.error { border-color: var(--error); }
+
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-4px);
+            border-color: rgba(254, 44, 85, 0.3);
+            box-shadow: 0 8px 30px rgba(254, 44, 85, 0.1);
+        }
+
+        .feature-icon {
+            width: 56px;
+            height: 56px;
+            margin: 0 auto 16px;
+            background: var(--accent-gradient);
+            border-radius: 14px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 28px;
+        }
+
+        .feature-card h3 {
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            color: var(--text-primary);
+        }
+
+        .feature-card p {
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 800px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-section h2 {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: 24px;
+            color: var(--text-primary);
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: var(--bg-secondary);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 20px 24px;
+            background: transparent;
+            border: none;
+            color: var(--text-primary);
+            font-size: 1rem;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 16px;
+            transition: background 0.2s ease;
+        }
+
+        .faq-question:hover {
+            background: var(--bg-hover);
+        }
+
+        .faq-question::after {
+            content: "+";
+            font-size: 1.5rem;
+            font-weight: 300;
+            color: var(--text-secondary);
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 24px 20px;
+            color: var(--text-secondary);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -673,6 +851,30 @@
                 </div>
             </div>
         </header>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <h3>多平台支持</h3>
+                <p>支持抖音、快手、小红书、微博等主流平台</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>去水印下载</h3>
+                <p>自动解析无水印高清视频链接</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <h3>一键下载</h3>
+                <p>粘贴分享链接即可解析下载</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🆓</div>
+                <h3>免费使用</h3>
+                <p>完全免费，无需注册登录</p>
+            </div>
+        </section>
 
         <section class="input-section">
             <div class="error-message" id="errorMessage">
@@ -741,6 +943,43 @@
     </div>
 
     <div class="toast" id="toast"></div>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section">
+        <h2>❓ 常见问题</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question">支持哪些平台？</button>
+                <div class="faq-answer">
+                    <p>支持抖音、快手、小红书、微博、B站等主流社交平台。我们会持续更新支持的平台列表。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">为什么有些视频无法下载？</button>
+                <div class="faq-answer">
+                    <p>可能是私密视频、已删除或平台限制，本工具仅支持公开视频。如果视频设置了隐私权限或已被作者删除，将无法解析下载。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">下载的视频有水印吗？</button>
+                <div class="faq-answer">
+                    <p>工具会尝试获取无水印版本，但部分平台可能仍有水印。不同平台的去水印效果可能有所差异。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">视频会经过第三方服务器吗？</button>
+                <div class="faq-answer">
+                    <p>解析需要通过服务端获取视频信息，但视频文件直接从原平台下载到您的设备，不会经过我们的服务器存储。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">下载视频是否合法？</button>
+                <div class="faq-answer">
+                    <p>仅供个人学习使用，请尊重原作者版权，勿用于商业用途。下载的内容请勿二次传播或用于盈利目的。</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <script>
     (function() {
@@ -1341,7 +1580,57 @@
 
         // 启动
         init();
+
+        // FAQ 交互
+        document.querySelectorAll('.faq-question').forEach(btn => {
+            btn.addEventListener('click', function() {
+                const item = this.parentElement;
+                const wasActive = item.classList.contains('active');
+                // 关闭所有其他项
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                // 切换当前项
+                if (!wasActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
     })();
     </script>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="m3u8-downloader.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📺</div>
+                <div style="color: #e6edf3; font-weight: 500;">M3U8 下载器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">HLS 流媒体下载</div>
+            </a>
+            <a href="audio-cutter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">✂️</div>
+                <div style="color: #e6edf3; font-weight: 500;">音频剪切</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线剪切音频文件</div>
+            </a>
+            <a href="image-compressor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🗜️</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片压缩</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线压缩图片大小</div>
+            </a>
+            <a href="file-renamer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📝</div>
+                <div style="color: #e6edf3; font-weight: 500;">批量重命名</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">文件批量重命名</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

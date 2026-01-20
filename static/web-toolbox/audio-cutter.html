@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "支持哪些音频格式？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本工具支持 MP3、WAV、M4A、FLAC、AAC、OGG 等主流音频格式。您可以直接拖拽或选择这些格式的音频文件进行剪辑，工具会自动识别并加载音频波形。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "最大支持多大的音频文件？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "音频文件大小取决于您的浏览器内存限制，建议不超过 100MB。较大的文件可能会导致加载缓慢或浏览器内存不足。如果需要处理大文件，建议先使用其他工具分割后再进行剪辑。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何精确选择剪辑区间？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "您可以通过以下方式精确选择剪辑区间：1) 直接在波形上拖动起止标记；2) 播放时使用快捷键 [ 设置起点、] 设置终点；3) 点击试听按钮预览选中片段。时间精度可达毫秒级。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "剪辑后的音频格式是什么？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "您可以自由选择导出格式，支持 MP3、WAV、OGG、M4A、FLAC、AAC 六种格式。WAV 格式无需编码器，其他格式会自动加载编码器进行转换。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "音频会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会。所有音频处理完全在您的浏览器本地完成，音频文件不会上传到任何服务器。这意味着您的音频内容完全私密安全，即使在离线状态下也可以使用本工具（需要先加载页面）。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -741,6 +791,41 @@
             <p class="subtitle">在线可视化音频裁剪，支持多种格式</p>
         </header>
 
+        <!-- 功能特点 -->
+        <section class="features-section" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(99, 102, 241, 0.1)); border: 1px solid rgba(124, 58, 237, 0.2); border-radius: 16px; padding: 25px; margin-bottom: 25px;">
+            <h2 style="font-size: 1.1rem; color: #a78bfa; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">✨ 功能特点</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">📊</span>
+                    <div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">可视化波形</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;">直观显示音频波形，精准选择剪辑区间</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🎵</span>
+                    <div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">多格式支持</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;">支持 MP3、WAV、M4A、FLAC、AAC 等主流格式</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">⌨️</span>
+                    <div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">快捷键操作</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;">空格播放/暂停，[ ] 设置起止点，方便快速预览</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🔒</span>
+                    <div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">隐私安全</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;">纯前端处理，音频文件不上传服务器</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <div class="editor-panel">
             <!-- 上传区域 -->
             <div class="upload-area" id="uploadArea">
@@ -880,6 +965,63 @@
                 <li><strong>剪辑导出</strong>：点击"开始剪辑"按钮，完成后点击下载</li>
             </ol>
         </div>
+
+        <!-- FAQ 常见问题 -->
+        <section class="faq-section" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 25px; margin-bottom: 20px;">
+            <h2 style="font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; color: #a78bfa;">❓ 常见问题（FAQ）</h2>
+
+            <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px;">
+                <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>支持哪些音频格式？</span>
+                        <span style="color: #a1a1aa;">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
+                        本工具支持 MP3、WAV、M4A、FLAC、AAC、OGG 等主流音频格式。您可以直接拖拽或选择这些格式的音频文件进行剪辑，工具会自动识别并加载音频波形。
+                    </div>
+                </details>
+
+                <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>最大支持多大的音频文件？</span>
+                        <span style="color: #a1a1aa;">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
+                        音频文件大小取决于您的浏览器内存限制，建议不超过 100MB。较大的文件可能会导致加载缓慢或浏览器内存不足。如果需要处理大文件，建议先使用其他工具分割后再进行剪辑。
+                    </div>
+                </details>
+
+                <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>如何精确选择剪辑区间？</span>
+                        <span style="color: #a1a1aa;">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
+                        您可以通过以下方式精确选择剪辑区间：1) 直接在波形上拖动起止标记；2) 播放时使用快捷键 [ 设置起点、] 设置终点；3) 点击试听按钮预览选中片段。时间精度可达毫秒级。
+                    </div>
+                </details>
+
+                <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>剪辑后的音频格式是什么？</span>
+                        <span style="color: #a1a1aa;">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
+                        您可以自由选择导出格式，支持 MP3、WAV、OGG、M4A、FLAC、AAC 六种格式。WAV 格式无需编码器，其他格式会自动加载编码器进行转换。
+                    </div>
+                </details>
+
+                <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>音频会上传到服务器吗？</span>
+                        <span style="color: #a1a1aa;">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
+                        不会。所有音频处理完全在您的浏览器本地完成，音频文件不会上传到任何服务器。这意味着您的音频内容完全私密安全，即使在离线状态下也可以使用本工具（需要先加载页面）。
+                    </div>
+                </details>
+            </div>
+        </section>
     </div>
 
     <!-- WaveSurfer.js -->
@@ -1602,5 +1744,41 @@
             updateTrimOverlays();
         });
     </script>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="m3u8-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎬</div>
+                <div style="color: #f0f0f0; font-weight: 500;">M3U8 视频下载</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">下载 M3U8 流媒体视频</div>
+            </a>
+            <a href="image-compressor.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
+                <div style="color: #f0f0f0; font-weight: 500;">图片压缩</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
+            </a>
+            <a href="social-video-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+                <div style="color: #f0f0f0; font-weight: 500;">X/TikTok 视频下载</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">下载社交媒体视频</div>
+            </a>
+            <a href="metronome.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎵</div>
+                <div style="color: #f0f0f0; font-weight: 500;">在线节拍器</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">音乐练习节拍器</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
+        <p>纯前端处理，音频不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

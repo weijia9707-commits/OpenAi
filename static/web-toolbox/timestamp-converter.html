@@ -40,6 +40,64 @@
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
+
+    <!-- FAQ 结构化数据 -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是 Unix 时间戳？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Unix 时间戳（Unix Timestamp）是一种时间表示方式，定义为从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数。这个起始时间点被称为"Unix 纪元"（Unix Epoch）。时间戳是一个整数，在计算机系统中被广泛用于记录和计算时间，因为它便于存储和计算时间差。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "时间戳和日期时间有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "日期时间（如"2024-01-01 12:00:00"）是人类可读的时间格式，需要指定时区才能准确表示时间点。而时间戳是一个与时区无关的整数，表示从 Unix 纪元开始经过的秒数。时间戳的优势在于：存储空间小（只需一个整数）、跨时区一致、便于计算时间差、适合数据库排序和索引。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何将时间戳转换为北京时间？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "在本工具的"时间戳 → 日期时间"区域输入时间戳数值，选择单位（秒或毫秒），点击"转换"按钮即可获得北京时间（UTC+8）。转换结果会同时显示 UTC 时间和本地时间。例如：时间戳 1703836800（秒）对应北京时间 2023-12-29 16:00:00。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "秒级时间戳和毫秒级时间戳有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "秒级时间戳通常是 10 位数字（如 1703836800），表示从 Unix 纪元起经过的秒数。毫秒级时间戳是 13 位数字（如 1703836800000），表示经过的毫秒数。JavaScript 的 Date.now() 返回毫秒级时间戳，而大多数后端语言和数据库使用秒级时间戳。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "什么是 2038 年问题？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "2038 年问题是指在使用 32 位有符号整数存储时间戳的系统中，时间戳将在 2038年1月19日 03:14:07 UTC 达到最大值（2147483647），之后会发生整数溢出。这类似于千年虫问题。现代 64 位系统不受此影响，可支持到约 2920 亿年后的时间。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么选择 1970 年作为起始时间？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "1970年1月1日被选为 Unix 纪元，这是因为 Unix 操作系统在 1970 年代初期开发。最初的设计者选择了一个接近当时的"圆整"日期，1970年1月1日午夜 UTC。这个选择使得在当时的计算能力下，32 位整数可以表示直到 2038 年的时间范围。"
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -526,6 +584,41 @@
             <p>时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，本工具支持时间戳与日期时间互转，以及多时区对照。</p>
         </header>
 
+        <!-- 工具简介 -->
+        <section class="intro-section" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1)); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 25px; margin-bottom: 30px;">
+            <h2 style="font-size: 1.1rem; color: var(--accent-light); margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">✨ 功能特点</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">⚡</span>
+                    <div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">实时转换</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">支持秒级和毫秒级时间戳与日期时间的双向互转</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🌐</span>
+                    <div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">多时区支持</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">一键查看全球12个主要城市的当前时间</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">💻</span>
+                    <div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">代码示例</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">提供 19 种编程语言的时间戳获取代码示例</div>
+                    </div>
+                </div>
+                <div style="display: flex; gap: 12px; align-items: flex-start;">
+                    <span style="font-size: 1.5rem;">🔒</span>
+                    <div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">隐私安全</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);">纯前端处理，所有数据在本地浏览器完成转换</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 当前时间戳 -->
         <div class="current-timestamp">
             <button class="copy-btn" onclick="copyCurrentTimestamp()">复制</button>
@@ -628,6 +721,73 @@
                 <li><strong>2147483647</strong> → 2038-01-19 03:14:07 UTC（32位系统最大值）</li>
             </ul>
         </div>
+
+        <!-- FAQ 常见问题 -->
+        <section class="faq-section" style="background: var(--bg-secondary); border-radius: 12px; padding: 25px; margin-bottom: 30px; border: 1px solid var(--border);">
+            <h2 style="font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; color: var(--accent-light);">❓ 常见问题（FAQ）</h2>
+
+            <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px;">
+                <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>什么是 Unix 时间戳？</span>
+                        <span style="color: var(--text-secondary);">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                        Unix 时间戳（Unix Timestamp）是一种时间表示方式，定义为从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数。这个起始时间点被称为"Unix 纪元"（Unix Epoch）。时间戳是一个整数，在计算机系统中被广泛用于记录和计算时间，因为它便于存储和计算时间差。
+                    </div>
+                </details>
+
+                <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>时间戳和日期时间有什么区别？</span>
+                        <span style="color: var(--text-secondary);">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                        日期时间（如"2024-01-01 12:00:00"）是人类可读的时间格式，需要指定时区才能准确表示时间点。而时间戳是一个与时区无关的整数，表示从 Unix 纪元开始经过的秒数。时间戳的优势在于：存储空间小（只需一个整数）、跨时区一致、便于计算时间差、适合数据库排序和索引。
+                    </div>
+                </details>
+
+                <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>如何将时间戳转换为北京时间？</span>
+                        <span style="color: var(--text-secondary);">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                        在本工具的"时间戳 → 日期时间"区域输入时间戳数值，选择单位（秒或毫秒），点击"转换"按钮即可获得北京时间（UTC+8）。转换结果会同时显示 UTC 时间和本地时间。例如：时间戳 1703836800（秒）对应北京时间 2023-12-29 16:00:00。
+                    </div>
+                </details>
+
+                <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>秒级时间戳和毫秒级时间戳有什么区别？</span>
+                        <span style="color: var(--text-secondary);">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                        秒级时间戳通常是 10 位数字（如 1703836800），表示从 Unix 纪元起经过的秒数。毫秒级时间戳是 13 位数字（如 1703836800000），表示经过的毫秒数。JavaScript 的 Date.now() 返回毫秒级时间戳，而大多数后端语言和数据库使用秒级时间戳。本工具同时支持这两种格式的转换。
+                    </div>
+                </details>
+
+                <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>什么是 2038 年问题？</span>
+                        <span style="color: var(--text-secondary);">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                        2038 年问题是指在使用 32 位有符号整数存储时间戳的系统中，时间戳将在 2038年1月19日 03:14:07 UTC 达到最大值（2147483647），之后会发生整数溢出。这类似于千年虫问题。现代 64 位系统不受此影响，可支持到约 2920 亿年后的时间。建议使用 64 位系统或数据库字段来存储时间戳。
+                    </div>
+                </details>
+
+                <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
+                    <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        <span>为什么选择 1970 年作为起始时间？</span>
+                        <span style="color: var(--text-secondary);">▼</span>
+                    </summary>
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
+                        1970年1月1日被选为 Unix 纪元，这是因为 Unix 操作系统在 1970 年代初期开发。最初的设计者选择了一个接近当时的"圆整"日期，1970年1月1日午夜 UTC。这个选择使得在当时的计算能力下，32 位整数可以表示直到 2038 年的时间范围，被认为是足够长的周期。
+                    </div>
+                </details>
+            </div>
+        </section>
     </div>
 
     <div class="toast" id="toast">已复制到剪贴板</div>
@@ -1062,5 +1222,41 @@ new Date().time`
         // 启动
         init();
     </script>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="world-clock.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
+                <div style="color: #f0f0f0; font-weight: 500;">世界时钟</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">全球时区时间查询</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+            </a>
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
+                <div style="color: #f0f0f0; font-weight: 500;">JSON 查看器</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+            </a>
+            <a href="calculator.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
+                <div style="color: #f0f0f0; font-weight: 500;">万能计算器</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">科学计算与进制转换</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

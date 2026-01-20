@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "BPM 是什么意思？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "BPM（Beats Per Minute）表示每分钟节拍数，数值越大节奏越快。例如 60 BPM 表示每秒一拍，120 BPM 表示每秒两拍。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "常见音乐的 BPM 是多少？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "慢歌约 60-80 BPM，流行歌曲约 100-130 BPM，快歌可达 140-180 BPM。古典音乐中，慢板(Largo)约 40-60 BPM，行板(Andante)约 76-108 BPM，快板(Allegro)约 120-168 BPM。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "节拍器精度如何？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本在线节拍器使用 Web Audio API 实现，精度可达毫秒级，能够满足专业音乐练习的需求。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以在后台运行吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以，切换到其他标签页后节拍器会继续运行，声音不会中断，方便你边看谱边练习。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持自定义拍号吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持常见的 2/4、3/4、4/4、6/8 等拍号，并且可以点击节拍圆点自定义每一拍的强弱。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -488,6 +538,104 @@
             margin-bottom: 10px;
         }
 
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section h2 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 16px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-question {
+            color: #e4e4e7;
+            font-weight: 600;
+            font-size: 1rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+            color: #fff;
+            font-size: 0.8rem;
+            font-weight: 700;
+            border-radius: 6px;
+        }
+
+        .faq-answer {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 34px;
+        }
+
         /* 响应式 */
         @media (max-width: 600px) {
             .container {
@@ -602,6 +750,30 @@
                 </div>
             </div>
         </div>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">&#9201;</div>
+                <h3>精准计时</h3>
+                <p>使用 Web Audio API，提供毫秒级精准节拍，满足专业练习需求</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#9836;</div>
+                <h3>BPM 可调</h3>
+                <p>支持 20-300 BPM 范围调节，满足各种音乐风格需求</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#128308;</div>
+                <h3>可视化</h3>
+                <p>节拍可视化显示，闪烁提示当前拍子，更直观的节奏感知</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">&#127925;</div>
+                <h3>多种音色</h3>
+                <p>提供电子音、钢琴音等多种节拍音色可选，适应不同练习场景</p>
+            </div>
+        </section>
 
         <!-- 简介 -->
         <div class="info-section">
@@ -989,5 +1161,66 @@
 
         loadSettings();
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section" style="max-width: 900px; margin: 0 auto 30px; padding: 25px 20px;">
+        <h2>常见问题</h2>
+        <div class="faq-item">
+            <div class="faq-question">BPM 是什么意思？</div>
+            <div class="faq-answer">BPM（Beats Per Minute）表示每分钟节拍数，数值越大节奏越快。例如 60 BPM 表示每秒一拍，120 BPM 表示每秒两拍。这是音乐中用来描述速度的标准单位。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">常见音乐的 BPM 是多少？</div>
+            <div class="faq-answer">慢歌约 60-80 BPM，流行歌曲约 100-130 BPM，快歌可达 140-180 BPM。古典音乐中，慢板(Largo)约 40-60 BPM，行板(Andante)约 76-108 BPM，快板(Allegro)约 120-168 BPM。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">节拍器精度如何？</div>
+            <div class="faq-answer">本在线节拍器使用 Web Audio API 实现，精度可达毫秒级，能够满足专业音乐练习的需求。相比传统的 JavaScript 定时器，Web Audio API 能够提供更加稳定和精准的计时。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">可以在后台运行吗？</div>
+            <div class="faq-answer">可以，切换到其他标签页后节拍器会继续运行，声音不会中断，方便你边看谱边练习。不过建议使用耳机以获得更好的体验。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">支持自定义拍号吗？</div>
+            <div class="faq-answer">支持常见的 2/4、3/4、4/4、6/8 等拍号，并且可以点击节拍圆点自定义每一拍的强弱。紫色表示强拍，绿色表示中强拍，灰色表示弱拍。</div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="audio-cutter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">✂️</div>
+                <div style="color: #e6edf3; font-weight: 500;">音频剪切</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线剪切音频文件</div>
+            </a>
+            <a href="world-clock.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
+                <div style="color: #e6edf3; font-weight: 500;">世界时钟</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">全球时区时间</div>
+            </a>
+            <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
+                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+            </a>
+            <a href="handheld-danmaku.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+                <div style="color: #e6edf3; font-weight: 500;">手持弹幕</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">LED 滚动字幕</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

@@ -41,6 +41,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "支持编辑哪些格式的图片？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以撤销编辑操作吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以，支持撤销和重做功能。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "编辑后的图片格式是什么？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可选择导出为 JPG、PNG 或 WebP 格式。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以批量编辑图片吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "暂不支持，每次只能编辑一张图片。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "图片会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会，所有编辑在本地浏览器完成。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- Cropper.js -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cropperjs@1.6.1/dist/cropper.min.css">
     <style>
@@ -689,6 +739,40 @@
             <button id="downloadBtn" class="btn btn-success" disabled>💾 保存图片</button>
         </div>
     </header>
+
+    <!-- 功能特点区块 -->
+    <section class="features-section" style="max-width: 1200px; margin: 0 auto; padding: 24px 20px; border-bottom: 1px solid var(--border);">
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 20px;">
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 24px; flex-shrink: 0;">✂️</span>
+                <div>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">基础调整</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">支持裁剪、旋转、翻转、调整大小等基础操作</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 24px; flex-shrink: 0;">🎨</span>
+                <div>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">滤镜效果</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">提供亮度、对比度、饱和度、模糊等滤镜调节</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 24px; flex-shrink: 0;">📝</span>
+                <div>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">文字水印</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">可添加自定义文字水印，支持调整字体和位置</p>
+                </div>
+            </div>
+            <div style="display: flex; align-items: flex-start; gap: 12px;">
+                <span style="font-size: 24px; flex-shrink: 0;">👁️</span>
+                <div>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">实时预览</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">所有调整即时预览，所见即所得</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <input type="file" id="fileInput" accept="image/*" style="display: none;">
 
@@ -2152,5 +2236,83 @@
         // 启动
         init();
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
+                <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    支持编辑哪些格式的图片？
+                    <span style="color: #8b949e; font-size: 18px;">+</span>
+                </summary>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式。</p>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
+                <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    可以撤销编辑操作吗？
+                    <span style="color: #8b949e; font-size: 18px;">+</span>
+                </summary>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">可以，支持撤销和重做功能。</p>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
+                <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    编辑后的图片格式是什么？
+                    <span style="color: #8b949e; font-size: 18px;">+</span>
+                </summary>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">可选择导出为 JPG、PNG 或 WebP 格式。</p>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
+                <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    可以批量编辑图片吗？
+                    <span style="color: #8b949e; font-size: 18px;">+</span>
+                </summary>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">暂不支持，每次只能编辑一张图片。</p>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
+                <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    图片会上传到服务器吗？
+                    <span style="color: #8b949e; font-size: 18px;">+</span>
+                </summary>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">不会，所有编辑在本地浏览器完成。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="image-compressor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🗜️</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片压缩</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线压缩图片大小</div>
+            </a>
+            <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+            </a>
+            <a href="id-photo-tool.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📷</div>
+                <div style="color: #e6edf3; font-weight: 500;">证件照制作</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">证件照换底色</div>
+            </a>
+            <a href="color-palette.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+                <div style="color: #e6edf3; font-weight: 500;">调色板</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">颜色选择与转换</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

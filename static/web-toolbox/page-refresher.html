@@ -46,6 +46,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "可以刷新任意网页吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "由于浏览器安全限制，部分网站不允许被嵌入 iframe，需要在新窗口打开。您可以选择后台请求模式或新窗口模式来刷新这类网站。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "最短刷新间隔是多少？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "最短支持 1 秒，但建议设置 5 秒以上以避免对目标网站造成压力。频繁刷新可能导致目标网站暂时封禁您的访问。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "关闭页面后还会继续刷新吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会，刷新功能需要页面保持打开状态。关闭浏览器标签页或窗口后，定时刷新会自动停止。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以同时刷新多个网页吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以打开多个工具标签页，分别设置不同的网址进行同时刷新。每个标签页独立运行，互不影响。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "这个工具有什么用途？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "适用于监控网页更新、抢票、秒杀、监控数据变化等场景。也可用于测试网站稳定性或保持会话活跃状态。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
         * {
@@ -712,6 +762,127 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.3);
         }
+
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.08);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            border-color: rgba(0, 212, 255, 0.3);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-title {
+            color: #e6edf3;
+            font-size: 1.3rem;
+            margin-bottom: 25px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(0, 212, 255, 0.3);
+        }
+
+        .faq-question {
+            padding: 18px 24px;
+            font-weight: 600;
+            color: #e6edf3;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #00d4ff;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 18px;
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.7;
+            font-size: 0.95rem;
+        }
     </style>
 </head>
 <body>
@@ -724,6 +895,30 @@
                 <span>返回工具箱</span>
             </a>
         </nav>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">⏱️</div>
+                <h3 class="feature-title">定时刷新</h3>
+                <p class="feature-desc">设置间隔时间，自动定时刷新网页，支持秒/分钟单位</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📺</div>
+                <h3 class="feature-title">内嵌预览</h3>
+                <p class="feature-desc">在工具内预览目标网页，无需切换窗口查看</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⏳</div>
+                <h3 class="feature-title">倒计时显示</h3>
+                <p class="feature-desc">实时显示距离下次刷新的倒计时，一目了然</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📊</div>
+                <h3 class="feature-title">刷新统计</h3>
+                <p class="feature-desc">记录刷新次数、成功/失败数，方便追踪</p>
+            </div>
+        </section>
 
         <!-- 警告提示 -->
         <div class="warning-banner">
@@ -1424,6 +1619,100 @@
                 stopRefresh();
             }
         });
+
+        // FAQ 折叠展开功能
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+
+                // 关闭所有其他项
+                document.querySelectorAll('.faq-item').forEach(i => {
+                    i.classList.remove('active');
+                });
+
+                // 如果当前项未展开，则展开它
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section">
+        <h2 class="faq-title">
+            <span>❓</span>
+            <span>常见问题</span>
+        </h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">可以刷新任意网页吗？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">由于浏览器安全限制，部分网站不允许被嵌入 iframe，需要在新窗口打开。您可以选择后台请求模式或新窗口模式来刷新这类网站。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">最短刷新间隔是多少？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">最短支持 1 秒，但建议设置 5 秒以上以避免对目标网站造成压力。频繁刷新可能导致目标网站暂时封禁您的访问。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">关闭页面后还会继续刷新吗？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">不会，刷新功能需要页面保持打开状态。关闭浏览器标签页或窗口后，定时刷新会自动停止。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">可以同时刷新多个网页吗？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">可以打开多个工具标签页，分别设置不同的网址进行同时刷新。每个标签页独立运行，互不影响。</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">这个工具有什么用途？</div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">适用于监控网页更新、抢票、秒杀、监控数据变化等场景。也可用于测试网站稳定性或保持会话活跃状态。</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="websocket-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
+                <div style="color: #e6edf3; font-weight: 500;">WebSocket 测试</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+            </a>
+            <a href="ip-lookup.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
+                <div style="color: #e6edf3; font-weight: 500;">IP 地址查询</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">查询 IP 归属地</div>
+            </a>
+            <a href="whois-query.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔎</div>
+                <div style="color: #e6edf3; font-weight: 500;">WHOIS 查询</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">域名注册信息查询</div>
+            </a>
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "科学计算器支持哪些函数？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持sin、cos、tan、log、ln、阶乘、幂运算、开方等常用科学计算函数，可满足日常学习和工作中的数学计算需求。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "单位换算支持哪些类型？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持长度、面积、体积、温度、时间、速度、压力、功率、热量、角度、数据大小、密度、力等16种单位类型的换算。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何使用子网掩码计算？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "输入IP地址和子网掩码或CIDR，工具会自动计算网络地址、广播地址、可用主机范围、可用主机数等信息，是网络规划的必备工具。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "利率计算器怎么用？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "输入本金、利率和期限，选择单利或复利计算方式，工具会自动计算收益、月供、总利息等信息，支持等额本息和等额本金两种还款方式。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "计算结果精度如何？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "使用JavaScript浮点运算，精度约15-17位有效数字，可满足绝大多数日常计算需求。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -577,6 +627,39 @@
     </aside>
 
     <main class="main-content">
+        <!-- 功能特点区块 -->
+        <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;">
+            <h2 style="color: #f0f0f0; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.4rem;">&#x2728;</span> 功能特点
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px;">
+                <div style="padding: 16px; background: rgba(124,58,237,0.1); border-radius: 8px; border-left: 3px solid #7c3aed;">
+                    <h3 style="color: #a78bfa; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                        <span>&#x1F522;</span> 科学计算
+                    </h3>
+                    <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">支持三角函数、对数、阶乘、幂运算等科学计算</p>
+                </div>
+                <div style="padding: 16px; background: rgba(34,197,94,0.1); border-radius: 8px; border-left: 3px solid #22c55e;">
+                    <h3 style="color: #86efac; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                        <span>&#x1F4CF;</span> 单位换算
+                    </h3>
+                    <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">16种单位类型，包括长度、面积、体积、温度、速度等</p>
+                </div>
+                <div style="padding: 16px; background: rgba(251,191,36,0.1); border-radius: 8px; border-left: 3px solid #fbbf24;">
+                    <h3 style="color: #fcd34d; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                        <span>&#x1F4B0;</span> 利率计算
+                    </h3>
+                    <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">支持存款利率、贷款利率、复利计算</p>
+                </div>
+                <div style="padding: 16px; background: rgba(59,130,246,0.1); border-radius: 8px; border-left: 3px solid #3b82f6;">
+                    <h3 style="color: #93c5fd; font-size: 1rem; margin-bottom: 8px; display: flex; align-items: center; gap: 6px;">
+                        <span>&#x1F310;</span> 子网掩码
+                    </h3>
+                    <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.5;">IP地址与子网掩码计算，网络规划必备</p>
+                </div>
+            </div>
+        </section>
+
         <!-- 科学计算器 -->
         <div class="tool-panel active" id="panel-scientific">
             <div class="panel-header">
@@ -1253,6 +1336,96 @@
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 问答区块 -->
+        <section class="faq-section" style="margin-top: 40px; padding: 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;">
+            <h2 style="color: #f0f0f0; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+                <span style="font-size: 1.4rem;">&#x2753;</span> 常见问题
+            </h2>
+            <div style="display: flex; flex-direction: column; gap: 16px;">
+                <details style="background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <summary style="padding: 16px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        科学计算器支持哪些函数？
+                        <span style="color: #7c3aed; transition: transform 0.2s;">&#x25BC;</span>
+                    </summary>
+                    <div style="padding: 0 16px 16px; color: #a1a1aa; line-height: 1.6;">
+                        支持 sin、cos、tan、log、ln、阶乘、幂运算、开方等常用科学计算函数，可满足日常学习和工作中的数学计算需求。同时支持键盘输入，按 Enter 计算，Escape 清空。
+                    </div>
+                </details>
+                <details style="background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <summary style="padding: 16px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        单位换算支持哪些类型？
+                        <span style="color: #7c3aed; transition: transform 0.2s;">&#x25BC;</span>
+                    </summary>
+                    <div style="padding: 0 16px 16px; color: #a1a1aa; line-height: 1.6;">
+                        支持长度、面积、体积、温度、时间、速度、压力、功率、热量、角度、数据大小、密度、力等 16 种单位类型的换算。每种类型都包含多种常用单位，如长度支持米、千米、厘米、英寸、英尺、英里、海里等。
+                    </div>
+                </details>
+                <details style="background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <summary style="padding: 16px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        如何使用子网掩码计算？
+                        <span style="color: #7c3aed; transition: transform 0.2s;">&#x25BC;</span>
+                    </summary>
+                    <div style="padding: 0 16px 16px; color: #a1a1aa; line-height: 1.6;">
+                        输入 IP 地址和子网掩码或 CIDR（如 /24），工具会自动计算网络地址、广播地址、可用主机范围、可用主机数、通配符掩码、IP 二进制等信息，是网络规划和运维的必备工具。
+                    </div>
+                </details>
+                <details style="background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <summary style="padding: 16px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        利率计算器怎么用？
+                        <span style="color: #7c3aed; transition: transform 0.2s;">&#x25BC;</span>
+                    </summary>
+                    <div style="padding: 0 16px 16px; color: #a1a1aa; line-height: 1.6;">
+                        输入本金、利率和期限，选择还款方式（等额本息或等额本金），工具会自动计算月供、总还款额、总利息等信息。等额本金还会显示首月还款、末月还款和每月递减金额。
+                    </div>
+                </details>
+                <details style="background: rgba(0,0,0,0.2); border-radius: 8px; border: 1px solid rgba(255,255,255,0.1);">
+                    <summary style="padding: 16px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                        计算结果精度如何？
+                        <span style="color: #7c3aed; transition: transform 0.2s;">&#x25BC;</span>
+                    </summary>
+                    <div style="padding: 0 16px 16px; color: #a1a1aa; line-height: 1.6;">
+                        使用 JavaScript 浮点运算，精度约 15-17 位有效数字，可满足绝大多数日常计算需求。单位换算结果会自动去除末尾多余的零，保持结果简洁。
+                    </div>
+                </details>
+            </div>
+        </section>
+
+        <!-- 相关工具推荐 -->
+        <section class="related-tools" style="margin-top: 40px; padding: 20px; background: rgba(255,255,255,0.03); border-radius: 12px;">
+            <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">&#x1F517; 相关工具推荐</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <a href="timestamp-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                    <div style="color: #f0f0f0; font-weight: 500;">时间戳转换</div>
+                    <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+                </a>
+                <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                    <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
+                    <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+                </a>
+                <a href="relative-calculator.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">👨‍👩‍👧</div>
+                    <div style="color: #f0f0f0; font-weight: 500;">亲戚关系计算器</div>
+                    <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">计算亲戚称呼</div>
+                </a>
+                <a href="world-clock.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
+                    <div style="color: #f0f0f0; font-weight: 500;">世界时钟</div>
+                    <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">全球时区时间查询</div>
+                </a>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 30px 0; margin-top: 30px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
+            <p>纯前端处理，数据不会上传到服务器</p>
+            <p style="margin-top: 12px;">
+                <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+                <span style="margin: 0 12px;">|</span>
+                <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
+            </p>
+        </footer>
     </main>
 
     <script>
@@ -1725,5 +1898,6 @@
         convertDensity();
         convertForce();
     </script>
+
 </body>
 </html>

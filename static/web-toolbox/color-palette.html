@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "HEX 和 RGB 有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HEX 是十六进制颜色码（如#FF0000），RGB 是红绿蓝数值（如255,0,0），本质相同，只是表示方式不同。HEX 更简洁，常用于网页 CSS；RGB 更直观，便于理解颜色组成。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "什么是互补色？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "互补色是色轮上相对的两个颜色，如红色和青色、蓝色和橙色。搭配使用时对比强烈，视觉冲击力强，常用于需要突出重点的设计。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "什么是 HSL 颜色？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "HSL 表示色相(Hue)、饱和度(Saturation)、亮度(Lightness)。相比 RGB，HSL 更符合人类对颜色的认知，可以更直观地调整颜色的明暗和鲜艳程度。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何保存常用颜色？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "点击颜色旁的收藏按钮，颜色会保存到浏览器本地存储。收藏的颜色会在您下次访问时自动加载，最多可保存 16 个常用颜色。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "CMYK 是什么格式？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "CMYK 是印刷四分色模式，分别代表青(Cyan)、品红(Magenta)、黄(Yellow)、黑(Key/Black)。主要用于印刷品设计，与屏幕显示的 RGB 模式不同。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -541,6 +591,139 @@
             to { transform: translateX(-50%) translateY(0); opacity: 1; }
         }
 
+        /* 功能特点区块 */
+        .features-section {
+            max-width: 1400px;
+            margin: 0 auto 30px;
+            padding: 0;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-title {
+            color: #e6edf3;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 16px 20px;
+            background: none;
+            border: none;
+            color: #e6edf3;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            color: #7c3aed;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer-content {
+            padding: 0 20px 16px;
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* 响应式 */
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
             .main-layout {
@@ -573,6 +756,32 @@
             <h1>🎨 在线调色板</h1>
             <div></div>
         </div>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">多格式转换</h3>
+                    <p class="feature-desc">支持 HEX、RGB、HSL、CMYK 四种颜色格式互转</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎯</div>
+                    <h3 class="feature-title">配色方案</h3>
+                    <p class="feature-desc">自动生成互补色、相似色、三等分色等配色方案</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⭐</div>
+                    <h3 class="feature-title">颜色收藏</h3>
+                    <p class="feature-desc">可保存常用颜色到收藏夹，方便快速使用</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <h3 class="feature-title">一键复制</h3>
+                    <p class="feature-desc">点击即可复制任意格式的颜色代码</p>
+                </div>
+            </div>
+        </section>
 
         <div class="main-layout">
             <!-- 左侧 - 收藏的颜色 -->
@@ -1120,8 +1329,110 @@
             setTimeout(() => toast.remove(), 2000);
         }
 
+        // FAQ 切换
+        function toggleFaq(btn) {
+            const item = btn.closest('.faq-item');
+            const isActive = item.classList.contains('active');
+
+            // 关闭所有其他 FAQ
+            document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+
+            // 切换当前 FAQ
+            if (!isActive) {
+                item.classList.add('active');
+            }
+        }
+
         // 启动
         init();
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section">
+        <h2 class="faq-title">常见问题</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>HEX 和 RGB 有什么区别？</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-content">HEX 是十六进制颜色码（如 #FF0000），RGB 是红绿蓝数值（如 255, 0, 0），本质相同，只是表示方式不同。HEX 更简洁，常用于网页 CSS；RGB 更直观，便于理解颜色组成。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>什么是互补色？</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-content">互补色是色轮上相对的两个颜色，如红色和青色、蓝色和橙色。搭配使用时对比强烈，视觉冲击力强，常用于需要突出重点的设计。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>什么是 HSL 颜色？</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-content">HSL 表示色相(Hue)、饱和度(Saturation)、亮度(Lightness)。相比 RGB，HSL 更符合人类对颜色的认知，可以更直观地调整颜色的明暗和鲜艳程度。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>如何保存常用颜色？</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-content">点击颜色旁的收藏按钮，颜色会保存到浏览器本地存储。收藏的颜色会在您下次访问时自动加载，最多可保存 16 个常用颜色。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span>CMYK 是什么格式？</span>
+                    <span class="faq-icon">+</span>
+                </button>
+                <div class="faq-answer">
+                    <p class="faq-answer-content">CMYK 是印刷四分色模式，分别代表青(Cyan)、品红(Magenta)、黄(Yellow)、黑(Key/Black)。主要用于印刷品设计，与屏幕显示的 RGB 模式不同。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="image-editor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片编辑器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">裁剪、旋转、滤镜</div>
+            </a>
+            <a href="paint-board.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+                <div style="color: #e6edf3; font-weight: 500;">画板</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线绘画工具</div>
+            </a>
+            <a href="ico-maker.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
+                <div style="color: #e6edf3; font-weight: 500;">ICO 图标制作</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">生成网站图标</div>
+            </a>
+            <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

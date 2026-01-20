@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "ICO 格式有什么用？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ICO 是 Windows 图标格式，用于桌面快捷方式、网站 favicon 等。它可以包含多个尺寸的图标，系统会根据需要自动选择合适的尺寸显示。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "推荐使用什么尺寸的图片？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "建议使用 256x256 或更大的正方形图片，工具会自动缩放生成各种所需尺寸。使用高分辨率原图可以保证缩放后的图标质量。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持透明背景吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持，上传 PNG 格式的透明图片即可保留透明度。生成的 ICO 文件会保持原图的透明通道。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "生成的 ICO 包含哪些尺寸？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "包含 16x16、32x32、48x48、64x64、128x128、256x256 等常用尺寸，您可以根据需要自由选择要包含的尺寸。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以用于网站 favicon 吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以，生成的 ICO 文件可直接用作网站图标。将文件命名为 favicon.ico 并放置在网站根目录即可被浏览器自动识别。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -617,6 +667,120 @@
             text-decoration: underline;
         }
 
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(240, 147, 251, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-title {
+            color: #e6edf3;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 18px 24px;
+            color: #fff;
+            font-weight: 500;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.5rem;
+            color: #a1a1aa;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 18px;
+            color: #a1a1aa;
+            line-height: 1.7;
+        }
+
         @media (max-width: 768px) {
             h1 {
                 font-size: 1.8rem;
@@ -651,6 +815,28 @@
             .crop-buttons {
                 justify-content: center;
             }
+
+            .features-section {
+                grid-template-columns: 1fr 1fr;
+                gap: 12px;
+            }
+
+            .feature-card {
+                padding: 16px;
+            }
+
+            .feature-icon {
+                font-size: 2rem;
+            }
+
+            .faq-question {
+                padding: 14px 18px;
+                font-size: 0.95rem;
+            }
+
+            .faq-answer-content {
+                padding: 0 18px 14px;
+            }
         }
     </style>
 </head>
@@ -661,6 +847,30 @@
             <h1>🎨 ICO 图标制作</h1>
             <p class="subtitle">将 PNG、JPG、GIF 图片转换为 ICO 图标文件</p>
         </header>
+
+        <!-- 功能特点区块 -->
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">📐</div>
+                <div class="feature-title">多尺寸支持</div>
+                <div class="feature-desc">一次生成 16x16 到 256x256 多种尺寸的 ICO 图标</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <div class="feature-title">格式转换</div>
+                <div class="feature-desc">支持 PNG、JPG、GIF、WebP 等格式转换为 ICO</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">👁️</div>
+                <div class="feature-title">实时预览</div>
+                <div class="feature-desc">上传后即时预览各尺寸的图标效果</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📦</div>
+                <div class="feature-title">批量打包</div>
+                <div class="feature-desc">多个尺寸打包成一个 ICO 文件</div>
+            </div>
+        </div>
 
         <div class="steps">
             <div class="step active" id="step1">
@@ -1313,6 +1523,115 @@
                 updateSteps(3);
             }
         });
+
+        // FAQ 展开/收起功能
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            const isActive = faqItem.classList.contains('active');
+
+            // 关闭其他展开的项
+            document.querySelectorAll('.faq-item.active').forEach(item => {
+                item.classList.remove('active');
+            });
+
+            // 如果当前项未展开，则展开它
+            if (!isActive) {
+                faqItem.classList.add('active');
+            }
+        }
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section">
+        <h2 class="faq-title"><span>❓</span> 常见问题</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>ICO 格式有什么用？</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        ICO 是 Windows 图标格式，用于桌面快捷方式、网站 favicon 等。它可以包含多个尺寸的图标，系统会根据需要自动选择合适的尺寸显示。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>推荐使用什么尺寸的图片？</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        建议使用 256x256 或更大的正方形图片，工具会自动缩放生成各种所需尺寸。使用高分辨率原图可以保证缩放后的图标质量。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>支持透明背景吗？</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        支持，上传 PNG 格式的透明图片即可保留透明度。生成的 ICO 文件会保持原图的透明通道。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>生成的 ICO 包含哪些尺寸？</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        包含 16x16、32x32、48x48、64x64、128x128、256x256 等常用尺寸，您可以根据需要自由选择要包含的尺寸。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>可以用于网站 favicon 吗？</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        可以，生成的 ICO 文件可直接用作网站图标。将文件命名为 favicon.ico 并放置在网站根目录即可被浏览器自动识别。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="image-compressor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🗜️</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片压缩</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线压缩图片大小</div>
+            </a>
+            <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+            </a>
+            <a href="image-editor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片编辑器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">裁剪、旋转、滤镜</div>
+            </a>
+            <a href="id-photo-tool.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📷</div>
+                <div style="color: #e6edf3; font-weight: 500;">证件照制作</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">证件照换底色</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

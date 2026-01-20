@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Base64 编码是加密吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Base64 是编码方式，不是加密，可以直接解码还原，不提供安全保护。Base64 主要用于将二进制数据转换为文本格式，便于在文本协议中传输。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "MD5 可以解密吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "MD5 是单向哈希函数，不可逆，无法从哈希值还原原始数据。MD5 将任意长度的数据压缩成固定长度的摘要，设计上就是不可逆的。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "AES 加密安全吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "AES 是目前最安全的对称加密算法之一，广泛用于政府和金融机构。AES-256 被美国政府用于加密最高机密文件，至今未被破解。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "SHA-256 和 MD5 哪个更安全？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "SHA-256 更安全，MD5 已发现碰撞漏洞，不建议用于安全场景。SHA-256 输出更长、算法更复杂，目前仍被认为是安全的哈希算法。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "数据会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会，所有加解密操作在浏览器本地完成。本工具采用纯前端技术，敏感数据不会离开您的设备，安全可靠。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <!-- CryptoJS 加密库 -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"></script>
     <!-- JsBarcode 条形码库 -->
@@ -544,6 +594,138 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* 功能特点区块 */
+        .features-section {
+            margin-bottom: 30px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            color: #a1a1aa;
+            font-size: 0.85rem;
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            margin: 40px 0;
+            padding: 20px;
+            background: rgba(0, 0, 0, 0.2);
+            border-radius: 12px;
+        }
+
+        .faq-title {
+            color: #fff;
+            font-size: 1.25rem;
+            margin-bottom: 20px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            width: 100%;
+            padding: 16px 20px;
+            background: none;
+            border: none;
+            color: #e4e4e7;
+            font-size: 0.95rem;
+            font-weight: 500;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-icon {
+            font-size: 1.2rem;
+            transition: transform 0.3s;
+            color: #7c3aed;
+        }
+
+        .faq-item.active .faq-icon {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer-content {
+            padding: 0 20px 16px;
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.7;
+        }
+
+        /* 响应式 - 功能特点和 FAQ */
+        @media (max-width: 900px) {
+            .features-grid {
+                grid-template-columns: repeat(2, 1fr);
+            }
+        }
+
+        @media (max-width: 500px) {
+            .features-grid {
+                grid-template-columns: 1fr;
+            }
+        }
     </style>
 </head>
 <body>
@@ -589,6 +771,32 @@
     <!-- 主内容区 -->
     <main class="main-content">
         <a href="index.html" class="back-home">← 返回工具箱首页</a>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🔄</div>
+                    <h3 class="feature-title">编码转换</h3>
+                    <p class="feature-desc">支持 Base64、URL编码、Unicode、HTML实体编码互转</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">#️⃣</div>
+                    <h3 class="feature-title">哈希计算</h3>
+                    <p class="feature-desc">MD5、SHA-1、SHA-256、SHA-512 等哈希算法</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔐</div>
+                    <h3 class="feature-title">对称加密</h3>
+                    <p class="feature-desc">AES、DES、3DES 加解密，支持多种工作模式</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">安全可靠</h3>
+                    <p class="feature-desc">纯前端处理，敏感数据不会上传服务器</p>
+                </div>
+            </div>
+        </section>
 
         <!-- MD5 加密 -->
         <div class="tool-panel active" id="panel-md5">
@@ -1406,9 +1614,103 @@
                 <img id="base64-image-preview" class="image-preview" style="display: none; margin-top: 15px;">
             </div>
         </div>
+
+        <!-- FAQ 常见问题 -->
+        <section class="faq-section">
+            <h2 class="faq-title">常见问题</h2>
+            <div class="faq-list">
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>Base64 编码是加密吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">Base64 是编码方式，不是加密，可以直接解码还原，不提供安全保护。Base64 主要用于将二进制数据转换为文本格式，便于在文本协议中传输，任何人都可以轻松解码。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>MD5 可以解密吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">MD5 是单向哈希函数，不可逆，无法从哈希值还原原始数据。MD5 将任意长度的数据压缩成固定 128 位的摘要，设计上就是不可逆的，只能通过彩虹表或暴力破解尝试碰撞。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>AES 加密安全吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">AES 是目前最安全的对称加密算法之一，广泛用于政府和金融机构。AES-256 被美国政府用于加密最高机密文件，至今未被破解，是保护敏感数据的首选算法。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>SHA-256 和 MD5 哪个更安全？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">SHA-256 更安全，MD5 已发现碰撞漏洞，不建议用于安全场景。SHA-256 输出 256 位、算法更复杂，目前仍被认为是安全的哈希算法，广泛用于数字签名和区块链。</p>
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <button class="faq-question" onclick="toggleFaq(this)">
+                        <span>数据会上传到服务器吗？</span>
+                        <span class="faq-icon">+</span>
+                    </button>
+                    <div class="faq-answer">
+                        <p class="faq-answer-content">不会，所有加解密操作在浏览器本地完成。本工具采用纯前端技术，使用 JavaScript 加密库（CryptoJS）在您的设备上处理数据，敏感信息不会离开您的浏览器。</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- 相关工具推荐 -->
+        <section class="related-tools" style="margin-top: 40px; padding: 20px; background: rgba(0, 0, 0, 0.2); border-radius: 12px;">
+            <h3 style="color: #fff; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <a href="json-viewer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                    <div style="color: #fff; font-weight: 500;">JSON 查看器</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+                </a>
+                <a href="regex-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                    <div style="color: #fff; font-weight: 500;">正则表达式测试</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+                </a>
+                <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                    <div style="color: #fff; font-weight: 500;">时间戳转换</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+                </a>
+                <a href="websocket-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                    <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
+                    <div style="color: #fff; font-weight: 500;">WebSocket 测试</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+                </a>
+            </div>
+        </section>
+
+        <footer style="text-align: center; padding: 30px 0; margin-top: 30px; border-top: 1px solid #333; color: #888; font-size: 14px;">
+            <p>纯前端处理，数据不会上传到服务器</p>
+            <p style="margin-top: 12px;">
+                <a href="index.html" style="color: #00d9ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+                <span style="margin: 0 12px;">|</span>
+                <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
+            </p>
+        </footer>
     </main>
 
     <script>
+        // ==================== FAQ 切换 ====================
+        function toggleFaq(button) {
+            const faqItem = button.parentElement;
+            faqItem.classList.toggle('active');
+        }
+
         // ==================== 导航切换 ====================
         document.querySelectorAll('.nav-item').forEach(item => {
             item.addEventListener('click', function() {
@@ -2313,5 +2615,6 @@
             } catch(e) {}
         };
     </script>
+
 </body>
 </html>

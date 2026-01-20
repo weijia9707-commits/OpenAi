@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是 WebSocket？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "WebSocket 是一种全双工通信协议，支持服务器主动推送数据到客户端。与传统 HTTP 请求-响应模式不同，WebSocket 建立连接后可以双向实时通信，适用于聊天、实时数据推送、在线游戏等场景。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "ws 和 wss 有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "ws 是普通 WebSocket 协议，wss 是加密的 WebSocket（类似 http 和 https 的关系）。wss 使用 TLS/SSL 加密传输数据，更加安全，生产环境建议使用 wss 协议。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么 WebSocket 连接失败？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "常见原因包括：地址错误、服务器未启动、防火墙阻止、CORS 限制、SSL 证书问题（wss 协议）、端口被占用等。建议检查服务器状态和网络连接。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以测试需要认证的 WebSocket 吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本工具暂不支持需要认证的 WebSocket 连接，仅支持无认证的 WebSocket 连接测试。如需测试带认证的连接，建议使用专业的 WebSocket 客户端工具。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "消息格式有限制吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持发送任意文本消息，JSON 格式会自动格式化显示。工具会自动检测 JSON 格式并进行美化展示，方便调试 API 接口。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -688,6 +738,118 @@
             color: #a78bfa;
             word-break: break-all;
         }
+
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            border-color: rgba(124, 58, 237, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-card .icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            font-size: 1rem;
+            color: #e4e4e7;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            font-size: 0.85rem;
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            margin-top: 30px;
+            background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            border-radius: 12px;
+            padding: 24px;
+        }
+
+        .faq-section h2 {
+            font-size: 1.2rem;
+            color: #e4e4e7;
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+            padding: 16px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            font-size: 0.95rem;
+            font-weight: 600;
+            color: #e4e4e7;
+            margin-bottom: 10px;
+            cursor: pointer;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+            border-radius: 6px;
+            font-size: 0.75rem;
+            font-weight: 700;
+            color: #fff;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            line-height: 1.7;
+            padding-left: 34px;
+        }
+
+        .faq-answer code {
+            background: rgba(124, 58, 237, 0.2);
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-family: 'Monaco', 'Menlo', monospace;
+            font-size: 0.8rem;
+            color: #a78bfa;
+        }
     </style>
 </head>
 <body>
@@ -702,6 +864,30 @@
                 &nbsp;示例：<code>ws://127.0.0.1:8080</code>
             </div>
         </header>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="icon">🔗</div>
+                <h3>连接测试</h3>
+                <p>快速测试 WebSocket 服务器连接状态，支持 ws:// 和 wss:// 两种协议</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">💬</div>
+                <h3>消息收发</h3>
+                <p>支持发送文本和 JSON 格式消息，实时显示服务器响应内容</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">📜</div>
+                <h3>连接历史</h3>
+                <p>自动保存连接记录，方便重复测试相同的 WebSocket 地址</p>
+            </div>
+            <div class="feature-card">
+                <div class="icon">{ }</div>
+                <h3>消息格式化</h3>
+                <p>自动检测并格式化 JSON 消息，让调试数据更加清晰易读</p>
+            </div>
+        </section>
 
         <!-- 连接区域 -->
         <div class="main-layout">
@@ -1130,5 +1316,66 @@
             }
         });
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section" style="max-width: 1000px; margin: 40px auto 0; padding: 24px;">
+        <h2>❓ 常见问题</h2>
+        <div class="faq-item">
+            <div class="faq-question">什么是 WebSocket？</div>
+            <div class="faq-answer">WebSocket 是一种全双工通信协议，支持服务器主动推送数据到客户端。与传统 HTTP 请求-响应模式不同，WebSocket 建立连接后可以双向实时通信，适用于聊天、实时数据推送、在线游戏等场景。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">ws 和 wss 有什么区别？</div>
+            <div class="faq-answer">ws 是普通 WebSocket 协议，wss 是加密的 WebSocket（类似 <code>http</code> 和 <code>https</code> 的关系）。wss 使用 TLS/SSL 加密传输数据，更加安全，生产环境建议使用 wss 协议。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">为什么 WebSocket 连接失败？</div>
+            <div class="faq-answer">常见原因包括：地址错误、服务器未启动、防火墙阻止、CORS 限制、SSL 证书问题（wss 协议）、端口被占用等。建议检查服务器状态和网络连接，确保 WebSocket 服务正常运行。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">可以测试需要认证的 WebSocket 吗？</div>
+            <div class="faq-answer">本工具暂不支持需要认证的 WebSocket 连接，仅支持无认证的 WebSocket 连接测试。如需测试带认证的连接，建议使用专业的 WebSocket 客户端工具如 Postman 或 wscat。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">消息格式有限制吗？</div>
+            <div class="faq-answer">支持发送任意文本消息，JSON 格式会自动格式化显示。工具会自动检测 JSON 格式并进行美化展示，方便调试 API 接口。消息长度没有特别限制，但建议单条消息不超过 64KB。</div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
+                <div style="color: #f0f0f0; font-weight: 500;">JSON 查看器</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+            </a>
+            <a href="ip-lookup.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
+                <div style="color: #f0f0f0; font-weight: 500;">IP 归属地查询</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">查询 IP 地理位置</div>
+            </a>
+            <a href="regex-tester.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                <div style="color: #f0f0f0; font-weight: 500;">正则表达式测试</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

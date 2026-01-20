@@ -36,6 +36,54 @@
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "可以批量重命名多少文件？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "理论上无限制，取决于浏览器性能，建议一次不超过1000个。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持哪些重命名规则？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持添加前缀后缀、插入序号、添加日期、查找替换、大小写转换等多种重命名规则。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "文件会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会，所有处理在本地完成，文件不会离开你的电脑，完全保护隐私。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以撤销重命名吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "下载前可以重新调整规则，下载后需要手动恢复原文件名。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持重命名文件夹吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "仅支持文件重命名，不支持文件夹重命名。"
+                }
+            }
+        ]
+    }
+    </script>
     <!-- ===================== /SEO META ===================== -->
 
     <!-- ===================== TOOL_META ===================== -->
@@ -670,6 +718,30 @@
             <p class="subtitle">支持顺序编号、查找替换、添加前后缀等多种模式</p>
             <span class="privacy-badge">🔒 完全本地处理，不上传服务器</span>
         </header>
+
+        <!-- 功能特点 -->
+        <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 30px;">
+            <div class="feature-card" style="background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">📁</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">批量重命名</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">支持同时处理多个文件，一键批量重命名，提高工作效率</p>
+            </div>
+            <div class="feature-card" style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">⚙️</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">多种规则</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">支持添加前缀后缀、序号、日期、查找替换等多种重命名规则</p>
+            </div>
+            <div class="feature-card" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">👁️</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">实时预览</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">修改规则时实时预览重命名效果，确认无误后再应用</p>
+            </div>
+            <div class="feature-card" style="background: rgba(244, 114, 182, 0.1); border: 1px solid rgba(244, 114, 182, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🔒</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">本地处理</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">文件不上传，仅在浏览器中处理文件名，隐私安全有保障</p>
+            </div>
+        </section>
 
         <!-- 上传区域 -->
         <div class="card">
@@ -1327,5 +1399,88 @@
     })();
     </script>
     <!-- ===================== /LOGIC ===================== -->
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #f0f0f0; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">❓ 常见问题</h2>
+        <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px;">
+            <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #7c3aed;">Q:</span> 可以批量重命名多少文件？
+                </h3>
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
+                    理论上无限制，取决于浏览器性能，建议一次不超过1000个文件，以保证流畅的操作体验。
+                </p>
+            </div>
+            <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #7c3aed;">Q:</span> 支持哪些重命名规则？
+                </h3>
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
+                    支持添加前缀后缀、插入序号、添加日期、查找替换、大小写转换等多种规则，可以满足大部分重命名需求。
+                </p>
+            </div>
+            <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #7c3aed;">Q:</span> 文件会上传到服务器吗？
+                </h3>
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
+                    不会，所有处理在本地完成，文件不会离开你的电脑，完全保护你的隐私安全。
+                </p>
+            </div>
+            <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #7c3aed;">Q:</span> 可以撤销重命名吗？
+                </h3>
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
+                    下载前可以重新调整规则或点击"重置"按钮恢复原名，下载后需要手动恢复文件名。
+                </p>
+            </div>
+            <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
+                    <span style="color: #7c3aed;">Q:</span> 支持重命名文件夹吗？
+                </h3>
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
+                    仅支持文件重命名，不支持文件夹。选择文件夹时会自动读取其中的所有文件进行重命名。
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="image-to-pdf.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📄</div>
+                <div style="color: #f0f0f0; font-weight: 500;">图片合并为PDF</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">多图合并生成PDF</div>
+            </a>
+            <a href="image-compressor.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
+                <div style="color: #f0f0f0; font-weight: 500;">图片压缩</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
+            </a>
+            <a href="image-converter.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
+                <div style="color: #f0f0f0; font-weight: 500;">图片格式转换</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">WebP/PNG/JPG 互转</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
+        <p>纯前端处理，文件不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #6366f1; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #6366f1; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "在线画板支持哪些绘图工具？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持铅笔、毛笔、直线、矩形、圆形、橡皮擦等工具，可满足各种绘图需求。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以调整画笔粗细吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以，支持从 1px 到 50px 的画笔粗细调节，您可以根据需要自由调整。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何保存画作？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "点击导出按钮可将画作保存为 PNG 格式图片，方便下载和分享。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持触摸屏绘图吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持，可在平板电脑或触摸屏上使用手指或触控笔绘图，操作流畅自然。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以打开已有图片编辑吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以导入图片作为背景，在其上进行绘制，方便进行图片标注和二次创作。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -665,6 +715,130 @@
                 font-size: 1rem;
             }
         }
+
+        /* 功能特点区块 */
+        .features-section {
+            max-width: 1200px;
+            margin: 0 auto 20px;
+            padding: 0 15px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: rgba(0, 0, 0, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 16px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(124, 58, 237, 0.15);
+            border-color: rgba(124, 58, 237, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 1.5rem;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(124, 58, 237, 0.2);
+            border-radius: 10px;
+            flex-shrink: 0;
+        }
+
+        .feature-content h4 {
+            color: #e4e4e7;
+            font-size: 0.95rem;
+            margin-bottom: 4px;
+        }
+
+        .feature-content p {
+            color: #a1a1aa;
+            font-size: 0.8rem;
+            line-height: 1.4;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-section h3 {
+            color: #e6edf3;
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #30363d;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: #161b22;
+            border: 1px solid #30363d;
+            border-radius: 8px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #e6edf3;
+            font-weight: 500;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(124, 58, 237, 0.1);
+        }
+
+        .faq-question::after {
+            content: '+';
+            font-size: 1.2rem;
+            color: #7c3aed;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-question::after {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 16px;
+            color: #8b949e;
+            line-height: 1.6;
+        }
     </style>
 </head>
 <body>
@@ -736,6 +910,40 @@
                 <button class="tool-btn" data-tooltip="清空画布" onclick="clearCanvas()">🗑️</button>
             </div>
         </div>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">🖌️</div>
+                    <div class="feature-content">
+                        <h4>多种画笔</h4>
+                        <p>支持铅笔、毛笔、橡皮擦等多种绘图工具</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🎨</div>
+                    <div class="feature-content">
+                        <h4>丰富颜色</h4>
+                        <p>自由选择画笔颜色，支持透明度调节</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">↩️</div>
+                    <div class="feature-content">
+                        <h4>撤销重做</h4>
+                        <p>支持撤销和重做操作，方便修改</p>
+                    </div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">💾</div>
+                    <div class="feature-content">
+                        <h4>导出保存</h4>
+                        <p>可将画作导出为 PNG 图片保存</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <!-- 画布区域 -->
         <div class="canvas-container">
@@ -1775,6 +1983,93 @@
 
         // 初始化
         init();
+
+        // FAQ 交互逻辑
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                const isActive = item.classList.contains('active');
+                // 关闭其他展开的项
+                document.querySelectorAll('.faq-item').forEach(i => i.classList.remove('active'));
+                // 切换当前项
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section">
+        <h3>常见问题</h3>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">支持哪些绘图工具？</div>
+                <div class="faq-answer">
+                    <p>支持铅笔、毛笔、直线、矩形、圆形、橡皮擦等工具，可以满足各种绘图需求。每种工具都可以调整粗细和透明度。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">可以调整画笔粗细吗？</div>
+                <div class="faq-answer">
+                    <p>可以，支持从 1px 到 50px 的画笔粗细调节。您可以通过滑块调整，也可以使用鼠标滚轮快速调节粗细。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">如何保存画作？</div>
+                <div class="faq-answer">
+                    <p>点击底部的"保存 PNG"或"保存 JPG"按钮，即可将画作导出为相应格式的图片文件，自动下载到您的设备。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">支持触摸屏绘图吗？</div>
+                <div class="faq-answer">
+                    <p>支持，可在平板电脑或触摸屏上使用手指或触控笔绘图，操作流畅自然，适合移动设备使用。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">可以打开已有图片编辑吗？</div>
+                <div class="faq-answer">
+                    <p>可以导入图片作为背景，在其上进行绘制，方便进行图片标注和二次创作。使用"新建画布"功能可以设置合适的画布尺寸。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="color-palette.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+                <div style="color: #e6edf3; font-weight: 500;">调色板</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">颜色选择与转换</div>
+            </a>
+            <a href="image-editor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片编辑器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">裁剪、旋转、滤镜</div>
+            </a>
+            <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
+                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+            </a>
+            <a href="ico-maker.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
+                <div style="color: #e6edf3; font-weight: 500;">ICO 图标制作</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">生成网站图标</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

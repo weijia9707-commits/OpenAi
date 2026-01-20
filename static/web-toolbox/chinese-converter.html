@@ -40,6 +40,56 @@
     }
     </script>
 
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "简体和繁体有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "简体字是1950年代中国大陆推行的简化汉字，繁体字是传统汉字写法。简体字笔画较少，书写更便捷；繁体字保留了汉字的历史演变痕迹，在港澳台地区及海外华人社区广泛使用。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么要区分港澳繁体和台湾正体？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "虽然都是繁体，但部分词汇用语存在差异，如"软件"在港澳称"軟件"，在台湾称"軟體"；"出租车"在香港称"的士"，在台湾称"計程車"。本工具能智能识别并转换这些地区习惯用语。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "转换后会保留格式吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "会保留原文的换行和空格格式。本工具仅转换中文字符，不会改变文本的排版结构，确保转换后的内容保持原有的格式。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "有字数限制吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "理论上无限制，但过长文本可能影响浏览器性能。建议单次转换控制在10万字以内，如有更大量文本需求，可分批处理。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "使用了什么转换引擎？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "使用开源的 OpenCC（Open Chinese Convert）转换库的核心算法，这是目前最准确的中文简繁转换引擎之一，能够智能处理一简对多繁、地区词汇差异等复杂情况。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -380,6 +430,105 @@
             color: #22c55e;
         }
 
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(124, 58, 237, 0.1);
+            border-color: rgba(124, 58, 237, 0.3);
+            transform: translateY(-4px);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .feature-title {
+            color: #fff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .feature-desc {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin-bottom: 30px;
+        }
+
+        .faq-section h2 {
+            font-size: 1.3rem;
+            color: #fff;
+            margin-bottom: 25px;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            color: #e4e4e7;
+            font-size: 1rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: "Q";
+            background: linear-gradient(135deg, #7c3aed, #6366f1);
+            color: #fff;
+            font-size: 0.75rem;
+            font-weight: 700;
+            padding: 4px 8px;
+            border-radius: 6px;
+            flex-shrink: 0;
+        }
+
+        .faq-answer {
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 36px;
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
             .text-areas {
@@ -422,6 +571,30 @@
             <h1>中文简繁体转换</h1>
             <p class="subtitle">支持简繁互转，智能识别地区习惯用语</p>
         </header>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">🌏</div>
+                <h3 class="feature-title">多地区支持</h3>
+                <p class="feature-desc">支持大陆简体、港澳繁体、台湾正体、马新简体互转</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🧠</div>
+                <h3 class="feature-title">智能转换</h3>
+                <p class="feature-desc">使用 OpenCC 引擎，识别地区习惯用语差异</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📄</div>
+                <h3 class="feature-title">批量处理</h3>
+                <p class="feature-desc">支持大段文字一键转换，无字数限制</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📴</div>
+                <h3 class="feature-title">离线可用</h3>
+                <p class="feature-desc">核心转换库离线运行，无需网络连接</p>
+            </div>
+        </section>
 
         <div class="main-panel">
             <!-- 转换模式 -->
@@ -551,6 +724,31 @@
                 </div>
             </div>
         </div>
+
+        <!-- FAQ 常见问题 -->
+        <section class="faq-section">
+            <h2>常见问题解答</h2>
+            <div class="faq-item">
+                <div class="faq-question">简体和繁体有什么区别？</div>
+                <div class="faq-answer">简体字是1950年代中国大陆推行的简化汉字，繁体字是传统汉字写法。简体字笔画较少，书写更便捷；繁体字保留了汉字的历史演变痕迹，在港澳台地区及海外华人社区广泛使用。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">为什么要区分港澳繁体和台湾正体？</div>
+                <div class="faq-answer">虽然都是繁体，但部分词汇用语存在差异，如"软件"在港澳称"軟件"，在台湾称"軟體"；"出租车"在香港称"的士"，在台湾称"計程車"。本工具能智能识别并转换这些地区习惯用语。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">转换后会保留格式吗？</div>
+                <div class="faq-answer">会保留原文的换行和空格格式。本工具仅转换中文字符，不会改变文本的排版结构，确保转换后的内容保持原有的格式。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">有字数限制吗？</div>
+                <div class="faq-answer">理论上无限制，但过长文本可能影响浏览器性能。建议单次转换控制在10万字以内，如有更大量文本需求，可分批处理。</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">使用了什么转换引擎？</div>
+                <div class="faq-answer">使用开源的 OpenCC（Open Chinese Convert）转换库的核心算法，这是目前最准确的中文简繁转换引擎之一，能够智能处理一简对多繁、地区词汇差异等复杂情况。</div>
+            </div>
+        </section>
     </div>
 
     <script>
@@ -804,5 +1002,41 @@
             URL.revokeObjectURL(url);
         });
     </script>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="regex-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                <div style="color: #e6edf3; font-weight: 500;">正则表达式测试</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线测试正则表达式</div>
+            </a>
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #e6edf3; font-weight: 500;">加密解密工具</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA等</div>
+            </a>
+            <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                <div style="color: #e6edf3; font-weight: 500;">时间戳转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">时间戳与日期互转</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "如何让文字全屏显示？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "点击开始后，手机会自动进入全屏模式，建议横屏使用。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以调整滚动速度吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以，在设置中调节速度，从慢速到快速多档可选。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持显示表情符号吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持，可以输入emoji表情，会正常显示和滚动。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何退出全屏？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "点击屏幕任意位置或按手机返回键即可退出。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持竖屏使用吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持，但横屏效果更佳，文字更大更醒目。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -434,6 +484,30 @@
             <p class="subtitle">演唱会应援、活动表白、聚会互动必备神器</p>
         </header>
 
+        <!-- 功能特点区块 -->
+        <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 30px;">
+            <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">📺</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">全屏滚动</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">文字全屏滚动显示，适合演唱会、体育赛事等场合</p>
+            </div>
+            <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🎨</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">自定义样式</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">可调整文字大小、颜色、滚动速度、背景色</p>
+            </div>
+            <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">📱</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">手机适配</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">专为手机横屏设计，一键全屏显示</p>
+            </div>
+            <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">📴</div>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">离线可用</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">无需网络，随时随地使用</p>
+            </div>
+        </section>
+
         <div class="settings-panel">
             <!-- 弹幕内容 -->
             <div class="setting-group">
@@ -719,5 +793,93 @@
         // 页面加载时恢复设置
         loadSettings();
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #e6edf3; font-size: 1.4rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <div class="faq-list" style="display: flex; flex-direction: column; gap: 12px;">
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    如何让文字全屏显示？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    点击开始后，手机会自动进入全屏模式，建议横屏使用。
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    可以调整滚动速度吗？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    可以，在设置中调节速度，从慢速到快速多档可选。
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    支持显示表情符号吗？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    支持，可以输入emoji表情，会正常显示和滚动。
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    如何退出全屏？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    点击屏幕任意位置或按手机返回键即可退出。
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    支持竖屏使用吗？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    支持，但横屏效果更佳，文字更大更醒目。
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="color-palette.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+                <div style="color: #e6edf3; font-weight: 500;">调色板</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">颜色选择与转换</div>
+            </a>
+            <a href="metronome.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🥁</div>
+                <div style="color: #e6edf3; font-weight: 500;">节拍器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线节拍器工具</div>
+            </a>
+            <a href="world-clock.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
+                <div style="color: #e6edf3; font-weight: 500;">世界时钟</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">全球时区时间</div>
+            </a>
+            <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
+                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

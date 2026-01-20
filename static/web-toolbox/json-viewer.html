@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是 JSON 格式？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "JSON 是 JavaScript Object Notation 的缩写，是一种轻量级的数据交换格式。它基于 JavaScript 语言的一个子集，易于人阅读和编写，同时也易于机器解析和生成。JSON 格式常用于 Web 应用程序中前后端数据传输。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么我的 JSON 解析失败？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "JSON 解析失败的常见原因包括：缺少引号（所有键名和字符串值都需要双引号）、多余的逗号（最后一个元素后不能有逗号）、使用了单引号（JSON 标准只支持双引号）、缺少括号或括号不匹配、包含注释（标准 JSON 不支持注释）等。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持多大的 JSON 数据？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "JSON 数据大小取决于浏览器内存限制，建议不超过 10MB。过大的 JSON 数据可能导致浏览器卡顿或崩溃。对于超大数据，建议使用专业的桌面 JSON 编辑器或命令行工具处理。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以编辑 JSON 吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以。您可以直接在输入框中编辑 JSON 数据，修改后点击格式化按钮即可验证语法是否正确。工具会自动检测错误并提示具体位置，方便您快速定位和修复问题。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "JSON 数据会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会。所有 JSON 解析和格式化操作都在您的本地浏览器中完成，数据不会上传到任何服务器。您可以放心处理敏感数据，完全保护您的隐私安全。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -625,9 +675,45 @@
 <body>
     <div class="container">
         <header>
+            <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #8b949e; text-decoration: none; font-size: 14px; transition: color 0.2s;">← 返回工具箱</a>
             <h1>{ } JSON 查看器</h1>
             <p>粘贴 JSON 数据，即刻获得美观、可交互的树形视图</p>
         </header>
+
+        <!-- 功能特点 -->
+        <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.1)); border: 1px solid #30363d; border-radius: 12px;">
+            <h2 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; text-align: center;">功能特点</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 28px; flex-shrink: 0;">🎨</span>
+                    <div>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">格式化显示</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">自动格式化 JSON，支持语法高亮显示，让数据结构一目了然</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 28px; flex-shrink: 0;">🌳</span>
+                    <div>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">树形视图</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">可折叠的树形结构，清晰展示数据层级，支持快速导航</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 28px; flex-shrink: 0;">⚠️</span>
+                    <div>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">错误检测</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">自动检测 JSON 语法错误并提示具体位置，快速定位问题</p>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 28px; flex-shrink: 0;">📋</span>
+                    <div>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">一键复制</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">格式化后的 JSON 一键复制到剪贴板，方便快速使用</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
         <div class="main-layout">
             <!-- 输入面板 -->
@@ -1300,5 +1386,95 @@
         document.addEventListener('dragover', (e) => e.preventDefault());
         document.addEventListener('drop', (e) => e.preventDefault());
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section" style="max-width: 1600px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
+                    <span style="color: #58a6ff;">Q:</span> 什么是 JSON 格式？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
+                    <p>JSON 是 JavaScript Object Notation 的缩写，是一种轻量级的数据交换格式。它基于 JavaScript 语言的一个子集，易于人阅读和编写，同时也易于机器解析和生成。JSON 格式常用于 Web 应用程序中前后端数据传输，是现代 API 最常用的数据格式之一。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
+                    <span style="color: #58a6ff;">Q:</span> 为什么我的 JSON 解析失败？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
+                    <p>JSON 解析失败的常见原因包括：</p>
+                    <ul style="margin: 10px 0 0 20px;">
+                        <li>缺少引号：所有键名和字符串值都需要使用双引号</li>
+                        <li>多余的逗号：最后一个元素后不能有逗号</li>
+                        <li>使用了单引号：JSON 标准只支持双引号</li>
+                        <li>缺少括号或括号不匹配</li>
+                        <li>包含注释：标准 JSON 不支持注释（本工具已支持自动移除）</li>
+                    </ul>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
+                    <span style="color: #58a6ff;">Q:</span> 支持多大的 JSON 数据？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
+                    <p>JSON 数据大小取决于浏览器内存限制，建议不超过 10MB。过大的 JSON 数据可能导致浏览器卡顿或崩溃。对于超大数据，建议使用专业的桌面 JSON 编辑器或命令行工具（如 jq）处理。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
+                    <span style="color: #58a6ff;">Q:</span> 可以编辑 JSON 吗？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
+                    <p>可以。您可以直接在输入框中编辑 JSON 数据，修改后点击「格式化」按钮即可验证语法是否正确。工具会自动检测错误并提示具体位置，方便您快速定位和修复问题。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
+                    <span style="color: #58a6ff;">Q:</span> JSON 数据会上传到服务器吗？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
+                    <p>不会。所有 JSON 解析和格式化操作都在您的本地浏览器中完成，数据不会上传到任何服务器。您可以放心处理敏感数据，完全保护您的隐私安全。</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1600px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="sqlite-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🗄️</div>
+                <div style="color: #e6edf3; font-weight: 500;">SQLite 查看器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线浏览 SQLite 数据库</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #e6edf3; font-weight: 500;">加解密工具箱</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等编码加密</div>
+            </a>
+            <a href="regex-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                <div style="color: #e6edf3; font-weight: 500;">正则表达式测试</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+            </a>
+            <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                <div style="color: #e6edf3; font-weight: 500;">时间戳转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

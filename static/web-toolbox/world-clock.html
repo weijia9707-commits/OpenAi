@@ -41,6 +41,54 @@
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "世界时钟支持多少个城市？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持全球 20+ 个主要城市和时区，涵盖亚洲、欧洲、美洲、大洋洲等主要地区的重要城市。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "时间准确吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "时间基于你设备的系统时间，确保设备时间正确即可获得准确的世界时间显示。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "什么是 UTC 时间？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "UTC（协调世界时）是国际标准时间，是全球时区计算的基准。北京时间是 UTC+8，即比 UTC 快 8 小时。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么有些城市时间和预期不同？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可能是夏令时影响，部分国家会在特定季节调整时间，导致实际时差与标准时差有所不同。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以添加自定义城市吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "暂不支持自定义添加城市，目前显示预设的全球主要城市时区，已覆盖大部分常用地区。"
+                }
+            }
+        ]
+    }
+    </script>
 
     <style>
         * {
@@ -376,6 +424,43 @@
             <div></div>
         </div>
 
+        <!-- 功能特点 -->
+        <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;">
+            <h2 style="font-size: 1.1rem; color: #e4e4e7; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
+                <span style="color: #7c3aed;">✦</span> 功能特点
+            </h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 1.5rem;">🌐</span>
+                    <div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">多时区显示</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;">同时显示全球主要城市的当前时间</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 1.5rem;">⚡</span>
+                    <div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">实时更新</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;">时间秒级实时更新，精准可靠</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 1.5rem;">🌓</span>
+                    <div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">日夜指示</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;">显示各城市当前是白天还是夜晚</div>
+                    </div>
+                </div>
+                <div style="display: flex; align-items: flex-start; gap: 12px;">
+                    <span style="font-size: 1.5rem;">🔢</span>
+                    <div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">时差计算</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;">直观展示各时区与本地的时差</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
         <!-- 当前时区 -->
         <div class="current-info">
             <div class="label">您当前所在时区</div>
@@ -613,5 +698,95 @@
         // 启动
         init();
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
+            <span style="color: #7c3aed;">❓</span> 常见问题
+        </h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    世界时钟支持多少个城市？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    支持全球 20+ 个主要城市和时区，涵盖亚洲、欧洲、美洲、大洋洲等主要地区的重要城市，包括北京、东京、纽约、伦敦、巴黎、悉尼等。
+                </div>
+            </details>
+            <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    时间准确吗？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    时间基于你设备的系统时间，确保设备时间正确即可。建议开启设备的自动时间同步功能，以获得最准确的时间显示。
+                </div>
+            </details>
+            <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    什么是 UTC 时间？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    UTC（协调世界时）是国际标准时间，是全球时区计算的基准。北京时间是 UTC+8，即比 UTC 快 8 小时；纽约时间是 UTC-5（冬令时）或 UTC-4（夏令时）。
+                </div>
+            </details>
+            <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    为什么有些城市时间和预期不同？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    可能是夏令时影响，部分国家（如美国、欧洲大部分国家）会在特定季节调整时间，通常在春季将时钟拨快一小时，在秋季再拨回。这会导致实际时差与标准时差有所不同。
+                </div>
+            </details>
+            <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    可以添加自定义城市吗？
+                    <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
+                </summary>
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
+                    暂不支持自定义添加城市，目前显示预设的全球主要城市时区，已覆盖大部分常用地区。如有特定需求，可以使用搜索功能快速定位到相近时区的城市。
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                <div style="color: #e6edf3; font-weight: 500;">时间戳转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">时间戳与日期互转</div>
+            </a>
+            <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
+                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+            </a>
+            <a href="metronome.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🥁</div>
+                <div style="color: #e6edf3; font-weight: 500;">节拍器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线节拍器工具</div>
+            </a>
+            <a href="handheld-danmaku.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+                <div style="color: #e6edf3; font-weight: 500;">手持弹幕</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">LED 滚动字幕</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

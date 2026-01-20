@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "如何使用亲戚关系计算器？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "从"我"开始，依次选择亲属关系（如父亲的哥哥的儿子），系统自动计算称谓。点击下方的关系按钮逐步构建亲戚关系链，最后点击"计算"按钮即可得到正确的称呼。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持几代以内的亲戚？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持直系和旁系亲属，可计算多代复杂关系。包括父系、母系、配偶家族等各种亲属关系，涵盖曾祖辈到孙辈的多代关系计算。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么同一关系有多种称呼？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "中国各地方言不同，同一关系可能有不同称谓。例如外婆在北方叫"姥姥"，在南方叫"外婆"或"阿婆"。本工具收录了各地常用的称呼方式供参考。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "姻亲关系怎么算？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "配偶方的亲属按姻亲计算，如岳父、公公等。选择"丈夫"或"妻子"后再选择对应的亲属关系即可。例如：妻子的父亲=岳父，丈夫的母亲=婆婆。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "堂和表有什么区别？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "堂亲是父系同姓亲属（父亲兄弟的子女），表亲是母系或父系异姓亲属（父亲姐妹或母亲兄弟姐妹的子女）。堂兄弟姐妹一般同姓，表兄弟姐妹一般不同姓。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -369,6 +419,108 @@
             margin-bottom: 0;
         }
 
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 30px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.08);
+            transform: translateY(-4px);
+            box-shadow: 0 12px 40px rgba(0, 0, 0, 0.3);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 12px;
+        }
+
+        .feature-card h3 {
+            color: #fff;
+            font-size: 1.1rem;
+            margin-bottom: 8px;
+        }
+
+        .feature-card p {
+            color: #a1a1aa;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 30px;
+            margin: 30px auto;
+            max-width: 900px;
+        }
+
+        .faq-section h2 {
+            color: #fff;
+            font-size: 1.3rem;
+            margin-bottom: 24px;
+            text-align: center;
+        }
+
+        .faq-item {
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding: 20px 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+            padding-bottom: 0;
+        }
+
+        .faq-item:first-of-type {
+            padding-top: 0;
+        }
+
+        .faq-question {
+            color: #f472b6;
+            font-size: 1.05rem;
+            font-weight: 600;
+            margin-bottom: 12px;
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+        }
+
+        .faq-question::before {
+            content: 'Q';
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            min-width: 24px;
+            height: 24px;
+            background: linear-gradient(135deg, #f472b6, #ec4899);
+            color: #fff;
+            border-radius: 6px;
+            font-size: 0.8rem;
+            font-weight: 700;
+        }
+
+        .faq-answer {
+            color: #d4d4d8;
+            font-size: 0.95rem;
+            line-height: 1.8;
+            padding-left: 34px;
+        }
+
         /* 响应式 */
         @media (max-width: 600px) {
             .container {
@@ -417,6 +569,30 @@
             <h1>亲戚关系计算器</h1>
             <p class="subtitle">快速查询中国家庭亲戚称呼，再也不怕叫错人</p>
         </header>
+
+        <!-- 功能特点 -->
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">🔗</div>
+                <h3>关系链计算</h3>
+                <p>通过选择亲属关系链，计算出最终称谓</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔄</div>
+                <h3>双向查询</h3>
+                <p>支持正向"我叫他什么"和反向"他叫我什么"</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🗣️</div>
+                <h3>方言支持</h3>
+                <p>包含各地方言称谓，如广东话、闽南语等</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🎊</div>
+                <h3>节日必备</h3>
+                <p>过年走亲戚、家庭聚会时的称呼神器</p>
+            </div>
+        </div>
 
         <div class="calc-panel">
             <!-- 计算类型 -->
@@ -770,5 +946,66 @@
             }
         });
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section">
+        <h2>常见问题解答</h2>
+        <div class="faq-item">
+            <div class="faq-question">如何使用亲戚关系计算器？</div>
+            <div class="faq-answer">从"我"开始，依次选择亲属关系（如父亲的哥哥的儿子），系统自动计算称谓。点击下方的关系按钮逐步构建亲戚关系链，最后点击"计算"按钮即可得到正确的称呼。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">支持几代以内的亲戚？</div>
+            <div class="faq-answer">支持直系和旁系亲属，可计算多代复杂关系。包括父系、母系、配偶家族等各种亲属关系，涵盖曾祖辈到孙辈的多代关系计算。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">为什么同一关系有多种称呼？</div>
+            <div class="faq-answer">中国各地方言不同，同一关系可能有不同称谓。例如外婆在北方叫"姥姥"，在南方叫"外婆"或"阿婆"。本工具收录了各地常用的称呼方式供参考。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">姻亲关系怎么算？</div>
+            <div class="faq-answer">配偶方的亲属按姻亲计算，如岳父、公公等。选择"丈夫"或"妻子"后再选择对应的亲属关系即可。例如：妻子的父亲=岳父，丈夫的母亲=婆婆。</div>
+        </div>
+        <div class="faq-item">
+            <div class="faq-question">堂和表有什么区别？</div>
+            <div class="faq-answer">堂亲是父系同姓亲属（父亲兄弟的子女），表亲是母系或父系异姓亲属（父亲姐妹或母亲兄弟姐妹的子女）。堂兄弟姐妹一般同姓，表兄弟姐妹一般不同姓。</div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
+                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+            </a>
+            <a href="world-clock.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
+                <div style="color: #e6edf3; font-weight: 500;">世界时钟</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">全球时区时间</div>
+            </a>
+            <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                <div style="color: #e6edf3; font-weight: 500;">时间戳转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">时间戳与日期互转</div>
+            </a>
+            <a href="chinese-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔤</div>
+                <div style="color: #e6edf3; font-weight: 500;">简繁转换</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">简体繁体中文转换</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

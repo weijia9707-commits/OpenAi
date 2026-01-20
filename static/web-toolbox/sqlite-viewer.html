@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "SQLite 查看器支持多大的数据库文件？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持的文件大小取决于浏览器内存，建议不超过 100MB。对于较大的数据库文件，建议使用桌面端 SQLite 管理工具。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以修改数据库吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持执行 INSERT、UPDATE、DELETE 等 SQL 语句，但所有修改仅在浏览器内存中进行，不会影响原始文件。如需保存修改，请导出为新文件。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何保存修改后的数据库？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以将查询结果导出为 CSV、JSON 或 SQL 格式。目前暂不支持直接导出为 SQLite 数据库文件，建议使用导出的 SQL 语句在其他工具中重建数据库。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "数据库文件会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会。本工具使用 sql.js 库，所有数据处理都在本地浏览器中完成，数据库文件不会上传到任何服务器，确保您的数据安全和隐私。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持哪些 SQLite 版本？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "支持 SQLite 3.x 版本的数据库文件，包括 .db、.sqlite、.sqlite3、.db3 等常见扩展名格式。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <script src="https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/sql-wasm.js"></script>
     <style>
         * {
@@ -623,9 +673,34 @@
 <body>
     <div class="container">
         <header>
+            <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #888; text-decoration: none; font-size: 14px; transition: color 0.2s;">← 返回工具箱</a>
             <h1>🗄️ SQLite 数据库查看器</h1>
             <p>在浏览器中直接查看和查询 SQLite 数据库文件</p>
         </header>
+
+        <!-- 功能特点区块 -->
+        <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px;">
+            <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 28px; margin-bottom: 12px;">🌐</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">在线查看</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">无需安装软件，浏览器直接打开 SQLite 数据库，支持 .db/.sqlite/.sqlite3 等格式</p>
+            </div>
+            <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 28px; margin-bottom: 12px;">💻</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">SQL 查询</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">支持执行 SQL 语句，查询和分析数据，内置查询历史记录功能</p>
+            </div>
+            <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 28px; margin-bottom: 12px;">📋</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">表结构展示</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">清晰显示表结构、字段类型、主键和索引信息，一目了然</p>
+            </div>
+            <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
+                <div style="font-size: 28px; margin-bottom: 12px;">📥</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">数据导出</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">支持将查询结果导出为 CSV、JSON 或 SQL 格式</p>
+            </div>
+        </section>
 
         <div class="upload-area" id="uploadArea">
             <input type="file" id="fileInput" accept=".db,.sqlite,.sqlite3,.db3" style="display: none;">
@@ -1290,5 +1365,88 @@
             }
         });
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section" style="max-width: 1400px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #eee; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #333;">❓ 常见问题</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                    <span style="transition: transform 0.2s;">▶</span> SQLite 查看器支持多大的数据库文件？
+                </summary>
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                    支持的文件大小取决于浏览器内存，建议不超过 100MB。对于较大的数据库文件，建议使用桌面端 SQLite 管理工具如 DB Browser for SQLite 或 DBeaver。
+                </div>
+            </details>
+            <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                    <span style="transition: transform 0.2s;">▶</span> 可以修改数据库吗？
+                </summary>
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                    支持执行 INSERT、UPDATE、DELETE 等 SQL 语句，但所有修改仅在浏览器内存中进行，不会影响您的原始文件。如需保存修改，请将结果导出为新文件。
+                </div>
+            </details>
+            <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                    <span style="transition: transform 0.2s;">▶</span> 如何保存修改后的数据库？
+                </summary>
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                    可以将查询结果导出为 CSV、JSON 或 SQL 格式。如需完整保存数据库，建议使用导出的 SQL 语句在其他 SQLite 工具中重建数据库。
+                </div>
+            </details>
+            <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                    <span style="transition: transform 0.2s;">▶</span> 数据库文件会上传到服务器吗？
+                </summary>
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                    <strong style="color: #00ff88;">不会！</strong>本工具使用 sql.js 库，所有数据处理都在您的本地浏览器中完成，数据库文件不会上传到任何服务器，确保您的数据安全和隐私。
+                </div>
+            </details>
+            <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                    <span style="transition: transform 0.2s;">▶</span> 支持哪些 SQLite 版本？
+                </summary>
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                    支持 SQLite 3.x 版本的数据库文件，包括 .db、.sqlite、.sqlite3、.db3 等常见扩展名格式。
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1400px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #eee; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
+                <div style="color: #eee; font-weight: 500;">JSON 查看器</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #eee; font-weight: 500;">加解密工具箱</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等编码加密</div>
+            </a>
+            <a href="regex-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                <div style="color: #eee; font-weight: 500;">正则表达式测试</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+            </a>
+            <a href="file-renamer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📝</div>
+                <div style="color: #eee; font-weight: 500;">文件批量重命名</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">批量修改文件名</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #888; font-size: 14px;">
+        <p>纯前端处理，数据库文件不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #00d9ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

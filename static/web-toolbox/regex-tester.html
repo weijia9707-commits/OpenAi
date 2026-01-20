@@ -46,6 +46,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是正则表达式？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "正则表达式是一种文本模式匹配语法，用于搜索、验证和替换文本。它由普通字符和特殊字符（元字符）组成，可以描述复杂的文本模式，广泛应用于数据验证、文本搜索和字符串处理等场景。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "g、i、m 标志位是什么意思？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "g（global）表示全局匹配，查找所有匹配项而非在第一个匹配后停止；i（ignoreCase）表示忽略大小写匹配；m（multiline）表示多行模式，使 ^ 和 $ 可以匹配每行的开始和结束位置。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何匹配中文字符？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可使用 [\\u4e00-\\u9fa5] 匹配常用汉字。这个范围包含了 CJK 统一表意文字基本区的所有汉字，涵盖了日常使用的绝大多数中文字符。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么匹配结果和预期不同？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "常见原因包括：1. 特殊字符未转义，如 . * + 等需要加反斜杠；2. 贪婪匹配导致匹配过多，可使用 ? 改为非贪婪模式；3. 标志位设置不当，如未开启全局匹配只返回第一个结果；4. 边界条件未考虑，如 ^ $ 的使用。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持哪种正则语法？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本工具使用 JavaScript 的正则表达式语法（ECMAScript 规范）。支持常见的元字符、字符类、量词、分组、断言等特性，并支持 g、i、m、s、u 等标志位。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <style>
         * {
@@ -572,6 +622,125 @@
         ::-webkit-scrollbar-thumb:hover {
             background: rgba(255, 255, 255, 0.3);
         }
+
+        /* 功能特点区块 */
+        .features-section {
+            margin-bottom: 25px;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 16px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.06);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            padding: 20px;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            background: rgba(255, 255, 255, 0.1);
+            border-color: rgba(0, 212, 255, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .feature-icon {
+            font-size: 28px;
+            margin-bottom: 12px;
+        }
+
+        .feature-title {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 0.85rem;
+            color: rgba(255, 255, 255, 0.7);
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 1200px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-title {
+            color: #f0f0f0;
+            font-size: 18px;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #333;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+        }
+
+        .faq-question {
+            padding: 16px 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.3s ease;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-question h3 {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: #f0f0f0;
+            margin: 0;
+        }
+
+        .faq-toggle {
+            color: #00d4ff;
+            font-size: 1.2rem;
+            transition: transform 0.3s ease;
+        }
+
+        .faq-item.open .faq-toggle {
+            transform: rotate(180deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease;
+        }
+
+        .faq-item.open .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer p {
+            padding: 0 20px 16px;
+            font-size: 0.9rem;
+            color: rgba(255, 255, 255, 0.75);
+            line-height: 1.7;
+            margin: 0;
+        }
     </style>
 </head>
 <body>
@@ -584,6 +753,32 @@
                 <span>返回工具箱</span>
             </a>
         </nav>
+
+        <!-- 功能特点 -->
+        <section class="features-section">
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">⚡</div>
+                    <div class="feature-title">实时匹配</div>
+                    <div class="feature-desc">输入即时高亮显示匹配结果，无需手动点击测试按钮，所见即所得</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🚩</div>
+                    <div class="feature-title">标志位支持</div>
+                    <div class="feature-desc">支持 g、i、m、s、u 等常用标志位，可视化切换，灵活组合使用</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <div class="feature-title">匹配详情</div>
+                    <div class="feature-desc">显示每个匹配项的位置索引、捕获分组等详细信息，便于调试分析</div>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">📋</div>
+                    <div class="feature-title">常用模板</div>
+                    <div class="feature-desc">内置手机号、邮箱、网址等常用正则表达式模板，一键快速使用</div>
+                </div>
+            </div>
+        </section>
 
         <!-- 主区域 -->
         <div class="main-grid">
@@ -1223,6 +1418,102 @@ IP: 192.168.1.1
 Date: 2024-12-27`;
         regexInput.value = '\\d+';
         runTest();
+
+        // FAQ 折叠/展开
+        document.querySelectorAll('.faq-question').forEach(question => {
+            question.addEventListener('click', () => {
+                const item = question.parentElement;
+                item.classList.toggle('open');
+            });
+        });
     </script>
+
+    <!-- FAQ 常见问题 -->
+    <section class="faq-section">
+        <h2 class="faq-title">❓ 常见问题</h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>什么是正则表达式？</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>正则表达式是一种文本模式匹配语法，用于搜索、验证和替换文本。它由普通字符和特殊字符（元字符）组成，可以描述复杂的文本模式，广泛应用于数据验证、文本搜索和字符串处理等场景。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>g、i、m 标志位是什么意思？</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>g（global）表示全局匹配，查找所有匹配项而非在第一个匹配后停止；i（ignoreCase）表示忽略大小写匹配；m（multiline）表示多行模式，使 ^ 和 $ 可以匹配每行的开始和结束位置。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>如何匹配中文字符？</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>可使用 [\u4e00-\u9fa5] 匹配常用汉字。这个范围包含了 CJK 统一表意文字基本区的所有汉字，涵盖了日常使用的绝大多数中文字符。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>为什么匹配结果和预期不同？</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>常见原因包括：1. 特殊字符未转义，如 . * + 等需要加反斜杠；2. 贪婪匹配导致匹配过多，可使用 ? 改为非贪婪模式；3. 标志位设置不当，如未开启全局匹配只返回第一个结果；4. 边界条件未考虑，如 ^ $ 的使用。</p>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question">
+                    <h3>支持哪种正则语法？</h3>
+                    <span class="faq-toggle">▼</span>
+                </div>
+                <div class="faq-answer">
+                    <p>本工具使用 JavaScript 的正则表达式语法（ECMAScript 规范）。支持常见的元字符、字符类、量词、分组、断言等特性，并支持 g、i、m、s、u 等标志位。</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
+                <div style="color: #f0f0f0; font-weight: 500;">JSON 查看器</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+            </a>
+            <a href="timestamp-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
+                <div style="color: #f0f0f0; font-weight: 500;">时间戳转换</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+            </a>
+            <a href="chinese-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">中繁</div>
+                <div style="color: #f0f0f0; font-weight: 500;">中文简繁转换</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">简体繁体互转</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

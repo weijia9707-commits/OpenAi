@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是 M3U8 格式？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "M3U8 是 HLS (HTTP Live Streaming) 流媒体协议的索引文件格式，它包含视频分片（TS文件）的列表。HLS 是苹果公司开发的自适应流媒体传输协议，被广泛用于在线视频播放。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么有些 M3U8 无法下载？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可能是因为视频使用了 DRM 加密保护，或者需要特定的认证信息（如 Cookie、Token）才能访问。本工具仅支持下载公开的、未加密的 M3U8 视频流。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "下载的视频是什么格式？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "下载后的视频为 TS（Transport Stream）格式，这是由 M3U8 分片合并而成的视频文件。TS 格式可以直接使用 VLC、PotPlayer 等播放器播放，也可以使用 FFmpeg 转换为 MP4 格式。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "下载速度取决于什么？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "下载速度主要取决于两个因素：原始视频服务器的带宽和响应速度，以及你本地的网络连接速度。本工具支持多线程并发下载以提高效率。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "视频数据会经过服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会。本工具完全在浏览器端运行，视频数据直接从原始服务器下载到你的浏览器，不会经过任何中间服务器，保证了数据安全和隐私。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
     <style>
         * {
@@ -549,7 +599,32 @@
 </head>
 <body>
     <div class="container">
+        <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #888; text-decoration: none; font-size: 14px; transition: color 0.2s;">← 返回工具箱</a>
         <h1>🎬 M3U8批量下载器</h1>
+
+        <!-- 功能特点区块 -->
+        <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 32px; margin-bottom: 12px;">▶️</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">在线播放</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">支持直接在浏览器中播放 M3U8/HLS 视频流，无需额外播放器</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 32px; margin-bottom: 12px;">💾</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">视频下载</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">解析 M3U8 文件，自动下载所有分片并合并为完整视频文件</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 32px; margin-bottom: 12px;">🎚️</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">多清晰度</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">自动识别多清晰度流，支持选择不同质量版本下载</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 32px; margin-bottom: 12px;">📊</div>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">进度显示</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">实时显示下载进度、已下载分片数和剩余时间</p>
+            </div>
+        </section>
 
         <div class="input-section">
             <h2>📥 添加下载任务</h2>
@@ -1412,5 +1487,88 @@
         renderTasks();
         updateTaskCount();
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #00d9ff; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(0,217,255,0.3);">❓ 常见问题</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
+                    <span style="color: #00d9ff;">Q:</span> 什么是 M3U8 格式？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                    <p>M3U8 是 HLS (HTTP Live Streaming) 流媒体协议的索引文件格式，它包含视频分片（TS文件）的列表。HLS 是苹果公司开发的自适应流媒体传输协议，被广泛用于在线视频播放，支持根据网络状况自动切换清晰度。</p>
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
+                    <span style="color: #00d9ff;">Q:</span> 为什么有些 M3U8 无法下载？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                    <p>可能是因为视频使用了 DRM 加密保护，或者需要特定的认证信息（如 Cookie、Token）才能访问。本工具仅支持下载公开的、未加密的 M3U8 视频流。另外，部分网站设置了跨域限制（CORS），也会导致无法在浏览器中直接下载。</p>
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
+                    <span style="color: #00d9ff;">Q:</span> 下载的视频是什么格式？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                    <p>下载后的视频为 TS（Transport Stream）格式，这是由 M3U8 分片合并而成的视频文件。TS 格式可以直接使用 VLC、PotPlayer 等播放器播放。如需转换为 MP4 格式，可使用 FFmpeg 命令：<code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-family: monospace;">ffmpeg -i video.ts -c copy video.mp4</code></p>
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
+                    <span style="color: #00d9ff;">Q:</span> 下载速度取决于什么？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                    <p>下载速度主要取决于两个因素：原始视频服务器的带宽和响应速度，以及你本地的网络连接速度。本工具支持多线程并发下载（默认5个并发），可以有效提高下载效率。如果原始服务器有速度限制，则下载速度会受到限制。</p>
+                </div>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
+                    <span style="color: #00d9ff;">Q:</span> 视频数据会经过服务器吗？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                    <p>不会。本工具完全在浏览器端运行，视频数据直接从原始服务器下载到你的浏览器，不会经过任何中间服务器。所有处理（解析、下载、合并）都在本地完成，保证了数据安全和隐私。</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e4e4e4; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="social-video-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+                <div style="color: #e4e4e4; font-weight: 500;">X/TikTok 视频下载</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">下载社交媒体视频</div>
+            </a>
+            <a href="audio-cutter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🎵</div>
+                <div style="color: #e4e4e4; font-weight: 500;">音频剪辑</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">在线剪切音频文件</div>
+            </a>
+            <a href="image-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
+                <div style="color: #e4e4e4; font-weight: 500;">图片格式转换</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">WebP/PNG/JPG 互转</div>
+            </a>
+            <a href="image-compressor.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
+                <div style="color: #e4e4e4; font-weight: 500;">图片压缩</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 14px;">
+        <p>纯前端处理，视频不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #00d9ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

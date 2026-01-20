@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQ JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "什么是 WHOIS？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "WHOIS 是用于查询域名注册信息的协议，可查看域名所有者、注册商等信息。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "为什么有些域名查不到信息？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可能是域名开启了隐私保护，或使用了不支持的域名后缀。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "WHOIS 信息准确吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "信息来自域名注册商，通常是准确的，但部分注册者可能填写虚假信息。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以查询 IP 的 WHOIS 吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "本工具仅支持域名查询，IP 查询请使用 IP 查询工具。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "查询是否有次数限制？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "免费使用，但频繁查询可能触发 API 限制。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -508,6 +558,126 @@
             text-decoration: underline;
         }
 
+        /* 功能特点区块 */
+        .features-section {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .feature-card {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 16px;
+            padding: 24px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+
+        .feature-card:hover {
+            border-color: rgba(102, 126, 234, 0.5);
+            transform: translateY(-4px);
+            box-shadow: 0 10px 30px rgba(102, 126, 234, 0.2);
+        }
+
+        .feature-icon {
+            font-size: 2.5rem;
+            margin-bottom: 16px;
+        }
+
+        .feature-title {
+            font-size: 1.1rem;
+            font-weight: 600;
+            color: #fff;
+            margin-bottom: 8px;
+        }
+
+        .feature-desc {
+            font-size: 0.9rem;
+            color: #a1a1aa;
+            line-height: 1.5;
+        }
+
+        /* FAQ 区块 */
+        .faq-section {
+            max-width: 900px;
+            margin: 40px auto;
+            padding: 0 20px;
+        }
+
+        .faq-title {
+            color: #fff;
+            font-size: 1.5rem;
+            margin-bottom: 24px;
+            padding-bottom: 12px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .faq-list {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+        }
+
+        .faq-item {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+        }
+
+        .faq-item:hover {
+            border-color: rgba(102, 126, 234, 0.5);
+        }
+
+        .faq-question {
+            padding: 20px 24px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            color: #fff;
+            font-size: 1rem;
+            transition: background 0.2s;
+        }
+
+        .faq-question:hover {
+            background: rgba(255, 255, 255, 0.05);
+        }
+
+        .faq-toggle {
+            font-size: 1.2rem;
+            color: #667eea;
+            transition: transform 0.3s;
+        }
+
+        .faq-item.active .faq-toggle {
+            transform: rotate(45deg);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+
+        .faq-item.active .faq-answer {
+            max-height: 200px;
+        }
+
+        .faq-answer-content {
+            padding: 0 24px 20px;
+            color: #a1a1aa;
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
         /* 响应式 */
         @media (max-width: 768px) {
             h1 {
@@ -533,6 +703,25 @@
             .domain-name {
                 font-size: 1.5rem;
             }
+
+            .features-section {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .faq-question {
+                padding: 16px 20px;
+                font-size: 0.95rem;
+            }
+
+            .faq-answer-content {
+                padding: 0 20px 16px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .features-section {
+                grid-template-columns: 1fr;
+            }
         }
     </style>
 </head>
@@ -543,6 +732,30 @@
             <h1>🔍 Whois 域名查询</h1>
             <p class="subtitle">查询域名注册信息、所有者、注册商、有效期等详细信息</p>
         </header>
+
+        <!-- 功能特点 -->
+        <div class="features-section">
+            <div class="feature-card">
+                <div class="feature-icon">📋</div>
+                <div class="feature-title">域名信息</div>
+                <div class="feature-desc">查询域名注册商、注册日期、到期日期等信息</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌐</div>
+                <div class="feature-title">多后缀支持</div>
+                <div class="feature-desc">支持 .com、.net、.org、.cn 等主流域名后缀</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🔒</div>
+                <div class="feature-title">隐私保护</div>
+                <div class="feature-desc">显示域名是否开启隐私保护服务</div>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">⚡</div>
+                <div class="feature-title">一键查询</div>
+                <div class="feature-desc">输入域名即可获取完整 WHOIS 信息</div>
+            </div>
+        </div>
 
         <!-- 搜索区域 -->
         <div class="search-section">
@@ -1009,6 +1222,113 @@
         function hideResult() {
             document.getElementById('resultSection').classList.remove('show');
         }
+
+        // FAQ 折叠展开
+        function toggleFaq(element) {
+            const faqItem = element.parentElement;
+            faqItem.classList.toggle('active');
+        }
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section">
+        <h2 class="faq-title">
+            <span>❓</span>
+            <span>常见问题</span>
+        </h2>
+        <div class="faq-list">
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>什么是 WHOIS？</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        WHOIS 是用于查询域名注册信息的协议，可查看域名所有者、注册商等信息。通过 WHOIS 查询，您可以了解域名的注册时间、到期时间、DNS 服务器配置以及注册人联系方式等关键信息。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>为什么有些域名查不到信息？</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        可能是域名开启了隐私保护，或使用了不支持的域名后缀。许多域名注册商提供隐私保护服务，会隐藏注册人的真实信息。此外，部分国别域名或新顶级域名可能不支持 RDAP 协议查询。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>WHOIS 信息准确吗？</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        信息来自域名注册商，通常是准确的，但部分注册者可能填写虚假信息。ICANN 要求域名注册信息真实有效，但实际执行力度因注册商而异。建议将查询结果作为参考而非绝对依据。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>可以查询 IP 的 WHOIS 吗？</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        本工具仅支持域名查询，IP 查询请使用 <a href="ip-lookup.html" style="color: #667eea;">IP 查询工具</a>。IP 地址的 WHOIS 信息由区域互联网注册机构（RIR）管理，与域名 WHOIS 系统是分开的。
+                    </div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span>查询是否有次数限制？</span>
+                    <span class="faq-toggle">+</span>
+                </div>
+                <div class="faq-answer">
+                    <div class="faq-answer-content">
+                        免费使用，但频繁查询可能触发 API 限制。本工具使用公共 RDAP 接口，为避免滥用，各注册局可能会对查询频率进行限制。建议合理使用，避免短时间内大量查询。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="ip-lookup.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
+                <div style="color: #e6edf3; font-weight: 500;">IP 地址查询</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">查询 IP 归属地</div>
+            </a>
+            <a href="websocket-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
+                <div style="color: #e6edf3; font-weight: 500;">WebSocket 测试</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+            </a>
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #e6edf3; font-weight: 500;">加密解密工具</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA等</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

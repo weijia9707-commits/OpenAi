@@ -42,6 +42,56 @@
     }
     </script>
 
+    <!-- FAQPage JSON-LD -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "IP 地址定位准确吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "通常精确到城市级别，精度取决于 IP 数据库的更新频率。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以查询内网 IP 吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不可以，内网 IP（如192.168.x.x）无法定位地理位置。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "查询的 IP 信息包括哪些？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "包括国家、城市、ISP、ASN、时区、经纬度等。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "如何查看自己的公网 IP？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "打开页面即可自动显示你当前的公网 IP 地址。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "IP 查询会记录我的信息吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会，查询结果仅在浏览器中显示，不会存储。"
+                }
+            }
+        ]
+    }
+    </script>
+
     <style>
         * {
             margin: 0;
@@ -425,6 +475,30 @@
             <h1>🌍 IP地址归属地查询</h1>
             <p class="subtitle">查询IP地址或域名的地理位置、运营商、IP段范围等信息</p>
         </header>
+
+        <!-- 功能特点 -->
+        <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">📍</div>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">IP 定位</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">查询 IP 地址的地理位置信息，包括国家、城市、ISP</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">💻</div>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">本机 IP</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">自动获取并显示你当前的公网 IP 地址</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">📊</div>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">详细信息</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">显示 ASN、时区、经纬度等详细信息</p>
+            </div>
+            <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
+                <div style="font-size: 2rem; margin-bottom: 10px;">🗺️</div>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">地图展示</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">在地图上直观显示 IP 的地理位置</p>
+            </div>
+        </section>
 
         <!-- 搜索区域 -->
         <div class="search-section">
@@ -918,5 +992,83 @@
         // 初始化
         getClientInfo();
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
+                <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>IP 地址定位准确吗？</span>
+                    <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
+                </summary>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">通常精确到城市级别，精度取决于 IP 数据库的更新频率。不同的 IP 归属地数据库可能会有细微差异，企业级 IP 通常定位更准确。</p>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
+                <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>可以查询内网 IP 吗？</span>
+                    <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
+                </summary>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">不可以，内网 IP（如 192.168.x.x、10.x.x.x、172.16.x.x）属于私有地址段，无法通过公共数据库定位地理位置。</p>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
+                <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>查询的 IP 信息包括哪些？</span>
+                    <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
+                </summary>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">包括国家、城市、ISP（互联网服务提供商）、ASN（自治系统号）、时区、经纬度坐标、邮政编码等详细信息。</p>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
+                <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>如何查看自己的公网 IP？</span>
+                    <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
+                </summary>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">打开页面即可自动显示你当前的公网 IP 地址，无需手动操作。页面底部的"本机客户端信息"区域会自动获取并展示。</p>
+            </details>
+            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
+                <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
+                    <span>IP 查询会记录我的信息吗？</span>
+                    <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
+                </summary>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">不会，本工具是纯前端实现，查询结果仅在浏览器中显示，不会存储或上传任何数据到我们的服务器。</p>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="whois-query.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔎</div>
+                <div style="color: #e6edf3; font-weight: 500;">WHOIS 查询</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">域名注册信息查询</div>
+            </a>
+            <a href="websocket-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
+                <div style="color: #e6edf3; font-weight: 500;">WebSocket 测试</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+            </a>
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #e6edf3; font-weight: 500;">加密解密工具</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA等</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>

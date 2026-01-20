@@ -40,6 +40,54 @@
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "如何获取 Claude Code 历史记录？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "在 ~/.claude/projects/ 目录下可找到 .jsonl 格式的对话记录文件。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "支持什么格式的文件？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "仅支持 Claude Code 生成的 JSONL 格式文件。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "可以导出对话内容吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "可以复制单条消息内容，暂不支持批量导出。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "历史记录会上传到服务器吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "不会，所有数据仅在本地浏览器中处理。"
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "能查看工具调用的详情吗？",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "是的，可以展开查看工具调用的参数和返回结果。"
+                }
+            }
+        ]
+    }
+    </script>
     <style>
         * {
             margin: 0;
@@ -759,6 +807,35 @@
             </div>
         </div>
     </header>
+
+    <!-- 功能特点区块 -->
+    <section class="features-section" style="background: linear-gradient(135deg, #16213e, #0f3460); padding: 40px 20px; border-bottom: 1px solid #2a2a4a;">
+        <div style="max-width: 1200px; margin: 0 auto;">
+            <h2 style="text-align: center; color: #e6edf3; font-size: 24px; margin-bottom: 30px;">功能特点</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 24px;">
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 24px; border-radius: 12px; border: 1px solid #2a2a4a;">
+                    <div style="font-size: 32px; margin-bottom: 12px;">📄</div>
+                    <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 8px;">JSONL 解析</h3>
+                    <p style="color: #8b949e; font-size: 14px; line-height: 1.6;">支持导入 Claude Code 生成的 JSONL 格式历史记录，自动解析对话内容</p>
+                </div>
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 24px; border-radius: 12px; border: 1px solid #2a2a4a;">
+                    <div style="font-size: 32px; margin-bottom: 12px;">🏷️</div>
+                    <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 8px;">对话分类</h3>
+                    <p style="color: #8b949e; font-size: 14px; line-height: 1.6;">自动区分用户消息、助手回复、工具调用等类型，清晰展示对话结构</p>
+                </div>
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 24px; border-radius: 12px; border: 1px solid #2a2a4a;">
+                    <div style="font-size: 32px; margin-bottom: 12px;">🔍</div>
+                    <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 8px;">关键词搜索</h3>
+                    <p style="color: #8b949e; font-size: 14px; line-height: 1.6;">快速搜索历史对话中的关键内容，支持高亮显示匹配结果</p>
+                </div>
+                <div style="background: rgba(15, 52, 96, 0.5); padding: 24px; border-radius: 12px; border: 1px solid #2a2a4a;">
+                    <div style="font-size: 32px; margin-bottom: 12px;">🔒</div>
+                    <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 8px;">隐私优先</h3>
+                    <p style="color: #8b949e; font-size: 14px; line-height: 1.6;">完全本地处理，对话数据不会上传到任何服务器，保护您的隐私</p>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <input type="file" id="file-input" accept=".jsonl,.json" multiple>
     <input type="file" id="folder-input" webkitdirectory>
@@ -1564,5 +1641,88 @@
         // 页面加载时尝试自动加载
         checkAutoLoad();
     </script>
+
+    <!-- FAQ 问答区块 -->
+    <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h2 style="color: #e6edf3; font-size: 22px; margin-bottom: 24px; text-align: center;">常见问题</h2>
+        <div style="display: flex; flex-direction: column; gap: 16px;">
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #e94560;">Q:</span> 如何获取 Claude Code 历史记录？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.6;">
+                    <p>在 <code style="background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: monospace;">~/.claude/projects/</code> 目录下可找到 <code style="background: #0d1117; padding: 2px 6px; border-radius: 4px; font-family: monospace;">.jsonl</code> 格式的对话记录文件。每个项目会有独立的子目录存储对应的历史记录。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #e94560;">Q:</span> 支持什么格式的文件？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.6;">
+                    <p>仅支持 Claude Code 生成的 JSONL 格式文件。该格式每行是一个独立的 JSON 对象，包含消息类型、内容、时间戳等信息。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #e94560;">Q:</span> 可以导出对话内容吗？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.6;">
+                    <p>可以复制单条消息内容，也可以使用导出功能将整个对话导出为 Markdown、JSON 或纯文本格式。暂不支持批量导出多个对话。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #e94560;">Q:</span> 历史记录会上传到服务器吗？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.6;">
+                    <p>不会。所有数据仅在本地浏览器中处理，您的对话记录不会上传到任何服务器。这是一个纯前端工具，确保您的隐私安全。</p>
+                </div>
+            </details>
+            <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
+                <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px;">
+                    <span style="color: #e94560;">Q:</span> 能查看工具调用的详情吗？
+                </summary>
+                <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.6;">
+                    <p>是的，可以展开查看工具调用的参数和返回结果。点击工具调用区块即可展开查看详细的输入参数和输出内容。</p>
+                </div>
+            </details>
+        </div>
+    </section>
+
+    <!-- 相关工具推荐 -->
+    <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+            <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+            </a>
+            <a href="sqlite-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🗄️</div>
+                <div style="color: #e6edf3; font-weight: 500;">SQLite 查看器</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线浏览 SQLite 数据库</div>
+            </a>
+            <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                <div style="color: #e6edf3; font-weight: 500;">加密解密工具</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA等</div>
+            </a>
+            <a href="regex-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                <div style="color: #e6edf3; font-weight: 500;">正则表达式测试</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线测试正则表达式</div>
+            </a>
+        </div>
+    </section>
+
+    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p>纯前端处理，数据不会上传到服务器</p>
+        <p style="margin-top: 12px;">
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <span style="margin: 0 12px;">|</span>
+            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+        </p>
+    </footer>
 </body>
 </html>
