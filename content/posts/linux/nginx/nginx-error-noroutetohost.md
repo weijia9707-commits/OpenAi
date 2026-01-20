@@ -1,11 +1,17 @@
 ---
-title:      "Nginx报No route to host错误"
+title: "Nginx 代理 AWS ELB 报 No Route to Host 错误解决方案"
 date: 2020-07-03T13:19:44+08:00
 author: "bruce"
-description: "解决Nginx代理AWS ELB时出现No route to host错误，使用jdomain模块实现DNS动态解析"
+description: "解决 Nginx 反向代理 AWS ELB 时出现 No route to host (113) 错误，使用 jdomain 模块实现 DNS 动态解析，适用于 ELB IP 变化场景"
+toc: true
 tags:
-  - nginx
-  - linux
+  - Nginx
+  - AWS
+  - ELB
+  - DNS
+  - 故障排查
+categories:
+  - Linux
 ---
 
 

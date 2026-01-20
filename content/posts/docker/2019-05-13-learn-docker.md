@@ -1,12 +1,17 @@
 ---
-title:      "Docker学习笔记"
-date:       2019-05-13 20:33:33
-author:     "bruce"
-description: "Docker入门教程，详解镜像、容器、仓库三大核心概念，理解分层存储原理和容器化技术基础"
+title: "Docker 入门教程：镜像、容器、仓库核心概念与 Dockerfile 详解"
+date: 2019-05-13 20:33:33
+author: "bruce"
+description: "Docker 零基础入门教程，详解镜像、容器、仓库三大核心概念，深入理解分层存储原理，Dockerfile 指令全解析（FROM、RUN、COPY、CMD、ENTRYPOINT 等），附私有仓库搭建和数据卷实战"
 toc: true
 tags:
-    - docker
-    - linux
+    - Docker
+    - Dockerfile
+    - 容器化
+    - DevOps
+    - 镜像
+categories:
+    - Docker
 ---
 
 
@@ -647,8 +652,12 @@ PING db (172.17.0.9) 56(84) bytes of data.
 
 Docker 采用了 C/S架构，包括客户端和服务端。 Docker daemon 作为服务端接受 来自客户的请求，并处理这些请求(创建、运行、分发容器)。 客户端和服务端既 可以运行在一个机器上，也可通过 socket 或者 RESTful API 来进行通信。
 
+---
 
+## 相关文章
 
-
+- [Docker Compose 完全指南：从入门到生产实践](/posts/docker/2026-01-19-docker-compose-complete-guide/) - 多容器编排与生产环境最佳实践
+- [Docker 常用命令速查手册](/posts/docker/2019-11-14-docker-commands/) - 日常开发必备命令参考
+- [使用 Nexus3 搭建 Docker 私有镜像仓库](/posts/docker/2019-06-12-next3-dockerhub/) - 企业级私有仓库搭建方案
 
 

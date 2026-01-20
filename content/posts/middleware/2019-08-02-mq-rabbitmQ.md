@@ -1,16 +1,19 @@
 ---
-title: 消息队列-RabbitMQ
+title: "RabbitMQ 入门教程：AMQP 协议、Exchange 交换机与消息投递详解"
 date: 2019-08-02 11:47:04
 author: "bruce"
-description: "RabbitMQ消息队列入门教程，详解AMQP协议、交换机类型、队列绑定和消息投递工作流程"
+description: "RabbitMQ 消息队列入门教程，详解 AMQP 协议原理、四种 Exchange 交换机类型（Direct、Fanout、Topic、Headers）、队列绑定和消息投递工作流程"
 toc: true
 tags:
+    - RabbitMQ
     - 消息队列
-    - middleware
-    - rabbitmq
+    - AMQP
+    - 中间件
+categories:
+    - 中间件
 ---
 
-前面文章[《消息队列中间件选型》](http://www.heyuan110.com/2019-07-31-%E6%B6%88%E6%81%AF%E9%98%9F%E5%88%97%E4%B8%AD%E9%97%B4%E4%BB%B6%E9%80%89%E5%9E%8B.html)我们了解了消息队列技术选型，本文我们来学习开源消息队列RabbitMQ。
+前面文章[《消息队列 MQ 技术选型指南》](/posts/middleware/2019-07-31-mq/)我们了解了消息队列技术选型，本文我们来学习开源消息队列RabbitMQ。
 
 
 ## 1. RabbitMQ简介
@@ -1135,3 +1138,8 @@ RabbitMQ会自动减慢这个连接的速率，让client端以为网络带宽变
 *[4.RabbitMQ+HAProxy构建高可用消息队列](https://blog.csdn.net/qq_34039315/article/details/77619736)*
 *<https://blog.csdn.net/u013256816/article/details/71097186>*
 
+---
+
+## 相关文章
+
+- [消息队列 MQ 技术选型指南：核心概念与分布式系统应用场景](/posts/middleware/2019-07-31-mq/) - MQ 核心概念、架构模型与技术选型对比

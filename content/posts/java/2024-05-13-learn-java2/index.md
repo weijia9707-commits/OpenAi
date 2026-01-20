@@ -1,11 +1,17 @@
 ---
-title: "Java学习笔记（二）"
+title: "Java 入门教程（二）：Arrays 工具类、集合框架与 I/O 操作详解"
 date: 2024-05-13T15:13:10+08:00
 author: bruce
-description: "Java进阶学习笔记，详解Arrays工具类的常用方法，包括数组遍历、拷贝、排序等操作，以及集合和I/O技术"
+description: "Java 入门教程第二篇，详解 Arrays 工具类常用方法（toString、copyOf、sort、setAll），数组遍历、拷贝、排序操作，以及集合框架和 I/O 流技术基础"
 toc: true
 tags:
-  - java
+    - Java
+    - Arrays
+    - 集合
+    - IO流
+    - 入门教程
+categories:
+    - Java
 ---
 
 ![image](java-logo.webp)

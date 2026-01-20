@@ -1,12 +1,15 @@
 ---
-title: Supervisor安装配置与使用
+title: "Supervisor 进程管理完全指南：安装配置与实战"
 date: 2018-10-07 00:35:04
 author: "bruce"
-description: "Supervisor进程管理工具完整教程，实现Linux服务器上多进程的统一启动、监控和管理"
+description: "Supervisor 进程管理工具完整教程，从安装配置到实战，实现 Linux 服务器上多进程的统一启动、监控和自动重启，附 Nginx 配置示例"
 toc: true
 tags:
     - supervisor
     - linux
+    - 进程管理
+categories:
+    - Linux
 ---
 
 Supervisor (http://supervisord.org) 是一个用 Python 写的进程管理工具，可以很方便的用来启动、重启、关闭进程（不仅仅是 Python 进程）。除了对单个进程的控制，还可以同时启动、关闭多个进程，比如很不幸的服务器出问题导致所有应用程序都被杀死，此时可以用 supervisor 同时启动所有应用程序而不是一个一个地敲命令启动。

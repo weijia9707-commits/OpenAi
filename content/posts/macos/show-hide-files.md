@@ -1,10 +1,16 @@
 ---
-title: MacOSX 隐藏和显示隐藏文件
+title: "macOS 显示和隐藏隐藏文件：终端命令与图形工具"
 date: 2013-06-18 17:44:50
 author: "bruce"
-description: "macOS系统中显示和隐藏隐藏文件的方法，提供Shell脚本和图形界面工具下载"
+description: "macOS 系统中显示和隐藏隐藏文件的多种方法，提供 Shell 脚本命令和图形界面小工具下载，轻松管理以点号开头的隐藏文件"
+toc: true
 tags:
-    - mac
+    - macOS
+    - 终端
+    - 隐藏文件
+    - 技巧
+categories:
+    - macOS
 ---
 
 在osx里，.开头的文件会被自动隐藏的，但是如果想要显示所有隐藏文件怎么办呢？<!--more-->

@@ -1,11 +1,17 @@
 ---
-title: MySQL里EXPLAIN解读
+title: "MySQL EXPLAIN 执行计划详解：SQL 性能分析与优化指南"
 date: 2019-09-06 20:10:21
 author: "bruce"
-description: "MySQL EXPLAIN命令详解，分析SQL执行计划，理解id、select_type、type等关键字段含义"
+description: "MySQL EXPLAIN 命令完整详解，分析 SQL 执行计划，深入理解 id、select_type、type、key、rows、Extra 等关键字段含义，掌握慢查询优化方法"
+toc: true
 tags:
-    - mysql
-    - sql
+    - MySQL
+    - SQL优化
+    - EXPLAIN
+    - 性能调优
+    - 数据库
+categories:
+    - MySQL
 ---
 
 如何分析一条SQL执行过程?如果评价SQL执行性能好坏？EXPLAIN就是一个很好的工具，它的使用法也很简单，再SQL语句前加上`EXPLAIN`关键字就可以。

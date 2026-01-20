@@ -1,12 +1,15 @@
 ---
-title:      "Shell脚本中$符开头变量解释"
-date:       2019-05-13 20:16:54
-author:     "bruce"
-description: "详解Shell脚本中$$、$!、$?、$-、$*、$@、$#、$0等特殊变量的含义和使用方法"
+title: "Shell 脚本特殊变量详解：$$、$?、$@、$# 等用法"
+date: 2019-05-13 20:16:54
+author: "bruce"
+description: "详解 Shell 脚本中 $$、$!、$?、$-、$*、$@、$#、$0 等特殊变量的含义和使用方法，附完整示例代码"
 toc: true
 tags:
     - shell
     - linux
+    - Bash
+categories:
+    - Linux
 ---
 
 
@@ -85,4 +88,9 @@ The complete list is 123456
 The complete list is QQ
 ```
 
+---
 
+## 相关文章
+
+- [Oh My Zsh 安装配置指南：打造高效终端环境](/posts/linux/2015-06-17-shell-zsh/) - 强大的 Zsh 配置框架
+- [Linux/macOS 常用命令速查手册](/posts/linux/2020-03-19-linux-mac-commands/) - 运维开发常用命令参考

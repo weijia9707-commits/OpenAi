@@ -1,12 +1,15 @@
 ---
-title:      "Traceroute命令"
-date:       2020-06-28 12:12:04
-author:     "bruce"
-description: "Traceroute网络诊断命令详解，追踪数据包从本机到目标主机的路由路径和每跳延迟"
+title: "Traceroute 网络诊断命令详解：追踪数据包路由路径"
+date: 2020-06-28 12:12:04
+author: "bruce"
+description: "Traceroute/tracert 网络诊断命令完整教程，详解工作原理、参数用法和实战示例，快速定位网络延迟和故障节点"
 toc: true
 tags:
     - traceroute
     - linux
+    - 网络诊断
+categories:
+    - Linux
 ---
 
 
@@ -176,3 +179,10 @@ over a maximum of 30 hops:
 
 Trace complete.
 ```
+
+---
+
+## 相关文章
+
+- [Linux curl 命令完全指南：HTTP 请求调试必备工具](/posts/linux/2020-06-29-curl/) - HTTP 请求调试神器
+- [Linux/macOS 常用命令速查手册](/posts/linux/2020-03-19-linux-mac-commands/) - 运维开发常用命令参考

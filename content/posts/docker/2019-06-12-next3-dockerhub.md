@@ -1,13 +1,17 @@
 ---
-title:      "Nexus3构建Docker私服"
-date:       2019-06-12 20:50:36
-author:     "bruce"
-description: "使用Nexus3搭建企业级Docker私有镜像仓库，配置hosted、proxy、group三种仓库类型，实现镜像的推送和拉取"
+title: "Nexus3 搭建 Docker 私有镜像仓库：企业级 Registry 完整教程"
+date: 2019-06-12 20:50:36
+author: "bruce"
+description: "使用 Nexus3 搭建企业级 Docker 私有镜像仓库完整教程，详解 hosted、proxy、group 三种仓库类型配置，实现镜像的推送和拉取，附 Ubuntu 客户端 insecure-registries 配置"
 toc: true
 tags:
-    - docker
-    - linux
-    - next3
+    - Docker
+    - Nexus3
+    - Registry
+    - 私有仓库
+    - DevOps
+categories:
+    - Docker
 ---
 
 [Nexus](https://www.sonatype.com/nexus-repository-oss)是有名的Maven仓库管理器。如果你使用Maven，你可以从Maven中央仓库下载所需要的构件（artifact），但这通常不是一个好的做法，你应该在本地架设一个Maven仓库服务器，在代理远程仓库的同时维护本地仓库，以节省带宽和时间，Nexus就可以满足这样的需要。此外，他还提供了强大的仓库管理功能，构件搜索功能，它基于REST，友好的UI是一个extjs的REST客户端，它占用较少的内存，基于简单文件系统而非数据库。这些优点使其日趋成为最流行的Maven仓库管理器。除此之外，最新Nexus3还可以管理多种格式的镜像<!-- more -->，如下：
@@ -104,8 +108,12 @@ http://localhost:9503
 ### 搜索镜像
 从docker group端口9503搜索，例如：`docker search localhost:9503/php:7.0`，会从docker group包含的仓库按照设置的优先级搜索。
 
+---
 
+## 相关文章
 
-
+- [Docker 入门指南：核心概念、安装配置与容器化实践](/posts/docker/2019-05-13-learn-docker/) - Docker 基础概念与入门教程
+- [Docker Compose 完全指南：从入门到生产实践](/posts/docker/2026-01-19-docker-compose-complete-guide/) - 多容器编排与生产环境最佳实践
+- [Docker 常用命令速查手册](/posts/docker/2019-11-14-docker-commands/) - 日常开发必备命令参考
 
 

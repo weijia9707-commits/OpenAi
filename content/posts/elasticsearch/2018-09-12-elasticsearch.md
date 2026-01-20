@@ -1,12 +1,16 @@
 ---
-title:      "Elasticsearch学习"
-date:       2018-09-12 18:52:59
-author:     "bruce"
-description: "Elasticsearch入门教程，理解索引、类型、文档等核心概念，掌握常用查询命令和API操作"
+title: "Elasticsearch 入门教程：索引、文档、查询 API 核心概念详解"
+date: 2018-09-12 18:52:59
+author: "bruce"
+description: "Elasticsearch 入门教程，理解索引、类型、文档等核心概念（类比关系型数据库），掌握 _cat、_search 等常用查询命令和 REST API 操作"
 toc: true
 tags:
-    - elasticsearch
-    - 搜索
+    - Elasticsearch
+    - 搜索引擎
+    - 全文检索
+    - API
+categories:
+    - Elasticsearch
 ---
 
 ![](https://raw.githubusercontent.com/heyuan110/static-source/master/cover/es.jpg)
@@ -682,4 +686,10 @@ content-length: 1141
 
 注意参数嵌套了好几层，很容易写错，query、_source、sort都处于root级，query/bool下包含must、filter两级
 
+---
+
+## 相关文章
+
+- [ELK 日志系统搭建教程：Elasticsearch + Logstash + Kibana + Kafka 完整指南](/posts/elasticsearch/2018-09-11-log-elk/) - 企业级日志收集分析平台搭建
+- [AWS EKK 日志系统搭建：Elasticsearch + Kinesis + Kibana 实战教程](/posts/elasticsearch/2018-09-12-log-ekk/) - 基于 AWS 托管服务的日志方案
 

@@ -1,13 +1,16 @@
 ---
-title:      "数据仓库Amazon Redshift"
-date:       2018-08-09 14:06:44
-author:     "bruce"
-description: "Amazon Redshift数据仓库使用指南，涵盖VACUUM优化、性能调优和常用运维操作"
+title: "Amazon Redshift 数据仓库实战：VACUUM 优化与性能调优指南"
+date: 2018-08-09 14:06:44
+author: "bruce"
+description: "Amazon Redshift 数据仓库使用指南，详解 VACUUM 操作类型（DELETE ONLY、SORT ONLY、FULL、REINDEX），表优化策略和常用运维命令"
 toc: true
 tags:
-    - redshift
-    - datawarehouse
-    - mysql
+    - Redshift
+    - AWS
+    - 数据仓库
+    - 性能优化
+categories:
+    - 数据仓库
 ---
 
 

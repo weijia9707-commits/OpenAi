@@ -1,14 +1,17 @@
 ---
-title: Ubuntu16.04环境Jira和Confluence搭建
+title: "Ubuntu 搭建 Jira + Confluence 完整教程：安装配置与数据迁移"
 date: 2019-04-15 13:53:32
 author: "bruce"
-description: "Ubuntu16.04上搭建Jira项目管理和Confluence知识库系统，实现账号体系整合和团队协作"
+description: "Ubuntu 16.04 搭建 Jira 项目管理和 Confluence 知识库完整教程，包含 MySQL 配置、破解激活、账号整合、数据备份恢复和安全漏洞修复"
 toc: true
 tags:
-    - jira
-    - confluence
-    - linux
-    - 安全漏洞
+    - Jira
+    - Confluence
+    - Atlassian
+    - Linux
+    - MySQL
+categories:
+    - Linux
 ---
 
 jira和confluence都是Atlassian公司产品。jira是项目与事务跟踪工具，可以完成项目执行管理、敏捷开发管理、体系流程管理、产品Bug跟踪、提案跟踪、需求管理、客户服务等工作。confluence是一个专业的企业知识管理与协同软件，可以用于构建企业wiki，通过它可以实现团队成员之间的协作和知识共享。
@@ -18,7 +21,7 @@ jira和confluence都是Atlassian公司产品。jira是项目与事务跟踪工�
 
 ## 一、环境
 
-前一篇讲了[挖矿病毒](http://www.heyuan110.com/2019-04-12-%E6%8C%96%E7%9F%BF%E7%97%85%E6%AF%92kerberods%E7%9A%84%E5%85%A5%E4%BE%B5%E5%92%8C%E5%A4%84%E7%90%86.html)的入侵，决定对那台服务器上相关服务拆分迁移。上面的jira和confluence共用jira账号体系，迁移时两者要注意安装顺序，最后确定的方案：
+前一篇讲了[挖矿病毒](/posts/linux/2019-04-12-linux-kerberods/)的入侵，决定对那台服务器上相关服务拆分迁移。上面的jira和confluence共用jira账号体系，迁移时两者要注意安装顺序，最后确定的方案：
 
 ![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15553972819985.jpg)
 
