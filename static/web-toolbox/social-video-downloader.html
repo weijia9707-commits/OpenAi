@@ -1451,85 +1451,24 @@
         }
 
         // Instagram 视频解析
+        // 由于 CORS 限制，直接提供外部下载服务链接
         async function fetchInstagramVideo(url) {
-            // 提取帖子 ID
-            const match = url.match(/(?:p|reel|reels|tv)\/([a-zA-Z0-9_-]+)/);
-            const postId = match ? match[1] : '';
-
-            // 尝试使用 Cobalt API
-            try {
-                const instances = [
-                    'https://api.cobalt.tools',
-                    'https://cobalt-api.hyper.lol'
-                ];
-
-                for (const instance of instances) {
-                    try {
-                        const response = await fetch(`${instance}/api/json`, {
-                            method: 'POST',
-                            headers: {
-                                'Accept': 'application/json',
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                url: url,
-                                vCodec: 'h264',
-                                vQuality: 'max'
-                            })
-                        });
-
-                        if (response.ok) {
-                            const data = await response.json();
-                            if (data.status === 'stream' || data.status === 'redirect') {
-                                return {
-                                    success: true,
-                                    platform: 'instagram',
-                                    title: 'Instagram 视频',
-                                    author: '点击下载',
-                                    downloads: [{
-                                        type: 'video',
-                                        label: '高清视频',
-                                        quality: 'HD',
-                                        url: data.url,
-                                        badge: '推荐'
-                                    }]
-                                };
-                            } else if (data.status === 'picker' && data.picker) {
-                                return {
-                                    success: true,
-                                    platform: 'instagram',
-                                    title: 'Instagram 媒体',
-                                    author: '多媒体内容',
-                                    downloads: data.picker.map((item, idx) => ({
-                                        type: item.type || 'video',
-                                        label: item.type === 'photo' ? `图片 ${idx + 1}` : `视频 ${idx + 1}`,
-                                        quality: item.type === 'photo' ? '图片' : 'HD',
-                                        url: item.url,
-                                        badge: idx === 0 ? '推荐' : null
-                                    }))
-                                };
-                            }
-                        }
-                    } catch (err) {
-                        console.log(`Cobalt ${instance} 失败:`, err.message);
-                    }
-                }
-            } catch (err) {
-                console.log('Cobalt API 失败:', err.message);
-            }
-
-            // 所有 API 失败，提供外部服务链接
             return {
                 success: true,
                 platform: 'instagram',
                 title: 'Instagram 视频',
-                author: '点击下方链接下载',
+                author: '选择下载服务',
                 isExternal: true,
                 externalServices: [
                     {
                         name: 'Cobalt',
                         url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`,
                         icon: '⚡'
+                    },
+                    {
+                        name: 'FastDl',
+                        url: `https://fastdl.app/zh?url=${encodeURIComponent(url)}`,
+                        icon: '🚀'
                     },
                     {
                         name: 'SaveInsta',
@@ -1540,86 +1479,19 @@
                         name: 'SnapInsta',
                         url: `https://snapinsta.app/?url=${encodeURIComponent(url)}`,
                         icon: '💾'
-                    },
-                    {
-                        name: 'IGDownloader',
-                        url: `https://igdownloader.app/?url=${encodeURIComponent(url)}`,
-                        icon: '📥'
                     }
                 ]
             };
         }
 
         // Facebook 视频解析
+        // 由于 CORS 限制，直接提供外部下载服务链接
         async function fetchFacebookVideo(url) {
-            // 尝试使用 Cobalt API
-            try {
-                const instances = [
-                    'https://api.cobalt.tools',
-                    'https://cobalt-api.hyper.lol'
-                ];
-
-                for (const instance of instances) {
-                    try {
-                        const response = await fetch(`${instance}/api/json`, {
-                            method: 'POST',
-                            headers: {
-                                'Accept': 'application/json',
-                                'Content-Type': 'application/json'
-                            },
-                            body: JSON.stringify({
-                                url: url,
-                                vCodec: 'h264',
-                                vQuality: 'max'
-                            })
-                        });
-
-                        if (response.ok) {
-                            const data = await response.json();
-                            if (data.status === 'stream' || data.status === 'redirect') {
-                                return {
-                                    success: true,
-                                    platform: 'facebook',
-                                    title: 'Facebook 视频',
-                                    author: '点击下载',
-                                    downloads: [{
-                                        type: 'video',
-                                        label: '高清视频',
-                                        quality: 'HD',
-                                        url: data.url,
-                                        badge: '推荐'
-                                    }]
-                                };
-                            } else if (data.status === 'picker' && data.picker) {
-                                return {
-                                    success: true,
-                                    platform: 'facebook',
-                                    title: 'Facebook 媒体',
-                                    author: '多媒体内容',
-                                    downloads: data.picker.map((item, idx) => ({
-                                        type: item.type || 'video',
-                                        label: item.type === 'photo' ? `图片 ${idx + 1}` : `视频 ${idx + 1}`,
-                                        quality: item.type === 'photo' ? '图片' : 'HD',
-                                        url: item.url,
-                                        badge: idx === 0 ? '推荐' : null
-                                    }))
-                                };
-                            }
-                        }
-                    } catch (err) {
-                        console.log(`Cobalt ${instance} 失败:`, err.message);
-                    }
-                }
-            } catch (err) {
-                console.log('Cobalt API 失败:', err.message);
-            }
-
-            // 所有 API 失败，提供外部服务链接
             return {
                 success: true,
                 platform: 'facebook',
                 title: 'Facebook 视频',
-                author: '点击下方链接下载',
+                author: '选择下载服务',
                 isExternal: true,
                 externalServices: [
                     {
@@ -1628,13 +1500,13 @@
                         icon: '⚡'
                     },
                     {
-                        name: 'FBDown',
-                        url: `https://fbdown.net/?url=${encodeURIComponent(url)}`,
+                        name: 'FDown',
+                        url: `https://fdown.net/?url=${encodeURIComponent(url)}`,
                         icon: '📘'
                     },
                     {
-                        name: 'SaveFrom',
-                        url: `https://savefrom.net/?url=${encodeURIComponent(url)}`,
+                        name: 'SnapSave',
+                        url: `https://snapsave.app/zh?url=${encodeURIComponent(url)}`,
                         icon: '💾'
                     },
                     {
