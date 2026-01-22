@@ -303,7 +303,18 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 
 ### 23. IShell - AI 驱动的智能终端
 
-[IShell](https://ishell.app/) 是一款集成 AI 功能的终端工具。
+![IShell](images/ishell.webp)
+
+[IShell](https://ishell.cc/zh-CN) 是一款轻量又高性能的跨平台 SSH 工具，内置 AI 功能。
+
+**核心特性：**
+- **AI 赋能**：内置 70B 大模型，支持自然语言生成命令和脚本
+- **SFTP 集成**：支持文件夹上传下载、断点续传、代码高亮编辑
+- **云同步**：多端数据同步，支持云笔记功能
+- **跨平台**：支持 Windows、macOS、Linux、Android、iOS
+- **高颜值**：简洁现代的界面设计，支持自定义背景和主题
+
+**适用场景：** 需要 AI 辅助的运维工程师，追求美观界面的用户。
 
 ### 24. Git Bash - Git 用户必备
 
