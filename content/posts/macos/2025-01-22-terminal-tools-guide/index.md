@@ -268,9 +268,7 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 - 服务器监控
 - 中文界面友好
 
-### 18. Xterminal - 简洁的 SSH 客户端
 
-[Xterminal](https://www.xterminal.cn/) 是一款专注于简洁的 SSH 客户端。
 
 ### 19. T-Shell - 轻量级 SSH 管理
 
@@ -297,9 +295,20 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 
 [ConEmu](https://conemu.github.io/) 是一款功能丰富的 Windows 终端模拟器。
 
-### 22. Shell360 - 跨平台 Shell 工具
+### 22. Shell360 - 跨平台 SSH/SFTP 客户端
 
-[Shell360](https://shell360.com/) 支持多种操作系统和协议。
+![Shell360](images/shell360.webp)
+
+[Shell360](https://github.com/nashaofu/shell360) 是一款现代化的跨平台 SSH/SFTP 客户端，基于 Tauri 框架（TypeScript + React + Rust）构建。
+
+**核心特性：**
+- **跨平台**：支持 Windows、macOS、Linux、Android、iOS
+- **多种认证**：支持密码、公钥、证书等多种 SSH 认证方式
+- **端口转发**：支持本地、远程和动态（SOCKS）端口转发
+- **跳板机**：支持通过跳板机连接服务器
+- **主题定制**：内置多种终端配色方案，支持明暗主题切换
+
+**适用场景：** 需要在多端同步使用的开发者和运维人员。
 
 ### 23. IShell - AI 驱动的智能终端
 
