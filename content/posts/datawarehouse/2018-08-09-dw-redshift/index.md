@@ -1,6 +1,6 @@
 +++
 title = 'Amazon Redshift 性能优化指南：VACUUM、ANALYZE 与运维最佳实践'
-date = '2026-01-22T16:03:05+08:00'
+date = '2018-08-09T16:03:05+08:00'
 author = 'bruce'
 description = 'Amazon Redshift 数据仓库性能优化完全指南，详解 VACUUM 六种类型（FULL、DELETE ONLY、SORT ONLY、REINDEX、RECLUSTER、BOOST）、ANALYZE 统计更新、表设计最佳实践和常用运维命令。'
 toc = true
