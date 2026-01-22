@@ -1,5 +1,5 @@
 +++
-title = '2025年终端工具推荐：25款高效终端模拟器全面对比'
+title = '2025年终端工具推荐：23款高效终端模拟器全面对比'
 date = '2025-01-22'
 draft = false
 description = '全面盘点2025年最值得使用的终端工具，包括iTerm2、Warp、Ghostty、Tabby等跨平台终端模拟器，帮助开发者提升命令行工作效率。'
@@ -8,7 +8,7 @@ categories = ['macOS']
 keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tabby', 'Windows Terminal', '跨平台终端', 'SSH客户端', '命令行工具']
 +++
 
-作为开发者，终端是我们每天打交道最多的工具之一。一款好用的终端工具不仅能提升工作效率，还能让枯燥的命令行操作变得更加愉悦。本文将全面介绍 25 款主流终端工具，涵盖 Windows、macOS 和 Linux 三大平台，帮你找到最适合自己的那一款。
+作为开发者，终端是我们每天打交道最多的工具之一。一款好用的终端工具不仅能提升工作效率，还能让枯燥的命令行操作变得更加愉悦。本文将全面介绍 23 款主流终端工具，涵盖 Windows、macOS 和 Linux 三大平台，帮你找到最适合自己的那一款。
 
 <!--more-->
 
@@ -268,13 +268,7 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 - 服务器监控
 - 中文界面友好
 
-
-
-### 19. T-Shell - 轻量级 SSH 管理
-
-[T-Shell](https://github.com/niceit/t-shell) 是一款轻量级的 SSH 管理工具。
-
-### 20. sshx - 基于 Web 的协作终端
+### 18. sshx - 基于 Web 的协作终端
 
 ![sshx](images/sshx.webp)
 
@@ -289,13 +283,13 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 
 ## 其他特色终端
 
-### 21. ConEmu - Windows 终端增强
+### 19. ConEmu - Windows 终端增强
 
 ![ConEmu](images/conemu.webp)
 
 [ConEmu](https://conemu.github.io/) 是一款功能丰富的 Windows 终端模拟器。
 
-### 22. Shell360 - 跨平台 SSH/SFTP 客户端
+### 20. Shell360 - 跨平台 SSH/SFTP 客户端
 
 ![Shell360](images/shell360.webp)
 
@@ -310,7 +304,7 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 
 **适用场景：** 需要在多端同步使用的开发者和运维人员。
 
-### 23. IShell - AI 驱动的智能终端
+### 21. IShell - AI 驱动的智能终端
 
 ![IShell](images/ishell.webp)
 
@@ -325,7 +319,7 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 
 **适用场景：** 需要 AI 辅助的运维工程师，追求美观界面的用户。
 
-### 24. Git Bash - Git 用户必备
+### 22. Git Bash - Git 用户必备
 
 ![Git Bash](images/git-bash.webp)
 
@@ -337,7 +331,7 @@ keywords = ['终端工具', '终端模拟器', 'iTerm2', 'Warp', 'Ghostty', 'Tab
 
 **适用场景：** Windows 上使用 Git 的开发者。
 
-### 25. Zellij - 现代终端复用器
+### 23. Zellij - 现代终端复用器
 
 ![Zellij](images/zellij.webp)
 
