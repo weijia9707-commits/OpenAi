@@ -410,6 +410,19 @@
             transition: all 0.2s ease;
         }
 
+        .download-notice {
+            padding: 16px 20px;
+            background: rgba(0, 200, 83, 0.1);
+            border: 1px solid rgba(0, 200, 83, 0.3);
+            border-radius: 12px;
+            margin-bottom: 8px;
+        }
+
+        .download-notice p:first-child {
+            color: var(--success);
+            font-weight: 500;
+        }
+
         .download-option:hover {
             background: var(--bg-hover);
             border-color: rgba(255, 255, 255, 0.2);
@@ -1716,42 +1729,44 @@
                     downloadOptions.appendChild(option);
                 });
             } else if (result.videos && result.videos.length > 0) {
-                // YouTube 视频 - 多个画质选项
-                result.videos.forEach(video => {
+                // YouTube 视频 - 已解析到信息，但直接链接有 IP 限制
+                // 显示提示信息
+                const notice = document.createElement('div');
+                notice.className = 'download-notice';
+                notice.innerHTML = `
+                    <p>✅ 已解析到 ${result.videos.length} 个视频 + ${result.audios?.length || 0} 个音频</p>
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-top: 4px;">
+                        ⚠️ YouTube 直接链接有 IP 限制，请使用下方服务下载
+                    </p>
+                `;
+                downloadOptions.appendChild(notice);
+
+                // 获取原始 URL（从输入框）
+                const originalUrl = encodeURIComponent(urlInput.value.trim());
+
+                // 提供外部下载服务
+                const externalServices = [
+                    { name: 'Cobalt', url: `https://cobalt.tools/?url=${originalUrl}`, icon: '⚡', desc: '开源、快速、支持高清（推荐）' },
+                    { name: 'Y2Mate', url: 'https://www.y2mate.com/zh-cn/youtube', icon: '🎬', desc: '支持多种格式（需手动粘贴）' },
+                    { name: 'SaveFrom', url: `https://zh.savefrom.net/?url=${originalUrl}`, icon: '📥', desc: '老牌下载服务' },
+                    { name: '9xbuddy', url: `https://9xbuddy.com/process?url=${originalUrl}`, icon: '🎵', desc: '支持音频提取' }
+                ];
+
+                externalServices.forEach((service, idx) => {
                     const option = document.createElement('div');
                     option.className = 'download-option';
-                    const hasAudioLabel = video.hasAudio ? '' : '（无音轨）';
                     option.innerHTML = `
                         <div class="option-info">
-                            <div class="option-icon video">🎬</div>
+                            <div class="option-icon video">${service.icon}</div>
                             <div class="option-details">
-                                <h4>${video.quality}${hasAudioLabel}<span class="option-badge">${video.format || 'mp4'}</span></h4>
-                                <p>视频下载</p>
+                                <h4>${service.name}${idx === 0 ? '<span class="option-badge">推荐</span>' : ''}</h4>
+                                <p>${service.desc}</p>
                             </div>
                         </div>
-                        <button class="btn-option" onclick="downloadFile('${video.url}', '${result.title || '视频'}_${video.quality}')">下载</button>
+                        <a href="${service.url}" target="_blank" rel="noopener noreferrer" class="btn-option">打开 ↗</a>
                     `;
                     downloadOptions.appendChild(option);
                 });
-
-                // 添加音频选项
-                if (result.audios && result.audios.length > 0) {
-                    result.audios.forEach(audio => {
-                        const option = document.createElement('div');
-                        option.className = 'download-option';
-                        option.innerHTML = `
-                            <div class="option-info">
-                                <div class="option-icon audio">🎵</div>
-                                <div class="option-details">
-                                    <h4>纯音频 ${audio.quality}<span class="option-badge">${audio.format || 'mp3'}</span></h4>
-                                    <p>仅音频下载</p>
-                                </div>
-                            </div>
-                            <button class="btn-option" onclick="downloadFile('${audio.url}', '${result.title || '音频'}_${audio.quality}')">下载</button>
-                        `;
-                        downloadOptions.appendChild(option);
-                    });
-                }
             } else if (result.isExternal) {
                 // 使用外部服务下载
                 result.externalServices.forEach((service, idx) => {
