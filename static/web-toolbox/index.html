@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Toolbox - 在线前端工具集 | 免费实用的浏览器工具箱</title>
+    <title>Web Toolbox - Free Online Tools | 在线前端工具集 | M3U8 Downloader, JSON Viewer, Image Compressor</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Web Toolbox 是一套纯前端在线工具集，包含M3U8视频下载器、JSON查看器、SQLite浏览器、加解密工具、WebSocket测试、图片压缩、ICO制作、调色板、时间戳转换、音频剪辑等28+实用工具。无需安装，浏览器直接使用。">
-    <meta name="keywords" content="在线工具,前端工具,M3U8下载器,JSON格式化,SQLite查看器,加密解密,Base64编码,WebSocket测试,图片压缩,ICO制作,调色板,世界时钟,Whois查询,时间戳转换,音频剪辑,图片编辑,正则表达式,PDF合并,证件照,文件重命名,免费工具">
+    <meta name="description" content="Web Toolbox: 30+ free online browser tools. M3U8 video downloader, JSON viewer, SQLite browser, crypto encoder, image compressor, timestamp converter, audio cutter & more. No installation needed. | 纯前端在线工具集，包含M3U8下载器、JSON查看器、图片压缩等30+实用工具，无需安装。">
+    <meta name="keywords" content="online tools,free tools,M3U8 downloader,JSON viewer,JSON formatter,SQLite viewer,image compressor,timestamp converter,Base64 encoder,WebSocket tester,ICO maker,color palette,regex tester,audio cutter,video downloader,在线工具,前端工具,M3U8下载器,JSON格式化,图片压缩,时间戳转换,免费工具">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/">
@@ -15,10 +15,11 @@
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/">
-    <meta property="og:title" content="Web Toolbox - 在线前端工具集 | 免费实用的浏览器工具箱">
-    <meta property="og:description" content="纯前端在线工具集，包含M3U8下载、JSON格式化、SQLite浏览、加解密编码、图片压缩等28+实用工具。无需安装，浏览器直接使用。">
+    <meta property="og:title" content="Web Toolbox - Free Online Tools | M3U8 Downloader, JSON Viewer & More">
+    <meta property="og:description" content="30+ free online browser tools: M3U8 video downloader, JSON viewer, image compressor, timestamp converter, audio cutter & more. No installation needed, works directly in browser.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/og-image.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
@@ -26,8 +27,8 @@
     <meta name="twitter:site" content="@heyuan110">
     <meta name="twitter:creator" content="@heyuan110">
     <meta name="twitter:url" content="https://www.heyuan110.com/web-toolbox/">
-    <meta name="twitter:title" content="Web Toolbox - 在线前端工具集">
-    <meta name="twitter:description" content="纯前端在线工具集，包含M3U8下载、JSON格式化、加解密编码、图片压缩等28+实用工具。">
+    <meta name="twitter:title" content="Web Toolbox - Free Online Tools | 30+ Browser Utilities">
+    <meta name="twitter:description" content="Free online tools: M3U8 downloader, JSON viewer, image compressor, timestamp converter, audio cutter & more. No install needed.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/og-image.png">
 
     <!-- Theme & PWA -->
@@ -47,15 +48,16 @@
         "@context": "https://schema.org",
         "@type": "WebApplication",
         "name": "Web Toolbox",
-        "alternateName": "在线前端工具集",
+        "alternateName": ["Free Online Tools", "在线前端工具集"],
         "url": "https://www.heyuan110.com/web-toolbox/",
-        "description": "一套纯前端的实用工具集，包含M3U8视频下载、JSON格式化、SQLite浏览、加解密编码、图片压缩、时间戳转换、音频剪辑等28+在线工具",
+        "description": "30+ free online browser tools: M3U8 video downloader, JSON viewer, SQLite browser, image compressor, timestamp converter, audio cutter and more. No installation needed.",
+        "inLanguage": ["en", "zh-CN", "fr", "es"],
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "CNY"
+            "priceCurrency": "USD"
         },
         "author": {
             "@type": "Person",
@@ -63,35 +65,35 @@
             "url": "https://github.com/heyuan110"
         },
         "hasPart": [
-            {"@type": "WebApplication", "name": "M3U8 视频下载器", "url": "https://www.heyuan110.com/web-toolbox/m3u8-downloader.html"},
-            {"@type": "WebApplication", "name": "JSON 查看器", "url": "https://www.heyuan110.com/web-toolbox/json-viewer.html"},
-            {"@type": "WebApplication", "name": "SQLite 查看器", "url": "https://www.heyuan110.com/web-toolbox/sqlite-viewer.html"},
-            {"@type": "WebApplication", "name": "加解密编码工具箱", "url": "https://www.heyuan110.com/web-toolbox/crypto-tools.html"},
-            {"@type": "WebApplication", "name": "WebSocket 测试工具", "url": "https://www.heyuan110.com/web-toolbox/websocket-tester.html"},
-            {"@type": "WebApplication", "name": "在线涂鸦画板", "url": "https://www.heyuan110.com/web-toolbox/paint-board.html"},
-            {"@type": "WebApplication", "name": "在线调色板", "url": "https://www.heyuan110.com/web-toolbox/color-palette.html"},
-            {"@type": "WebApplication", "name": "世界时间查询", "url": "https://www.heyuan110.com/web-toolbox/world-clock.html"},
-            {"@type": "WebApplication", "name": "Whois 域名查询", "url": "https://www.heyuan110.com/web-toolbox/whois-query.html"},
-            {"@type": "WebApplication", "name": "ICO 图标制作", "url": "https://www.heyuan110.com/web-toolbox/ico-maker.html"},
-            {"@type": "WebApplication", "name": "图片压缩工具", "url": "https://www.heyuan110.com/web-toolbox/image-compressor.html"},
-            {"@type": "WebApplication", "name": "万能计算器", "url": "https://www.heyuan110.com/web-toolbox/calculator.html"},
-            {"@type": "WebApplication", "name": "IP归属地查询", "url": "https://www.heyuan110.com/web-toolbox/ip-lookup.html"},
-            {"@type": "WebApplication", "name": "定时刷新网页", "url": "https://www.heyuan110.com/web-toolbox/page-refresher.html"},
-            {"@type": "WebApplication", "name": "正则表达式测试", "url": "https://www.heyuan110.com/web-toolbox/regex-tester.html"},
-            {"@type": "WebApplication", "name": "证件照裁剪 & 透明水印", "url": "https://www.heyuan110.com/web-toolbox/id-photo-tool.html"},
-            {"@type": "WebApplication", "name": "图片合并为PDF", "url": "https://www.heyuan110.com/web-toolbox/image-to-pdf.html"},
-            {"@type": "WebApplication", "name": "文件批量重命名", "url": "https://www.heyuan110.com/web-toolbox/file-renamer.html"},
-            {"@type": "WebApplication", "name": "手持弹幕", "url": "https://www.heyuan110.com/web-toolbox/handheld-danmaku.html"},
-            {"@type": "WebApplication", "name": "在线节拍器", "url": "https://www.heyuan110.com/web-toolbox/metronome.html"},
-            {"@type": "WebApplication", "name": "亲戚关系计算器", "url": "https://www.heyuan110.com/web-toolbox/relative-calculator.html"},
-            {"@type": "WebApplication", "name": "图片格式转换", "url": "https://www.heyuan110.com/web-toolbox/image-converter.html"},
-            {"@type": "WebApplication", "name": "音频剪辑", "url": "https://www.heyuan110.com/web-toolbox/audio-cutter.html"},
-            {"@type": "WebApplication", "name": "中文简繁体转换", "url": "https://www.heyuan110.com/web-toolbox/chinese-converter.html"},
-            {"@type": "WebApplication", "name": "Claude Code 历史记录", "url": "https://www.heyuan110.com/web-toolbox/claude-history-viewer.html"},
-            {"@type": "WebApplication", "name": "在线图片编辑器", "url": "https://www.heyuan110.com/web-toolbox/image-editor.html"},
-            {"@type": "WebApplication", "name": "时间戳转换工具", "url": "https://www.heyuan110.com/web-toolbox/timestamp-converter.html"},
-            {"@type": "WebApplication", "name": "社交视频下载器", "url": "https://www.heyuan110.com/web-toolbox/social-video-downloader.html"},
-            {"@type": "WebApplication", "name": "Tweet Deleter 推文删除", "url": "https://github.com/heyuan110/tweet-deleter"}
+            {"@type": "WebApplication", "name": "M3U8 Video Downloader", "url": "https://www.heyuan110.com/web-toolbox/m3u8-downloader.html"},
+            {"@type": "WebApplication", "name": "JSON Viewer", "url": "https://www.heyuan110.com/web-toolbox/json-viewer.html"},
+            {"@type": "WebApplication", "name": "SQLite Viewer", "url": "https://www.heyuan110.com/web-toolbox/sqlite-viewer.html"},
+            {"@type": "WebApplication", "name": "Crypto & Encoding Toolkit", "url": "https://www.heyuan110.com/web-toolbox/crypto-tools.html"},
+            {"@type": "WebApplication", "name": "WebSocket Tester", "url": "https://www.heyuan110.com/web-toolbox/websocket-tester.html"},
+            {"@type": "WebApplication", "name": "Online Paint Board", "url": "https://www.heyuan110.com/web-toolbox/paint-board.html"},
+            {"@type": "WebApplication", "name": "Color Palette", "url": "https://www.heyuan110.com/web-toolbox/color-palette.html"},
+            {"@type": "WebApplication", "name": "World Clock", "url": "https://www.heyuan110.com/web-toolbox/world-clock.html"},
+            {"@type": "WebApplication", "name": "Whois Lookup", "url": "https://www.heyuan110.com/web-toolbox/whois-query.html"},
+            {"@type": "WebApplication", "name": "ICO Maker", "url": "https://www.heyuan110.com/web-toolbox/ico-maker.html"},
+            {"@type": "WebApplication", "name": "Image Compressor", "url": "https://www.heyuan110.com/web-toolbox/image-compressor.html"},
+            {"@type": "WebApplication", "name": "All-in-One Calculator", "url": "https://www.heyuan110.com/web-toolbox/calculator.html"},
+            {"@type": "WebApplication", "name": "IP Geolocation", "url": "https://www.heyuan110.com/web-toolbox/ip-lookup.html"},
+            {"@type": "WebApplication", "name": "Page Auto Refresher", "url": "https://www.heyuan110.com/web-toolbox/page-refresher.html"},
+            {"@type": "WebApplication", "name": "Regex Tester", "url": "https://www.heyuan110.com/web-toolbox/regex-tester.html"},
+            {"@type": "WebApplication", "name": "ID Photo Editor & Watermark", "url": "https://www.heyuan110.com/web-toolbox/id-photo-tool.html"},
+            {"@type": "WebApplication", "name": "Images to PDF", "url": "https://www.heyuan110.com/web-toolbox/image-to-pdf.html"},
+            {"@type": "WebApplication", "name": "Batch File Renamer", "url": "https://www.heyuan110.com/web-toolbox/file-renamer.html"},
+            {"@type": "WebApplication", "name": "LED Scrolling Banner", "url": "https://www.heyuan110.com/web-toolbox/handheld-danmaku.html"},
+            {"@type": "WebApplication", "name": "Online Metronome", "url": "https://www.heyuan110.com/web-toolbox/metronome.html"},
+            {"@type": "WebApplication", "name": "Family Relationship Calculator", "url": "https://www.heyuan110.com/web-toolbox/relative-calculator.html"},
+            {"@type": "WebApplication", "name": "Image Format Converter", "url": "https://www.heyuan110.com/web-toolbox/image-converter.html"},
+            {"@type": "WebApplication", "name": "Audio Cutter", "url": "https://www.heyuan110.com/web-toolbox/audio-cutter.html"},
+            {"@type": "WebApplication", "name": "Chinese Converter", "url": "https://www.heyuan110.com/web-toolbox/chinese-converter.html"},
+            {"@type": "WebApplication", "name": "Claude Code History Viewer", "url": "https://www.heyuan110.com/web-toolbox/claude-history-viewer.html"},
+            {"@type": "WebApplication", "name": "Online Image Editor", "url": "https://www.heyuan110.com/web-toolbox/image-editor.html"},
+            {"@type": "WebApplication", "name": "Timestamp Converter", "url": "https://www.heyuan110.com/web-toolbox/timestamp-converter.html"},
+            {"@type": "WebApplication", "name": "Social Video Downloader", "url": "https://www.heyuan110.com/web-toolbox/social-video-downloader.html"},
+            {"@type": "WebApplication", "name": "Tweet Deleter", "url": "https://github.com/heyuan110/tweet-deleter"}
         ]
     }
     </script>
@@ -120,6 +122,7 @@
         header {
             text-align: center;
             margin-bottom: 60px;
+            position: relative;
         }
 
         h1 {
@@ -424,550 +427,650 @@
                 padding: 20px 16px;
             }
         }
+
+        /* 语言切换器样式 - 下拉菜单 */
+        .lang-switcher {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-current {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #e4e4e7;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-current:hover {
+            background: rgba(124, 58, 237, 0.2);
+            border-color: rgba(124, 58, 237, 0.4);
+        }
+
+        .lang-current::after {
+            content: '▼';
+            font-size: 0.6rem;
+            opacity: 0.7;
+            transition: transform 0.2s ease;
+        }
+
+        .lang-dropdown.open .lang-current::after {
+            transform: rotate(180deg);
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            background: rgba(26, 26, 46, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            min-width: 140px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s ease;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .lang-dropdown.open .lang-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-btn {
+            display: block;
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #a1a1aa;
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: left;
+            transition: all 0.15s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(124, 58, 237, 0.2);
+            color: #e4e4e7;
+        }
+
+        .lang-btn.active {
+            background: rgba(124, 58, 237, 0.3);
+            color: #a78bfa;
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
+            <!-- 语言切换器 - 右上角下拉菜单 -->
+            <div class="lang-switcher" id="langSwitcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
             <h1>🛠️ Web Toolbox</h1>
-            <p class="subtitle">一套纯前端的实用工具集，无需安装，浏览器直接打开即可使用</p>
-            <span class="badge">100% 前端 · 无需后端 · 开箱即用</span>
+            <p class="subtitle" data-i18n="subtitle">一套纯前端的实用工具集，无需安装，浏览器直接打开即可使用</p>
+            <span class="badge" data-i18n="badge">100% 前端 · 无需后端 · 开箱即用</span>
         </header>
 
         <!-- 搜索框 -->
         <div class="search-container">
             <span class="search-icon">🔍</span>
-            <input type="text" class="search-input" id="searchInput" placeholder="搜索工具名称、功能或关键词..." autocomplete="off">
-            <button class="search-clear" id="searchClear" title="清除">✕</button>
+            <input type="text" class="search-input" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="搜索工具名称、功能或关键词..." autocomplete="off">
+            <button class="search-clear" id="searchClear" data-i18n-title="clear" title="清除">✕</button>
         </div>
         <div class="search-result-count" id="resultCount"></div>
 
         <!-- 热门搜索词 -->
         <div class="hot-tags" id="hotTags">
-            <span class="hot-tags-label">🔥 热门：</span>
-            <span class="hot-tag" data-query="图片">图片</span>
-            <span class="hot-tag" data-query="视频">视频</span>
-            <span class="hot-tag" data-query="转换">转换</span>
-            <span class="hot-tag" data-query="加密">加密</span>
+            <span class="hot-tags-label" data-i18n="hotLabel">🔥 热门：</span>
+            <span class="hot-tag" data-query="图片" data-i18n="tagImage">图片</span>
+            <span class="hot-tag" data-query="视频" data-i18n="tagVideo">视频</span>
+            <span class="hot-tag" data-query="转换" data-i18n="tagConvert">转换</span>
+            <span class="hot-tag" data-query="加密" data-i18n="tagEncrypt">加密</span>
             <span class="hot-tag" data-query="JSON">JSON</span>
-            <span class="hot-tag" data-query="计算">计算</span>
-            <span class="hot-tag" data-query="下载">下载</span>
+            <span class="hot-tag" data-query="计算" data-i18n="tagCalculate">计算</span>
+            <span class="hot-tag" data-query="下载" data-i18n="tagDownload">下载</span>
         </div>
 
         <div class="tools-grid" id="toolsGrid">
             <!-- M3U8 下载器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="m3u8">
                 <img src="screenshots/m3u8-downloader.webp" alt="M3U8 视频下载器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🎬</div>
-                    <h2 class="tool-title">M3U8 视频下载器</h2>
-                    <p class="tool-desc">批量下载 M3U8 流媒体视频并保存为本地 MP4 文件</p>
+                    <h2 class="tool-title" data-i18n="tool_m3u8_title">M3U8 视频下载器</h2>
+                    <p class="tool-desc" data-i18n="tool_m3u8_desc">批量下载 M3U8 流媒体视频并保存为本地 MP4 文件</p>
                     <ul class="tool-features">
-                        <li>单条或批量导入 M3U8 链接</li>
-                        <li>实时视频预览（自动播放）</li>
-                        <li>下载进度可视化</li>
-                        <li>支持暂停/继续下载</li>
+                        <li data-i18n="tool_m3u8_f1">单条或批量导入 M3U8 链接</li>
+                        <li data-i18n="tool_m3u8_f2">实时视频预览（自动播放）</li>
+                        <li data-i18n="tool_m3u8_f3">下载进度可视化</li>
+                        <li data-i18n="tool_m3u8_f4">支持暂停/继续下载</li>
                     </ul>
-                    <a href="m3u8-downloader.html" class="tool-btn">打开工具 →</a>
+                    <a href="m3u8-downloader.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- JSON 查看器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="json">
                 <img src="screenshots/json-viewer.webp" alt="JSON 查看器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📋</div>
-                    <h2 class="tool-title">JSON 查看器</h2>
-                    <p class="tool-desc">美观的 JSON 数据可视化与格式化工具</p>
+                    <h2 class="tool-title" data-i18n="tool_json_title">JSON 查看器</h2>
+                    <p class="tool-desc" data-i18n="tool_json_desc">美观的 JSON 数据可视化与格式化工具</p>
                     <ul class="tool-features">
-                        <li>语法高亮显示</li>
-                        <li>节点折叠/展开</li>
-                        <li>关键字搜索过滤</li>
-                        <li>支持粘贴或上传文件</li>
+                        <li data-i18n="tool_json_f1">语法高亮显示</li>
+                        <li data-i18n="tool_json_f2">节点折叠/展开</li>
+                        <li data-i18n="tool_json_f3">关键字搜索过滤</li>
+                        <li data-i18n="tool_json_f4">支持粘贴或上传文件</li>
                     </ul>
-                    <a href="json-viewer.html" class="tool-btn">打开工具 →</a>
+                    <a href="json-viewer.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- SQLite 查看器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="sqlite">
                 <img src="screenshots/sqlite-viewer.webp" alt="SQLite 查看器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🗄️</div>
-                    <h2 class="tool-title">SQLite 查看器</h2>
-                    <p class="tool-desc">在浏览器中直接查看和查询 SQLite 数据库</p>
+                    <h2 class="tool-title" data-i18n="tool_sqlite_title">SQLite 查看器</h2>
+                    <p class="tool-desc" data-i18n="tool_sqlite_desc">在浏览器中直接查看和查询 SQLite 数据库</p>
                     <ul class="tool-features">
-                        <li>拖拽上传 .db / .sqlite 文件</li>
-                        <li>浏览所有表结构</li>
-                        <li>执行自定义 SQL 查询</li>
-                        <li>查询结果表格展示</li>
+                        <li data-i18n="tool_sqlite_f1">拖拽上传 .db / .sqlite 文件</li>
+                        <li data-i18n="tool_sqlite_f2">浏览所有表结构</li>
+                        <li data-i18n="tool_sqlite_f3">执行自定义 SQL 查询</li>
+                        <li data-i18n="tool_sqlite_f4">查询结果表格展示</li>
                     </ul>
-                    <a href="sqlite-viewer.html" class="tool-btn">打开工具 →</a>
+                    <a href="sqlite-viewer.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- OctoVideoSniffer 八爪鱼 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="octosniffer">
                 <img src="screenshots/OctoVideoSniffer.webp" alt="OctoVideoSniffer 截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🐙</div>
-                    <h2 class="tool-title">OctoVideoSniffer 八爪鱼</h2>
-                    <p class="tool-desc">Chrome/Edge 浏览器扩展，自动检测并提取网页中的视频链接</p>
+                    <h2 class="tool-title" data-i18n="tool_octo_title">OctoVideoSniffer 八爪鱼</h2>
+                    <p class="tool-desc" data-i18n="tool_octo_desc">Chrome/Edge 浏览器扩展，自动检测并提取网页中的视频链接</p>
                     <ul class="tool-features">
-                        <li>智能识别网页视频资源链接</li>
-                        <li>支持 .m3u8 / .mp4 / .ts 等格式</li>
-                        <li>简洁的界面，一键复制链接</li>
-                        <li>轻量快速，开箱即用</li>
+                        <li data-i18n="tool_octo_f1">智能识别网页视频资源链接</li>
+                        <li data-i18n="tool_octo_f2">支持 .m3u8 / .mp4 / .ts 等格式</li>
+                        <li data-i18n="tool_octo_f3">简洁的界面，一键复制链接</li>
+                        <li data-i18n="tool_octo_f4">轻量快速，开箱即用</li>
                     </ul>
-                    <a href="https://github.com/heyuan110/OctoVideoSniffer" target="_blank" class="tool-btn">查看项目 →</a>
+                    <a href="https://github.com/heyuan110/OctoVideoSniffer" target="_blank" class="tool-btn" data-i18n="viewProject">查看项目 →</a>
                 </div>
             </div>
 
             <!-- 加解密编码工具箱 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="crypto">
                 <img src="screenshots/crypto-tools.webp" alt="加解密编码工具箱截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🔐</div>
-                    <h2 class="tool-title">加解密编码工具箱</h2>
-                    <p class="tool-desc">集成 20+ 种加密解密和编码转换工具的综合工具箱</p>
+                    <h2 class="tool-title" data-i18n="tool_crypto_title">加解密编码工具箱</h2>
+                    <p class="tool-desc" data-i18n="tool_crypto_desc">集成 20+ 种加密解密和编码转换工具的综合工具箱</p>
                     <ul class="tool-features">
-                        <li>MD5/SHA/AES/DES 等加密算法</li>
-                        <li>Base64/URL/Unicode 编码转换</li>
-                        <li>摩尔斯电码/条形码生成器</li>
-                        <li>密码生成/UUID/IP 转换等</li>
+                        <li data-i18n="tool_crypto_f1">MD5/SHA/AES/DES 等加密算法</li>
+                        <li data-i18n="tool_crypto_f2">Base64/URL/Unicode 编码转换</li>
+                        <li data-i18n="tool_crypto_f3">摩尔斯电码/条形码生成器</li>
+                        <li data-i18n="tool_crypto_f4">密码生成/UUID/IP 转换等</li>
                     </ul>
-                    <a href="crypto-tools.html" class="tool-btn">打开工具 →</a>
+                    <a href="crypto-tools.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- WebSocket 测试工具 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="websocket">
                 <img src="screenshots/websocket-tester.webp" alt="WebSocket 测试工具截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🔌</div>
-                    <h2 class="tool-title">WebSocket 测试工具</h2>
-                    <p class="tool-desc">基于 HTML5 WebSocket 的在线调试工具，支持内网和外网</p>
+                    <h2 class="tool-title" data-i18n="tool_ws_title">WebSocket 测试工具</h2>
+                    <p class="tool-desc" data-i18n="tool_ws_desc">基于 HTML5 WebSocket 的在线调试工具，支持内网和外网</p>
                     <ul class="tool-features">
-                        <li>支持 ws:// 和 wss:// 协议</li>
-                        <li>实时消息收发与日志显示</li>
-                        <li>连接状态监控与统计</li>
-                        <li>支持 JSON 格式化发送</li>
+                        <li data-i18n="tool_ws_f1">支持 ws:// 和 wss:// 协议</li>
+                        <li data-i18n="tool_ws_f2">实时消息收发与日志显示</li>
+                        <li data-i18n="tool_ws_f3">连接状态监控与统计</li>
+                        <li data-i18n="tool_ws_f4">支持 JSON 格式化发送</li>
                     </ul>
-                    <a href="websocket-tester.html" class="tool-btn">打开工具 →</a>
+                    <a href="websocket-tester.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 在线涂鸦画板 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="paint">
                 <img src="screenshots/paint-board.webp" alt="在线涂鸦画板截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🎨</div>
-                    <h2 class="tool-title">在线涂鸦画板</h2>
-                    <p class="tool-desc">功能丰富的在线画板，尽情发挥您的绘画艺术天赋</p>
+                    <h2 class="tool-title" data-i18n="tool_paint_title">在线涂鸦画板</h2>
+                    <p class="tool-desc" data-i18n="tool_paint_desc">功能丰富的在线画板，尽情发挥您的绘画艺术天赋</p>
                     <ul class="tool-features">
-                        <li>画笔/橡皮/填充/形状工具</li>
-                        <li>自定义颜色和透明度</li>
-                        <li>撤销/重做/自定义画布</li>
-                        <li>保存为 PNG/JPG 格式</li>
+                        <li data-i18n="tool_paint_f1">画笔/橡皮/填充/形状工具</li>
+                        <li data-i18n="tool_paint_f2">自定义颜色和透明度</li>
+                        <li data-i18n="tool_paint_f3">撤销/重做/自定义画布</li>
+                        <li data-i18n="tool_paint_f4">保存为 PNG/JPG 格式</li>
                     </ul>
-                    <a href="paint-board.html" class="tool-btn">打开工具 →</a>
+                    <a href="paint-board.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 在线调色板 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="color">
                 <img src="screenshots/color-palette.webp" alt="在线调色板截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🎨</div>
-                    <h2 class="tool-title">在线调色板</h2>
-                    <p class="tool-desc">快速查找颜色编码，支持多种颜色格式转换</p>
+                    <h2 class="tool-title" data-i18n="tool_color_title">在线调色板</h2>
+                    <p class="tool-desc" data-i18n="tool_color_desc">快速查找颜色编码，支持多种颜色格式转换</p>
                     <ul class="tool-features">
-                        <li>HEX/RGB/HSL/CMYK 多格式</li>
-                        <li>互补色/相似色/三等分色</li>
-                        <li>收藏常用颜色</li>
-                        <li>一键复制颜色代码</li>
+                        <li data-i18n="tool_color_f1">HEX/RGB/HSL/CMYK 多格式</li>
+                        <li data-i18n="tool_color_f2">互补色/相似色/三等分色</li>
+                        <li data-i18n="tool_color_f3">收藏常用颜色</li>
+                        <li data-i18n="tool_color_f4">一键复制颜色代码</li>
                     </ul>
-                    <a href="color-palette.html" class="tool-btn">打开工具 →</a>
+                    <a href="color-palette.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 世界时间查询 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="worldclock">
                 <img src="screenshots/world-clock.webp" alt="世界时间查询截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🌍</div>
-                    <h2 class="tool-title">世界时间查询</h2>
-                    <p class="tool-desc">实时查看全球各地时间，支持时差计算</p>
+                    <h2 class="tool-title" data-i18n="tool_clock_title">世界时间查询</h2>
+                    <p class="tool-desc" data-i18n="tool_clock_desc">实时查看全球各地时间，支持时差计算</p>
                     <ul class="tool-features">
-                        <li>全球 25+ 主要城市时间</li>
-                        <li>实时更新，日夜指示</li>
-                        <li>自动识别当前时区</li>
-                        <li>时差计算与城市搜索</li>
+                        <li data-i18n="tool_clock_f1">全球 25+ 主要城市时间</li>
+                        <li data-i18n="tool_clock_f2">实时更新，日夜指示</li>
+                        <li data-i18n="tool_clock_f3">自动识别当前时区</li>
+                        <li data-i18n="tool_clock_f4">时差计算与城市搜索</li>
                     </ul>
-                    <a href="world-clock.html" class="tool-btn">打开工具 →</a>
+                    <a href="world-clock.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- Whois 域名查询 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="whois">
                 <img src="screenshots/whois-query.webp" alt="Whois 域名查询截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🔍</div>
-                    <h2 class="tool-title">Whois 域名查询</h2>
-                    <p class="tool-desc">查询域名注册信息、所有者、注册商、有效期等详细信息</p>
+                    <h2 class="tool-title" data-i18n="tool_whois_title">Whois 域名查询</h2>
+                    <p class="tool-desc" data-i18n="tool_whois_desc">查询域名注册信息、所有者、注册商、有效期等详细信息</p>
                     <ul class="tool-features">
-                        <li>域名注册商/所有者信息</li>
-                        <li>注册/到期日期与域名年龄</li>
-                        <li>DNS 名称服务器列表</li>
-                        <li>域名状态与原始数据</li>
+                        <li data-i18n="tool_whois_f1">域名注册商/所有者信息</li>
+                        <li data-i18n="tool_whois_f2">注册/到期日期与域名年龄</li>
+                        <li data-i18n="tool_whois_f3">DNS 名称服务器列表</li>
+                        <li data-i18n="tool_whois_f4">域名状态与原始数据</li>
                     </ul>
-                    <a href="whois-query.html" class="tool-btn">打开工具 →</a>
+                    <a href="whois-query.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- ICO 图标制作 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="ico">
                 <img src="screenshots/ico-maker.webp" alt="ICO 图标制作截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🎨</div>
-                    <h2 class="tool-title">ICO 图标制作</h2>
-                    <p class="tool-desc">将 PNG、JPG、GIF 图片转换为 ICO 图标文件</p>
+                    <h2 class="tool-title" data-i18n="tool_ico_title">ICO 图标制作</h2>
+                    <p class="tool-desc" data-i18n="tool_ico_desc">将 PNG、JPG、GIF 图片转换为 ICO 图标文件</p>
                     <ul class="tool-features">
-                        <li>支持 PNG/JPG/GIF 格式转换</li>
-                        <li>裁剪功能，多尺寸选择</li>
-                        <li>实时预览各尺寸效果</li>
-                        <li>一键生成并下载 ICO</li>
+                        <li data-i18n="tool_ico_f1">支持 PNG/JPG/GIF 格式转换</li>
+                        <li data-i18n="tool_ico_f2">裁剪功能，多尺寸选择</li>
+                        <li data-i18n="tool_ico_f3">实时预览各尺寸效果</li>
+                        <li data-i18n="tool_ico_f4">一键生成并下载 ICO</li>
                     </ul>
-                    <a href="ico-maker.html" class="tool-btn">打开工具 →</a>
+                    <a href="ico-maker.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 图片压缩工具 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="compress">
                 <img src="screenshots/image-compressor.webp" alt="图片压缩工具截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📦</div>
-                    <h2 class="tool-title">图片压缩工具</h2>
-                    <p class="tool-desc">批量压缩图片，保持清晰度的同时大幅减小文件体积</p>
+                    <h2 class="tool-title" data-i18n="tool_compress_title">图片压缩工具</h2>
+                    <p class="tool-desc" data-i18n="tool_compress_desc">批量压缩图片，保持清晰度的同时大幅减小文件体积</p>
                     <ul class="tool-features">
-                        <li>支持批量/文件夹导入</li>
-                        <li>可调节压缩质量和尺寸</li>
-                        <li>支持 JPG/PNG/WebP 输出</li>
-                        <li>一键打包下载全部</li>
+                        <li data-i18n="tool_compress_f1">支持批量/文件夹导入</li>
+                        <li data-i18n="tool_compress_f2">可调节压缩质量和尺寸</li>
+                        <li data-i18n="tool_compress_f3">支持 JPG/PNG/WebP 输出</li>
+                        <li data-i18n="tool_compress_f4">一键打包下载全部</li>
                     </ul>
-                    <a href="image-compressor.html" class="tool-btn">打开工具 →</a>
+                    <a href="image-compressor.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 万能计算器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="calc">
                 <img src="screenshots/calculator.webp" alt="万能计算器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🧮</div>
-                    <h2 class="tool-title">万能计算器</h2>
-                    <p class="tool-desc">集成科学计算器、利率计算器、子网掩码及16种单位换算工具</p>
+                    <h2 class="tool-title" data-i18n="tool_calc_title">万能计算器</h2>
+                    <p class="tool-desc" data-i18n="tool_calc_desc">集成科学计算器、利率计算器、子网掩码及16种单位换算工具</p>
                     <ul class="tool-features">
-                        <li>科学计算器（三角/对数/阶乘）</li>
-                        <li>贷款利率计算器</li>
-                        <li>子网掩码/IP 计算器</li>
-                        <li>长度/面积/体积/温度等换算</li>
+                        <li data-i18n="tool_calc_f1">科学计算器（三角/对数/阶乘）</li>
+                        <li data-i18n="tool_calc_f2">贷款利率计算器</li>
+                        <li data-i18n="tool_calc_f3">子网掩码/IP 计算器</li>
+                        <li data-i18n="tool_calc_f4">长度/面积/体积/温度等换算</li>
                     </ul>
-                    <a href="calculator.html" class="tool-btn">打开工具 →</a>
+                    <a href="calculator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- IP归属地查询 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="ip">
                 <img src="screenshots/ip-lookup.webp" alt="IP归属地查询截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🌍</div>
-                    <h2 class="tool-title">IP归属地查询</h2>
-                    <p class="tool-desc">查询IP地址或域名的地理位置、运营商等信息</p>
+                    <h2 class="tool-title" data-i18n="tool_ip_title">IP归属地查询</h2>
+                    <p class="tool-desc" data-i18n="tool_ip_desc">查询IP地址或域名的地理位置、运营商等信息</p>
                     <ul class="tool-features">
-                        <li>IP/域名地理位置查询</li>
-                        <li>运营商、IP段范围信息</li>
-                        <li>显示本机IP及归属地</li>
-                        <li>浏览器、系统信息检测</li>
+                        <li data-i18n="tool_ip_f1">IP/域名地理位置查询</li>
+                        <li data-i18n="tool_ip_f2">运营商、IP段范围信息</li>
+                        <li data-i18n="tool_ip_f3">显示本机IP及归属地</li>
+                        <li data-i18n="tool_ip_f4">浏览器、系统信息检测</li>
                     </ul>
-                    <a href="ip-lookup.html" class="tool-btn">打开工具 →</a>
+                    <a href="ip-lookup.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 定时刷新网页 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="refresh">
                 <img src="screenshots/page-refresher.webp" alt="定时刷新网页截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🔄</div>
-                    <h2 class="tool-title">定时刷新网页</h2>
-                    <p class="tool-desc">在线定时自动刷新网页，可用于压力测试和增加请求量</p>
+                    <h2 class="tool-title" data-i18n="tool_refresh_title">定时刷新网页</h2>
+                    <p class="tool-desc" data-i18n="tool_refresh_desc">在线定时自动刷新网页，可用于压力测试和增加请求量</p>
                     <ul class="tool-features">
-                        <li>自定义刷新间隔时间</li>
-                        <li>刷新次数限制设置</li>
-                        <li>实时刷新日志记录</li>
-                        <li>内嵌预览目标页面</li>
+                        <li data-i18n="tool_refresh_f1">自定义刷新间隔时间</li>
+                        <li data-i18n="tool_refresh_f2">刷新次数限制设置</li>
+                        <li data-i18n="tool_refresh_f3">实时刷新日志记录</li>
+                        <li data-i18n="tool_refresh_f4">内嵌预览目标页面</li>
                     </ul>
-                    <a href="page-refresher.html" class="tool-btn">打开工具 →</a>
+                    <a href="page-refresher.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 正则表达式测试 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="regex">
                 <img src="screenshots/regex-tester.webp" alt="正则表达式测试截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🔍</div>
-                    <h2 class="tool-title">正则表达式测试</h2>
-                    <p class="tool-desc">在线正则表达式验证、匹配、提取工具，支持多语言代码生成</p>
+                    <h2 class="tool-title" data-i18n="tool_regex_title">正则表达式测试</h2>
+                    <p class="tool-desc" data-i18n="tool_regex_desc">在线正则表达式验证、匹配、提取工具，支持多语言代码生成</p>
                     <ul class="tool-features">
-                        <li>实时正则匹配高亮显示</li>
-                        <li>常用正则表达式模板</li>
-                        <li>7种编程语言代码生成</li>
-                        <li>元字符和语法参考文档</li>
+                        <li data-i18n="tool_regex_f1">实时正则匹配高亮显示</li>
+                        <li data-i18n="tool_regex_f2">常用正则表达式模板</li>
+                        <li data-i18n="tool_regex_f3">7种编程语言代码生成</li>
+                        <li data-i18n="tool_regex_f4">元字符和语法参考文档</li>
                     </ul>
-                    <a href="regex-tester.html" class="tool-btn">打开工具 →</a>
+                    <a href="regex-tester.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 证件照裁剪 & 透明水印 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="idphoto">
                 <img src="screenshots/id-photo-tool.webp" alt="证件照裁剪 & 透明水印截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📷</div>
-                    <h2 class="tool-title">证件照裁剪 & 透明水印</h2>
-                    <p class="tool-desc">本地离线处理证件照：裁剪、改尺寸、压缩、添加透明文字水印</p>
+                    <h2 class="tool-title" data-i18n="tool_idphoto_title">证件照裁剪 & 透明水印</h2>
+                    <p class="tool-desc" data-i18n="tool_idphoto_desc">本地离线处理证件照：裁剪、改尺寸、压缩、添加透明文字水印</p>
                     <ul class="tool-features">
-                        <li>1寸/2寸/护照照等预设尺寸</li>
-                        <li>自由裁剪与尺寸调整</li>
-                        <li>透明文字水印（单点/平铺）</li>
-                        <li>100%离线处理保护隐私</li>
+                        <li data-i18n="tool_idphoto_f1">1寸/2寸/护照照等预设尺寸</li>
+                        <li data-i18n="tool_idphoto_f2">自由裁剪与尺寸调整</li>
+                        <li data-i18n="tool_idphoto_f3">透明文字水印（单点/平铺）</li>
+                        <li data-i18n="tool_idphoto_f4">100%离线处理保护隐私</li>
                     </ul>
-                    <a href="id-photo-tool.html" class="tool-btn">打开工具 →</a>
+                    <a href="id-photo-tool.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 图片合并为PDF -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="img2pdf">
                 <img src="screenshots/image-to-pdf.webp" alt="图片合并为PDF截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📄</div>
-                    <h2 class="tool-title">图片合并为PDF</h2>
-                    <p class="tool-desc">多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF</p>
+                    <h2 class="tool-title" data-i18n="tool_img2pdf_title">图片合并为PDF</h2>
+                    <p class="tool-desc" data-i18n="tool_img2pdf_desc">多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF</p>
                     <ul class="tool-features">
-                        <li>多种上传方式（拖拽/粘贴/扫码）</li>
-                        <li>拖拽调整图片顺序</li>
-                        <li>自定义页面尺寸和质量</li>
-                        <li>一键生成PDF并下载</li>
+                        <li data-i18n="tool_img2pdf_f1">多种上传方式（拖拽/粘贴/扫码）</li>
+                        <li data-i18n="tool_img2pdf_f2">拖拽调整图片顺序</li>
+                        <li data-i18n="tool_img2pdf_f3">自定义页面尺寸和质量</li>
+                        <li data-i18n="tool_img2pdf_f4">一键生成PDF并下载</li>
                     </ul>
-                    <a href="image-to-pdf.html" class="tool-btn">打开工具 →</a>
+                    <a href="image-to-pdf.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 文件批量重命名 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="rename">
                 <img src="screenshots/file-renamer.webp" alt="文件批量重命名截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📝</div>
-                    <h2 class="tool-title">文件批量重命名</h2>
-                    <p class="tool-desc">支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理</p>
+                    <h2 class="tool-title" data-i18n="tool_rename_title">文件批量重命名</h2>
+                    <p class="tool-desc" data-i18n="tool_rename_desc">支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理</p>
                     <ul class="tool-features">
-                        <li>顺序编号自动补零</li>
-                        <li>查找替换/正则替换</li>
-                        <li>拖拽排序调整顺序</li>
-                        <li>打包下载/逐个下载</li>
+                        <li data-i18n="tool_rename_f1">顺序编号自动补零</li>
+                        <li data-i18n="tool_rename_f2">查找替换/正则替换</li>
+                        <li data-i18n="tool_rename_f3">拖拽排序调整顺序</li>
+                        <li data-i18n="tool_rename_f4">打包下载/逐个下载</li>
                     </ul>
-                    <a href="file-renamer.html" class="tool-btn">打开工具 →</a>
+                    <a href="file-renamer.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 手持弹幕 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="danmaku">
                 <img src="screenshots/handheld-danmaku.webp" alt="手持弹幕截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📢</div>
-                    <h2 class="tool-title">手持弹幕</h2>
-                    <p class="tool-desc">演唱会应援、活动表白、聚会互动必备的LED滚动字幕生成器</p>
+                    <h2 class="tool-title" data-i18n="tool_danmaku_title">手持弹幕</h2>
+                    <p class="tool-desc" data-i18n="tool_danmaku_desc">演唱会应援、活动表白、聚会互动必备的LED滚动字幕生成器</p>
                     <ul class="tool-features">
-                        <li>自定义弹幕内容和颜色</li>
-                        <li>可调节滚动速度和字体大小</li>
-                        <li>多种预设配色方案</li>
-                        <li>双击屏幕快速退出</li>
+                        <li data-i18n="tool_danmaku_f1">自定义弹幕内容和颜色</li>
+                        <li data-i18n="tool_danmaku_f2">可调节滚动速度和字体大小</li>
+                        <li data-i18n="tool_danmaku_f3">多种预设配色方案</li>
+                        <li data-i18n="tool_danmaku_f4">双击屏幕快速退出</li>
                     </ul>
-                    <a href="handheld-danmaku.html" class="tool-btn">打开工具 →</a>
+                    <a href="handheld-danmaku.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 在线节拍器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="metronome">
                 <img src="screenshots/metronome.webp" alt="在线节拍器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🎵</div>
-                    <h2 class="tool-title">在线节拍器</h2>
-                    <p class="tool-desc">音乐练习必备工具，帮助你保持精准节奏，支持多种拍号和音色</p>
+                    <h2 class="tool-title" data-i18n="tool_metronome_title">在线节拍器</h2>
+                    <p class="tool-desc" data-i18n="tool_metronome_desc">音乐练习必备工具，帮助你保持精准节奏，支持多种拍号和音色</p>
                     <ul class="tool-features">
-                        <li>40-220 BPM 速度调节</li>
-                        <li>支持 2/4、3/4、4/4、6/8 拍号</li>
-                        <li>电子音/钢琴音色可选</li>
-                        <li>可自定义强弱拍</li>
+                        <li data-i18n="tool_metronome_f1">40-220 BPM 速度调节</li>
+                        <li data-i18n="tool_metronome_f2">支持 2/4、3/4、4/4、6/8 拍号</li>
+                        <li data-i18n="tool_metronome_f3">电子音/钢琴音色可选</li>
+                        <li data-i18n="tool_metronome_f4">可自定义强弱拍</li>
                     </ul>
-                    <a href="metronome.html" class="tool-btn">打开工具 →</a>
+                    <a href="metronome.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 亲戚关系计算器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="relative">
                 <img src="screenshots/relative-calculator.webp" alt="亲戚关系计算器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">👨‍👩‍👧‍👦</div>
-                    <h2 class="tool-title">亲戚关系计算器</h2>
-                    <p class="tool-desc">快速查询中国家庭亲戚称呼，再也不怕叫错七大姑八大姨</p>
+                    <h2 class="tool-title" data-i18n="tool_relative_title">亲戚关系计算器</h2>
+                    <p class="tool-desc" data-i18n="tool_relative_desc">快速查询中国家庭亲戚称呼，再也不怕叫错七大姑八大姨</p>
                     <ul class="tool-features">
-                        <li>支持复杂亲戚关系链计算</li>
-                        <li>覆盖父系母系血亲姻亲</li>
-                        <li>提供多种称呼别名</li>
-                        <li>快捷按钮一键选择</li>
+                        <li data-i18n="tool_relative_f1">支持复杂亲戚关系链计算</li>
+                        <li data-i18n="tool_relative_f2">覆盖父系母系血亲姻亲</li>
+                        <li data-i18n="tool_relative_f3">提供多种称呼别名</li>
+                        <li data-i18n="tool_relative_f4">快捷按钮一键选择</li>
                     </ul>
-                    <a href="relative-calculator.html" class="tool-btn">打开工具 →</a>
+                    <a href="relative-calculator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 图片格式转换 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="imgconvert">
                 <img src="screenshots/image-converter.webp" alt="图片格式转换截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🔄</div>
-                    <h2 class="tool-title">图片格式转换</h2>
-                    <p class="tool-desc">在线图片格式批量转换，支持多种格式互转，本地处理保护隐私</p>
+                    <h2 class="tool-title" data-i18n="tool_imgconvert_title">图片格式转换</h2>
+                    <p class="tool-desc" data-i18n="tool_imgconvert_desc">在线图片格式批量转换，支持多种格式互转，本地处理保护隐私</p>
                     <ul class="tool-features">
-                        <li>支持 PNG/JPEG/WebP/GIF/BMP/ICO</li>
-                        <li>批量转换一键打包下载</li>
-                        <li>可调节输出质量</li>
-                        <li>拖拽上传即用</li>
+                        <li data-i18n="tool_imgconvert_f1">支持 PNG/JPEG/WebP/GIF/BMP/ICO</li>
+                        <li data-i18n="tool_imgconvert_f2">批量转换一键打包下载</li>
+                        <li data-i18n="tool_imgconvert_f3">可调节输出质量</li>
+                        <li data-i18n="tool_imgconvert_f4">拖拽上传即用</li>
                     </ul>
-                    <a href="image-converter.html" class="tool-btn">打开工具 →</a>
+                    <a href="image-converter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 音频剪辑 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="audio">
                 <img src="screenshots/audio-cutter.webp" alt="音频剪辑截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🎧</div>
-                    <h2 class="tool-title">音频剪辑</h2>
-                    <p class="tool-desc">在线音频剪辑工具，可视化波形操作，精准截取音频片段</p>
+                    <h2 class="tool-title" data-i18n="tool_audio_title">音频剪辑</h2>
+                    <p class="tool-desc" data-i18n="tool_audio_desc">在线音频剪辑工具，可视化波形操作，精准截取音频片段</p>
                     <ul class="tool-features">
-                        <li>可视化波形展示</li>
-                        <li>支持 MP3/WAV/M4A/FLAC/AAC 格式</li>
-                        <li>拖拽选择剪辑区间</li>
-                        <li>快捷键操作提升效率</li>
+                        <li data-i18n="tool_audio_f1">可视化波形展示</li>
+                        <li data-i18n="tool_audio_f2">支持 MP3/WAV/M4A/FLAC/AAC 格式</li>
+                        <li data-i18n="tool_audio_f3">拖拽选择剪辑区间</li>
+                        <li data-i18n="tool_audio_f4">快捷键操作提升效率</li>
                     </ul>
-                    <a href="audio-cutter.html" class="tool-btn">打开工具 →</a>
+                    <a href="audio-cutter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 中文简繁体转换 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="chinese">
                 <img src="screenshots/chinese-converter.webp" alt="中文简繁体转换截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">繁简</div>
-                    <h2 class="tool-title">中文简繁体转换</h2>
-                    <p class="tool-desc">简繁体互转工具，支持大陆简体、港澳繁体、台湾正体、马新简体</p>
+                    <h2 class="tool-title" data-i18n="tool_chinese_title">中文简繁体转换</h2>
+                    <p class="tool-desc" data-i18n="tool_chinese_desc">简繁体互转工具，支持大陆简体、港澳繁体、台湾正体、马新简体</p>
                     <ul class="tool-features">
-                        <li>简繁体单字互转</li>
-                        <li>智能识别地区习惯用语</li>
-                        <li>支持实时转换模式</li>
-                        <li>一键复制/下载结果</li>
+                        <li data-i18n="tool_chinese_f1">简繁体单字互转</li>
+                        <li data-i18n="tool_chinese_f2">智能识别地区习惯用语</li>
+                        <li data-i18n="tool_chinese_f3">支持实时转换模式</li>
+                        <li data-i18n="tool_chinese_f4">一键复制/下载结果</li>
                     </ul>
-                    <a href="chinese-converter.html" class="tool-btn">打开工具 →</a>
+                    <a href="chinese-converter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- Claude Code 历史记录 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="claude">
                 <img src="screenshots/claude-history-viewer.webp" alt="Claude Code 历史记录截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">💬</div>
-                    <h2 class="tool-title">Claude Code 历史记录</h2>
-                    <p class="tool-desc">查看和搜索 Claude Code 的历史对话记录，美观易用的可视化界面</p>
+                    <h2 class="tool-title" data-i18n="tool_claude_title">Claude Code 历史记录</h2>
+                    <p class="tool-desc" data-i18n="tool_claude_desc">查看和搜索 Claude Code 的历史对话记录，美观易用的可视化界面</p>
                     <ul class="tool-features">
-                        <li>支持 JSONL 格式导入</li>
-                        <li>按项目/时间分组查看</li>
-                        <li>全文搜索与内容筛选</li>
-                        <li>导出为 Markdown/JSON/文本</li>
+                        <li data-i18n="tool_claude_f1">支持 JSONL 格式导入</li>
+                        <li data-i18n="tool_claude_f2">按项目/时间分组查看</li>
+                        <li data-i18n="tool_claude_f3">全文搜索与内容筛选</li>
+                        <li data-i18n="tool_claude_f4">导出为 Markdown/JSON/文本</li>
                     </ul>
-                    <a href="claude-history-viewer.html" class="tool-btn">打开工具 →</a>
+                    <a href="claude-history-viewer.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 在线图片编辑器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="imgedit">
                 <img src="screenshots/image-editor.webp" alt="在线图片编辑器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🖼️</div>
-                    <h2 class="tool-title">在线图片编辑器</h2>
-                    <p class="tool-desc">功能强大的在线P图工具，支持裁切、滤镜、调色、标注、抠图等</p>
+                    <h2 class="tool-title" data-i18n="tool_imgedit_title">在线图片编辑器</h2>
+                    <p class="tool-desc" data-i18n="tool_imgedit_desc">功能强大的在线P图工具，支持裁切、滤镜、调色、标注、抠图等</p>
                     <ul class="tool-features">
-                        <li>裁切/翻转/旋转变换</li>
-                        <li>12种滤镜（灰度/浮雕/像素化等）</li>
-                        <li>调色：亮度/对比度/饱和度/色调</li>
-                        <li>标注绘图与纯色抠图</li>
+                        <li data-i18n="tool_imgedit_f1">裁切/翻转/旋转变换</li>
+                        <li data-i18n="tool_imgedit_f2">12种滤镜（灰度/浮雕/像素化等）</li>
+                        <li data-i18n="tool_imgedit_f3">调色：亮度/对比度/饱和度/色调</li>
+                        <li data-i18n="tool_imgedit_f4">标注绘图与纯色抠图</li>
                     </ul>
-                    <a href="image-editor.html" class="tool-btn">打开工具 →</a>
+                    <a href="image-editor.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 时间戳转换工具 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="timestamp">
                 <img src="screenshots/timestamp-converter.webp" alt="时间戳转换工具截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🕐</div>
-                    <h2 class="tool-title">时间戳转换工具</h2>
-                    <p class="tool-desc">Unix时间戳与日期时间互转，支持多时区对照，提供各语言代码示例</p>
+                    <h2 class="tool-title" data-i18n="tool_timestamp_title">时间戳转换工具</h2>
+                    <p class="tool-desc" data-i18n="tool_timestamp_desc">Unix时间戳与日期时间互转，支持多时区对照，提供各语言代码示例</p>
                     <ul class="tool-features">
-                        <li>时间戳/日期时间互转</li>
-                        <li>12个时区实时对照</li>
-                        <li>18种编程语言代码示例</li>
-                        <li>夏令时说明与常见时间戳</li>
+                        <li data-i18n="tool_timestamp_f1">时间戳/日期时间互转</li>
+                        <li data-i18n="tool_timestamp_f2">12个时区实时对照</li>
+                        <li data-i18n="tool_timestamp_f3">18种编程语言代码示例</li>
+                        <li data-i18n="tool_timestamp_f4">夏令时说明与常见时间戳</li>
                     </ul>
-                    <a href="timestamp-converter.html" class="tool-btn">打开工具 →</a>
+                    <a href="timestamp-converter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- 社交视频下载器 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="social">
                 <img src="screenshots/social-video-downloader.webp" alt="社交视频下载器截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">📥</div>
-                    <h2 class="tool-title">社交视频下载</h2>
-                    <p class="tool-desc">免费下载 X、TikTok、Instagram、Facebook、YouTube 视频，支持无水印高清画质</p>
+                    <h2 class="tool-title" data-i18n="tool_social_title">社交视频下载</h2>
+                    <p class="tool-desc" data-i18n="tool_social_desc">免费下载 X、TikTok、Instagram、Facebook、YouTube 视频，支持无水印高清画质</p>
                     <ul class="tool-features">
-                        <li>支持 5 大主流社交平台</li>
-                        <li>无水印高清视频下载</li>
-                        <li>支持音频单独提取</li>
-                        <li>历史记录快速访问</li>
+                        <li data-i18n="tool_social_f1">支持 5 大主流社交平台</li>
+                        <li data-i18n="tool_social_f2">无水印高清视频下载</li>
+                        <li data-i18n="tool_social_f3">支持音频单独提取</li>
+                        <li data-i18n="tool_social_f4">历史记录快速访问</li>
                     </ul>
-                    <a href="social-video-downloader.html" class="tool-btn">打开工具 →</a>
+                    <a href="social-video-downloader.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
             <!-- Tweet Deleter 推文批量删除 -->
-            <div class="tool-card">
+            <div class="tool-card" data-tool="tweet">
                 <img src="screenshots/tweet-deleter.webp" alt="Tweet Deleter 截图" class="tool-screenshot">
                 <div class="tool-content">
                     <div class="tool-icon">🗑️</div>
-                    <h2 class="tool-title">Tweet Deleter 推文删除</h2>
-                    <p class="tool-desc">Chrome/Edge 浏览器扩展，批量删除 X (Twitter) 上的推文、回复和转发</p>
+                    <h2 class="tool-title" data-i18n="tool_tweet_title">Tweet Deleter 推文删除</h2>
+                    <p class="tool-desc" data-i18n="tool_tweet_desc">Chrome/Edge 浏览器扩展，批量删除 X (Twitter) 上的推文、回复和转发</p>
                     <ul class="tool-features">
-                        <li>批量删除推文/回复/转发</li>
-                        <li>按时间范围和关键词筛选</li>
-                        <li>可调节删除速度（慢/正常/快）</li>
-                        <li>支持7种语言（含中日英）</li>
+                        <li data-i18n="tool_tweet_f1">批量删除推文/回复/转发</li>
+                        <li data-i18n="tool_tweet_f2">按时间范围和关键词筛选</li>
+                        <li data-i18n="tool_tweet_f3">可调节删除速度（慢/正常/快）</li>
+                        <li data-i18n="tool_tweet_f4">支持7种语言（含中日英）</li>
                     </ul>
-                    <a href="https://github.com/heyuan110/tweet-deleter" target="_blank" class="tool-btn">查看项目 →</a>
+                    <a href="https://github.com/heyuan110/tweet-deleter" target="_blank" class="tool-btn" data-i18n="viewProject">查看项目 →</a>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a></p>
+            <p data-i18n="madeWith">Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a></p>
             <div class="tech-stack">
                 <span class="tech-tag">HTML</span>
                 <span class="tech-tag">CSS</span>
@@ -1081,6 +1184,946 @@
                     searchInput.select();
                 }
             });
+        })();
+
+        // 多语言支持 (i18n)
+        (function() {
+            // 翻译数据
+            const translations = {
+                'zh-CN': {
+                    subtitle: '一套纯前端的实用工具集，无需安装，浏览器直接打开即可使用',
+                    badge: '100% 前端 · 无需后端 · 开箱即用',
+                    searchPlaceholder: '搜索工具名称、功能或关键词...',
+                    clear: '清除',
+                    hotLabel: '🔥 热门：',
+                    tagImage: '图片',
+                    tagVideo: '视频',
+                    tagConvert: '转换',
+                    tagEncrypt: '加密',
+                    tagCalculate: '计算',
+                    tagDownload: '下载',
+                    openTool: '打开工具 →',
+                    viewProject: '查看项目 →',
+                    madeWith: 'Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a>',
+                    totalTools: '共 {count} 个工具',
+                    foundTools: '找到 {visible} / {total} 个工具',
+                    // 工具翻译
+                    tool_m3u8_title: 'M3U8 视频下载器',
+                    tool_m3u8_desc: '批量下载 M3U8 流媒体视频并保存为本地 MP4 文件',
+                    tool_m3u8_f1: '单条或批量导入 M3U8 链接',
+                    tool_m3u8_f2: '实时视频预览（自动播放）',
+                    tool_m3u8_f3: '下载进度可视化',
+                    tool_m3u8_f4: '支持暂停/继续下载',
+                    tool_json_title: 'JSON 查看器',
+                    tool_json_desc: '美观的 JSON 数据可视化与格式化工具',
+                    tool_json_f1: '语法高亮显示',
+                    tool_json_f2: '节点折叠/展开',
+                    tool_json_f3: '关键字搜索过滤',
+                    tool_json_f4: '支持粘贴或上传文件',
+                    tool_sqlite_title: 'SQLite 查看器',
+                    tool_sqlite_desc: '在浏览器中直接查看和查询 SQLite 数据库',
+                    tool_sqlite_f1: '拖拽上传 .db / .sqlite 文件',
+                    tool_sqlite_f2: '浏览所有表结构',
+                    tool_sqlite_f3: '执行自定义 SQL 查询',
+                    tool_sqlite_f4: '查询结果表格展示',
+                    tool_octo_title: 'OctoVideoSniffer 八爪鱼',
+                    tool_octo_desc: 'Chrome/Edge 浏览器扩展，自动检测并提取网页中的视频链接',
+                    tool_octo_f1: '智能识别网页视频资源链接',
+                    tool_octo_f2: '支持 .m3u8 / .mp4 / .ts 等格式',
+                    tool_octo_f3: '简洁的界面，一键复制链接',
+                    tool_octo_f4: '轻量快速，开箱即用',
+                    tool_crypto_title: '加解密编码工具箱',
+                    tool_crypto_desc: '集成 20+ 种加密解密和编码转换工具的综合工具箱',
+                    tool_crypto_f1: 'MD5/SHA/AES/DES 等加密算法',
+                    tool_crypto_f2: 'Base64/URL/Unicode 编码转换',
+                    tool_crypto_f3: '摩尔斯电码/条形码生成器',
+                    tool_crypto_f4: '密码生成/UUID/IP 转换等',
+                    tool_ws_title: 'WebSocket 测试工具',
+                    tool_ws_desc: '基于 HTML5 WebSocket 的在线调试工具，支持内网和外网',
+                    tool_ws_f1: '支持 ws:// 和 wss:// 协议',
+                    tool_ws_f2: '实时消息收发与日志显示',
+                    tool_ws_f3: '连接状态监控与统计',
+                    tool_ws_f4: '支持 JSON 格式化发送',
+                    tool_paint_title: '在线涂鸦画板',
+                    tool_paint_desc: '功能丰富的在线画板，尽情发挥您的绘画艺术天赋',
+                    tool_paint_f1: '画笔/橡皮/填充/形状工具',
+                    tool_paint_f2: '自定义颜色和透明度',
+                    tool_paint_f3: '撤销/重做/自定义画布',
+                    tool_paint_f4: '保存为 PNG/JPG 格式',
+                    tool_color_title: '在线调色板',
+                    tool_color_desc: '快速查找颜色编码，支持多种颜色格式转换',
+                    tool_color_f1: 'HEX/RGB/HSL/CMYK 多格式',
+                    tool_color_f2: '互补色/相似色/三等分色',
+                    tool_color_f3: '收藏常用颜色',
+                    tool_color_f4: '一键复制颜色代码',
+                    tool_clock_title: '世界时间查询',
+                    tool_clock_desc: '实时查看全球各地时间，支持时差计算',
+                    tool_clock_f1: '全球 25+ 主要城市时间',
+                    tool_clock_f2: '实时更新，日夜指示',
+                    tool_clock_f3: '自动识别当前时区',
+                    tool_clock_f4: '时差计算与城市搜索',
+                    tool_whois_title: 'Whois 域名查询',
+                    tool_whois_desc: '查询域名注册信息、所有者、注册商、有效期等详细信息',
+                    tool_whois_f1: '域名注册商/所有者信息',
+                    tool_whois_f2: '注册/到期日期与域名年龄',
+                    tool_whois_f3: 'DNS 名称服务器列表',
+                    tool_whois_f4: '域名状态与原始数据',
+                    tool_ico_title: 'ICO 图标制作',
+                    tool_ico_desc: '将 PNG、JPG、GIF 图片转换为 ICO 图标文件',
+                    tool_ico_f1: '支持 PNG/JPG/GIF 格式转换',
+                    tool_ico_f2: '裁剪功能，多尺寸选择',
+                    tool_ico_f3: '实时预览各尺寸效果',
+                    tool_ico_f4: '一键生成并下载 ICO',
+                    tool_compress_title: '图片压缩工具',
+                    tool_compress_desc: '批量压缩图片，保持清晰度的同时大幅减小文件体积',
+                    tool_compress_f1: '支持批量/文件夹导入',
+                    tool_compress_f2: '可调节压缩质量和尺寸',
+                    tool_compress_f3: '支持 JPG/PNG/WebP 输出',
+                    tool_compress_f4: '一键打包下载全部',
+                    tool_calc_title: '万能计算器',
+                    tool_calc_desc: '集成科学计算器、利率计算器、子网掩码及16种单位换算工具',
+                    tool_calc_f1: '科学计算器（三角/对数/阶乘）',
+                    tool_calc_f2: '贷款利率计算器',
+                    tool_calc_f3: '子网掩码/IP 计算器',
+                    tool_calc_f4: '长度/面积/体积/温度等换算',
+                    tool_ip_title: 'IP归属地查询',
+                    tool_ip_desc: '查询IP地址或域名的地理位置、运营商等信息',
+                    tool_ip_f1: 'IP/域名地理位置查询',
+                    tool_ip_f2: '运营商、IP段范围信息',
+                    tool_ip_f3: '显示本机IP及归属地',
+                    tool_ip_f4: '浏览器、系统信息检测',
+                    tool_refresh_title: '定时刷新网页',
+                    tool_refresh_desc: '在线定时自动刷新网页，可用于压力测试和增加请求量',
+                    tool_refresh_f1: '自定义刷新间隔时间',
+                    tool_refresh_f2: '刷新次数限制设置',
+                    tool_refresh_f3: '实时刷新日志记录',
+                    tool_refresh_f4: '内嵌预览目标页面',
+                    tool_regex_title: '正则表达式测试',
+                    tool_regex_desc: '在线正则表达式验证、匹配、提取工具，支持多语言代码生成',
+                    tool_regex_f1: '实时正则匹配高亮显示',
+                    tool_regex_f2: '常用正则表达式模板',
+                    tool_regex_f3: '7种编程语言代码生成',
+                    tool_regex_f4: '元字符和语法参考文档',
+                    tool_idphoto_title: '证件照裁剪 & 透明水印',
+                    tool_idphoto_desc: '本地离线处理证件照：裁剪、改尺寸、压缩、添加透明文字水印',
+                    tool_idphoto_f1: '1寸/2寸/护照照等预设尺寸',
+                    tool_idphoto_f2: '自由裁剪与尺寸调整',
+                    tool_idphoto_f3: '透明文字水印（单点/平铺）',
+                    tool_idphoto_f4: '100%离线处理保护隐私',
+                    tool_img2pdf_title: '图片合并为PDF',
+                    tool_img2pdf_desc: '多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF',
+                    tool_img2pdf_f1: '多种上传方式（拖拽/粘贴/扫码）',
+                    tool_img2pdf_f2: '拖拽调整图片顺序',
+                    tool_img2pdf_f3: '自定义页面尺寸和质量',
+                    tool_img2pdf_f4: '一键生成PDF并下载',
+                    tool_rename_title: '文件批量重命名',
+                    tool_rename_desc: '支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理',
+                    tool_rename_f1: '顺序编号自动补零',
+                    tool_rename_f2: '查找替换/正则替换',
+                    tool_rename_f3: '拖拽排序调整顺序',
+                    tool_rename_f4: '打包下载/逐个下载',
+                    tool_danmaku_title: '手持弹幕',
+                    tool_danmaku_desc: '演唱会应援、活动表白、聚会互动必备的LED滚动字幕生成器',
+                    tool_danmaku_f1: '自定义弹幕内容和颜色',
+                    tool_danmaku_f2: '可调节滚动速度和字体大小',
+                    tool_danmaku_f3: '多种预设配色方案',
+                    tool_danmaku_f4: '双击屏幕快速退出',
+                    tool_metronome_title: '在线节拍器',
+                    tool_metronome_desc: '音乐练习必备工具，帮助你保持精准节奏，支持多种拍号和音色',
+                    tool_metronome_f1: '40-220 BPM 速度调节',
+                    tool_metronome_f2: '支持 2/4、3/4、4/4、6/8 拍号',
+                    tool_metronome_f3: '电子音/钢琴音色可选',
+                    tool_metronome_f4: '可自定义强弱拍',
+                    tool_relative_title: '亲戚关系计算器',
+                    tool_relative_desc: '快速查询中国家庭亲戚称呼，再也不怕叫错七大姑八大姨',
+                    tool_relative_f1: '支持复杂亲戚关系链计算',
+                    tool_relative_f2: '覆盖父系母系血亲姻亲',
+                    tool_relative_f3: '提供多种称呼别名',
+                    tool_relative_f4: '快捷按钮一键选择',
+                    tool_imgconvert_title: '图片格式转换',
+                    tool_imgconvert_desc: '在线图片格式批量转换，支持多种格式互转，本地处理保护隐私',
+                    tool_imgconvert_f1: '支持 PNG/JPEG/WebP/GIF/BMP/ICO',
+                    tool_imgconvert_f2: '批量转换一键打包下载',
+                    tool_imgconvert_f3: '可调节输出质量',
+                    tool_imgconvert_f4: '拖拽上传即用',
+                    tool_audio_title: '音频剪辑',
+                    tool_audio_desc: '在线音频剪辑工具，可视化波形操作，精准截取音频片段',
+                    tool_audio_f1: '可视化波形展示',
+                    tool_audio_f2: '支持 MP3/WAV/M4A/FLAC/AAC 格式',
+                    tool_audio_f3: '拖拽选择剪辑区间',
+                    tool_audio_f4: '快捷键操作提升效率',
+                    tool_chinese_title: '中文简繁体转换',
+                    tool_chinese_desc: '简繁体互转工具，支持大陆简体、港澳繁体、台湾正体、马新简体',
+                    tool_chinese_f1: '简繁体单字互转',
+                    tool_chinese_f2: '智能识别地区习惯用语',
+                    tool_chinese_f3: '支持实时转换模式',
+                    tool_chinese_f4: '一键复制/下载结果',
+                    tool_claude_title: 'Claude Code 历史记录',
+                    tool_claude_desc: '查看和搜索 Claude Code 的历史对话记录，美观易用的可视化界面',
+                    tool_claude_f1: '支持 JSONL 格式导入',
+                    tool_claude_f2: '按项目/时间分组查看',
+                    tool_claude_f3: '全文搜索与内容筛选',
+                    tool_claude_f4: '导出为 Markdown/JSON/文本',
+                    tool_imgedit_title: '在线图片编辑器',
+                    tool_imgedit_desc: '功能强大的在线P图工具，支持裁切、滤镜、调色、标注、抠图等',
+                    tool_imgedit_f1: '裁切/翻转/旋转变换',
+                    tool_imgedit_f2: '12种滤镜（灰度/浮雕/像素化等）',
+                    tool_imgedit_f3: '调色：亮度/对比度/饱和度/色调',
+                    tool_imgedit_f4: '标注绘图与纯色抠图',
+                    tool_timestamp_title: '时间戳转换工具',
+                    tool_timestamp_desc: 'Unix时间戳与日期时间互转，支持多时区对照，提供各语言代码示例',
+                    tool_timestamp_f1: '时间戳/日期时间互转',
+                    tool_timestamp_f2: '12个时区实时对照',
+                    tool_timestamp_f3: '18种编程语言代码示例',
+                    tool_timestamp_f4: '夏令时说明与常见时间戳',
+                    tool_social_title: '社交视频下载',
+                    tool_social_desc: '免费下载 X、TikTok、Instagram、Facebook、YouTube 视频，支持无水印高清画质',
+                    tool_social_f1: '支持 5 大主流社交平台',
+                    tool_social_f2: '无水印高清视频下载',
+                    tool_social_f3: '支持音频单独提取',
+                    tool_social_f4: '历史记录快速访问',
+                    tool_tweet_title: 'Tweet Deleter 推文删除',
+                    tool_tweet_desc: 'Chrome/Edge 浏览器扩展，批量删除 X (Twitter) 上的推文、回复和转发',
+                    tool_tweet_f1: '批量删除推文/回复/转发',
+                    tool_tweet_f2: '按时间范围和关键词筛选',
+                    tool_tweet_f3: '可调节删除速度（慢/正常/快）',
+                    tool_tweet_f4: '支持7种语言（含中日英）',
+                },
+                'en': {
+                    subtitle: 'A collection of pure front-end utility tools, no installation required, use directly in browser',
+                    badge: '100% Frontend · No Backend · Ready to Use',
+                    searchPlaceholder: 'Search tool name, feature or keyword...',
+                    clear: 'Clear',
+                    hotLabel: '🔥 Hot:',
+                    tagImage: 'Image',
+                    tagVideo: 'Video',
+                    tagConvert: 'Convert',
+                    tagEncrypt: 'Encrypt',
+                    tagCalculate: 'Calculate',
+                    tagDownload: 'Download',
+                    openTool: 'Open Tool →',
+                    viewProject: 'View Project →',
+                    madeWith: 'Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a>',
+                    totalTools: '{count} tools in total',
+                    foundTools: 'Found {visible} / {total} tools',
+                    tool_m3u8_title: 'M3U8 Video Downloader',
+                    tool_m3u8_desc: 'Batch download M3U8 streaming videos and save as local MP4 files',
+                    tool_m3u8_f1: 'Single or batch import M3U8 links',
+                    tool_m3u8_f2: 'Real-time video preview (auto-play)',
+                    tool_m3u8_f3: 'Visual download progress',
+                    tool_m3u8_f4: 'Support pause/resume download',
+                    tool_json_title: 'JSON Viewer',
+                    tool_json_desc: 'Beautiful JSON data visualization and formatting tool',
+                    tool_json_f1: 'Syntax highlighting',
+                    tool_json_f2: 'Node collapse/expand',
+                    tool_json_f3: 'Keyword search filter',
+                    tool_json_f4: 'Support paste or upload file',
+                    tool_sqlite_title: 'SQLite Viewer',
+                    tool_sqlite_desc: 'View and query SQLite database directly in browser',
+                    tool_sqlite_f1: 'Drag & drop .db / .sqlite files',
+                    tool_sqlite_f2: 'Browse all table structures',
+                    tool_sqlite_f3: 'Execute custom SQL queries',
+                    tool_sqlite_f4: 'Query results in table view',
+                    tool_octo_title: 'OctoVideoSniffer',
+                    tool_octo_desc: 'Chrome/Edge extension to detect and extract video links from webpages',
+                    tool_octo_f1: 'Smart detection of video resources',
+                    tool_octo_f2: 'Support .m3u8 / .mp4 / .ts formats',
+                    tool_octo_f3: 'Clean UI, one-click copy links',
+                    tool_octo_f4: 'Lightweight, fast, ready to use',
+                    tool_crypto_title: 'Crypto & Encoding Toolkit',
+                    tool_crypto_desc: 'Comprehensive toolkit with 20+ encryption and encoding tools',
+                    tool_crypto_f1: 'MD5/SHA/AES/DES encryption',
+                    tool_crypto_f2: 'Base64/URL/Unicode encoding',
+                    tool_crypto_f3: 'Morse code/Barcode generator',
+                    tool_crypto_f4: 'Password/UUID/IP converter',
+                    tool_ws_title: 'WebSocket Tester',
+                    tool_ws_desc: 'HTML5 WebSocket online debugging tool for intranet and internet',
+                    tool_ws_f1: 'Support ws:// and wss:// protocols',
+                    tool_ws_f2: 'Real-time message & log display',
+                    tool_ws_f3: 'Connection status monitoring',
+                    tool_ws_f4: 'Support JSON formatted sending',
+                    tool_paint_title: 'Online Paint Board',
+                    tool_paint_desc: 'Feature-rich online drawing board to unleash your creativity',
+                    tool_paint_f1: 'Brush/Eraser/Fill/Shape tools',
+                    tool_paint_f2: 'Custom colors and opacity',
+                    tool_paint_f3: 'Undo/Redo/Custom canvas',
+                    tool_paint_f4: 'Save as PNG/JPG format',
+                    tool_color_title: 'Color Palette',
+                    tool_color_desc: 'Quick color code lookup with multiple format conversion',
+                    tool_color_f1: 'HEX/RGB/HSL/CMYK formats',
+                    tool_color_f2: 'Complementary/Similar/Triadic colors',
+                    tool_color_f3: 'Favorite colors collection',
+                    tool_color_f4: 'One-click copy color codes',
+                    tool_clock_title: 'World Clock',
+                    tool_clock_desc: 'View real-time global times with timezone calculation',
+                    tool_clock_f1: '25+ major cities worldwide',
+                    tool_clock_f2: 'Real-time update, day/night indicator',
+                    tool_clock_f3: 'Auto detect current timezone',
+                    tool_clock_f4: 'Timezone calc & city search',
+                    tool_whois_title: 'Whois Lookup',
+                    tool_whois_desc: 'Query domain registration info, owner, registrar, expiry details',
+                    tool_whois_f1: 'Domain registrar/owner info',
+                    tool_whois_f2: 'Registration/expiry dates & age',
+                    tool_whois_f3: 'DNS name server list',
+                    tool_whois_f4: 'Domain status & raw data',
+                    tool_ico_title: 'ICO Maker',
+                    tool_ico_desc: 'Convert PNG, JPG, GIF images to ICO icon files',
+                    tool_ico_f1: 'Support PNG/JPG/GIF conversion',
+                    tool_ico_f2: 'Crop feature, multiple sizes',
+                    tool_ico_f3: 'Real-time preview all sizes',
+                    tool_ico_f4: 'One-click generate & download',
+                    tool_compress_title: 'Image Compressor',
+                    tool_compress_desc: 'Batch compress images while maintaining clarity',
+                    tool_compress_f1: 'Batch/folder import support',
+                    tool_compress_f2: 'Adjustable quality & size',
+                    tool_compress_f3: 'JPG/PNG/WebP output support',
+                    tool_compress_f4: 'One-click batch download',
+                    tool_calc_title: 'All-in-One Calculator',
+                    tool_calc_desc: 'Scientific calculator, interest calculator, subnet mask & 16 unit converters',
+                    tool_calc_f1: 'Scientific calc (trig/log/factorial)',
+                    tool_calc_f2: 'Loan interest calculator',
+                    tool_calc_f3: 'Subnet mask/IP calculator',
+                    tool_calc_f4: 'Length/Area/Volume/Temp conversion',
+                    tool_ip_title: 'IP Geolocation',
+                    tool_ip_desc: 'Query IP or domain geographic location and ISP info',
+                    tool_ip_f1: 'IP/Domain geolocation lookup',
+                    tool_ip_f2: 'ISP and IP range info',
+                    tool_ip_f3: 'Show local IP & location',
+                    tool_ip_f4: 'Browser & system detection',
+                    tool_refresh_title: 'Page Auto Refresher',
+                    tool_refresh_desc: 'Auto refresh webpages at intervals, useful for testing',
+                    tool_refresh_f1: 'Custom refresh interval',
+                    tool_refresh_f2: 'Refresh count limit setting',
+                    tool_refresh_f3: 'Real-time refresh logging',
+                    tool_refresh_f4: 'Embedded target preview',
+                    tool_regex_title: 'Regex Tester',
+                    tool_regex_desc: 'Online regex validation, matching, extraction with code generation',
+                    tool_regex_f1: 'Real-time match highlighting',
+                    tool_regex_f2: 'Common regex templates',
+                    tool_regex_f3: '7 programming language code gen',
+                    tool_regex_f4: 'Metachar & syntax reference',
+                    tool_idphoto_title: 'ID Photo Editor & Watermark',
+                    tool_idphoto_desc: 'Local offline ID photo processing: crop, resize, compress, add watermark',
+                    tool_idphoto_f1: 'Preset sizes (1-inch, 2-inch, passport)',
+                    tool_idphoto_f2: 'Free crop & resize',
+                    tool_idphoto_f3: 'Transparent watermark (single/tiled)',
+                    tool_idphoto_f4: '100% offline for privacy',
+                    tool_img2pdf_title: 'Images to PDF',
+                    tool_img2pdf_desc: 'Drag-sort images, paste screenshots, scan upload to generate quality PDF',
+                    tool_img2pdf_f1: 'Multiple upload methods',
+                    tool_img2pdf_f2: 'Drag to reorder images',
+                    tool_img2pdf_f3: 'Custom page size & quality',
+                    tool_img2pdf_f4: 'One-click PDF generation',
+                    tool_rename_title: 'Batch File Renamer',
+                    tool_rename_desc: 'Sequential numbering, find-replace, add prefix/suffix, fully local',
+                    tool_rename_f1: 'Auto-padded sequential numbering',
+                    tool_rename_f2: 'Find-replace/Regex replace',
+                    tool_rename_f3: 'Drag to reorder files',
+                    tool_rename_f4: 'Batch or individual download',
+                    tool_danmaku_title: 'LED Scrolling Banner',
+                    tool_danmaku_desc: 'LED scrolling text generator for concerts, events, and parties',
+                    tool_danmaku_f1: 'Custom text content & color',
+                    tool_danmaku_f2: 'Adjustable speed & font size',
+                    tool_danmaku_f3: 'Multiple preset color schemes',
+                    tool_danmaku_f4: 'Double-tap to exit fullscreen',
+                    tool_metronome_title: 'Online Metronome',
+                    tool_metronome_desc: 'Essential tool for music practice, maintain precise rhythm',
+                    tool_metronome_f1: '40-220 BPM speed adjustment',
+                    tool_metronome_f2: 'Support 2/4, 3/4, 4/4, 6/8 time',
+                    tool_metronome_f3: 'Electronic/Piano tone options',
+                    tool_metronome_f4: 'Customizable accent beats',
+                    tool_relative_title: 'Family Relationship Calculator',
+                    tool_relative_desc: 'Quickly find Chinese family relationship titles',
+                    tool_relative_f1: 'Complex relationship chain calc',
+                    tool_relative_f2: 'Paternal/maternal/in-law coverage',
+                    tool_relative_f3: 'Multiple title aliases',
+                    tool_relative_f4: 'Quick selection buttons',
+                    tool_imgconvert_title: 'Image Format Converter',
+                    tool_imgconvert_desc: 'Batch convert image formats, local processing for privacy',
+                    tool_imgconvert_f1: 'PNG/JPEG/WebP/GIF/BMP/ICO support',
+                    tool_imgconvert_f2: 'Batch convert & download',
+                    tool_imgconvert_f3: 'Adjustable output quality',
+                    tool_imgconvert_f4: 'Drag & drop to use',
+                    tool_audio_title: 'Audio Cutter',
+                    tool_audio_desc: 'Online audio editing with visual waveform, precise clip extraction',
+                    tool_audio_f1: 'Visual waveform display',
+                    tool_audio_f2: 'MP3/WAV/M4A/FLAC/AAC support',
+                    tool_audio_f3: 'Drag to select clip range',
+                    tool_audio_f4: 'Keyboard shortcuts support',
+                    tool_chinese_title: 'Chinese Converter',
+                    tool_chinese_desc: 'Simplified/Traditional Chinese conversion for different regions',
+                    tool_chinese_f1: 'Character-level conversion',
+                    tool_chinese_f2: 'Smart regional phrase detection',
+                    tool_chinese_f3: 'Real-time conversion mode',
+                    tool_chinese_f4: 'One-click copy/download',
+                    tool_claude_title: 'Claude Code History',
+                    tool_claude_desc: 'View and search Claude Code conversation history with beautiful UI',
+                    tool_claude_f1: 'JSONL format import',
+                    tool_claude_f2: 'Group by project/time',
+                    tool_claude_f3: 'Full-text search & filter',
+                    tool_claude_f4: 'Export to Markdown/JSON/Text',
+                    tool_imgedit_title: 'Online Image Editor',
+                    tool_imgedit_desc: 'Powerful online photo editor with crop, filter, color adjust, annotate',
+                    tool_imgedit_f1: 'Crop/Flip/Rotate transform',
+                    tool_imgedit_f2: '12 filters (grayscale/emboss/pixelate)',
+                    tool_imgedit_f3: 'Brightness/Contrast/Saturation/Hue',
+                    tool_imgedit_f4: 'Drawing annotation & color extract',
+                    tool_timestamp_title: 'Timestamp Converter',
+                    tool_timestamp_desc: 'Unix timestamp & datetime conversion with timezone comparison',
+                    tool_timestamp_f1: 'Timestamp/Datetime conversion',
+                    tool_timestamp_f2: '12 timezone comparison',
+                    tool_timestamp_f3: '18 programming language examples',
+                    tool_timestamp_f4: 'DST info & common timestamps',
+                    tool_social_title: 'Social Video Downloader',
+                    tool_social_desc: 'Free download X, TikTok, Instagram, Facebook, YouTube videos in HD',
+                    tool_social_f1: 'Support 5 major platforms',
+                    tool_social_f2: 'Watermark-free HD download',
+                    tool_social_f3: 'Audio extraction support',
+                    tool_social_f4: 'History quick access',
+                    tool_tweet_title: 'Tweet Deleter',
+                    tool_tweet_desc: 'Chrome/Edge extension to bulk delete X (Twitter) tweets, replies, retweets',
+                    tool_tweet_f1: 'Bulk delete tweets/replies/retweets',
+                    tool_tweet_f2: 'Filter by time & keywords',
+                    tool_tweet_f3: 'Adjustable speed (slow/normal/fast)',
+                    tool_tweet_f4: 'Support 7 languages',
+                },
+                'fr': {
+                    subtitle: 'Une collection d\'outils frontend pratiques, aucune installation requise',
+                    badge: '100% Frontend · Sans Backend · Prêt à l\'emploi',
+                    searchPlaceholder: 'Rechercher un outil, une fonction ou un mot-clé...',
+                    clear: 'Effacer',
+                    hotLabel: '🔥 Populaire:',
+                    tagImage: 'Image',
+                    tagVideo: 'Vidéo',
+                    tagConvert: 'Convertir',
+                    tagEncrypt: 'Crypter',
+                    tagCalculate: 'Calculer',
+                    tagDownload: 'Télécharger',
+                    openTool: 'Ouvrir l\'outil →',
+                    viewProject: 'Voir le projet →',
+                    madeWith: 'Fait avec ❤️ par <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a>',
+                    totalTools: '{count} outils au total',
+                    foundTools: 'Trouvé {visible} / {total} outils',
+                    tool_m3u8_title: 'Téléchargeur M3U8',
+                    tool_m3u8_desc: 'Téléchargement par lots de vidéos M3U8 en fichiers MP4 locaux',
+                    tool_m3u8_f1: 'Import simple ou par lots de liens M3U8',
+                    tool_m3u8_f2: 'Aperçu vidéo en temps réel',
+                    tool_m3u8_f3: 'Progression visuelle du téléchargement',
+                    tool_m3u8_f4: 'Pause/reprise du téléchargement',
+                    tool_json_title: 'Visionneur JSON',
+                    tool_json_desc: 'Visualisation et formatage élégants des données JSON',
+                    tool_json_f1: 'Coloration syntaxique',
+                    tool_json_f2: 'Plier/Déplier les nœuds',
+                    tool_json_f3: 'Filtrage par mot-clé',
+                    tool_json_f4: 'Coller ou télécharger un fichier',
+                    tool_sqlite_title: 'Visionneur SQLite',
+                    tool_sqlite_desc: 'Voir et interroger les bases SQLite directement dans le navigateur',
+                    tool_sqlite_f1: 'Glisser-déposer des fichiers .db/.sqlite',
+                    tool_sqlite_f2: 'Parcourir toutes les structures de tables',
+                    tool_sqlite_f3: 'Exécuter des requêtes SQL personnalisées',
+                    tool_sqlite_f4: 'Résultats en vue tableau',
+                    tool_octo_title: 'OctoVideoSniffer',
+                    tool_octo_desc: 'Extension Chrome/Edge pour détecter les liens vidéo des pages web',
+                    tool_octo_f1: 'Détection intelligente des ressources vidéo',
+                    tool_octo_f2: 'Support .m3u8 / .mp4 / .ts',
+                    tool_octo_f3: 'Interface simple, copie en un clic',
+                    tool_octo_f4: 'Léger et rapide',
+                    tool_crypto_title: 'Boîte à outils Crypto',
+                    tool_crypto_desc: 'Plus de 20 outils de cryptage et d\'encodage',
+                    tool_crypto_f1: 'Algorithmes MD5/SHA/AES/DES',
+                    tool_crypto_f2: 'Encodage Base64/URL/Unicode',
+                    tool_crypto_f3: 'Générateur Morse/Code-barres',
+                    tool_crypto_f4: 'Mot de passe/UUID/Convertisseur IP',
+                    tool_ws_title: 'Testeur WebSocket',
+                    tool_ws_desc: 'Outil de débogage WebSocket HTML5 en ligne',
+                    tool_ws_f1: 'Support ws:// et wss://',
+                    tool_ws_f2: 'Messages et journaux en temps réel',
+                    tool_ws_f3: 'Surveillance de l\'état de connexion',
+                    tool_ws_f4: 'Envoi JSON formaté',
+                    tool_paint_title: 'Tableau de dessin',
+                    tool_paint_desc: 'Tableau de dessin en ligne riche en fonctionnalités',
+                    tool_paint_f1: 'Pinceau/Gomme/Remplissage/Formes',
+                    tool_paint_f2: 'Couleurs et opacité personnalisées',
+                    tool_paint_f3: 'Annuler/Rétablir/Toile personnalisée',
+                    tool_paint_f4: 'Enregistrer en PNG/JPG',
+                    tool_color_title: 'Palette de couleurs',
+                    tool_color_desc: 'Recherche rapide de codes couleur avec conversion multi-format',
+                    tool_color_f1: 'Formats HEX/RGB/HSL/CMYK',
+                    tool_color_f2: 'Couleurs complémentaires/similaires',
+                    tool_color_f3: 'Collection de favoris',
+                    tool_color_f4: 'Copie en un clic',
+                    tool_clock_title: 'Horloge mondiale',
+                    tool_clock_desc: 'Voir l\'heure mondiale en temps réel',
+                    tool_clock_f1: 'Plus de 25 grandes villes',
+                    tool_clock_f2: 'Mise à jour en temps réel, jour/nuit',
+                    tool_clock_f3: 'Détection auto du fuseau horaire',
+                    tool_clock_f4: 'Calcul de décalage horaire',
+                    tool_whois_title: 'Recherche Whois',
+                    tool_whois_desc: 'Requête d\'informations sur l\'enregistrement de domaines',
+                    tool_whois_f1: 'Infos registraire/propriétaire',
+                    tool_whois_f2: 'Dates d\'enregistrement/expiration',
+                    tool_whois_f3: 'Liste des serveurs DNS',
+                    tool_whois_f4: 'Statut et données brutes',
+                    tool_ico_title: 'Créateur ICO',
+                    tool_ico_desc: 'Convertir PNG, JPG, GIF en fichiers icônes ICO',
+                    tool_ico_f1: 'Support PNG/JPG/GIF',
+                    tool_ico_f2: 'Recadrage, tailles multiples',
+                    tool_ico_f3: 'Aperçu en temps réel',
+                    tool_ico_f4: 'Génération et téléchargement en un clic',
+                    tool_compress_title: 'Compresseur d\'images',
+                    tool_compress_desc: 'Compression par lots tout en maintenant la clarté',
+                    tool_compress_f1: 'Import par lots/dossier',
+                    tool_compress_f2: 'Qualité et taille ajustables',
+                    tool_compress_f3: 'Sortie JPG/PNG/WebP',
+                    tool_compress_f4: 'Téléchargement groupé',
+                    tool_calc_title: 'Calculatrice universelle',
+                    tool_calc_desc: 'Calculatrice scientifique, intérêts, masque de sous-réseau et 16 conversions',
+                    tool_calc_f1: 'Calcul scientifique (trigo/log/factorielle)',
+                    tool_calc_f2: 'Calculateur d\'intérêts',
+                    tool_calc_f3: 'Calculateur masque/IP',
+                    tool_calc_f4: 'Conversion longueur/surface/volume/temp',
+                    tool_ip_title: 'Géolocalisation IP',
+                    tool_ip_desc: 'Localisation géographique et FAI d\'une IP ou domaine',
+                    tool_ip_f1: 'Recherche géo IP/domaine',
+                    tool_ip_f2: 'Infos FAI et plage IP',
+                    tool_ip_f3: 'Afficher IP locale et localisation',
+                    tool_ip_f4: 'Détection navigateur/système',
+                    tool_refresh_title: 'Rafraîchissement auto',
+                    tool_refresh_desc: 'Rafraîchissement automatique de pages à intervalles',
+                    tool_refresh_f1: 'Intervalle personnalisé',
+                    tool_refresh_f2: 'Limite de nombre de rafraîchissements',
+                    tool_refresh_f3: 'Journal en temps réel',
+                    tool_refresh_f4: 'Aperçu intégré de la cible',
+                    tool_regex_title: 'Testeur Regex',
+                    tool_regex_desc: 'Validation, correspondance et extraction regex en ligne',
+                    tool_regex_f1: 'Surbrillance en temps réel',
+                    tool_regex_f2: 'Modèles regex courants',
+                    tool_regex_f3: 'Génération de code 7 langages',
+                    tool_regex_f4: 'Référence métacaractères',
+                    tool_idphoto_title: 'Éditeur photo ID & Filigrane',
+                    tool_idphoto_desc: 'Traitement local de photos d\'identité: recadrage, redimensionnement, compression',
+                    tool_idphoto_f1: 'Tailles prédéfinies (passeport, etc.)',
+                    tool_idphoto_f2: 'Recadrage et redimensionnement libres',
+                    tool_idphoto_f3: 'Filigrane transparent',
+                    tool_idphoto_f4: '100% hors ligne pour la vie privée',
+                    tool_img2pdf_title: 'Images vers PDF',
+                    tool_img2pdf_desc: 'Glisser-trier, coller captures, scanner pour générer un PDF de qualité',
+                    tool_img2pdf_f1: 'Multiples méthodes d\'import',
+                    tool_img2pdf_f2: 'Réorganiser par glisser-déposer',
+                    tool_img2pdf_f3: 'Taille de page et qualité personnalisées',
+                    tool_img2pdf_f4: 'Génération PDF en un clic',
+                    tool_rename_title: 'Renommage par lots',
+                    tool_rename_desc: 'Numérotation séquentielle, rechercher-remplacer, préfixes/suffixes',
+                    tool_rename_f1: 'Numérotation auto avec zéros',
+                    tool_rename_f2: 'Remplacement par regex',
+                    tool_rename_f3: 'Réorganiser par glissement',
+                    tool_rename_f4: 'Téléchargement groupé ou individuel',
+                    tool_danmaku_title: 'Bannière LED défilante',
+                    tool_danmaku_desc: 'Générateur de texte LED défilant pour concerts et événements',
+                    tool_danmaku_f1: 'Texte et couleur personnalisés',
+                    tool_danmaku_f2: 'Vitesse et taille de police ajustables',
+                    tool_danmaku_f3: 'Plusieurs schémas de couleurs',
+                    tool_danmaku_f4: 'Double-tap pour quitter',
+                    tool_metronome_title: 'Métronome en ligne',
+                    tool_metronome_desc: 'Outil essentiel pour la pratique musicale',
+                    tool_metronome_f1: 'Réglage de vitesse 40-220 BPM',
+                    tool_metronome_f2: 'Support 2/4, 3/4, 4/4, 6/8',
+                    tool_metronome_f3: 'Sons électronique/piano',
+                    tool_metronome_f4: 'Accents personnalisables',
+                    tool_relative_title: 'Calculateur de parenté',
+                    tool_relative_desc: 'Trouver rapidement les titres de parenté chinois',
+                    tool_relative_f1: 'Calcul de chaînes complexes',
+                    tool_relative_f2: 'Côté paternel/maternel/beau-famille',
+                    tool_relative_f3: 'Alias multiples',
+                    tool_relative_f4: 'Boutons de sélection rapide',
+                    tool_imgconvert_title: 'Convertisseur de format image',
+                    tool_imgconvert_desc: 'Conversion par lots de formats d\'image, traitement local',
+                    tool_imgconvert_f1: 'Support PNG/JPEG/WebP/GIF/BMP/ICO',
+                    tool_imgconvert_f2: 'Conversion et téléchargement par lots',
+                    tool_imgconvert_f3: 'Qualité de sortie ajustable',
+                    tool_imgconvert_f4: 'Glisser-déposer pour utiliser',
+                    tool_audio_title: 'Éditeur audio',
+                    tool_audio_desc: 'Édition audio en ligne avec visualisation de forme d\'onde',
+                    tool_audio_f1: 'Affichage visuel de la forme d\'onde',
+                    tool_audio_f2: 'Support MP3/WAV/M4A/FLAC/AAC',
+                    tool_audio_f3: 'Glisser pour sélectionner la plage',
+                    tool_audio_f4: 'Raccourcis clavier',
+                    tool_chinese_title: 'Convertisseur chinois',
+                    tool_chinese_desc: 'Conversion simplifié/traditionnel pour différentes régions',
+                    tool_chinese_f1: 'Conversion caractère par caractère',
+                    tool_chinese_f2: 'Détection intelligente des expressions régionales',
+                    tool_chinese_f3: 'Mode conversion en temps réel',
+                    tool_chinese_f4: 'Copie/téléchargement en un clic',
+                    tool_claude_title: 'Historique Claude Code',
+                    tool_claude_desc: 'Voir et rechercher l\'historique des conversations Claude Code',
+                    tool_claude_f1: 'Import format JSONL',
+                    tool_claude_f2: 'Grouper par projet/temps',
+                    tool_claude_f3: 'Recherche plein texte et filtre',
+                    tool_claude_f4: 'Export Markdown/JSON/Texte',
+                    tool_imgedit_title: 'Éditeur d\'images en ligne',
+                    tool_imgedit_desc: 'Éditeur photo puissant avec recadrage, filtres, couleurs, annotation',
+                    tool_imgedit_f1: 'Recadrage/Retournement/Rotation',
+                    tool_imgedit_f2: '12 filtres (gris/relief/pixelisation)',
+                    tool_imgedit_f3: 'Luminosité/Contraste/Saturation/Teinte',
+                    tool_imgedit_f4: 'Annotation et extraction couleur',
+                    tool_timestamp_title: 'Convertisseur timestamp',
+                    tool_timestamp_desc: 'Conversion timestamp Unix/datetime avec comparaison fuseaux',
+                    tool_timestamp_f1: 'Conversion Timestamp/Datetime',
+                    tool_timestamp_f2: 'Comparaison 12 fuseaux horaires',
+                    tool_timestamp_f3: 'Exemples 18 langages de programmation',
+                    tool_timestamp_f4: 'Infos heure d\'été et timestamps courants',
+                    tool_social_title: 'Téléchargeur vidéo social',
+                    tool_social_desc: 'Télécharger gratuitement X, TikTok, Instagram, Facebook, YouTube en HD',
+                    tool_social_f1: 'Support 5 plateformes majeures',
+                    tool_social_f2: 'Téléchargement HD sans filigrane',
+                    tool_social_f3: 'Extraction audio',
+                    tool_social_f4: 'Accès rapide à l\'historique',
+                    tool_tweet_title: 'Tweet Deleter',
+                    tool_tweet_desc: 'Extension Chrome/Edge pour supprimer en masse les tweets X (Twitter)',
+                    tool_tweet_f1: 'Suppression en masse tweets/réponses/retweets',
+                    tool_tweet_f2: 'Filtrer par temps et mots-clés',
+                    tool_tweet_f3: 'Vitesse ajustable (lent/normal/rapide)',
+                    tool_tweet_f4: 'Support 7 langues',
+                },
+                'es': {
+                    subtitle: 'Una colección de herramientas frontend útiles, sin instalación necesaria',
+                    badge: '100% Frontend · Sin Backend · Listo para usar',
+                    searchPlaceholder: 'Buscar herramienta, función o palabra clave...',
+                    clear: 'Limpiar',
+                    hotLabel: '🔥 Popular:',
+                    tagImage: 'Imagen',
+                    tagVideo: 'Video',
+                    tagConvert: 'Convertir',
+                    tagEncrypt: 'Cifrar',
+                    tagCalculate: 'Calcular',
+                    tagDownload: 'Descargar',
+                    openTool: 'Abrir herramienta →',
+                    viewProject: 'Ver proyecto →',
+                    madeWith: 'Hecho con ❤️ por <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a>',
+                    totalTools: '{count} herramientas en total',
+                    foundTools: 'Encontrado {visible} / {total} herramientas',
+                    tool_m3u8_title: 'Descargador M3U8',
+                    tool_m3u8_desc: 'Descarga por lotes de videos M3U8 y guardar como archivos MP4 locales',
+                    tool_m3u8_f1: 'Importar enlaces M3U8 individual o por lotes',
+                    tool_m3u8_f2: 'Vista previa de video en tiempo real',
+                    tool_m3u8_f3: 'Progreso de descarga visual',
+                    tool_m3u8_f4: 'Pausar/reanudar descarga',
+                    tool_json_title: 'Visor JSON',
+                    tool_json_desc: 'Visualización y formateo elegante de datos JSON',
+                    tool_json_f1: 'Resaltado de sintaxis',
+                    tool_json_f2: 'Expandir/contraer nodos',
+                    tool_json_f3: 'Filtro de búsqueda por palabras',
+                    tool_json_f4: 'Pegar o subir archivo',
+                    tool_sqlite_title: 'Visor SQLite',
+                    tool_sqlite_desc: 'Ver y consultar bases de datos SQLite directamente en el navegador',
+                    tool_sqlite_f1: 'Arrastrar y soltar archivos .db/.sqlite',
+                    tool_sqlite_f2: 'Navegar todas las estructuras de tablas',
+                    tool_sqlite_f3: 'Ejecutar consultas SQL personalizadas',
+                    tool_sqlite_f4: 'Resultados en vista de tabla',
+                    tool_octo_title: 'OctoVideoSniffer',
+                    tool_octo_desc: 'Extensión Chrome/Edge para detectar enlaces de video en páginas web',
+                    tool_octo_f1: 'Detección inteligente de recursos de video',
+                    tool_octo_f2: 'Soporte .m3u8 / .mp4 / .ts',
+                    tool_octo_f3: 'Interfaz simple, copiar con un clic',
+                    tool_octo_f4: 'Ligero y rápido',
+                    tool_crypto_title: 'Caja de herramientas Crypto',
+                    tool_crypto_desc: 'Más de 20 herramientas de cifrado y codificación',
+                    tool_crypto_f1: 'Algoritmos MD5/SHA/AES/DES',
+                    tool_crypto_f2: 'Codificación Base64/URL/Unicode',
+                    tool_crypto_f3: 'Generador Morse/Código de barras',
+                    tool_crypto_f4: 'Contraseña/UUID/Convertidor IP',
+                    tool_ws_title: 'Probador WebSocket',
+                    tool_ws_desc: 'Herramienta de depuración WebSocket HTML5 en línea',
+                    tool_ws_f1: 'Soporte ws:// y wss://',
+                    tool_ws_f2: 'Mensajes y registros en tiempo real',
+                    tool_ws_f3: 'Monitoreo del estado de conexión',
+                    tool_ws_f4: 'Envío JSON formateado',
+                    tool_paint_title: 'Tablero de dibujo',
+                    tool_paint_desc: 'Tablero de dibujo en línea rico en funciones',
+                    tool_paint_f1: 'Pincel/Borrador/Rellenar/Formas',
+                    tool_paint_f2: 'Colores y opacidad personalizados',
+                    tool_paint_f3: 'Deshacer/Rehacer/Lienzo personalizado',
+                    tool_paint_f4: 'Guardar como PNG/JPG',
+                    tool_color_title: 'Paleta de colores',
+                    tool_color_desc: 'Búsqueda rápida de códigos de color con conversión multi-formato',
+                    tool_color_f1: 'Formatos HEX/RGB/HSL/CMYK',
+                    tool_color_f2: 'Colores complementarios/similares',
+                    tool_color_f3: 'Colección de favoritos',
+                    tool_color_f4: 'Copiar con un clic',
+                    tool_clock_title: 'Reloj mundial',
+                    tool_clock_desc: 'Ver la hora mundial en tiempo real',
+                    tool_clock_f1: 'Más de 25 ciudades principales',
+                    tool_clock_f2: 'Actualización en tiempo real, día/noche',
+                    tool_clock_f3: 'Detección auto de zona horaria',
+                    tool_clock_f4: 'Cálculo de diferencia horaria',
+                    tool_whois_title: 'Búsqueda Whois',
+                    tool_whois_desc: 'Consulta de información de registro de dominios',
+                    tool_whois_f1: 'Info registrador/propietario',
+                    tool_whois_f2: 'Fechas de registro/expiración',
+                    tool_whois_f3: 'Lista de servidores DNS',
+                    tool_whois_f4: 'Estado y datos crudos',
+                    tool_ico_title: 'Creador ICO',
+                    tool_ico_desc: 'Convertir PNG, JPG, GIF a archivos de iconos ICO',
+                    tool_ico_f1: 'Soporte PNG/JPG/GIF',
+                    tool_ico_f2: 'Recorte, múltiples tamaños',
+                    tool_ico_f3: 'Vista previa en tiempo real',
+                    tool_ico_f4: 'Generar y descargar con un clic',
+                    tool_compress_title: 'Compresor de imágenes',
+                    tool_compress_desc: 'Compresión por lotes manteniendo la claridad',
+                    tool_compress_f1: 'Importación por lotes/carpeta',
+                    tool_compress_f2: 'Calidad y tamaño ajustables',
+                    tool_compress_f3: 'Salida JPG/PNG/WebP',
+                    tool_compress_f4: 'Descarga agrupada',
+                    tool_calc_title: 'Calculadora universal',
+                    tool_calc_desc: 'Calculadora científica, intereses, máscara de subred y 16 conversiones',
+                    tool_calc_f1: 'Cálculo científico (trig/log/factorial)',
+                    tool_calc_f2: 'Calculador de intereses',
+                    tool_calc_f3: 'Calculador máscara/IP',
+                    tool_calc_f4: 'Conversión longitud/área/volumen/temp',
+                    tool_ip_title: 'Geolocalización IP',
+                    tool_ip_desc: 'Ubicación geográfica e ISP de una IP o dominio',
+                    tool_ip_f1: 'Búsqueda geo IP/dominio',
+                    tool_ip_f2: 'Info ISP y rango IP',
+                    tool_ip_f3: 'Mostrar IP local y ubicación',
+                    tool_ip_f4: 'Detección navegador/sistema',
+                    tool_refresh_title: 'Auto actualización',
+                    tool_refresh_desc: 'Actualización automática de páginas a intervalos',
+                    tool_refresh_f1: 'Intervalo personalizado',
+                    tool_refresh_f2: 'Límite de número de actualizaciones',
+                    tool_refresh_f3: 'Registro en tiempo real',
+                    tool_refresh_f4: 'Vista previa integrada del objetivo',
+                    tool_regex_title: 'Probador Regex',
+                    tool_regex_desc: 'Validación, coincidencia y extracción regex en línea',
+                    tool_regex_f1: 'Resaltado en tiempo real',
+                    tool_regex_f2: 'Plantillas regex comunes',
+                    tool_regex_f3: 'Generación de código 7 lenguajes',
+                    tool_regex_f4: 'Referencia de metacaracteres',
+                    tool_idphoto_title: 'Editor foto ID y marca de agua',
+                    tool_idphoto_desc: 'Procesamiento local de fotos de identidad: recorte, redimensión, compresión',
+                    tool_idphoto_f1: 'Tamaños predefinidos (pasaporte, etc.)',
+                    tool_idphoto_f2: 'Recorte y redimensión libres',
+                    tool_idphoto_f3: 'Marca de agua transparente',
+                    tool_idphoto_f4: '100% offline para privacidad',
+                    tool_img2pdf_title: 'Imágenes a PDF',
+                    tool_img2pdf_desc: 'Arrastrar-ordenar, pegar capturas, escanear para generar PDF de calidad',
+                    tool_img2pdf_f1: 'Múltiples métodos de importación',
+                    tool_img2pdf_f2: 'Reorganizar arrastrando',
+                    tool_img2pdf_f3: 'Tamaño de página y calidad personalizados',
+                    tool_img2pdf_f4: 'Generación PDF con un clic',
+                    tool_rename_title: 'Renombrado por lotes',
+                    tool_rename_desc: 'Numeración secuencial, buscar-reemplazar, prefijos/sufijos',
+                    tool_rename_f1: 'Numeración auto con ceros',
+                    tool_rename_f2: 'Reemplazo por regex',
+                    tool_rename_f3: 'Reorganizar arrastrando',
+                    tool_rename_f4: 'Descarga agrupada o individual',
+                    tool_danmaku_title: 'Banner LED deslizante',
+                    tool_danmaku_desc: 'Generador de texto LED deslizante para conciertos y eventos',
+                    tool_danmaku_f1: 'Texto y color personalizados',
+                    tool_danmaku_f2: 'Velocidad y tamaño de fuente ajustables',
+                    tool_danmaku_f3: 'Varios esquemas de colores',
+                    tool_danmaku_f4: 'Doble toque para salir',
+                    tool_metronome_title: 'Metrónomo en línea',
+                    tool_metronome_desc: 'Herramienta esencial para la práctica musical',
+                    tool_metronome_f1: 'Ajuste de velocidad 40-220 BPM',
+                    tool_metronome_f2: 'Soporte 2/4, 3/4, 4/4, 6/8',
+                    tool_metronome_f3: 'Sonidos electrónico/piano',
+                    tool_metronome_f4: 'Acentos personalizables',
+                    tool_relative_title: 'Calculador de parentesco',
+                    tool_relative_desc: 'Encontrar rápidamente los títulos de parentesco chinos',
+                    tool_relative_f1: 'Cálculo de cadenas complejas',
+                    tool_relative_f2: 'Lado paterno/materno/político',
+                    tool_relative_f3: 'Alias múltiples',
+                    tool_relative_f4: 'Botones de selección rápida',
+                    tool_imgconvert_title: 'Convertidor de formato de imagen',
+                    tool_imgconvert_desc: 'Conversión por lotes de formatos de imagen, procesamiento local',
+                    tool_imgconvert_f1: 'Soporte PNG/JPEG/WebP/GIF/BMP/ICO',
+                    tool_imgconvert_f2: 'Conversión y descarga por lotes',
+                    tool_imgconvert_f3: 'Calidad de salida ajustable',
+                    tool_imgconvert_f4: 'Arrastrar y soltar para usar',
+                    tool_audio_title: 'Editor de audio',
+                    tool_audio_desc: 'Edición de audio en línea con visualización de forma de onda',
+                    tool_audio_f1: 'Visualización de forma de onda',
+                    tool_audio_f2: 'Soporte MP3/WAV/M4A/FLAC/AAC',
+                    tool_audio_f3: 'Arrastrar para seleccionar rango',
+                    tool_audio_f4: 'Atajos de teclado',
+                    tool_chinese_title: 'Convertidor chino',
+                    tool_chinese_desc: 'Conversión simplificado/tradicional para diferentes regiones',
+                    tool_chinese_f1: 'Conversión carácter por carácter',
+                    tool_chinese_f2: 'Detección inteligente de expresiones regionales',
+                    tool_chinese_f3: 'Modo conversión en tiempo real',
+                    tool_chinese_f4: 'Copiar/descargar con un clic',
+                    tool_claude_title: 'Historial Claude Code',
+                    tool_claude_desc: 'Ver y buscar el historial de conversaciones de Claude Code',
+                    tool_claude_f1: 'Importación formato JSONL',
+                    tool_claude_f2: 'Agrupar por proyecto/tiempo',
+                    tool_claude_f3: 'Búsqueda de texto completo y filtro',
+                    tool_claude_f4: 'Exportar Markdown/JSON/Texto',
+                    tool_imgedit_title: 'Editor de imágenes en línea',
+                    tool_imgedit_desc: 'Editor de fotos potente con recorte, filtros, colores, anotación',
+                    tool_imgedit_f1: 'Recorte/Voltear/Rotar',
+                    tool_imgedit_f2: '12 filtros (gris/relieve/pixelación)',
+                    tool_imgedit_f3: 'Brillo/Contraste/Saturación/Tono',
+                    tool_imgedit_f4: 'Anotación y extracción de color',
+                    tool_timestamp_title: 'Convertidor timestamp',
+                    tool_timestamp_desc: 'Conversión timestamp Unix/datetime con comparación de zonas horarias',
+                    tool_timestamp_f1: 'Conversión Timestamp/Datetime',
+                    tool_timestamp_f2: 'Comparación 12 zonas horarias',
+                    tool_timestamp_f3: 'Ejemplos 18 lenguajes de programación',
+                    tool_timestamp_f4: 'Info horario de verano y timestamps comunes',
+                    tool_social_title: 'Descargador de video social',
+                    tool_social_desc: 'Descargar gratis X, TikTok, Instagram, Facebook, YouTube en HD',
+                    tool_social_f1: 'Soporte 5 plataformas principales',
+                    tool_social_f2: 'Descarga HD sin marca de agua',
+                    tool_social_f3: 'Extracción de audio',
+                    tool_social_f4: 'Acceso rápido al historial',
+                    tool_tweet_title: 'Tweet Deleter',
+                    tool_tweet_desc: 'Extensión Chrome/Edge para eliminar en masa tweets de X (Twitter)',
+                    tool_tweet_f1: 'Eliminación en masa tweets/respuestas/retweets',
+                    tool_tweet_f2: 'Filtrar por tiempo y palabras clave',
+                    tool_tweet_f3: 'Velocidad ajustable (lento/normal/rápido)',
+                    tool_tweet_f4: 'Soporte 7 idiomas',
+                },
+            };
+
+            // 当前语言
+            let currentLang = localStorage.getItem('toolbox_lang') || detectLanguage();
+
+            // 检测浏览器语言
+            function detectLanguage() {
+                const browserLang = navigator.language || navigator.userLanguage;
+                if (browserLang.startsWith('zh')) return 'zh-CN';
+                if (browserLang.startsWith('fr')) return 'fr';
+                if (browserLang.startsWith('es')) return 'es';
+                return 'en';
+            }
+
+            // 应用翻译
+            function applyTranslations(lang) {
+                const t = translations[lang] || translations['en'];
+
+                // 更新 HTML lang 属性
+                document.documentElement.lang = lang;
+
+                // 翻译所有带 data-i18n 属性的元素
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (t[key]) {
+                        el.innerHTML = t[key];
+                    }
+                });
+
+                // 翻译 placeholder
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    if (t[key]) {
+                        el.placeholder = t[key];
+                    }
+                });
+
+                // 翻译 title
+                document.querySelectorAll('[data-i18n-title]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-title');
+                    if (t[key]) {
+                        el.title = t[key];
+                    }
+                });
+
+                // 更新工具计数
+                updateToolCount(lang);
+
+                // 更新语言按钮状态
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.classList.toggle('active', btn.dataset.lang === lang);
+                });
+
+                // 更新热门标签的 data-query
+                const tagQueryMap = {
+                    'zh-CN': { tagImage: '图片', tagVideo: '视频', tagConvert: '转换', tagEncrypt: '加密', tagCalculate: '计算', tagDownload: '下载' },
+                    'en': { tagImage: 'image', tagVideo: 'video', tagConvert: 'convert', tagEncrypt: 'encrypt', tagCalculate: 'calculate', tagDownload: 'download' },
+                    'fr': { tagImage: 'image', tagVideo: 'vidéo', tagConvert: 'convertir', tagEncrypt: 'crypter', tagCalculate: 'calculer', tagDownload: 'télécharger' },
+                    'es': { tagImage: 'imagen', tagVideo: 'video', tagConvert: 'convertir', tagEncrypt: 'cifrar', tagCalculate: 'calcular', tagDownload: 'descargar' },
+                };
+                const queries = tagQueryMap[lang] || tagQueryMap['en'];
+                document.querySelectorAll('.hot-tag[data-i18n]').forEach(tag => {
+                    const key = tag.getAttribute('data-i18n');
+                    if (queries[key]) {
+                        tag.dataset.query = queries[key];
+                    }
+                });
+            }
+
+            // 更新工具计数显示
+            function updateToolCount(lang) {
+                const t = translations[lang] || translations['en'];
+                const resultCount = document.getElementById('resultCount');
+                const totalCount = document.querySelectorAll('.tool-card').length;
+                const visibleCount = document.querySelectorAll('.tool-card:not(.hidden)').length;
+                const searchInput = document.getElementById('searchInput');
+
+                if (searchInput && searchInput.value.trim()) {
+                    resultCount.textContent = t.foundTools.replace('{visible}', visibleCount).replace('{total}', totalCount);
+                } else {
+                    resultCount.textContent = t.totalTools.replace('{count}', totalCount);
+                }
+            }
+
+            // 语言显示名称映射
+            const langNames = {
+                'en': '🇺🇸 English',
+                'zh-CN': '🇨🇳 中文',
+                'fr': '🇫🇷 Français',
+                'es': '🇪🇸 Español'
+            };
+
+            // 切换语言
+            function switchLanguage(lang) {
+                currentLang = lang;
+                localStorage.setItem('toolbox_lang', lang);
+                applyTranslations(lang);
+                // 更新下拉菜单显示的当前语言
+                const langCurrent = document.getElementById('langCurrent');
+                if (langCurrent) {
+                    langCurrent.textContent = langNames[lang] || langNames['en'];
+                }
+                // 关闭下拉菜单
+                const dropdown = document.getElementById('langDropdown');
+                if (dropdown) dropdown.classList.remove('open');
+            }
+
+            // 下拉菜单交互
+            const langDropdown = document.getElementById('langDropdown');
+            const langCurrent = document.getElementById('langCurrent');
+
+            if (langCurrent && langDropdown) {
+                // 点击当前语言按钮切换下拉菜单
+                langCurrent.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('open');
+                });
+
+                // 点击页面其他地方关闭下拉菜单
+                document.addEventListener('click', () => {
+                    langDropdown.classList.remove('open');
+                });
+            }
+
+            // 绑定语言切换按钮事件
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    switchLanguage(btn.dataset.lang);
+                });
+            });
+
+            // 初始化
+            applyTranslations(currentLang);
+            // 设置初始语言显示
+            if (langCurrent) {
+                langCurrent.textContent = langNames[currentLang] || langNames['en'];
+            }
+
+            // 暴露更新计数函数供搜索功能使用
+            window.updateToolCountI18n = () => updateToolCount(currentLang);
         })();
     </script>
 </body>
