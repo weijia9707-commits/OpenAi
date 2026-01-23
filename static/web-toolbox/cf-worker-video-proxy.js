@@ -33,6 +33,12 @@ const EXTERNAL_SERVICES = {
     { name: 'FDown', url: 'https://fdown.net/zh/', icon: '📘', desc: '支持 HD 下载' },
     { name: 'SaveFrom', url: 'https://zh.savefrom.net/', icon: '📥', desc: '老牌下载服务' },
   ],
+  youtube: [
+    { name: 'Cobalt', url: 'https://cobalt.tools/', icon: '⚡', desc: '开源、快速、支持高清' },
+    { name: 'Y2Mate', url: 'https://www.y2mate.com/zh-cn/youtube/', icon: '🎬', desc: '支持多种格式' },
+    { name: 'SaveFrom', url: 'https://zh.savefrom.net/', icon: '📥', desc: '老牌下载服务' },
+    { name: '9xbuddy', url: 'https://9xbuddy.com/', icon: '🎵', desc: '支持音频提取' },
+  ],
 };
 
 // 通用 CORS 响应头
