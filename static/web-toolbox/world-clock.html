@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>世界时间查询 - 全球各地实时时间与时差计算 | Web Toolbox</title>
+    <title>World Clock - Global Time Zone Query & Time Difference Calculator | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线世界时间查询工具，实时显示全球25+主要城市时间，支持时差计算、城市搜索。自动识别当前时区，显示日夜状态指示。">
-    <meta name="keywords" content="世界时间,全球时钟,时差查询,国际时间,时区转换,北京时间,纽约时间,伦敦时间,东京时间,在线时钟">
+    <meta name="description" content="Free online world clock tool. Real-time display of 25+ major cities worldwide, time zone conversion, city search. Auto-detect current timezone with day/night indicator.">
+    <meta name="keywords" content="world clock,global time,time zone,time difference,international time,Beijing time,New York time,London time,Tokyo time,online clock">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/world-clock.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/world-clock.html">
-    <meta property="og:title" content="世界时间查询 - 全球各地实时时间">
-    <meta property="og:description" content="免费在线世界时间查询，实时显示全球25+主要城市时间，支持时差计算。">
+    <meta property="og:title" content="World Clock - Real-time Global City Time">
+    <meta property="og:description" content="Free online world clock. Real-time display of 25+ major cities, time zone conversion supported.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/world-clock.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="世界时间查询 - 全球各地实时时间">
-    <meta name="twitter:description" content="免费在线世界时间查询，实时显示全球25+主要城市时间。">
+    <meta name="twitter:title" content="World Clock - Real-time Global City Time">
+    <meta name="twitter:description" content="Free online world clock. Real-time display of 25+ major cities.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/world-clock.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "世界时间查询",
+        "name": "World Clock",
         "url": "https://www.heyuan110.com/web-toolbox/world-clock.html",
-        "description": "全球各地实时时间查询与时差计算工具",
+        "description": "Real-time global city time query and time difference calculator",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -48,42 +48,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "世界时钟支持多少个城市？",
+                "name": "How many cities does the world clock support?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持全球 20+ 个主要城市和时区，涵盖亚洲、欧洲、美洲、大洋洲等主要地区的重要城市。"
+                    "text": "Supports 20+ major cities and time zones worldwide, covering important cities in Asia, Europe, Americas, and Oceania."
                 }
             },
             {
                 "@type": "Question",
-                "name": "时间准确吗？",
+                "name": "Is the time accurate?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "时间基于你设备的系统时间，确保设备时间正确即可获得准确的世界时间显示。"
+                    "text": "The time is based on your device's system time. Ensure your device time is correct for accurate world time display."
                 }
             },
             {
                 "@type": "Question",
-                "name": "什么是 UTC 时间？",
+                "name": "What is UTC time?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "UTC（协调世界时）是国际标准时间，是全球时区计算的基准。北京时间是 UTC+8，即比 UTC 快 8 小时。"
+                    "text": "UTC (Coordinated Universal Time) is the international standard time and the basis for global time zone calculations. Beijing time is UTC+8, meaning 8 hours ahead of UTC."
                 }
             },
             {
                 "@type": "Question",
-                "name": "为什么有些城市时间和预期不同？",
+                "name": "Why does some city time differ from expected?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可能是夏令时影响，部分国家会在特定季节调整时间，导致实际时差与标准时差有所不同。"
+                    "text": "This may be due to daylight saving time. Some countries adjust their clocks during certain seasons, causing actual time differences to vary from standard offsets."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以添加自定义城市吗？",
+                "name": "Can I add custom cities?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "暂不支持自定义添加城市，目前显示预设的全球主要城市时区，已覆盖大部分常用地区。"
+                    "text": "Custom city addition is not supported yet. Currently displays preset major cities worldwide, covering most commonly used regions."
                 }
             }
         ]
@@ -119,6 +119,7 @@
             margin-bottom: 30px;
             flex-wrap: wrap;
             gap: 15px;
+            position: relative;
         }
 
         .back-home {
@@ -149,6 +150,16 @@
             align-items: center;
             gap: 10px;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 当前时区信息 */
         .current-info {
@@ -238,7 +249,7 @@
         }
 
         .timezone-card.current::after {
-            content: '当前时区';
+            content: attr(data-current-label);
             position: absolute;
             top: 10px;
             right: 10px;
@@ -419,43 +430,54 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="index.html" class="back-home">← 返回工具箱</a>
-            <h1>🌍 世界时间查询</h1>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox</a>
+            <h1>🌍 <span data-i18n="pageTitle">World Clock</span></h1>
             <div></div>
         </div>
 
         <!-- 功能特点 -->
         <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 16px;">
             <h2 style="font-size: 1.1rem; color: #e4e4e7; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
-                <span style="color: #7c3aed;">✦</span> 功能特点
+                <span style="color: #7c3aed;">✦</span> <span data-i18n="featuresTitle">Features</span>
             </h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 1.5rem;">🌐</span>
                     <div>
-                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">多时区显示</div>
-                        <div style="color: #a1a1aa; font-size: 0.85rem;">同时显示全球主要城市的当前时间</div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;" data-i18n="feature1Title">Multi-Timezone Display</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;" data-i18n="feature1Desc">Display current time of major cities worldwide simultaneously</div>
                     </div>
                 </div>
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 1.5rem;">⚡</span>
                     <div>
-                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">实时更新</div>
-                        <div style="color: #a1a1aa; font-size: 0.85rem;">时间秒级实时更新，精准可靠</div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;" data-i18n="feature2Title">Real-time Updates</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;" data-i18n="feature2Desc">Second-level real-time updates, accurate and reliable</div>
                     </div>
                 </div>
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 1.5rem;">🌓</span>
                     <div>
-                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">日夜指示</div>
-                        <div style="color: #a1a1aa; font-size: 0.85rem;">显示各城市当前是白天还是夜晚</div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;" data-i18n="feature3Title">Day/Night Indicator</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;" data-i18n="feature3Desc">Shows whether each city is in daytime or nighttime</div>
                     </div>
                 </div>
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 1.5rem;">🔢</span>
                     <div>
-                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;">时差计算</div>
-                        <div style="color: #a1a1aa; font-size: 0.85rem;">直观展示各时区与本地的时差</div>
+                        <div style="color: #e4e4e7; font-weight: 500; margin-bottom: 4px;" data-i18n="feature4Title">Time Difference Calculator</div>
+                        <div style="color: #a1a1aa; font-size: 0.85rem;" data-i18n="feature4Desc">Intuitive display of time difference from your local time</div>
                     </div>
                 </div>
             </div>
@@ -463,7 +485,7 @@
 
         <!-- 当前时区 -->
         <div class="current-info">
-            <div class="label">您当前所在时区</div>
+            <div class="label" data-i18n="yourTimezone">Your Current Timezone</div>
             <div class="timezone" id="currentTimezone"></div>
             <div class="main-time" id="mainTime"></div>
             <div class="main-date" id="mainDate"></div>
@@ -471,7 +493,7 @@
 
         <!-- 搜索框 -->
         <div class="search-box">
-            <input type="text" id="searchInput" placeholder="搜索城市或时区...">
+            <input type="text" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="Search city or timezone...">
         </div>
 
         <!-- 时区网格 -->
@@ -479,40 +501,579 @@
     </div>
 
     <script>
+        // 多语言翻译
+        const translations = {
+            'en': {
+                backHome: '← Back to Toolbox',
+                pageTitle: 'World Clock',
+                featuresTitle: 'Features',
+                feature1Title: 'Multi-Timezone Display',
+                feature1Desc: 'Display current time of major cities worldwide simultaneously',
+                feature2Title: 'Real-time Updates',
+                feature2Desc: 'Second-level real-time updates, accurate and reliable',
+                feature3Title: 'Day/Night Indicator',
+                feature3Desc: 'Shows whether each city is in daytime or nighttime',
+                feature4Title: 'Time Difference Calculator',
+                feature4Desc: 'Intuitive display of time difference from your local time',
+                yourTimezone: 'Your Current Timezone',
+                searchPlaceholder: 'Search city or timezone...',
+                currentTimezone: 'Current Timezone',
+                day: 'Day',
+                night: 'Night',
+                sameTime: 'Same as your time',
+                aheadBy: 'Ahead by',
+                behindBy: 'Behind by',
+                hours: 'hours',
+                hour: 'hour',
+                minutes: 'minutes',
+                faqTitle: 'Frequently Asked Questions',
+                faq1Q: 'How many cities does the world clock support?',
+                faq1A: 'Supports 20+ major cities and time zones worldwide, covering important cities in Asia, Europe, Americas, and Oceania, including Beijing, Tokyo, New York, London, Paris, Sydney, etc.',
+                faq2Q: 'Is the time accurate?',
+                faq2A: 'The time is based on your device\'s system time. Ensure correct time for accurate display. We recommend enabling automatic time sync on your device.',
+                faq3Q: 'What is UTC time?',
+                faq3A: 'UTC (Coordinated Universal Time) is the international standard time and basis for global time zone calculations. Beijing time is UTC+8, meaning 8 hours ahead of UTC; New York is UTC-5 (winter) or UTC-4 (summer).',
+                faq4Q: 'Why does some city time differ from expected?',
+                faq4A: 'This may be due to daylight saving time. Some countries (like the US and most of Europe) adjust clocks during certain seasons, typically advancing by one hour in spring and reverting in fall.',
+                faq5Q: 'Can I add custom cities?',
+                faq5A: 'Custom city addition is not supported yet. Currently displays preset major cities worldwide, covering most commonly used regions. Use the search function to quickly locate cities in nearby timezones.',
+                relatedTools: 'Related Tools',
+                timestampTool: 'Timestamp Converter',
+                timestampDesc: 'Convert timestamp and date',
+                calculatorTool: 'Scientific Calculator',
+                calculatorDesc: 'Supports complex expressions',
+                metronomeTool: 'Metronome',
+                metronomeDesc: 'Online metronome tool',
+                danmakuTool: 'Handheld Danmaku',
+                danmakuDesc: 'LED scrolling text',
+                footerPrivacy: 'Pure frontend processing, data is not uploaded to server',
+                footerBack: '← Back to Web Toolbox Home',
+                langName: '🌐 English',
+                // 城市名称
+                cityHawaii: 'Hawaii',
+                cityAlaska: 'Alaska',
+                cityLosAngeles: 'Los Angeles',
+                cityDenver: 'Denver',
+                cityChicago: 'Chicago',
+                cityNewYork: 'New York',
+                citySanJuan: 'San Juan',
+                citySaoPaulo: 'São Paulo',
+                cityAzores: 'Azores',
+                cityLondon: 'London',
+                cityBerlin: 'Berlin',
+                cityParis: 'Paris',
+                cityCairo: 'Cairo',
+                cityMoscow: 'Moscow',
+                cityDubai: 'Dubai',
+                cityNewDelhi: 'New Delhi',
+                cityBangkok: 'Bangkok',
+                cityBeijing: 'Beijing',
+                cityHongKong: 'Hong Kong',
+                cityTaipei: 'Taipei',
+                citySingapore: 'Singapore',
+                cityTokyo: 'Tokyo',
+                citySeoul: 'Seoul',
+                citySydney: 'Sydney',
+                cityAuckland: 'Auckland',
+                // 国家/地区
+                countryUSA: 'USA',
+                countryPacificTime: 'Pacific Time',
+                countryMountainTime: 'US Mountain Time',
+                countryCentralTime: 'US Central Time',
+                countryEasternTime: 'US Eastern Time',
+                countryAtlanticTime: 'Atlantic Time',
+                countryBrazil: 'Brazil',
+                countryMidAtlantic: 'Mid-Atlantic',
+                countryUK: 'United Kingdom',
+                countryGermany: 'Germany',
+                countryFrance: 'France',
+                countryEgypt: 'Egypt',
+                countryRussia: 'Russia',
+                countryUAE: 'UAE',
+                countryIndia: 'India',
+                countryThailand: 'Thailand',
+                countryChina: 'China',
+                countryTaiwan: 'Taiwan, China',
+                countrySingapore: 'Singapore',
+                countryJapan: 'Japan',
+                countrySouthKorea: 'South Korea',
+                countryAustralia: 'Australia',
+                countryNewZealand: 'New Zealand',
+                // 星期
+                sunday: 'Sunday',
+                monday: 'Monday',
+                tuesday: 'Tuesday',
+                wednesday: 'Wednesday',
+                thursday: 'Thursday',
+                friday: 'Friday',
+                saturday: 'Saturday'
+            },
+            'zh-CN': {
+                backHome: '← 返回工具箱',
+                pageTitle: '世界时间查询',
+                featuresTitle: '功能特点',
+                feature1Title: '多时区显示',
+                feature1Desc: '同时显示全球主要城市的当前时间',
+                feature2Title: '实时更新',
+                feature2Desc: '时间秒级实时更新，精准可靠',
+                feature3Title: '日夜指示',
+                feature3Desc: '显示各城市当前是白天还是夜晚',
+                feature4Title: '时差计算',
+                feature4Desc: '直观展示各时区与本地的时差',
+                yourTimezone: '您当前所在时区',
+                searchPlaceholder: '搜索城市或时区...',
+                currentTimezone: '当前时区',
+                day: '白天',
+                night: '夜晚',
+                sameTime: '与您时间相同',
+                aheadBy: '比您快',
+                behindBy: '比您慢',
+                hours: '小时',
+                hour: '小时',
+                minutes: '分钟',
+                faqTitle: '常见问题',
+                faq1Q: '世界时钟支持多少个城市？',
+                faq1A: '支持全球 20+ 个主要城市和时区，涵盖亚洲、欧洲、美洲、大洋洲等主要地区的重要城市，包括北京、东京、纽约、伦敦、巴黎、悉尼等。',
+                faq2Q: '时间准确吗？',
+                faq2A: '时间基于你设备的系统时间，确保设备时间正确即可。建议开启设备的自动时间同步功能，以获得最准确的时间显示。',
+                faq3Q: '什么是 UTC 时间？',
+                faq3A: 'UTC（协调世界时）是国际标准时间，是全球时区计算的基准。北京时间是 UTC+8，即比 UTC 快 8 小时；纽约时间是 UTC-5（冬令时）或 UTC-4（夏令时）。',
+                faq4Q: '为什么有些城市时间和预期不同？',
+                faq4A: '可能是夏令时影响，部分国家（如美国、欧洲大部分国家）会在特定季节调整时间，通常在春季将时钟拨快一小时，在秋季再拨回。这会导致实际时差与标准时差有所不同。',
+                faq5Q: '可以添加自定义城市吗？',
+                faq5A: '暂不支持自定义添加城市，目前显示预设的全球主要城市时区，已覆盖大部分常用地区。如有特定需求，可以使用搜索功能快速定位到相近时区的城市。',
+                relatedTools: '相关工具推荐',
+                timestampTool: '时间戳转换',
+                timestampDesc: '时间戳与日期互转',
+                calculatorTool: '科学计算器',
+                calculatorDesc: '支持复杂表达式',
+                metronomeTool: '节拍器',
+                metronomeDesc: '在线节拍器工具',
+                danmakuTool: '手持弹幕',
+                danmakuDesc: 'LED 滚动字幕',
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页',
+                langName: '🇨🇳 中文',
+                // 城市名称
+                cityHawaii: '夏威夷',
+                cityAlaska: '阿拉斯加',
+                cityLosAngeles: '洛杉矶',
+                cityDenver: '丹佛',
+                cityChicago: '芝加哥',
+                cityNewYork: '纽约',
+                citySanJuan: '圣胡安',
+                citySaoPaulo: '圣保罗',
+                cityAzores: '亚速尔',
+                cityLondon: '伦敦',
+                cityBerlin: '柏林',
+                cityParis: '巴黎',
+                cityCairo: '开罗',
+                cityMoscow: '莫斯科',
+                cityDubai: '迪拜',
+                cityNewDelhi: '新德里',
+                cityBangkok: '曼谷',
+                cityBeijing: '北京',
+                cityHongKong: '香港',
+                cityTaipei: '台北',
+                citySingapore: '新加坡',
+                cityTokyo: '东京',
+                citySeoul: '首尔',
+                citySydney: '悉尼',
+                cityAuckland: '奥克兰',
+                // 国家/地区
+                countryUSA: '美国',
+                countryPacificTime: '太平洋时间',
+                countryMountainTime: '美国山地时间',
+                countryCentralTime: '美国中部时间',
+                countryEasternTime: '美国东部时间',
+                countryAtlanticTime: '大西洋时间',
+                countryBrazil: '巴西',
+                countryMidAtlantic: '大西洋-中部',
+                countryUK: '英国',
+                countryGermany: '德国',
+                countryFrance: '法国',
+                countryEgypt: '埃及',
+                countryRussia: '俄罗斯',
+                countryUAE: '阿联酋',
+                countryIndia: '印度',
+                countryThailand: '泰国',
+                countryChina: '中国',
+                countryTaiwan: '中国台湾',
+                countrySingapore: '新加坡',
+                countryJapan: '日本',
+                countrySouthKorea: '韩国',
+                countryAustralia: '澳大利亚',
+                countryNewZealand: '新西兰',
+                // 星期
+                sunday: '周日',
+                monday: '周一',
+                tuesday: '周二',
+                wednesday: '周三',
+                thursday: '周四',
+                friday: '周五',
+                saturday: '周六'
+            },
+            'fr': {
+                backHome: '← Retour à la boîte à outils',
+                pageTitle: 'Horloge Mondiale',
+                featuresTitle: 'Fonctionnalités',
+                feature1Title: 'Affichage Multi-fuseaux',
+                feature1Desc: 'Affiche simultanément l\'heure des grandes villes du monde',
+                feature2Title: 'Mise à jour en temps réel',
+                feature2Desc: 'Mise à jour à la seconde, précise et fiable',
+                feature3Title: 'Indicateur Jour/Nuit',
+                feature3Desc: 'Indique si chaque ville est en jour ou en nuit',
+                feature4Title: 'Calculateur de Décalage',
+                feature4Desc: 'Affichage intuitif du décalage horaire avec votre heure locale',
+                yourTimezone: 'Votre fuseau horaire actuel',
+                searchPlaceholder: 'Rechercher une ville ou un fuseau...',
+                currentTimezone: 'Fuseau horaire actuel',
+                day: 'Jour',
+                night: 'Nuit',
+                sameTime: 'Même heure que vous',
+                aheadBy: 'En avance de',
+                behindBy: 'En retard de',
+                hours: 'heures',
+                hour: 'heure',
+                minutes: 'minutes',
+                faqTitle: 'Questions Fréquentes',
+                faq1Q: 'Combien de villes l\'horloge mondiale prend-elle en charge ?',
+                faq1A: 'Elle prend en charge plus de 20 grandes villes et fuseaux horaires dans le monde, couvrant les principales villes d\'Asie, d\'Europe, des Amériques et d\'Océanie, notamment Pékin, Tokyo, New York, Londres, Paris, Sydney, etc.',
+                faq2Q: 'L\'heure est-elle précise ?',
+                faq2A: 'L\'heure est basée sur l\'heure système de votre appareil. Assurez-vous que l\'heure de l\'appareil est correcte. Nous recommandons d\'activer la synchronisation automatique.',
+                faq3Q: 'Qu\'est-ce que l\'heure UTC ?',
+                faq3A: 'UTC (Temps Universel Coordonné) est l\'heure standard internationale et la base des calculs de fuseaux horaires. L\'heure de Pékin est UTC+8, soit 8 heures d\'avance ; New York est UTC-5 (hiver) ou UTC-4 (été).',
+                faq4Q: 'Pourquoi l\'heure de certaines villes diffère-t-elle de celle attendue ?',
+                faq4A: 'Cela peut être dû à l\'heure d\'été. Certains pays (comme les États-Unis et la plupart de l\'Europe) ajustent les horloges à certaines saisons, avançant généralement d\'une heure au printemps et reculant à l\'automne.',
+                faq5Q: 'Puis-je ajouter des villes personnalisées ?',
+                faq5A: 'L\'ajout de villes personnalisées n\'est pas encore pris en charge. Actuellement, les grandes villes mondiales préréglées sont affichées, couvrant la plupart des régions couramment utilisées.',
+                relatedTools: 'Outils Connexes',
+                timestampTool: 'Convertisseur Timestamp',
+                timestampDesc: 'Convertir timestamp et date',
+                calculatorTool: 'Calculatrice Scientifique',
+                calculatorDesc: 'Expressions complexes',
+                metronomeTool: 'Métronome',
+                metronomeDesc: 'Outil métronome en ligne',
+                danmakuTool: 'Danmaku Portable',
+                danmakuDesc: 'Texte LED défilant',
+                footerPrivacy: 'Traitement côté client, les données ne sont pas envoyées au serveur',
+                footerBack: '← Retour à l\'accueil Web Toolbox',
+                langName: '🇫🇷 Français',
+                // 城市名称
+                cityHawaii: 'Hawaï',
+                cityAlaska: 'Alaska',
+                cityLosAngeles: 'Los Angeles',
+                cityDenver: 'Denver',
+                cityChicago: 'Chicago',
+                cityNewYork: 'New York',
+                citySanJuan: 'San Juan',
+                citySaoPaulo: 'São Paulo',
+                cityAzores: 'Açores',
+                cityLondon: 'Londres',
+                cityBerlin: 'Berlin',
+                cityParis: 'Paris',
+                cityCairo: 'Le Caire',
+                cityMoscow: 'Moscou',
+                cityDubai: 'Dubaï',
+                cityNewDelhi: 'New Delhi',
+                cityBangkok: 'Bangkok',
+                cityBeijing: 'Pékin',
+                cityHongKong: 'Hong Kong',
+                cityTaipei: 'Taipei',
+                citySingapore: 'Singapour',
+                cityTokyo: 'Tokyo',
+                citySeoul: 'Séoul',
+                citySydney: 'Sydney',
+                cityAuckland: 'Auckland',
+                // 国家/地区
+                countryUSA: 'États-Unis',
+                countryPacificTime: 'Heure du Pacifique',
+                countryMountainTime: 'Heure des Montagnes',
+                countryCentralTime: 'Heure Centrale',
+                countryEasternTime: 'Heure de l\'Est',
+                countryAtlanticTime: 'Heure de l\'Atlantique',
+                countryBrazil: 'Brésil',
+                countryMidAtlantic: 'Atlantique-Centre',
+                countryUK: 'Royaume-Uni',
+                countryGermany: 'Allemagne',
+                countryFrance: 'France',
+                countryEgypt: 'Égypte',
+                countryRussia: 'Russie',
+                countryUAE: 'EAU',
+                countryIndia: 'Inde',
+                countryThailand: 'Thaïlande',
+                countryChina: 'Chine',
+                countryTaiwan: 'Taïwan, Chine',
+                countrySingapore: 'Singapour',
+                countryJapan: 'Japon',
+                countrySouthKorea: 'Corée du Sud',
+                countryAustralia: 'Australie',
+                countryNewZealand: 'Nouvelle-Zélande',
+                // 星期
+                sunday: 'Dimanche',
+                monday: 'Lundi',
+                tuesday: 'Mardi',
+                wednesday: 'Mercredi',
+                thursday: 'Jeudi',
+                friday: 'Vendredi',
+                saturday: 'Samedi'
+            },
+            'es': {
+                backHome: '← Volver a herramientas',
+                pageTitle: 'Reloj Mundial',
+                featuresTitle: 'Características',
+                feature1Title: 'Múltiples Zonas Horarias',
+                feature1Desc: 'Muestra la hora actual de las principales ciudades del mundo',
+                feature2Title: 'Actualizaciones en Tiempo Real',
+                feature2Desc: 'Actualizaciones cada segundo, precisas y confiables',
+                feature3Title: 'Indicador Día/Noche',
+                feature3Desc: 'Muestra si cada ciudad está de día o de noche',
+                feature4Title: 'Calculadora de Diferencia',
+                feature4Desc: 'Visualización intuitiva de la diferencia horaria con tu hora local',
+                yourTimezone: 'Tu zona horaria actual',
+                searchPlaceholder: 'Buscar ciudad o zona horaria...',
+                currentTimezone: 'Zona horaria actual',
+                day: 'Día',
+                night: 'Noche',
+                sameTime: 'Misma hora que tú',
+                aheadBy: 'Adelante por',
+                behindBy: 'Atrás por',
+                hours: 'horas',
+                hour: 'hora',
+                minutes: 'minutos',
+                faqTitle: 'Preguntas Frecuentes',
+                faq1Q: '¿Cuántas ciudades admite el reloj mundial?',
+                faq1A: 'Admite más de 20 ciudades principales y zonas horarias en todo el mundo, cubriendo ciudades importantes de Asia, Europa, América y Oceanía, incluyendo Pekín, Tokio, Nueva York, Londres, París, Sídney, etc.',
+                faq2Q: '¿Es precisa la hora?',
+                faq2A: 'La hora se basa en la hora del sistema de tu dispositivo. Asegúrate de que la hora del dispositivo sea correcta. Recomendamos activar la sincronización automática.',
+                faq3Q: '¿Qué es la hora UTC?',
+                faq3A: 'UTC (Tiempo Universal Coordinado) es la hora estándar internacional y la base para los cálculos de zonas horarias. La hora de Pekín es UTC+8, es decir, 8 horas adelante; Nueva York es UTC-5 (invierno) o UTC-4 (verano).',
+                faq4Q: '¿Por qué la hora de algunas ciudades difiere de lo esperado?',
+                faq4A: 'Puede deberse al horario de verano. Algunos países (como EE.UU. y la mayoría de Europa) ajustan los relojes en ciertas estaciones, normalmente adelantando una hora en primavera y retrocediendo en otoño.',
+                faq5Q: '¿Puedo agregar ciudades personalizadas?',
+                faq5A: 'La adición de ciudades personalizadas aún no está disponible. Actualmente se muestran las principales ciudades del mundo preestablecidas, cubriendo la mayoría de las regiones comúnmente utilizadas.',
+                relatedTools: 'Herramientas Relacionadas',
+                timestampTool: 'Convertidor Timestamp',
+                timestampDesc: 'Convertir timestamp y fecha',
+                calculatorTool: 'Calculadora Científica',
+                calculatorDesc: 'Expresiones complejas',
+                metronomeTool: 'Metrónomo',
+                metronomeDesc: 'Metrónomo en línea',
+                danmakuTool: 'Danmaku Portátil',
+                danmakuDesc: 'Texto LED desplazable',
+                footerPrivacy: 'Procesamiento del lado del cliente, los datos no se cargan al servidor',
+                footerBack: '← Volver a Web Toolbox',
+                langName: '🇪🇸 Español',
+                // 城市名称
+                cityHawaii: 'Hawái',
+                cityAlaska: 'Alaska',
+                cityLosAngeles: 'Los Ángeles',
+                cityDenver: 'Denver',
+                cityChicago: 'Chicago',
+                cityNewYork: 'Nueva York',
+                citySanJuan: 'San Juan',
+                citySaoPaulo: 'São Paulo',
+                cityAzores: 'Azores',
+                cityLondon: 'Londres',
+                cityBerlin: 'Berlín',
+                cityParis: 'París',
+                cityCairo: 'El Cairo',
+                cityMoscow: 'Moscú',
+                cityDubai: 'Dubái',
+                cityNewDelhi: 'Nueva Delhi',
+                cityBangkok: 'Bangkok',
+                cityBeijing: 'Pekín',
+                cityHongKong: 'Hong Kong',
+                cityTaipei: 'Taipéi',
+                citySingapore: 'Singapur',
+                cityTokyo: 'Tokio',
+                citySeoul: 'Seúl',
+                citySydney: 'Sídney',
+                cityAuckland: 'Auckland',
+                // 国家/地区
+                countryUSA: 'EE.UU.',
+                countryPacificTime: 'Hora del Pacífico',
+                countryMountainTime: 'Hora de Montaña',
+                countryCentralTime: 'Hora Central',
+                countryEasternTime: 'Hora del Este',
+                countryAtlanticTime: 'Hora del Atlántico',
+                countryBrazil: 'Brasil',
+                countryMidAtlantic: 'Atlántico-Centro',
+                countryUK: 'Reino Unido',
+                countryGermany: 'Alemania',
+                countryFrance: 'Francia',
+                countryEgypt: 'Egipto',
+                countryRussia: 'Rusia',
+                countryUAE: 'EAU',
+                countryIndia: 'India',
+                countryThailand: 'Tailandia',
+                countryChina: 'China',
+                countryTaiwan: 'Taiwán, China',
+                countrySingapore: 'Singapur',
+                countryJapan: 'Japón',
+                countrySouthKorea: 'Corea del Sur',
+                countryAustralia: 'Australia',
+                countryNewZealand: 'Nueva Zelanda',
+                // 星期
+                sunday: 'Domingo',
+                monday: 'Lunes',
+                tuesday: 'Martes',
+                wednesday: 'Miércoles',
+                thursday: 'Jueves',
+                friday: 'Viernes',
+                saturday: 'Sábado'
+            }
+        };
+
+        // 当前语言
+        let currentLang = localStorage.getItem('worldClockLang') || 'en';
+
+        // 获取翻译文本
+        function t(key) {
+            return translations[currentLang][key] || translations['en'][key] || key;
+        }
+
+        // 应用语言
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('worldClockLang', lang);
+            document.getElementById('langCurrent').textContent = translations[lang].langName;
+
+            // 更新所有带 data-i18n 属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[lang][key]) {
+                    el.textContent = translations[lang][key];
+                }
+            });
+
+            // 更新 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[lang][key]) {
+                    el.placeholder = translations[lang][key];
+                }
+            });
+
+            // 重新渲染时区卡片
+            renderTimezones();
+            updateCurrentTime();
+            updateFAQ();
+            updateRelatedTools();
+            updateFooter();
+        }
+
+        // 更新 FAQ 部分
+        function updateFAQ() {
+            const faqSection = document.querySelector('.faq-section');
+            if (faqSection) {
+                faqSection.querySelector('h2 span').textContent = t('faqTitle');
+                const details = faqSection.querySelectorAll('details');
+                const faqData = [
+                    { q: 'faq1Q', a: 'faq1A' },
+                    { q: 'faq2Q', a: 'faq2A' },
+                    { q: 'faq3Q', a: 'faq3A' },
+                    { q: 'faq4Q', a: 'faq4A' },
+                    { q: 'faq5Q', a: 'faq5A' }
+                ];
+                details.forEach((detail, index) => {
+                    if (faqData[index]) {
+                        detail.querySelector('summary').childNodes[0].textContent = t(faqData[index].q) + '\n                    ';
+                        detail.querySelector('div').textContent = t(faqData[index].a);
+                    }
+                });
+            }
+        }
+
+        // 更新相关工具部分
+        function updateRelatedTools() {
+            const relatedSection = document.querySelector('.related-tools');
+            if (relatedSection) {
+                relatedSection.querySelector('h3').innerHTML = '🔗 ' + t('relatedTools');
+                const tools = relatedSection.querySelectorAll('a');
+                const toolData = [
+                    { title: 'timestampTool', desc: 'timestampDesc' },
+                    { title: 'calculatorTool', desc: 'calculatorDesc' },
+                    { title: 'metronomeTool', desc: 'metronomeDesc' },
+                    { title: 'danmakuTool', desc: 'danmakuDesc' }
+                ];
+                tools.forEach((tool, index) => {
+                    if (toolData[index]) {
+                        const titleEl = tool.querySelectorAll('div')[1];
+                        const descEl = tool.querySelectorAll('div')[2];
+                        if (titleEl) titleEl.textContent = t(toolData[index].title);
+                        if (descEl) descEl.textContent = t(toolData[index].desc);
+                    }
+                });
+            }
+        }
+
+        // 更新页脚
+        function updateFooter() {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                const paragraphs = footer.querySelectorAll('p');
+                if (paragraphs[0]) paragraphs[0].textContent = t('footerPrivacy');
+                if (paragraphs[1]) {
+                    const backLink = paragraphs[1].querySelector('a');
+                    if (backLink) backLink.textContent = t('footerBack');
+                }
+            }
+        }
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            this.classList.toggle('active');
+            e.stopPropagation();
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                applyLanguage(lang);
+                document.getElementById('langDropdown').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
         // 时区数据
         const timezones = [
             // 西半球
-            { city: '夏威夷', country: '美国', offset: -10, icon: '🏝️', tz: 'Pacific/Honolulu' },
-            { city: '阿拉斯加', country: '美国', offset: -9, icon: '🐻', tz: 'America/Anchorage' },
-            { city: '洛杉矶', country: '太平洋时间', offset: -8, icon: '🌴', tz: 'America/Los_Angeles' },
-            { city: '丹佛', country: '美国山地时间', offset: -7, icon: '🏔️', tz: 'America/Denver' },
-            { city: '芝加哥', country: '美国中部时间', offset: -6, icon: '🌆', tz: 'America/Chicago' },
-            { city: '纽约', country: '美国东部时间', offset: -5, icon: '🗽', tz: 'America/New_York' },
-            { city: '圣胡安', country: '大西洋时间', offset: -4, icon: '🏖️', tz: 'America/Puerto_Rico' },
-            { city: '圣保罗', country: '巴西', offset: -3, icon: '🇧🇷', tz: 'America/Sao_Paulo' },
-            { city: '亚速尔', country: '大西洋-中部', offset: -2, icon: '🌊', tz: 'Atlantic/Azores' },
+            { cityKey: 'cityHawaii', countryKey: 'countryUSA', offset: -10, icon: '🏝️', tz: 'Pacific/Honolulu' },
+            { cityKey: 'cityAlaska', countryKey: 'countryUSA', offset: -9, icon: '🐻', tz: 'America/Anchorage' },
+            { cityKey: 'cityLosAngeles', countryKey: 'countryPacificTime', offset: -8, icon: '🌴', tz: 'America/Los_Angeles' },
+            { cityKey: 'cityDenver', countryKey: 'countryMountainTime', offset: -7, icon: '🏔️', tz: 'America/Denver' },
+            { cityKey: 'cityChicago', countryKey: 'countryCentralTime', offset: -6, icon: '🌆', tz: 'America/Chicago' },
+            { cityKey: 'cityNewYork', countryKey: 'countryEasternTime', offset: -5, icon: '🗽', tz: 'America/New_York' },
+            { cityKey: 'citySanJuan', countryKey: 'countryAtlanticTime', offset: -4, icon: '🏖️', tz: 'America/Puerto_Rico' },
+            { cityKey: 'citySaoPaulo', countryKey: 'countryBrazil', offset: -3, icon: '🇧🇷', tz: 'America/Sao_Paulo' },
+            { cityKey: 'cityAzores', countryKey: 'countryMidAtlantic', offset: -2, icon: '🌊', tz: 'Atlantic/Azores' },
 
             // 欧洲 & 非洲
-            { city: '伦敦', country: '英国', offset: 0, icon: '🇬🇧', tz: 'Europe/London' },
-            { city: '柏林', country: '德国', offset: 1, icon: '🇩🇪', tz: 'Europe/Berlin' },
-            { city: '巴黎', country: '法国', offset: 1, icon: '🗼', tz: 'Europe/Paris' },
-            { city: '开罗', country: '埃及', offset: 2, icon: '🏛️', tz: 'Africa/Cairo' },
-            { city: '莫斯科', country: '俄罗斯', offset: 3, icon: '🇷🇺', tz: 'Europe/Moscow' },
-            { city: '迪拜', country: '阿联酋', offset: 4, icon: '🏙️', tz: 'Asia/Dubai' },
+            { cityKey: 'cityLondon', countryKey: 'countryUK', offset: 0, icon: '🇬🇧', tz: 'Europe/London' },
+            { cityKey: 'cityBerlin', countryKey: 'countryGermany', offset: 1, icon: '🇩🇪', tz: 'Europe/Berlin' },
+            { cityKey: 'cityParis', countryKey: 'countryFrance', offset: 1, icon: '🗼', tz: 'Europe/Paris' },
+            { cityKey: 'cityCairo', countryKey: 'countryEgypt', offset: 2, icon: '🏛️', tz: 'Africa/Cairo' },
+            { cityKey: 'cityMoscow', countryKey: 'countryRussia', offset: 3, icon: '🇷🇺', tz: 'Europe/Moscow' },
+            { cityKey: 'cityDubai', countryKey: 'countryUAE', offset: 4, icon: '🏙️', tz: 'Asia/Dubai' },
 
             // 亚洲
-            { city: '新德里', country: '印度', offset: 5.5, icon: '🇮🇳', tz: 'Asia/Kolkata' },
-            { city: '曼谷', country: '泰国', offset: 7, icon: '🇹🇭', tz: 'Asia/Bangkok' },
-            { city: '北京', country: '中国', offset: 8, icon: '🇨🇳', tz: 'Asia/Shanghai' },
-            { city: '香港', country: '中国', offset: 8, icon: '🏙️', tz: 'Asia/Hong_Kong' },
-            { city: '台北', country: '中国台湾', offset: 8, icon: '🏯', tz: 'Asia/Taipei' },
-            { city: '新加坡', country: '新加坡', offset: 8, icon: '🇸🇬', tz: 'Asia/Singapore' },
-            { city: '东京', country: '日本', offset: 9, icon: '🗾', tz: 'Asia/Tokyo' },
-            { city: '首尔', country: '韩国', offset: 9, icon: '🇰🇷', tz: 'Asia/Seoul' },
+            { cityKey: 'cityNewDelhi', countryKey: 'countryIndia', offset: 5.5, icon: '🇮🇳', tz: 'Asia/Kolkata' },
+            { cityKey: 'cityBangkok', countryKey: 'countryThailand', offset: 7, icon: '🇹🇭', tz: 'Asia/Bangkok' },
+            { cityKey: 'cityBeijing', countryKey: 'countryChina', offset: 8, icon: '🇨🇳', tz: 'Asia/Shanghai' },
+            { cityKey: 'cityHongKong', countryKey: 'countryChina', offset: 8, icon: '🏙️', tz: 'Asia/Hong_Kong' },
+            { cityKey: 'cityTaipei', countryKey: 'countryTaiwan', offset: 8, icon: '🏯', tz: 'Asia/Taipei' },
+            { cityKey: 'citySingapore', countryKey: 'countrySingapore', offset: 8, icon: '🇸🇬', tz: 'Asia/Singapore' },
+            { cityKey: 'cityTokyo', countryKey: 'countryJapan', offset: 9, icon: '🗾', tz: 'Asia/Tokyo' },
+            { cityKey: 'citySeoul', countryKey: 'countrySouthKorea', offset: 9, icon: '🇰🇷', tz: 'Asia/Seoul' },
 
             // 大洋洲
-            { city: '悉尼', country: '澳大利亚', offset: 10, icon: '🇦🇺', tz: 'Australia/Sydney' },
-            { city: '奥克兰', country: '新西兰', offset: 12, icon: '🇳🇿', tz: 'Pacific/Auckland' }
+            { cityKey: 'citySydney', countryKey: 'countryAustralia', offset: 10, icon: '🇦🇺', tz: 'Australia/Sydney' },
+            { cityKey: 'cityAuckland', countryKey: 'countryNewZealand', offset: 12, icon: '🇳🇿', tz: 'Pacific/Auckland' }
         ];
 
         // 获取用户当前时区偏移
@@ -520,6 +1081,7 @@
 
         // 初始化
         function init() {
+            applyLanguage(currentLang);
             updateCurrentTime();
             renderTimezones();
             setInterval(updateAllTimes, 1000);
@@ -547,8 +1109,9 @@
                 `${hours}<span class="time-separator">:</span>${minutes}<span class="time-separator">:</span>${seconds}`;
 
             // 日期
+            const locale = currentLang === 'zh-CN' ? 'zh-CN' : (currentLang === 'fr' ? 'fr-FR' : (currentLang === 'es' ? 'es-ES' : 'en-US'));
             const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric' };
-            document.getElementById('mainDate').textContent = now.toLocaleDateString('zh-CN', options);
+            document.getElementById('mainDate').textContent = now.toLocaleDateString(locale, options);
         }
 
         // 渲染时区卡片
@@ -576,25 +1139,27 @@
             const diff = tz.offset - userOffset;
             let diffText = '';
             if (Math.abs(diff) < 0.1) {
-                diffText = '与您时间相同';
+                diffText = t('sameTime');
             } else if (diff > 0) {
-                diffText = `比您快 <span class="diff-value ahead">${formatDiff(diff)}</span>`;
+                diffText = `${t('aheadBy')} <span class="diff-value ahead">${formatDiff(diff)}</span>`;
             } else {
-                diffText = `比您慢 <span class="diff-value behind">${formatDiff(Math.abs(diff))}</span>`;
+                diffText = `${t('behindBy')} <span class="diff-value behind">${formatDiff(Math.abs(diff))}</span>`;
             }
 
             const offsetStr = tz.offset >= 0 ? `GMT+${tz.offset}` : `GMT${tz.offset}`;
+            const cityName = t(tz.cityKey);
+            const countryName = t(tz.countryKey);
 
             return `
-                <div class="timezone-card ${isCurrent ? 'current' : ''}" data-city="${tz.city}" data-country="${tz.country}" data-offset="${tz.offset}">
+                <div class="timezone-card ${isCurrent ? 'current' : ''}" data-city="${cityName}" data-country="${countryName}" data-offset="${tz.offset}" data-current-label="${t('currentTimezone')}">
                     <div class="card-header">
                         <span class="city-icon">${tz.icon}</span>
                         <div class="city-info">
-                            <div class="city-name">${tz.city}</div>
-                            <div class="city-offset">${tz.country} · ${offsetStr}</div>
+                            <div class="city-name">${cityName}</div>
+                            <div class="city-offset">${countryName} · ${offsetStr}</div>
                         </div>
                         <span class="day-night ${isDay ? 'day' : 'night'}">
-                            ${isDay ? '☀️ 白天' : '🌙 夜晚'}
+                            ${isDay ? '☀️ ' + t('day') : '🌙 ' + t('night')}
                         </span>
                     </div>
                     <div class="card-time" data-offset="${tz.offset}">
@@ -627,22 +1192,34 @@
         function formatDate(date) {
             const month = date.getMonth() + 1;
             const day = date.getDate();
-            const weekdays = ['周日', '周一', '周二', '周三', '周四', '周五', '周六'];
+            const weekdays = [t('sunday'), t('monday'), t('tuesday'), t('wednesday'), t('thursday'), t('friday'), t('saturday')];
             const weekday = weekdays[date.getDay()];
-            return `${month}月${day}日 ${weekday}`;
+
+            if (currentLang === 'zh-CN') {
+                return `${month}月${day}日 ${weekday}`;
+            } else if (currentLang === 'fr') {
+                const months = ['janvier', 'février', 'mars', 'avril', 'mai', 'juin', 'juillet', 'août', 'septembre', 'octobre', 'novembre', 'décembre'];
+                return `${weekday} ${day} ${months[month-1]}`;
+            } else if (currentLang === 'es') {
+                const months = ['enero', 'febrero', 'marzo', 'abril', 'mayo', 'junio', 'julio', 'agosto', 'septiembre', 'octubre', 'noviembre', 'diciembre'];
+                return `${weekday} ${day} de ${months[month-1]}`;
+            } else {
+                const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+                return `${weekday}, ${months[month-1]} ${day}`;
+            }
         }
 
         // 格式化时差
         function formatDiff(diff) {
             if (Number.isInteger(diff)) {
-                return `${diff} 小时`;
+                return `${diff} ${diff === 1 ? t('hour') : t('hours')}`;
             } else {
                 const hours = Math.floor(diff);
                 const minutes = (diff - hours) * 60;
                 if (hours === 0) {
-                    return `${minutes} 分钟`;
+                    return `${minutes} ${t('minutes')}`;
                 }
-                return `${hours} 小时 ${minutes} 分钟`;
+                return `${hours} ${hours === 1 ? t('hour') : t('hours')} ${minutes} ${t('minutes')}`;
             }
         }
 
@@ -672,7 +1249,7 @@
                 const isDay = hours >= 6 && hours < 18;
                 const indicator = card.querySelector('.day-night');
                 indicator.className = `day-night ${isDay ? 'day' : 'night'}`;
-                indicator.innerHTML = isDay ? '☀️ 白天' : '🌙 夜晚';
+                indicator.innerHTML = isDay ? '☀️ ' + t('day') : '🌙 ' + t('night');
             });
         }
 
@@ -702,52 +1279,52 @@
     <!-- FAQ 常见问题 -->
     <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
         <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; display: flex; align-items: center; gap: 10px;">
-            <span style="color: #7c3aed;">❓</span> 常见问题
+            <span style="color: #7c3aed;">❓</span> <span data-i18n="faqTitle">Frequently Asked Questions</span>
         </h2>
         <div style="display: flex; flex-direction: column; gap: 16px;">
             <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    世界时钟支持多少个城市？
+                    <span data-i18n="faq1Q">How many cities does the world clock support?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    支持全球 20+ 个主要城市和时区，涵盖亚洲、欧洲、美洲、大洋洲等主要地区的重要城市，包括北京、东京、纽约、伦敦、巴黎、悉尼等。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq1A">
+                    Supports 20+ major cities and time zones worldwide, covering important cities in Asia, Europe, Americas, and Oceania, including Beijing, Tokyo, New York, London, Paris, Sydney, etc.
                 </div>
             </details>
             <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    时间准确吗？
+                    <span data-i18n="faq2Q">Is the time accurate?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    时间基于你设备的系统时间，确保设备时间正确即可。建议开启设备的自动时间同步功能，以获得最准确的时间显示。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq2A">
+                    The time is based on your device's system time. Ensure correct time for accurate display. We recommend enabling automatic time sync on your device.
                 </div>
             </details>
             <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    什么是 UTC 时间？
+                    <span data-i18n="faq3Q">What is UTC time?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    UTC（协调世界时）是国际标准时间，是全球时区计算的基准。北京时间是 UTC+8，即比 UTC 快 8 小时；纽约时间是 UTC-5（冬令时）或 UTC-4（夏令时）。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq3A">
+                    UTC (Coordinated Universal Time) is the international standard time and basis for global time zone calculations. Beijing time is UTC+8, meaning 8 hours ahead of UTC; New York is UTC-5 (winter) or UTC-4 (summer).
                 </div>
             </details>
             <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    为什么有些城市时间和预期不同？
+                    <span data-i18n="faq4Q">Why does some city time differ from expected?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    可能是夏令时影响，部分国家（如美国、欧洲大部分国家）会在特定季节调整时间，通常在春季将时钟拨快一小时，在秋季再拨回。这会导致实际时差与标准时差有所不同。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq4A">
+                    This may be due to daylight saving time. Some countries (like the US and most of Europe) adjust clocks during certain seasons, typically advancing by one hour in spring and reverting in fall.
                 </div>
             </details>
             <details style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.08); border-radius: 12px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    可以添加自定义城市吗？
+                    <span data-i18n="faq5Q">Can I add custom cities?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    暂不支持自定义添加城市，目前显示预设的全球主要城市时区，已覆盖大部分常用地区。如有特定需求，可以使用搜索功能快速定位到相近时区的城市。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq5A">
+                    Custom city addition is not supported yet. Currently displays preset major cities worldwide, covering most commonly used regions. Use the search function to quickly locate cities in nearby timezones.
                 </div>
             </details>
         </div>
@@ -755,35 +1332,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 <span data-i18n="relatedTools">Related Tools</span></h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
-                <div style="color: #e6edf3; font-weight: 500;">时间戳转换</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">时间戳与日期互转</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="timestampTool">Timestamp Converter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="timestampDesc">Convert timestamp and date</div>
             </a>
             <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
-                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="calculatorTool">Scientific Calculator</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="calculatorDesc">Supports complex expressions</div>
             </a>
             <a href="metronome.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🥁</div>
-                <div style="color: #e6edf3; font-weight: 500;">节拍器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线节拍器工具</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="metronomeTool">Metronome</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="metronomeDesc">Online metronome tool</div>
             </a>
             <a href="handheld-danmaku.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
-                <div style="color: #e6edf3; font-weight: 500;">手持弹幕</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">LED 滚动字幕</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="danmakuTool">Handheld Danmaku</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="danmakuDesc">LED scrolling text</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox Home</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>图片压缩工具 - 在线批量压缩JPG/PNG/WebP图片 | Web Toolbox</title>
+    <title>Image Compressor - Batch Compress JPG/PNG/WebP Images Online | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线图片压缩工具，支持批量压缩JPG、PNG、WebP图片。可调节压缩质量，可选择调整尺寸，保持清晰度的同时大幅减小文件体积。纯前端运行，数据安全。">
-    <meta name="keywords" content="图片压缩,在线压缩,JPG压缩,PNG压缩,WebP转换,批量压缩,图片优化,减小图片体积,免费工具">
+    <meta name="description" content="Free online image compression tool. Batch compress JPG, PNG, WebP images. Adjustable quality settings, optional resizing, maintains clarity while significantly reducing file size. Pure frontend, data secure.">
+    <meta name="keywords" content="image compressor,online compress,JPG compress,PNG compress,WebP convert,batch compress,image optimization,reduce image size,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/image-compressor.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/image-compressor.html">
-    <meta property="og:title" content="图片压缩工具 - 在线批量压缩图片">
-    <meta property="og:description" content="免费在线图片压缩，支持批量处理JPG/PNG/WebP，保持清晰度减小体积。">
+    <meta property="og:title" content="Image Compressor - Batch Compress Images Online">
+    <meta property="og:description" content="Free online image compression. Batch process JPG/PNG/WebP, maintain clarity while reducing size.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/image-compressor.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="图片压缩工具 - 在线批量压缩图片">
-    <meta name="twitter:description" content="免费在线图片压缩，支持批量处理JPG/PNG/WebP。">
+    <meta name="twitter:title" content="Image Compressor - Batch Compress Images Online">
+    <meta name="twitter:description" content="Free online image compression. Batch process JPG/PNG/WebP.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/image-compressor.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "图片压缩工具",
+        "name": "Image Compressor",
         "url": "https://www.heyuan110.com/web-toolbox/image-compressor.html",
-        "description": "在线批量压缩JPG/PNG/WebP图片，保持清晰度减小体积",
+        "description": "Batch compress JPG/PNG/WebP images online, maintain clarity while reducing size",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "支持哪些图片格式？",
+                "name": "What image formats are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持 JPG、PNG、WebP、GIF 等常见图片格式。"
+                    "text": "Supports JPG, PNG, WebP, GIF and other common image formats."
                 }
             },
             {
                 "@type": "Question",
-                "name": "压缩后图片质量会下降吗？",
+                "name": "Will compression reduce image quality?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "会有轻微损失，但可通过调节压缩质量控制，80%以上人眼难以察觉。"
+                    "text": "There will be slight loss, but you can control it by adjusting compression quality. Above 80% is barely noticeable to the human eye."
                 }
             },
             {
                 "@type": "Question",
-                "name": "最多可以同时压缩多少张图片？",
+                "name": "How many images can be compressed at once?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "取决于浏览器内存，建议单次不超过50张。"
+                    "text": "Depends on browser memory, recommended not to exceed 50 images at a time."
                 }
             },
             {
                 "@type": "Question",
-                "name": "图片会上传到服务器吗？",
+                "name": "Will images be uploaded to a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会，所有压缩在本地浏览器完成，数据安全有保障。"
+                    "text": "No, all compression is done locally in your browser, ensuring data security."
                 }
             },
             {
                 "@type": "Question",
-                "name": "PNG 图片可以无损压缩吗？",
+                "name": "Can PNG images be compressed losslessly?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "PNG 采用无损压缩算法，可通过优化算法减小体积而不损失画质。"
+                    "text": "PNG uses lossless compression algorithm, can reduce size through optimization without losing quality."
                 }
             }
         ]
@@ -116,7 +116,17 @@
         header {
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
         }
+
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         .back-link {
             display: inline-flex;
@@ -849,32 +859,43 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link">← 返回工具箱</a>
-            <h1>📦 图片压缩工具</h1>
-            <p class="subtitle">批量压缩图片，保持清晰度的同时大幅减小文件体积</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" data-i18n="backLink">← Back to Toolbox</a>
+            <h1 data-i18n="title">📦 Image Compressor</h1>
+            <p class="subtitle" data-i18n="subtitle">Batch compress images, significantly reduce file size while maintaining clarity</p>
         </header>
 
         <!-- 功能特点 -->
         <section class="features-section">
             <div class="feature-card">
                 <div class="feature-icon">🎯</div>
-                <div class="feature-title">智能压缩</div>
-                <div class="feature-desc">自动选择最佳压缩参数，平衡画质与文件大小</div>
+                <div class="feature-title" data-i18n="feature1Title">Smart Compression</div>
+                <div class="feature-desc" data-i18n="feature1Desc">Automatically selects optimal compression parameters, balancing quality and file size</div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📚</div>
-                <div class="feature-title">批量处理</div>
-                <div class="feature-desc">支持同时压缩多张图片，提高工作效率</div>
+                <div class="feature-title" data-i18n="feature2Title">Batch Processing</div>
+                <div class="feature-desc" data-i18n="feature2Desc">Compress multiple images simultaneously, improving work efficiency</div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🎚️</div>
-                <div class="feature-title">质量可调</div>
-                <div class="feature-desc">可自定义压缩质量，从极限压缩到无损压缩</div>
+                <div class="feature-title" data-i18n="feature3Title">Adjustable Quality</div>
+                <div class="feature-desc" data-i18n="feature3Desc">Customize compression quality, from extreme compression to lossless</div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">👁️</div>
-                <div class="feature-title">实时对比</div>
-                <div class="feature-desc">压缩前后对比预览，直观查看压缩效果</div>
+                <div class="feature-title" data-i18n="feature4Title">Real-time Comparison</div>
+                <div class="feature-desc" data-i18n="feature4Desc">Preview before and after compression, visually see the compression effect</div>
             </div>
         </section>
 
@@ -882,16 +903,16 @@
             <!-- 上传区域 -->
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">🖼️</div>
-                <div class="upload-title">拖拽图片到这里，或点击选择</div>
-                <div class="upload-hint">支持 JPG、PNG、GIF、WebP 格式，可批量上传</div>
+                <div class="upload-title" data-i18n="uploadTitle">Drag images here, or click to select</div>
+                <div class="upload-hint" data-i18n="uploadHint">Supports JPG, PNG, GIF, WebP formats, batch upload available</div>
                 <div class="upload-buttons">
                     <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
                         <span>📁</span>
-                        <span>选择图片</span>
+                        <span data-i18n="selectImages">Select Images</span>
                     </button>
                     <button class="upload-btn secondary" onclick="document.getElementById('folderInput').click()">
                         <span>📂</span>
-                        <span>选择文件夹</span>
+                        <span data-i18n="selectFolder">Select Folder</span>
                     </button>
                 </div>
                 <input type="file" id="fileInput" accept="image/*" multiple>
@@ -902,31 +923,31 @@
             <div class="settings-section">
                 <div class="section-title">
                     <span>⚙️</span>
-                    <span>压缩设置</span>
+                    <span data-i18n="settingsTitle">Compression Settings</span>
                 </div>
                 <div class="settings-grid">
                     <!-- 压缩质量 -->
                     <div class="setting-group">
                         <div class="setting-label">
-                            压缩质量 <span class="setting-value" id="qualityValue">80%</span>
+                            <span data-i18n="qualityLabel">Compression Quality</span> <span class="setting-value" id="qualityValue">80%</span>
                         </div>
                         <div class="slider-container">
-                            <span style="font-size: 0.8rem; color: #71717a;">低</span>
+                            <span style="font-size: 0.8rem; color: #71717a;" data-i18n="qualityLow">Low</span>
                             <input type="range" id="qualitySlider" min="10" max="100" value="80" oninput="updateQuality()">
-                            <span style="font-size: 0.8rem; color: #71717a;">高</span>
+                            <span style="font-size: 0.8rem; color: #71717a;" data-i18n="qualityHigh">High</span>
                         </div>
-                        <div style="font-size: 0.8rem; color: #71717a; margin-top: 4px;">
-                            建议：60-80% 可获得较好的压缩比和清晰度平衡
+                        <div style="font-size: 0.8rem; color: #71717a; margin-top: 4px;" data-i18n="qualityTip">
+                            Recommended: 60-80% for good balance between compression ratio and clarity
                         </div>
                     </div>
 
                     <!-- 输出格式 -->
                     <div class="setting-group">
-                        <div class="setting-label">输出格式</div>
+                        <div class="setting-label" data-i18n="formatLabel">Output Format</div>
                         <div class="format-options">
                             <label class="format-option">
                                 <input type="radio" name="format" value="original" checked>
-                                <span class="format-label">保持原格式</span>
+                                <span class="format-label" data-i18n="formatOriginal">Keep Original</span>
                             </label>
                             <label class="format-option">
                                 <input type="radio" name="format" value="jpeg">
@@ -945,11 +966,11 @@
                             <input type="checkbox" id="resizeCheck">
                             <label class="checkbox-label" for="resizeCheck">
                                 <span class="checkbox-icon">✓</span>
-                                <span>调整图片尺寸</span>
+                                <span data-i18n="resizeLabel">Resize Image</span>
                             </label>
                         </div>
                         <div class="size-inputs" id="sizeInputs" style="display: none;">
-                            <span>最大宽度</span>
+                            <span data-i18n="maxWidth">Max Width</span>
                             <input type="number" id="maxWidth" value="1920" min="100" max="10000">
                             <span>×</span>
                             <input type="number" id="maxHeight" value="1080" min="100" max="10000">
@@ -963,20 +984,20 @@
             <div class="images-section" id="imagesSection">
                 <div class="images-header">
                     <div class="images-count">
-                        已选择 <span id="imageCount">0</span> 张图片
+                        <span data-i18n="selectedCount">Selected</span> <span id="imageCount">0</span> <span data-i18n="imagesText">images</span>
                     </div>
                     <div class="action-buttons">
                         <button class="action-btn secondary" onclick="clearAll()">
                             <span>🗑️</span>
-                            <span>清空全部</span>
+                            <span data-i18n="clearAll">Clear All</span>
                         </button>
                         <button class="action-btn primary" id="compressBtn" onclick="compressAll()">
                             <span>⚡</span>
-                            <span>开始压缩</span>
+                            <span data-i18n="startCompress">Start Compression</span>
                         </button>
                         <button class="action-btn primary" id="downloadAllBtn" onclick="downloadAll()" style="display: none;">
                             <span>💾</span>
-                            <span>下载全部</span>
+                            <span data-i18n="downloadAll">Download All</span>
                         </button>
                     </div>
                 </div>
@@ -987,38 +1008,367 @@
             <div class="stats-section" id="statsSection">
                 <div class="section-title">
                     <span>📊</span>
-                    <span>压缩统计</span>
+                    <span data-i18n="statsTitle">Compression Statistics</span>
                 </div>
                 <div class="stats-grid">
                     <div class="stat-item">
                         <div class="stat-value" id="totalImages">0</div>
-                        <div class="stat-label">图片数量</div>
+                        <div class="stat-label" data-i18n="statImages">Images</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-value" id="originalTotal">0 MB</div>
-                        <div class="stat-label">原始大小</div>
+                        <div class="stat-label" data-i18n="statOriginal">Original Size</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-value" id="compressedTotal">0 MB</div>
-                        <div class="stat-label">压缩后大小</div>
+                        <div class="stat-label" data-i18n="statCompressed">Compressed Size</div>
                     </div>
                     <div class="stat-item">
                         <div class="stat-value" id="savedTotal">0%</div>
-                        <div class="stat-label">节省空间</div>
+                        <div class="stat-label" data-i18n="statSaved">Space Saved</div>
                     </div>
                 </div>
             </div>
         </div>
 
         <footer>
-            <p>纯前端处理，图片不会上传到服务器</p>
+            <p data-i18n="footerNote">Pure frontend processing, images are not uploaded to server</p>
             <p style="margin-top: 8px;">
-                <a href="index.html">← 返回 Web Toolbox</a>
+                <a href="index.html" data-i18n="footerBack">← Back to Web Toolbox</a>
             </p>
         </footer>
     </div>
 
     <script>
+        // ==================== 多语言支持 ====================
+        const i18n = {
+            'en': {
+                backLink: '← Back to Toolbox',
+                title: '📦 Image Compressor',
+                subtitle: 'Batch compress images, significantly reduce file size while maintaining clarity',
+                feature1Title: 'Smart Compression',
+                feature1Desc: 'Automatically selects optimal compression parameters, balancing quality and file size',
+                feature2Title: 'Batch Processing',
+                feature2Desc: 'Compress multiple images simultaneously, improving work efficiency',
+                feature3Title: 'Adjustable Quality',
+                feature3Desc: 'Customize compression quality, from extreme compression to lossless',
+                feature4Title: 'Real-time Comparison',
+                feature4Desc: 'Preview before and after compression, visually see the compression effect',
+                uploadTitle: 'Drag images here, or click to select',
+                uploadHint: 'Supports JPG, PNG, GIF, WebP formats, batch upload available',
+                selectImages: 'Select Images',
+                selectFolder: 'Select Folder',
+                settingsTitle: 'Compression Settings',
+                qualityLabel: 'Compression Quality',
+                qualityLow: 'Low',
+                qualityHigh: 'High',
+                qualityTip: 'Recommended: 60-80% for good balance between compression ratio and clarity',
+                formatLabel: 'Output Format',
+                formatOriginal: 'Keep Original',
+                resizeLabel: 'Resize Image',
+                maxWidth: 'Max Width',
+                selectedCount: 'Selected',
+                imagesText: 'images',
+                clearAll: 'Clear All',
+                startCompress: 'Start Compression',
+                compressing: 'Compressing...',
+                downloadAll: 'Download All',
+                statsTitle: 'Compression Statistics',
+                statImages: 'Images',
+                statOriginal: 'Original Size',
+                statCompressed: 'Compressed Size',
+                statSaved: 'Space Saved',
+                footerNote: 'Pure frontend processing, images are not uploaded to server',
+                footerBack: '← Back to Web Toolbox',
+                statusPending: 'Pending',
+                statusProcessing: 'Processing',
+                statusDone: 'Done',
+                statusError: 'Error',
+                statusOptimal: 'Optimal',
+                btnDownload: 'Download',
+                btnRemove: 'Remove',
+                confirmClear: 'Are you sure you want to clear all images?',
+                alertSelectImages: 'Please select image files!',
+                faqTitle: 'Frequently Asked Questions',
+                faq1Q: 'What image formats are supported?',
+                faq1A: 'Supports JPG, PNG, WebP, GIF and other common image formats. You can directly drag or select these format images for compression.',
+                faq2Q: 'Will compression reduce image quality?',
+                faq2A: 'There will be slight loss, but you can control it by adjusting compression quality. We recommend setting it above 80%, where the difference is barely noticeable to the human eye while achieving good compression.',
+                faq3Q: 'How many images can be compressed at once?',
+                faq3A: 'Depends on browser memory and device performance, we recommend not exceeding 50 images at a time. For larger images, consider reducing the quantity to ensure smooth processing.',
+                faq4Q: 'Will images be uploaded to a server?',
+                faq4A: 'No. All compression processing is done entirely in your local browser. Image data is never uploaded to any server, ensuring your privacy and data security.',
+                faq5Q: 'Can PNG images be compressed losslessly?',
+                faq5A: 'PNG uses lossless compression algorithm, which can reduce size through optimization without losing quality. This tool intelligently selects the optimal compression scheme, automatically applying lossless optimization when keeping the original format.',
+                relatedTools: 'Related Tools',
+                relatedImageConverter: 'Image Converter',
+                relatedImageConverterDesc: 'WebP/PNG/JPG conversion',
+                relatedImageEditor: 'Image Editor',
+                relatedImageEditorDesc: 'Online image editing and cropping',
+                relatedIcoMaker: 'ICO Maker',
+                relatedIcoMakerDesc: 'Generate multi-size ICO icons',
+                relatedImageToPdf: 'Image to PDF',
+                relatedImageToPdfDesc: 'Merge images into PDF'
+            },
+            'zh-CN': {
+                backLink: '← 返回工具箱',
+                title: '📦 图片压缩工具',
+                subtitle: '批量压缩图片，保持清晰度的同时大幅减小文件体积',
+                feature1Title: '智能压缩',
+                feature1Desc: '自动选择最佳压缩参数，平衡画质与文件大小',
+                feature2Title: '批量处理',
+                feature2Desc: '支持同时压缩多张图片，提高工作效率',
+                feature3Title: '质量可调',
+                feature3Desc: '可自定义压缩质量，从极限压缩到无损压缩',
+                feature4Title: '实时对比',
+                feature4Desc: '压缩前后对比预览，直观查看压缩效果',
+                uploadTitle: '拖拽图片到这里，或点击选择',
+                uploadHint: '支持 JPG、PNG、GIF、WebP 格式，可批量上传',
+                selectImages: '选择图片',
+                selectFolder: '选择文件夹',
+                settingsTitle: '压缩设置',
+                qualityLabel: '压缩质量',
+                qualityLow: '低',
+                qualityHigh: '高',
+                qualityTip: '建议：60-80% 可获得较好的压缩比和清晰度平衡',
+                formatLabel: '输出格式',
+                formatOriginal: '保持原格式',
+                resizeLabel: '调整图片尺寸',
+                maxWidth: '最大宽度',
+                selectedCount: '已选择',
+                imagesText: '张图片',
+                clearAll: '清空全部',
+                startCompress: '开始压缩',
+                compressing: '压缩中...',
+                downloadAll: '下载全部',
+                statsTitle: '压缩统计',
+                statImages: '图片数量',
+                statOriginal: '原始大小',
+                statCompressed: '压缩后大小',
+                statSaved: '节省空间',
+                footerNote: '纯前端处理，图片不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox',
+                statusPending: '待压缩',
+                statusProcessing: '压缩中',
+                statusDone: '已完成',
+                statusError: '错误',
+                statusOptimal: '已是最优',
+                btnDownload: '下载',
+                btnRemove: '移除',
+                confirmClear: '确定要清空所有图片吗？',
+                alertSelectImages: '请选择图片文件！',
+                faqTitle: '常见问题',
+                faq1Q: '支持哪些图片格式？',
+                faq1A: '支持 JPG、PNG、WebP、GIF 等常见图片格式。您可以直接拖拽或选择这些格式的图片进行压缩处理。',
+                faq2Q: '压缩后图片质量会下降吗？',
+                faq2A: '会有轻微损失，但可通过调节压缩质量控制。建议设置在 80% 以上，此时人眼几乎难以察觉画质差异，同时能获得较好的压缩效果。',
+                faq3Q: '最多可以同时压缩多少张图片？',
+                faq3A: '取决于浏览器内存和设备性能，建议单次不超过 50 张。如果图片尺寸较大，建议适当减少数量以保证处理流畅。',
+                faq4Q: '图片会上传到服务器吗？',
+                faq4A: '不会。所有压缩处理完全在您的浏览器本地完成，图片数据不会上传到任何服务器，确保您的隐私和数据安全。',
+                faq5Q: 'PNG 图片可以无损压缩吗？',
+                faq5A: 'PNG 采用无损压缩算法，可通过优化算法减小体积而不损失画质。本工具会智能选择最优压缩方案，在保持原格式时自动应用无损优化。',
+                relatedTools: '相关工具推荐',
+                relatedImageConverter: '图片格式转换',
+                relatedImageConverterDesc: 'WebP/PNG/JPG 互转',
+                relatedImageEditor: '图片编辑器',
+                relatedImageEditorDesc: '在线编辑裁剪图片',
+                relatedIcoMaker: 'ICO 图标制作',
+                relatedIcoMakerDesc: '生成多尺寸 ICO 图标',
+                relatedImageToPdf: '图片合并为PDF',
+                relatedImageToPdfDesc: '多图合并生成PDF'
+            },
+            'fr': {
+                backLink: '← Retour à la boîte à outils',
+                title: '📦 Compresseur d\'images',
+                subtitle: 'Compressez des images en lot, réduisez considérablement la taille des fichiers tout en maintenant la clarté',
+                feature1Title: 'Compression intelligente',
+                feature1Desc: 'Sélectionne automatiquement les paramètres de compression optimaux, équilibrant qualité et taille de fichier',
+                feature2Title: 'Traitement par lots',
+                feature2Desc: 'Compressez plusieurs images simultanément, améliorant l\'efficacité du travail',
+                feature3Title: 'Qualité ajustable',
+                feature3Desc: 'Personnalisez la qualité de compression, de la compression extrême à sans perte',
+                feature4Title: 'Comparaison en temps réel',
+                feature4Desc: 'Prévisualisez avant et après la compression, voyez visuellement l\'effet de compression',
+                uploadTitle: 'Faites glisser les images ici, ou cliquez pour sélectionner',
+                uploadHint: 'Prend en charge les formats JPG, PNG, GIF, WebP, téléchargement par lots disponible',
+                selectImages: 'Sélectionner des images',
+                selectFolder: 'Sélectionner un dossier',
+                settingsTitle: 'Paramètres de compression',
+                qualityLabel: 'Qualité de compression',
+                qualityLow: 'Basse',
+                qualityHigh: 'Haute',
+                qualityTip: 'Recommandé : 60-80% pour un bon équilibre entre taux de compression et clarté',
+                formatLabel: 'Format de sortie',
+                formatOriginal: 'Conserver l\'original',
+                resizeLabel: 'Redimensionner l\'image',
+                maxWidth: 'Largeur max',
+                selectedCount: 'Sélectionné',
+                imagesText: 'images',
+                clearAll: 'Tout effacer',
+                startCompress: 'Démarrer la compression',
+                compressing: 'Compression...',
+                downloadAll: 'Tout télécharger',
+                statsTitle: 'Statistiques de compression',
+                statImages: 'Images',
+                statOriginal: 'Taille originale',
+                statCompressed: 'Taille compressée',
+                statSaved: 'Espace économisé',
+                footerNote: 'Traitement frontend pur, les images ne sont pas téléchargées sur le serveur',
+                footerBack: '← Retour à Web Toolbox',
+                statusPending: 'En attente',
+                statusProcessing: 'Traitement',
+                statusDone: 'Terminé',
+                statusError: 'Erreur',
+                statusOptimal: 'Optimal',
+                btnDownload: 'Télécharger',
+                btnRemove: 'Supprimer',
+                confirmClear: 'Êtes-vous sûr de vouloir effacer toutes les images ?',
+                alertSelectImages: 'Veuillez sélectionner des fichiers image !',
+                faqTitle: 'Questions fréquentes',
+                faq1Q: 'Quels formats d\'image sont pris en charge ?',
+                faq1A: 'Prend en charge JPG, PNG, WebP, GIF et autres formats d\'image courants. Vous pouvez directement glisser ou sélectionner ces formats d\'images pour la compression.',
+                faq2Q: 'La compression réduira-t-elle la qualité de l\'image ?',
+                faq2A: 'Il y aura une légère perte, mais vous pouvez la contrôler en ajustant la qualité de compression. Nous recommandons de la régler au-dessus de 80%, où la différence est à peine perceptible à l\'œil nu tout en obtenant une bonne compression.',
+                faq3Q: 'Combien d\'images peuvent être compressées à la fois ?',
+                faq3A: 'Cela dépend de la mémoire du navigateur et des performances de l\'appareil, nous recommandons de ne pas dépasser 50 images à la fois. Pour les images plus grandes, envisagez de réduire la quantité pour assurer un traitement fluide.',
+                faq4Q: 'Les images seront-elles téléchargées sur un serveur ?',
+                faq4A: 'Non. Tout le traitement de compression est effectué entièrement dans votre navigateur local. Les données d\'image ne sont jamais téléchargées sur aucun serveur, assurant votre confidentialité et la sécurité des données.',
+                faq5Q: 'Les images PNG peuvent-elles être compressées sans perte ?',
+                faq5A: 'PNG utilise un algorithme de compression sans perte, qui peut réduire la taille par optimisation sans perdre en qualité. Cet outil sélectionne intelligemment le schéma de compression optimal, appliquant automatiquement l\'optimisation sans perte lors de la conservation du format original.',
+                relatedTools: 'Outils connexes',
+                relatedImageConverter: 'Convertisseur d\'images',
+                relatedImageConverterDesc: 'Conversion WebP/PNG/JPG',
+                relatedImageEditor: 'Éditeur d\'images',
+                relatedImageEditorDesc: 'Édition et recadrage d\'images en ligne',
+                relatedIcoMaker: 'Créateur ICO',
+                relatedIcoMakerDesc: 'Générer des icônes ICO multi-tailles',
+                relatedImageToPdf: 'Image vers PDF',
+                relatedImageToPdfDesc: 'Fusionner des images en PDF'
+            },
+            'es': {
+                backLink: '← Volver a la caja de herramientas',
+                title: '📦 Compresor de imágenes',
+                subtitle: 'Comprima imágenes en lote, reduzca significativamente el tamaño del archivo manteniendo la claridad',
+                feature1Title: 'Compresión inteligente',
+                feature1Desc: 'Selecciona automáticamente los parámetros óptimos de compresión, equilibrando calidad y tamaño de archivo',
+                feature2Title: 'Procesamiento por lotes',
+                feature2Desc: 'Comprima múltiples imágenes simultáneamente, mejorando la eficiencia del trabajo',
+                feature3Title: 'Calidad ajustable',
+                feature3Desc: 'Personalice la calidad de compresión, desde compresión extrema hasta sin pérdidas',
+                feature4Title: 'Comparación en tiempo real',
+                feature4Desc: 'Vista previa antes y después de la compresión, vea visualmente el efecto de compresión',
+                uploadTitle: 'Arrastre imágenes aquí, o haga clic para seleccionar',
+                uploadHint: 'Soporta formatos JPG, PNG, GIF, WebP, carga por lotes disponible',
+                selectImages: 'Seleccionar imágenes',
+                selectFolder: 'Seleccionar carpeta',
+                settingsTitle: 'Configuración de compresión',
+                qualityLabel: 'Calidad de compresión',
+                qualityLow: 'Baja',
+                qualityHigh: 'Alta',
+                qualityTip: 'Recomendado: 60-80% para un buen equilibrio entre ratio de compresión y claridad',
+                formatLabel: 'Formato de salida',
+                formatOriginal: 'Mantener original',
+                resizeLabel: 'Redimensionar imagen',
+                maxWidth: 'Ancho máx',
+                selectedCount: 'Seleccionado',
+                imagesText: 'imágenes',
+                clearAll: 'Limpiar todo',
+                startCompress: 'Iniciar compresión',
+                compressing: 'Comprimiendo...',
+                downloadAll: 'Descargar todo',
+                statsTitle: 'Estadísticas de compresión',
+                statImages: 'Imágenes',
+                statOriginal: 'Tamaño original',
+                statCompressed: 'Tamaño comprimido',
+                statSaved: 'Espacio ahorrado',
+                footerNote: 'Procesamiento frontend puro, las imágenes no se suben al servidor',
+                footerBack: '← Volver a Web Toolbox',
+                statusPending: 'Pendiente',
+                statusProcessing: 'Procesando',
+                statusDone: 'Completado',
+                statusError: 'Error',
+                statusOptimal: 'Óptimo',
+                btnDownload: 'Descargar',
+                btnRemove: 'Eliminar',
+                confirmClear: '¿Está seguro de que desea eliminar todas las imágenes?',
+                alertSelectImages: '¡Por favor seleccione archivos de imagen!',
+                faqTitle: 'Preguntas frecuentes',
+                faq1Q: '¿Qué formatos de imagen son compatibles?',
+                faq1A: 'Soporta JPG, PNG, WebP, GIF y otros formatos de imagen comunes. Puede arrastrar directamente o seleccionar estas imágenes de formato para compresión.',
+                faq2Q: '¿La compresión reducirá la calidad de la imagen?',
+                faq2A: 'Habrá una ligera pérdida, pero puede controlarla ajustando la calidad de compresión. Recomendamos configurarla por encima del 80%, donde la diferencia es apenas perceptible para el ojo humano mientras se logra una buena compresión.',
+                faq3Q: '¿Cuántas imágenes se pueden comprimir a la vez?',
+                faq3A: 'Depende de la memoria del navegador y el rendimiento del dispositivo, recomendamos no exceder 50 imágenes a la vez. Para imágenes más grandes, considere reducir la cantidad para asegurar un procesamiento fluido.',
+                faq4Q: '¿Las imágenes se subirán a un servidor?',
+                faq4A: 'No. Todo el procesamiento de compresión se realiza completamente en su navegador local. Los datos de imagen nunca se suben a ningún servidor, asegurando su privacidad y seguridad de datos.',
+                faq5Q: '¿Se pueden comprimir imágenes PNG sin pérdidas?',
+                faq5A: 'PNG utiliza algoritmo de compresión sin pérdidas, que puede reducir el tamaño mediante optimización sin perder calidad. Esta herramienta selecciona inteligentemente el esquema de compresión óptimo, aplicando automáticamente optimización sin pérdidas al mantener el formato original.',
+                relatedTools: 'Herramientas relacionadas',
+                relatedImageConverter: 'Convertidor de imágenes',
+                relatedImageConverterDesc: 'Conversión WebP/PNG/JPG',
+                relatedImageEditor: 'Editor de imágenes',
+                relatedImageEditorDesc: 'Edición y recorte de imágenes en línea',
+                relatedIcoMaker: 'Creador de ICO',
+                relatedIcoMakerDesc: 'Generar iconos ICO de múltiples tamaños',
+                relatedImageToPdf: 'Imagen a PDF',
+                relatedImageToPdfDesc: 'Fusionar imágenes en PDF'
+            }
+        };
+
+        const langNames = {
+            'en': '🌐 English',
+            'zh-CN': '🌐 中文',
+            'fr': '🌐 Français',
+            'es': '🌐 Español'
+        };
+
+        let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            document.getElementById('langCurrent').textContent = langNames[lang];
+
+            const texts = i18n[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (texts[key]) {
+                    el.textContent = texts[key];
+                }
+            });
+
+            // 重新渲染图片列表以更新状态文本
+            if (images.length > 0) {
+                renderImages();
+            }
+        }
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                applyLanguage(lang);
+                document.getElementById('langDropdown').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
+        // 页面加载时应用语言
+        document.addEventListener('DOMContentLoaded', function() {
+            applyLanguage(currentLang);
+        });
+
+        // ==================== 图片压缩功能 ====================
         let images = [];
         let compressedImages = [];
 
@@ -1071,7 +1421,7 @@
             const imageFiles = Array.from(files).filter(file => file.type.startsWith('image/'));
 
             if (imageFiles.length === 0) {
-                alert('请选择图片文件！');
+                alert(i18n[currentLang].alertSelectImages);
                 return;
             }
 
@@ -1105,6 +1455,7 @@
         function renderImages() {
             const grid = document.getElementById('imagesGrid');
             const section = document.getElementById('imagesSection');
+            const texts = i18n[currentLang];
 
             if (images.length === 0) {
                 section.classList.remove('show');
@@ -1119,7 +1470,7 @@
                     <div class="image-preview">
                         <img src="${img.compressed ? img.compressed.dataUrl : img.dataUrl}" alt="${img.name}">
                         <span class="image-status status-${img.status}">
-                            ${img.status === 'pending' ? '待压缩' : img.status === 'processing' ? '压缩中' : img.status === 'done' ? '已完成' : '错误'}
+                            ${img.status === 'pending' ? texts.statusPending : img.status === 'processing' ? texts.statusProcessing : img.status === 'done' ? texts.statusDone : texts.statusError}
                         </span>
                     </div>
                     <div class="image-info">
@@ -1137,7 +1488,7 @@
                             ${img.compressed ? (() => {
                                 const ratio = Math.round((1 - img.compressed.size / img.originalSize) * 100);
                                 if (img.compressed.keptOriginal) {
-                                    return '<span class="compression-ratio kept">已是最优</span>';
+                                    return '<span class="compression-ratio kept">' + texts.statusOptimal + '</span>';
                                 } else if (ratio > 0) {
                                     return '<span class="compression-ratio">-' + ratio + '%</span>';
                                 } else if (ratio < 0) {
@@ -1156,8 +1507,8 @@
                         ` : ''}
                         ${img.status === 'done' ? `
                             <div class="image-actions">
-                                <button class="image-action-btn download" onclick="downloadImage('${img.id}')">下载</button>
-                                <button class="image-action-btn remove" onclick="removeImage('${img.id}')">移除</button>
+                                <button class="image-action-btn download" onclick="downloadImage('${img.id}')">${texts.btnDownload}</button>
+                                <button class="image-action-btn remove" onclick="removeImage('${img.id}')">${texts.btnRemove}</button>
                             </div>
                         ` : ''}
                     </div>
@@ -1177,8 +1528,9 @@
         // 压缩所有图片
         async function compressAll() {
             const btn = document.getElementById('compressBtn');
+            const texts = i18n[currentLang];
             btn.disabled = true;
-            btn.innerHTML = '<span>⏳</span><span>压缩中...</span>';
+            btn.innerHTML = '<span>⏳</span><span>' + texts.compressing + '</span>';
 
             const quality = document.getElementById('qualitySlider').value / 100;
             const format = document.querySelector('input[name="format"]:checked').value;
@@ -1197,7 +1549,7 @@
                     images[i].compressed = result;
                     images[i].status = 'done';
                 } catch (error) {
-                    console.error('压缩失败:', error);
+                    console.error('Compression failed:', error);
                     images[i].status = 'error';
                 }
 
@@ -1205,7 +1557,7 @@
             }
 
             btn.disabled = false;
-            btn.innerHTML = '<span>⚡</span><span>开始压缩</span>';
+            btn.innerHTML = '<span>⚡</span><span>' + texts.startCompress + '</span>';
 
             // 显示下载全部按钮
             const completedCount = images.filter(img => img.status === 'done').length;
@@ -1300,7 +1652,7 @@
 
                         // 选择最小的结果
                         if (candidates.length === 0) {
-                            reject(new Error('压缩失败'));
+                            reject(new Error('Compression failed'));
                             return;
                         }
 
@@ -1434,7 +1786,7 @@
 
         // 清空全部
         function clearAll() {
-            if (images.length > 0 && !confirm('确定要清空所有图片吗？')) return;
+            if (images.length > 0 && !confirm(i18n[currentLang].confirmClear)) return;
             images = [];
             renderImages();
             document.getElementById('downloadAllBtn').style.display = 'none';
@@ -1449,56 +1801,56 @@
     <section class="faq-section">
         <h2 class="faq-title">
             <span>❓</span>
-            <span>常见问题</span>
+            <span data-i18n="faqTitle">Frequently Asked Questions</span>
         </h2>
         <div class="faq-list">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>支持哪些图片格式？</span>
+                    <span data-i18n="faq1Q">What image formats are supported?</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        支持 JPG、PNG、WebP、GIF 等常见图片格式。您可以直接拖拽或选择这些格式的图片进行压缩处理。
+                    <div class="faq-answer-content" data-i18n="faq1A">
+                        Supports JPG, PNG, WebP, GIF and other common image formats. You can directly drag or select these format images for compression.
                     </div>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>压缩后图片质量会下降吗？</span>
+                    <span data-i18n="faq2Q">Will compression reduce image quality?</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        会有轻微损失，但可通过调节压缩质量控制。建议设置在 80% 以上，此时人眼几乎难以察觉画质差异，同时能获得较好的压缩效果。
+                    <div class="faq-answer-content" data-i18n="faq2A">
+                        There will be slight loss, but you can control it by adjusting compression quality. We recommend setting it above 80%, where the difference is barely noticeable to the human eye while achieving good compression.
                     </div>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>最多可以同时压缩多少张图片？</span>
+                    <span data-i18n="faq3Q">How many images can be compressed at once?</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        取决于浏览器内存和设备性能，建议单次不超过 50 张。如果图片尺寸较大，建议适当减少数量以保证处理流畅。
+                    <div class="faq-answer-content" data-i18n="faq3A">
+                        Depends on browser memory and device performance, we recommend not exceeding 50 images at a time. For larger images, consider reducing the quantity to ensure smooth processing.
                     </div>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>图片会上传到服务器吗？</span>
+                    <span data-i18n="faq4Q">Will images be uploaded to a server?</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        不会。所有压缩处理完全在您的浏览器本地完成，图片数据不会上传到任何服务器，确保您的隐私和数据安全。
+                    <div class="faq-answer-content" data-i18n="faq4A">
+                        No. All compression processing is done entirely in your local browser. Image data is never uploaded to any server, ensuring your privacy and data security.
                     </div>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>PNG 图片可以无损压缩吗？</span>
+                    <span data-i18n="faq5Q">Can PNG images be compressed losslessly?</span>
                 </div>
                 <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        PNG 采用无损压缩算法，可通过优化算法减小体积而不损失画质。本工具会智能选择最优压缩方案，在保持原格式时自动应用无损优化。
+                    <div class="faq-answer-content" data-i18n="faq5A">
+                        PNG uses lossless compression algorithm, which can reduce size through optimization without losing quality. This tool intelligently selects the optimal compression scheme, automatically applying lossless optimization when keeping the original format.
                     </div>
                 </div>
             </div>
@@ -1515,27 +1867,27 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="image-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片格式转换</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">WebP/PNG/JPG 互转</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedImageConverter">Image Converter</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedImageConverterDesc">WebP/PNG/JPG conversion</div>
             </a>
             <a href="image-editor.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片编辑器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">在线编辑裁剪图片</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedImageEditor">Image Editor</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedImageEditorDesc">Online image editing and cropping</div>
             </a>
             <a href="ico-maker.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
-                <div style="color: #f0f0f0; font-weight: 500;">ICO 图标制作</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">生成多尺寸 ICO 图标</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedIcoMaker">ICO Maker</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedIcoMakerDesc">Generate multi-size ICO icons</div>
             </a>
             <a href="image-to-pdf.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📄</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片合并为PDF</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">多图合并生成PDF</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedImageToPdf">Image to PDF</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedImageToPdfDesc">Merge images into PDF</div>
             </a>
         </div>
     </section>

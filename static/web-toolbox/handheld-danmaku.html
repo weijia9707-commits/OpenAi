@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <title>手持弹幕 - 在线LED滚动字幕生成器 | Web Toolbox</title>
+    <title>Handheld Danmaku - Online LED Scrolling Text Generator | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线手持弹幕工具，支持自定义滚动文字、播放速度、字体大小和颜色。适用于演唱会应援、活动表白、聚会互动等场景，手机横屏效果更佳。">
-    <meta name="keywords" content="手持弹幕,LED弹幕,滚动字幕,演唱会应援,表白神器,在线弹幕,手机弹幕,LED屏幕,滚动文字,弹幕生成器">
+    <meta name="description" content="Free online handheld danmaku tool with customizable scrolling text, speed, font size and colors. Perfect for concerts, events, parties and confessions. Best viewed in landscape mode on mobile.">
+    <meta name="keywords" content="handheld danmaku,LED danmaku,scrolling text,concert cheering,confession tool,online danmaku,mobile danmaku,LED screen,scrolling message,danmaku generator">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/handheld-danmaku.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/handheld-danmaku.html">
-    <meta property="og:title" content="手持弹幕 - 在线LED滚动字幕生成器">
-    <meta property="og:description" content="免费在线手持弹幕工具，适用于演唱会应援、活动表白、聚会互动等场景。">
+    <meta property="og:title" content="Handheld Danmaku - Online LED Scrolling Text Generator">
+    <meta property="og:description" content="Free online handheld danmaku tool. Perfect for concerts, events, parties and confessions.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/handheld-danmaku.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="手持弹幕 - 在线LED滚动字幕生成器">
-    <meta name="twitter:description" content="免费在线手持弹幕工具，适用于演唱会应援、活动表白等场景。">
+    <meta name="twitter:title" content="Handheld Danmaku - Online LED Scrolling Text Generator">
+    <meta name="twitter:description" content="Free online handheld danmaku tool for concerts, events and parties.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/handheld-danmaku.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "手持弹幕",
+        "name": "Handheld Danmaku",
         "url": "https://www.heyuan110.com/web-toolbox/handheld-danmaku.html",
-        "description": "在线手持弹幕工具，支持自定义滚动文字、播放速度、字体大小和颜色",
+        "description": "Online handheld danmaku tool with customizable scrolling text, speed, font size and colors",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "如何让文字全屏显示？",
+                "name": "How to display text in fullscreen?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "点击开始后，手机会自动进入全屏模式，建议横屏使用。"
+                    "text": "After clicking start, the phone will automatically enter fullscreen mode. Landscape orientation is recommended."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以调整滚动速度吗？",
+                "name": "Can I adjust the scroll speed?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以，在设置中调节速度，从慢速到快速多档可选。"
+                    "text": "Yes, you can adjust the speed in settings, with multiple speed options available from slow to fast."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持显示表情符号吗？",
+                "name": "Does it support emoji?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持，可以输入emoji表情，会正常显示和滚动。"
+                    "text": "Yes, you can input emoji and they will display and scroll normally."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何退出全屏？",
+                "name": "How to exit fullscreen?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "点击屏幕任意位置或按手机返回键即可退出。"
+                    "text": "Double-tap anywhere on the screen or press the back button to exit."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持竖屏使用吗？",
+                "name": "Does it support portrait mode?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持，但横屏效果更佳，文字更大更醒目。"
+                    "text": "Yes, but landscape mode works better with larger and more visible text."
                 }
             }
         ]
@@ -136,6 +136,7 @@
         header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         h1 {
@@ -152,6 +153,16 @@
             color: #a1a1aa;
             font-size: 0.95rem;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 设置面板 */
         .settings-panel {
@@ -477,47 +488,58 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-home">← 返回工具箱</a>
+        <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox</a>
 
         <header>
-            <h1>手持弹幕</h1>
-            <p class="subtitle">演唱会应援、活动表白、聚会互动必备神器</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <h1 data-i18n="title">Handheld Danmaku</h1>
+            <p class="subtitle" data-i18n="subtitle">Essential tool for concerts, events, parties and confessions</p>
         </header>
 
         <!-- 功能特点区块 -->
         <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(180px, 1fr)); gap: 16px; margin-bottom: 30px;">
             <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">📺</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">全屏滚动</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">文字全屏滚动显示，适合演唱会、体育赛事等场合</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="feature1Title">Fullscreen Scroll</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="feature1Desc">Text scrolls in fullscreen, perfect for concerts, sports events and more</p>
             </div>
             <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">🎨</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">自定义样式</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">可调整文字大小、颜色、滚动速度、背景色</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="feature2Title">Custom Styles</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="feature2Desc">Adjust text size, color, scroll speed and background color</p>
             </div>
             <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">📱</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">手机适配</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">专为手机横屏设计，一键全屏显示</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="feature3Title">Mobile Optimized</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="feature3Desc">Designed for mobile landscape mode, one-tap fullscreen</p>
             </div>
             <div class="feature-card" style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">📴</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">离线可用</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">无需网络，随时随地使用</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="feature4Title">Works Offline</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="feature4Desc">No network required, use anytime anywhere</p>
             </div>
         </section>
 
         <div class="settings-panel">
             <!-- 弹幕内容 -->
             <div class="setting-group">
-                <label class="setting-label">弹幕内容</label>
-                <input type="text" id="danmakuText" class="text-input" placeholder="输入要显示的文字..." value="在线工具" maxlength="50">
+                <label class="setting-label" data-i18n="labelContent">Danmaku Content</label>
+                <input type="text" id="danmakuText" class="text-input" data-i18n-placeholder="placeholderContent" placeholder="Enter text to display..." value="Web Toolbox" maxlength="50">
             </div>
 
             <!-- 播放速度 -->
             <div class="setting-group">
-                <label class="setting-label">播放速度</label>
+                <label class="setting-label" data-i18n="labelSpeed">Scroll Speed</label>
                 <div class="setting-row">
                     <div class="slider-container">
                         <input type="range" id="speedSlider" class="slider" min="2" max="15" value="5">
@@ -528,7 +550,7 @@
 
             <!-- 文字大小 -->
             <div class="setting-group">
-                <label class="setting-label">文字大小</label>
+                <label class="setting-label" data-i18n="labelSize">Text Size</label>
                 <div class="setting-row">
                     <div class="slider-container">
                         <input type="range" id="sizeSlider" class="slider" min="30" max="150" value="70">
@@ -539,70 +561,379 @@
 
             <!-- 颜色选择 -->
             <div class="setting-group">
-                <label class="setting-label">颜色设置</label>
+                <label class="setting-label" data-i18n="labelColor">Color Settings</label>
                 <div class="color-picker-group">
                     <div class="color-item">
-                        <span>文字颜色</span>
+                        <span data-i18n="textColor">Text Color</span>
                         <div class="color-picker">
                             <input type="color" id="textColor" value="#ffffff">
                         </div>
                     </div>
                     <div class="color-item">
-                        <span>背景颜色</span>
+                        <span data-i18n="bgColor">Background Color</span>
                         <div class="color-picker">
                             <input type="color" id="bgColor" value="#000000">
                         </div>
                     </div>
                 </div>
                 <div class="preset-colors" id="presetColors">
-                    <div class="preset-color" style="background: #ff0000;" data-text="#ffffff" data-bg="#ff0000" title="红色背景"></div>
-                    <div class="preset-color" style="background: #00ff00;" data-text="#000000" data-bg="#00ff00" title="绿色背景"></div>
-                    <div class="preset-color" style="background: #0000ff;" data-text="#ffffff" data-bg="#0000ff" title="蓝色背景"></div>
-                    <div class="preset-color" style="background: #ff00ff;" data-text="#ffffff" data-bg="#ff00ff" title="紫色背景"></div>
-                    <div class="preset-color" style="background: #ffff00;" data-text="#000000" data-bg="#ffff00" title="黄色背景"></div>
-                    <div class="preset-color" style="background: #00ffff;" data-text="#000000" data-bg="#00ffff" title="青色背景"></div>
-                    <div class="preset-color" style="background: #ff6b6b;" data-text="#ffffff" data-bg="#ff6b6b" title="珊瑚红"></div>
-                    <div class="preset-color" style="background: #000000;" data-text="#00ff00" data-bg="#000000" title="黑客风格"></div>
+                    <div class="preset-color" style="background: #ff0000;" data-text="#ffffff" data-bg="#ff0000" data-i18n-title="presetRed" title="Red Background"></div>
+                    <div class="preset-color" style="background: #00ff00;" data-text="#000000" data-bg="#00ff00" data-i18n-title="presetGreen" title="Green Background"></div>
+                    <div class="preset-color" style="background: #0000ff;" data-text="#ffffff" data-bg="#0000ff" data-i18n-title="presetBlue" title="Blue Background"></div>
+                    <div class="preset-color" style="background: #ff00ff;" data-text="#ffffff" data-bg="#ff00ff" data-i18n-title="presetPurple" title="Purple Background"></div>
+                    <div class="preset-color" style="background: #ffff00;" data-text="#000000" data-bg="#ffff00" data-i18n-title="presetYellow" title="Yellow Background"></div>
+                    <div class="preset-color" style="background: #00ffff;" data-text="#000000" data-bg="#00ffff" data-i18n-title="presetCyan" title="Cyan Background"></div>
+                    <div class="preset-color" style="background: #ff6b6b;" data-text="#ffffff" data-bg="#ff6b6b" data-i18n-title="presetCoral" title="Coral Red"></div>
+                    <div class="preset-color" style="background: #000000;" data-text="#00ff00" data-bg="#000000" data-i18n-title="presetHacker" title="Hacker Style"></div>
                 </div>
             </div>
 
             <!-- 启动按钮 -->
             <button class="start-btn" id="startBtn">
-                <span>开始弹幕</span>
+                <span data-i18n="startBtn">Start Danmaku</span>
             </button>
         </div>
 
         <div class="tips">
-            <div class="tips-title">使用提示</div>
+            <div class="tips-title" data-i18n="tipsTitle">Usage Tips</div>
             <ul>
-                <li><strong>双击屏幕</strong> 可退出弹幕模式</li>
-                <li>建议将手机 <strong>横屏</strong> 使用，效果更佳</li>
-                <li>播放速度数值越大，滚动越慢</li>
-                <li>点击预设颜色可快速应用配色方案</li>
+                <li data-i18n="tip1"><strong>Double-tap screen</strong> to exit danmaku mode</li>
+                <li data-i18n="tip2">Recommend using in <strong>landscape mode</strong> for better effect</li>
+                <li data-i18n="tip3">Higher speed value means slower scrolling</li>
+                <li data-i18n="tip4">Click preset colors to quickly apply color scheme</li>
             </ul>
         </div>
 
         <div class="intro">
-            <h2>关于手持弹幕</h2>
-            <p>手持弹幕是一种新型的互动沟通工具，可以方便地为各种户外活动、演出嘉年华等活动增加趣味性和互动性。手持弹幕具有轻便、易携带、易操作等优点，可以让每个参与者都变成活动的一部分。同时，手持弹幕还可以通过预先编写的文本、表情等形式，表达参与者的情感和想法，实现沟通互动。在社交媒体时代，手持弹幕的使用也带来了更广泛的社交效应，增加了活动的互动性和传播度。无论是举办方还是参与者，手持弹幕都是一个非常有价值的互动工具。</p>
+            <h2 data-i18n="aboutTitle">About Handheld Danmaku</h2>
+            <p data-i18n="aboutContent">Handheld danmaku is a new interactive communication tool that can easily add fun and interactivity to various outdoor activities, performances and carnivals. It features lightweight, portable and easy-to-operate advantages, making every participant part of the event. Handheld danmaku can also express emotions and ideas through pre-written text and emojis, enabling communication and interaction. In the age of social media, the use of handheld danmaku also brings wider social effects, increasing the interactivity and reach of events. Whether for organizers or participants, handheld danmaku is a valuable interactive tool.</p>
         </div>
     </div>
 
     <!-- 弹幕全屏区域 -->
     <div class="danmaku-fullscreen" id="danmakuScreen">
         <div class="danmaku-text" id="danmakuDisplay"></div>
-        <div class="exit-hint">双击屏幕退出弹幕</div>
+        <div class="exit-hint" data-i18n="exitHint">Double-tap to exit danmaku</div>
     </div>
 
     <script>
+        // ==================== i18n 国际化系统 ====================
+        const i18n = {
+            'en': {
+                backHome: '← Back to Toolbox',
+                title: 'Handheld Danmaku',
+                subtitle: 'Essential tool for concerts, events, parties and confessions',
+                feature1Title: 'Fullscreen Scroll',
+                feature1Desc: 'Text scrolls in fullscreen, perfect for concerts, sports events and more',
+                feature2Title: 'Custom Styles',
+                feature2Desc: 'Adjust text size, color, scroll speed and background color',
+                feature3Title: 'Mobile Optimized',
+                feature3Desc: 'Designed for mobile landscape mode, one-tap fullscreen',
+                feature4Title: 'Works Offline',
+                feature4Desc: 'No network required, use anytime anywhere',
+                labelContent: 'Danmaku Content',
+                placeholderContent: 'Enter text to display...',
+                labelSpeed: 'Scroll Speed',
+                labelSize: 'Text Size',
+                labelColor: 'Color Settings',
+                textColor: 'Text Color',
+                bgColor: 'Background Color',
+                presetRed: 'Red Background',
+                presetGreen: 'Green Background',
+                presetBlue: 'Blue Background',
+                presetPurple: 'Purple Background',
+                presetYellow: 'Yellow Background',
+                presetCyan: 'Cyan Background',
+                presetCoral: 'Coral Red',
+                presetHacker: 'Hacker Style',
+                startBtn: 'Start Danmaku',
+                tipsTitle: 'Usage Tips',
+                tip1: '<strong>Double-tap screen</strong> to exit danmaku mode',
+                tip2: 'Recommend using in <strong>landscape mode</strong> for better effect',
+                tip3: 'Higher speed value means slower scrolling',
+                tip4: 'Click preset colors to quickly apply color scheme',
+                aboutTitle: 'About Handheld Danmaku',
+                aboutContent: 'Handheld danmaku is a new interactive communication tool that can easily add fun and interactivity to various outdoor activities, performances and carnivals. It features lightweight, portable and easy-to-operate advantages, making every participant part of the event. Handheld danmaku can also express emotions and ideas through pre-written text and emojis, enabling communication and interaction. In the age of social media, the use of handheld danmaku also brings wider social effects, increasing the interactivity and reach of events. Whether for organizers or participants, handheld danmaku is a valuable interactive tool.',
+                exitHint: 'Double-tap to exit danmaku',
+                alertEmpty: 'Please enter danmaku content',
+                faqTitle: 'FAQ',
+                faq1Q: 'How to display text in fullscreen?',
+                faq1A: 'After clicking start, the phone will automatically enter fullscreen mode. Landscape orientation is recommended.',
+                faq2Q: 'Can I adjust the scroll speed?',
+                faq2A: 'Yes, you can adjust the speed in settings, with multiple speed options available from slow to fast.',
+                faq3Q: 'Does it support emoji?',
+                faq3A: 'Yes, you can input emoji and they will display and scroll normally.',
+                faq4Q: 'How to exit fullscreen?',
+                faq4A: 'Double-tap anywhere on the screen or press the back button to exit.',
+                faq5Q: 'Does it support portrait mode?',
+                faq5A: 'Yes, but landscape mode works better with larger and more visible text.',
+                relatedTitle: '🔗 Related Tools',
+                relatedPalette: 'Color Palette',
+                relatedPaletteDesc: 'Color picker and converter',
+                relatedMetronome: 'Metronome',
+                relatedMetronomeDesc: 'Online metronome tool',
+                relatedWorldClock: 'World Clock',
+                relatedWorldClockDesc: 'Global timezone times',
+                relatedCalculator: 'Calculator',
+                relatedCalculatorDesc: 'Supports complex expressions',
+                footerPrivacy: 'Pure frontend processing, data is not uploaded to server',
+                footerBack: '← Back to Web Toolbox'
+            },
+            'zh-CN': {
+                backHome: '← 返回工具箱',
+                title: '手持弹幕',
+                subtitle: '演唱会应援、活动表白、聚会互动必备神器',
+                feature1Title: '全屏滚动',
+                feature1Desc: '文字全屏滚动显示，适合演唱会、体育赛事等场合',
+                feature2Title: '自定义样式',
+                feature2Desc: '可调整文字大小、颜色、滚动速度、背景色',
+                feature3Title: '手机适配',
+                feature3Desc: '专为手机横屏设计，一键全屏显示',
+                feature4Title: '离线可用',
+                feature4Desc: '无需网络，随时随地使用',
+                labelContent: '弹幕内容',
+                placeholderContent: '输入要显示的文字...',
+                labelSpeed: '播放速度',
+                labelSize: '文字大小',
+                labelColor: '颜色设置',
+                textColor: '文字颜色',
+                bgColor: '背景颜色',
+                presetRed: '红色背景',
+                presetGreen: '绿色背景',
+                presetBlue: '蓝色背景',
+                presetPurple: '紫色背景',
+                presetYellow: '黄色背景',
+                presetCyan: '青色背景',
+                presetCoral: '珊瑚红',
+                presetHacker: '黑客风格',
+                startBtn: '开始弹幕',
+                tipsTitle: '使用提示',
+                tip1: '<strong>双击屏幕</strong> 可退出弹幕模式',
+                tip2: '建议将手机 <strong>横屏</strong> 使用，效果更佳',
+                tip3: '播放速度数值越大，滚动越慢',
+                tip4: '点击预设颜色可快速应用配色方案',
+                aboutTitle: '关于手持弹幕',
+                aboutContent: '手持弹幕是一种新型的互动沟通工具，可以方便地为各种户外活动、演出嘉年华等活动增加趣味性和互动性。手持弹幕具有轻便、易携带、易操作等优点，可以让每个参与者都变成活动的一部分。同时，手持弹幕还可以通过预先编写的文本、表情等形式，表达参与者的情感和想法，实现沟通互动。在社交媒体时代，手持弹幕的使用也带来了更广泛的社交效应，增加了活动的互动性和传播度。无论是举办方还是参与者，手持弹幕都是一个非常有价值的互动工具。',
+                exitHint: '双击屏幕退出弹幕',
+                alertEmpty: '请输入弹幕内容',
+                faqTitle: '常见问题',
+                faq1Q: '如何让文字全屏显示？',
+                faq1A: '点击开始后，手机会自动进入全屏模式，建议横屏使用。',
+                faq2Q: '可以调整滚动速度吗？',
+                faq2A: '可以，在设置中调节速度，从慢速到快速多档可选。',
+                faq3Q: '支持显示表情符号吗？',
+                faq3A: '支持，可以输入emoji表情，会正常显示和滚动。',
+                faq4Q: '如何退出全屏？',
+                faq4A: '点击屏幕任意位置或按手机返回键即可退出。',
+                faq5Q: '支持竖屏使用吗？',
+                faq5A: '支持，但横屏效果更佳，文字更大更醒目。',
+                relatedTitle: '🔗 相关工具推荐',
+                relatedPalette: '调色板',
+                relatedPaletteDesc: '颜色选择与转换',
+                relatedMetronome: '节拍器',
+                relatedMetronomeDesc: '在线节拍器工具',
+                relatedWorldClock: '世界时钟',
+                relatedWorldClockDesc: '全球时区时间',
+                relatedCalculator: '科学计算器',
+                relatedCalculatorDesc: '支持复杂表达式',
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页'
+            },
+            'fr': {
+                backHome: '← Retour à la boîte à outils',
+                title: 'Danmaku Portable',
+                subtitle: 'Outil essentiel pour concerts, événements, fêtes et déclarations',
+                feature1Title: 'Défilement plein écran',
+                feature1Desc: 'Le texte défile en plein écran, parfait pour concerts et événements sportifs',
+                feature2Title: 'Styles personnalisés',
+                feature2Desc: 'Ajustez la taille du texte, la couleur, la vitesse de défilement et l\'arrière-plan',
+                feature3Title: 'Optimisé mobile',
+                feature3Desc: 'Conçu pour le mode paysage mobile, plein écran en un clic',
+                feature4Title: 'Fonctionne hors ligne',
+                feature4Desc: 'Pas de réseau requis, utilisable n\'importe où',
+                labelContent: 'Contenu du Danmaku',
+                placeholderContent: 'Entrez le texte à afficher...',
+                labelSpeed: 'Vitesse de défilement',
+                labelSize: 'Taille du texte',
+                labelColor: 'Paramètres de couleur',
+                textColor: 'Couleur du texte',
+                bgColor: 'Couleur de fond',
+                presetRed: 'Fond rouge',
+                presetGreen: 'Fond vert',
+                presetBlue: 'Fond bleu',
+                presetPurple: 'Fond violet',
+                presetYellow: 'Fond jaune',
+                presetCyan: 'Fond cyan',
+                presetCoral: 'Rouge corail',
+                presetHacker: 'Style hacker',
+                startBtn: 'Démarrer Danmaku',
+                tipsTitle: 'Conseils d\'utilisation',
+                tip1: '<strong>Double-tapez l\'écran</strong> pour quitter le mode danmaku',
+                tip2: 'Recommandé d\'utiliser en <strong>mode paysage</strong> pour un meilleur effet',
+                tip3: 'Une valeur de vitesse plus élevée signifie un défilement plus lent',
+                tip4: 'Cliquez sur les couleurs prédéfinies pour appliquer rapidement un schéma de couleurs',
+                aboutTitle: 'À propos du Danmaku Portable',
+                aboutContent: 'Le danmaku portable est un nouvel outil de communication interactive qui peut facilement ajouter du plaisir et de l\'interactivité à diverses activités de plein air, spectacles et carnavals. Il est léger, portable et facile à utiliser, permettant à chaque participant de faire partie de l\'événement. Le danmaku portable peut également exprimer des émotions et des idées à travers des textes et emojis préécrits, permettant la communication et l\'interaction. À l\'ère des médias sociaux, l\'utilisation du danmaku portable apporte également des effets sociaux plus larges, augmentant l\'interactivité et la portée des événements. Que ce soit pour les organisateurs ou les participants, le danmaku portable est un outil interactif précieux.',
+                exitHint: 'Double-tapez pour quitter le danmaku',
+                alertEmpty: 'Veuillez entrer le contenu du danmaku',
+                faqTitle: 'FAQ',
+                faq1Q: 'Comment afficher le texte en plein écran ?',
+                faq1A: 'Après avoir cliqué sur démarrer, le téléphone passera automatiquement en mode plein écran. L\'orientation paysage est recommandée.',
+                faq2Q: 'Puis-je ajuster la vitesse de défilement ?',
+                faq2A: 'Oui, vous pouvez ajuster la vitesse dans les paramètres, avec plusieurs options de vitesse disponibles.',
+                faq3Q: 'Supporte-t-il les emoji ?',
+                faq3A: 'Oui, vous pouvez entrer des emoji et ils s\'afficheront et défileront normalement.',
+                faq4Q: 'Comment quitter le plein écran ?',
+                faq4A: 'Double-tapez n\'importe où sur l\'écran ou appuyez sur le bouton retour pour quitter.',
+                faq5Q: 'Supporte-t-il le mode portrait ?',
+                faq5A: 'Oui, mais le mode paysage fonctionne mieux avec un texte plus grand et plus visible.',
+                relatedTitle: '🔗 Outils connexes',
+                relatedPalette: 'Palette de couleurs',
+                relatedPaletteDesc: 'Sélecteur et convertisseur de couleurs',
+                relatedMetronome: 'Métronome',
+                relatedMetronomeDesc: 'Outil métronome en ligne',
+                relatedWorldClock: 'Horloge mondiale',
+                relatedWorldClockDesc: 'Heures des fuseaux horaires mondiaux',
+                relatedCalculator: 'Calculatrice',
+                relatedCalculatorDesc: 'Supporte les expressions complexes',
+                footerPrivacy: 'Traitement purement frontend, les données ne sont pas téléchargées sur le serveur',
+                footerBack: '← Retour à Web Toolbox'
+            },
+            'es': {
+                backHome: '← Volver a la caja de herramientas',
+                title: 'Danmaku Portátil',
+                subtitle: 'Herramienta esencial para conciertos, eventos, fiestas y declaraciones',
+                feature1Title: 'Desplazamiento pantalla completa',
+                feature1Desc: 'El texto se desplaza en pantalla completa, perfecto para conciertos y eventos deportivos',
+                feature2Title: 'Estilos personalizados',
+                feature2Desc: 'Ajusta el tamaño del texto, color, velocidad de desplazamiento y fondo',
+                feature3Title: 'Optimizado para móvil',
+                feature3Desc: 'Diseñado para modo horizontal en móvil, pantalla completa con un toque',
+                feature4Title: 'Funciona sin conexión',
+                feature4Desc: 'No requiere red, úsalo en cualquier momento y lugar',
+                labelContent: 'Contenido del Danmaku',
+                placeholderContent: 'Ingresa el texto a mostrar...',
+                labelSpeed: 'Velocidad de desplazamiento',
+                labelSize: 'Tamaño del texto',
+                labelColor: 'Configuración de color',
+                textColor: 'Color del texto',
+                bgColor: 'Color de fondo',
+                presetRed: 'Fondo rojo',
+                presetGreen: 'Fondo verde',
+                presetBlue: 'Fondo azul',
+                presetPurple: 'Fondo púrpura',
+                presetYellow: 'Fondo amarillo',
+                presetCyan: 'Fondo cian',
+                presetCoral: 'Rojo coral',
+                presetHacker: 'Estilo hacker',
+                startBtn: 'Iniciar Danmaku',
+                tipsTitle: 'Consejos de uso',
+                tip1: '<strong>Doble toque en pantalla</strong> para salir del modo danmaku',
+                tip2: 'Se recomienda usar en <strong>modo horizontal</strong> para mejor efecto',
+                tip3: 'Un valor de velocidad más alto significa desplazamiento más lento',
+                tip4: 'Haz clic en los colores preestablecidos para aplicar rápidamente un esquema de color',
+                aboutTitle: 'Acerca del Danmaku Portátil',
+                aboutContent: 'El danmaku portátil es una nueva herramienta de comunicación interactiva que puede agregar fácilmente diversión e interactividad a diversas actividades al aire libre, espectáculos y carnavales. Es ligero, portátil y fácil de usar, haciendo que cada participante sea parte del evento. El danmaku portátil también puede expresar emociones e ideas a través de textos y emojis preescritos, permitiendo la comunicación e interacción. En la era de las redes sociales, el uso del danmaku portátil también trae efectos sociales más amplios, aumentando la interactividad y el alcance de los eventos. Ya sea para organizadores o participantes, el danmaku portátil es una valiosa herramienta interactiva.',
+                exitHint: 'Doble toque para salir del danmaku',
+                alertEmpty: 'Por favor ingresa el contenido del danmaku',
+                faqTitle: 'Preguntas frecuentes',
+                faq1Q: '¿Cómo mostrar texto en pantalla completa?',
+                faq1A: 'Después de hacer clic en iniciar, el teléfono entrará automáticamente en modo pantalla completa. Se recomienda orientación horizontal.',
+                faq2Q: '¿Puedo ajustar la velocidad de desplazamiento?',
+                faq2A: 'Sí, puedes ajustar la velocidad en la configuración, con múltiples opciones de velocidad disponibles.',
+                faq3Q: '¿Soporta emoji?',
+                faq3A: 'Sí, puedes ingresar emoji y se mostrarán y desplazarán normalmente.',
+                faq4Q: '¿Cómo salir de pantalla completa?',
+                faq4A: 'Doble toque en cualquier parte de la pantalla o presiona el botón de retroceso para salir.',
+                faq5Q: '¿Soporta modo vertical?',
+                faq5A: 'Sí, pero el modo horizontal funciona mejor con texto más grande y visible.',
+                relatedTitle: '🔗 Herramientas relacionadas',
+                relatedPalette: 'Paleta de colores',
+                relatedPaletteDesc: 'Selector y convertidor de colores',
+                relatedMetronome: 'Metrónomo',
+                relatedMetronomeDesc: 'Herramienta de metrónomo en línea',
+                relatedWorldClock: 'Reloj mundial',
+                relatedWorldClockDesc: 'Horarios de zonas horarias globales',
+                relatedCalculator: 'Calculadora',
+                relatedCalculatorDesc: 'Soporta expresiones complejas',
+                footerPrivacy: 'Procesamiento puramente frontend, los datos no se suben al servidor',
+                footerBack: '← Volver a Web Toolbox'
+            }
+        };
+
+        const langNames = {
+            'en': '🌐 English',
+            'zh-CN': '🌐 中文',
+            'fr': '🌐 Français',
+            'es': '🌐 Español'
+        };
+
+        let currentLang = localStorage.getItem('handheld-danmaku-lang') || 'en';
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('handheld-danmaku-lang', lang);
+            const texts = i18n[lang];
+
+            // 更新所有 data-i18n 元素
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (texts[key]) {
+                    el.innerHTML = texts[key];
+                }
+            });
+
+            // 更新 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (texts[key]) {
+                    el.placeholder = texts[key];
+                }
+            });
+
+            // 更新 title 属性
+            document.querySelectorAll('[data-i18n-title]').forEach(el => {
+                const key = el.getAttribute('data-i18n-title');
+                if (texts[key]) {
+                    el.title = texts[key];
+                }
+            });
+
+            // 更新语言切换器显示
+            document.getElementById('langCurrent').textContent = langNames[lang];
+        }
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                applyLanguage(lang);
+                document.getElementById('langDropdown').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
+        // 页面加载时应用语言
+        applyLanguage(currentLang);
+
+        // ==================== 弹幕功能 ====================
         // 获取元素
         const danmakuText = document.getElementById('danmakuText');
         const speedSlider = document.getElementById('speedSlider');
         const speedValue = document.getElementById('speedValue');
         const sizeSlider = document.getElementById('sizeSlider');
         const sizeValue = document.getElementById('sizeValue');
-        const textColor = document.getElementById('textColor');
-        const bgColor = document.getElementById('bgColor');
+        const textColorInput = document.getElementById('textColor');
+        const bgColorInput = document.getElementById('bgColor');
         const startBtn = document.getElementById('startBtn');
         const danmakuScreen = document.getElementById('danmakuScreen');
         const danmakuDisplay = document.getElementById('danmakuDisplay');
@@ -624,8 +955,8 @@
         presetColors.addEventListener('click', (e) => {
             const preset = e.target.closest('.preset-color');
             if (preset) {
-                textColor.value = preset.dataset.text;
-                bgColor.value = preset.dataset.bg;
+                textColorInput.value = preset.dataset.text;
+                bgColorInput.value = preset.dataset.bg;
             }
         });
 
@@ -635,7 +966,7 @@
         function startDanmaku() {
             const text = danmakuText.value.trim();
             if (!text) {
-                alert('请输入弹幕内容');
+                alert(i18n[currentLang].alertEmpty);
                 danmakuText.focus();
                 return;
             }
@@ -643,8 +974,8 @@
             // 设置弹幕样式
             const speed = parseFloat(speedSlider.value);
             const size = parseInt(sizeSlider.value);
-            const tColor = textColor.value;
-            const bColor = bgColor.value;
+            const tColor = textColorInput.value;
+            const bColor = bgColorInput.value;
 
             danmakuScreen.style.backgroundColor = bColor;
             danmakuDisplay.textContent = text;
@@ -767,8 +1098,8 @@
                         sizeSlider.value = settings.size;
                         sizeValue.textContent = settings.size;
                     }
-                    if (settings.textColor) textColor.value = settings.textColor;
-                    if (settings.bgColor) bgColor.value = settings.bgColor;
+                    if (settings.textColor) textColorInput.value = settings.textColor;
+                    if (settings.bgColor) bgColorInput.value = settings.bgColor;
                 } catch (e) {}
             }
         }
@@ -779,14 +1110,14 @@
                 text: danmakuText.value,
                 speed: speedSlider.value,
                 size: sizeSlider.value,
-                textColor: textColor.value,
-                bgColor: bgColor.value
+                textColor: textColorInput.value,
+                bgColor: bgColorInput.value
             };
             localStorage.setItem('danmakuSettings', JSON.stringify(settings));
         }
 
         // 输入变化时保存
-        [danmakuText, speedSlider, sizeSlider, textColor, bgColor].forEach(el => {
+        [danmakuText, speedSlider, sizeSlider, textColorInput, bgColorInput].forEach(el => {
             el.addEventListener('change', saveSettings);
         });
 
@@ -796,51 +1127,51 @@
 
     <!-- FAQ 问答区块 -->
     <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #e6edf3; font-size: 1.4rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <h2 style="color: #e6edf3; font-size: 1.4rem; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="faqTitle">FAQ</h2>
         <div class="faq-list" style="display: flex; flex-direction: column; gap: 12px;">
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    如何让文字全屏显示？
+                    <span data-i18n="faq1Q">How to display text in fullscreen?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    点击开始后，手机会自动进入全屏模式，建议横屏使用。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq1A">
+                    After clicking start, the phone will automatically enter fullscreen mode. Landscape orientation is recommended.
                 </div>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    可以调整滚动速度吗？
+                    <span data-i18n="faq2Q">Can I adjust the scroll speed?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    可以，在设置中调节速度，从慢速到快速多档可选。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq2A">
+                    Yes, you can adjust the speed in settings, with multiple speed options available from slow to fast.
                 </div>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    支持显示表情符号吗？
+                    <span data-i18n="faq3Q">Does it support emoji?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    支持，可以输入emoji表情，会正常显示和滚动。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq3A">
+                    Yes, you can input emoji and they will display and scroll normally.
                 </div>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    如何退出全屏？
+                    <span data-i18n="faq4Q">How to exit fullscreen?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    点击屏幕任意位置或按手机返回键即可退出。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq4A">
+                    Double-tap anywhere on the screen or press the back button to exit.
                 </div>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e4e4e7; font-weight: 500; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    支持竖屏使用吗？
+                    <span data-i18n="faq5Q">Does it support portrait mode?</span>
                     <span style="color: #7c3aed; transition: transform 0.2s;">▼</span>
                 </summary>
-                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;">
-                    支持，但横屏效果更佳，文字更大更醒目。
+                <div style="padding: 0 20px 16px; color: #a1a1aa; line-height: 1.7;" data-i18n="faq5A">
+                    Yes, but landscape mode works better with larger and more visible text.
                 </div>
             </details>
         </div>
@@ -848,35 +1179,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="relatedTitle">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="color-palette.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <div style="color: #e6edf3; font-weight: 500;">调色板</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">颜色选择与转换</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedPalette">Color Palette</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedPaletteDesc">Color picker and converter</div>
             </a>
             <a href="metronome.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🥁</div>
-                <div style="color: #e6edf3; font-weight: 500;">节拍器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线节拍器工具</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedMetronome">Metronome</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedMetronomeDesc">Online metronome tool</div>
             </a>
             <a href="world-clock.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
-                <div style="color: #e6edf3; font-weight: 500;">世界时钟</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">全球时区时间</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedWorldClock">World Clock</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedWorldClockDesc">Global timezone times</div>
             </a>
             <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
-                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedCalculator">Calculator</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedCalculatorDesc">Supports complex expressions</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

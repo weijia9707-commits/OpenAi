@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebSocket 测试工具 - 在线WS/WSS连接调试 | Web Toolbox</title>
+    <title>WebSocket Tester - Online WS/WSS Connection Debug Tool | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线WebSocket测试工具，支持ws://和wss://协议，可连接内网和外网WebSocket服务器。实时消息收发、连接状态监控、支持JSON格式化发送。">
-    <meta name="keywords" content="WebSocket测试,WebSocket调试,WS测试工具,WSS连接,在线WebSocket,Socket测试,实时通讯测试,免费工具">
+    <meta name="description" content="Free online WebSocket testing tool, supports ws:// and wss:// protocols. Connect to internal and external WebSocket servers. Real-time messaging, connection monitoring, JSON formatting.">
+    <meta name="keywords" content="WebSocket tester,WebSocket debugger,WS testing tool,WSS connection,online WebSocket,Socket test,real-time communication test,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/websocket-tester.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/websocket-tester.html">
-    <meta property="og:title" content="WebSocket 测试工具 - 在线WS/WSS连接调试">
-    <meta property="og:description" content="免费在线WebSocket测试工具，支持ws/wss协议，实时消息收发、连接状态监控。">
+    <meta property="og:title" content="WebSocket Tester - Online WS/WSS Connection Debug Tool">
+    <meta property="og:description" content="Free online WebSocket testing tool, supports ws/wss protocols, real-time messaging and connection monitoring.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/websocket-tester.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="WebSocket 测试工具 - 在线WS/WSS连接调试">
-    <meta name="twitter:description" content="免费在线WebSocket测试工具，支持ws/wss协议，实时消息收发。">
+    <meta name="twitter:title" content="WebSocket Tester - Online WS/WSS Connection Debug Tool">
+    <meta name="twitter:description" content="Free online WebSocket testing tool, supports ws/wss protocols, real-time messaging.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/websocket-tester.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "WebSocket 测试工具",
+        "name": "WebSocket Tester",
         "url": "https://www.heyuan110.com/web-toolbox/websocket-tester.html",
-        "description": "在线WebSocket连接测试和调试工具",
+        "description": "Online WebSocket connection testing and debugging tool",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "什么是 WebSocket？",
+                "name": "What is WebSocket?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "WebSocket 是一种全双工通信协议，支持服务器主动推送数据到客户端。与传统 HTTP 请求-响应模式不同，WebSocket 建立连接后可以双向实时通信，适用于聊天、实时数据推送、在线游戏等场景。"
+                    "text": "WebSocket is a full-duplex communication protocol that enables the server to push data to the client proactively. Unlike traditional HTTP request-response mode, WebSocket can communicate bidirectionally in real-time after establishing a connection, suitable for chat, real-time data push, online games, etc."
                 }
             },
             {
                 "@type": "Question",
-                "name": "ws 和 wss 有什么区别？",
+                "name": "What is the difference between ws and wss?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "ws 是普通 WebSocket 协议，wss 是加密的 WebSocket（类似 http 和 https 的关系）。wss 使用 TLS/SSL 加密传输数据，更加安全，生产环境建议使用 wss 协议。"
+                    "text": "ws is the regular WebSocket protocol, wss is the encrypted WebSocket (similar to the relationship between http and https). wss uses TLS/SSL to encrypt data transmission, which is more secure. It is recommended to use wss protocol in production environments."
                 }
             },
             {
                 "@type": "Question",
-                "name": "为什么 WebSocket 连接失败？",
+                "name": "Why does WebSocket connection fail?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "常见原因包括：地址错误、服务器未启动、防火墙阻止、CORS 限制、SSL 证书问题（wss 协议）、端口被占用等。建议检查服务器状态和网络连接。"
+                    "text": "Common reasons include: incorrect address, server not started, firewall blocking, CORS restrictions, SSL certificate issues (wss protocol), port occupied, etc. It is recommended to check the server status and network connection."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以测试需要认证的 WebSocket 吗？",
+                "name": "Can I test WebSocket that requires authentication?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "本工具暂不支持需要认证的 WebSocket 连接，仅支持无认证的 WebSocket 连接测试。如需测试带认证的连接，建议使用专业的 WebSocket 客户端工具。"
+                    "text": "This tool does not support WebSocket connections that require authentication. It only supports non-authenticated WebSocket connection testing. For authenticated connections, it is recommended to use professional WebSocket client tools."
                 }
             },
             {
                 "@type": "Question",
-                "name": "消息格式有限制吗？",
+                "name": "Are there any message format restrictions?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持发送任意文本消息，JSON 格式会自动格式化显示。工具会自动检测 JSON 格式并进行美化展示，方便调试 API 接口。"
+                    "text": "Any text message is supported, JSON format will be automatically formatted for display. The tool automatically detects JSON format and beautifies it for easy API interface debugging."
                 }
             }
         ]
@@ -136,6 +136,7 @@
         header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         header h1 {
@@ -169,6 +170,16 @@
             border-radius: 4px;
             font-family: 'Monaco', 'Menlo', monospace;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 主布局 */
         .main-layout {
@@ -854,14 +865,25 @@
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-home">← 返回工具箱首页</a>
+        <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox Home</a>
 
         <header>
-            <h1>🔌 WebSocket 在线测试工具</h1>
-            <p>基于 HTML5 WebSocket 的在线调试工具，支持内网和外网连接测试</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <h1 data-i18n="pageTitle">🔌 WebSocket Online Tester</h1>
+            <p data-i18n="pageSubtitle">HTML5 WebSocket-based online debugging tool, supports internal and external connection testing</p>
             <div class="tips">
-                连接格式：<code>ws://IP或域名:端口</code> 或 <code>wss://IP或域名:端口</code>
-                &nbsp;示例：<code>ws://127.0.0.1:8080</code>
+                <span data-i18n="connectionFormat">Connection format:</span> <code>ws://IP-or-domain:port</code> <span data-i18n="or">or</span> <code>wss://IP-or-domain:port</code>
+                &nbsp;<span data-i18n="example">Example:</span> <code>ws://127.0.0.1:8080</code>
             </div>
         </header>
 
@@ -869,23 +891,23 @@
         <section class="features-section">
             <div class="feature-card">
                 <div class="icon">🔗</div>
-                <h3>连接测试</h3>
-                <p>快速测试 WebSocket 服务器连接状态，支持 ws:// 和 wss:// 两种协议</p>
+                <h3 data-i18n="featureConnectionTitle">Connection Testing</h3>
+                <p data-i18n="featureConnectionDesc">Quickly test WebSocket server connection status, supports both ws:// and wss:// protocols</p>
             </div>
             <div class="feature-card">
                 <div class="icon">💬</div>
-                <h3>消息收发</h3>
-                <p>支持发送文本和 JSON 格式消息，实时显示服务器响应内容</p>
+                <h3 data-i18n="featureMessagingTitle">Messaging</h3>
+                <p data-i18n="featureMessagingDesc">Supports sending text and JSON format messages, real-time display of server responses</p>
             </div>
             <div class="feature-card">
                 <div class="icon">📜</div>
-                <h3>连接历史</h3>
-                <p>自动保存连接记录，方便重复测试相同的 WebSocket 地址</p>
+                <h3 data-i18n="featureHistoryTitle">Connection History</h3>
+                <p data-i18n="featureHistoryDesc">Automatically saves connection records for convenient repeated testing of the same WebSocket address</p>
             </div>
             <div class="feature-card">
                 <div class="icon">{ }</div>
-                <h3>消息格式化</h3>
-                <p>自动检测并格式化 JSON 消息，让调试数据更加清晰易读</p>
+                <h3 data-i18n="featureFormatTitle">Message Formatting</h3>
+                <p data-i18n="featureFormatDesc">Automatically detects and formats JSON messages for clearer and more readable debugging data</p>
             </div>
         </section>
 
@@ -893,23 +915,23 @@
         <div class="main-layout">
             <div class="card connection-section">
                 <div class="card-header">
-                    <h2>🔗 连接设置</h2>
+                    <h2 data-i18n="connectionSettings">🔗 Connection Settings</h2>
                     <div class="status-indicator">
                         <div class="status-dot" id="statusDot"></div>
-                        <span class="status-text" id="statusText">未连接</span>
+                        <span class="status-text" id="statusText" data-i18n="statusDisconnected">Disconnected</span>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="connection-form">
                         <div class="url-input-wrapper">
                             <span class="protocol" id="protocolLabel">ws://</span>
-                            <input type="text" id="wsUrl" placeholder="127.0.0.1:8080/ws" value="echo.websocket.org">
+                            <input type="text" id="wsUrl" data-i18n-placeholder="urlPlaceholder" placeholder="127.0.0.1:8080/ws" value="echo.websocket.org">
                         </div>
                         <button class="btn btn-connect" id="connectBtn" onclick="connect()">
-                            <span>🔌</span> 连接
+                            <span>🔌</span> <span data-i18n="connect">Connect</span>
                         </button>
                         <button class="btn btn-disconnect" id="disconnectBtn" onclick="disconnect()" disabled>
-                            <span>⏹️</span> 断开
+                            <span>⏹️</span> <span data-i18n="disconnect">Disconnect</span>
                         </button>
                     </div>
                     <div class="message-options" style="margin-top: 15px;">
@@ -925,19 +947,19 @@
                     <div class="stats">
                         <div class="stat-item sent">
                             <div class="value" id="sentCount">0</div>
-                            <div class="label">已发送</div>
+                            <div class="label" data-i18n="statSent">Sent</div>
                         </div>
                         <div class="stat-item received">
                             <div class="value" id="receivedCount">0</div>
-                            <div class="label">已接收</div>
+                            <div class="label" data-i18n="statReceived">Received</div>
                         </div>
                         <div class="stat-item errors">
                             <div class="value" id="errorCount">0</div>
-                            <div class="label">错误</div>
+                            <div class="label" data-i18n="statErrors">Errors</div>
                         </div>
                         <div class="stat-item time">
                             <div class="value" id="connectedTime">--:--</div>
-                            <div class="label">连接时长</div>
+                            <div class="label" data-i18n="statDuration">Duration</div>
                         </div>
                     </div>
                 </div>
@@ -946,29 +968,29 @@
             <!-- 发送消息 -->
             <div class="card">
                 <div class="card-header">
-                    <h2>📤 发送消息</h2>
+                    <h2 data-i18n="sendMessage">📤 Send Message</h2>
                 </div>
                 <div class="card-body">
                     <div class="message-input-area">
-                        <textarea id="messageInput" placeholder="输入要发送的消息内容..."></textarea>
+                        <textarea id="messageInput" data-i18n-placeholder="messagePlaceholder" placeholder="Enter message content to send..."></textarea>
                         <div class="message-options">
                             <div class="message-type">
                                 <input type="radio" name="msgType" id="textMsg" value="text" checked>
-                                <label for="textMsg">文本</label>
+                                <label for="textMsg" data-i18n="msgTypeText">Text</label>
                                 <input type="radio" name="msgType" id="jsonMsg" value="json">
                                 <label for="jsonMsg">JSON</label>
                             </div>
                             <div class="send-actions">
-                                <button class="btn btn-secondary" onclick="formatJson()">格式化 JSON</button>
-                                <button class="btn btn-secondary" onclick="clearMessage()">清空</button>
+                                <button class="btn btn-secondary" onclick="formatJson()" data-i18n="formatJson">Format JSON</button>
+                                <button class="btn btn-secondary" onclick="clearMessage()" data-i18n="clear">Clear</button>
                                 <button class="btn btn-send" id="sendBtn" onclick="sendMessage()" disabled>
-                                    <span>📤</span> 发送
+                                    <span>📤</span> <span data-i18n="send">Send</span>
                                 </button>
                             </div>
                         </div>
                     </div>
                     <div class="quick-messages">
-                        <h4>快捷消息</h4>
+                        <h4 data-i18n="quickMessages">Quick Messages</h4>
                         <div class="quick-msg-list">
                             <span class="quick-msg" onclick="setQuickMessage('ping')">ping</span>
                             <span class="quick-msg" onclick="setQuickMessage('pong')">pong</span>
@@ -983,17 +1005,17 @@
             <!-- 消息日志 -->
             <div class="card">
                 <div class="card-header">
-                    <h2>📋 消息日志</h2>
+                    <h2 data-i18n="messageLog">📋 Message Log</h2>
                     <button class="btn btn-secondary" onclick="clearLog()" style="padding: 6px 12px; font-size: 0.8rem;">
-                        🗑️ 清空
+                        🗑️ <span data-i18n="clearLog">Clear</span>
                     </button>
                 </div>
                 <div class="card-body">
                     <div class="message-log" id="messageLog">
                         <div class="log-empty">
                             <div class="icon">📭</div>
-                            <p>暂无消息记录</p>
-                            <p style="font-size: 0.8rem; margin-top: 5px;">连接 WebSocket 后，消息将显示在这里</p>
+                            <p data-i18n="noMessages">No messages yet</p>
+                            <p style="font-size: 0.8rem; margin-top: 5px;" data-i18n="noMessagesHint">Messages will appear here after connecting to WebSocket</p>
                         </div>
                     </div>
                 </div>
@@ -1002,19 +1024,450 @@
 
         <!-- 使用说明 -->
         <div class="footer-notes">
-            <h3>📖 使用说明</h3>
+            <h3 data-i18n="usageGuide">📖 Usage Guide</h3>
             <ul>
-                <li>支持 <code>ws://</code>（普通）和 <code>wss://</code>（SSL加密）两种协议</li>
-                <li>内网测试：<code>ws://192.168.1.100:8080</code> 或 <code>ws://localhost:3000</code></li>
-                <li>外网测试：<code>wss://example.com/ws</code> 或 <code>ws://your-domain.com:8080</code></li>
-                <li>支持发送纯文本和 JSON 格式消息，可自动格式化 JSON</li>
-                <li>实时显示发送/接收消息，包含时间戳和消息内容</li>
-                <li>连接状态实时监控，统计发送/接收/错误次数</li>
+                <li data-i18n="usageNote1">Supports <code>ws://</code> (regular) and <code>wss://</code> (SSL encrypted) protocols</li>
+                <li data-i18n="usageNote2">Internal test: <code>ws://192.168.1.100:8080</code> or <code>ws://localhost:3000</code></li>
+                <li data-i18n="usageNote3">External test: <code>wss://example.com/ws</code> or <code>ws://your-domain.com:8080</code></li>
+                <li data-i18n="usageNote4">Supports sending plain text and JSON format messages, with automatic JSON formatting</li>
+                <li data-i18n="usageNote5">Real-time display of sent/received messages with timestamps and content</li>
+                <li data-i18n="usageNote6">Real-time connection status monitoring, statistics for sent/received/error counts</li>
             </ul>
         </div>
     </div>
 
     <script>
+        // ==================== 国际化模块 ====================
+        const i18n = {
+            currentLang: 'en',
+            translations: {
+                en: {
+                    backHome: '← Back to Toolbox Home',
+                    pageTitle: '🔌 WebSocket Online Tester',
+                    pageSubtitle: 'HTML5 WebSocket-based online debugging tool, supports internal and external connection testing',
+                    connectionFormat: 'Connection format:',
+                    or: 'or',
+                    example: 'Example:',
+                    featureConnectionTitle: 'Connection Testing',
+                    featureConnectionDesc: 'Quickly test WebSocket server connection status, supports both ws:// and wss:// protocols',
+                    featureMessagingTitle: 'Messaging',
+                    featureMessagingDesc: 'Supports sending text and JSON format messages, real-time display of server responses',
+                    featureHistoryTitle: 'Connection History',
+                    featureHistoryDesc: 'Automatically saves connection records for convenient repeated testing of the same WebSocket address',
+                    featureFormatTitle: 'Message Formatting',
+                    featureFormatDesc: 'Automatically detects and formats JSON messages for clearer and more readable debugging data',
+                    connectionSettings: '🔗 Connection Settings',
+                    statusDisconnected: 'Disconnected',
+                    statusConnecting: 'Connecting...',
+                    statusConnected: 'Connected',
+                    urlPlaceholder: '127.0.0.1:8080/ws',
+                    connect: 'Connect',
+                    disconnect: 'Disconnect',
+                    statSent: 'Sent',
+                    statReceived: 'Received',
+                    statErrors: 'Errors',
+                    statDuration: 'Duration',
+                    sendMessage: '📤 Send Message',
+                    messagePlaceholder: 'Enter message content to send...',
+                    msgTypeText: 'Text',
+                    formatJson: 'Format JSON',
+                    clear: 'Clear',
+                    send: 'Send',
+                    quickMessages: 'Quick Messages',
+                    messageLog: '📋 Message Log',
+                    clearLog: 'Clear',
+                    noMessages: 'No messages yet',
+                    noMessagesHint: 'Messages will appear here after connecting to WebSocket',
+                    usageGuide: '📖 Usage Guide',
+                    usageNote1: 'Supports <code>ws://</code> (regular) and <code>wss://</code> (SSL encrypted) protocols',
+                    usageNote2: 'Internal test: <code>ws://192.168.1.100:8080</code> or <code>ws://localhost:3000</code>',
+                    usageNote3: 'External test: <code>wss://example.com/ws</code> or <code>ws://your-domain.com:8080</code>',
+                    usageNote4: 'Supports sending plain text and JSON format messages, with automatic JSON formatting',
+                    usageNote5: 'Real-time display of sent/received messages with timestamps and content',
+                    usageNote6: 'Real-time connection status monitoring, statistics for sent/received/error counts',
+                    faqTitle: '❓ FAQ',
+                    faq1Question: 'What is WebSocket?',
+                    faq1Answer: 'WebSocket is a full-duplex communication protocol that enables the server to push data to the client proactively. Unlike traditional HTTP request-response mode, WebSocket can communicate bidirectionally in real-time after establishing a connection, suitable for chat, real-time data push, online games, etc.',
+                    faq2Question: 'What is the difference between ws and wss?',
+                    faq2Answer: 'ws is the regular WebSocket protocol, wss is the encrypted WebSocket (similar to the relationship between <code>http</code> and <code>https</code>). wss uses TLS/SSL to encrypt data transmission, which is more secure. It is recommended to use wss protocol in production environments.',
+                    faq3Question: 'Why does WebSocket connection fail?',
+                    faq3Answer: 'Common reasons include: incorrect address, server not started, firewall blocking, CORS restrictions, SSL certificate issues (wss protocol), port occupied, etc. It is recommended to check the server status and network connection to ensure the WebSocket service is running normally.',
+                    faq4Question: 'Can I test WebSocket that requires authentication?',
+                    faq4Answer: 'This tool does not support WebSocket connections that require authentication. It only supports non-authenticated WebSocket connection testing. For authenticated connections, it is recommended to use professional WebSocket client tools like Postman or wscat.',
+                    faq5Question: 'Are there any message format restrictions?',
+                    faq5Answer: 'Any text message is supported, JSON format will be automatically formatted for display. The tool automatically detects JSON format and beautifies it for easy API interface debugging. There is no specific message length limit, but it is recommended to keep single messages under 64KB.',
+                    relatedTools: '🔗 Related Tools',
+                    jsonViewer: 'JSON Viewer',
+                    jsonViewerDesc: 'JSON formatting and visualization',
+                    cryptoTools: 'Crypto Toolbox',
+                    cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                    ipLookup: 'IP Lookup',
+                    ipLookupDesc: 'Query IP geolocation',
+                    regexTester: 'Regex Tester',
+                    regexTesterDesc: 'Online regex matching and debugging',
+                    footerNote: 'Pure frontend processing, data will not be uploaded to server',
+                    footerBackHome: '← Back to Web Toolbox Home',
+                    // 日志消息
+                    logConnecting: 'Connecting to',
+                    logConnected: 'Connected successfully!',
+                    logDisconnecting: 'Disconnecting...',
+                    logConnectionClosed: 'Connection closed',
+                    logConnectionError: 'Connection error',
+                    logSendFailed: 'Send failed:',
+                    logConnectFailed: 'Connection failed:',
+                    logUserDisconnect: 'User disconnected',
+                    logDirectionSent: 'Sent →',
+                    logDirectionReceived: '← Received',
+                    logDirectionSystem: 'System',
+                    logDirectionError: 'Error',
+                    // Toast 消息
+                    toastEnterValidUrl: 'Please enter a valid WebSocket address',
+                    toastNotConnected: 'WebSocket not connected',
+                    toastEnterMessage: 'Please enter message content',
+                    toastInvalidJson: 'Invalid JSON format',
+                    langName: '🌐 English'
+                },
+                'zh-CN': {
+                    backHome: '← 返回工具箱首页',
+                    pageTitle: '🔌 WebSocket 在线测试工具',
+                    pageSubtitle: '基于 HTML5 WebSocket 的在线调试工具，支持内网和外网连接测试',
+                    connectionFormat: '连接格式：',
+                    or: '或',
+                    example: '示例：',
+                    featureConnectionTitle: '连接测试',
+                    featureConnectionDesc: '快速测试 WebSocket 服务器连接状态，支持 ws:// 和 wss:// 两种协议',
+                    featureMessagingTitle: '消息收发',
+                    featureMessagingDesc: '支持发送文本和 JSON 格式消息，实时显示服务器响应内容',
+                    featureHistoryTitle: '连接历史',
+                    featureHistoryDesc: '自动保存连接记录，方便重复测试相同的 WebSocket 地址',
+                    featureFormatTitle: '消息格式化',
+                    featureFormatDesc: '自动检测并格式化 JSON 消息，让调试数据更加清晰易读',
+                    connectionSettings: '🔗 连接设置',
+                    statusDisconnected: '未连接',
+                    statusConnecting: '连接中...',
+                    statusConnected: '已连接',
+                    urlPlaceholder: '127.0.0.1:8080/ws',
+                    connect: '连接',
+                    disconnect: '断开',
+                    statSent: '已发送',
+                    statReceived: '已接收',
+                    statErrors: '错误',
+                    statDuration: '连接时长',
+                    sendMessage: '📤 发送消息',
+                    messagePlaceholder: '输入要发送的消息内容...',
+                    msgTypeText: '文本',
+                    formatJson: '格式化 JSON',
+                    clear: '清空',
+                    send: '发送',
+                    quickMessages: '快捷消息',
+                    messageLog: '📋 消息日志',
+                    clearLog: '清空',
+                    noMessages: '暂无消息记录',
+                    noMessagesHint: '连接 WebSocket 后，消息将显示在这里',
+                    usageGuide: '📖 使用说明',
+                    usageNote1: '支持 <code>ws://</code>（普通）和 <code>wss://</code>（SSL加密）两种协议',
+                    usageNote2: '内网测试：<code>ws://192.168.1.100:8080</code> 或 <code>ws://localhost:3000</code>',
+                    usageNote3: '外网测试：<code>wss://example.com/ws</code> 或 <code>ws://your-domain.com:8080</code>',
+                    usageNote4: '支持发送纯文本和 JSON 格式消息，可自动格式化 JSON',
+                    usageNote5: '实时显示发送/接收消息，包含时间戳和消息内容',
+                    usageNote6: '连接状态实时监控，统计发送/接收/错误次数',
+                    faqTitle: '❓ 常见问题',
+                    faq1Question: '什么是 WebSocket？',
+                    faq1Answer: 'WebSocket 是一种全双工通信协议，支持服务器主动推送数据到客户端。与传统 HTTP 请求-响应模式不同，WebSocket 建立连接后可以双向实时通信，适用于聊天、实时数据推送、在线游戏等场景。',
+                    faq2Question: 'ws 和 wss 有什么区别？',
+                    faq2Answer: 'ws 是普通 WebSocket 协议，wss 是加密的 WebSocket（类似 <code>http</code> 和 <code>https</code> 的关系）。wss 使用 TLS/SSL 加密传输数据，更加安全，生产环境建议使用 wss 协议。',
+                    faq3Question: '为什么 WebSocket 连接失败？',
+                    faq3Answer: '常见原因包括：地址错误、服务器未启动、防火墙阻止、CORS 限制、SSL 证书问题（wss 协议）、端口被占用等。建议检查服务器状态和网络连接，确保 WebSocket 服务正常运行。',
+                    faq4Question: '可以测试需要认证的 WebSocket 吗？',
+                    faq4Answer: '本工具暂不支持需要认证的 WebSocket 连接，仅支持无认证的 WebSocket 连接测试。如需测试带认证的连接，建议使用专业的 WebSocket 客户端工具如 Postman 或 wscat。',
+                    faq5Question: '消息格式有限制吗？',
+                    faq5Answer: '支持发送任意文本消息，JSON 格式会自动格式化显示。工具会自动检测 JSON 格式并进行美化展示，方便调试 API 接口。消息长度没有特别限制，但建议单条消息不超过 64KB。',
+                    relatedTools: '🔗 相关工具推荐',
+                    jsonViewer: 'JSON 查看器',
+                    jsonViewerDesc: 'JSON 格式化与可视化',
+                    cryptoTools: '加解密工具箱',
+                    cryptoToolsDesc: 'Base64/MD5/AES 等',
+                    ipLookup: 'IP 归属地查询',
+                    ipLookupDesc: '查询 IP 地理位置',
+                    regexTester: '正则表达式测试',
+                    regexTesterDesc: '在线正则匹配与调试',
+                    footerNote: '纯前端处理，数据不会上传到服务器',
+                    footerBackHome: '← 返回 Web Toolbox 首页',
+                    // 日志消息
+                    logConnecting: '正在连接',
+                    logConnected: '连接成功！',
+                    logDisconnecting: '正在断开连接...',
+                    logConnectionClosed: '连接已关闭',
+                    logConnectionError: '连接发生错误',
+                    logSendFailed: '发送失败：',
+                    logConnectFailed: '连接失败：',
+                    logUserDisconnect: '用户主动断开',
+                    logDirectionSent: '发送 →',
+                    logDirectionReceived: '← 接收',
+                    logDirectionSystem: '系统',
+                    logDirectionError: '错误',
+                    // Toast 消息
+                    toastEnterValidUrl: '请输入有效的 WebSocket 地址',
+                    toastNotConnected: 'WebSocket 未连接',
+                    toastEnterMessage: '请输入消息内容',
+                    toastInvalidJson: '无效的 JSON 格式',
+                    langName: '🌐 中文'
+                },
+                fr: {
+                    backHome: '← Retour à la boîte à outils',
+                    pageTitle: '🔌 Testeur WebSocket en ligne',
+                    pageSubtitle: 'Outil de débogage en ligne basé sur HTML5 WebSocket, prend en charge les tests de connexion internes et externes',
+                    connectionFormat: 'Format de connexion :',
+                    or: 'ou',
+                    example: 'Exemple :',
+                    featureConnectionTitle: 'Test de connexion',
+                    featureConnectionDesc: 'Testez rapidement l\'état de connexion du serveur WebSocket, prend en charge les protocoles ws:// et wss://',
+                    featureMessagingTitle: 'Messagerie',
+                    featureMessagingDesc: 'Prend en charge l\'envoi de messages texte et JSON, affichage en temps réel des réponses du serveur',
+                    featureHistoryTitle: 'Historique de connexion',
+                    featureHistoryDesc: 'Enregistre automatiquement les connexions pour faciliter les tests répétés de la même adresse WebSocket',
+                    featureFormatTitle: 'Formatage des messages',
+                    featureFormatDesc: 'Détecte et formate automatiquement les messages JSON pour des données de débogage plus claires et lisibles',
+                    connectionSettings: '🔗 Paramètres de connexion',
+                    statusDisconnected: 'Déconnecté',
+                    statusConnecting: 'Connexion...',
+                    statusConnected: 'Connecté',
+                    urlPlaceholder: '127.0.0.1:8080/ws',
+                    connect: 'Connecter',
+                    disconnect: 'Déconnecter',
+                    statSent: 'Envoyés',
+                    statReceived: 'Reçus',
+                    statErrors: 'Erreurs',
+                    statDuration: 'Durée',
+                    sendMessage: '📤 Envoyer un message',
+                    messagePlaceholder: 'Entrez le contenu du message à envoyer...',
+                    msgTypeText: 'Texte',
+                    formatJson: 'Formater JSON',
+                    clear: 'Effacer',
+                    send: 'Envoyer',
+                    quickMessages: 'Messages rapides',
+                    messageLog: '📋 Journal des messages',
+                    clearLog: 'Effacer',
+                    noMessages: 'Aucun message pour le moment',
+                    noMessagesHint: 'Les messages apparaîtront ici après la connexion au WebSocket',
+                    usageGuide: '📖 Guide d\'utilisation',
+                    usageNote1: 'Prend en charge les protocoles <code>ws://</code> (standard) et <code>wss://</code> (chiffré SSL)',
+                    usageNote2: 'Test interne : <code>ws://192.168.1.100:8080</code> ou <code>ws://localhost:3000</code>',
+                    usageNote3: 'Test externe : <code>wss://example.com/ws</code> ou <code>ws://your-domain.com:8080</code>',
+                    usageNote4: 'Prend en charge l\'envoi de messages texte brut et JSON, avec formatage JSON automatique',
+                    usageNote5: 'Affichage en temps réel des messages envoyés/reçus avec horodatage et contenu',
+                    usageNote6: 'Surveillance en temps réel de l\'état de connexion, statistiques d\'envoi/réception/erreurs',
+                    faqTitle: '❓ FAQ',
+                    faq1Question: 'Qu\'est-ce que WebSocket ?',
+                    faq1Answer: 'WebSocket est un protocole de communication full-duplex qui permet au serveur d\'envoyer des données au client de manière proactive. Contrairement au mode requête-réponse HTTP traditionnel, WebSocket peut communiquer de manière bidirectionnelle en temps réel après l\'établissement d\'une connexion, adapté au chat, à la diffusion de données en temps réel, aux jeux en ligne, etc.',
+                    faq2Question: 'Quelle est la différence entre ws et wss ?',
+                    faq2Answer: 'ws est le protocole WebSocket standard, wss est le WebSocket chiffré (similaire à la relation entre <code>http</code> et <code>https</code>). wss utilise TLS/SSL pour chiffrer la transmission de données, ce qui est plus sécurisé. Il est recommandé d\'utiliser le protocole wss dans les environnements de production.',
+                    faq3Question: 'Pourquoi la connexion WebSocket échoue-t-elle ?',
+                    faq3Answer: 'Les raisons courantes incluent : adresse incorrecte, serveur non démarré, blocage par pare-feu, restrictions CORS, problèmes de certificat SSL (protocole wss), port occupé, etc. Il est recommandé de vérifier l\'état du serveur et la connexion réseau pour s\'assurer que le service WebSocket fonctionne normalement.',
+                    faq4Question: 'Puis-je tester un WebSocket nécessitant une authentification ?',
+                    faq4Answer: 'Cet outil ne prend pas en charge les connexions WebSocket nécessitant une authentification. Il ne prend en charge que les tests de connexion WebSocket sans authentification. Pour les connexions authentifiées, il est recommandé d\'utiliser des outils clients WebSocket professionnels comme Postman ou wscat.',
+                    faq5Question: 'Y a-t-il des restrictions sur le format des messages ?',
+                    faq5Answer: 'Tout message texte est pris en charge, le format JSON sera automatiquement formaté pour l\'affichage. L\'outil détecte automatiquement le format JSON et l\'embellit pour faciliter le débogage de l\'interface API. Il n\'y a pas de limite de longueur de message spécifique, mais il est recommandé de garder les messages individuels sous 64 Ko.',
+                    relatedTools: '🔗 Outils connexes',
+                    jsonViewer: 'Visualiseur JSON',
+                    jsonViewerDesc: 'Formatage et visualisation JSON',
+                    cryptoTools: 'Boîte à outils crypto',
+                    cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                    ipLookup: 'Recherche IP',
+                    ipLookupDesc: 'Requête de géolocalisation IP',
+                    regexTester: 'Testeur Regex',
+                    regexTesterDesc: 'Correspondance et débogage regex en ligne',
+                    footerNote: 'Traitement purement frontend, les données ne seront pas téléchargées sur le serveur',
+                    footerBackHome: '← Retour à l\'accueil Web Toolbox',
+                    // 日志消息
+                    logConnecting: 'Connexion à',
+                    logConnected: 'Connecté avec succès !',
+                    logDisconnecting: 'Déconnexion...',
+                    logConnectionClosed: 'Connexion fermée',
+                    logConnectionError: 'Erreur de connexion',
+                    logSendFailed: 'Échec de l\'envoi :',
+                    logConnectFailed: 'Échec de la connexion :',
+                    logUserDisconnect: 'Utilisateur déconnecté',
+                    logDirectionSent: 'Envoyé →',
+                    logDirectionReceived: '← Reçu',
+                    logDirectionSystem: 'Système',
+                    logDirectionError: 'Erreur',
+                    // Toast 消息
+                    toastEnterValidUrl: 'Veuillez entrer une adresse WebSocket valide',
+                    toastNotConnected: 'WebSocket non connecté',
+                    toastEnterMessage: 'Veuillez entrer le contenu du message',
+                    toastInvalidJson: 'Format JSON invalide',
+                    langName: '🌐 Français'
+                },
+                es: {
+                    backHome: '← Volver a la caja de herramientas',
+                    pageTitle: '🔌 Probador WebSocket en línea',
+                    pageSubtitle: 'Herramienta de depuración en línea basada en HTML5 WebSocket, soporta pruebas de conexión internas y externas',
+                    connectionFormat: 'Formato de conexión:',
+                    or: 'o',
+                    example: 'Ejemplo:',
+                    featureConnectionTitle: 'Prueba de conexión',
+                    featureConnectionDesc: 'Prueba rápidamente el estado de conexión del servidor WebSocket, soporta protocolos ws:// y wss://',
+                    featureMessagingTitle: 'Mensajería',
+                    featureMessagingDesc: 'Soporta envío de mensajes de texto y formato JSON, muestra en tiempo real las respuestas del servidor',
+                    featureHistoryTitle: 'Historial de conexión',
+                    featureHistoryDesc: 'Guarda automáticamente los registros de conexión para pruebas repetidas convenientes de la misma dirección WebSocket',
+                    featureFormatTitle: 'Formateo de mensajes',
+                    featureFormatDesc: 'Detecta y formatea automáticamente mensajes JSON para datos de depuración más claros y legibles',
+                    connectionSettings: '🔗 Configuración de conexión',
+                    statusDisconnected: 'Desconectado',
+                    statusConnecting: 'Conectando...',
+                    statusConnected: 'Conectado',
+                    urlPlaceholder: '127.0.0.1:8080/ws',
+                    connect: 'Conectar',
+                    disconnect: 'Desconectar',
+                    statSent: 'Enviados',
+                    statReceived: 'Recibidos',
+                    statErrors: 'Errores',
+                    statDuration: 'Duración',
+                    sendMessage: '📤 Enviar mensaje',
+                    messagePlaceholder: 'Ingrese el contenido del mensaje a enviar...',
+                    msgTypeText: 'Texto',
+                    formatJson: 'Formatear JSON',
+                    clear: 'Limpiar',
+                    send: 'Enviar',
+                    quickMessages: 'Mensajes rápidos',
+                    messageLog: '📋 Registro de mensajes',
+                    clearLog: 'Limpiar',
+                    noMessages: 'Sin mensajes aún',
+                    noMessagesHint: 'Los mensajes aparecerán aquí después de conectar al WebSocket',
+                    usageGuide: '📖 Guía de uso',
+                    usageNote1: 'Soporta protocolos <code>ws://</code> (regular) y <code>wss://</code> (encriptado SSL)',
+                    usageNote2: 'Prueba interna: <code>ws://192.168.1.100:8080</code> o <code>ws://localhost:3000</code>',
+                    usageNote3: 'Prueba externa: <code>wss://example.com/ws</code> o <code>ws://your-domain.com:8080</code>',
+                    usageNote4: 'Soporta envío de mensajes de texto plano y formato JSON, con formateo JSON automático',
+                    usageNote5: 'Visualización en tiempo real de mensajes enviados/recibidos con marcas de tiempo y contenido',
+                    usageNote6: 'Monitoreo de estado de conexión en tiempo real, estadísticas de enviados/recibidos/errores',
+                    faqTitle: '❓ Preguntas frecuentes',
+                    faq1Question: '¿Qué es WebSocket?',
+                    faq1Answer: 'WebSocket es un protocolo de comunicación full-duplex que permite al servidor enviar datos al cliente de manera proactiva. A diferencia del modo tradicional de solicitud-respuesta HTTP, WebSocket puede comunicarse bidireccionalmente en tiempo real después de establecer una conexión, adecuado para chat, transmisión de datos en tiempo real, juegos en línea, etc.',
+                    faq2Question: '¿Cuál es la diferencia entre ws y wss?',
+                    faq2Answer: 'ws es el protocolo WebSocket regular, wss es el WebSocket encriptado (similar a la relación entre <code>http</code> y <code>https</code>). wss usa TLS/SSL para encriptar la transmisión de datos, lo que es más seguro. Se recomienda usar el protocolo wss en entornos de producción.',
+                    faq3Question: '¿Por qué falla la conexión WebSocket?',
+                    faq3Answer: 'Las razones comunes incluyen: dirección incorrecta, servidor no iniciado, bloqueo de firewall, restricciones CORS, problemas de certificado SSL (protocolo wss), puerto ocupado, etc. Se recomienda verificar el estado del servidor y la conexión de red para asegurar que el servicio WebSocket funcione normalmente.',
+                    faq4Question: '¿Puedo probar WebSocket que requiere autenticación?',
+                    faq4Answer: 'Esta herramienta no soporta conexiones WebSocket que requieren autenticación. Solo soporta pruebas de conexión WebSocket sin autenticación. Para conexiones autenticadas, se recomienda usar herramientas cliente WebSocket profesionales como Postman o wscat.',
+                    faq5Question: '¿Hay restricciones en el formato de mensajes?',
+                    faq5Answer: 'Se soporta cualquier mensaje de texto, el formato JSON se formateará automáticamente para su visualización. La herramienta detecta automáticamente el formato JSON y lo embellece para facilitar la depuración de la interfaz API. No hay límite específico de longitud de mensaje, pero se recomienda mantener mensajes individuales por debajo de 64KB.',
+                    relatedTools: '🔗 Herramientas relacionadas',
+                    jsonViewer: 'Visor JSON',
+                    jsonViewerDesc: 'Formateo y visualización JSON',
+                    cryptoTools: 'Caja de herramientas crypto',
+                    cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                    ipLookup: 'Búsqueda de IP',
+                    ipLookupDesc: 'Consulta de geolocalización IP',
+                    regexTester: 'Probador Regex',
+                    regexTesterDesc: 'Coincidencia y depuración regex en línea',
+                    footerNote: 'Procesamiento puramente frontend, los datos no se subirán al servidor',
+                    footerBackHome: '← Volver a la página principal de Web Toolbox',
+                    // 日志消息
+                    logConnecting: 'Conectando a',
+                    logConnected: '¡Conectado exitosamente!',
+                    logDisconnecting: 'Desconectando...',
+                    logConnectionClosed: 'Conexión cerrada',
+                    logConnectionError: 'Error de conexión',
+                    logSendFailed: 'Error de envío:',
+                    logConnectFailed: 'Error de conexión:',
+                    logUserDisconnect: 'Usuario desconectado',
+                    logDirectionSent: 'Enviado →',
+                    logDirectionReceived: '← Recibido',
+                    logDirectionSystem: 'Sistema',
+                    logDirectionError: 'Error',
+                    // Toast 消息
+                    toastEnterValidUrl: 'Por favor ingrese una dirección WebSocket válida',
+                    toastNotConnected: 'WebSocket no conectado',
+                    toastEnterMessage: 'Por favor ingrese el contenido del mensaje',
+                    toastInvalidJson: 'Formato JSON inválido',
+                    langName: '🌐 Español'
+                }
+            },
+
+            t(key) {
+                return this.translations[this.currentLang]?.[key] || this.translations['en'][key] || key;
+            },
+
+            setLang(lang) {
+                if (this.translations[lang]) {
+                    this.currentLang = lang;
+                    localStorage.setItem('websocket-tester-lang', lang);
+                    this.updateUI();
+                }
+            },
+
+            updateUI() {
+                // 更新所有带 data-i18n 属性的元素
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    const translation = this.t(key);
+                    if (translation) {
+                        el.innerHTML = translation;
+                    }
+                });
+
+                // 更新所有带 data-i18n-placeholder 属性的元素
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    const translation = this.t(key);
+                    if (translation) {
+                        el.placeholder = translation;
+                    }
+                });
+
+                // 更新语言切换器显示
+                document.getElementById('langCurrent').textContent = this.t('langName');
+            },
+
+            init() {
+                // 从 localStorage 读取保存的语言设置
+                const savedLang = localStorage.getItem('websocket-tester-lang');
+                if (savedLang && this.translations[savedLang]) {
+                    this.currentLang = savedLang;
+                } else {
+                    // 根据浏览器语言自动选择
+                    const browserLang = navigator.language || navigator.userLanguage;
+                    if (browserLang.startsWith('zh')) {
+                        this.currentLang = 'zh-CN';
+                    } else if (browserLang.startsWith('fr')) {
+                        this.currentLang = 'fr';
+                    } else if (browserLang.startsWith('es')) {
+                        this.currentLang = 'es';
+                    } else {
+                        this.currentLang = 'en';
+                    }
+                }
+                this.updateUI();
+            }
+        };
+
+        // 语言切换器交互
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            this.classList.toggle('active');
+            e.stopPropagation();
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                const lang = this.getAttribute('data-lang');
+                i18n.setLang(lang);
+                document.getElementById('langDropdown').classList.remove('active');
+                e.stopPropagation();
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
+        // 初始化 i18n
+        i18n.init();
+
+        // ==================== WebSocket 模块 ====================
+
         // WebSocket 实例
         let ws = null;
         let connectedAt = null;
@@ -1047,19 +1500,19 @@
             const url = getFullUrl();
 
             if (!url || url === 'ws://' || url === 'wss://') {
-                showToast('请输入有效的 WebSocket 地址', true);
+                showToast(i18n.t('toastEnterValidUrl'), true);
                 return;
             }
 
             try {
                 updateStatus('connecting');
-                addLog('system', `正在连接 ${url}...`);
+                addLog('system', `${i18n.t('logConnecting')} ${url}...`);
 
                 ws = new WebSocket(url);
 
                 ws.onopen = function(event) {
                     updateStatus('connected');
-                    addLog('system', '连接成功！');
+                    addLog('system', i18n.t('logConnected'));
                     connectedAt = new Date();
                     startTimer();
                     saveToHistory(url);
@@ -1074,34 +1527,34 @@
                 ws.onerror = function(event) {
                     stats.errors++;
                     updateStats();
-                    addLog('error', '连接发生错误');
+                    addLog('error', i18n.t('logConnectionError'));
                 };
 
                 ws.onclose = function(event) {
                     updateStatus('disconnected');
                     stopTimer();
-                    let reason = event.reason || '连接已关闭';
+                    let reason = event.reason || i18n.t('logConnectionClosed');
                     if (event.code) {
-                        reason += ` (代码: ${event.code})`;
+                        reason += ` (code: ${event.code})`;
                     }
                     addLog('system', reason);
                 };
 
             } catch (e) {
                 updateStatus('disconnected');
-                addLog('error', '连接失败: ' + e.message);
-                showToast('连接失败: ' + e.message, true);
+                addLog('error', i18n.t('logConnectFailed') + e.message);
+                showToast(i18n.t('logConnectFailed') + e.message, true);
             }
         }
 
         // 断开连接
         function disconnect() {
             if (ws) {
-                addLog('system', '正在断开连接...');
+                addLog('system', i18n.t('logDisconnecting'));
                 try {
-                    ws.close(1000, '用户主动断开');
+                    ws.close(1000, i18n.t('logUserDisconnect'));
                 } catch (e) {
-                    console.error('关闭连接出错:', e);
+                    console.error('Close connection error:', e);
                 }
                 ws = null;
                 updateStatus('disconnected');
@@ -1112,13 +1565,13 @@
         // 发送消息
         function sendMessage() {
             if (!ws || ws.readyState !== WebSocket.OPEN) {
-                showToast('WebSocket 未连接', true);
+                showToast(i18n.t('toastNotConnected'), true);
                 return;
             }
 
             const message = document.getElementById('messageInput').value;
             if (!message.trim()) {
-                showToast('请输入消息内容', true);
+                showToast(i18n.t('toastEnterMessage'), true);
                 return;
             }
 
@@ -1130,7 +1583,7 @@
             } catch (e) {
                 stats.errors++;
                 updateStats();
-                addLog('error', '发送失败: ' + e.message);
+                addLog('error', i18n.t('logSendFailed') + e.message);
             }
         }
 
@@ -1147,19 +1600,19 @@
 
             switch(status) {
                 case 'connecting':
-                    text.textContent = '连接中...';
+                    text.textContent = i18n.t('statusConnecting');
                     connectBtn.disabled = true;
                     disconnectBtn.disabled = true;
                     sendBtn.disabled = true;
                     break;
                 case 'connected':
-                    text.textContent = '已连接';
+                    text.textContent = i18n.t('statusConnected');
                     connectBtn.disabled = true;
                     disconnectBtn.disabled = false;
                     sendBtn.disabled = false;
                     break;
                 case 'disconnected':
-                    text.textContent = '未连接';
+                    text.textContent = i18n.t('statusDisconnected');
                     connectBtn.disabled = false;
                     disconnectBtn.disabled = true;
                     sendBtn.disabled = true;
@@ -1181,10 +1634,10 @@
             const time = new Date().toLocaleTimeString();
             let direction = '';
             switch(type) {
-                case 'sent': direction = '发送 →'; break;
-                case 'received': direction = '← 接收'; break;
-                case 'system': direction = '系统'; break;
-                case 'error': direction = '错误'; break;
+                case 'sent': direction = i18n.t('logDirectionSent'); break;
+                case 'received': direction = i18n.t('logDirectionReceived'); break;
+                case 'system': direction = i18n.t('logDirectionSystem'); break;
+                case 'error': direction = i18n.t('logDirectionError'); break;
             }
 
             // 尝试格式化 JSON
@@ -1219,8 +1672,8 @@
             log.innerHTML = `
                 <div class="log-empty">
                     <div class="icon">📭</div>
-                    <p>暂无消息记录</p>
-                    <p style="font-size: 0.8rem; margin-top: 5px;">连接 WebSocket 后，消息将显示在这里</p>
+                    <p data-i18n="noMessages">${i18n.t('noMessages')}</p>
+                    <p style="font-size: 0.8rem; margin-top: 5px;" data-i18n="noMessagesHint">${i18n.t('noMessagesHint')}</p>
                 </div>
             `;
         }
@@ -1260,7 +1713,7 @@
                 const parsed = JSON.parse(textarea.value);
                 textarea.value = JSON.stringify(parsed, null, 2);
             } catch(e) {
-                showToast('无效的 JSON 格式', true);
+                showToast(i18n.t('toastInvalidJson'), true);
             }
         }
 
@@ -1319,60 +1772,60 @@
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section" style="max-width: 1000px; margin: 40px auto 0; padding: 24px;">
-        <h2>❓ 常见问题</h2>
+        <h2 data-i18n="faqTitle">❓ FAQ</h2>
         <div class="faq-item">
-            <div class="faq-question">什么是 WebSocket？</div>
-            <div class="faq-answer">WebSocket 是一种全双工通信协议，支持服务器主动推送数据到客户端。与传统 HTTP 请求-响应模式不同，WebSocket 建立连接后可以双向实时通信，适用于聊天、实时数据推送、在线游戏等场景。</div>
+            <div class="faq-question" data-i18n="faq1Question">What is WebSocket?</div>
+            <div class="faq-answer" data-i18n="faq1Answer">WebSocket is a full-duplex communication protocol that enables the server to push data to the client proactively. Unlike traditional HTTP request-response mode, WebSocket can communicate bidirectionally in real-time after establishing a connection, suitable for chat, real-time data push, online games, etc.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">ws 和 wss 有什么区别？</div>
-            <div class="faq-answer">ws 是普通 WebSocket 协议，wss 是加密的 WebSocket（类似 <code>http</code> 和 <code>https</code> 的关系）。wss 使用 TLS/SSL 加密传输数据，更加安全，生产环境建议使用 wss 协议。</div>
+            <div class="faq-question" data-i18n="faq2Question">What is the difference between ws and wss?</div>
+            <div class="faq-answer" data-i18n="faq2Answer">ws is the regular WebSocket protocol, wss is the encrypted WebSocket (similar to the relationship between <code>http</code> and <code>https</code>). wss uses TLS/SSL to encrypt data transmission, which is more secure. It is recommended to use wss protocol in production environments.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">为什么 WebSocket 连接失败？</div>
-            <div class="faq-answer">常见原因包括：地址错误、服务器未启动、防火墙阻止、CORS 限制、SSL 证书问题（wss 协议）、端口被占用等。建议检查服务器状态和网络连接，确保 WebSocket 服务正常运行。</div>
+            <div class="faq-question" data-i18n="faq3Question">Why does WebSocket connection fail?</div>
+            <div class="faq-answer" data-i18n="faq3Answer">Common reasons include: incorrect address, server not started, firewall blocking, CORS restrictions, SSL certificate issues (wss protocol), port occupied, etc. It is recommended to check the server status and network connection to ensure the WebSocket service is running normally.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">可以测试需要认证的 WebSocket 吗？</div>
-            <div class="faq-answer">本工具暂不支持需要认证的 WebSocket 连接，仅支持无认证的 WebSocket 连接测试。如需测试带认证的连接，建议使用专业的 WebSocket 客户端工具如 Postman 或 wscat。</div>
+            <div class="faq-question" data-i18n="faq4Question">Can I test WebSocket that requires authentication?</div>
+            <div class="faq-answer" data-i18n="faq4Answer">This tool does not support WebSocket connections that require authentication. It only supports non-authenticated WebSocket connection testing. For authenticated connections, it is recommended to use professional WebSocket client tools like Postman or wscat.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">消息格式有限制吗？</div>
-            <div class="faq-answer">支持发送任意文本消息，JSON 格式会自动格式化显示。工具会自动检测 JSON 格式并进行美化展示，方便调试 API 接口。消息长度没有特别限制，但建议单条消息不超过 64KB。</div>
+            <div class="faq-question" data-i18n="faq5Question">Are there any message format restrictions?</div>
+            <div class="faq-answer" data-i18n="faq5Answer">Any text message is supported, JSON format will be automatically formatted for display. The tool automatically detects JSON format and beautifies it for easy API interface debugging. There is no specific message length limit, but it is recommended to keep single messages under 64KB.</div>
         </div>
     </section>
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="json-viewer.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
-                <div style="color: #f0f0f0; font-weight: 500;">JSON 查看器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="jsonViewer">JSON Viewer</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="jsonViewerDesc">JSON formatting and visualization</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="cryptoTools">Crypto Toolbox</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="cryptoToolsDesc">Base64/MD5/AES etc.</div>
             </a>
             <a href="ip-lookup.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
-                <div style="color: #f0f0f0; font-weight: 500;">IP 归属地查询</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">查询 IP 地理位置</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="ipLookup">IP Lookup</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="ipLookupDesc">Query IP geolocation</div>
             </a>
             <a href="regex-tester.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
-                <div style="color: #f0f0f0; font-weight: 500;">正则表达式测试</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="regexTester">Regex Tester</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="regexTesterDesc">Online regex matching and debugging</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerNote">Pure frontend processing, data will not be uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;" data-i18n="footerBackHome">← Back to Web Toolbox Home</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
         </p>

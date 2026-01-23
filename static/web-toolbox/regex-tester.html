@@ -1,30 +1,30 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>正则表达式测试工具 - 在线正则验证/匹配/提取 | Web Toolbox</title>
+    <title>Regex Tester - Online Regular Expression Validator & Matcher | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线正则表达式测试工具，支持JS正则表达式验证、正则匹配、文本提取。可生成多种编程语言(JavaScript、Python、Java、Go、PHP、Ruby、C#)的正则代码示例。">
-    <meta name="keywords" content="正则表达式,正则测试,regex,正则验证,正则匹配,正则提取,JavaScript正则,Python正则,在线正则工具">
+    <meta name="description" content="Free online regex tester tool. Test, validate and match regular expressions with real-time highlighting. Generate code snippets for JavaScript, Python, Java, Go, PHP, Ruby, and C#.">
+    <meta name="keywords" content="regex tester,regular expression,regex validator,regex matcher,JavaScript regex,Python regex,online regex tool">
     <meta name="author" content="Web Toolbox">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/regex-tester.html">
 
     <!-- Open Graph -->
-    <meta property="og:title" content="正则表达式测试工具 - 在线正则验证/匹配/提取">
-    <meta property="og:description" content="免费在线正则表达式测试工具，支持多种编程语言代码生成。">
+    <meta property="og:title" content="Regex Tester - Online Regular Expression Validator & Matcher">
+    <meta property="og:description" content="Free online regex tester with real-time matching and multi-language code generation.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/regex-tester.html">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/regex-tester.png">
     <meta property="og:site_name" content="Web Toolbox">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="正则表达式测试工具 - 在线正则验证/匹配/提取">
-    <meta name="twitter:description" content="免费在线正则表达式测试工具，支持多种编程语言代码生成。">
+    <meta name="twitter:title" content="Regex Tester - Online Regular Expression Validator & Matcher">
+    <meta name="twitter:description" content="Free online regex tester with real-time matching and multi-language code generation.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/regex-tester.png">
 
     <!-- JSON-LD Structured Data -->
@@ -32,8 +32,8 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "正则表达式测试工具",
-        "description": "免费在线正则表达式测试工具，支持JS正则表达式验证、正则匹配、文本提取，可生成多种编程语言的正则代码示例。",
+        "name": "Regex Tester",
+        "description": "Free online regex tester tool. Test, validate and match regular expressions with real-time highlighting. Generate code snippets for multiple programming languages.",
         "url": "https://www.heyuan110.com/web-toolbox/regex-tester.html",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Any",
@@ -41,7 +41,7 @@
         "offers": {
             "@type": "Offer",
             "price": "0",
-            "priceCurrency": "CNY"
+            "priceCurrency": "USD"
         }
     }
     </script>
@@ -54,42 +54,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "什么是正则表达式？",
+                "name": "What is a regular expression?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "正则表达式是一种文本模式匹配语法，用于搜索、验证和替换文本。它由普通字符和特殊字符（元字符）组成，可以描述复杂的文本模式，广泛应用于数据验证、文本搜索和字符串处理等场景。"
+                    "text": "A regular expression is a pattern matching syntax used to search, validate, and replace text. It consists of ordinary characters and special characters (metacharacters) that can describe complex text patterns, widely used in data validation, text search, and string processing."
                 }
             },
             {
                 "@type": "Question",
-                "name": "g、i、m 标志位是什么意思？",
+                "name": "What do the g, i, m flags mean?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "g（global）表示全局匹配，查找所有匹配项而非在第一个匹配后停止；i（ignoreCase）表示忽略大小写匹配；m（multiline）表示多行模式，使 ^ 和 $ 可以匹配每行的开始和结束位置。"
+                    "text": "g (global) enables global matching, finding all matches instead of stopping after the first; i (ignoreCase) enables case-insensitive matching; m (multiline) enables multiline mode where ^ and $ match the start and end of each line."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何匹配中文字符？",
+                "name": "How to match Chinese characters?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可使用 [\\u4e00-\\u9fa5] 匹配常用汉字。这个范围包含了 CJK 统一表意文字基本区的所有汉字，涵盖了日常使用的绝大多数中文字符。"
+                    "text": "Use [\\u4e00-\\u9fa5] to match common Chinese characters. This range covers all Chinese characters in the CJK Unified Ideographs basic block."
                 }
             },
             {
                 "@type": "Question",
-                "name": "为什么匹配结果和预期不同？",
+                "name": "Why are my match results different from expected?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "常见原因包括：1. 特殊字符未转义，如 . * + 等需要加反斜杠；2. 贪婪匹配导致匹配过多，可使用 ? 改为非贪婪模式；3. 标志位设置不当，如未开启全局匹配只返回第一个结果；4. 边界条件未考虑，如 ^ $ 的使用。"
+                    "text": "Common reasons include: 1. Special characters not escaped (. * + need backslash); 2. Greedy matching captures too much (use ? for non-greedy); 3. Incorrect flags (missing global flag returns only first result); 4. Boundary conditions not considered (^ $ usage)."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持哪种正则语法？",
+                "name": "Which regex syntax is supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "本工具使用 JavaScript 的正则表达式语法（ECMAScript 规范）。支持常见的元字符、字符类、量词、分组、断言等特性，并支持 g、i、m、s、u 等标志位。"
+                    "text": "This tool uses JavaScript regular expression syntax (ECMAScript specification). It supports common metacharacters, character classes, quantifiers, groups, assertions, and flags like g, i, m, s, u."
                 }
             }
         ]
@@ -128,6 +128,7 @@
             backdrop-filter: blur(10px);
             border-radius: 15px;
             border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
         }
 
         .nav-brand {
@@ -155,6 +156,16 @@
             color: #fff;
         }
 
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 50%; right: 140px; transform: translateY(-50%); }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
+
         /* 主布局 */
         .main-grid {
             display: grid;
@@ -166,6 +177,9 @@
         @media (max-width: 900px) {
             .main-grid {
                 grid-template-columns: 1fr;
+            }
+            .lang-switcher {
+                right: 120px;
             }
         }
 
@@ -747,10 +761,21 @@
     <div class="container">
         <!-- 顶部导航 -->
         <nav class="top-nav">
-            <div class="nav-brand">🔍 正则表达式测试工具</div>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <div class="nav-brand" data-i18n="navBrand">🔍 Regex Tester</div>
             <a href="index.html" class="back-link">
                 <span>←</span>
-                <span>返回工具箱</span>
+                <span data-i18n="backToToolbox">Back to Toolbox</span>
             </a>
         </nav>
 
@@ -759,23 +784,23 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">⚡</div>
-                    <div class="feature-title">实时匹配</div>
-                    <div class="feature-desc">输入即时高亮显示匹配结果，无需手动点击测试按钮，所见即所得</div>
+                    <div class="feature-title" data-i18n="featureRealtimeTitle">Real-time Matching</div>
+                    <div class="feature-desc" data-i18n="featureRealtimeDesc">Instant highlighting of matches as you type, no need to click test button</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🚩</div>
-                    <div class="feature-title">标志位支持</div>
-                    <div class="feature-desc">支持 g、i、m、s、u 等常用标志位，可视化切换，灵活组合使用</div>
+                    <div class="feature-title" data-i18n="featureFlagsTitle">Flag Support</div>
+                    <div class="feature-desc" data-i18n="featureFlagsDesc">Supports g, i, m, s, u flags with visual toggle and flexible combinations</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📊</div>
-                    <div class="feature-title">匹配详情</div>
-                    <div class="feature-desc">显示每个匹配项的位置索引、捕获分组等详细信息，便于调试分析</div>
+                    <div class="feature-title" data-i18n="featureDetailsTitle">Match Details</div>
+                    <div class="feature-desc" data-i18n="featureDetailsDesc">Shows position index, capture groups and other detailed info for each match</div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📋</div>
-                    <div class="feature-title">常用模板</div>
-                    <div class="feature-desc">内置手机号、邮箱、网址等常用正则表达式模板，一键快速使用</div>
+                    <div class="feature-title" data-i18n="featureTemplatesTitle">Common Templates</div>
+                    <div class="feature-desc" data-i18n="featureTemplatesDesc">Built-in regex templates for phone, email, URL and more, one-click to use</div>
                 </div>
             </div>
         </section>
@@ -787,35 +812,35 @@
                 <div class="card-header">
                     <div class="card-title">
                         <span>✏️</span>
-                        <span>正则表达式</span>
+                        <span data-i18n="regexExpression">Regular Expression</span>
                     </div>
                 </div>
                 <div class="card-body">
                     <div class="regex-input-wrapper">
                         <span class="regex-delimiter">/</span>
-                        <input type="text" id="regexInput" class="regex-input" placeholder="输入正则表达式，例如: \d+">
+                        <input type="text" id="regexInput" class="regex-input" data-i18n-placeholder="regexPlaceholder" placeholder="Enter regex, e.g.: \d+">
                         <span class="regex-delimiter">/</span>
                         <span id="flagsDisplay" class="regex-delimiter" style="color: #7b2cbf;">g</span>
                     </div>
 
                     <div class="flags-row">
-                        <button class="flag-btn active" data-flag="g" title="全局匹配">
+                        <button class="flag-btn active" data-flag="g" title="Global match">
                             <span class="flag-code">g</span>
-                            <span>全局</span>
+                            <span data-i18n="flagGlobal">Global</span>
                         </button>
-                        <button class="flag-btn" data-flag="i" title="忽略大小写">
+                        <button class="flag-btn" data-flag="i" title="Ignore case">
                             <span class="flag-code">i</span>
-                            <span>忽略大小写</span>
+                            <span data-i18n="flagIgnoreCase">Ignore Case</span>
                         </button>
-                        <button class="flag-btn" data-flag="m" title="多行模式">
+                        <button class="flag-btn" data-flag="m" title="Multiline mode">
                             <span class="flag-code">m</span>
-                            <span>多行</span>
+                            <span data-i18n="flagMultiline">Multiline</span>
                         </button>
-                        <button class="flag-btn" data-flag="s" title="单行模式(.匹配换行)">
+                        <button class="flag-btn" data-flag="s" title="Single line mode (. matches newline)">
                             <span class="flag-code">s</span>
-                            <span>单行</span>
+                            <span data-i18n="flagSingleline">Single Line</span>
                         </button>
-                        <button class="flag-btn" data-flag="u" title="Unicode模式">
+                        <button class="flag-btn" data-flag="u" title="Unicode mode">
                             <span class="flag-code">u</span>
                             <span>Unicode</span>
                         </button>
@@ -826,17 +851,17 @@
                     <div style="margin-top: 20px;">
                         <div class="card-title" style="margin-bottom: 10px;">
                             <span>📌</span>
-                            <span>常用正则表达式</span>
+                            <span data-i18n="commonRegex">Common Regex Patterns</span>
                         </div>
                         <div class="presets-grid">
-                            <button class="preset-btn" data-regex="^1[3-9]\d{9}$" data-name="手机号码">📱 手机号码</button>
-                            <button class="preset-btn" data-regex="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" data-name="邮箱地址">📧 邮箱地址</button>
-                            <button class="preset-btn" data-regex="https?://[^\s]+" data-name="网址URL">🔗 网址URL</button>
-                            <button class="preset-btn" data-regex="^\d{15}|\d{18}$" data-name="身份证号">🪪 身份证号</button>
-                            <button class="preset-btn" data-regex="^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$" data-name="IPv4地址">🌐 IPv4地址</button>
-                            <button class="preset-btn" data-regex="[\u4e00-\u9fa5]+" data-name="中文字符">🈶 中文字符</button>
-                            <button class="preset-btn" data-regex="^\d{4}-\d{2}-\d{2}$" data-name="日期格式">📅 日期格式</button>
-                            <button class="preset-btn" data-regex="#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})" data-name="颜色代码">🎨 颜色代码</button>
+                            <button class="preset-btn" data-regex="^1[3-9]\d{9}$" data-i18n="presetPhone">📱 Phone Number</button>
+                            <button class="preset-btn" data-regex="^\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*$" data-i18n="presetEmail">📧 Email Address</button>
+                            <button class="preset-btn" data-regex="https?://[^\s]+" data-i18n="presetUrl">🔗 URL</button>
+                            <button class="preset-btn" data-regex="^\d{15}|\d{18}$" data-i18n="presetIdCard">🪪 ID Card</button>
+                            <button class="preset-btn" data-regex="^((25[0-5]|2[0-4]\d|[01]?\d\d?)\.){3}(25[0-5]|2[0-4]\d|[01]?\d\d?)$" data-i18n="presetIpv4">🌐 IPv4 Address</button>
+                            <button class="preset-btn" data-regex="[\u4e00-\u9fa5]+" data-i18n="presetChinese">🈶 Chinese Characters</button>
+                            <button class="preset-btn" data-regex="^\d{4}-\d{2}-\d{2}$" data-i18n="presetDate">📅 Date Format</button>
+                            <button class="preset-btn" data-regex="#([A-Fa-f0-9]{6}|[A-Fa-f0-9]{3})" data-i18n="presetColor">🎨 Color Code</button>
                         </div>
                     </div>
                 </div>
@@ -847,11 +872,11 @@
                 <div class="card-header">
                     <div class="card-title">
                         <span>📝</span>
-                        <span>测试文本</span>
+                        <span data-i18n="testText">Test Text</span>
                     </div>
                 </div>
                 <div class="card-body">
-                    <textarea id="testText" class="text-area" placeholder="输入要测试的文本..."></textarea>
+                    <textarea id="testText" class="text-area" data-i18n-placeholder="testTextPlaceholder" placeholder="Enter text to test..."></textarea>
                 </div>
             </div>
         </div>
@@ -861,20 +886,20 @@
             <div class="card-header">
                 <div class="card-title">
                     <span>✨</span>
-                    <span>匹配结果</span>
+                    <span data-i18n="matchResults">Match Results</span>
                 </div>
             </div>
             <div class="card-body">
                 <div class="main-grid" style="margin-bottom: 0;">
                     <div>
-                        <div class="card-title" style="margin-bottom: 10px; font-size: 0.9rem;">高亮显示</div>
-                        <div id="highlightResult" class="highlight-container">匹配的内容将在此高亮显示...</div>
+                        <div class="card-title" style="margin-bottom: 10px; font-size: 0.9rem;" data-i18n="highlightDisplay">Highlight Display</div>
+                        <div id="highlightResult" class="highlight-container" data-i18n="highlightPlaceholder">Matches will be highlighted here...</div>
                     </div>
                     <div>
-                        <div class="card-title" style="margin-bottom: 10px; font-size: 0.9rem;">匹配列表</div>
+                        <div class="card-title" style="margin-bottom: 10px; font-size: 0.9rem;" data-i18n="matchList">Match List</div>
                         <div class="match-stats">
-                            <span class="stat-badge">匹配数量:<span id="matchCount" class="value">0</span></span>
-                            <span class="stat-badge">捕获组:<span id="groupCount" class="value">0</span></span>
+                            <span class="stat-badge"><span data-i18n="matchCount">Matches:</span><span id="matchCount" class="value">0</span></span>
+                            <span class="stat-badge"><span data-i18n="groupCount">Groups:</span><span id="groupCount" class="value">0</span></span>
                         </div>
                         <div id="matchesList" class="matches-list"></div>
                     </div>
@@ -887,7 +912,7 @@
             <div class="card-header">
                 <div class="card-title">
                     <span>💻</span>
-                    <span>代码生成</span>
+                    <span data-i18n="codeGeneration">Code Generation</span>
                 </div>
             </div>
             <div class="card-body">
@@ -903,7 +928,7 @@
                 <div class="code-block">
                     <div class="code-header">
                         <span id="codeLang" class="code-lang">JavaScript</span>
-                        <button id="copyCodeBtn" class="copy-btn">📋 复制代码</button>
+                        <button id="copyCodeBtn" class="copy-btn" data-i18n="copyCode">📋 Copy Code</button>
                     </div>
                     <pre id="codeContent" class="code-content"></pre>
                 </div>
@@ -915,27 +940,27 @@
             <!-- 正则介绍 -->
             <div class="reference-card">
                 <div class="reference-header" onclick="toggleReference(this)">
-                    <span class="reference-title">📖 正则表达式介绍</span>
+                    <span class="reference-title" data-i18n="refIntroTitle">📖 Introduction to Regular Expressions</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="reference-body">
                     <div class="intro-text">
-                        <p><strong>正则表达式</strong>（Regular Expression，简称 regex 或 regexp）是一种用于匹配字符串中字符组合的模式。正则表达式是由一系列字符和特殊字符组成的字符串，用于描述一个搜索模式。</p>
-                        <p>正则表达式广泛应用于：</p>
+                        <p data-i18n="refIntroP1"><strong>Regular Expression</strong> (regex or regexp) is a pattern used to match character combinations in strings. It consists of a sequence of characters and special characters that describe a search pattern.</p>
+                        <p data-i18n="refIntroP2">Regular expressions are widely used in:</p>
                         <ul style="margin-left: 20px; margin-bottom: 15px;">
-                            <li><strong>文本搜索和替换</strong> - 在文本编辑器中查找和替换内容</li>
-                            <li><strong>数据验证</strong> - 验证邮箱、手机号、身份证等格式</li>
-                            <li><strong>数据提取</strong> - 从文本中提取特定模式的数据</li>
-                            <li><strong>词法分析</strong> - 编译器和解释器的词法分析阶段</li>
+                            <li data-i18n="refIntroUse1"><strong>Text search and replace</strong> - Find and replace content in text editors</li>
+                            <li data-i18n="refIntroUse2"><strong>Data validation</strong> - Validate email, phone, ID card formats</li>
+                            <li data-i18n="refIntroUse3"><strong>Data extraction</strong> - Extract specific patterns from text</li>
+                            <li data-i18n="refIntroUse4"><strong>Lexical analysis</strong> - Used in compilers and interpreters</li>
                         </ul>
-                        <p>一个简单的例子：正则表达式 <code>\d+</code> 可以匹配一个或多个数字，如 "123"、"4567" 等。</p>
-                        <p>正则表达式的基本组成：</p>
+                        <p data-i18n="refIntroP3">A simple example: regex <code>\d+</code> matches one or more digits, like "123" or "4567".</p>
+                        <p data-i18n="refIntroP4">Basic components of regular expressions:</p>
                         <ul style="margin-left: 20px;">
-                            <li><strong>普通字符</strong> - 直接匹配自身，如 <code>a</code> 匹配字母 "a"</li>
-                            <li><strong>元字符</strong> - 具有特殊含义的字符，如 <code>.</code>、<code>*</code>、<code>+</code> 等</li>
-                            <li><strong>字符类</strong> - 用方括号定义的字符集合，如 <code>[a-z]</code></li>
-                            <li><strong>量词</strong> - 指定匹配次数，如 <code>{2,4}</code> 表示匹配 2 到 4 次</li>
-                            <li><strong>分组和捕获</strong> - 用圆括号将部分表达式组合，如 <code>(abc)+</code></li>
+                            <li data-i18n="refIntroComp1"><strong>Literal characters</strong> - Match themselves, e.g., <code>a</code> matches "a"</li>
+                            <li data-i18n="refIntroComp2"><strong>Metacharacters</strong> - Special meaning characters like <code>.</code>, <code>*</code>, <code>+</code></li>
+                            <li data-i18n="refIntroComp3"><strong>Character classes</strong> - Character sets in brackets like <code>[a-z]</code></li>
+                            <li data-i18n="refIntroComp4"><strong>Quantifiers</strong> - Specify match count like <code>{2,4}</code> for 2 to 4 times</li>
+                            <li data-i18n="refIntroComp5"><strong>Groups and captures</strong> - Group expressions with parentheses like <code>(abc)+</code></li>
                         </ul>
                     </div>
                 </div>
@@ -944,40 +969,40 @@
             <!-- 元字符 -->
             <div class="reference-card">
                 <div class="reference-header" onclick="toggleReference(this)">
-                    <span class="reference-title">🔤 元字符列表</span>
+                    <span class="reference-title" data-i18n="refMetaTitle">🔤 Metacharacter List</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="reference-body">
                     <table class="meta-table">
                         <thead>
                             <tr>
-                                <th>元字符</th>
-                                <th>描述</th>
-                                <th>示例</th>
+                                <th data-i18n="tableMetaChar">Metachar</th>
+                                <th data-i18n="tableDescription">Description</th>
+                                <th data-i18n="tableExample">Example</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="meta-char">.</td><td>匹配除换行符外的任意单个字符</td><td><code>a.c</code> 匹配 "abc"、"a1c"</td></tr>
-                            <tr><td class="meta-char">^</td><td>匹配字符串的开始位置</td><td><code>^Hello</code> 匹配以 "Hello" 开头</td></tr>
-                            <tr><td class="meta-char">$</td><td>匹配字符串的结束位置</td><td><code>world$</code> 匹配以 "world" 结尾</td></tr>
-                            <tr><td class="meta-char">*</td><td>匹配前面的元素零次或多次</td><td><code>ab*c</code> 匹配 "ac"、"abc"、"abbc"</td></tr>
-                            <tr><td class="meta-char">+</td><td>匹配前面的元素一次或多次</td><td><code>ab+c</code> 匹配 "abc"、"abbc"，不匹配 "ac"</td></tr>
-                            <tr><td class="meta-char">?</td><td>匹配前面的元素零次或一次</td><td><code>colou?r</code> 匹配 "color" 或 "colour"</td></tr>
-                            <tr><td class="meta-char">\d</td><td>匹配任意数字，等价于 [0-9]</td><td><code>\d+</code> 匹配 "123"</td></tr>
-                            <tr><td class="meta-char">\D</td><td>匹配任意非数字字符</td><td><code>\D+</code> 匹配 "abc"</td></tr>
-                            <tr><td class="meta-char">\w</td><td>匹配字母、数字、下划线</td><td><code>\w+</code> 匹配 "hello_123"</td></tr>
-                            <tr><td class="meta-char">\W</td><td>匹配非字母、数字、下划线</td><td><code>\W</code> 匹配 "@"、"#"</td></tr>
-                            <tr><td class="meta-char">\s</td><td>匹配任意空白字符</td><td><code>\s+</code> 匹配空格、制表符</td></tr>
-                            <tr><td class="meta-char">\S</td><td>匹配任意非空白字符</td><td><code>\S+</code> 匹配 "hello"</td></tr>
-                            <tr><td class="meta-char">\b</td><td>匹配单词边界</td><td><code>\bword\b</code> 精确匹配 "word"</td></tr>
-                            <tr><td class="meta-char">[...]</td><td>字符类，匹配方括号内任一字符</td><td><code>[aeiou]</code> 匹配任意元音</td></tr>
-                            <tr><td class="meta-char">[^...]</td><td>否定字符类，匹配不在方括号内的字符</td><td><code>[^0-9]</code> 匹配非数字</td></tr>
-                            <tr><td class="meta-char">(...)</td><td>捕获分组</td><td><code>(\d+)-(\d+)</code> 捕获两组数字</td></tr>
-                            <tr><td class="meta-char">(?:...)</td><td>非捕获分组</td><td><code>(?:ab)+</code> 匹配但不捕获</td></tr>
-                            <tr><td class="meta-char">|</td><td>或运算符，匹配左边或右边的表达式</td><td><code>cat|dog</code> 匹配 "cat" 或 "dog"</td></tr>
-                            <tr><td class="meta-char">{n}</td><td>精确匹配 n 次</td><td><code>\d{4}</code> 匹配4位数字</td></tr>
-                            <tr><td class="meta-char">{n,}</td><td>匹配至少 n 次</td><td><code>\d{2,}</code> 匹配2位及以上数字</td></tr>
-                            <tr><td class="meta-char">{n,m}</td><td>匹配 n 到 m 次</td><td><code>\d{2,4}</code> 匹配2到4位数字</td></tr>
+                            <tr><td class="meta-char">.</td><td data-i18n="metaDot">Matches any single character except newline</td><td><code>a.c</code> <span data-i18n="metaDotEx">matches "abc", "a1c"</span></td></tr>
+                            <tr><td class="meta-char">^</td><td data-i18n="metaCaret">Matches start of string</td><td><code>^Hello</code> <span data-i18n="metaCaretEx">matches strings starting with "Hello"</span></td></tr>
+                            <tr><td class="meta-char">$</td><td data-i18n="metaDollar">Matches end of string</td><td><code>world$</code> <span data-i18n="metaDollarEx">matches strings ending with "world"</span></td></tr>
+                            <tr><td class="meta-char">*</td><td data-i18n="metaStar">Matches preceding element zero or more times</td><td><code>ab*c</code> <span data-i18n="metaStarEx">matches "ac", "abc", "abbc"</span></td></tr>
+                            <tr><td class="meta-char">+</td><td data-i18n="metaPlus">Matches preceding element one or more times</td><td><code>ab+c</code> <span data-i18n="metaPlusEx">matches "abc", "abbc", not "ac"</span></td></tr>
+                            <tr><td class="meta-char">?</td><td data-i18n="metaQuestion">Matches preceding element zero or one time</td><td><code>colou?r</code> <span data-i18n="metaQuestionEx">matches "color" or "colour"</span></td></tr>
+                            <tr><td class="meta-char">\d</td><td data-i18n="metaDigit">Matches any digit, same as [0-9]</td><td><code>\d+</code> <span data-i18n="metaDigitEx">matches "123"</span></td></tr>
+                            <tr><td class="meta-char">\D</td><td data-i18n="metaNonDigit">Matches any non-digit character</td><td><code>\D+</code> <span data-i18n="metaNonDigitEx">matches "abc"</span></td></tr>
+                            <tr><td class="meta-char">\w</td><td data-i18n="metaWord">Matches word characters (letters, digits, underscore)</td><td><code>\w+</code> <span data-i18n="metaWordEx">matches "hello_123"</span></td></tr>
+                            <tr><td class="meta-char">\W</td><td data-i18n="metaNonWord">Matches non-word characters</td><td><code>\W</code> <span data-i18n="metaNonWordEx">matches "@", "#"</span></td></tr>
+                            <tr><td class="meta-char">\s</td><td data-i18n="metaSpace">Matches any whitespace character</td><td><code>\s+</code> <span data-i18n="metaSpaceEx">matches spaces, tabs</span></td></tr>
+                            <tr><td class="meta-char">\S</td><td data-i18n="metaNonSpace">Matches any non-whitespace character</td><td><code>\S+</code> <span data-i18n="metaNonSpaceEx">matches "hello"</span></td></tr>
+                            <tr><td class="meta-char">\b</td><td data-i18n="metaBoundary">Matches word boundary</td><td><code>\bword\b</code> <span data-i18n="metaBoundaryEx">matches exact "word"</span></td></tr>
+                            <tr><td class="meta-char">[...]</td><td data-i18n="metaCharClass">Character class, matches any char in brackets</td><td><code>[aeiou]</code> <span data-i18n="metaCharClassEx">matches any vowel</span></td></tr>
+                            <tr><td class="meta-char">[^...]</td><td data-i18n="metaNegClass">Negated class, matches chars not in brackets</td><td><code>[^0-9]</code> <span data-i18n="metaNegClassEx">matches non-digit</span></td></tr>
+                            <tr><td class="meta-char">(...)</td><td data-i18n="metaCapture">Capturing group</td><td><code>(\d+)-(\d+)</code> <span data-i18n="metaCaptureEx">captures two digit groups</span></td></tr>
+                            <tr><td class="meta-char">(?:...)</td><td data-i18n="metaNonCapture">Non-capturing group</td><td><code>(?:ab)+</code> <span data-i18n="metaNonCaptureEx">matches but doesn't capture</span></td></tr>
+                            <tr><td class="meta-char">|</td><td data-i18n="metaAlternation">Alternation, matches left or right expression</td><td><code>cat|dog</code> <span data-i18n="metaAlternationEx">matches "cat" or "dog"</span></td></tr>
+                            <tr><td class="meta-char">{n}</td><td data-i18n="metaExact">Matches exactly n times</td><td><code>\d{4}</code> <span data-i18n="metaExactEx">matches 4 digits</span></td></tr>
+                            <tr><td class="meta-char">{n,}</td><td data-i18n="metaAtLeast">Matches at least n times</td><td><code>\d{2,}</code> <span data-i18n="metaAtLeastEx">matches 2+ digits</span></td></tr>
+                            <tr><td class="meta-char">{n,m}</td><td data-i18n="metaRange">Matches between n and m times</td><td><code>\d{2,4}</code> <span data-i18n="metaRangeEx">matches 2 to 4 digits</span></td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -986,25 +1011,25 @@
             <!-- 修饰符 -->
             <div class="reference-card">
                 <div class="reference-header" onclick="toggleReference(this)">
-                    <span class="reference-title">🚩 修饰符说明</span>
+                    <span class="reference-title" data-i18n="refFlagsTitle">🚩 Flags Reference</span>
                     <span class="toggle-icon">▼</span>
                 </div>
                 <div class="reference-body">
                     <table class="meta-table">
                         <thead>
                             <tr>
-                                <th>修饰符</th>
-                                <th>名称</th>
-                                <th>描述</th>
+                                <th data-i18n="tableFlag">Flag</th>
+                                <th data-i18n="tableName">Name</th>
+                                <th data-i18n="tableDescription">Description</th>
                             </tr>
                         </thead>
                         <tbody>
-                            <tr><td class="meta-char">g</td><td>global</td><td>全局匹配，查找所有匹配项而非在第一个匹配后停止</td></tr>
-                            <tr><td class="meta-char">i</td><td>ignoreCase</td><td>忽略大小写匹配</td></tr>
-                            <tr><td class="meta-char">m</td><td>multiline</td><td>多行模式，^ 和 $ 匹配每行的开始和结束</td></tr>
-                            <tr><td class="meta-char">s</td><td>dotAll</td><td>单行模式，使 . 可以匹配换行符</td></tr>
-                            <tr><td class="meta-char">u</td><td>unicode</td><td>启用 Unicode 匹配模式</td></tr>
-                            <tr><td class="meta-char">y</td><td>sticky</td><td>粘性匹配，仅从 lastIndex 指示的位置开始匹配</td></tr>
+                            <tr><td class="meta-char">g</td><td>global</td><td data-i18n="flagDescGlobal">Global match, find all matches instead of stopping after first</td></tr>
+                            <tr><td class="meta-char">i</td><td>ignoreCase</td><td data-i18n="flagDescIgnoreCase">Case-insensitive matching</td></tr>
+                            <tr><td class="meta-char">m</td><td>multiline</td><td data-i18n="flagDescMultiline">Multiline mode, ^ and $ match start/end of each line</td></tr>
+                            <tr><td class="meta-char">s</td><td>dotAll</td><td data-i18n="flagDescDotAll">Single line mode, makes . match newline characters</td></tr>
+                            <tr><td class="meta-char">u</td><td>unicode</td><td data-i18n="flagDescUnicode">Enable Unicode matching mode</td></tr>
+                            <tr><td class="meta-char">y</td><td>sticky</td><td data-i18n="flagDescSticky">Sticky matching, only match from lastIndex position</td></tr>
                         </tbody>
                     </table>
                 </div>
@@ -1013,14 +1038,643 @@
     </div>
 
     <script>
+        // 多语言翻译
+        const i18n = {
+            en: {
+                navBrand: '🔍 Regex Tester',
+                backToToolbox: 'Back to Toolbox',
+                featureRealtimeTitle: 'Real-time Matching',
+                featureRealtimeDesc: 'Instant highlighting of matches as you type, no need to click test button',
+                featureFlagsTitle: 'Flag Support',
+                featureFlagsDesc: 'Supports g, i, m, s, u flags with visual toggle and flexible combinations',
+                featureDetailsTitle: 'Match Details',
+                featureDetailsDesc: 'Shows position index, capture groups and other detailed info for each match',
+                featureTemplatesTitle: 'Common Templates',
+                featureTemplatesDesc: 'Built-in regex templates for phone, email, URL and more, one-click to use',
+                regexExpression: 'Regular Expression',
+                regexPlaceholder: 'Enter regex, e.g.: \\d+',
+                flagGlobal: 'Global',
+                flagIgnoreCase: 'Ignore Case',
+                flagMultiline: 'Multiline',
+                flagSingleline: 'Single Line',
+                commonRegex: 'Common Regex Patterns',
+                presetPhone: '📱 Phone Number',
+                presetEmail: '📧 Email Address',
+                presetUrl: '🔗 URL',
+                presetIdCard: '🪪 ID Card',
+                presetIpv4: '🌐 IPv4 Address',
+                presetChinese: '🈶 Chinese Characters',
+                presetDate: '📅 Date Format',
+                presetColor: '🎨 Color Code',
+                testText: 'Test Text',
+                testTextPlaceholder: 'Enter text to test...',
+                matchResults: 'Match Results',
+                highlightDisplay: 'Highlight Display',
+                highlightPlaceholder: 'Matches will be highlighted here...',
+                matchList: 'Match List',
+                matchCount: 'Matches:',
+                groupCount: 'Groups:',
+                codeGeneration: 'Code Generation',
+                copyCode: '📋 Copy Code',
+                codeCopied: '✅ Copied',
+                refIntroTitle: '📖 Introduction to Regular Expressions',
+                refIntroP1: '<strong>Regular Expression</strong> (regex or regexp) is a pattern used to match character combinations in strings. It consists of a sequence of characters and special characters that describe a search pattern.',
+                refIntroP2: 'Regular expressions are widely used in:',
+                refIntroUse1: '<strong>Text search and replace</strong> - Find and replace content in text editors',
+                refIntroUse2: '<strong>Data validation</strong> - Validate email, phone, ID card formats',
+                refIntroUse3: '<strong>Data extraction</strong> - Extract specific patterns from text',
+                refIntroUse4: '<strong>Lexical analysis</strong> - Used in compilers and interpreters',
+                refIntroP3: 'A simple example: regex <code>\\d+</code> matches one or more digits, like "123" or "4567".',
+                refIntroP4: 'Basic components of regular expressions:',
+                refIntroComp1: '<strong>Literal characters</strong> - Match themselves, e.g., <code>a</code> matches "a"',
+                refIntroComp2: '<strong>Metacharacters</strong> - Special meaning characters like <code>.</code>, <code>*</code>, <code>+</code>',
+                refIntroComp3: '<strong>Character classes</strong> - Character sets in brackets like <code>[a-z]</code>',
+                refIntroComp4: '<strong>Quantifiers</strong> - Specify match count like <code>{2,4}</code> for 2 to 4 times',
+                refIntroComp5: '<strong>Groups and captures</strong> - Group expressions with parentheses like <code>(abc)+</code>',
+                refMetaTitle: '🔤 Metacharacter List',
+                tableMetaChar: 'Metachar',
+                tableDescription: 'Description',
+                tableExample: 'Example',
+                metaDot: 'Matches any single character except newline',
+                metaDotEx: 'matches "abc", "a1c"',
+                metaCaret: 'Matches start of string',
+                metaCaretEx: 'matches strings starting with "Hello"',
+                metaDollar: 'Matches end of string',
+                metaDollarEx: 'matches strings ending with "world"',
+                metaStar: 'Matches preceding element zero or more times',
+                metaStarEx: 'matches "ac", "abc", "abbc"',
+                metaPlus: 'Matches preceding element one or more times',
+                metaPlusEx: 'matches "abc", "abbc", not "ac"',
+                metaQuestion: 'Matches preceding element zero or one time',
+                metaQuestionEx: 'matches "color" or "colour"',
+                metaDigit: 'Matches any digit, same as [0-9]',
+                metaDigitEx: 'matches "123"',
+                metaNonDigit: 'Matches any non-digit character',
+                metaNonDigitEx: 'matches "abc"',
+                metaWord: 'Matches word characters (letters, digits, underscore)',
+                metaWordEx: 'matches "hello_123"',
+                metaNonWord: 'Matches non-word characters',
+                metaNonWordEx: 'matches "@", "#"',
+                metaSpace: 'Matches any whitespace character',
+                metaSpaceEx: 'matches spaces, tabs',
+                metaNonSpace: 'Matches any non-whitespace character',
+                metaNonSpaceEx: 'matches "hello"',
+                metaBoundary: 'Matches word boundary',
+                metaBoundaryEx: 'matches exact "word"',
+                metaCharClass: 'Character class, matches any char in brackets',
+                metaCharClassEx: 'matches any vowel',
+                metaNegClass: 'Negated class, matches chars not in brackets',
+                metaNegClassEx: 'matches non-digit',
+                metaCapture: 'Capturing group',
+                metaCaptureEx: 'captures two digit groups',
+                metaNonCapture: 'Non-capturing group',
+                metaNonCaptureEx: 'matches but doesn\'t capture',
+                metaAlternation: 'Alternation, matches left or right expression',
+                metaAlternationEx: 'matches "cat" or "dog"',
+                metaExact: 'Matches exactly n times',
+                metaExactEx: 'matches 4 digits',
+                metaAtLeast: 'Matches at least n times',
+                metaAtLeastEx: 'matches 2+ digits',
+                metaRange: 'Matches between n and m times',
+                metaRangeEx: 'matches 2 to 4 digits',
+                refFlagsTitle: '🚩 Flags Reference',
+                tableFlag: 'Flag',
+                tableName: 'Name',
+                flagDescGlobal: 'Global match, find all matches instead of stopping after first',
+                flagDescIgnoreCase: 'Case-insensitive matching',
+                flagDescMultiline: 'Multiline mode, ^ and $ match start/end of each line',
+                flagDescDotAll: 'Single line mode, makes . match newline characters',
+                flagDescUnicode: 'Enable Unicode matching mode',
+                flagDescSticky: 'Sticky matching, only match from lastIndex position',
+                faqTitle: '❓ FAQ',
+                faqQ1: 'What is a regular expression?',
+                faqA1: 'A regular expression is a pattern matching syntax used to search, validate, and replace text. It consists of ordinary characters and special characters (metacharacters) that can describe complex text patterns, widely used in data validation, text search, and string processing.',
+                faqQ2: 'What do the g, i, m flags mean?',
+                faqA2: 'g (global) enables global matching, finding all matches instead of stopping after the first; i (ignoreCase) enables case-insensitive matching; m (multiline) enables multiline mode where ^ and $ match the start and end of each line.',
+                faqQ3: 'How to match Chinese characters?',
+                faqA3: 'Use [\\u4e00-\\u9fa5] to match common Chinese characters. This range covers all Chinese characters in the CJK Unified Ideographs basic block.',
+                faqQ4: 'Why are my match results different from expected?',
+                faqA4: 'Common reasons include: 1. Special characters not escaped (. * + need backslash); 2. Greedy matching captures too much (use ? for non-greedy); 3. Incorrect flags (missing global flag returns only first result); 4. Boundary conditions not considered (^ $ usage).',
+                faqQ5: 'Which regex syntax is supported?',
+                faqA5: 'This tool uses JavaScript regular expression syntax (ECMAScript specification). It supports common metacharacters, character classes, quantifiers, groups, assertions, and flags like g, i, m, s, u.',
+                relatedTools: '🔗 Related Tools',
+                jsonViewer: 'JSON Viewer',
+                jsonViewerDesc: 'JSON formatting & visualization',
+                cryptoTools: 'Crypto Tools',
+                cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                timestampConverter: 'Timestamp Converter',
+                timestampConverterDesc: 'Unix timestamp & date conversion',
+                chineseConverter: 'Chinese Converter',
+                chineseConverterDesc: 'Simplified & Traditional conversion',
+                footerPrivacy: 'Pure frontend processing, data is not uploaded to server',
+                footerBack: '← Back to Web Toolbox',
+                noMatch: 'No matches found',
+                regexError: 'Regex syntax error: ',
+                codeComment: {
+                    example: 'Regular expression example',
+                    testMatch: 'Test if matches',
+                    isMatch: 'Is match:',
+                    getAllMatches: 'Get all matches',
+                    matchResults: 'Match results:',
+                    getDetails: 'Use exec to get details',
+                    match: 'Match:',
+                    position: 'Position:',
+                    replace: 'Replace matched content',
+                    replaceResult: 'Replace result:'
+                }
+            },
+            'zh-CN': {
+                navBrand: '🔍 正则表达式测试工具',
+                backToToolbox: '返回工具箱',
+                featureRealtimeTitle: '实时匹配',
+                featureRealtimeDesc: '输入即时高亮显示匹配结果，无需手动点击测试按钮，所见即所得',
+                featureFlagsTitle: '标志位支持',
+                featureFlagsDesc: '支持 g、i、m、s、u 等常用标志位，可视化切换，灵活组合使用',
+                featureDetailsTitle: '匹配详情',
+                featureDetailsDesc: '显示每个匹配项的位置索引、捕获分组等详细信息，便于调试分析',
+                featureTemplatesTitle: '常用模板',
+                featureTemplatesDesc: '内置手机号、邮箱、网址等常用正则表达式模板，一键快速使用',
+                regexExpression: '正则表达式',
+                regexPlaceholder: '输入正则表达式，例如: \\d+',
+                flagGlobal: '全局',
+                flagIgnoreCase: '忽略大小写',
+                flagMultiline: '多行',
+                flagSingleline: '单行',
+                commonRegex: '常用正则表达式',
+                presetPhone: '📱 手机号码',
+                presetEmail: '📧 邮箱地址',
+                presetUrl: '🔗 网址URL',
+                presetIdCard: '🪪 身份证号',
+                presetIpv4: '🌐 IPv4地址',
+                presetChinese: '🈶 中文字符',
+                presetDate: '📅 日期格式',
+                presetColor: '🎨 颜色代码',
+                testText: '测试文本',
+                testTextPlaceholder: '输入要测试的文本...',
+                matchResults: '匹配结果',
+                highlightDisplay: '高亮显示',
+                highlightPlaceholder: '匹配的内容将在此高亮显示...',
+                matchList: '匹配列表',
+                matchCount: '匹配数量:',
+                groupCount: '捕获组:',
+                codeGeneration: '代码生成',
+                copyCode: '📋 复制代码',
+                codeCopied: '✅ 已复制',
+                refIntroTitle: '📖 正则表达式介绍',
+                refIntroP1: '<strong>正则表达式</strong>（Regular Expression，简称 regex 或 regexp）是一种用于匹配字符串中字符组合的模式。正则表达式是由一系列字符和特殊字符组成的字符串，用于描述一个搜索模式。',
+                refIntroP2: '正则表达式广泛应用于：',
+                refIntroUse1: '<strong>文本搜索和替换</strong> - 在文本编辑器中查找和替换内容',
+                refIntroUse2: '<strong>数据验证</strong> - 验证邮箱、手机号、身份证等格式',
+                refIntroUse3: '<strong>数据提取</strong> - 从文本中提取特定模式的数据',
+                refIntroUse4: '<strong>词法分析</strong> - 编译器和解释器的词法分析阶段',
+                refIntroP3: '一个简单的例子：正则表达式 <code>\\d+</code> 可以匹配一个或多个数字，如 "123"、"4567" 等。',
+                refIntroP4: '正则表达式的基本组成：',
+                refIntroComp1: '<strong>普通字符</strong> - 直接匹配自身，如 <code>a</code> 匹配字母 "a"',
+                refIntroComp2: '<strong>元字符</strong> - 具有特殊含义的字符，如 <code>.</code>、<code>*</code>、<code>+</code> 等',
+                refIntroComp3: '<strong>字符类</strong> - 用方括号定义的字符集合，如 <code>[a-z]</code>',
+                refIntroComp4: '<strong>量词</strong> - 指定匹配次数，如 <code>{2,4}</code> 表示匹配 2 到 4 次',
+                refIntroComp5: '<strong>分组和捕获</strong> - 用圆括号将部分表达式组合，如 <code>(abc)+</code>',
+                refMetaTitle: '🔤 元字符列表',
+                tableMetaChar: '元字符',
+                tableDescription: '描述',
+                tableExample: '示例',
+                metaDot: '匹配除换行符外的任意单个字符',
+                metaDotEx: '匹配 "abc"、"a1c"',
+                metaCaret: '匹配字符串的开始位置',
+                metaCaretEx: '匹配以 "Hello" 开头',
+                metaDollar: '匹配字符串的结束位置',
+                metaDollarEx: '匹配以 "world" 结尾',
+                metaStar: '匹配前面的元素零次或多次',
+                metaStarEx: '匹配 "ac"、"abc"、"abbc"',
+                metaPlus: '匹配前面的元素一次或多次',
+                metaPlusEx: '匹配 "abc"、"abbc"，不匹配 "ac"',
+                metaQuestion: '匹配前面的元素零次或一次',
+                metaQuestionEx: '匹配 "color" 或 "colour"',
+                metaDigit: '匹配任意数字，等价于 [0-9]',
+                metaDigitEx: '匹配 "123"',
+                metaNonDigit: '匹配任意非数字字符',
+                metaNonDigitEx: '匹配 "abc"',
+                metaWord: '匹配字母、数字、下划线',
+                metaWordEx: '匹配 "hello_123"',
+                metaNonWord: '匹配非字母、数字、下划线',
+                metaNonWordEx: '匹配 "@"、"#"',
+                metaSpace: '匹配任意空白字符',
+                metaSpaceEx: '匹配空格、制表符',
+                metaNonSpace: '匹配任意非空白字符',
+                metaNonSpaceEx: '匹配 "hello"',
+                metaBoundary: '匹配单词边界',
+                metaBoundaryEx: '精确匹配 "word"',
+                metaCharClass: '字符类，匹配方括号内任一字符',
+                metaCharClassEx: '匹配任意元音',
+                metaNegClass: '否定字符类，匹配不在方括号内的字符',
+                metaNegClassEx: '匹配非数字',
+                metaCapture: '捕获分组',
+                metaCaptureEx: '捕获两组数字',
+                metaNonCapture: '非捕获分组',
+                metaNonCaptureEx: '匹配但不捕获',
+                metaAlternation: '或运算符，匹配左边或右边的表达式',
+                metaAlternationEx: '匹配 "cat" 或 "dog"',
+                metaExact: '精确匹配 n 次',
+                metaExactEx: '匹配4位数字',
+                metaAtLeast: '匹配至少 n 次',
+                metaAtLeastEx: '匹配2位及以上数字',
+                metaRange: '匹配 n 到 m 次',
+                metaRangeEx: '匹配2到4位数字',
+                refFlagsTitle: '🚩 修饰符说明',
+                tableFlag: '修饰符',
+                tableName: '名称',
+                flagDescGlobal: '全局匹配，查找所有匹配项而非在第一个匹配后停止',
+                flagDescIgnoreCase: '忽略大小写匹配',
+                flagDescMultiline: '多行模式，^ 和 $ 匹配每行的开始和结束',
+                flagDescDotAll: '单行模式，使 . 可以匹配换行符',
+                flagDescUnicode: '启用 Unicode 匹配模式',
+                flagDescSticky: '粘性匹配，仅从 lastIndex 指示的位置开始匹配',
+                faqTitle: '❓ 常见问题',
+                faqQ1: '什么是正则表达式？',
+                faqA1: '正则表达式是一种文本模式匹配语法，用于搜索、验证和替换文本。它由普通字符和特殊字符（元字符）组成，可以描述复杂的文本模式，广泛应用于数据验证、文本搜索和字符串处理等场景。',
+                faqQ2: 'g、i、m 标志位是什么意思？',
+                faqA2: 'g（global）表示全局匹配，查找所有匹配项而非在第一个匹配后停止；i（ignoreCase）表示忽略大小写匹配；m（multiline）表示多行模式，使 ^ 和 $ 可以匹配每行的开始和结束位置。',
+                faqQ3: '如何匹配中文字符？',
+                faqA3: '可使用 [\\u4e00-\\u9fa5] 匹配常用汉字。这个范围包含了 CJK 统一表意文字基本区的所有汉字，涵盖了日常使用的绝大多数中文字符。',
+                faqQ4: '为什么匹配结果和预期不同？',
+                faqA4: '常见原因包括：1. 特殊字符未转义，如 . * + 等需要加反斜杠；2. 贪婪匹配导致匹配过多，可使用 ? 改为非贪婪模式；3. 标志位设置不当，如未开启全局匹配只返回第一个结果；4. 边界条件未考虑，如 ^ $ 的使用。',
+                faqQ5: '支持哪种正则语法？',
+                faqA5: '本工具使用 JavaScript 的正则表达式语法（ECMAScript 规范）。支持常见的元字符、字符类、量词、分组、断言等特性，并支持 g、i、m、s、u 等标志位。',
+                relatedTools: '🔗 相关工具推荐',
+                jsonViewer: 'JSON 查看器',
+                jsonViewerDesc: 'JSON 格式化与可视化',
+                cryptoTools: '加解密工具箱',
+                cryptoToolsDesc: 'Base64/MD5/AES 等',
+                timestampConverter: '时间戳转换',
+                timestampConverterDesc: 'Unix 时间戳与日期互转',
+                chineseConverter: '中文简繁转换',
+                chineseConverterDesc: '简体繁体互转',
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页',
+                noMatch: '无匹配结果',
+                regexError: '正则表达式语法错误: ',
+                codeComment: {
+                    example: '正则表达式示例',
+                    testMatch: '测试是否匹配',
+                    isMatch: '是否匹配:',
+                    getAllMatches: '获取所有匹配',
+                    matchResults: '匹配结果:',
+                    getDetails: '使用 exec 获取详细信息',
+                    match: '匹配:',
+                    position: '位置:',
+                    replace: '替换匹配内容',
+                    replaceResult: '替换结果:'
+                }
+            },
+            fr: {
+                navBrand: '🔍 Testeur Regex',
+                backToToolbox: 'Retour',
+                featureRealtimeTitle: 'Correspondance en temps reel',
+                featureRealtimeDesc: 'Mise en evidence instantanee des correspondances lors de la saisie',
+                featureFlagsTitle: 'Support des drapeaux',
+                featureFlagsDesc: 'Supporte les drapeaux g, i, m, s, u avec basculement visuel',
+                featureDetailsTitle: 'Details des correspondances',
+                featureDetailsDesc: 'Affiche l\'index de position, les groupes de capture pour chaque correspondance',
+                featureTemplatesTitle: 'Modeles courants',
+                featureTemplatesDesc: 'Modeles regex integres pour telephone, email, URL, utilisation en un clic',
+                regexExpression: 'Expression reguliere',
+                regexPlaceholder: 'Entrez une regex, ex: \\d+',
+                flagGlobal: 'Global',
+                flagIgnoreCase: 'Ignorer casse',
+                flagMultiline: 'Multiligne',
+                flagSingleline: 'Ligne unique',
+                commonRegex: 'Modeles Regex courants',
+                presetPhone: '📱 Telephone',
+                presetEmail: '📧 Email',
+                presetUrl: '🔗 URL',
+                presetIdCard: '🪪 Carte ID',
+                presetIpv4: '🌐 Adresse IPv4',
+                presetChinese: '🈶 Caracteres chinois',
+                presetDate: '📅 Format date',
+                presetColor: '🎨 Code couleur',
+                testText: 'Texte de test',
+                testTextPlaceholder: 'Entrez le texte a tester...',
+                matchResults: 'Resultats',
+                highlightDisplay: 'Affichage en surbrillance',
+                highlightPlaceholder: 'Les correspondances seront mises en evidence ici...',
+                matchList: 'Liste des correspondances',
+                matchCount: 'Correspondances:',
+                groupCount: 'Groupes:',
+                codeGeneration: 'Generation de code',
+                copyCode: '📋 Copier',
+                codeCopied: '✅ Copie',
+                refIntroTitle: '📖 Introduction aux expressions regulieres',
+                refIntroP1: '<strong>Expression reguliere</strong> (regex ou regexp) est un motif utilise pour faire correspondre des combinaisons de caracteres dans des chaines.',
+                refIntroP2: 'Les expressions regulieres sont largement utilisees dans:',
+                refIntroUse1: '<strong>Recherche et remplacement de texte</strong>',
+                refIntroUse2: '<strong>Validation des donnees</strong>',
+                refIntroUse3: '<strong>Extraction de donnees</strong>',
+                refIntroUse4: '<strong>Analyse lexicale</strong>',
+                refIntroP3: 'Un exemple simple: regex <code>\\d+</code> correspond a un ou plusieurs chiffres.',
+                refIntroP4: 'Composants de base des expressions regulieres:',
+                refIntroComp1: '<strong>Caracteres litteraux</strong> - Se correspondent eux-memes',
+                refIntroComp2: '<strong>Metacaracteres</strong> - Caracteres a signification speciale',
+                refIntroComp3: '<strong>Classes de caracteres</strong> - Ensembles entre crochets',
+                refIntroComp4: '<strong>Quantificateurs</strong> - Specifient le nombre de correspondances',
+                refIntroComp5: '<strong>Groupes et captures</strong> - Groupent les expressions',
+                refMetaTitle: '🔤 Liste des metacaracteres',
+                tableMetaChar: 'Metacar.',
+                tableDescription: 'Description',
+                tableExample: 'Exemple',
+                metaDot: 'Correspond a tout caractere sauf nouvelle ligne',
+                metaDotEx: 'correspond a "abc", "a1c"',
+                metaCaret: 'Correspond au debut de la chaine',
+                metaCaretEx: 'correspond aux chaines commencant par "Hello"',
+                metaDollar: 'Correspond a la fin de la chaine',
+                metaDollarEx: 'correspond aux chaines finissant par "world"',
+                metaStar: 'Correspond zero ou plusieurs fois',
+                metaStarEx: 'correspond a "ac", "abc", "abbc"',
+                metaPlus: 'Correspond une ou plusieurs fois',
+                metaPlusEx: 'correspond a "abc", "abbc", pas "ac"',
+                metaQuestion: 'Correspond zero ou une fois',
+                metaQuestionEx: 'correspond a "color" ou "colour"',
+                metaDigit: 'Correspond a tout chiffre',
+                metaDigitEx: 'correspond a "123"',
+                metaNonDigit: 'Correspond a tout non-chiffre',
+                metaNonDigitEx: 'correspond a "abc"',
+                metaWord: 'Correspond aux caracteres de mot',
+                metaWordEx: 'correspond a "hello_123"',
+                metaNonWord: 'Correspond aux non-mot',
+                metaNonWordEx: 'correspond a "@", "#"',
+                metaSpace: 'Correspond aux espaces',
+                metaSpaceEx: 'correspond aux espaces, tabulations',
+                metaNonSpace: 'Correspond aux non-espaces',
+                metaNonSpaceEx: 'correspond a "hello"',
+                metaBoundary: 'Correspond a la limite de mot',
+                metaBoundaryEx: 'correspond exactement a "word"',
+                metaCharClass: 'Classe de caracteres',
+                metaCharClassEx: 'correspond a toute voyelle',
+                metaNegClass: 'Classe niee',
+                metaNegClassEx: 'correspond aux non-chiffres',
+                metaCapture: 'Groupe de capture',
+                metaCaptureEx: 'capture deux groupes de chiffres',
+                metaNonCapture: 'Groupe non-capturant',
+                metaNonCaptureEx: 'correspond mais ne capture pas',
+                metaAlternation: 'Alternation',
+                metaAlternationEx: 'correspond a "cat" ou "dog"',
+                metaExact: 'Correspond exactement n fois',
+                metaExactEx: 'correspond a 4 chiffres',
+                metaAtLeast: 'Correspond au moins n fois',
+                metaAtLeastEx: 'correspond a 2+ chiffres',
+                metaRange: 'Correspond entre n et m fois',
+                metaRangeEx: 'correspond a 2 a 4 chiffres',
+                refFlagsTitle: '🚩 Reference des drapeaux',
+                tableFlag: 'Drapeau',
+                tableName: 'Nom',
+                flagDescGlobal: 'Correspondance globale, trouve toutes les correspondances',
+                flagDescIgnoreCase: 'Correspondance insensible a la casse',
+                flagDescMultiline: 'Mode multiligne, ^ et $ correspondent au debut/fin de chaque ligne',
+                flagDescDotAll: 'Mode ligne unique, . correspond aux nouvelles lignes',
+                flagDescUnicode: 'Active le mode Unicode',
+                flagDescSticky: 'Correspondance collante',
+                faqTitle: '❓ FAQ',
+                faqQ1: 'Qu\'est-ce qu\'une expression reguliere?',
+                faqA1: 'Une expression reguliere est une syntaxe de correspondance de motifs utilisee pour rechercher, valider et remplacer du texte.',
+                faqQ2: 'Que signifient les drapeaux g, i, m?',
+                faqA2: 'g (global) active la correspondance globale; i (ignoreCase) active la correspondance insensible a la casse; m (multiline) active le mode multiligne.',
+                faqQ3: 'Comment faire correspondre les caracteres chinois?',
+                faqA3: 'Utilisez [\\u4e00-\\u9fa5] pour faire correspondre les caracteres chinois courants.',
+                faqQ4: 'Pourquoi mes resultats sont differents?',
+                faqA4: 'Raisons courantes: caracteres speciaux non echappes, correspondance gourmande, drapeaux incorrects, conditions aux limites.',
+                faqQ5: 'Quelle syntaxe regex est supportee?',
+                faqA5: 'Cet outil utilise la syntaxe JavaScript (specification ECMAScript).',
+                relatedTools: '🔗 Outils connexes',
+                jsonViewer: 'Visionneuse JSON',
+                jsonViewerDesc: 'Formatage et visualisation JSON',
+                cryptoTools: 'Outils Crypto',
+                cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                timestampConverter: 'Convertisseur Timestamp',
+                timestampConverterDesc: 'Conversion timestamp Unix et date',
+                chineseConverter: 'Convertisseur Chinois',
+                chineseConverterDesc: 'Conversion simplifie et traditionnel',
+                footerPrivacy: 'Traitement cote client, donnees non televersees',
+                footerBack: '← Retour a Web Toolbox',
+                noMatch: 'Aucune correspondance',
+                regexError: 'Erreur de syntaxe regex: ',
+                codeComment: {
+                    example: 'Exemple d\'expression reguliere',
+                    testMatch: 'Tester si correspond',
+                    isMatch: 'Correspond:',
+                    getAllMatches: 'Obtenir toutes les correspondances',
+                    matchResults: 'Resultats:',
+                    getDetails: 'Utiliser exec pour les details',
+                    match: 'Correspondance:',
+                    position: 'Position:',
+                    replace: 'Remplacer le contenu',
+                    replaceResult: 'Resultat du remplacement:'
+                }
+            },
+            es: {
+                navBrand: '🔍 Probador Regex',
+                backToToolbox: 'Volver',
+                featureRealtimeTitle: 'Coincidencia en tiempo real',
+                featureRealtimeDesc: 'Resaltado instantaneo de coincidencias mientras escribes',
+                featureFlagsTitle: 'Soporte de banderas',
+                featureFlagsDesc: 'Soporta banderas g, i, m, s, u con alternancia visual',
+                featureDetailsTitle: 'Detalles de coincidencias',
+                featureDetailsDesc: 'Muestra indice de posicion, grupos de captura para cada coincidencia',
+                featureTemplatesTitle: 'Plantillas comunes',
+                featureTemplatesDesc: 'Plantillas regex integradas para telefono, email, URL, uso con un clic',
+                regexExpression: 'Expresion regular',
+                regexPlaceholder: 'Ingrese regex, ej: \\d+',
+                flagGlobal: 'Global',
+                flagIgnoreCase: 'Ignorar mayusculas',
+                flagMultiline: 'Multilinea',
+                flagSingleline: 'Linea unica',
+                commonRegex: 'Patrones Regex comunes',
+                presetPhone: '📱 Telefono',
+                presetEmail: '📧 Email',
+                presetUrl: '🔗 URL',
+                presetIdCard: '🪪 Tarjeta ID',
+                presetIpv4: '🌐 Direccion IPv4',
+                presetChinese: '🈶 Caracteres chinos',
+                presetDate: '📅 Formato fecha',
+                presetColor: '🎨 Codigo color',
+                testText: 'Texto de prueba',
+                testTextPlaceholder: 'Ingrese texto a probar...',
+                matchResults: 'Resultados',
+                highlightDisplay: 'Visualizacion resaltada',
+                highlightPlaceholder: 'Las coincidencias se resaltaran aqui...',
+                matchList: 'Lista de coincidencias',
+                matchCount: 'Coincidencias:',
+                groupCount: 'Grupos:',
+                codeGeneration: 'Generacion de codigo',
+                copyCode: '📋 Copiar',
+                codeCopied: '✅ Copiado',
+                refIntroTitle: '📖 Introduccion a las expresiones regulares',
+                refIntroP1: '<strong>Expresion regular</strong> (regex o regexp) es un patron usado para coincidir combinaciones de caracteres en cadenas.',
+                refIntroP2: 'Las expresiones regulares se usan ampliamente en:',
+                refIntroUse1: '<strong>Busqueda y reemplazo de texto</strong>',
+                refIntroUse2: '<strong>Validacion de datos</strong>',
+                refIntroUse3: '<strong>Extraccion de datos</strong>',
+                refIntroUse4: '<strong>Analisis lexico</strong>',
+                refIntroP3: 'Un ejemplo simple: regex <code>\\d+</code> coincide con uno o mas digitos.',
+                refIntroP4: 'Componentes basicos de expresiones regulares:',
+                refIntroComp1: '<strong>Caracteres literales</strong> - Coinciden consigo mismos',
+                refIntroComp2: '<strong>Metacaracteres</strong> - Caracteres con significado especial',
+                refIntroComp3: '<strong>Clases de caracteres</strong> - Conjuntos entre corchetes',
+                refIntroComp4: '<strong>Cuantificadores</strong> - Especifican cantidad de coincidencias',
+                refIntroComp5: '<strong>Grupos y capturas</strong> - Agrupan expresiones',
+                refMetaTitle: '🔤 Lista de metacaracteres',
+                tableMetaChar: 'Metacar.',
+                tableDescription: 'Descripcion',
+                tableExample: 'Ejemplo',
+                metaDot: 'Coincide con cualquier caracter excepto nueva linea',
+                metaDotEx: 'coincide con "abc", "a1c"',
+                metaCaret: 'Coincide con inicio de cadena',
+                metaCaretEx: 'coincide con cadenas que empiezan con "Hello"',
+                metaDollar: 'Coincide con fin de cadena',
+                metaDollarEx: 'coincide con cadenas que terminan con "world"',
+                metaStar: 'Coincide cero o mas veces',
+                metaStarEx: 'coincide con "ac", "abc", "abbc"',
+                metaPlus: 'Coincide una o mas veces',
+                metaPlusEx: 'coincide con "abc", "abbc", no "ac"',
+                metaQuestion: 'Coincide cero o una vez',
+                metaQuestionEx: 'coincide con "color" o "colour"',
+                metaDigit: 'Coincide con cualquier digito',
+                metaDigitEx: 'coincide con "123"',
+                metaNonDigit: 'Coincide con no-digito',
+                metaNonDigitEx: 'coincide con "abc"',
+                metaWord: 'Coincide con caracteres de palabra',
+                metaWordEx: 'coincide con "hello_123"',
+                metaNonWord: 'Coincide con no-palabra',
+                metaNonWordEx: 'coincide con "@", "#"',
+                metaSpace: 'Coincide con espacios',
+                metaSpaceEx: 'coincide con espacios, tabs',
+                metaNonSpace: 'Coincide con no-espacios',
+                metaNonSpaceEx: 'coincide con "hello"',
+                metaBoundary: 'Coincide con limite de palabra',
+                metaBoundaryEx: 'coincide exactamente con "word"',
+                metaCharClass: 'Clase de caracteres',
+                metaCharClassEx: 'coincide con cualquier vocal',
+                metaNegClass: 'Clase negada',
+                metaNegClassEx: 'coincide con no-digitos',
+                metaCapture: 'Grupo de captura',
+                metaCaptureEx: 'captura dos grupos de digitos',
+                metaNonCapture: 'Grupo sin captura',
+                metaNonCaptureEx: 'coincide pero no captura',
+                metaAlternation: 'Alternacion',
+                metaAlternationEx: 'coincide con "cat" o "dog"',
+                metaExact: 'Coincide exactamente n veces',
+                metaExactEx: 'coincide con 4 digitos',
+                metaAtLeast: 'Coincide al menos n veces',
+                metaAtLeastEx: 'coincide con 2+ digitos',
+                metaRange: 'Coincide entre n y m veces',
+                metaRangeEx: 'coincide con 2 a 4 digitos',
+                refFlagsTitle: '🚩 Referencia de banderas',
+                tableFlag: 'Bandera',
+                tableName: 'Nombre',
+                flagDescGlobal: 'Coincidencia global, encuentra todas las coincidencias',
+                flagDescIgnoreCase: 'Coincidencia sin distincion de mayusculas',
+                flagDescMultiline: 'Modo multilinea, ^ y $ coinciden inicio/fin de cada linea',
+                flagDescDotAll: 'Modo linea unica, . coincide con nuevas lineas',
+                flagDescUnicode: 'Habilitar modo Unicode',
+                flagDescSticky: 'Coincidencia adhesiva',
+                faqTitle: '❓ Preguntas frecuentes',
+                faqQ1: 'Que es una expresion regular?',
+                faqA1: 'Una expresion regular es una sintaxis de coincidencia de patrones usada para buscar, validar y reemplazar texto.',
+                faqQ2: 'Que significan las banderas g, i, m?',
+                faqA2: 'g (global) habilita coincidencia global; i (ignoreCase) habilita coincidencia sin mayusculas; m (multiline) habilita modo multilinea.',
+                faqQ3: 'Como coincidir caracteres chinos?',
+                faqA3: 'Use [\\u4e00-\\u9fa5] para coincidir caracteres chinos comunes.',
+                faqQ4: 'Por que mis resultados son diferentes?',
+                faqA4: 'Razones comunes: caracteres especiales sin escapar, coincidencia codiciosa, banderas incorrectas, condiciones de limite.',
+                faqQ5: 'Que sintaxis regex es soportada?',
+                faqA5: 'Esta herramienta usa sintaxis JavaScript (especificacion ECMAScript).',
+                relatedTools: '🔗 Herramientas relacionadas',
+                jsonViewer: 'Visor JSON',
+                jsonViewerDesc: 'Formateo y visualizacion JSON',
+                cryptoTools: 'Herramientas Crypto',
+                cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                timestampConverter: 'Convertidor Timestamp',
+                timestampConverterDesc: 'Conversion timestamp Unix y fecha',
+                chineseConverter: 'Convertidor Chino',
+                chineseConverterDesc: 'Conversion simplificado y tradicional',
+                footerPrivacy: 'Procesamiento del lado cliente, datos no subidos',
+                footerBack: '← Volver a Web Toolbox',
+                noMatch: 'Sin coincidencias',
+                regexError: 'Error de sintaxis regex: ',
+                codeComment: {
+                    example: 'Ejemplo de expresion regular',
+                    testMatch: 'Probar si coincide',
+                    isMatch: 'Coincide:',
+                    getAllMatches: 'Obtener todas las coincidencias',
+                    matchResults: 'Resultados:',
+                    getDetails: 'Usar exec para detalles',
+                    match: 'Coincidencia:',
+                    position: 'Posicion:',
+                    replace: 'Reemplazar contenido',
+                    replaceResult: 'Resultado del reemplazo:'
+                }
+            }
+        };
+
+        const langNames = {
+            en: '🌐 English',
+            'zh-CN': '🌐 中文',
+            fr: '🌐 Français',
+            es: '🌐 Español'
+        };
+
+        let currentUILang = localStorage.getItem('regex-tester-lang') || 'en';
+
+        // 应用语言
+        function applyLanguage(lang) {
+            currentUILang = lang;
+            localStorage.setItem('regex-tester-lang', lang);
+            document.getElementById('langCurrent').textContent = langNames[lang];
+
+            const t = i18n[lang];
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.innerHTML = t[key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (t[key]) {
+                    el.placeholder = t[key];
+                }
+            });
+
+            // 更新动态生成的内容
+            runTest();
+        }
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                applyLanguage(lang);
+                document.getElementById('langDropdown').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
         // DOM 元素
         const regexInput = document.getElementById('regexInput');
         const testText = document.getElementById('testText');
         const flagsDisplay = document.getElementById('flagsDisplay');
         const highlightResult = document.getElementById('highlightResult');
         const matchesList = document.getElementById('matchesList');
-        const matchCount = document.getElementById('matchCount');
-        const groupCount = document.getElementById('groupCount');
+        const matchCountEl = document.getElementById('matchCount');
+        const groupCountEl = document.getElementById('groupCount');
         const errorMessage = document.getElementById('errorMessage');
         const codeContent = document.getElementById('codeContent');
         const codeLang = document.getElementById('codeLang');
@@ -1078,16 +1732,17 @@
             const pattern = regexInput.value;
             const text = testText.value;
             const flags = activeFlags.join('');
+            const t = i18n[currentUILang];
 
             // 清空错误
             errorMessage.classList.remove('show');
             errorMessage.textContent = '';
 
             if (!pattern) {
-                highlightResult.innerHTML = text || '匹配的内容将在此高亮显示...';
+                highlightResult.innerHTML = text || t.highlightPlaceholder;
                 matchesList.innerHTML = '';
-                matchCount.textContent = '0';
-                groupCount.textContent = '0';
+                matchCountEl.textContent = '0';
+                groupCountEl.textContent = '0';
                 generateCode();
                 return;
             }
@@ -1136,9 +1791,9 @@
                         pos = m.index + m.text.length;
                     });
                     highlighted += escapeHtml(text.slice(pos));
-                    highlightResult.innerHTML = highlighted || '无匹配结果';
+                    highlightResult.innerHTML = highlighted || t.noMatch;
                 } else {
-                    highlightResult.innerHTML = escapeHtml(text) || '无匹配结果';
+                    highlightResult.innerHTML = escapeHtml(text) || t.noMatch;
                 }
 
                 // 匹配列表
@@ -1150,16 +1805,16 @@
                     </div>
                 `).join('');
 
-                matchCount.textContent = matches.length;
-                groupCount.textContent = maxGroups;
+                matchCountEl.textContent = matches.length;
+                groupCountEl.textContent = maxGroups;
 
             } catch (e) {
-                errorMessage.textContent = '正则表达式语法错误: ' + e.message;
+                errorMessage.textContent = t.regexError + e.message;
                 errorMessage.classList.add('show');
-                highlightResult.innerHTML = escapeHtml(text) || '匹配的内容将在此高亮显示...';
+                highlightResult.innerHTML = escapeHtml(text) || t.highlightPlaceholder;
                 matchesList.innerHTML = '';
-                matchCount.textContent = '0';
-                groupCount.textContent = '0';
+                matchCountEl.textContent = '0';
+                groupCountEl.textContent = '0';
             }
 
             generateCode();
@@ -1177,8 +1832,10 @@
             const pattern = regexInput.value || '\\d+';
             const flags = activeFlags.join('');
             const text = testText.value || 'Hello 123 World 456';
+            const t = i18n[currentUILang];
+            const c = t.codeComment;
 
-            const langNames = {
+            const langDisplayNames = {
                 javascript: 'JavaScript',
                 python: 'Python',
                 java: 'Java',
@@ -1188,61 +1845,61 @@
                 csharp: 'C#'
             };
 
-            codeLang.textContent = langNames[currentLang];
+            codeLang.textContent = langDisplayNames[currentLang];
 
             const escapedPattern = pattern.replace(/\\/g, '\\\\').replace(/"/g, '\\"');
             const escapedText = text.replace(/\\/g, '\\\\').replace(/"/g, '\\"').replace(/\n/g, '\\n');
 
             const codeTemplates = {
-                javascript: `// JavaScript 正则表达式示例
+                javascript: `// JavaScript ${c.example}
 const pattern = /${pattern}/${flags};
 const text = "${escapedText}";
 
-// 测试是否匹配
+// ${c.testMatch}
 const isMatch = pattern.test(text);
-console.log("是否匹配:", isMatch);
+console.log("${c.isMatch}", isMatch);
 
-// 获取所有匹配
+// ${c.getAllMatches}
 const matches = text.match(pattern);
-console.log("匹配结果:", matches);
+console.log("${c.matchResults}", matches);
 
-// 使用 exec 获取详细信息
+// ${c.getDetails}
 let match;
 while ((match = pattern.exec(text)) !== null) {
-    console.log("匹配:", match[0], "位置:", match.index);
+    console.log("${c.match}", match[0], "${c.position}", match.index);
 }
 
-// 替换匹配内容
+// ${c.replace}
 const replaced = text.replace(pattern, "[REPLACED]");
-console.log("替换结果:", replaced);`,
+console.log("${c.replaceResult}", replaced);`,
 
-                python: `# Python 正则表达式示例
+                python: `# Python ${c.example}
 import re
 
 pattern = r"${pattern}"
 text = "${escapedText}"
 flags = ${flags.includes('i') ? 're.IGNORECASE' : '0'}${flags.includes('m') ? ' | re.MULTILINE' : ''}${flags.includes('s') ? ' | re.DOTALL' : ''}
 
-# 编译正则表达式
+# Compile regex
 regex = re.compile(pattern, flags)
 
-# 测试是否匹配
+# ${c.testMatch}
 is_match = bool(regex.search(text))
-print("是否匹配:", is_match)
+print("${c.isMatch}", is_match)
 
-# 获取所有匹配
+# ${c.getAllMatches}
 matches = regex.findall(text)
-print("匹配结果:", matches)
+print("${c.matchResults}", matches)
 
-# 获取匹配详细信息
+# ${c.getDetails}
 for match in regex.finditer(text):
-    print(f"匹配: {match.group()} 位置: {match.start()}-{match.end()}")
+    print(f"${c.match} {match.group()} ${c.position} {match.start()}-{match.end()}")
 
-# 替换匹配内容
+# ${c.replace}
 replaced = regex.sub("[REPLACED]", text)
-print("替换结果:", replaced)`,
+print("${c.replaceResult}", replaced)`,
 
-                java: `// Java 正则表达式示例
+                java: `// Java ${c.example}
 import java.util.regex.*;
 
 public class RegexExample {
@@ -1250,29 +1907,29 @@ public class RegexExample {
         String pattern = "${escapedPattern}";
         String text = "${escapedText}";
 
-        // 编译正则表达式
+        // Compile regex
         int flags = ${flags.includes('i') ? 'Pattern.CASE_INSENSITIVE' : '0'}${flags.includes('m') ? ' | Pattern.MULTILINE' : ''}${flags.includes('s') ? ' | Pattern.DOTALL' : ''};
         Pattern regex = Pattern.compile(pattern, flags);
         Matcher matcher = regex.matcher(text);
 
-        // 测试是否匹配
+        // ${c.testMatch}
         boolean isMatch = matcher.find();
-        System.out.println("是否匹配: " + isMatch);
+        System.out.println("${c.isMatch} " + isMatch);
 
-        // 获取所有匹配
+        // ${c.getAllMatches}
         matcher.reset();
         while (matcher.find()) {
-            System.out.println("匹配: " + matcher.group() +
-                             " 位置: " + matcher.start() + "-" + matcher.end());
+            System.out.println("${c.match} " + matcher.group() +
+                             " ${c.position} " + matcher.start() + "-" + matcher.end());
         }
 
-        // 替换匹配内容
+        // ${c.replace}
         String replaced = matcher.replaceAll("[REPLACED]");
-        System.out.println("替换结果: " + replaced);
+        System.out.println("${c.replaceResult} " + replaced);
     }
 }`,
 
-                go: `// Go 正则表达式示例
+                go: `// Go ${c.example}
 package main
 
 import (
@@ -1284,76 +1941,76 @@ func main() {
     pattern := \`${pattern}\`
     text := "${escapedText}"
 
-    // 编译正则表达式
+    // Compile regex
     regex := regexp.MustCompile(${flags.includes('i') ? '"(?i)" + pattern' : 'pattern'})
 
-    // 测试是否匹配
+    // ${c.testMatch}
     isMatch := regex.MatchString(text)
-    fmt.Println("是否匹配:", isMatch)
+    fmt.Println("${c.isMatch}", isMatch)
 
-    // 获取所有匹配
+    // ${c.getAllMatches}
     matches := regex.FindAllString(text, -1)
-    fmt.Println("匹配结果:", matches)
+    fmt.Println("${c.matchResults}", matches)
 
-    // 获取匹配位置
+    // ${c.getDetails}
     locations := regex.FindAllStringIndex(text, -1)
     for i, loc := range locations {
-        fmt.Printf("匹配 #%d: %s 位置: %d-%d\\n",
+        fmt.Printf("${c.match} #%d: %s ${c.position} %d-%d\\n",
             i+1, text[loc[0]:loc[1]], loc[0], loc[1])
     }
 
-    // 替换匹配内容
+    // ${c.replace}
     replaced := regex.ReplaceAllString(text, "[REPLACED]")
-    fmt.Println("替换结果:", replaced)
+    fmt.Println("${c.replaceResult}", replaced)
 }`,
 
                 php: `<?php
-// PHP 正则表达式示例
+// PHP ${c.example}
 $pattern = '/${pattern}/${flags}';
 $text = "${escapedText}";
 
-// 测试是否匹配
+// ${c.testMatch}
 $isMatch = preg_match($pattern, $text);
-echo "是否匹配: " . ($isMatch ? "true" : "false") . "\\n";
+echo "${c.isMatch} " . ($isMatch ? "true" : "false") . "\\n";
 
-// 获取所有匹配
+// ${c.getAllMatches}
 preg_match_all($pattern, $text, $matches);
-echo "匹配结果: ";
+echo "${c.matchResults} ";
 print_r($matches[0]);
 
-// 获取匹配位置
+// ${c.getDetails}
 preg_match_all($pattern, $text, $matches, PREG_OFFSET_CAPTURE);
 foreach ($matches[0] as $i => $match) {
-    echo "匹配 #" . ($i + 1) . ": " . $match[0] . " 位置: " . $match[1] . "\\n";
+    echo "${c.match} #" . ($i + 1) . ": " . $match[0] . " ${c.position} " . $match[1] . "\\n";
 }
 
-// 替换匹配内容
+// ${c.replace}
 $replaced = preg_replace($pattern, "[REPLACED]", $text);
-echo "替换结果: " . $replaced . "\\n";
+echo "${c.replaceResult} " . $replaced . "\\n";
 ?>`,
 
-                ruby: `# Ruby 正则表达式示例
+                ruby: `# Ruby ${c.example}
 pattern = /${pattern}/${flags.includes('i') ? 'i' : ''}${flags.includes('m') ? 'm' : ''}
 text = "${escapedText}"
 
-# 测试是否匹配
+# ${c.testMatch}
 is_match = !!(text =~ pattern)
-puts "是否匹配: #{is_match}"
+puts "${c.isMatch} #{is_match}"
 
-# 获取所有匹配
+# ${c.getAllMatches}
 matches = text.scan(pattern)
-puts "匹配结果: #{matches}"
+puts "${c.matchResults} #{matches}"
 
-# 获取匹配位置
+# ${c.getDetails}
 text.to_enum(:scan, pattern).each do |m|
-  puts "匹配: #{$&} 位置: #{$\`.size}"
+  puts "${c.match} #{$&} ${c.position} #{$\`.size}"
 end
 
-# 替换匹配内容
+# ${c.replace}
 replaced = text.gsub(pattern, "[REPLACED]")
-puts "替换结果: #{replaced}"`,
+puts "${c.replaceResult} #{replaced}"`,
 
-                csharp: `// C# 正则表达式示例
+                csharp: `// C# ${c.example}
 using System;
 using System.Text.RegularExpressions;
 
@@ -1362,25 +2019,25 @@ class Program {
         string pattern = @"${pattern}";
         string text = "${escapedText}";
 
-        // 编译正则表达式
+        // Compile regex
         RegexOptions options = ${flags.includes('i') ? 'RegexOptions.IgnoreCase' : 'RegexOptions.None'}${flags.includes('m') ? ' | RegexOptions.Multiline' : ''}${flags.includes('s') ? ' | RegexOptions.Singleline' : ''};
         Regex regex = new Regex(pattern, options);
 
-        // 测试是否匹配
+        // ${c.testMatch}
         bool isMatch = regex.IsMatch(text);
-        Console.WriteLine($"是否匹配: {isMatch}");
+        Console.WriteLine($"${c.isMatch} {isMatch}");
 
-        // 获取所有匹配
+        // ${c.getAllMatches}
         MatchCollection matches = regex.Matches(text);
-        Console.WriteLine($"匹配数量: {matches.Count}");
+        Console.WriteLine($"${c.matchResults} {matches.Count}");
 
         foreach (Match match in matches) {
-            Console.WriteLine($"匹配: {match.Value} 位置: {match.Index}");
+            Console.WriteLine($"${c.match} {match.Value} ${c.position} {match.Index}");
         }
 
-        // 替换匹配内容
+        // ${c.replace}
         string replaced = regex.Replace(text, "[REPLACED]");
-        Console.WriteLine($"替换结果: {replaced}");
+        Console.WriteLine($"${c.replaceResult} {replaced}");
     }
 }`
             };
@@ -1390,11 +2047,12 @@ class Program {
 
         // 复制代码
         copyCodeBtn.addEventListener('click', () => {
+            const t = i18n[currentUILang];
             navigator.clipboard.writeText(codeContent.textContent).then(() => {
                 const originalText = copyCodeBtn.textContent;
-                copyCodeBtn.textContent = '✅ 已复制';
+                copyCodeBtn.textContent = t.codeCopied;
                 setTimeout(() => {
-                    copyCodeBtn.textContent = originalText;
+                    copyCodeBtn.textContent = t.copyCode;
                 }, 2000);
             });
         });
@@ -1407,7 +2065,7 @@ class Program {
         }
 
         // 初始化
-        generateCode();
+        applyLanguage(currentUILang);
 
         // 示例文本
         testText.value = `Hello World 123
@@ -1430,51 +2088,51 @@ Date: 2024-12-27`;
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section">
-        <h2 class="faq-title">❓ 常见问题</h2>
+        <h2 class="faq-title" data-i18n="faqTitle">❓ FAQ</h2>
         <div class="faq-list">
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>什么是正则表达式？</h3>
+                    <h3 data-i18n="faqQ1">What is a regular expression?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>正则表达式是一种文本模式匹配语法，用于搜索、验证和替换文本。它由普通字符和特殊字符（元字符）组成，可以描述复杂的文本模式，广泛应用于数据验证、文本搜索和字符串处理等场景。</p>
+                    <p data-i18n="faqA1">A regular expression is a pattern matching syntax used to search, validate, and replace text. It consists of ordinary characters and special characters (metacharacters) that can describe complex text patterns, widely used in data validation, text search, and string processing.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>g、i、m 标志位是什么意思？</h3>
+                    <h3 data-i18n="faqQ2">What do the g, i, m flags mean?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>g（global）表示全局匹配，查找所有匹配项而非在第一个匹配后停止；i（ignoreCase）表示忽略大小写匹配；m（multiline）表示多行模式，使 ^ 和 $ 可以匹配每行的开始和结束位置。</p>
+                    <p data-i18n="faqA2">g (global) enables global matching, finding all matches instead of stopping after the first; i (ignoreCase) enables case-insensitive matching; m (multiline) enables multiline mode where ^ and $ match the start and end of each line.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>如何匹配中文字符？</h3>
+                    <h3 data-i18n="faqQ3">How to match Chinese characters?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>可使用 [\u4e00-\u9fa5] 匹配常用汉字。这个范围包含了 CJK 统一表意文字基本区的所有汉字，涵盖了日常使用的绝大多数中文字符。</p>
+                    <p data-i18n="faqA3">Use [\u4e00-\u9fa5] to match common Chinese characters. This range covers all Chinese characters in the CJK Unified Ideographs basic block.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>为什么匹配结果和预期不同？</h3>
+                    <h3 data-i18n="faqQ4">Why are my match results different from expected?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>常见原因包括：1. 特殊字符未转义，如 . * + 等需要加反斜杠；2. 贪婪匹配导致匹配过多，可使用 ? 改为非贪婪模式；3. 标志位设置不当，如未开启全局匹配只返回第一个结果；4. 边界条件未考虑，如 ^ $ 的使用。</p>
+                    <p data-i18n="faqA4">Common reasons include: 1. Special characters not escaped (. * + need backslash); 2. Greedy matching captures too much (use ? for non-greedy); 3. Incorrect flags (missing global flag returns only first result); 4. Boundary conditions not considered (^ $ usage).</p>
                 </div>
             </div>
             <div class="faq-item">
                 <div class="faq-question">
-                    <h3>支持哪种正则语法？</h3>
+                    <h3 data-i18n="faqQ5">Which regex syntax is supported?</h3>
                     <span class="faq-toggle">▼</span>
                 </div>
                 <div class="faq-answer">
-                    <p>本工具使用 JavaScript 的正则表达式语法（ECMAScript 规范）。支持常见的元字符、字符类、量词、分组、断言等特性，并支持 g、i、m、s、u 等标志位。</p>
+                    <p data-i18n="faqA5">This tool uses JavaScript regular expression syntax (ECMAScript specification). It supports common metacharacters, character classes, quantifiers, groups, assertions, and flags like g, i, m, s, u.</p>
                 </div>
             </div>
         </div>
@@ -1482,35 +2140,35 @@ Date: 2024-12-27`;
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="json-viewer.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
-                <div style="color: #f0f0f0; font-weight: 500;">JSON 查看器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="jsonViewer">JSON Viewer</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="jsonViewerDesc">JSON formatting & visualization</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="cryptoTools">Crypto Tools</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="cryptoToolsDesc">Base64/MD5/AES etc.</div>
             </a>
             <a href="timestamp-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
-                <div style="color: #f0f0f0; font-weight: 500;">时间戳转换</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="timestampConverter">Timestamp Converter</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="timestampConverterDesc">Unix timestamp & date conversion</div>
             </a>
             <a href="chinese-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">中繁</div>
-                <div style="color: #f0f0f0; font-weight: 500;">中文简繁转换</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">简体繁体互转</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="chineseConverter">Chinese Converter</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="chineseConverterDesc">Simplified & Traditional conversion</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
         </p>

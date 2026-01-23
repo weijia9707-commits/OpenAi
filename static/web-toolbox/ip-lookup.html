@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>IP地址归属地查询 - 查询IP/域名地理位置 | Web Toolbox</title>
+    <title>IP Address Lookup - Query IP/Domain Geolocation | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线IP地址归属地查询工具，支持查询IP地址或域名的地理位置、运营商、IP段范围等信息。同时显示本机IP、网络类型、操作系统、浏览器等客户端信息。">
-    <meta name="keywords" content="IP查询,IP归属地,IP地址查询,域名查询,IP定位,IP位置,本机IP,IP段查询,运营商查询,免费工具">
+    <meta name="description" content="Free online IP address lookup tool. Query IP addresses or domain names for geolocation, ISP, IP range and more. Also displays your public IP, network type, OS, and browser info.">
+    <meta name="keywords" content="IP lookup,IP geolocation,IP address query,domain lookup,IP location,my IP,IP range,ISP lookup,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/ip-lookup.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/ip-lookup.html">
-    <meta property="og:title" content="IP地址归属地查询 - 查询IP/域名地理位置">
-    <meta property="og:description" content="免费在线IP归属地查询，支持IP和域名查询，显示地理位置、运营商、本机信息。">
+    <meta property="og:title" content="IP Address Lookup - Query IP/Domain Geolocation">
+    <meta property="og:description" content="Free online IP geolocation lookup. Query IP and domain for location, ISP, and client info.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/ip-lookup.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="IP地址归属地查询 - 查询IP/域名地理位置">
-    <meta name="twitter:description" content="免费在线IP归属地查询，支持IP和域名查询。">
+    <meta name="twitter:title" content="IP Address Lookup - Query IP/Domain Geolocation">
+    <meta name="twitter:description" content="Free online IP geolocation lookup. Query IP and domain.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/ip-lookup.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "IP地址归属地查询",
+        "name": "IP Address Lookup",
         "url": "https://www.heyuan110.com/web-toolbox/ip-lookup.html",
-        "description": "在线查询IP地址或域名的地理位置、运营商等信息",
+        "description": "Online tool to query IP address or domain geolocation, ISP and more",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "IP 地址定位准确吗？",
+                "name": "Is IP address location accurate?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "通常精确到城市级别，精度取决于 IP 数据库的更新频率。"
+                    "text": "Usually accurate to city level, precision depends on IP database update frequency."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以查询内网 IP 吗？",
+                "name": "Can I query private IP addresses?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不可以，内网 IP（如192.168.x.x）无法定位地理位置。"
+                    "text": "No, private IPs (like 192.168.x.x) cannot be geolocated."
                 }
             },
             {
                 "@type": "Question",
-                "name": "查询的 IP 信息包括哪些？",
+                "name": "What IP information is included?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "包括国家、城市、ISP、ASN、时区、经纬度等。"
+                    "text": "Includes country, city, ISP, ASN, timezone, coordinates and more."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何查看自己的公网 IP？",
+                "name": "How to view my public IP?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "打开页面即可自动显示你当前的公网 IP 地址。"
+                    "text": "Your public IP is automatically displayed when you open the page."
                 }
             },
             {
                 "@type": "Question",
-                "name": "IP 查询会记录我的信息吗？",
+                "name": "Does IP lookup record my information?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会，查询结果仅在浏览器中显示，不会存储。"
+                    "text": "No, query results are only displayed in the browser and are not stored."
                 }
             }
         ]
@@ -116,6 +116,7 @@
         header {
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
         }
 
         .back-link {
@@ -144,6 +145,16 @@
             color: #a1a1aa;
             font-size: 1rem;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 搜索区域 */
         .search-section {
@@ -465,56 +476,78 @@
             .container {
                 padding: 20px 16px;
             }
+
+            .lang-switcher {
+                position: static;
+                margin-bottom: 16px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link">← 返回工具箱</a>
-            <h1>🌍 IP地址归属地查询</h1>
-            <p class="subtitle">查询IP地址或域名的地理位置、运营商、IP段范围等信息</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" data-i18n="backToToolbox">← Back to Toolbox</a>
+            <h1 data-i18n="pageTitle">🌍 IP Address Lookup</h1>
+            <p class="subtitle" data-i18n="pageSubtitle">Query IP address or domain for geolocation, ISP, IP range and more</p>
         </header>
 
         <!-- 功能特点 -->
         <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-bottom: 30px;">
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">📍</div>
-                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">IP 定位</h3>
-                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">查询 IP 地址的地理位置信息，包括国家、城市、ISP</p>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;" data-i18n="featureIpTitle">IP Location</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;" data-i18n="featureIpDesc">Query IP address geolocation including country, city, and ISP</p>
             </div>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">💻</div>
-                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">本机 IP</h3>
-                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">自动获取并显示你当前的公网 IP 地址</p>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;" data-i18n="featureMyIpTitle">My IP</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;" data-i18n="featureMyIpDesc">Automatically detect and display your current public IP address</p>
             </div>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">📊</div>
-                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">详细信息</h3>
-                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">显示 ASN、时区、经纬度等详细信息</p>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;" data-i18n="featureDetailTitle">Detailed Info</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;" data-i18n="featureDetailDesc">Display ASN, timezone, coordinates and other details</p>
             </div>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">🗺️</div>
-                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;">地图展示</h3>
-                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;">在地图上直观显示 IP 的地理位置</p>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: #e4e4e7;" data-i18n="featureMapTitle">Map View</h3>
+                <p style="font-size: 0.85rem; color: #a1a1aa; line-height: 1.5;" data-i18n="featureMapDesc">Visually display IP location on a map</p>
             </div>
         </section>
 
         <!-- 搜索区域 -->
         <div class="search-section">
             <div class="search-box">
-                <input type="text" id="searchInput" class="search-input" placeholder="输入 IP 地址或域名，如 8.8.8.8 或 google.com" autocomplete="off">
+                <input type="text" id="searchInput" class="search-input" data-i18n-placeholder="searchPlaceholder" placeholder="Enter IP address or domain, e.g. 8.8.8.8 or google.com" autocomplete="off">
                 <button id="searchBtn" class="search-btn" onclick="queryIP()">
                     <span class="spinner"></span>
-                    <span class="btn-text">🔍 查询</span>
+                    <span class="btn-text" data-i18n="searchBtn">🔍 Lookup</span>
                 </button>
             </div>
             <div class="quick-ips">
                 <span class="quick-ip" onclick="quickQuery('8.8.8.8')">Google DNS</span>
                 <span class="quick-ip" onclick="quickQuery('1.1.1.1')">Cloudflare</span>
                 <span class="quick-ip" onclick="quickQuery('114.114.114.114')">114 DNS</span>
-                <span class="quick-ip" onclick="quickQuery('223.5.5.5')">阿里 DNS</span>
-                <span class="quick-ip" onclick="quickQuery('baidu.com')">百度</span>
+                <span class="quick-ip" onclick="quickQuery('223.5.5.5')" data-i18n="quickAliDns">Alibaba DNS</span>
+                <span class="quick-ip" onclick="quickQuery('baidu.com')" data-i18n="quickBaidu">Baidu</span>
                 <span class="quick-ip" onclick="quickQuery('github.com')">GitHub</span>
             </div>
         </div>
@@ -531,54 +564,54 @@
                 <div class="result-icon" id="resultIcon">🌐</div>
                 <div class="result-title">
                     <h3 id="resultQuery">-</h3>
-                    <p id="resultStatus">查询成功</p>
+                    <p id="resultStatus" data-i18n="querySuccess">Query successful</p>
                 </div>
             </div>
             <div class="result-grid">
                 <div class="result-item">
-                    <div class="label">📍 IP / 域名</div>
+                    <div class="label" data-i18n="labelIpDomain">📍 IP / Domain</div>
                     <div class="value" id="resQuery">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🔢 解析IP地址</div>
+                    <div class="label" data-i18n="labelResolvedIp">🔢 Resolved IP</div>
                     <div class="value highlight" id="resIP">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🔢 数字地址 (十进制)</div>
+                    <div class="label" data-i18n="labelNumericAddr">🔢 Numeric Address (Decimal)</div>
                     <div class="value" id="resNumeric">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">📊 所处IP段范围</div>
+                    <div class="label" data-i18n="labelIpRange">📊 IP Range</div>
                     <div class="value" id="resRange">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🌍 国家/地区</div>
+                    <div class="label" data-i18n="labelCountry">🌍 Country/Region</div>
                     <div class="value location" id="resCountry">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🏙️ 城市</div>
+                    <div class="label" data-i18n="labelCity">🏙️ City</div>
                     <div class="value location" id="resCity">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🏢 运营商 / ISP</div>
+                    <div class="label" data-i18n="labelIsp">🏢 ISP / Carrier</div>
                     <div class="value" id="resISP">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🏛️ 组织</div>
+                    <div class="label" data-i18n="labelOrg">🏛️ Organization</div>
                     <div class="value" id="resOrg">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">🕐 时区</div>
+                    <div class="label" data-i18n="labelTimezone">🕐 Timezone</div>
                     <div class="value" id="resTimezone">-</div>
                 </div>
                 <div class="result-item">
-                    <div class="label">📮 邮政编码</div>
+                    <div class="label" data-i18n="labelPostal">📮 Postal Code</div>
                     <div class="value" id="resZip">-</div>
                 </div>
             </div>
             <div class="map-section">
                 <div class="map-placeholder">
-                    <div>📍 地理坐标</div>
+                    <div data-i18n="geoCoords">📍 Geographic Coordinates</div>
                     <div class="coords" id="resCoords">-</div>
                 </div>
             </div>
@@ -588,39 +621,39 @@
         <div class="client-section">
             <div class="section-title">
                 <span class="icon">💻</span>
-                <span>本机客户端信息</span>
+                <span data-i18n="clientInfoTitle">Client Information</span>
             </div>
             <div class="client-grid">
                 <div class="client-item">
-                    <div class="label">您的公网IP</div>
-                    <div class="value ip" id="clientIP">获取中...</div>
+                    <div class="label" data-i18n="yourPublicIp">Your Public IP</div>
+                    <div class="value ip" id="clientIP" data-i18n="loading">Loading...</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">IP归属地</div>
-                    <div class="value" id="clientLocation">获取中...</div>
+                    <div class="label" data-i18n="ipLocation">IP Location</div>
+                    <div class="value" id="clientLocation" data-i18n="loading">Loading...</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">网络运营商</div>
-                    <div class="value" id="clientISP">获取中...</div>
+                    <div class="label" data-i18n="networkIsp">Network ISP</div>
+                    <div class="value" id="clientISP" data-i18n="loading">Loading...</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">操作系统</div>
+                    <div class="label" data-i18n="os">Operating System</div>
                     <div class="value" id="clientOS">-</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">浏览器</div>
+                    <div class="label" data-i18n="browser">Browser</div>
                     <div class="value" id="clientBrowser">-</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">设备类型</div>
+                    <div class="label" data-i18n="deviceType">Device Type</div>
                     <div class="value" id="clientDevice">-</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">屏幕分辨率</div>
+                    <div class="label" data-i18n="screenRes">Screen Resolution</div>
                     <div class="value" id="clientScreen">-</div>
                 </div>
                 <div class="client-item">
-                    <div class="label">语言</div>
+                    <div class="label" data-i18n="language">Language</div>
                     <div class="value" id="clientLang">-</div>
                 </div>
             </div>
@@ -628,6 +661,416 @@
     </div>
 
     <script>
+        // ==================== 国际化模块 ====================
+        const i18n = {
+            currentLang: 'en',
+            translations: {
+                'en': {
+                    pageTitle: '🌍 IP Address Lookup',
+                    pageSubtitle: 'Query IP address or domain for geolocation, ISP, IP range and more',
+                    backToToolbox: '← Back to Toolbox',
+                    searchPlaceholder: 'Enter IP address or domain, e.g. 8.8.8.8 or google.com',
+                    searchBtn: '🔍 Lookup',
+                    quickAliDns: 'Alibaba DNS',
+                    quickBaidu: 'Baidu',
+                    featureIpTitle: 'IP Location',
+                    featureIpDesc: 'Query IP address geolocation including country, city, and ISP',
+                    featureMyIpTitle: 'My IP',
+                    featureMyIpDesc: 'Automatically detect and display your current public IP address',
+                    featureDetailTitle: 'Detailed Info',
+                    featureDetailDesc: 'Display ASN, timezone, coordinates and other details',
+                    featureMapTitle: 'Map View',
+                    featureMapDesc: 'Visually display IP location on a map',
+                    labelIpDomain: '📍 IP / Domain',
+                    labelResolvedIp: '🔢 Resolved IP',
+                    labelNumericAddr: '🔢 Numeric Address (Decimal)',
+                    labelIpRange: '📊 IP Range',
+                    labelCountry: '🌍 Country/Region',
+                    labelCity: '🏙️ City',
+                    labelIsp: '🏢 ISP / Carrier',
+                    labelOrg: '🏛️ Organization',
+                    labelTimezone: '🕐 Timezone',
+                    labelPostal: '📮 Postal Code',
+                    geoCoords: '📍 Geographic Coordinates',
+                    querySuccess: 'Query successful',
+                    clientInfoTitle: 'Client Information',
+                    yourPublicIp: 'Your Public IP',
+                    ipLocation: 'IP Location',
+                    networkIsp: 'Network ISP',
+                    os: 'Operating System',
+                    browser: 'Browser',
+                    deviceType: 'Device Type',
+                    screenRes: 'Screen Resolution',
+                    language: 'Language',
+                    loading: 'Loading...',
+                    loadFailed: 'Failed to load',
+                    faqTitle: 'FAQ',
+                    faq1q: 'Is IP address location accurate?',
+                    faq1a: 'Usually accurate to city level, precision depends on IP database update frequency. Different IP databases may have slight variations, enterprise IPs are usually more accurate.',
+                    faq2q: 'Can I query private IP addresses?',
+                    faq2a: 'No, private IPs (like 192.168.x.x, 10.x.x.x, 172.16.x.x) are private address ranges and cannot be geolocated through public databases.',
+                    faq3q: 'What IP information is included?',
+                    faq3a: 'Includes country, city, ISP (Internet Service Provider), ASN (Autonomous System Number), timezone, coordinates, postal code and other details.',
+                    faq4q: 'How to view my public IP?',
+                    faq4a: 'Your public IP is automatically displayed when you open the page. The "Client Information" section at the bottom will automatically fetch and display it.',
+                    faq5q: 'Does IP lookup record my information?',
+                    faq5a: 'No, this tool is purely frontend-based. Query results are only displayed in the browser and no data is stored or uploaded to our servers.',
+                    relatedTools: '🔗 Related Tools',
+                    toolWhois: 'WHOIS Lookup',
+                    toolWhoisDesc: 'Domain registration info',
+                    toolWebsocket: 'WebSocket Test',
+                    toolWebsocketDesc: 'WebSocket connection debug',
+                    toolJson: 'JSON Formatter',
+                    toolJsonDesc: 'JSON format & validate',
+                    toolCrypto: 'Crypto Tools',
+                    toolCryptoDesc: 'Base64/MD5/SHA etc.',
+                    footerPrivacy: 'Pure frontend processing, data is not uploaded to server',
+                    footerBack: '← Back to Web Toolbox',
+                    errorEnterInput: 'Please enter an IP address or domain',
+                    errorInvalidInput: 'Please enter a valid IP address or domain',
+                    errorDnsResolve: 'Domain resolution failed, please check if the domain is correct',
+                    errorQueryFailed: 'Query failed, please check your input',
+                    coordsLabel: 'Lat: {lat}, Lon: {lon}',
+                    deviceDesktop: 'Desktop',
+                    deviceTablet: 'Tablet',
+                    deviceMobile: 'Mobile'
+                },
+                'zh-CN': {
+                    pageTitle: '🌍 IP地址归属地查询',
+                    pageSubtitle: '查询IP地址或域名的地理位置、运营商、IP段范围等信息',
+                    backToToolbox: '← 返回工具箱',
+                    searchPlaceholder: '输入 IP 地址或域名，如 8.8.8.8 或 google.com',
+                    searchBtn: '🔍 查询',
+                    quickAliDns: '阿里 DNS',
+                    quickBaidu: '百度',
+                    featureIpTitle: 'IP 定位',
+                    featureIpDesc: '查询 IP 地址的地理位置信息，包括国家、城市、ISP',
+                    featureMyIpTitle: '本机 IP',
+                    featureMyIpDesc: '自动获取并显示你当前的公网 IP 地址',
+                    featureDetailTitle: '详细信息',
+                    featureDetailDesc: '显示 ASN、时区、经纬度等详细信息',
+                    featureMapTitle: '地图展示',
+                    featureMapDesc: '在地图上直观显示 IP 的地理位置',
+                    labelIpDomain: '📍 IP / 域名',
+                    labelResolvedIp: '🔢 解析IP地址',
+                    labelNumericAddr: '🔢 数字地址 (十进制)',
+                    labelIpRange: '📊 所处IP段范围',
+                    labelCountry: '🌍 国家/地区',
+                    labelCity: '🏙️ 城市',
+                    labelIsp: '🏢 运营商 / ISP',
+                    labelOrg: '🏛️ 组织',
+                    labelTimezone: '🕐 时区',
+                    labelPostal: '📮 邮政编码',
+                    geoCoords: '📍 地理坐标',
+                    querySuccess: '查询成功',
+                    clientInfoTitle: '本机客户端信息',
+                    yourPublicIp: '您的公网IP',
+                    ipLocation: 'IP归属地',
+                    networkIsp: '网络运营商',
+                    os: '操作系统',
+                    browser: '浏览器',
+                    deviceType: '设备类型',
+                    screenRes: '屏幕分辨率',
+                    language: '语言',
+                    loading: '获取中...',
+                    loadFailed: '获取失败',
+                    faqTitle: '常见问题',
+                    faq1q: 'IP 地址定位准确吗？',
+                    faq1a: '通常精确到城市级别，精度取决于 IP 数据库的更新频率。不同的 IP 归属地数据库可能会有细微差异，企业级 IP 通常定位更准确。',
+                    faq2q: '可以查询内网 IP 吗？',
+                    faq2a: '不可以，内网 IP（如 192.168.x.x、10.x.x.x、172.16.x.x）属于私有地址段，无法通过公共数据库定位地理位置。',
+                    faq3q: '查询的 IP 信息包括哪些？',
+                    faq3a: '包括国家、城市、ISP（互联网服务提供商）、ASN（自治系统号）、时区、经纬度坐标、邮政编码等详细信息。',
+                    faq4q: '如何查看自己的公网 IP？',
+                    faq4a: '打开页面即可自动显示你当前的公网 IP 地址，无需手动操作。页面底部的"本机客户端信息"区域会自动获取并展示。',
+                    faq5q: 'IP 查询会记录我的信息吗？',
+                    faq5a: '不会，本工具是纯前端实现，查询结果仅在浏览器中显示，不会存储或上传任何数据到我们的服务器。',
+                    relatedTools: '🔗 相关工具推荐',
+                    toolWhois: 'WHOIS 查询',
+                    toolWhoisDesc: '域名注册信息查询',
+                    toolWebsocket: 'WebSocket 测试',
+                    toolWebsocketDesc: 'WebSocket 连接调试',
+                    toolJson: 'JSON 格式化',
+                    toolJsonDesc: 'JSON 格式化与校验',
+                    toolCrypto: '加密解密工具',
+                    toolCryptoDesc: 'Base64/MD5/SHA等',
+                    footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                    footerBack: '← 返回 Web Toolbox 首页',
+                    errorEnterInput: '请输入IP地址或域名',
+                    errorInvalidInput: '请输入有效的IP地址或域名',
+                    errorDnsResolve: '域名解析失败，请检查域名是否正确',
+                    errorQueryFailed: '查询失败，请检查输入是否正确',
+                    coordsLabel: '纬度: {lat}, 经度: {lon}',
+                    deviceDesktop: '桌面电脑',
+                    deviceTablet: '平板电脑',
+                    deviceMobile: '手机'
+                },
+                'fr': {
+                    pageTitle: '🌍 Recherche d\'adresse IP',
+                    pageSubtitle: 'Rechercher l\'adresse IP ou le domaine pour la géolocalisation, le FAI, la plage IP et plus',
+                    backToToolbox: '← Retour à la boîte à outils',
+                    searchPlaceholder: 'Entrez l\'adresse IP ou le domaine, ex: 8.8.8.8 ou google.com',
+                    searchBtn: '🔍 Rechercher',
+                    quickAliDns: 'DNS Alibaba',
+                    quickBaidu: 'Baidu',
+                    featureIpTitle: 'Localisation IP',
+                    featureIpDesc: 'Rechercher la géolocalisation de l\'adresse IP, y compris le pays, la ville et le FAI',
+                    featureMyIpTitle: 'Mon IP',
+                    featureMyIpDesc: 'Détecter et afficher automatiquement votre adresse IP publique actuelle',
+                    featureDetailTitle: 'Infos détaillées',
+                    featureDetailDesc: 'Afficher ASN, fuseau horaire, coordonnées et autres détails',
+                    featureMapTitle: 'Vue carte',
+                    featureMapDesc: 'Afficher visuellement l\'emplacement IP sur une carte',
+                    labelIpDomain: '📍 IP / Domaine',
+                    labelResolvedIp: '🔢 IP résolue',
+                    labelNumericAddr: '🔢 Adresse numérique (Décimal)',
+                    labelIpRange: '📊 Plage IP',
+                    labelCountry: '🌍 Pays/Région',
+                    labelCity: '🏙️ Ville',
+                    labelIsp: '🏢 FAI / Opérateur',
+                    labelOrg: '🏛️ Organisation',
+                    labelTimezone: '🕐 Fuseau horaire',
+                    labelPostal: '📮 Code postal',
+                    geoCoords: '📍 Coordonnées géographiques',
+                    querySuccess: 'Recherche réussie',
+                    clientInfoTitle: 'Informations client',
+                    yourPublicIp: 'Votre IP publique',
+                    ipLocation: 'Emplacement IP',
+                    networkIsp: 'FAI réseau',
+                    os: 'Système d\'exploitation',
+                    browser: 'Navigateur',
+                    deviceType: 'Type d\'appareil',
+                    screenRes: 'Résolution d\'écran',
+                    language: 'Langue',
+                    loading: 'Chargement...',
+                    loadFailed: 'Échec du chargement',
+                    faqTitle: 'FAQ',
+                    faq1q: 'La localisation de l\'adresse IP est-elle précise ?',
+                    faq1a: 'Généralement précise au niveau de la ville, la précision dépend de la fréquence de mise à jour de la base de données IP. Différentes bases de données peuvent avoir de légères variations.',
+                    faq2q: 'Puis-je rechercher des adresses IP privées ?',
+                    faq2a: 'Non, les IP privées (comme 192.168.x.x, 10.x.x.x, 172.16.x.x) sont des plages d\'adresses privées et ne peuvent pas être géolocalisées via des bases de données publiques.',
+                    faq3q: 'Quelles informations IP sont incluses ?',
+                    faq3a: 'Inclut le pays, la ville, le FAI, l\'ASN, le fuseau horaire, les coordonnées, le code postal et autres détails.',
+                    faq4q: 'Comment voir mon IP publique ?',
+                    faq4a: 'Votre IP publique est automatiquement affichée lorsque vous ouvrez la page. La section "Informations client" en bas affichera automatiquement.',
+                    faq5q: 'La recherche IP enregistre-t-elle mes informations ?',
+                    faq5a: 'Non, cet outil est purement basé sur le frontend. Les résultats de recherche sont uniquement affichés dans le navigateur et aucune donnée n\'est stockée.',
+                    relatedTools: '🔗 Outils connexes',
+                    toolWhois: 'Recherche WHOIS',
+                    toolWhoisDesc: 'Infos d\'enregistrement de domaine',
+                    toolWebsocket: 'Test WebSocket',
+                    toolWebsocketDesc: 'Débogage connexion WebSocket',
+                    toolJson: 'Formateur JSON',
+                    toolJsonDesc: 'Formater & valider JSON',
+                    toolCrypto: 'Outils crypto',
+                    toolCryptoDesc: 'Base64/MD5/SHA etc.',
+                    footerPrivacy: 'Traitement purement frontend, les données ne sont pas téléchargées',
+                    footerBack: '← Retour à Web Toolbox',
+                    errorEnterInput: 'Veuillez entrer une adresse IP ou un domaine',
+                    errorInvalidInput: 'Veuillez entrer une adresse IP ou un domaine valide',
+                    errorDnsResolve: 'Échec de la résolution du domaine, veuillez vérifier le domaine',
+                    errorQueryFailed: 'Échec de la recherche, veuillez vérifier votre entrée',
+                    coordsLabel: 'Lat: {lat}, Lon: {lon}',
+                    deviceDesktop: 'Ordinateur',
+                    deviceTablet: 'Tablette',
+                    deviceMobile: 'Mobile'
+                },
+                'es': {
+                    pageTitle: '🌍 Búsqueda de dirección IP',
+                    pageSubtitle: 'Consulta la dirección IP o dominio para geolocalización, ISP, rango IP y más',
+                    backToToolbox: '← Volver a herramientas',
+                    searchPlaceholder: 'Ingrese dirección IP o dominio, ej: 8.8.8.8 o google.com',
+                    searchBtn: '🔍 Buscar',
+                    quickAliDns: 'DNS Alibaba',
+                    quickBaidu: 'Baidu',
+                    featureIpTitle: 'Ubicación IP',
+                    featureIpDesc: 'Consulta la geolocalización de la dirección IP, incluyendo país, ciudad e ISP',
+                    featureMyIpTitle: 'Mi IP',
+                    featureMyIpDesc: 'Detecta y muestra automáticamente tu dirección IP pública actual',
+                    featureDetailTitle: 'Info detallada',
+                    featureDetailDesc: 'Muestra ASN, zona horaria, coordenadas y otros detalles',
+                    featureMapTitle: 'Vista de mapa',
+                    featureMapDesc: 'Muestra visualmente la ubicación IP en un mapa',
+                    labelIpDomain: '📍 IP / Dominio',
+                    labelResolvedIp: '🔢 IP resuelta',
+                    labelNumericAddr: '🔢 Dirección numérica (Decimal)',
+                    labelIpRange: '📊 Rango IP',
+                    labelCountry: '🌍 País/Región',
+                    labelCity: '🏙️ Ciudad',
+                    labelIsp: '🏢 ISP / Operador',
+                    labelOrg: '🏛️ Organización',
+                    labelTimezone: '🕐 Zona horaria',
+                    labelPostal: '📮 Código postal',
+                    geoCoords: '📍 Coordenadas geográficas',
+                    querySuccess: 'Búsqueda exitosa',
+                    clientInfoTitle: 'Información del cliente',
+                    yourPublicIp: 'Tu IP pública',
+                    ipLocation: 'Ubicación IP',
+                    networkIsp: 'ISP de red',
+                    os: 'Sistema operativo',
+                    browser: 'Navegador',
+                    deviceType: 'Tipo de dispositivo',
+                    screenRes: 'Resolución de pantalla',
+                    language: 'Idioma',
+                    loading: 'Cargando...',
+                    loadFailed: 'Error al cargar',
+                    faqTitle: 'Preguntas frecuentes',
+                    faq1q: '¿Es precisa la ubicación de la dirección IP?',
+                    faq1a: 'Generalmente precisa a nivel de ciudad, la precisión depende de la frecuencia de actualización de la base de datos IP. Diferentes bases de datos pueden tener ligeras variaciones.',
+                    faq2q: '¿Puedo consultar direcciones IP privadas?',
+                    faq2a: 'No, las IP privadas (como 192.168.x.x, 10.x.x.x, 172.16.x.x) son rangos de direcciones privadas y no se pueden geolocalizar a través de bases de datos públicas.',
+                    faq3q: '¿Qué información IP se incluye?',
+                    faq3a: 'Incluye país, ciudad, ISP, ASN, zona horaria, coordenadas, código postal y otros detalles.',
+                    faq4q: '¿Cómo ver mi IP pública?',
+                    faq4a: 'Tu IP pública se muestra automáticamente cuando abres la página. La sección "Información del cliente" en la parte inferior lo mostrará automáticamente.',
+                    faq5q: '¿La búsqueda IP registra mi información?',
+                    faq5a: 'No, esta herramienta es puramente frontend. Los resultados de búsqueda solo se muestran en el navegador y no se almacenan datos.',
+                    relatedTools: '🔗 Herramientas relacionadas',
+                    toolWhois: 'Búsqueda WHOIS',
+                    toolWhoisDesc: 'Info de registro de dominio',
+                    toolWebsocket: 'Prueba WebSocket',
+                    toolWebsocketDesc: 'Depuración conexión WebSocket',
+                    toolJson: 'Formateador JSON',
+                    toolJsonDesc: 'Formatear y validar JSON',
+                    toolCrypto: 'Herramientas crypto',
+                    toolCryptoDesc: 'Base64/MD5/SHA etc.',
+                    footerPrivacy: 'Procesamiento puramente frontend, los datos no se suben al servidor',
+                    footerBack: '← Volver a Web Toolbox',
+                    errorEnterInput: 'Por favor ingrese una dirección IP o dominio',
+                    errorInvalidInput: 'Por favor ingrese una dirección IP o dominio válido',
+                    errorDnsResolve: 'Error en la resolución del dominio, por favor verifique el dominio',
+                    errorQueryFailed: 'Error en la búsqueda, por favor verifique su entrada',
+                    coordsLabel: 'Lat: {lat}, Lon: {lon}',
+                    deviceDesktop: 'Escritorio',
+                    deviceTablet: 'Tableta',
+                    deviceMobile: 'Móvil'
+                }
+            },
+
+            t(key, params = {}) {
+                let text = this.translations[this.currentLang]?.[key] || this.translations['en'][key] || key;
+                Object.keys(params).forEach(k => {
+                    text = text.replace(`{${k}}`, params[k]);
+                });
+                return text;
+            },
+
+            setLang(lang) {
+                if (!this.translations[lang]) lang = 'en';
+                this.currentLang = lang;
+                localStorage.setItem('preferredLang', lang);
+                this.updatePage();
+                this.updateLangButton();
+            },
+
+            updatePage() {
+                document.querySelectorAll('[data-i18n]').forEach(el => {
+                    const key = el.getAttribute('data-i18n');
+                    if (key) el.textContent = this.t(key);
+                });
+                document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                    const key = el.getAttribute('data-i18n-placeholder');
+                    if (key) el.placeholder = this.t(key);
+                });
+                // 更新动态生成的 FAQ 和相关工具
+                this.updateFAQ();
+                this.updateRelatedTools();
+                this.updateFooter();
+            },
+
+            updateLangButton() {
+                const langNames = { 'en': '🌐 English', 'zh-CN': '🌐 中文', 'fr': '🌐 Français', 'es': '🌐 Español' };
+                document.getElementById('langCurrent').textContent = langNames[this.currentLang] || '🌐 English';
+            },
+
+            updateFAQ() {
+                const faqSection = document.querySelector('.faq-section');
+                if (!faqSection) return;
+                faqSection.querySelector('h2').textContent = this.t('faqTitle');
+                const faqs = [
+                    { q: 'faq1q', a: 'faq1a' },
+                    { q: 'faq2q', a: 'faq2a' },
+                    { q: 'faq3q', a: 'faq3a' },
+                    { q: 'faq4q', a: 'faq4a' },
+                    { q: 'faq5q', a: 'faq5a' }
+                ];
+                const details = faqSection.querySelectorAll('details');
+                details.forEach((detail, index) => {
+                    if (faqs[index]) {
+                        detail.querySelector('summary span:first-child').textContent = this.t(faqs[index].q);
+                        detail.querySelector('p').textContent = this.t(faqs[index].a);
+                    }
+                });
+            },
+
+            updateRelatedTools() {
+                const section = document.querySelector('.related-tools');
+                if (!section) return;
+                section.querySelector('h3').textContent = this.t('relatedTools');
+                const tools = section.querySelectorAll('a');
+                const toolData = [
+                    { title: 'toolWhois', desc: 'toolWhoisDesc' },
+                    { title: 'toolWebsocket', desc: 'toolWebsocketDesc' },
+                    { title: 'toolJson', desc: 'toolJsonDesc' },
+                    { title: 'toolCrypto', desc: 'toolCryptoDesc' }
+                ];
+                tools.forEach((tool, index) => {
+                    if (toolData[index]) {
+                        tool.querySelector('div:nth-child(2)').textContent = this.t(toolData[index].title);
+                        tool.querySelector('div:nth-child(3)').textContent = this.t(toolData[index].desc);
+                    }
+                });
+            },
+
+            updateFooter() {
+                const footer = document.querySelector('footer');
+                if (!footer) return;
+                const p1 = footer.querySelector('p:first-child');
+                const backLink = footer.querySelector('a[href="index.html"]');
+                if (p1) p1.textContent = this.t('footerPrivacy');
+                if (backLink) backLink.textContent = this.t('footerBack');
+            },
+
+            init() {
+                const saved = localStorage.getItem('preferredLang');
+                const browserLang = navigator.language || navigator.userLanguage;
+                let defaultLang = 'en';
+                if (saved && this.translations[saved]) {
+                    defaultLang = saved;
+                } else if (browserLang.startsWith('zh')) {
+                    defaultLang = 'zh-CN';
+                } else if (browserLang.startsWith('fr')) {
+                    defaultLang = 'fr';
+                } else if (browserLang.startsWith('es')) {
+                    defaultLang = 'es';
+                }
+                this.currentLang = defaultLang;
+                this.updatePage();
+                this.updateLangButton();
+            }
+        };
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                const lang = this.getAttribute('data-lang');
+                i18n.setLang(lang);
+                document.getElementById('langDropdown').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
+        // ==================== IP 查询功能 ====================
+
         // IP转数字
         function ipToNumber(ip) {
             const parts = ip.split('.').map(Number);
@@ -686,7 +1129,7 @@
                             const aRecord = data.Answer.find(r => r.type === 1);
                             if (aRecord) return aRecord.data;
                         }
-                        throw new Error('无法解析域名');
+                        throw new Error(i18n.t('errorDnsResolve'));
                     }
                 },
                 {
@@ -698,7 +1141,7 @@
                             const aRecord = data.Answer.find(r => r.type === 1);
                             if (aRecord) return aRecord.data;
                         }
-                        throw new Error('无法解析域名');
+                        throw new Error(i18n.t('errorDnsResolve'));
                     }
                 }
             ];
@@ -707,10 +1150,10 @@
                 try {
                     return await api.resolve(domain);
                 } catch (e) {
-                    console.log(`DNS ${api.name} 失败:`, e.message);
+                    console.log(`DNS ${api.name} failed:`, e.message);
                 }
             }
-            throw new Error('域名解析失败，请检查域名是否正确');
+            throw new Error(i18n.t('errorDnsResolve'));
         }
 
         // 多API查询策略 - 优先使用 HTTPS API
@@ -721,7 +1164,7 @@
                     const response = await fetch(`https://ipwho.is/${input}`);
                     const data = await response.json();
                     if (!data.success) {
-                        throw new Error(data.message || '查询失败');
+                        throw new Error(data.message || 'Query failed');
                     }
                     return {
                         ip: data.ip,
@@ -745,7 +1188,7 @@
                     const response = await fetch(`https://ip-api.io/json/${input}`);
                     const data = await response.json();
                     if (!data.ip) {
-                        throw new Error(data.message || '查询失败');
+                        throw new Error(data.message || 'Query failed');
                     }
                     return {
                         ip: data.ip,
@@ -769,7 +1212,7 @@
         async function queryIP() {
             const input = document.getElementById('searchInput').value.trim();
             if (!input) {
-                showError('请输入IP地址或域名');
+                showError(i18n.t('errorEnterInput'));
                 return;
             }
 
@@ -787,7 +1230,7 @@
             if (isDomain(input)) {
                 try {
                     ipToQuery = await resolveDomain(input);
-                    console.log(`域名 ${input} 解析为 IP: ${ipToQuery}`);
+                    console.log(`Domain ${input} resolved to IP: ${ipToQuery}`);
                 } catch (e) {
                     showError(e.message);
                     btn.classList.remove('loading');
@@ -795,7 +1238,7 @@
                     return;
                 }
             } else if (!isValidIP(input)) {
-                showError('请输入有效的IP地址或域名');
+                showError(i18n.t('errorInvalidInput'));
                 btn.classList.remove('loading');
                 btn.disabled = false;
                 return;
@@ -819,7 +1262,7 @@
                     document.getElementById('resOrg').textContent = data.as || data.org || '-';
                     document.getElementById('resTimezone').textContent = data.timezone || '-';
                     document.getElementById('resZip').textContent = data.zip || '-';
-                    document.getElementById('resCoords').textContent = `纬度: ${data.lat}, 经度: ${data.lon}`;
+                    document.getElementById('resCoords').textContent = i18n.t('coordsLabel', { lat: data.lat, lon: data.lon });
 
                     document.getElementById('resultIcon').textContent = countryToFlag(data.countryCode);
                     document.getElementById('resultQuery').textContent = input;
@@ -834,13 +1277,13 @@
 
                 } catch (error) {
                     lastError = error;
-                    console.log(`API ${api.name} 失败:`, error.message);
+                    console.log(`API ${api.name} failed:`, error.message);
                     // 继续尝试下一个API
                 }
             }
 
             // 所有API都失败了
-            showError(lastError?.message || '查询失败，请检查输入是否正确');
+            showError(lastError?.message || i18n.t('errorQueryFailed'));
             btn.classList.remove('loading');
             btn.disabled = false;
         }
@@ -911,13 +1354,13 @@
                         break;
                     }
                 } catch (e) {
-                    console.log(`Client API ${api.name} 失败:`, e.message);
+                    console.log(`Client API ${api.name} failed:`, e.message);
                 }
             }
 
             // 如果所有API都失败
-            if (document.getElementById('clientIP').textContent === '获取中...') {
-                document.getElementById('clientIP').textContent = '获取失败';
+            if (document.getElementById('clientIP').textContent === i18n.t('loading')) {
+                document.getElementById('clientIP').textContent = i18n.t('loadFailed');
                 document.getElementById('clientLocation').textContent = '-';
                 document.getElementById('clientISP').textContent = '-';
             }
@@ -968,10 +1411,10 @@
             document.getElementById('clientBrowser').textContent = browser;
 
             // 设备类型
-            let device = '桌面电脑';
+            let device = i18n.t('deviceDesktop');
             if (/Mobi|Android|iPhone|iPad|iPod/i.test(ua)) {
-                if (/iPad|Tablet/i.test(ua)) device = '平板电脑';
-                else device = '手机';
+                if (/iPad|Tablet/i.test(ua)) device = i18n.t('deviceTablet');
+                else device = i18n.t('deviceMobile');
             }
             document.getElementById('clientDevice').textContent = device;
 
@@ -990,82 +1433,83 @@
         });
 
         // 初始化
+        i18n.init();
         getClientInfo();
     </script>
 
     <!-- FAQ 问答区块 -->
     <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;" data-i18n="faqTitle">FAQ</h2>
         <div style="display: flex; flex-direction: column; gap: 16px;">
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
                 <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>IP 地址定位准确吗？</span>
+                    <span data-i18n="faq1q">Is IP address location accurate?</span>
                     <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
                 </summary>
-                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">通常精确到城市级别，精度取决于 IP 数据库的更新频率。不同的 IP 归属地数据库可能会有细微差异，企业级 IP 通常定位更准确。</p>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;" data-i18n="faq1a">Usually accurate to city level, precision depends on IP database update frequency. Different IP databases may have slight variations, enterprise IPs are usually more accurate.</p>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
                 <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>可以查询内网 IP 吗？</span>
+                    <span data-i18n="faq2q">Can I query private IP addresses?</span>
                     <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
                 </summary>
-                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">不可以，内网 IP（如 192.168.x.x、10.x.x.x、172.16.x.x）属于私有地址段，无法通过公共数据库定位地理位置。</p>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;" data-i18n="faq2a">No, private IPs (like 192.168.x.x, 10.x.x.x, 172.16.x.x) are private address ranges and cannot be geolocated through public databases.</p>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
                 <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>查询的 IP 信息包括哪些？</span>
+                    <span data-i18n="faq3q">What IP information is included?</span>
                     <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
                 </summary>
-                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">包括国家、城市、ISP（互联网服务提供商）、ASN（自治系统号）、时区、经纬度坐标、邮政编码等详细信息。</p>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;" data-i18n="faq3a">Includes country, city, ISP (Internet Service Provider), ASN (Autonomous System Number), timezone, coordinates, postal code and other details.</p>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
                 <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>如何查看自己的公网 IP？</span>
+                    <span data-i18n="faq4q">How to view my public IP?</span>
                     <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
                 </summary>
-                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">打开页面即可自动显示你当前的公网 IP 地址，无需手动操作。页面底部的"本机客户端信息"区域会自动获取并展示。</p>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;" data-i18n="faq4a">Your public IP is automatically displayed when you open the page. The "Client Information" section at the bottom will automatically fetch and display it.</p>
             </details>
             <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 16px 20px;">
                 <summary style="font-weight: 500; color: #e4e4e7; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    <span>IP 查询会记录我的信息吗？</span>
+                    <span data-i18n="faq5q">Does IP lookup record my information?</span>
                     <span style="color: #7c3aed; font-size: 1.2rem;">+</span>
                 </summary>
-                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;">不会，本工具是纯前端实现，查询结果仅在浏览器中显示，不会存储或上传任何数据到我们的服务器。</p>
+                <p style="margin-top: 12px; color: #a1a1aa; line-height: 1.6; padding-left: 4px;" data-i18n="faq5a">No, this tool is purely frontend-based. Query results are only displayed in the browser and no data is stored or uploaded to our servers.</p>
             </details>
         </div>
     </section>
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="relatedTools">Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="whois-query.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔎</div>
-                <div style="color: #e6edf3; font-weight: 500;">WHOIS 查询</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">域名注册信息查询</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolWhois">WHOIS Lookup</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolWhoisDesc">Domain registration info</div>
             </a>
             <a href="websocket-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
-                <div style="color: #e6edf3; font-weight: 500;">WebSocket 测试</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolWebsocket">WebSocket Test</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolWebsocketDesc">WebSocket connection debug</div>
             </a>
             <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
-                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolJson">JSON Formatter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolJsonDesc">JSON format & validate</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #e6edf3; font-weight: 500;">加密解密工具</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA等</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolCrypto">Crypto Tools</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolCryptoDesc">Base64/MD5/SHA etc.</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

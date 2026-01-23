@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ===================== SEO META ===================== -->
-    <title>图片合并为PDF - 在线图片转PDF工具 | Web Toolbox</title>
-    <meta name="description" content="免费在线图片合并为PDF工具，支持多图拖拽排序、截图粘贴、手机扫码上传。支持JPG/PNG/WEBP格式，可自定义页面尺寸，一键生成高质量PDF文件。">
-    <meta name="keywords" content="图片转PDF,图片合并PDF,多图合并,截图转PDF,在线PDF生成,图片拖拽排序,免费PDF工具">
+    <title>Image to PDF Converter - Merge Images into PDF Online | Web Toolbox</title>
+    <meta name="description" content="Free online image to PDF converter. Merge multiple images into one PDF with drag-and-drop sorting, clipboard paste, and QR code upload. Supports JPG/PNG/WEBP formats.">
+    <meta name="keywords" content="image to pdf,merge images pdf,convert images to pdf,online pdf generator,free pdf tool,drag drop pdf">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/image-to-pdf.html">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/image-to-pdf.html">
-    <meta property="og:title" content="图片合并为PDF - 在线图片转PDF工具">
-    <meta property="og:description" content="免费在线图片合并为PDF工具，支持多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF。">
+    <meta property="og:title" content="Image to PDF Converter - Merge Images into PDF Online">
+    <meta property="og:description" content="Free online image to PDF converter. Merge multiple images with drag-and-drop sorting, clipboard paste support.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/image-to-pdf.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="图片合并为PDF - 在线图片转PDF工具">
-    <meta name="twitter:description" content="免费在线图片合并为PDF，支持拖拽排序、截图粘贴、手机扫码上传。">
+    <meta name="twitter:title" content="Image to PDF Converter - Merge Images into PDF Online">
+    <meta name="twitter:description" content="Free online image to PDF converter with drag-and-drop sorting, clipboard paste, QR code upload.">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "图片合并为PDF",
-        "description": "免费在线图片合并为PDF工具，支持多图拖拽排序、截图粘贴上传，一键生成高质量PDF文件",
+        "name": "Image to PDF Converter",
+        "description": "Free online image to PDF converter. Merge multiple images into one PDF with drag-and-drop sorting and clipboard paste support",
         "url": "https://www.heyuan110.com/web-toolbox/image-to-pdf.html",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -43,42 +43,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "支持哪些图片格式？",
+                "name": "What image formats are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式。"
+                    "text": "Supports JPG, PNG, WebP, GIF, BMP and other common image formats."
                 }
             },
             {
                 "@type": "Question",
-                "name": "最多可以合并多少张图片？",
+                "name": "How many images can I merge at once?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "理论上无限制，取决于浏览器内存，建议单次不超过100张。"
+                    "text": "Theoretically unlimited, depends on browser memory. Recommended not to exceed 100 images per conversion."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以调整图片顺序吗？",
+                "name": "Can I reorder the images?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以，拖拽图片缩略图即可调整在 PDF 中的顺序。"
+                    "text": "Yes, you can drag and drop image thumbnails to adjust the page order in the PDF."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持哪些纸张大小？",
+                "name": "What page sizes are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持 A4、A3、Letter、Legal 等常用纸张大小。"
+                    "text": "Supports A4, A3, Letter, Legal and other common page sizes."
                 }
             },
             {
                 "@type": "Question",
-                "name": "图片会上传到服务器吗？",
+                "name": "Are my images uploaded to a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会，使用 jsPDF 库在本地浏览器完成转换，图片数据完全保留在本地。"
+                    "text": "No, the conversion is done locally in your browser using jsPDF library. Your images never leave your device."
                 }
             }
         ]
@@ -90,9 +90,9 @@
     <script>
     const TOOL_META = {
         slug: 'image-to-pdf',
-        name: '图片合并为PDF',
-        description: '多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF文件',
-        keywords: ['图片转PDF', '合并PDF', '截图转PDF', '拖拽排序']
+        name: 'Image to PDF Converter',
+        description: 'Merge multiple images into PDF with drag-and-drop sorting, clipboard paste, QR code upload',
+        keywords: ['Image to PDF', 'Merge PDF', 'Screenshot to PDF', 'Drag Drop']
     };
     </script>
     <!-- ===================== /TOOL_META ===================== -->
@@ -128,6 +128,7 @@
         header {
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
         }
 
         .back-link {
@@ -159,6 +160,16 @@
             color: #a1a1aa;
             font-size: 1rem;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 主体布局 */
         .main-layout {
@@ -278,7 +289,7 @@
         }
 
         .image-list:empty::before {
-            content: "暂无图片，请上传图片";
+            content: attr(data-empty-text);
             grid-column: 1 / -1;
             text-align: center;
             color: #71717a;
@@ -752,32 +763,43 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link">← 返回工具列表</a>
-            <h1>📄 图片合并为PDF</h1>
-            <p class="subtitle">多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" data-i18n="backToList">← Back to Tools</a>
+            <h1 data-i18n="pageTitle">📄 Image to PDF Converter</h1>
+            <p class="subtitle" data-i18n="pageSubtitle">Merge multiple images into PDF with drag-and-drop sorting, clipboard paste, QR code upload</p>
         </header>
 
         <!-- 功能特点 -->
         <section class="features-section">
             <div class="feature-card">
                 <div class="feature-icon">📚</div>
-                <h3 class="feature-title">批量转换</h3>
-                <p class="feature-desc">支持多张图片合并为一个 PDF 文件，一次上传批量处理</p>
+                <h3 class="feature-title" data-i18n="featureBatchTitle">Batch Convert</h3>
+                <p class="feature-desc" data-i18n="featureBatchDesc">Merge multiple images into one PDF file, upload and process in batch</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🔀</div>
-                <h3 class="feature-title">顺序调整</h3>
-                <p class="feature-desc">可拖拽排序图片，自定义 PDF 页面顺序</p>
+                <h3 class="feature-title" data-i18n="featureOrderTitle">Reorder</h3>
+                <p class="feature-desc" data-i18n="featureOrderDesc">Drag and drop to reorder images, customize PDF page sequence</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">📐</div>
-                <h3 class="feature-title">页面设置</h3>
-                <p class="feature-desc">支持 A4、Letter 等纸张大小和横竖方向选择</p>
+                <h3 class="feature-title" data-i18n="featurePageTitle">Page Settings</h3>
+                <p class="feature-desc" data-i18n="featurePageDesc">Supports A4, Letter and more page sizes with orientation options</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⚡</div>
-                <h3 class="feature-title">即时生成</h3>
-                <p class="feature-desc">本地浏览器完成转换，即刻下载无需等待</p>
+                <h3 class="feature-title" data-i18n="featureInstantTitle">Instant Generate</h3>
+                <p class="feature-desc" data-i18n="featureInstantDesc">Convert locally in browser, download instantly without waiting</p>
             </div>
         </section>
 
@@ -785,15 +807,15 @@
             <!-- 左侧：上传和图片列表 -->
             <div class="left-panel">
                 <div class="card">
-                    <h2 class="card-title">📤 上传图片</h2>
+                    <h2 class="card-title" data-i18n="uploadTitle">📤 Upload Images</h2>
 
                     <!-- 上传区域 -->
                     <div class="upload-zone" id="uploadZone">
                         <div class="upload-icon">🖼️</div>
-                        <p class="upload-text">点击选择图片 或 拖拽图片到此处</p>
-                        <p class="upload-hint">
-                            支持 JPG / PNG / WEBP / GIF / BMP 格式<br>
-                            截图粘贴：<kbd>Ctrl</kbd> + <kbd>V</kbd> (Mac: <kbd>⌘</kbd> + <kbd>V</kbd>)
+                        <p class="upload-text" data-i18n="uploadText">Click to select images or drag and drop here</p>
+                        <p class="upload-hint" data-i18n="uploadHint">
+                            Supports JPG / PNG / WEBP / GIF / BMP formats<br>
+                            Paste screenshot: <kbd>Ctrl</kbd> + <kbd>V</kbd> (Mac: <kbd>⌘</kbd> + <kbd>V</kbd>)
                         </p>
                     </div>
                     <input type="file" id="fileInput" class="hidden-input" multiple accept="image/*">
@@ -801,17 +823,17 @@
                     <!-- 快捷按钮 -->
                     <div class="quick-upload">
                         <button class="quick-btn" id="btnSelectFiles">
-                            📁 选择文件
+                            📁 <span data-i18n="selectFiles">Select Files</span>
                         </button>
                         <button class="quick-btn" id="btnSelectFolder">
-                            📂 选择文件夹
+                            📂 <span data-i18n="selectFolder">Select Folder</span>
                         </button>
                     </div>
                     <input type="file" id="folderInput" class="hidden-input" webkitdirectory multiple accept="image/*">
 
                     <!-- 图片列表 -->
-                    <h3 class="card-title" style="margin-top: 24px;">🖼️ 图片列表 <span style="font-weight: normal; font-size: 0.85rem; color: #71717a;">(拖拽可调整顺序)</span></h3>
-                    <div class="image-list" id="imageList"></div>
+                    <h3 class="card-title" style="margin-top: 24px;">🖼️ <span data-i18n="imageListTitle">Image List</span> <span style="font-weight: normal; font-size: 0.85rem; color: #71717a;" data-i18n="imageListHint">(Drag to reorder)</span></h3>
+                    <div class="image-list" id="imageList" data-empty-text="No images, please upload images"></div>
                 </div>
             </div>
 
@@ -820,98 +842,98 @@
                 <!-- 二维码 -->
                 <div class="card">
                     <div class="qrcode-section">
-                        <p class="qrcode-title">📱 手机扫码上传</p>
+                        <p class="qrcode-title" data-i18n="qrcodeTitle">📱 Scan to Upload from Phone</p>
                         <div id="qrcode"></div>
-                        <p class="qrcode-hint">手机扫码打开本工具<br>直接在手机上选择图片</p>
+                        <p class="qrcode-hint" data-i18n="qrcodeHint">Scan QR code to open this tool<br>Select images directly on your phone</p>
                     </div>
                 </div>
 
                 <!-- 设置 -->
                 <div class="card" style="margin-top: 20px;">
-                    <h2 class="card-title">⚙️ PDF 设置</h2>
+                    <h2 class="card-title" data-i18n="settingsTitle">⚙️ PDF Settings</h2>
 
                     <div class="settings-section">
-                        <label class="setting-label">页面尺寸</label>
+                        <label class="setting-label" data-i18n="pageSizeLabel">Page Size</label>
                         <select class="setting-select" id="pageSize">
-                            <option value="a4">A4 (210 × 297 mm)</option>
-                            <option value="a3">A3 (297 × 420 mm)</option>
-                            <option value="a5">A5 (148 × 210 mm)</option>
-                            <option value="letter">Letter (216 × 279 mm)</option>
-                            <option value="fit" selected>自适应图片尺寸</option>
+                            <option value="a4" data-i18n="pageSizeA4">A4 (210 × 297 mm)</option>
+                            <option value="a3" data-i18n="pageSizeA3">A3 (297 × 420 mm)</option>
+                            <option value="a5" data-i18n="pageSizeA5">A5 (148 × 210 mm)</option>
+                            <option value="letter" data-i18n="pageSizeLetter">Letter (216 × 279 mm)</option>
+                            <option value="fit" selected data-i18n="pageSizeFit">Fit to Image Size</option>
                         </select>
                     </div>
 
                     <div class="settings-section">
-                        <label class="setting-label">页面方向</label>
+                        <label class="setting-label" data-i18n="orientationLabel">Page Orientation</label>
                         <select class="setting-select" id="pageOrientation">
-                            <option value="auto" selected>自动判断</option>
-                            <option value="portrait">纵向</option>
-                            <option value="landscape">横向</option>
+                            <option value="auto" selected data-i18n="orientationAuto">Auto Detect</option>
+                            <option value="portrait" data-i18n="orientationPortrait">Portrait</option>
+                            <option value="landscape" data-i18n="orientationLandscape">Landscape</option>
                         </select>
                     </div>
 
                     <div class="settings-section">
-                        <label class="setting-label">图片质量</label>
+                        <label class="setting-label" data-i18n="qualityLabel">Image Quality</label>
                         <select class="setting-select" id="imageQuality">
-                            <option value="1">最高质量</option>
-                            <option value="0.9" selected>高质量 (推荐)</option>
-                            <option value="0.7">中等质量</option>
-                            <option value="0.5">低质量 (文件更小)</option>
+                            <option value="1" data-i18n="qualityHighest">Highest Quality</option>
+                            <option value="0.9" selected data-i18n="qualityHigh">High Quality (Recommended)</option>
+                            <option value="0.7" data-i18n="qualityMedium">Medium Quality</option>
+                            <option value="0.5" data-i18n="qualityLow">Low Quality (Smaller File)</option>
                         </select>
                     </div>
 
                     <div class="settings-section">
-                        <label class="setting-label">页边距 (mm)</label>
+                        <label class="setting-label" data-i18n="marginLabel">Page Margin (mm)</label>
                         <input type="number" class="setting-input" id="pageMargin" value="10" min="0" max="50">
                     </div>
 
                     <div class="settings-section">
-                        <label class="setting-label">文件名</label>
-                        <input type="text" class="setting-input" id="fileName" value="merged" placeholder="输入文件名">
+                        <label class="setting-label" data-i18n="fileNameLabel">File Name</label>
+                        <input type="text" class="setting-input" id="fileName" value="merged" data-i18n-placeholder="fileNamePlaceholder" placeholder="Enter file name">
                     </div>
 
                     <!-- 统计 -->
                     <div class="stats">
                         <div class="stat-item">
                             <div class="stat-value" id="imageCount">0</div>
-                            <div class="stat-label">图片数量</div>
+                            <div class="stat-label" data-i18n="statImages">Images</div>
                         </div>
                         <div class="stat-item">
                             <div class="stat-value" id="totalSize">0</div>
-                            <div class="stat-label">总大小 (MB)</div>
+                            <div class="stat-label" data-i18n="statSize">Size (MB)</div>
                         </div>
                     </div>
 
                     <!-- 生成按钮 -->
                     <button class="generate-btn" id="generateBtn" disabled>
-                        📄 生成 PDF
+                        📄 <span data-i18n="generateBtn">Generate PDF</span>
                     </button>
                     <div class="progress-bar" id="progressBar">
                         <div class="progress-fill" id="progressFill"></div>
                     </div>
 
-                    <button class="clear-btn" id="clearBtn">🗑️ 清空所有图片</button>
+                    <button class="clear-btn" id="clearBtn" data-i18n="clearBtn">🗑️ Clear All Images</button>
                 </div>
 
                 <!-- 使用说明 -->
                 <div class="card usage-section" style="margin-top: 20px;">
-                    <h2 class="card-title">📖 使用说明</h2>
+                    <h2 class="card-title" data-i18n="usageTitle">📖 How to Use</h2>
                     <ul class="usage-list">
                         <li>
                             <span class="usage-step">1</span>
-                            <span>上传图片：点击选择、拖拽上传、粘贴截图或手机扫码</span>
+                            <span data-i18n="usageStep1">Upload images: click to select, drag and drop, paste screenshot, or scan QR code</span>
                         </li>
                         <li>
                             <span class="usage-step">2</span>
-                            <span>拖拽图片调整顺序，确保PDF页面排列正确</span>
+                            <span data-i18n="usageStep2">Drag images to adjust order for correct PDF page sequence</span>
                         </li>
                         <li>
                             <span class="usage-step">3</span>
-                            <span>设置页面尺寸、方向和质量等参数</span>
+                            <span data-i18n="usageStep3">Configure page size, orientation and quality settings</span>
                         </li>
                         <li>
                             <span class="usage-step">4</span>
-                            <span>点击"生成PDF"按钮，自动下载到本地</span>
+                            <span data-i18n="usageStep4">Click "Generate PDF" button to download locally</span>
                         </li>
                     </ul>
                 </div>
@@ -919,7 +941,7 @@
         </div>
 
         <footer>
-            <p>Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">返回工具列表</a></p>
+            <p>Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html" data-i18n="backToList">← Back to Tools</a></p>
         </footer>
     </div>
 
@@ -930,6 +952,402 @@
     <script>
     (function() {
         'use strict';
+
+        // ===== i18n 多语言支持 =====
+        const i18n = {
+            'en': {
+                pageTitle: '📄 Image to PDF Converter',
+                pageSubtitle: 'Merge multiple images into PDF with drag-and-drop sorting, clipboard paste, QR code upload',
+                backToList: '← Back to Tools',
+                featureBatchTitle: 'Batch Convert',
+                featureBatchDesc: 'Merge multiple images into one PDF file, upload and process in batch',
+                featureOrderTitle: 'Reorder',
+                featureOrderDesc: 'Drag and drop to reorder images, customize PDF page sequence',
+                featurePageTitle: 'Page Settings',
+                featurePageDesc: 'Supports A4, Letter and more page sizes with orientation options',
+                featureInstantTitle: 'Instant Generate',
+                featureInstantDesc: 'Convert locally in browser, download instantly without waiting',
+                uploadTitle: '📤 Upload Images',
+                uploadText: 'Click to select images or drag and drop here',
+                uploadHint: 'Supports JPG / PNG / WEBP / GIF / BMP formats<br>Paste screenshot: <kbd>Ctrl</kbd> + <kbd>V</kbd> (Mac: <kbd>⌘</kbd> + <kbd>V</kbd>)',
+                selectFiles: 'Select Files',
+                selectFolder: 'Select Folder',
+                imageListTitle: 'Image List',
+                imageListHint: '(Drag to reorder)',
+                imageListEmpty: 'No images, please upload images',
+                qrcodeTitle: '📱 Scan to Upload from Phone',
+                qrcodeHint: 'Scan QR code to open this tool<br>Select images directly on your phone',
+                settingsTitle: '⚙️ PDF Settings',
+                pageSizeLabel: 'Page Size',
+                pageSizeA4: 'A4 (210 × 297 mm)',
+                pageSizeA3: 'A3 (297 × 420 mm)',
+                pageSizeA5: 'A5 (148 × 210 mm)',
+                pageSizeLetter: 'Letter (216 × 279 mm)',
+                pageSizeFit: 'Fit to Image Size',
+                orientationLabel: 'Page Orientation',
+                orientationAuto: 'Auto Detect',
+                orientationPortrait: 'Portrait',
+                orientationLandscape: 'Landscape',
+                qualityLabel: 'Image Quality',
+                qualityHighest: 'Highest Quality',
+                qualityHigh: 'High Quality (Recommended)',
+                qualityMedium: 'Medium Quality',
+                qualityLow: 'Low Quality (Smaller File)',
+                marginLabel: 'Page Margin (mm)',
+                fileNameLabel: 'File Name',
+                fileNamePlaceholder: 'Enter file name',
+                statImages: 'Images',
+                statSize: 'Size (MB)',
+                generateBtn: 'Generate PDF',
+                generatingBtn: '⏳ Generating...',
+                clearBtn: '🗑️ Clear All Images',
+                usageTitle: '📖 How to Use',
+                usageStep1: 'Upload images: click to select, drag and drop, paste screenshot, or scan QR code',
+                usageStep2: 'Drag images to adjust order for correct PDF page sequence',
+                usageStep3: 'Configure page size, orientation and quality settings',
+                usageStep4: 'Click "Generate PDF" button to download locally',
+                faqTitle: '❓ FAQ',
+                faq1Question: 'What image formats are supported?',
+                faq1Answer: 'Supports JPG, PNG, WebP, GIF, BMP and other common image formats.',
+                faq2Question: 'How many images can I merge at once?',
+                faq2Answer: 'Theoretically unlimited, depends on browser memory. Recommended not to exceed 100 images per conversion.',
+                faq3Question: 'Can I reorder the images?',
+                faq3Answer: 'Yes, after uploading, simply drag image thumbnails to adjust the page order in the PDF.',
+                faq4Question: 'What page sizes are supported?',
+                faq4Answer: 'Supports A4, A3, A5, Letter, Legal and other common sizes, plus fit-to-image mode.',
+                faq5Question: 'Are my images uploaded to a server?',
+                faq5Answer: 'No, the conversion is done locally in your browser using jsPDF library. Your images never leave your device.',
+                relatedTitle: '🔗 Related Tools',
+                relatedCompressor: 'Image Compressor',
+                relatedCompressorDesc: 'Batch compress image files',
+                relatedConverter: 'Image Converter',
+                relatedConverterDesc: 'Convert WebP/PNG/JPG',
+                relatedEditor: 'Image Editor',
+                relatedEditorDesc: 'Edit images online',
+                relatedRenamer: 'File Renamer',
+                relatedRenamerDesc: 'Batch rename files',
+                footerPrivacy: 'Pure frontend processing, images never uploaded to server',
+                toastPasted: 'Pasted {count} image(s)',
+                toastAdded: 'Added {count} image(s)',
+                toastCleared: 'All images cleared',
+                toastSelectImage: 'Please select image files',
+                toastAddFirst: 'Please add images first',
+                toastSuccess: 'PDF generated successfully!',
+                toastError: 'Failed to generate PDF: ',
+                confirmClear: 'Are you sure to clear all images?'
+            },
+            'zh-CN': {
+                pageTitle: '📄 图片合并为PDF',
+                pageSubtitle: '多图拖拽排序、截图粘贴、手机扫码上传，一键生成高质量PDF',
+                backToList: '← 返回工具列表',
+                featureBatchTitle: '批量转换',
+                featureBatchDesc: '支持多张图片合并为一个 PDF 文件，一次上传批量处理',
+                featureOrderTitle: '顺序调整',
+                featureOrderDesc: '可拖拽排序图片，自定义 PDF 页面顺序',
+                featurePageTitle: '页面设置',
+                featurePageDesc: '支持 A4、Letter 等纸张大小和横竖方向选择',
+                featureInstantTitle: '即时生成',
+                featureInstantDesc: '本地浏览器完成转换，即刻下载无需等待',
+                uploadTitle: '📤 上传图片',
+                uploadText: '点击选择图片 或 拖拽图片到此处',
+                uploadHint: '支持 JPG / PNG / WEBP / GIF / BMP 格式<br>截图粘贴：<kbd>Ctrl</kbd> + <kbd>V</kbd> (Mac: <kbd>⌘</kbd> + <kbd>V</kbd>)',
+                selectFiles: '选择文件',
+                selectFolder: '选择文件夹',
+                imageListTitle: '图片列表',
+                imageListHint: '(拖拽可调整顺序)',
+                imageListEmpty: '暂无图片，请上传图片',
+                qrcodeTitle: '📱 手机扫码上传',
+                qrcodeHint: '手机扫码打开本工具<br>直接在手机上选择图片',
+                settingsTitle: '⚙️ PDF 设置',
+                pageSizeLabel: '页面尺寸',
+                pageSizeA4: 'A4 (210 × 297 mm)',
+                pageSizeA3: 'A3 (297 × 420 mm)',
+                pageSizeA5: 'A5 (148 × 210 mm)',
+                pageSizeLetter: 'Letter (216 × 279 mm)',
+                pageSizeFit: '自适应图片尺寸',
+                orientationLabel: '页面方向',
+                orientationAuto: '自动判断',
+                orientationPortrait: '纵向',
+                orientationLandscape: '横向',
+                qualityLabel: '图片质量',
+                qualityHighest: '最高质量',
+                qualityHigh: '高质量 (推荐)',
+                qualityMedium: '中等质量',
+                qualityLow: '低质量 (文件更小)',
+                marginLabel: '页边距 (mm)',
+                fileNameLabel: '文件名',
+                fileNamePlaceholder: '输入文件名',
+                statImages: '图片数量',
+                statSize: '总大小 (MB)',
+                generateBtn: '生成 PDF',
+                generatingBtn: '⏳ 生成中...',
+                clearBtn: '🗑️ 清空所有图片',
+                usageTitle: '📖 使用说明',
+                usageStep1: '上传图片：点击选择、拖拽上传、粘贴截图或手机扫码',
+                usageStep2: '拖拽图片调整顺序，确保PDF页面排列正确',
+                usageStep3: '设置页面尺寸、方向和质量等参数',
+                usageStep4: '点击"生成PDF"按钮，自动下载到本地',
+                faqTitle: '❓ 常见问题',
+                faq1Question: '支持哪些图片格式？',
+                faq1Answer: '支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式，满足日常使用需求。',
+                faq2Question: '最多可以合并多少张图片？',
+                faq2Answer: '理论上无限制，取决于浏览器内存大小。为保证转换顺畅，建议单次不超过100张图片。',
+                faq3Question: '可以调整图片顺序吗？',
+                faq3Answer: '可以，上传图片后直接拖拽图片缩略图即可调整在 PDF 中的页面顺序，非常方便。',
+                faq4Question: '支持哪些纸张大小？',
+                faq4Answer: '支持 A4、A3、A5、Letter、Legal 等常用纸张大小，还可以选择自适应图片尺寸模式。',
+                faq5Question: '图片会上传到服务器吗？',
+                faq5Answer: '不会，本工具使用 jsPDF 库在本地浏览器完成转换，图片数据完全保留在您的设备上，安全可靠。',
+                relatedTitle: '🔗 相关工具推荐',
+                relatedCompressor: '图片压缩',
+                relatedCompressorDesc: '批量压缩图片体积',
+                relatedConverter: '图片格式转换',
+                relatedConverterDesc: 'WebP/PNG/JPG 互转',
+                relatedEditor: '图片编辑器',
+                relatedEditorDesc: '在线编辑图片',
+                relatedRenamer: '文件批量重命名',
+                relatedRenamerDesc: '批量修改文件名',
+                footerPrivacy: '纯前端处理，图片不会上传到服务器',
+                toastPasted: '已粘贴 {count} 张图片',
+                toastAdded: '已添加 {count} 张图片',
+                toastCleared: '已清空所有图片',
+                toastSelectImage: '请选择图片文件',
+                toastAddFirst: '请先添加图片',
+                toastSuccess: 'PDF 生成成功！',
+                toastError: '生成 PDF 失败: ',
+                confirmClear: '确定要清空所有图片吗？'
+            },
+            'fr': {
+                pageTitle: '📄 Convertisseur Image en PDF',
+                pageSubtitle: 'Fusionnez plusieurs images en PDF avec tri par glisser-déposer, collage du presse-papiers, téléchargement QR code',
+                backToList: '← Retour aux outils',
+                featureBatchTitle: 'Conversion par lots',
+                featureBatchDesc: 'Fusionnez plusieurs images en un seul fichier PDF, téléchargez et traitez par lots',
+                featureOrderTitle: 'Réorganiser',
+                featureOrderDesc: 'Glissez et déposez pour réorganiser les images, personnalisez l\'ordre des pages PDF',
+                featurePageTitle: 'Paramètres de page',
+                featurePageDesc: 'Prend en charge A4, Letter et plus de tailles avec options d\'orientation',
+                featureInstantTitle: 'Génération instantanée',
+                featureInstantDesc: 'Conversion locale dans le navigateur, téléchargement instantané sans attente',
+                uploadTitle: '📤 Télécharger des images',
+                uploadText: 'Cliquez pour sélectionner des images ou glissez-déposez ici',
+                uploadHint: 'Formats supportés: JPG / PNG / WEBP / GIF / BMP<br>Coller une capture: <kbd>Ctrl</kbd> + <kbd>V</kbd> (Mac: <kbd>⌘</kbd> + <kbd>V</kbd>)',
+                selectFiles: 'Sélectionner fichiers',
+                selectFolder: 'Sélectionner dossier',
+                imageListTitle: 'Liste des images',
+                imageListHint: '(Glissez pour réorganiser)',
+                imageListEmpty: 'Aucune image, veuillez télécharger des images',
+                qrcodeTitle: '📱 Scannez pour télécharger depuis le téléphone',
+                qrcodeHint: 'Scannez le QR code pour ouvrir cet outil<br>Sélectionnez des images directement sur votre téléphone',
+                settingsTitle: '⚙️ Paramètres PDF',
+                pageSizeLabel: 'Taille de page',
+                pageSizeA4: 'A4 (210 × 297 mm)',
+                pageSizeA3: 'A3 (297 × 420 mm)',
+                pageSizeA5: 'A5 (148 × 210 mm)',
+                pageSizeLetter: 'Letter (216 × 279 mm)',
+                pageSizeFit: 'Adapter à la taille de l\'image',
+                orientationLabel: 'Orientation de la page',
+                orientationAuto: 'Détection automatique',
+                orientationPortrait: 'Portrait',
+                orientationLandscape: 'Paysage',
+                qualityLabel: 'Qualité d\'image',
+                qualityHighest: 'Qualité maximale',
+                qualityHigh: 'Haute qualité (Recommandé)',
+                qualityMedium: 'Qualité moyenne',
+                qualityLow: 'Basse qualité (Fichier plus petit)',
+                marginLabel: 'Marge de page (mm)',
+                fileNameLabel: 'Nom du fichier',
+                fileNamePlaceholder: 'Entrez le nom du fichier',
+                statImages: 'Images',
+                statSize: 'Taille (Mo)',
+                generateBtn: 'Générer PDF',
+                generatingBtn: '⏳ Génération...',
+                clearBtn: '🗑️ Effacer toutes les images',
+                usageTitle: '📖 Mode d\'emploi',
+                usageStep1: 'Téléchargez des images: cliquez, glissez-déposez, collez une capture ou scannez le QR code',
+                usageStep2: 'Glissez les images pour ajuster l\'ordre des pages PDF',
+                usageStep3: 'Configurez la taille de page, l\'orientation et les paramètres de qualité',
+                usageStep4: 'Cliquez sur "Générer PDF" pour télécharger localement',
+                faqTitle: '❓ FAQ',
+                faq1Question: 'Quels formats d\'image sont supportés?',
+                faq1Answer: 'Prend en charge JPG, PNG, WebP, GIF, BMP et autres formats d\'image courants.',
+                faq2Question: 'Combien d\'images puis-je fusionner à la fois?',
+                faq2Answer: 'Théoriquement illimité, dépend de la mémoire du navigateur. Recommandé de ne pas dépasser 100 images par conversion.',
+                faq3Question: 'Puis-je réorganiser les images?',
+                faq3Answer: 'Oui, après le téléchargement, faites simplement glisser les vignettes pour ajuster l\'ordre des pages dans le PDF.',
+                faq4Question: 'Quelles tailles de page sont supportées?',
+                faq4Answer: 'Prend en charge A4, A3, A5, Letter, Legal et d\'autres tailles courantes, plus le mode adaptatif.',
+                faq5Question: 'Mes images sont-elles téléchargées sur un serveur?',
+                faq5Answer: 'Non, la conversion se fait localement dans votre navigateur avec la bibliothèque jsPDF. Vos images ne quittent jamais votre appareil.',
+                relatedTitle: '🔗 Outils associés',
+                relatedCompressor: 'Compresseur d\'images',
+                relatedCompressorDesc: 'Compresser des images par lots',
+                relatedConverter: 'Convertisseur d\'images',
+                relatedConverterDesc: 'Convertir WebP/PNG/JPG',
+                relatedEditor: 'Éditeur d\'images',
+                relatedEditorDesc: 'Éditer des images en ligne',
+                relatedRenamer: 'Renommeur de fichiers',
+                relatedRenamerDesc: 'Renommer des fichiers par lots',
+                footerPrivacy: 'Traitement purement frontend, les images ne sont jamais téléchargées sur le serveur',
+                toastPasted: '{count} image(s) collée(s)',
+                toastAdded: '{count} image(s) ajoutée(s)',
+                toastCleared: 'Toutes les images effacées',
+                toastSelectImage: 'Veuillez sélectionner des fichiers image',
+                toastAddFirst: 'Veuillez d\'abord ajouter des images',
+                toastSuccess: 'PDF généré avec succès!',
+                toastError: 'Échec de la génération du PDF: ',
+                confirmClear: 'Êtes-vous sûr de vouloir effacer toutes les images?'
+            },
+            'es': {
+                pageTitle: '📄 Convertidor de Imagen a PDF',
+                pageSubtitle: 'Fusiona múltiples imágenes en PDF con arrastrar y soltar, pegar del portapapeles, carga por QR',
+                backToList: '← Volver a herramientas',
+                featureBatchTitle: 'Conversión por lotes',
+                featureBatchDesc: 'Fusiona múltiples imágenes en un archivo PDF, carga y procesa por lotes',
+                featureOrderTitle: 'Reordenar',
+                featureOrderDesc: 'Arrastra y suelta para reordenar imágenes, personaliza la secuencia de páginas PDF',
+                featurePageTitle: 'Configuración de página',
+                featurePageDesc: 'Soporta A4, Letter y más tamaños con opciones de orientación',
+                featureInstantTitle: 'Generación instantánea',
+                featureInstantDesc: 'Conversión local en el navegador, descarga instantánea sin esperas',
+                uploadTitle: '📤 Subir imágenes',
+                uploadText: 'Haz clic para seleccionar imágenes o arrastra y suelta aquí',
+                uploadHint: 'Soporta formatos JPG / PNG / WEBP / GIF / BMP<br>Pegar captura: <kbd>Ctrl</kbd> + <kbd>V</kbd> (Mac: <kbd>⌘</kbd> + <kbd>V</kbd>)',
+                selectFiles: 'Seleccionar archivos',
+                selectFolder: 'Seleccionar carpeta',
+                imageListTitle: 'Lista de imágenes',
+                imageListHint: '(Arrastra para reordenar)',
+                imageListEmpty: 'Sin imágenes, por favor sube imágenes',
+                qrcodeTitle: '📱 Escanea para subir desde el teléfono',
+                qrcodeHint: 'Escanea el código QR para abrir esta herramienta<br>Selecciona imágenes directamente en tu teléfono',
+                settingsTitle: '⚙️ Configuración PDF',
+                pageSizeLabel: 'Tamaño de página',
+                pageSizeA4: 'A4 (210 × 297 mm)',
+                pageSizeA3: 'A3 (297 × 420 mm)',
+                pageSizeA5: 'A5 (148 × 210 mm)',
+                pageSizeLetter: 'Letter (216 × 279 mm)',
+                pageSizeFit: 'Ajustar al tamaño de imagen',
+                orientationLabel: 'Orientación de página',
+                orientationAuto: 'Detección automática',
+                orientationPortrait: 'Vertical',
+                orientationLandscape: 'Horizontal',
+                qualityLabel: 'Calidad de imagen',
+                qualityHighest: 'Máxima calidad',
+                qualityHigh: 'Alta calidad (Recomendado)',
+                qualityMedium: 'Calidad media',
+                qualityLow: 'Baja calidad (Archivo más pequeño)',
+                marginLabel: 'Margen de página (mm)',
+                fileNameLabel: 'Nombre del archivo',
+                fileNamePlaceholder: 'Ingresa el nombre del archivo',
+                statImages: 'Imágenes',
+                statSize: 'Tamaño (MB)',
+                generateBtn: 'Generar PDF',
+                generatingBtn: '⏳ Generando...',
+                clearBtn: '🗑️ Borrar todas las imágenes',
+                usageTitle: '📖 Cómo usar',
+                usageStep1: 'Sube imágenes: haz clic, arrastra y suelta, pega captura o escanea código QR',
+                usageStep2: 'Arrastra las imágenes para ajustar el orden de las páginas PDF',
+                usageStep3: 'Configura el tamaño de página, orientación y calidad',
+                usageStep4: 'Haz clic en "Generar PDF" para descargar localmente',
+                faqTitle: '❓ Preguntas frecuentes',
+                faq1Question: '¿Qué formatos de imagen son compatibles?',
+                faq1Answer: 'Soporta JPG, PNG, WebP, GIF, BMP y otros formatos de imagen comunes.',
+                faq2Question: '¿Cuántas imágenes puedo fusionar a la vez?',
+                faq2Answer: 'Teóricamente ilimitado, depende de la memoria del navegador. Se recomienda no exceder 100 imágenes por conversión.',
+                faq3Question: '¿Puedo reordenar las imágenes?',
+                faq3Answer: 'Sí, después de subir, simplemente arrastra las miniaturas para ajustar el orden de las páginas en el PDF.',
+                faq4Question: '¿Qué tamaños de página son compatibles?',
+                faq4Answer: 'Soporta A4, A3, A5, Letter, Legal y otros tamaños comunes, además del modo adaptativo.',
+                faq5Question: '¿Mis imágenes se suben a un servidor?',
+                faq5Answer: 'No, la conversión se realiza localmente en tu navegador usando la biblioteca jsPDF. Tus imágenes nunca salen de tu dispositivo.',
+                relatedTitle: '🔗 Herramientas relacionadas',
+                relatedCompressor: 'Compresor de imágenes',
+                relatedCompressorDesc: 'Comprimir imágenes por lotes',
+                relatedConverter: 'Convertidor de imágenes',
+                relatedConverterDesc: 'Convertir WebP/PNG/JPG',
+                relatedEditor: 'Editor de imágenes',
+                relatedEditorDesc: 'Editar imágenes en línea',
+                relatedRenamer: 'Renombrador de archivos',
+                relatedRenamerDesc: 'Renombrar archivos por lotes',
+                footerPrivacy: 'Procesamiento puramente frontend, las imágenes nunca se suben al servidor',
+                toastPasted: '{count} imagen(es) pegada(s)',
+                toastAdded: '{count} imagen(es) añadida(s)',
+                toastCleared: 'Todas las imágenes borradas',
+                toastSelectImage: 'Por favor selecciona archivos de imagen',
+                toastAddFirst: 'Por favor añade imágenes primero',
+                toastSuccess: '¡PDF generado con éxito!',
+                toastError: 'Error al generar PDF: ',
+                confirmClear: '¿Estás seguro de borrar todas las imágenes?'
+            }
+        };
+
+        const langNames = {
+            'en': '🇺🇸 English',
+            'zh-CN': '🇨🇳 中文',
+            'fr': '🇫🇷 Français',
+            'es': '🇪🇸 Español'
+        };
+
+        let currentLang = localStorage.getItem('toolbox-lang') || 'en';
+
+        function t(key) {
+            return i18n[currentLang]?.[key] || i18n['en'][key] || key;
+        }
+
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('toolbox-lang', lang);
+            document.getElementById('langCurrent').textContent = langNames[lang] || langNames['en'];
+
+            // 更新所有带 data-i18n 属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang]?.[key]) {
+                    el.innerHTML = i18n[lang][key];
+                }
+            });
+
+            // 更新 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (i18n[lang]?.[key]) {
+                    el.placeholder = i18n[lang][key];
+                }
+            });
+
+            // 更新图片列表空状态文本
+            const imageList = document.getElementById('imageList');
+            if (imageList) {
+                imageList.setAttribute('data-empty-text', t('imageListEmpty'));
+            }
+        }
+
+        // 语言切换器事件
+        function initLangSwitcher() {
+            const dropdown = document.getElementById('langDropdown');
+            const current = document.getElementById('langCurrent');
+
+            current.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const lang = btn.getAttribute('data-lang');
+                    applyLanguage(lang);
+                    dropdown.classList.remove('active');
+                });
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.remove('active');
+            });
+
+            // 应用保存的语言
+            applyLanguage(currentLang);
+        }
 
         // ===== 全局变量 =====
         let images = []; // 存储图片数据 { id, file, dataUrl, name }
@@ -950,6 +1368,7 @@
 
         // ===== 初始化 =====
         function init() {
+            initLangSwitcher();
             initQRCode();
             initEventListeners();
             initSortable();
@@ -1067,7 +1486,7 @@
 
             if (imageFiles.length > 0) {
                 processFiles(imageFiles);
-                showToast(`已粘贴 ${imageFiles.length} 张图片`, 'success');
+                showToast(t('toastPasted').replace('{count}', imageFiles.length), 'success');
             }
         }
 
@@ -1077,7 +1496,7 @@
             const imageFiles = files.filter(file => file.type.startsWith('image/'));
 
             if (imageFiles.length === 0) {
-                showToast('请选择图片文件', 'error');
+                showToast(t('toastSelectImage'), 'error');
                 return;
             }
 
@@ -1102,7 +1521,7 @@
 
             updateStats();
             updateGenerateButton();
-            showToast(`已添加 ${imageFiles.length} 张图片`, 'success');
+            showToast(t('toastAdded').replace('{count}', imageFiles.length), 'success');
         }
 
         function readFileAsDataURL(file) {
@@ -1152,13 +1571,13 @@
 
         function clearAllImages() {
             if (images.length === 0) return;
-            if (!confirm('确定要清空所有图片吗？')) return;
+            if (!confirm(t('confirmClear'))) return;
 
             images = [];
             imageList.innerHTML = '';
             updateStats();
             updateGenerateButton();
-            showToast('已清空所有图片', 'success');
+            showToast(t('toastCleared'), 'success');
         }
 
         function updateIndexNumbers() {
@@ -1181,7 +1600,7 @@
         // ===== 生成 PDF =====
         async function generatePDF() {
             if (images.length === 0) {
-                showToast('请先添加图片', 'error');
+                showToast(t('toastAddFirst'), 'error');
                 return;
             }
 
@@ -1192,7 +1611,7 @@
             const fileName = document.getElementById('fileName').value.trim() || 'merged';
 
             generateBtn.disabled = true;
-            generateBtn.innerHTML = '⏳ 生成中...';
+            generateBtn.innerHTML = t('generatingBtn');
             progressBar.classList.add('active');
             progressFill.style.width = '0%';
 
@@ -1279,14 +1698,14 @@
 
                 // 下载 PDF
                 pdf.save(`${fileName}.pdf`);
-                showToast('PDF 生成成功！', 'success');
+                showToast(t('toastSuccess'), 'success');
 
             } catch (err) {
                 console.error('生成 PDF 失败:', err);
-                showToast('生成 PDF 失败: ' + err.message, 'error');
+                showToast(t('toastError') + err.message, 'error');
             } finally {
                 generateBtn.disabled = false;
-                generateBtn.innerHTML = '📄 生成 PDF';
+                generateBtn.innerHTML = '📄 <span data-i18n="generateBtn">' + t('generateBtn') + '</span>';
                 progressBar.classList.remove('active');
             }
         }
@@ -1347,36 +1766,36 @@
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section">
-        <h2 class="faq-title">❓ 常见问题</h2>
+        <h2 class="faq-title" data-i18n="faqTitle">❓ FAQ</h2>
         <div class="faq-list">
             <div class="faq-item">
-                <div class="faq-question">支持哪些图片格式？</div>
+                <div class="faq-question" data-i18n="faq1Question">What image formats are supported?</div>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式，满足日常使用需求。</p>
+                    <p class="faq-answer-content" data-i18n="faq1Answer">Supports JPG, PNG, WebP, GIF, BMP and other common image formats.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">最多可以合并多少张图片？</div>
+                <div class="faq-question" data-i18n="faq2Question">How many images can I merge at once?</div>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">理论上无限制，取决于浏览器内存大小。为保证转换顺畅，建议单次不超过100张图片。</p>
+                    <p class="faq-answer-content" data-i18n="faq2Answer">Theoretically unlimited, depends on browser memory. Recommended not to exceed 100 images per conversion.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">可以调整图片顺序吗？</div>
+                <div class="faq-question" data-i18n="faq3Question">Can I reorder the images?</div>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">可以，上传图片后直接拖拽图片缩略图即可调整在 PDF 中的页面顺序，非常方便。</p>
+                    <p class="faq-answer-content" data-i18n="faq3Answer">Yes, after uploading, simply drag image thumbnails to adjust the page order in the PDF.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">支持哪些纸张大小？</div>
+                <div class="faq-question" data-i18n="faq4Question">What page sizes are supported?</div>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">支持 A4、A3、A5、Letter、Legal 等常用纸张大小，还可以选择自适应图片尺寸模式。</p>
+                    <p class="faq-answer-content" data-i18n="faq4Answer">Supports A4, A3, A5, Letter, Legal and other common sizes, plus fit-to-image mode.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">图片会上传到服务器吗？</div>
+                <div class="faq-question" data-i18n="faq5Question">Are my images uploaded to a server?</div>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">不会，本工具使用 jsPDF 库在本地浏览器完成转换，图片数据完全保留在您的设备上，安全可靠。</p>
+                    <p class="faq-answer-content" data-i18n="faq5Answer">No, the conversion is done locally in your browser using jsPDF library. Your images never leave your device.</p>
                 </div>
             </div>
         </div>
@@ -1384,35 +1803,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTitle">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="image-compressor.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片压缩</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedCompressor">Image Compressor</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedCompressorDesc">Batch compress image files</div>
             </a>
             <a href="image-converter.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片格式转换</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">WebP/PNG/JPG 互转</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedConverter">Image Converter</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedConverterDesc">Convert WebP/PNG/JPG</div>
             </a>
             <a href="image-editor.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片编辑器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">在线编辑图片</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedEditor">Image Editor</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedEditorDesc">Edit images online</div>
             </a>
             <a href="file-renamer.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📝</div>
-                <div style="color: #f0f0f0; font-weight: 500;">文件批量重命名</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">批量修改文件名</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedRenamer">File Renamer</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedRenamerDesc">Batch rename files</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
-        <p>纯前端处理，图片不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, images never uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #6366f1; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #6366f1; text-decoration: none;" data-i18n="backToList">← Back to Tools</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #6366f1; text-decoration: none;">GitHub</a>
         </p>

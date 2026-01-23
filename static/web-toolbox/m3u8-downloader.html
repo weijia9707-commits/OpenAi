@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>M3U8 视频下载器 - 在线批量下载M3U8流媒体视频 | Web Toolbox</title>
+    <title>M3U8 Video Downloader - Batch Download HLS Streaming Videos Online | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线M3U8视频下载工具，支持批量下载M3U8/HLS流媒体视频并保存为MP4文件。实时预览、进度显示、暂停继续，纯前端运行无需安装。">
-    <meta name="keywords" content="M3U8下载器,M3U8转MP4,HLS下载,流媒体下载,视频下载工具,在线视频下载,批量下载,免费工具">
+    <meta name="description" content="Free online M3U8 video downloader. Batch download M3U8/HLS streaming videos and save as TS files. Real-time preview, progress display, pause/resume. Pure frontend, no installation required.">
+    <meta name="keywords" content="M3U8 downloader,M3U8 to MP4,HLS download,streaming download,video downloader,online video download,batch download,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/m3u8-downloader.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/m3u8-downloader.html">
-    <meta property="og:title" content="M3U8 视频下载器 - 在线批量下载流媒体视频">
-    <meta property="og:description" content="免费在线M3U8视频下载工具，支持批量下载并保存为MP4。实时预览、进度显示，纯前端无需安装。">
+    <meta property="og:title" content="M3U8 Video Downloader - Batch Download Streaming Videos Online">
+    <meta property="og:description" content="Free online M3U8 video downloader. Batch download and save as TS files. Real-time preview, progress display. Pure frontend, no installation.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/m3u8-downloader.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="M3U8 视频下载器 - 在线批量下载流媒体视频">
-    <meta name="twitter:description" content="免费在线M3U8视频下载工具，支持批量下载并保存为MP4。">
+    <meta name="twitter:title" content="M3U8 Video Downloader - Batch Download Streaming Videos Online">
+    <meta name="twitter:description" content="Free online M3U8 video downloader. Batch download and save as TS files.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/m3u8-downloader.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "M3U8 视频下载器",
+        "name": "M3U8 Video Downloader",
         "url": "https://www.heyuan110.com/web-toolbox/m3u8-downloader.html",
-        "description": "在线批量下载M3U8/HLS流媒体视频并保存为MP4文件",
+        "description": "Batch download M3U8/HLS streaming videos online and save as TS files",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "什么是 M3U8 格式？",
+                "name": "What is M3U8 format?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "M3U8 是 HLS (HTTP Live Streaming) 流媒体协议的索引文件格式，它包含视频分片（TS文件）的列表。HLS 是苹果公司开发的自适应流媒体传输协议，被广泛用于在线视频播放。"
+                    "text": "M3U8 is the index file format for HLS (HTTP Live Streaming) protocol. It contains a list of video segments (TS files). HLS is an adaptive streaming protocol developed by Apple, widely used for online video playback."
                 }
             },
             {
                 "@type": "Question",
-                "name": "为什么有些 M3U8 无法下载？",
+                "name": "Why can't some M3U8 videos be downloaded?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可能是因为视频使用了 DRM 加密保护，或者需要特定的认证信息（如 Cookie、Token）才能访问。本工具仅支持下载公开的、未加密的 M3U8 视频流。"
+                    "text": "This may be because the video uses DRM encryption protection, or requires specific authentication information (such as Cookie, Token) to access. This tool only supports downloading public, unencrypted M3U8 video streams."
                 }
             },
             {
                 "@type": "Question",
-                "name": "下载的视频是什么格式？",
+                "name": "What format are the downloaded videos?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "下载后的视频为 TS（Transport Stream）格式，这是由 M3U8 分片合并而成的视频文件。TS 格式可以直接使用 VLC、PotPlayer 等播放器播放，也可以使用 FFmpeg 转换为 MP4 格式。"
+                    "text": "Downloaded videos are in TS (Transport Stream) format, merged from M3U8 segments. TS format can be played directly with VLC, PotPlayer, etc. You can also convert to MP4 using FFmpeg."
                 }
             },
             {
                 "@type": "Question",
-                "name": "下载速度取决于什么？",
+                "name": "What determines the download speed?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "下载速度主要取决于两个因素：原始视频服务器的带宽和响应速度，以及你本地的网络连接速度。本工具支持多线程并发下载以提高效率。"
+                    "text": "Download speed mainly depends on two factors: the bandwidth and response speed of the original video server, and your local network connection speed. This tool supports multi-threaded concurrent downloading to improve efficiency."
                 }
             },
             {
                 "@type": "Question",
-                "name": "视频数据会经过服务器吗？",
+                "name": "Does the video data pass through a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会。本工具完全在浏览器端运行，视频数据直接从原始服务器下载到你的浏览器，不会经过任何中间服务器，保证了数据安全和隐私。"
+                    "text": "No. This tool runs entirely in the browser. Video data is downloaded directly from the original server to your browser without passing through any intermediate server, ensuring data security and privacy."
                 }
             }
         ]
@@ -113,13 +113,28 @@
             margin: 0 auto;
         }
 
-        h1 {
+        .header {
+            position: relative;
             text-align: center;
             margin-bottom: 30px;
+        }
+
+        h1 {
+            text-align: center;
             color: #00d9ff;
             font-size: 2.5rem;
             text-shadow: 0 0 20px rgba(0, 217, 255, 0.3);
         }
+
+        /* 语言切换器样式 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         .input-section {
             background: rgba(255, 255, 255, 0.05);
@@ -594,62 +609,82 @@
             .global-actions {
                 flex-direction: column;
             }
+
+            .lang-switcher {
+                position: static;
+                text-align: right;
+                margin-bottom: 16px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #888; text-decoration: none; font-size: 14px; transition: color 0.2s;">← 返回工具箱</a>
-        <h1>🎬 M3U8批量下载器</h1>
+        <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #888; text-decoration: none; font-size: 14px; transition: color 0.2s;" data-i18n="backToToolbox">← Back to Toolbox</a>
+
+        <div class="header">
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <h1 data-i18n="pageTitle">🎬 M3U8 Batch Downloader</h1>
+        </div>
 
         <!-- 功能特点区块 -->
         <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 24px;">
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 32px; margin-bottom: 12px;">▶️</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">在线播放</h3>
-                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">支持直接在浏览器中播放 M3U8/HLS 视频流，无需额外播放器</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featurePlayTitle">Online Playback</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;" data-i18n="featurePlayDesc">Play M3U8/HLS video streams directly in browser, no extra player needed</p>
             </div>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 32px; margin-bottom: 12px;">💾</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">视频下载</h3>
-                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">解析 M3U8 文件，自动下载所有分片并合并为完整视频文件</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureDownloadTitle">Video Download</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;" data-i18n="featureDownloadDesc">Parse M3U8 files, auto download all segments and merge into complete video</p>
             </div>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 32px; margin-bottom: 12px;">🎚️</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">多清晰度</h3>
-                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">自动识别多清晰度流，支持选择不同质量版本下载</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureQualityTitle">Multi Quality</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;" data-i18n="featureQualityDesc">Auto detect multi-quality streams, choose different quality versions to download</p>
             </div>
             <div style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 32px; margin-bottom: 12px;">📊</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">进度显示</h3>
-                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;">实时显示下载进度、已下载分片数和剩余时间</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureProgressTitle">Progress Display</h3>
+                <p style="color: rgba(255,255,255,0.6); font-size: 13px; line-height: 1.5;" data-i18n="featureProgressDesc">Real-time download progress, downloaded segments count and remaining time</p>
             </div>
         </section>
 
         <div class="input-section">
-            <h2>📥 添加下载任务</h2>
+            <h2 data-i18n="addTaskTitle">📥 Add Download Task</h2>
 
             <!-- 单条URL输入 -->
             <div class="input-group">
-                <input type="text" id="singleUrl" placeholder="输入单个M3U8链接...">
-                <input type="text" id="fileName" placeholder="文件名（可选）" style="max-width: 200px;">
+                <input type="text" id="singleUrl" data-i18n-placeholder="singleUrlPlaceholder" placeholder="Enter single M3U8 link...">
+                <input type="text" id="fileName" data-i18n-placeholder="fileNamePlaceholder" placeholder="Filename (optional)" style="max-width: 200px;">
                 <button class="btn btn-primary" onclick="addSingleTask()">
-                    <span>➕</span> 添加
+                    <span>➕</span> <span data-i18n="btnAdd">Add</span>
                 </button>
             </div>
 
             <!-- 批量URL输入 -->
-            <textarea id="batchUrls" placeholder="批量导入M3U8链接（每行一个）&#10;支持格式：&#10;https://example.com/video.m3u8&#10;自定义名称|https://example.com/video.m3u8"></textarea>
+            <textarea id="batchUrls" data-i18n-placeholder="batchUrlsPlaceholder" placeholder="Batch import M3U8 links (one per line)&#10;Supported formats:&#10;https://example.com/video.m3u8&#10;Custom Name|https://example.com/video.m3u8"></textarea>
 
             <div class="button-group">
                 <button class="btn btn-primary" onclick="addBatchTasks()">
-                    <span>📋</span> 批量添加
+                    <span>📋</span> <span data-i18n="btnBatchAdd">Batch Add</span>
                 </button>
                 <button class="btn btn-secondary" onclick="clearInput()">
-                    <span>🗑️</span> 清空输入
+                    <span>🗑️</span> <span data-i18n="btnClearInput">Clear Input</span>
                 </button>
                 <button class="btn btn-secondary" onclick="loadFromFile()">
-                    <span>📂</span> 从文件导入
+                    <span>📂</span> <span data-i18n="btnImportFile">Import from File</span>
                 </button>
                 <input type="file" id="fileInput" accept=".txt" style="display: none;" onchange="handleFileImport(event)">
             </div>
@@ -657,25 +692,25 @@
 
         <div class="task-section">
             <h2>
-                <span>📋 下载任务列表</span>
-                <span class="task-count" id="taskCount">0 个任务</span>
+                <span data-i18n="taskListTitle">📋 Download Task List</span>
+                <span class="task-count" id="taskCount" data-i18n="taskCount">0 tasks</span>
             </h2>
 
             <div class="global-actions" style="margin-bottom: 16px;">
                 <button class="btn btn-success" onclick="startAll()">
-                    <span>▶️</span> 全部开始
+                    <span>▶️</span> <span data-i18n="btnStartAll">Start All</span>
                 </button>
                 <button class="btn btn-warning" onclick="pauseAll()">
-                    <span>⏸️</span> 全部暂停
+                    <span>⏸️</span> <span data-i18n="btnPauseAll">Pause All</span>
                 </button>
                 <button class="btn btn-danger" onclick="clearCompleted()">
-                    <span>🗑️</span> 清除已完成
+                    <span>🗑️</span> <span data-i18n="btnClearCompleted">Clear Completed</span>
                 </button>
                 <button class="btn btn-danger" onclick="clearAll()">
-                    <span>❌</span> 清空全部
+                    <span>❌</span> <span data-i18n="btnClearAll">Clear All</span>
                 </button>
                 <button class="btn btn-primary" onclick="downloadAllCompleted()">
-                    <span>💾</span> 批量保存已完成
+                    <span>💾</span> <span data-i18n="btnSaveAllCompleted">Save All Completed</span>
                 </button>
             </div>
 
@@ -686,25 +721,515 @@
                         <polyline points="7 10 12 15 17 10"/>
                         <line x1="12" y1="15" x2="12" y2="3"/>
                     </svg>
-                    <p>暂无下载任务</p>
-                    <p style="font-size: 12px; margin-top: 8px;">添加M3U8链接开始下载</p>
+                    <p data-i18n="emptyStateTitle">No download tasks</p>
+                    <p style="font-size: 12px; margin-top: 8px;" data-i18n="emptyStateDesc">Add M3U8 links to start downloading</p>
                 </div>
             </div>
         </div>
 
         <div class="tips">
-            <h3>💡 使用说明</h3>
+            <h3 data-i18n="tipsTitle">💡 Usage Tips</h3>
             <ul>
-                <li>支持单个或批量添加M3U8链接</li>
-                <li>批量导入格式：每行一个链接，或使用 "名称|链接" 格式自定义文件名</li>
-                <li>由于浏览器安全限制，某些跨域资源可能无法下载</li>
-                <li>下载的文件为TS格式，可使用FFmpeg转换为MP4：<code>ffmpeg -i video.ts -c copy video.mp4</code></li>
-                <li>建议使用Chrome浏览器以获得最佳体验</li>
+                <li data-i18n="tip1">Support single or batch adding M3U8 links</li>
+                <li data-i18n="tip2">Batch import format: one link per line, or use "name|link" format for custom filenames</li>
+                <li data-i18n="tip3">Due to browser security restrictions, some cross-origin resources may not be downloadable</li>
+                <li data-i18n="tip4">Downloaded files are in TS format, convert to MP4 with FFmpeg: <code>ffmpeg -i video.ts -c copy video.mp4</code></li>
+                <li data-i18n="tip5">Chrome browser recommended for best experience</li>
             </ul>
         </div>
     </div>
 
     <script>
+        // ==================== 国际化系统 ====================
+        const i18n = {
+            'en': {
+                pageTitle: '🎬 M3U8 Batch Downloader',
+                backToToolbox: '← Back to Toolbox',
+                featurePlayTitle: 'Online Playback',
+                featurePlayDesc: 'Play M3U8/HLS video streams directly in browser, no extra player needed',
+                featureDownloadTitle: 'Video Download',
+                featureDownloadDesc: 'Parse M3U8 files, auto download all segments and merge into complete video',
+                featureQualityTitle: 'Multi Quality',
+                featureQualityDesc: 'Auto detect multi-quality streams, choose different quality versions to download',
+                featureProgressTitle: 'Progress Display',
+                featureProgressDesc: 'Real-time download progress, downloaded segments count and remaining time',
+                addTaskTitle: '📥 Add Download Task',
+                singleUrlPlaceholder: 'Enter single M3U8 link...',
+                fileNamePlaceholder: 'Filename (optional)',
+                btnAdd: 'Add',
+                batchUrlsPlaceholder: 'Batch import M3U8 links (one per line)\nSupported formats:\nhttps://example.com/video.m3u8\nCustom Name|https://example.com/video.m3u8',
+                btnBatchAdd: 'Batch Add',
+                btnClearInput: 'Clear Input',
+                btnImportFile: 'Import from File',
+                taskListTitle: '📋 Download Task List',
+                taskCount: '0 tasks',
+                btnStartAll: 'Start All',
+                btnPauseAll: 'Pause All',
+                btnClearCompleted: 'Clear Completed',
+                btnClearAll: 'Clear All',
+                btnSaveAllCompleted: 'Save All Completed',
+                emptyStateTitle: 'No download tasks',
+                emptyStateDesc: 'Add M3U8 links to start downloading',
+                tipsTitle: '💡 Usage Tips',
+                tip1: 'Support single or batch adding M3U8 links',
+                tip2: 'Batch import format: one link per line, or use "name|link" format for custom filenames',
+                tip3: 'Due to browser security restrictions, some cross-origin resources may not be downloadable',
+                tip4: 'Downloaded files are in TS format, convert to MP4 with FFmpeg: <code>ffmpeg -i video.ts -c copy video.mp4</code>',
+                tip5: 'Chrome browser recommended for best experience',
+                statusPending: 'Pending',
+                statusDownloading: 'Downloading',
+                statusPaused: 'Paused',
+                statusCompleted: 'Completed',
+                statusError: 'Error',
+                btnStart: 'Start',
+                btnPause: 'Pause',
+                btnStop: 'Stop',
+                btnResume: 'Resume',
+                btnRestart: 'Restart',
+                btnRetry: 'Retry',
+                btnSaveFile: 'Save File',
+                btnDelete: 'Delete',
+                loadingPreview: 'Loading preview...',
+                previewFailed: 'Preview failed',
+                previewNotSupported: 'Preview not supported',
+                segments: 'segments',
+                alertEnterUrl: 'Please enter M3U8 link',
+                alertValidUrl: 'Please enter a valid URL',
+                alertAddedTasks: 'Successfully added {count} tasks',
+                alertNoValidUrl: 'No valid URLs found',
+                alertMaxConcurrent: 'Maximum {count} concurrent downloads, please wait for others to complete',
+                alertNoCompleted: 'No completed download tasks',
+                alertConfirmSave: 'Are you sure you want to save {count} completed video files?',
+                alertStartedSaving: 'Started saving {count} files, please check download folder',
+                alertConfirmClearAll: 'Are you sure you want to clear all tasks?',
+                errorFetchM3u8: 'Cannot fetch M3U8 file',
+                errorNoSegments: 'No valid video segments found in M3U8 file',
+                errorSegmentFailed: 'Segment {index} download failed',
+                taskCountFormat: '{total} tasks ({downloading} downloading, {completed} completed)',
+                faqTitle: '❓ FAQ',
+                faq1Question: 'What is M3U8 format?',
+                faq1Answer: 'M3U8 is the index file format for HLS (HTTP Live Streaming) protocol. It contains a list of video segments (TS files). HLS is an adaptive streaming protocol developed by Apple, widely used for online video playback, supporting automatic quality switching based on network conditions.',
+                faq2Question: 'Why can\'t some M3U8 videos be downloaded?',
+                faq2Answer: 'This may be because the video uses DRM encryption protection, or requires specific authentication information (such as Cookie, Token) to access. This tool only supports downloading public, unencrypted M3U8 video streams. Additionally, some websites have CORS restrictions that prevent direct browser downloads.',
+                faq3Question: 'What format are the downloaded videos?',
+                faq3Answer: 'Downloaded videos are in TS (Transport Stream) format, merged from M3U8 segments. TS format can be played directly with VLC, PotPlayer, etc. To convert to MP4 format, use the FFmpeg command: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-family: monospace;">ffmpeg -i video.ts -c copy video.mp4</code>',
+                faq4Question: 'What determines the download speed?',
+                faq4Answer: 'Download speed mainly depends on two factors: the bandwidth and response speed of the original video server, and your local network connection speed. This tool supports multi-threaded concurrent downloading (5 concurrent by default) to improve efficiency. If the original server has speed limits, download speed will be limited.',
+                faq5Question: 'Does the video data pass through a server?',
+                faq5Answer: 'No. This tool runs entirely in the browser. Video data is downloaded directly from the original server to your browser without passing through any intermediate server. All processing (parsing, downloading, merging) is done locally, ensuring data security and privacy.',
+                relatedToolsTitle: '🔗 Related Tools',
+                relatedTool1Title: 'X/TikTok Video Download',
+                relatedTool1Desc: 'Download social media videos',
+                relatedTool2Title: 'Audio Cutter',
+                relatedTool2Desc: 'Cut audio files online',
+                relatedTool3Title: 'Image Format Converter',
+                relatedTool3Desc: 'Convert WebP/PNG/JPG',
+                relatedTool4Title: 'Image Compressor',
+                relatedTool4Desc: 'Batch compress images',
+                footerText: 'Pure frontend processing, videos are not uploaded to server',
+                footerBackHome: '← Back to Web Toolbox Home'
+            },
+            'zh-CN': {
+                pageTitle: '🎬 M3U8批量下载器',
+                backToToolbox: '← 返回工具箱',
+                featurePlayTitle: '在线播放',
+                featurePlayDesc: '支持直接在浏览器中播放 M3U8/HLS 视频流，无需额外播放器',
+                featureDownloadTitle: '视频下载',
+                featureDownloadDesc: '解析 M3U8 文件，自动下载所有分片并合并为完整视频文件',
+                featureQualityTitle: '多清晰度',
+                featureQualityDesc: '自动识别多清晰度流，支持选择不同质量版本下载',
+                featureProgressTitle: '进度显示',
+                featureProgressDesc: '实时显示下载进度、已下载分片数和剩余时间',
+                addTaskTitle: '📥 添加下载任务',
+                singleUrlPlaceholder: '输入单个M3U8链接...',
+                fileNamePlaceholder: '文件名（可选）',
+                btnAdd: '添加',
+                batchUrlsPlaceholder: '批量导入M3U8链接（每行一个）\n支持格式：\nhttps://example.com/video.m3u8\n自定义名称|https://example.com/video.m3u8',
+                btnBatchAdd: '批量添加',
+                btnClearInput: '清空输入',
+                btnImportFile: '从文件导入',
+                taskListTitle: '📋 下载任务列表',
+                taskCount: '0 个任务',
+                btnStartAll: '全部开始',
+                btnPauseAll: '全部暂停',
+                btnClearCompleted: '清除已完成',
+                btnClearAll: '清空全部',
+                btnSaveAllCompleted: '批量保存已完成',
+                emptyStateTitle: '暂无下载任务',
+                emptyStateDesc: '添加M3U8链接开始下载',
+                tipsTitle: '💡 使用说明',
+                tip1: '支持单个或批量添加M3U8链接',
+                tip2: '批量导入格式：每行一个链接，或使用 "名称|链接" 格式自定义文件名',
+                tip3: '由于浏览器安全限制，某些跨域资源可能无法下载',
+                tip4: '下载的文件为TS格式，可使用FFmpeg转换为MP4：<code>ffmpeg -i video.ts -c copy video.mp4</code>',
+                tip5: '建议使用Chrome浏览器以获得最佳体验',
+                statusPending: '等待中',
+                statusDownloading: '下载中',
+                statusPaused: '已暂停',
+                statusCompleted: '已完成',
+                statusError: '出错',
+                btnStart: '开始',
+                btnPause: '暂停',
+                btnStop: '停止',
+                btnResume: '继续',
+                btnRestart: '重新下载',
+                btnRetry: '重试',
+                btnSaveFile: '保存文件',
+                btnDelete: '删除',
+                loadingPreview: '加载预览...',
+                previewFailed: '预览失败',
+                previewNotSupported: '不支持预览',
+                segments: '片段',
+                alertEnterUrl: '请输入M3U8链接',
+                alertValidUrl: '请输入有效的URL',
+                alertAddedTasks: '成功添加 {count} 个任务',
+                alertNoValidUrl: '没有找到有效的URL',
+                alertMaxConcurrent: '最多同时下载 {count} 个任务，请等待其他任务完成',
+                alertNoCompleted: '没有已完成的下载任务',
+                alertConfirmSave: '确定要保存 {count} 个已完成的视频文件吗？',
+                alertStartedSaving: '已开始保存 {count} 个文件，请检查下载文件夹',
+                alertConfirmClearAll: '确定要清空所有任务吗？',
+                errorFetchM3u8: '无法获取M3U8文件',
+                errorNoSegments: 'M3U8文件中没有找到有效的视频片段',
+                errorSegmentFailed: '片段 {index} 下载失败',
+                taskCountFormat: '{total} 个任务 ({downloading} 下载中, {completed} 已完成)',
+                faqTitle: '❓ 常见问题',
+                faq1Question: '什么是 M3U8 格式？',
+                faq1Answer: 'M3U8 是 HLS (HTTP Live Streaming) 流媒体协议的索引文件格式，它包含视频分片（TS文件）的列表。HLS 是苹果公司开发的自适应流媒体传输协议，被广泛用于在线视频播放，支持根据网络状况自动切换清晰度。',
+                faq2Question: '为什么有些 M3U8 无法下载？',
+                faq2Answer: '可能是因为视频使用了 DRM 加密保护，或者需要特定的认证信息（如 Cookie、Token）才能访问。本工具仅支持下载公开的、未加密的 M3U8 视频流。另外，部分网站设置了跨域限制（CORS），也会导致无法在浏览器中直接下载。',
+                faq3Question: '下载的视频是什么格式？',
+                faq3Answer: '下载后的视频为 TS（Transport Stream）格式，这是由 M3U8 分片合并而成的视频文件。TS 格式可以直接使用 VLC、PotPlayer 等播放器播放。如需转换为 MP4 格式，可使用 FFmpeg 命令：<code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-family: monospace;">ffmpeg -i video.ts -c copy video.mp4</code>',
+                faq4Question: '下载速度取决于什么？',
+                faq4Answer: '下载速度主要取决于两个因素：原始视频服务器的带宽和响应速度，以及你本地的网络连接速度。本工具支持多线程并发下载（默认5个并发），可以有效提高下载效率。如果原始服务器有速度限制，则下载速度会受到限制。',
+                faq5Question: '视频数据会经过服务器吗？',
+                faq5Answer: '不会。本工具完全在浏览器端运行，视频数据直接从原始服务器下载到你的浏览器，不会经过任何中间服务器。所有处理（解析、下载、合并）都在本地完成，保证了数据安全和隐私。',
+                relatedToolsTitle: '🔗 相关工具推荐',
+                relatedTool1Title: 'X/TikTok 视频下载',
+                relatedTool1Desc: '下载社交媒体视频',
+                relatedTool2Title: '音频剪辑',
+                relatedTool2Desc: '在线剪切音频文件',
+                relatedTool3Title: '图片格式转换',
+                relatedTool3Desc: 'WebP/PNG/JPG 互转',
+                relatedTool4Title: '图片压缩',
+                relatedTool4Desc: '批量压缩图片体积',
+                footerText: '纯前端处理，视频不会上传到服务器',
+                footerBackHome: '← 返回 Web Toolbox 首页'
+            },
+            'fr': {
+                pageTitle: '🎬 Téléchargeur M3U8 par lots',
+                backToToolbox: '← Retour à la boîte à outils',
+                featurePlayTitle: 'Lecture en ligne',
+                featurePlayDesc: 'Lisez les flux vidéo M3U8/HLS directement dans le navigateur, sans lecteur supplémentaire',
+                featureDownloadTitle: 'Téléchargement vidéo',
+                featureDownloadDesc: 'Analysez les fichiers M3U8, téléchargez automatiquement tous les segments et fusionnez-les',
+                featureQualityTitle: 'Multi-qualité',
+                featureQualityDesc: 'Détection automatique des flux multi-qualité, choisissez différentes versions',
+                featureProgressTitle: 'Affichage de progression',
+                featureProgressDesc: 'Progression en temps réel, nombre de segments téléchargés et temps restant',
+                addTaskTitle: '📥 Ajouter une tâche de téléchargement',
+                singleUrlPlaceholder: 'Entrez un lien M3U8...',
+                fileNamePlaceholder: 'Nom du fichier (optionnel)',
+                btnAdd: 'Ajouter',
+                batchUrlsPlaceholder: 'Importation par lots de liens M3U8 (un par ligne)\nFormats supportés:\nhttps://example.com/video.m3u8\nNom personnalisé|https://example.com/video.m3u8',
+                btnBatchAdd: 'Ajout par lots',
+                btnClearInput: 'Effacer',
+                btnImportFile: 'Importer un fichier',
+                taskListTitle: '📋 Liste des tâches',
+                taskCount: '0 tâches',
+                btnStartAll: 'Tout démarrer',
+                btnPauseAll: 'Tout mettre en pause',
+                btnClearCompleted: 'Effacer terminés',
+                btnClearAll: 'Tout effacer',
+                btnSaveAllCompleted: 'Enregistrer tous les terminés',
+                emptyStateTitle: 'Aucune tâche de téléchargement',
+                emptyStateDesc: 'Ajoutez des liens M3U8 pour commencer',
+                tipsTitle: '💡 Conseils d\'utilisation',
+                tip1: 'Supporte l\'ajout simple ou par lots de liens M3U8',
+                tip2: 'Format d\'import par lots: un lien par ligne, ou utilisez le format "nom|lien"',
+                tip3: 'En raison des restrictions de sécurité du navigateur, certaines ressources cross-origin peuvent ne pas être téléchargeables',
+                tip4: 'Les fichiers téléchargés sont au format TS, convertissez en MP4 avec FFmpeg: <code>ffmpeg -i video.ts -c copy video.mp4</code>',
+                tip5: 'Chrome recommandé pour une meilleure expérience',
+                statusPending: 'En attente',
+                statusDownloading: 'Téléchargement',
+                statusPaused: 'En pause',
+                statusCompleted: 'Terminé',
+                statusError: 'Erreur',
+                btnStart: 'Démarrer',
+                btnPause: 'Pause',
+                btnStop: 'Arrêter',
+                btnResume: 'Reprendre',
+                btnRestart: 'Redémarrer',
+                btnRetry: 'Réessayer',
+                btnSaveFile: 'Enregistrer',
+                btnDelete: 'Supprimer',
+                loadingPreview: 'Chargement...',
+                previewFailed: 'Échec aperçu',
+                previewNotSupported: 'Aperçu non supporté',
+                segments: 'segments',
+                alertEnterUrl: 'Veuillez entrer un lien M3U8',
+                alertValidUrl: 'Veuillez entrer une URL valide',
+                alertAddedTasks: '{count} tâches ajoutées avec succès',
+                alertNoValidUrl: 'Aucune URL valide trouvée',
+                alertMaxConcurrent: 'Maximum {count} téléchargements simultanés, veuillez attendre',
+                alertNoCompleted: 'Aucune tâche terminée',
+                alertConfirmSave: 'Voulez-vous enregistrer {count} fichiers vidéo terminés?',
+                alertStartedSaving: 'Enregistrement de {count} fichiers commencé',
+                alertConfirmClearAll: 'Voulez-vous vraiment tout effacer?',
+                errorFetchM3u8: 'Impossible de récupérer le fichier M3U8',
+                errorNoSegments: 'Aucun segment vidéo valide trouvé dans le fichier M3U8',
+                errorSegmentFailed: 'Échec du téléchargement du segment {index}',
+                taskCountFormat: '{total} tâches ({downloading} en cours, {completed} terminées)',
+                faqTitle: '❓ FAQ',
+                faq1Question: 'Qu\'est-ce que le format M3U8?',
+                faq1Answer: 'M3U8 est le format de fichier d\'index pour le protocole HLS (HTTP Live Streaming). Il contient une liste de segments vidéo (fichiers TS). HLS est un protocole de streaming adaptatif développé par Apple, largement utilisé pour la lecture vidéo en ligne.',
+                faq2Question: 'Pourquoi certaines vidéos M3U8 ne peuvent pas être téléchargées?',
+                faq2Answer: 'Cela peut être dû à une protection DRM, ou à des informations d\'authentification requises (Cookie, Token). Cet outil ne supporte que les flux M3U8 publics et non cryptés. De plus, certains sites ont des restrictions CORS.',
+                faq3Question: 'Quel est le format des vidéos téléchargées?',
+                faq3Answer: 'Les vidéos sont au format TS (Transport Stream), fusionnées à partir des segments M3U8. Le format TS peut être lu directement avec VLC, PotPlayer, etc. Pour convertir en MP4: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-family: monospace;">ffmpeg -i video.ts -c copy video.mp4</code>',
+                faq4Question: 'Qu\'est-ce qui détermine la vitesse de téléchargement?',
+                faq4Answer: 'La vitesse dépend de deux facteurs: la bande passante du serveur vidéo d\'origine et votre connexion réseau locale. Cet outil supporte le téléchargement multithread (5 simultanés par défaut) pour améliorer l\'efficacité.',
+                faq5Question: 'Les données vidéo passent-elles par un serveur?',
+                faq5Answer: 'Non. Cet outil fonctionne entièrement dans le navigateur. Les données vidéo sont téléchargées directement depuis le serveur d\'origine vers votre navigateur, garantissant la sécurité et la confidentialité.',
+                relatedToolsTitle: '🔗 Outils connexes',
+                relatedTool1Title: 'Téléchargement X/TikTok',
+                relatedTool1Desc: 'Télécharger des vidéos sociales',
+                relatedTool2Title: 'Coupeur audio',
+                relatedTool2Desc: 'Couper des fichiers audio en ligne',
+                relatedTool3Title: 'Convertisseur d\'images',
+                relatedTool3Desc: 'Convertir WebP/PNG/JPG',
+                relatedTool4Title: 'Compresseur d\'images',
+                relatedTool4Desc: 'Compresser des images par lots',
+                footerText: 'Traitement côté client, les vidéos ne sont pas téléchargées sur le serveur',
+                footerBackHome: '← Retour à l\'accueil Web Toolbox'
+            },
+            'es': {
+                pageTitle: '🎬 Descargador M3U8 por lotes',
+                backToToolbox: '← Volver a la caja de herramientas',
+                featurePlayTitle: 'Reproducción en línea',
+                featurePlayDesc: 'Reproduce streams de video M3U8/HLS directamente en el navegador, sin reproductor adicional',
+                featureDownloadTitle: 'Descarga de video',
+                featureDownloadDesc: 'Analiza archivos M3U8, descarga automáticamente todos los segmentos y los fusiona',
+                featureQualityTitle: 'Multi calidad',
+                featureQualityDesc: 'Detecta automáticamente streams de múltiple calidad, elige diferentes versiones',
+                featureProgressTitle: 'Visualización de progreso',
+                featureProgressDesc: 'Progreso en tiempo real, segmentos descargados y tiempo restante',
+                addTaskTitle: '📥 Agregar tarea de descarga',
+                singleUrlPlaceholder: 'Ingresa un enlace M3U8...',
+                fileNamePlaceholder: 'Nombre del archivo (opcional)',
+                btnAdd: 'Agregar',
+                batchUrlsPlaceholder: 'Importar enlaces M3U8 por lotes (uno por línea)\nFormatos soportados:\nhttps://example.com/video.m3u8\nNombre personalizado|https://example.com/video.m3u8',
+                btnBatchAdd: 'Agregar por lotes',
+                btnClearInput: 'Limpiar',
+                btnImportFile: 'Importar archivo',
+                taskListTitle: '📋 Lista de tareas',
+                taskCount: '0 tareas',
+                btnStartAll: 'Iniciar todo',
+                btnPauseAll: 'Pausar todo',
+                btnClearCompleted: 'Limpiar completados',
+                btnClearAll: 'Limpiar todo',
+                btnSaveAllCompleted: 'Guardar todos los completados',
+                emptyStateTitle: 'Sin tareas de descarga',
+                emptyStateDesc: 'Agrega enlaces M3U8 para comenzar',
+                tipsTitle: '💡 Consejos de uso',
+                tip1: 'Soporta agregar enlaces M3U8 individualmente o por lotes',
+                tip2: 'Formato de importación por lotes: un enlace por línea, o usa el formato "nombre|enlace"',
+                tip3: 'Debido a restricciones de seguridad del navegador, algunos recursos cross-origin pueden no descargarse',
+                tip4: 'Los archivos descargados están en formato TS, convierte a MP4 con FFmpeg: <code>ffmpeg -i video.ts -c copy video.mp4</code>',
+                tip5: 'Se recomienda Chrome para mejor experiencia',
+                statusPending: 'Pendiente',
+                statusDownloading: 'Descargando',
+                statusPaused: 'Pausado',
+                statusCompleted: 'Completado',
+                statusError: 'Error',
+                btnStart: 'Iniciar',
+                btnPause: 'Pausar',
+                btnStop: 'Detener',
+                btnResume: 'Continuar',
+                btnRestart: 'Reiniciar',
+                btnRetry: 'Reintentar',
+                btnSaveFile: 'Guardar',
+                btnDelete: 'Eliminar',
+                loadingPreview: 'Cargando...',
+                previewFailed: 'Vista previa fallida',
+                previewNotSupported: 'Vista previa no soportada',
+                segments: 'segmentos',
+                alertEnterUrl: 'Por favor ingresa un enlace M3U8',
+                alertValidUrl: 'Por favor ingresa una URL válida',
+                alertAddedTasks: '{count} tareas agregadas exitosamente',
+                alertNoValidUrl: 'No se encontraron URLs válidas',
+                alertMaxConcurrent: 'Máximo {count} descargas simultáneas, por favor espera',
+                alertNoCompleted: 'No hay tareas completadas',
+                alertConfirmSave: '¿Deseas guardar {count} archivos de video completados?',
+                alertStartedSaving: 'Guardando {count} archivos',
+                alertConfirmClearAll: '¿Deseas limpiar todas las tareas?',
+                errorFetchM3u8: 'No se puede obtener el archivo M3U8',
+                errorNoSegments: 'No se encontraron segmentos de video válidos en el archivo M3U8',
+                errorSegmentFailed: 'Falló la descarga del segmento {index}',
+                taskCountFormat: '{total} tareas ({downloading} descargando, {completed} completadas)',
+                faqTitle: '❓ Preguntas frecuentes',
+                faq1Question: '¿Qué es el formato M3U8?',
+                faq1Answer: 'M3U8 es el formato de archivo de índice para el protocolo HLS (HTTP Live Streaming). Contiene una lista de segmentos de video (archivos TS). HLS es un protocolo de streaming adaptativo desarrollado por Apple, ampliamente usado para reproducción de video en línea.',
+                faq2Question: '¿Por qué algunos videos M3U8 no se pueden descargar?',
+                faq2Answer: 'Puede ser porque el video usa protección DRM, o requiere información de autenticación específica (Cookie, Token). Esta herramienta solo soporta streams M3U8 públicos y no encriptados. Además, algunos sitios tienen restricciones CORS.',
+                faq3Question: '¿En qué formato están los videos descargados?',
+                faq3Answer: 'Los videos están en formato TS (Transport Stream), fusionados de los segmentos M3U8. El formato TS puede reproducirse directamente con VLC, PotPlayer, etc. Para convertir a MP4: <code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-family: monospace;">ffmpeg -i video.ts -c copy video.mp4</code>',
+                faq4Question: '¿Qué determina la velocidad de descarga?',
+                faq4Answer: 'La velocidad depende de dos factores: el ancho de banda del servidor de video original y tu conexión de red local. Esta herramienta soporta descargas multi-hilo (5 simultáneas por defecto) para mejorar la eficiencia.',
+                faq5Question: '¿Los datos de video pasan por un servidor?',
+                faq5Answer: 'No. Esta herramienta funciona completamente en el navegador. Los datos de video se descargan directamente del servidor original a tu navegador, garantizando la seguridad y privacidad de los datos.',
+                relatedToolsTitle: '🔗 Herramientas relacionadas',
+                relatedTool1Title: 'Descarga X/TikTok',
+                relatedTool1Desc: 'Descargar videos de redes sociales',
+                relatedTool2Title: 'Cortador de audio',
+                relatedTool2Desc: 'Cortar archivos de audio en línea',
+                relatedTool3Title: 'Convertidor de imágenes',
+                relatedTool3Desc: 'Convertir WebP/PNG/JPG',
+                relatedTool4Title: 'Compresor de imágenes',
+                relatedTool4Desc: 'Comprimir imágenes por lotes',
+                footerText: 'Procesamiento del lado del cliente, los videos no se suben al servidor',
+                footerBackHome: '← Volver a la página principal de Web Toolbox'
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+        // 获取翻译文本
+        function t(key, params = {}) {
+            let text = i18n[currentLang]?.[key] || i18n['en'][key] || key;
+            Object.keys(params).forEach(param => {
+                text = text.replace(`{${param}}`, params[param]);
+            });
+            return text;
+        }
+
+        // 更新页面上所有带有 data-i18n 属性的元素
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const text = t(key);
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    // 输入框不直接设置内容
+                } else {
+                    el.innerHTML = text;
+                }
+            });
+
+            // 更新 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                el.placeholder = t(key);
+            });
+
+            // 更新语言切换器当前显示
+            const langNames = { 'en': '🌐 English', 'zh-CN': '🌐 中文', 'fr': '🌐 Français', 'es': '🌐 Español' };
+            document.getElementById('langCurrent').textContent = langNames[currentLang] || '🌐 English';
+
+            // 重新渲染任务列表和FAQ等动态内容
+            renderTasks();
+            updateTaskCount();
+            renderFAQ();
+            renderRelatedTools();
+            renderFooter();
+        }
+
+        // 初始化语言切换器
+        function initLanguageSwitcher() {
+            const dropdown = document.getElementById('langDropdown');
+            const current = document.getElementById('langCurrent');
+
+            current.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const lang = btn.getAttribute('data-lang');
+                    currentLang = lang;
+                    localStorage.setItem('preferredLanguage', lang);
+                    dropdown.classList.remove('active');
+                    updatePageLanguage();
+                });
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.remove('active');
+            });
+        }
+
+        // 渲染FAQ
+        function renderFAQ() {
+            const faqSection = document.getElementById('faqSection');
+            if (!faqSection) return;
+
+            faqSection.innerHTML = `
+                <h2 style="color: #00d9ff; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(0,217,255,0.3);">${t('faqTitle')}</h2>
+                <div style="display: flex; flex-direction: column; gap: 16px;">
+                    ${[1,2,3,4,5].map(i => `
+                        <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
+                            <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
+                                <span style="color: #00d9ff;">Q:</span> ${t('faq' + i + 'Question')}
+                            </summary>
+                            <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
+                                <p>${t('faq' + i + 'Answer')}</p>
+                            </div>
+                        </details>
+                    `).join('')}
+                </div>
+            `;
+        }
+
+        // 渲染相关工具
+        function renderRelatedTools() {
+            const section = document.getElementById('relatedToolsSection');
+            if (!section) return;
+
+            section.innerHTML = `
+                <h3 style="color: #e4e4e4; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">${t('relatedToolsTitle')}</h3>
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                    <a href="social-video-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
+                        <div style="color: #e4e4e4; font-weight: 500;">${t('relatedTool1Title')}</div>
+                        <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('relatedTool1Desc')}</div>
+                    </a>
+                    <a href="audio-cutter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🎵</div>
+                        <div style="color: #e4e4e4; font-weight: 500;">${t('relatedTool2Title')}</div>
+                        <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('relatedTool2Desc')}</div>
+                    </a>
+                    <a href="image-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
+                        <div style="color: #e4e4e4; font-weight: 500;">${t('relatedTool3Title')}</div>
+                        <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('relatedTool3Desc')}</div>
+                    </a>
+                    <a href="image-compressor.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                        <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
+                        <div style="color: #e4e4e4; font-weight: 500;">${t('relatedTool4Title')}</div>
+                        <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('relatedTool4Desc')}</div>
+                    </a>
+                </div>
+            `;
+        }
+
+        // 渲染页脚
+        function renderFooter() {
+            const footer = document.getElementById('pageFooter');
+            if (!footer) return;
+
+            footer.innerHTML = `
+                <p>${t('footerText')}</p>
+                <p style="margin-top: 12px;">
+                    <a href="index.html" style="color: #00d9ff; text-decoration: none;">${t('footerBackHome')}</a>
+                    <span style="margin: 0 12px;">|</span>
+                    <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
+                </p>
+            `;
+        }
+
+        // ==================== 下载器主逻辑 ====================
+
         // 任务状态枚举
         const TaskStatus = {
             PENDING: 'pending',
@@ -730,12 +1255,12 @@
             const name = nameInput.value.trim();
 
             if (!url) {
-                alert('请输入M3U8链接');
+                alert(t('alertEnterUrl'));
                 return;
             }
 
             if (!isValidUrl(url)) {
-                alert('请输入有效的URL');
+                alert(t('alertValidUrl'));
                 return;
             }
 
@@ -750,7 +1275,7 @@
             const lines = textarea.value.trim().split('\n').filter(line => line.trim());
 
             if (lines.length === 0) {
-                alert('请输入M3U8链接');
+                alert(t('alertEnterUrl'));
                 return;
             }
 
@@ -777,9 +1302,9 @@
 
             if (addedCount > 0) {
                 textarea.value = '';
-                alert(`成功添加 ${addedCount} 个任务`);
+                alert(t('alertAddedTasks', { count: addedCount }));
             } else {
-                alert('没有找到有效的URL');
+                alert(t('alertNoValidUrl'));
             }
         }
 
@@ -837,8 +1362,8 @@
                             <polyline points="7 10 12 15 17 10"/>
                             <line x1="12" y1="15" x2="12" y2="3"/>
                         </svg>
-                        <p>暂无下载任务</p>
-                        <p style="font-size: 12px; margin-top: 8px;">添加M3U8链接开始下载</p>
+                        <p>${t('emptyStateTitle')}</p>
+                        <p style="font-size: 12px; margin-top: 8px;">${t('emptyStateDesc')}</p>
                     </div>
                 `;
                 return;
@@ -849,7 +1374,7 @@
                     <div class="task-preview" id="preview-${task.id}" onclick="togglePreview(${task.id})">
                         <div class="preview-placeholder loading-placeholder">
                             <div class="loading-spinner"></div>
-                            <span>加载预览...</span>
+                            <span>${t('loadingPreview')}</span>
                         </div>
                     </div>
                     <div class="task-content">
@@ -866,10 +1391,10 @@
                             </div>
                             <div class="progress-text">
                                 <span>${task.progress.toFixed(1)}%</span>
-                                <span>${task.downloaded}/${task.total} 片段</span>
+                                <span>${task.downloaded}/${task.total} ${t('segments')}</span>
                             </div>
                         </div>
-                        ${task.error ? `<div style="color: #ff4757; font-size: 12px; margin-bottom: 8px;">错误: ${escapeHtml(task.error)}</div>` : ''}
+                        ${task.error ? `<div style="color: #ff4757; font-size: 12px; margin-bottom: 8px;">Error: ${escapeHtml(task.error)}</div>` : ''}
                         <div class="task-actions">
                             ${getTaskActions(task)}
                         </div>
@@ -884,11 +1409,11 @@
         // 获取状态文本
         function getStatusText(status) {
             const statusMap = {
-                [TaskStatus.PENDING]: '等待中',
-                [TaskStatus.DOWNLOADING]: '下载中',
-                [TaskStatus.PAUSED]: '已暂停',
-                [TaskStatus.COMPLETED]: '已完成',
-                [TaskStatus.ERROR]: '出错'
+                [TaskStatus.PENDING]: t('statusPending'),
+                [TaskStatus.DOWNLOADING]: t('statusDownloading'),
+                [TaskStatus.PAUSED]: t('statusPaused'),
+                [TaskStatus.COMPLETED]: t('statusCompleted'),
+                [TaskStatus.ERROR]: t('statusError')
             };
             return statusMap[status] || status;
         }
@@ -898,29 +1423,29 @@
             switch (task.status) {
                 case TaskStatus.PENDING:
                     return `
-                        <button class="btn btn-success" onclick="startTask(${task.id})">▶️ 开始</button>
-                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ 删除</button>
+                        <button class="btn btn-success" onclick="startTask(${task.id})">▶️ ${t('btnStart')}</button>
+                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ ${t('btnDelete')}</button>
                     `;
                 case TaskStatus.DOWNLOADING:
                     return `
-                        <button class="btn btn-warning" onclick="pauseTask(${task.id})">⏸️ 暂停</button>
-                        <button class="btn btn-danger" onclick="stopTask(${task.id})">⏹️ 停止</button>
+                        <button class="btn btn-warning" onclick="pauseTask(${task.id})">⏸️ ${t('btnPause')}</button>
+                        <button class="btn btn-danger" onclick="stopTask(${task.id})">⏹️ ${t('btnStop')}</button>
                     `;
                 case TaskStatus.PAUSED:
                     return `
-                        <button class="btn btn-success" onclick="resumeTask(${task.id})">▶️ 继续</button>
-                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ 删除</button>
+                        <button class="btn btn-success" onclick="resumeTask(${task.id})">▶️ ${t('btnResume')}</button>
+                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ ${t('btnDelete')}</button>
                     `;
                 case TaskStatus.COMPLETED:
                     return `
-                        <button class="btn btn-primary" onclick="downloadFile(${task.id})">💾 保存文件</button>
-                        <button class="btn btn-secondary" onclick="restartTask(${task.id})">🔄 重新下载</button>
-                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ 删除</button>
+                        <button class="btn btn-primary" onclick="downloadFile(${task.id})">💾 ${t('btnSaveFile')}</button>
+                        <button class="btn btn-secondary" onclick="restartTask(${task.id})">🔄 ${t('btnRestart')}</button>
+                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ ${t('btnDelete')}</button>
                     `;
                 case TaskStatus.ERROR:
                     return `
-                        <button class="btn btn-success" onclick="restartTask(${task.id})">🔄 重试</button>
-                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ 删除</button>
+                        <button class="btn btn-success" onclick="restartTask(${task.id})">🔄 ${t('btnRetry')}</button>
+                        <button class="btn btn-danger" onclick="removeTask(${task.id})">🗑️ ${t('btnDelete')}</button>
                     `;
                 default:
                     return '';
@@ -939,7 +1464,7 @@
             const countEl = document.getElementById('taskCount');
             const downloading = tasks.filter(t => t.status === TaskStatus.DOWNLOADING).length;
             const completed = tasks.filter(t => t.status === TaskStatus.COMPLETED).length;
-            countEl.textContent = `${tasks.length} 个任务 (${downloading} 下载中, ${completed} 已完成)`;
+            countEl.textContent = t('taskCountFormat', { total: tasks.length, downloading, completed });
         }
 
         // 开始下载任务
@@ -948,7 +1473,7 @@
             if (!task) return;
 
             if (activeDownloads >= MAX_CONCURRENT_DOWNLOADS) {
-                alert(`最多同时下载 ${MAX_CONCURRENT_DOWNLOADS} 个任务，请等待其他任务完成`);
+                alert(t('alertMaxConcurrent', { count: MAX_CONCURRENT_DOWNLOADS }));
                 return;
             }
 
@@ -993,7 +1518,7 @@
         async function parseM3U8(url, signal) {
             const response = await fetch(url, { signal });
             if (!response.ok) {
-                throw new Error(`无法获取M3U8文件: ${response.status}`);
+                throw new Error(`${t('errorFetchM3u8')}: ${response.status}`);
             }
 
             const text = await response.text();
@@ -1018,7 +1543,7 @@
             }
 
             if (segments.length === 0) {
-                throw new Error('M3U8文件中没有找到有效的视频片段');
+                throw new Error(t('errorNoSegments'));
             }
 
             return segments;
@@ -1037,7 +1562,7 @@
                             signal: task.controller.signal
                         });
                         if (!response.ok) {
-                            throw new Error(`片段 ${index} 下载失败`);
+                            throw new Error(t('errorSegmentFailed', { index }));
                         }
                         const buffer = await response.arrayBuffer();
                         task.downloadedSegments[index] = buffer;
@@ -1046,7 +1571,7 @@
                         updateTaskProgress(task);
                     } catch (error) {
                         if (error.name !== 'AbortError') {
-                            console.error(`片段 ${index} 下载失败:`, error);
+                            console.error(`Segment ${index} download failed:`, error);
                             // 继续下载其他片段
                         }
                         throw error;
@@ -1077,7 +1602,7 @@
                 progressText[0].textContent = `${task.progress.toFixed(1)}%`;
             }
             if (progressText[1]) {
-                progressText[1].textContent = `${task.downloaded}/${task.total} 片段`;
+                progressText[1].textContent = `${task.downloaded}/${task.total} ${t('segments')}`;
             }
         }
 
@@ -1102,7 +1627,7 @@
             if (!task || task.status !== TaskStatus.PAUSED) return;
 
             if (activeDownloads >= MAX_CONCURRENT_DOWNLOADS) {
-                alert(`最多同时下载 ${MAX_CONCURRENT_DOWNLOADS} 个任务，请等待其他任务完成`);
+                alert(t('alertMaxConcurrent', { count: MAX_CONCURRENT_DOWNLOADS }));
                 return;
             }
 
@@ -1213,11 +1738,11 @@
             const completedTasks = tasks.filter(t => t.status === TaskStatus.COMPLETED);
 
             if (completedTasks.length === 0) {
-                alert('没有已完成的下载任务');
+                alert(t('alertNoCompleted'));
                 return;
             }
 
-            const confirmed = confirm(`确定要保存 ${completedTasks.length} 个已完成的视频文件吗？`);
+            const confirmed = confirm(t('alertConfirmSave', { count: completedTasks.length }));
             if (!confirmed) return;
 
             // 逐个下载，间隔500ms避免浏览器拦截
@@ -1246,7 +1771,7 @@
                 }
             }
 
-            alert(`已开始保存 ${completedTasks.length} 个文件，请检查下载文件夹`);
+            alert(t('alertStartedSaving', { count: completedTasks.length }));
         }
 
         // 处理等待队列
@@ -1290,7 +1815,7 @@
 
         // 清空全部
         function clearAll() {
-            if (!confirm('确定要清空所有任务吗？')) return;
+            if (!confirm(t('alertConfirmClearAll'))) return;
 
             tasks.forEach(task => {
                 if (task.controller) {
@@ -1407,7 +1932,7 @@
                                     <line x1="15" y1="9" x2="9" y2="15"></line>
                                     <line x1="9" y1="9" x2="15" y2="15"></line>
                                 </svg>
-                                <span>预览失败</span>
+                                <span>${t('previewFailed')}</span>
                             </div>
                         `;
                         hls.destroy();
@@ -1431,7 +1956,7 @@
                                 <line x1="15" y1="9" x2="9" y2="15"></line>
                                 <line x1="9" y1="9" x2="15" y2="15"></line>
                             </svg>
-                            <span>预览失败</span>
+                            <span>${t('previewFailed')}</span>
                         </div>
                     `;
                 });
@@ -1444,7 +1969,7 @@
                             <line x1="15" y1="9" x2="9" y2="15"></line>
                             <line x1="9" y1="9" x2="15" y2="15"></line>
                         </svg>
-                        <span>不支持预览</span>
+                        <span>${t('previewNotSupported')}</span>
                     </div>
                 `;
             }
@@ -1484,91 +2009,24 @@
         }
 
         // 初始化
-        renderTasks();
-        updateTaskCount();
+        document.addEventListener('DOMContentLoaded', () => {
+            initLanguageSwitcher();
+            updatePageLanguage();
+        });
     </script>
 
     <!-- FAQ 问答区块 -->
-    <section class="faq-section" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #00d9ff; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(0,217,255,0.3);">❓ 常见问题</h2>
-        <div style="display: flex; flex-direction: column; gap: 16px;">
-            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
-                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
-                    <span style="color: #00d9ff;">Q:</span> 什么是 M3U8 格式？
-                </summary>
-                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
-                    <p>M3U8 是 HLS (HTTP Live Streaming) 流媒体协议的索引文件格式，它包含视频分片（TS文件）的列表。HLS 是苹果公司开发的自适应流媒体传输协议，被广泛用于在线视频播放，支持根据网络状况自动切换清晰度。</p>
-                </div>
-            </details>
-            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
-                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
-                    <span style="color: #00d9ff;">Q:</span> 为什么有些 M3U8 无法下载？
-                </summary>
-                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
-                    <p>可能是因为视频使用了 DRM 加密保护，或者需要特定的认证信息（如 Cookie、Token）才能访问。本工具仅支持下载公开的、未加密的 M3U8 视频流。另外，部分网站设置了跨域限制（CORS），也会导致无法在浏览器中直接下载。</p>
-                </div>
-            </details>
-            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
-                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
-                    <span style="color: #00d9ff;">Q:</span> 下载的视频是什么格式？
-                </summary>
-                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
-                    <p>下载后的视频为 TS（Transport Stream）格式，这是由 M3U8 分片合并而成的视频文件。TS 格式可以直接使用 VLC、PotPlayer 等播放器播放。如需转换为 MP4 格式，可使用 FFmpeg 命令：<code style="background: rgba(0,0,0,0.3); padding: 2px 6px; border-radius: 4px; font-family: monospace;">ffmpeg -i video.ts -c copy video.mp4</code></p>
-                </div>
-            </details>
-            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
-                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
-                    <span style="color: #00d9ff;">Q:</span> 下载速度取决于什么？
-                </summary>
-                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
-                    <p>下载速度主要取决于两个因素：原始视频服务器的带宽和响应速度，以及你本地的网络连接速度。本工具支持多线程并发下载（默认5个并发），可以有效提高下载效率。如果原始服务器有速度限制，则下载速度会受到限制。</p>
-                </div>
-            </details>
-            <details style="background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 12px; overflow: hidden;">
-                <summary style="padding: 16px 20px; cursor: pointer; font-weight: 600; color: #e4e4e4; display: flex; align-items: center; gap: 12px; user-select: none;">
-                    <span style="color: #00d9ff;">Q:</span> 视频数据会经过服务器吗？
-                </summary>
-                <div style="padding: 0 20px 16px 20px; color: rgba(255,255,255,0.7); line-height: 1.7;">
-                    <p>不会。本工具完全在浏览器端运行，视频数据直接从原始服务器下载到你的浏览器，不会经过任何中间服务器。所有处理（解析、下载、合并）都在本地完成，保证了数据安全和隐私。</p>
-                </div>
-            </details>
-        </div>
+    <section id="faqSection" class="faq-section" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <!-- 由 JavaScript 动态渲染 -->
     </section>
 
     <!-- 相关工具推荐 -->
-    <section class="related-tools" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e4e4e4; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid rgba(255,255,255,0.1);">🔗 相关工具推荐</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
-            <a href="social-video-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
-                <div style="color: #e4e4e4; font-weight: 500;">X/TikTok 视频下载</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">下载社交媒体视频</div>
-            </a>
-            <a href="audio-cutter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🎵</div>
-                <div style="color: #e4e4e4; font-weight: 500;">音频剪辑</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">在线剪切音频文件</div>
-            </a>
-            <a href="image-converter.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
-                <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
-                <div style="color: #e4e4e4; font-weight: 500;">图片格式转换</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">WebP/PNG/JPG 互转</div>
-            </a>
-            <a href="image-compressor.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
-                <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
-                <div style="color: #e4e4e4; font-weight: 500;">图片压缩</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
-            </a>
-        </div>
+    <section id="relatedToolsSection" class="related-tools" style="max-width: 1200px; margin: 40px auto; padding: 0 20px;">
+        <!-- 由 JavaScript 动态渲染 -->
     </section>
 
-    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 14px;">
-        <p>纯前端处理，视频不会上传到服务器</p>
-        <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #00d9ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
-            <span style="margin: 0 12px;">|</span>
-            <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
-        </p>
+    <footer id="pageFooter" style="text-align: center; padding: 30px 20px; border-top: 1px solid rgba(255,255,255,0.1); color: #888; font-size: 14px;">
+        <!-- 由 JavaScript 动态渲染 -->
     </footer>
 </body>
 </html>

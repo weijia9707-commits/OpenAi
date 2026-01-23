@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线节拍器 - 免费音乐练习节奏工具 | Web Toolbox</title>
+    <title>Online Metronome - Free Music Practice Rhythm Tool | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线节拍器工具，支持40-220 BPM速度调节，多种拍号(2/4、3/4、4/4、6/8)，电子音和钢琴音色选择。适用于乐器练习、歌唱训练、舞蹈排练，帮助你保持精准节奏。">
-    <meta name="keywords" content="节拍器,在线节拍器,BPM,音乐节拍,节奏练习,乐器练习,钢琴练习,吉他练习,架子鼓练习,免费节拍器">
+    <meta name="description" content="Free online metronome tool with 40-220 BPM speed adjustment, multiple time signatures (2/4, 3/4, 4/4, 6/8), electronic and piano sounds. Perfect for instrument practice, singing training, and dance rehearsal.">
+    <meta name="keywords" content="metronome,online metronome,BPM,music beat,rhythm practice,instrument practice,piano practice,guitar practice,drum practice,free metronome">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/metronome.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/metronome.html">
-    <meta property="og:title" content="在线节拍器 - 免费音乐练习节奏工具">
-    <meta property="og:description" content="免费在线节拍器，支持多种拍号和音色，帮助你保持精准节奏。">
+    <meta property="og:title" content="Online Metronome - Free Music Practice Rhythm Tool">
+    <meta property="og:description" content="Free online metronome with multiple time signatures and sound options to help you keep perfect rhythm.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/metronome.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="在线节拍器 - 免费音乐练习节奏工具">
-    <meta name="twitter:description" content="免费在线节拍器，支持多种拍号和音色选择。">
+    <meta name="twitter:title" content="Online Metronome - Free Music Practice Rhythm Tool">
+    <meta name="twitter:description" content="Free online metronome with multiple time signatures and sound options.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/metronome.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "在线节拍器",
+        "name": "Online Metronome",
         "url": "https://www.heyuan110.com/web-toolbox/metronome.html",
-        "description": "在线节拍器工具，支持多种拍号和音色，帮助音乐练习保持精准节奏",
+        "description": "Online metronome tool with multiple time signatures and sounds to help maintain precise rhythm during music practice",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "BPM 是什么意思？",
+                "name": "What does BPM mean?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "BPM（Beats Per Minute）表示每分钟节拍数，数值越大节奏越快。例如 60 BPM 表示每秒一拍，120 BPM 表示每秒两拍。"
+                    "text": "BPM (Beats Per Minute) indicates the number of beats per minute. Higher values mean faster tempo. For example, 60 BPM means one beat per second, 120 BPM means two beats per second."
                 }
             },
             {
                 "@type": "Question",
-                "name": "常见音乐的 BPM 是多少？",
+                "name": "What are common BPM ranges for different music?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "慢歌约 60-80 BPM，流行歌曲约 100-130 BPM，快歌可达 140-180 BPM。古典音乐中，慢板(Largo)约 40-60 BPM，行板(Andante)约 76-108 BPM，快板(Allegro)约 120-168 BPM。"
+                    "text": "Slow songs are around 60-80 BPM, pop songs around 100-130 BPM, fast songs can reach 140-180 BPM. In classical music, Largo is about 40-60 BPM, Andante about 76-108 BPM, Allegro about 120-168 BPM."
                 }
             },
             {
                 "@type": "Question",
-                "name": "节拍器精度如何？",
+                "name": "How accurate is this metronome?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "本在线节拍器使用 Web Audio API 实现，精度可达毫秒级，能够满足专业音乐练习的需求。"
+                    "text": "This online metronome uses the Web Audio API for millisecond-level precision, meeting the needs of professional music practice."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以在后台运行吗？",
+                "name": "Can it run in the background?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以，切换到其他标签页后节拍器会继续运行，声音不会中断，方便你边看谱边练习。"
+                    "text": "Yes, the metronome continues running when you switch to other tabs, the sound won't interrupt, making it convenient to practice while reading sheet music."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持自定义拍号吗？",
+                "name": "Does it support custom time signatures?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持常见的 2/4、3/4、4/4、6/8 等拍号，并且可以点击节拍圆点自定义每一拍的强弱。"
+                    "text": "It supports common time signatures like 2/4, 3/4, 4/4, 6/8, and you can click on the beat dots to customize the accent pattern for each beat."
                 }
             }
         ]
@@ -113,6 +113,22 @@
             padding: 30px 20px;
         }
 
+        /* Header */
+        .header {
+            position: relative;
+            margin-bottom: 20px;
+        }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
+
         /* 返回按钮 */
         .back-home {
             display: inline-flex;
@@ -124,7 +140,6 @@
             padding: 8px 16px;
             border-radius: 8px;
             transition: all 0.2s ease;
-            margin-bottom: 20px;
         }
 
         .back-home:hover {
@@ -673,6 +688,17 @@
                 padding: 8px 14px;
                 font-size: 0.85rem;
             }
+
+            .lang-switcher {
+                position: static;
+                margin-bottom: 10px;
+                text-align: right;
+            }
+
+            .header {
+                display: flex;
+                flex-direction: column;
+            }
         }
     </style>
 </head>
@@ -680,11 +706,24 @@
     <div class="flash-overlay" id="flashOverlay"></div>
 
     <div class="container">
-        <a href="index.html" class="back-home">← 返回工具箱</a>
+        <div class="header">
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox</a>
+        </div>
 
         <div class="metronome-panel">
-            <h1 class="metronome-title">节拍器</h1>
-            <p class="metronome-subtitle">保持你的节奏</p>
+            <h1 class="metronome-title" data-i18n="title">Metronome</h1>
+            <p class="metronome-subtitle" data-i18n="subtitle">Keep your rhythm</p>
 
             <!-- BPM 显示 -->
             <div class="bpm-display">
@@ -697,18 +736,18 @@
                 <input type="range" class="bpm-slider" id="bpmSlider" min="40" max="220" value="120">
                 <div class="bpm-range">
                     <span>40</span>
-                    <span>慢 ← → 快</span>
+                    <span data-i18n="slowFast">Slow ← → Fast</span>
                     <span>220</span>
                 </div>
             </div>
 
             <!-- 快捷 BPM -->
             <div class="bpm-presets">
-                <span class="bpm-preset" data-bpm="60">60 慢板</span>
-                <span class="bpm-preset" data-bpm="80">80 行板</span>
-                <span class="bpm-preset" data-bpm="100">100 中板</span>
-                <span class="bpm-preset" data-bpm="120">120 快板</span>
-                <span class="bpm-preset" data-bpm="140">140 急板</span>
+                <span class="bpm-preset" data-bpm="60" data-i18n="bpm60">60 Largo</span>
+                <span class="bpm-preset" data-bpm="80" data-i18n="bpm80">80 Andante</span>
+                <span class="bpm-preset" data-bpm="100" data-i18n="bpm100">100 Moderato</span>
+                <span class="bpm-preset" data-bpm="120" data-i18n="bpm120">120 Allegro</span>
+                <span class="bpm-preset" data-bpm="140" data-i18n="bpm140">140 Vivace</span>
             </div>
 
             <!-- 播放按钮 -->
@@ -718,12 +757,12 @@
             <div class="beat-indicators" id="beatIndicators">
                 <!-- 动态生成 -->
             </div>
-            <p class="beat-hint">点击节拍可以改变强弱</p>
+            <p class="beat-hint" data-i18n="beatHint">Click on beats to change accent</p>
 
             <!-- 设置 -->
             <div class="settings-row">
                 <div class="setting-item">
-                    <span class="setting-label">拍号</span>
+                    <span class="setting-label" data-i18n="timeSignature">Time Signature</span>
                     <div class="time-signature-btns" id="timeSigBtns">
                         <button class="time-sig-btn" data-beats="2">2/4</button>
                         <button class="time-sig-btn" data-beats="3">3/4</button>
@@ -735,17 +774,17 @@
 
             <div class="settings-row">
                 <div class="setting-item">
-                    <span class="setting-label">闪烁效果</span>
+                    <span class="setting-label" data-i18n="flashEffect">Flash Effect</span>
                     <div class="toggle-container">
                         <div class="toggle-switch active" id="flashToggle"></div>
                     </div>
                 </div>
 
                 <div class="setting-item">
-                    <span class="setting-label">音色</span>
+                    <span class="setting-label" data-i18n="sound">Sound</span>
                     <div class="sound-btns" id="soundBtns">
-                        <button class="sound-btn active" data-sound="electronic">电子音</button>
-                        <button class="sound-btn" data-sound="piano">钢琴音</button>
+                        <button class="sound-btn active" data-sound="electronic" data-i18n="electronic">Electronic</button>
+                        <button class="sound-btn" data-sound="piano" data-i18n="piano">Piano</button>
                     </div>
                 </div>
             </div>
@@ -755,74 +794,452 @@
         <section class="features-section">
             <div class="feature-card">
                 <div class="feature-icon">&#9201;</div>
-                <h3>精准计时</h3>
-                <p>使用 Web Audio API，提供毫秒级精准节拍，满足专业练习需求</p>
+                <h3 data-i18n="feature1Title">Precise Timing</h3>
+                <p data-i18n="feature1Desc">Uses Web Audio API for millisecond-level precision, meeting professional practice needs</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">&#9836;</div>
-                <h3>BPM 可调</h3>
-                <p>支持 20-300 BPM 范围调节，满足各种音乐风格需求</p>
+                <h3 data-i18n="feature2Title">Adjustable BPM</h3>
+                <p data-i18n="feature2Desc">Supports 20-300 BPM range adjustment for various music styles</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">&#128308;</div>
-                <h3>可视化</h3>
-                <p>节拍可视化显示，闪烁提示当前拍子，更直观的节奏感知</p>
+                <h3 data-i18n="feature3Title">Visualization</h3>
+                <p data-i18n="feature3Desc">Visual beat display with flash prompts for more intuitive rhythm perception</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">&#127925;</div>
-                <h3>多种音色</h3>
-                <p>提供电子音、钢琴音等多种节拍音色可选，适应不同练习场景</p>
+                <h3 data-i18n="feature4Title">Multiple Sounds</h3>
+                <p data-i18n="feature4Desc">Various beat sounds including electronic and piano for different practice scenarios</p>
             </div>
         </section>
 
         <!-- 简介 -->
         <div class="info-section">
-            <h2>关于节拍器</h2>
-            <p>在线节拍器是一个简单实用的音乐练习工具，它能够产生稳定的节拍声音，帮助音乐学习者保持准确的节奏感。无论是乐器练习、歌唱训练，还是舞蹈排练，都能帮助你掌握精准的节奏。</p>
-            <p>本工具完全免费使用，支持多种拍号设置，可调节速度(BPM)，并提供不同的节拍音色选择。</p>
+            <h2 data-i18n="aboutTitle">About Metronome</h2>
+            <p data-i18n="aboutDesc1">The online metronome is a simple and practical music practice tool that produces stable beat sounds to help music learners maintain accurate rhythm. Whether for instrument practice, singing training, or dance rehearsal, it helps you master precise rhythm.</p>
+            <p data-i18n="aboutDesc2">This tool is completely free to use, supports multiple time signatures, adjustable tempo (BPM), and offers different beat sound options.</p>
         </div>
 
         <!-- 使用说明 -->
         <div class="info-section">
-            <h2>使用说明</h2>
+            <h2 data-i18n="instructionsTitle">Instructions</h2>
 
-            <h3>1. 调节速度(BPM)</h3>
+            <h3 data-i18n="instruction1Title">1. Adjust Speed (BPM)</h3>
             <ul>
-                <li>使用滑块或点击预设按钮来设置所需的速度</li>
-                <li>BPM范围：40-220，数值越大表示速度越快</li>
+                <li data-i18n="instruction1Item1">Use the slider or click preset buttons to set the desired speed</li>
+                <li data-i18n="instruction1Item2">BPM range: 40-220, higher values mean faster tempo</li>
             </ul>
 
-            <h3>2. 选择拍号</h3>
+            <h3 data-i18n="instruction2Title">2. Select Time Signature</h3>
             <ul>
-                <li>支持常见拍号：2/4、3/4、4/4、6/8</li>
-                <li>根据练习需求选择合适的拍号</li>
+                <li data-i18n="instruction2Item1">Supports common time signatures: 2/4, 3/4, 4/4, 6/8</li>
+                <li data-i18n="instruction2Item2">Choose the appropriate time signature for your practice needs</li>
             </ul>
 
-            <h3>3. 开始/停止</h3>
+            <h3 data-i18n="instruction3Title">3. Start/Stop</h3>
             <ul>
-                <li>点击播放按钮开始节拍</li>
-                <li>再次点击可以暂停</li>
-                <li>练习时可随时调整速度和拍号</li>
+                <li data-i18n="instruction3Item1">Click the play button to start the beat</li>
+                <li data-i18n="instruction3Item2">Click again to pause</li>
+                <li data-i18n="instruction3Item3">You can adjust speed and time signature while practicing</li>
             </ul>
 
-            <h3>4. 自定义强弱</h3>
+            <h3 data-i18n="instruction4Title">4. Customize Accents</h3>
             <ul>
-                <li>点击节拍圆点可切换强、中、弱三种力度</li>
-                <li>紫色为强拍，绿色为中强，灰色为弱拍</li>
+                <li data-i18n="instruction4Item1">Click on beat dots to switch between strong, medium, and weak accents</li>
+                <li data-i18n="instruction4Item2">Purple is strong beat, green is medium, gray is weak beat</li>
             </ul>
 
             <div class="tips-box">
-                <h4>使用技巧</h4>
+                <h4 data-i18n="tipsTitle">Tips</h4>
                 <ol>
-                    <li>初学者建议从较慢的速度开始练习，确保动作准确后再逐渐加快。</li>
-                    <li>练习时注意聆听重音，培养节奏感。</li>
-                    <li>可以使用耳机练习，避免干扰他人。</li>
+                    <li data-i18n="tip1">Beginners should start with slower speeds, ensure accuracy before gradually speeding up.</li>
+                    <li data-i18n="tip2">Pay attention to the accents while practicing to develop rhythm sense.</li>
+                    <li data-i18n="tip3">Consider using headphones to avoid disturbing others.</li>
                 </ol>
             </div>
         </div>
     </div>
 
     <script>
+        // 多语言翻译
+        const translations = {
+            en: {
+                backHome: '← Back to Toolbox',
+                title: 'Metronome',
+                subtitle: 'Keep your rhythm',
+                slowFast: 'Slow ← → Fast',
+                bpm60: '60 Largo',
+                bpm80: '80 Andante',
+                bpm100: '100 Moderato',
+                bpm120: '120 Allegro',
+                bpm140: '140 Vivace',
+                beatHint: 'Click on beats to change accent',
+                timeSignature: 'Time Signature',
+                flashEffect: 'Flash Effect',
+                sound: 'Sound',
+                electronic: 'Electronic',
+                piano: 'Piano',
+                feature1Title: 'Precise Timing',
+                feature1Desc: 'Uses Web Audio API for millisecond-level precision, meeting professional practice needs',
+                feature2Title: 'Adjustable BPM',
+                feature2Desc: 'Supports 20-300 BPM range adjustment for various music styles',
+                feature3Title: 'Visualization',
+                feature3Desc: 'Visual beat display with flash prompts for more intuitive rhythm perception',
+                feature4Title: 'Multiple Sounds',
+                feature4Desc: 'Various beat sounds including electronic and piano for different practice scenarios',
+                aboutTitle: 'About Metronome',
+                aboutDesc1: 'The online metronome is a simple and practical music practice tool that produces stable beat sounds to help music learners maintain accurate rhythm. Whether for instrument practice, singing training, or dance rehearsal, it helps you master precise rhythm.',
+                aboutDesc2: 'This tool is completely free to use, supports multiple time signatures, adjustable tempo (BPM), and offers different beat sound options.',
+                instructionsTitle: 'Instructions',
+                instruction1Title: '1. Adjust Speed (BPM)',
+                instruction1Item1: 'Use the slider or click preset buttons to set the desired speed',
+                instruction1Item2: 'BPM range: 40-220, higher values mean faster tempo',
+                instruction2Title: '2. Select Time Signature',
+                instruction2Item1: 'Supports common time signatures: 2/4, 3/4, 4/4, 6/8',
+                instruction2Item2: 'Choose the appropriate time signature for your practice needs',
+                instruction3Title: '3. Start/Stop',
+                instruction3Item1: 'Click the play button to start the beat',
+                instruction3Item2: 'Click again to pause',
+                instruction3Item3: 'You can adjust speed and time signature while practicing',
+                instruction4Title: '4. Customize Accents',
+                instruction4Item1: 'Click on beat dots to switch between strong, medium, and weak accents',
+                instruction4Item2: 'Purple is strong beat, green is medium, gray is weak beat',
+                tipsTitle: 'Tips',
+                tip1: 'Beginners should start with slower speeds, ensure accuracy before gradually speeding up.',
+                tip2: 'Pay attention to the accents while practicing to develop rhythm sense.',
+                tip3: 'Consider using headphones to avoid disturbing others.',
+                faqTitle: 'FAQ',
+                faq1Q: 'What does BPM mean?',
+                faq1A: 'BPM (Beats Per Minute) indicates the number of beats per minute. Higher values mean faster tempo. For example, 60 BPM means one beat per second, 120 BPM means two beats per second. This is the standard unit for describing tempo in music.',
+                faq2Q: 'What are common BPM ranges for different music?',
+                faq2A: 'Slow songs are around 60-80 BPM, pop songs around 100-130 BPM, fast songs can reach 140-180 BPM. In classical music, Largo is about 40-60 BPM, Andante about 76-108 BPM, Allegro about 120-168 BPM.',
+                faq3Q: 'How accurate is this metronome?',
+                faq3A: 'This online metronome uses the Web Audio API for millisecond-level precision, meeting the needs of professional music practice. Compared to traditional JavaScript timers, Web Audio API provides more stable and accurate timing.',
+                faq4Q: 'Can it run in the background?',
+                faq4A: 'Yes, the metronome continues running when you switch to other tabs, the sound won\'t interrupt, making it convenient to practice while reading sheet music. However, using headphones is recommended for a better experience.',
+                faq5Q: 'Does it support custom time signatures?',
+                faq5A: 'It supports common time signatures like 2/4, 3/4, 4/4, 6/8, and you can click on the beat dots to customize the accent pattern for each beat. Purple indicates strong beat, green indicates medium beat, gray indicates weak beat.',
+                relatedTools: 'Related Tools',
+                audioCutter: 'Audio Cutter',
+                audioCutterDesc: 'Cut audio files online',
+                worldClock: 'World Clock',
+                worldClockDesc: 'Global timezone times',
+                calculator: 'Scientific Calculator',
+                calculatorDesc: 'Complex expressions',
+                handheldDanmaku: 'LED Banner',
+                handheldDanmakuDesc: 'LED scrolling text',
+                footerPrivacy: 'Pure frontend processing, data is not uploaded to server',
+                footerBack: '← Back to Web Toolbox'
+            },
+            'zh-CN': {
+                backHome: '← 返回工具箱',
+                title: '节拍器',
+                subtitle: '保持你的节奏',
+                slowFast: '慢 ← → 快',
+                bpm60: '60 慢板',
+                bpm80: '80 行板',
+                bpm100: '100 中板',
+                bpm120: '120 快板',
+                bpm140: '140 急板',
+                beatHint: '点击节拍可以改变强弱',
+                timeSignature: '拍号',
+                flashEffect: '闪烁效果',
+                sound: '音色',
+                electronic: '电子音',
+                piano: '钢琴音',
+                feature1Title: '精准计时',
+                feature1Desc: '使用 Web Audio API，提供毫秒级精准节拍，满足专业练习需求',
+                feature2Title: 'BPM 可调',
+                feature2Desc: '支持 20-300 BPM 范围调节，满足各种音乐风格需求',
+                feature3Title: '可视化',
+                feature3Desc: '节拍可视化显示，闪烁提示当前拍子，更直观的节奏感知',
+                feature4Title: '多种音色',
+                feature4Desc: '提供电子音、钢琴音等多种节拍音色可选，适应不同练习场景',
+                aboutTitle: '关于节拍器',
+                aboutDesc1: '在线节拍器是一个简单实用的音乐练习工具，它能够产生稳定的节拍声音，帮助音乐学习者保持准确的节奏感。无论是乐器练习、歌唱训练，还是舞蹈排练，都能帮助你掌握精准的节奏。',
+                aboutDesc2: '本工具完全免费使用，支持多种拍号设置，可调节速度(BPM)，并提供不同的节拍音色选择。',
+                instructionsTitle: '使用说明',
+                instruction1Title: '1. 调节速度(BPM)',
+                instruction1Item1: '使用滑块或点击预设按钮来设置所需的速度',
+                instruction1Item2: 'BPM范围：40-220，数值越大表示速度越快',
+                instruction2Title: '2. 选择拍号',
+                instruction2Item1: '支持常见拍号：2/4、3/4、4/4、6/8',
+                instruction2Item2: '根据练习需求选择合适的拍号',
+                instruction3Title: '3. 开始/停止',
+                instruction3Item1: '点击播放按钮开始节拍',
+                instruction3Item2: '再次点击可以暂停',
+                instruction3Item3: '练习时可随时调整速度和拍号',
+                instruction4Title: '4. 自定义强弱',
+                instruction4Item1: '点击节拍圆点可切换强、中、弱三种力度',
+                instruction4Item2: '紫色为强拍，绿色为中强，灰色为弱拍',
+                tipsTitle: '使用技巧',
+                tip1: '初学者建议从较慢的速度开始练习，确保动作准确后再逐渐加快。',
+                tip2: '练习时注意聆听重音，培养节奏感。',
+                tip3: '可以使用耳机练习，避免干扰他人。',
+                faqTitle: '常见问题',
+                faq1Q: 'BPM 是什么意思？',
+                faq1A: 'BPM（Beats Per Minute）表示每分钟节拍数，数值越大节奏越快。例如 60 BPM 表示每秒一拍，120 BPM 表示每秒两拍。这是音乐中用来描述速度的标准单位。',
+                faq2Q: '常见音乐的 BPM 是多少？',
+                faq2A: '慢歌约 60-80 BPM，流行歌曲约 100-130 BPM，快歌可达 140-180 BPM。古典音乐中，慢板(Largo)约 40-60 BPM，行板(Andante)约 76-108 BPM，快板(Allegro)约 120-168 BPM。',
+                faq3Q: '节拍器精度如何？',
+                faq3A: '本在线节拍器使用 Web Audio API 实现，精度可达毫秒级，能够满足专业音乐练习的需求。相比传统的 JavaScript 定时器，Web Audio API 能够提供更加稳定和精准的计时。',
+                faq4Q: '可以在后台运行吗？',
+                faq4A: '可以，切换到其他标签页后节拍器会继续运行，声音不会中断，方便你边看谱边练习。不过建议使用耳机以获得更好的体验。',
+                faq5Q: '支持自定义拍号吗？',
+                faq5A: '支持常见的 2/4、3/4、4/4、6/8 等拍号，并且可以点击节拍圆点自定义每一拍的强弱。紫色表示强拍，绿色表示中强拍，灰色表示弱拍。',
+                relatedTools: '相关工具推荐',
+                audioCutter: '音频剪切',
+                audioCutterDesc: '在线剪切音频文件',
+                worldClock: '世界时钟',
+                worldClockDesc: '全球时区时间',
+                calculator: '科学计算器',
+                calculatorDesc: '支持复杂表达式',
+                handheldDanmaku: '手持弹幕',
+                handheldDanmakuDesc: 'LED 滚动字幕',
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页'
+            },
+            fr: {
+                backHome: '← Retour à la boîte à outils',
+                title: 'Métronome',
+                subtitle: 'Gardez le rythme',
+                slowFast: 'Lent ← → Rapide',
+                bpm60: '60 Largo',
+                bpm80: '80 Andante',
+                bpm100: '100 Moderato',
+                bpm120: '120 Allegro',
+                bpm140: '140 Vivace',
+                beatHint: 'Cliquez sur les temps pour changer l\'accent',
+                timeSignature: 'Signature rythmique',
+                flashEffect: 'Effet flash',
+                sound: 'Son',
+                electronic: 'Électronique',
+                piano: 'Piano',
+                feature1Title: 'Précision temporelle',
+                feature1Desc: 'Utilise l\'API Web Audio pour une précision à la milliseconde, répondant aux besoins professionnels',
+                feature2Title: 'BPM réglable',
+                feature2Desc: 'Prend en charge une plage de 20-300 BPM pour divers styles musicaux',
+                feature3Title: 'Visualisation',
+                feature3Desc: 'Affichage visuel des temps avec des indicateurs flash pour une perception plus intuitive du rythme',
+                feature4Title: 'Sons multiples',
+                feature4Desc: 'Différents sons de battement dont électronique et piano pour différents scénarios de pratique',
+                aboutTitle: 'À propos du métronome',
+                aboutDesc1: 'Le métronome en ligne est un outil de pratique musicale simple et pratique qui produit des sons de battement stables pour aider les apprenants en musique à maintenir un rythme précis. Que ce soit pour la pratique d\'un instrument, l\'entraînement vocal ou les répétitions de danse, il vous aide à maîtriser un rythme précis.',
+                aboutDesc2: 'Cet outil est entièrement gratuit, prend en charge plusieurs signatures rythmiques, un tempo réglable (BPM) et offre différentes options de sons de battement.',
+                instructionsTitle: 'Instructions',
+                instruction1Title: '1. Régler la vitesse (BPM)',
+                instruction1Item1: 'Utilisez le curseur ou cliquez sur les boutons prédéfinis pour définir la vitesse souhaitée',
+                instruction1Item2: 'Plage BPM : 40-220, des valeurs plus élevées signifient un tempo plus rapide',
+                instruction2Title: '2. Sélectionner la signature rythmique',
+                instruction2Item1: 'Prend en charge les signatures courantes : 2/4, 3/4, 4/4, 6/8',
+                instruction2Item2: 'Choisissez la signature appropriée pour vos besoins de pratique',
+                instruction3Title: '3. Démarrer/Arrêter',
+                instruction3Item1: 'Cliquez sur le bouton lecture pour démarrer le battement',
+                instruction3Item2: 'Cliquez à nouveau pour mettre en pause',
+                instruction3Item3: 'Vous pouvez ajuster la vitesse et la signature pendant la pratique',
+                instruction4Title: '4. Personnaliser les accents',
+                instruction4Item1: 'Cliquez sur les points de battement pour basculer entre les accents fort, moyen et faible',
+                instruction4Item2: 'Violet pour temps fort, vert pour moyen, gris pour temps faible',
+                tipsTitle: 'Conseils',
+                tip1: 'Les débutants devraient commencer avec des vitesses plus lentes, s\'assurer de la précision avant d\'accélérer progressivement.',
+                tip2: 'Faites attention aux accents pendant la pratique pour développer le sens du rythme.',
+                tip3: 'Envisagez d\'utiliser des écouteurs pour ne pas déranger les autres.',
+                faqTitle: 'FAQ',
+                faq1Q: 'Que signifie BPM ?',
+                faq1A: 'BPM (Battements Par Minute) indique le nombre de battements par minute. Des valeurs plus élevées signifient un tempo plus rapide. Par exemple, 60 BPM signifie un battement par seconde, 120 BPM signifie deux battements par seconde. C\'est l\'unité standard pour décrire le tempo en musique.',
+                faq2Q: 'Quelles sont les plages BPM courantes pour différentes musiques ?',
+                faq2A: 'Les chansons lentes sont autour de 60-80 BPM, les chansons pop autour de 100-130 BPM, les chansons rapides peuvent atteindre 140-180 BPM. En musique classique, Largo est environ 40-60 BPM, Andante environ 76-108 BPM, Allegro environ 120-168 BPM.',
+                faq3Q: 'Quelle est la précision de ce métronome ?',
+                faq3A: 'Ce métronome en ligne utilise l\'API Web Audio pour une précision à la milliseconde, répondant aux besoins de pratique musicale professionnelle. Par rapport aux minuteries JavaScript traditionnelles, l\'API Web Audio fournit une synchronisation plus stable et précise.',
+                faq4Q: 'Peut-il fonctionner en arrière-plan ?',
+                faq4A: 'Oui, le métronome continue de fonctionner lorsque vous passez à d\'autres onglets, le son ne s\'interrompt pas, ce qui permet de pratiquer tout en lisant des partitions. Cependant, l\'utilisation d\'écouteurs est recommandée pour une meilleure expérience.',
+                faq5Q: 'Prend-il en charge les signatures personnalisées ?',
+                faq5A: 'Il prend en charge les signatures courantes comme 2/4, 3/4, 4/4, 6/8, et vous pouvez cliquer sur les points de battement pour personnaliser le motif d\'accent pour chaque temps. Violet indique temps fort, vert indique temps moyen, gris indique temps faible.',
+                relatedTools: 'Outils connexes',
+                audioCutter: 'Découpeur audio',
+                audioCutterDesc: 'Couper des fichiers audio en ligne',
+                worldClock: 'Horloge mondiale',
+                worldClockDesc: 'Heures des fuseaux horaires',
+                calculator: 'Calculatrice scientifique',
+                calculatorDesc: 'Expressions complexes',
+                handheldDanmaku: 'Bannière LED',
+                handheldDanmakuDesc: 'Texte défilant LED',
+                footerPrivacy: 'Traitement côté client, les données ne sont pas envoyées au serveur',
+                footerBack: '← Retour à Web Toolbox'
+            },
+            es: {
+                backHome: '← Volver a herramientas',
+                title: 'Metrónomo',
+                subtitle: 'Mantén tu ritmo',
+                slowFast: 'Lento ← → Rápido',
+                bpm60: '60 Largo',
+                bpm80: '80 Andante',
+                bpm100: '100 Moderato',
+                bpm120: '120 Allegro',
+                bpm140: '140 Vivace',
+                beatHint: 'Haz clic en los tiempos para cambiar el acento',
+                timeSignature: 'Compás',
+                flashEffect: 'Efecto flash',
+                sound: 'Sonido',
+                electronic: 'Electrónico',
+                piano: 'Piano',
+                feature1Title: 'Precisión temporal',
+                feature1Desc: 'Usa Web Audio API para precisión de milisegundos, cumpliendo necesidades profesionales',
+                feature2Title: 'BPM ajustable',
+                feature2Desc: 'Soporta rango de 20-300 BPM para varios estilos musicales',
+                feature3Title: 'Visualización',
+                feature3Desc: 'Visualización de tiempos con indicadores flash para percepción más intuitiva del ritmo',
+                feature4Title: 'Múltiples sonidos',
+                feature4Desc: 'Varios sonidos de pulso incluyendo electrónico y piano para diferentes escenarios de práctica',
+                aboutTitle: 'Sobre el metrónomo',
+                aboutDesc1: 'El metrónomo en línea es una herramienta simple y práctica de práctica musical que produce sonidos de pulso estables para ayudar a los estudiantes de música a mantener un ritmo preciso. Ya sea para práctica de instrumentos, entrenamiento vocal o ensayos de baile, te ayuda a dominar el ritmo preciso.',
+                aboutDesc2: 'Esta herramienta es completamente gratuita, soporta múltiples compases, tempo ajustable (BPM) y ofrece diferentes opciones de sonidos de pulso.',
+                instructionsTitle: 'Instrucciones',
+                instruction1Title: '1. Ajustar velocidad (BPM)',
+                instruction1Item1: 'Usa el deslizador o haz clic en botones preestablecidos para establecer la velocidad deseada',
+                instruction1Item2: 'Rango BPM: 40-220, valores más altos significan tempo más rápido',
+                instruction2Title: '2. Seleccionar compás',
+                instruction2Item1: 'Soporta compases comunes: 2/4, 3/4, 4/4, 6/8',
+                instruction2Item2: 'Elige el compás apropiado para tus necesidades de práctica',
+                instruction3Title: '3. Iniciar/Detener',
+                instruction3Item1: 'Haz clic en el botón de reproducción para iniciar el pulso',
+                instruction3Item2: 'Haz clic de nuevo para pausar',
+                instruction3Item3: 'Puedes ajustar velocidad y compás mientras practicas',
+                instruction4Title: '4. Personalizar acentos',
+                instruction4Item1: 'Haz clic en los puntos de pulso para cambiar entre acentos fuerte, medio y débil',
+                instruction4Item2: 'Morado es tiempo fuerte, verde es medio, gris es tiempo débil',
+                tipsTitle: 'Consejos',
+                tip1: 'Los principiantes deben comenzar con velocidades más lentas, asegurar precisión antes de acelerar gradualmente.',
+                tip2: 'Presta atención a los acentos mientras practicas para desarrollar el sentido del ritmo.',
+                tip3: 'Considera usar auriculares para no molestar a otros.',
+                faqTitle: 'Preguntas frecuentes',
+                faq1Q: '¿Qué significa BPM?',
+                faq1A: 'BPM (Beats Per Minute) indica el número de pulsos por minuto. Valores más altos significan tempo más rápido. Por ejemplo, 60 BPM significa un pulso por segundo, 120 BPM significa dos pulsos por segundo. Esta es la unidad estándar para describir el tempo en música.',
+                faq2Q: '¿Cuáles son los rangos BPM comunes para diferentes músicas?',
+                faq2A: 'Las canciones lentas están alrededor de 60-80 BPM, las canciones pop alrededor de 100-130 BPM, las canciones rápidas pueden alcanzar 140-180 BPM. En música clásica, Largo es aproximadamente 40-60 BPM, Andante aproximadamente 76-108 BPM, Allegro aproximadamente 120-168 BPM.',
+                faq3Q: '¿Qué tan preciso es este metrónomo?',
+                faq3A: 'Este metrónomo en línea usa Web Audio API para precisión de milisegundos, cumpliendo las necesidades de práctica musical profesional. Comparado con temporizadores JavaScript tradicionales, Web Audio API proporciona sincronización más estable y precisa.',
+                faq4Q: '¿Puede funcionar en segundo plano?',
+                faq4A: 'Sí, el metrónomo continúa funcionando cuando cambias a otras pestañas, el sonido no se interrumpe, facilitando practicar mientras lees partituras. Sin embargo, se recomienda usar auriculares para una mejor experiencia.',
+                faq5Q: '¿Soporta compases personalizados?',
+                faq5A: 'Soporta compases comunes como 2/4, 3/4, 4/4, 6/8, y puedes hacer clic en los puntos de pulso para personalizar el patrón de acentos para cada tiempo. Morado indica tiempo fuerte, verde indica tiempo medio, gris indica tiempo débil.',
+                relatedTools: 'Herramientas relacionadas',
+                audioCutter: 'Cortador de audio',
+                audioCutterDesc: 'Cortar archivos de audio en línea',
+                worldClock: 'Reloj mundial',
+                worldClockDesc: 'Horas de zonas horarias',
+                calculator: 'Calculadora científica',
+                calculatorDesc: 'Expresiones complejas',
+                handheldDanmaku: 'Banner LED',
+                handheldDanmakuDesc: 'Texto LED desplazable',
+                footerPrivacy: 'Procesamiento del lado del cliente, los datos no se envían al servidor',
+                footerBack: '← Volver a Web Toolbox'
+            }
+        };
+
+        const langNames = {
+            en: '🌐 English',
+            'zh-CN': '🌐 中文',
+            fr: '🌐 Français',
+            es: '🌐 Español'
+        };
+
+        let currentLang = localStorage.getItem('metronome-lang') || 'en';
+
+        function applyTranslations(lang) {
+            const t = translations[lang];
+            if (!t) return;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) {
+                    el.textContent = t[key];
+                }
+            });
+
+            // 更新FAQ区块
+            const faqSection = document.querySelector('.faq-section');
+            if (faqSection) {
+                const faqTitle = faqSection.querySelector('h2');
+                if (faqTitle) faqTitle.textContent = t.faqTitle;
+
+                const faqItems = faqSection.querySelectorAll('.faq-item');
+                const faqKeys = ['faq1', 'faq2', 'faq3', 'faq4', 'faq5'];
+                faqItems.forEach((item, index) => {
+                    if (faqKeys[index]) {
+                        const q = item.querySelector('.faq-question');
+                        const a = item.querySelector('.faq-answer');
+                        if (q && t[faqKeys[index] + 'Q']) q.textContent = t[faqKeys[index] + 'Q'];
+                        if (a && t[faqKeys[index] + 'A']) a.textContent = t[faqKeys[index] + 'A'];
+                    }
+                });
+            }
+
+            // 更新相关工具区块
+            const relatedSection = document.querySelector('.related-tools');
+            if (relatedSection) {
+                const h3 = relatedSection.querySelector('h3');
+                if (h3) h3.innerHTML = '🔗 ' + t.relatedTools;
+
+                const links = relatedSection.querySelectorAll('a');
+                const toolKeys = [
+                    { title: 'audioCutter', desc: 'audioCutterDesc' },
+                    { title: 'worldClock', desc: 'worldClockDesc' },
+                    { title: 'calculator', desc: 'calculatorDesc' },
+                    { title: 'handheldDanmaku', desc: 'handheldDanmakuDesc' }
+                ];
+                links.forEach((link, index) => {
+                    if (toolKeys[index]) {
+                        const titleDiv = link.querySelectorAll('div')[1];
+                        const descDiv = link.querySelectorAll('div')[2];
+                        if (titleDiv && t[toolKeys[index].title]) titleDiv.textContent = t[toolKeys[index].title];
+                        if (descDiv && t[toolKeys[index].desc]) descDiv.textContent = t[toolKeys[index].desc];
+                    }
+                });
+            }
+
+            // 更新页脚
+            const footer = document.querySelector('footer');
+            if (footer) {
+                const ps = footer.querySelectorAll('p');
+                if (ps[0] && t.footerPrivacy) ps[0].textContent = t.footerPrivacy;
+                if (ps[1]) {
+                    const backLink = ps[1].querySelector('a');
+                    if (backLink && t.footerBack) backLink.textContent = t.footerBack;
+                }
+            }
+
+            // 更新语言切换器显示
+            document.getElementById('langCurrent').textContent = langNames[lang];
+            document.documentElement.lang = lang === 'zh-CN' ? 'zh-CN' : lang;
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('metronome-lang', lang);
+            applyTranslations(lang);
+            document.getElementById('langDropdown').classList.remove('active');
+        }
+
+        // 语言切换器事件
+        document.getElementById('langCurrent').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('langDropdown').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                setLanguage(this.dataset.lang);
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.lang-dropdown')) {
+                document.getElementById('langDropdown').classList.remove('active');
+            }
+        });
+
         // 音频上下文
         let audioContext = null;
 
@@ -1160,64 +1577,67 @@
         window.addEventListener('beforeunload', saveSettings);
 
         loadSettings();
+
+        // 应用初始语言
+        applyTranslations(currentLang);
     </script>
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section" style="max-width: 900px; margin: 0 auto 30px; padding: 25px 20px;">
-        <h2>常见问题</h2>
+        <h2 data-i18n="faqTitle">FAQ</h2>
         <div class="faq-item">
-            <div class="faq-question">BPM 是什么意思？</div>
-            <div class="faq-answer">BPM（Beats Per Minute）表示每分钟节拍数，数值越大节奏越快。例如 60 BPM 表示每秒一拍，120 BPM 表示每秒两拍。这是音乐中用来描述速度的标准单位。</div>
+            <div class="faq-question">What does BPM mean?</div>
+            <div class="faq-answer">BPM (Beats Per Minute) indicates the number of beats per minute. Higher values mean faster tempo. For example, 60 BPM means one beat per second, 120 BPM means two beats per second. This is the standard unit for describing tempo in music.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">常见音乐的 BPM 是多少？</div>
-            <div class="faq-answer">慢歌约 60-80 BPM，流行歌曲约 100-130 BPM，快歌可达 140-180 BPM。古典音乐中，慢板(Largo)约 40-60 BPM，行板(Andante)约 76-108 BPM，快板(Allegro)约 120-168 BPM。</div>
+            <div class="faq-question">What are common BPM ranges for different music?</div>
+            <div class="faq-answer">Slow songs are around 60-80 BPM, pop songs around 100-130 BPM, fast songs can reach 140-180 BPM. In classical music, Largo is about 40-60 BPM, Andante about 76-108 BPM, Allegro about 120-168 BPM.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">节拍器精度如何？</div>
-            <div class="faq-answer">本在线节拍器使用 Web Audio API 实现，精度可达毫秒级，能够满足专业音乐练习的需求。相比传统的 JavaScript 定时器，Web Audio API 能够提供更加稳定和精准的计时。</div>
+            <div class="faq-question">How accurate is this metronome?</div>
+            <div class="faq-answer">This online metronome uses the Web Audio API for millisecond-level precision, meeting the needs of professional music practice. Compared to traditional JavaScript timers, Web Audio API provides more stable and accurate timing.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">可以在后台运行吗？</div>
-            <div class="faq-answer">可以，切换到其他标签页后节拍器会继续运行，声音不会中断，方便你边看谱边练习。不过建议使用耳机以获得更好的体验。</div>
+            <div class="faq-question">Can it run in the background?</div>
+            <div class="faq-answer">Yes, the metronome continues running when you switch to other tabs, the sound won't interrupt, making it convenient to practice while reading sheet music. However, using headphones is recommended for a better experience.</div>
         </div>
         <div class="faq-item">
-            <div class="faq-question">支持自定义拍号吗？</div>
-            <div class="faq-answer">支持常见的 2/4、3/4、4/4、6/8 等拍号，并且可以点击节拍圆点自定义每一拍的强弱。紫色表示强拍，绿色表示中强拍，灰色表示弱拍。</div>
+            <div class="faq-question">Does it support custom time signatures?</div>
+            <div class="faq-answer">It supports common time signatures like 2/4, 3/4, 4/4, 6/8, and you can click on the beat dots to customize the accent pattern for each beat. Purple indicates strong beat, green indicates medium beat, gray indicates weak beat.</div>
         </div>
     </section>
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="audio-cutter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">✂️</div>
-                <div style="color: #e6edf3; font-weight: 500;">音频剪切</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线剪切音频文件</div>
+                <div style="color: #e6edf3; font-weight: 500;">Audio Cutter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Cut audio files online</div>
             </a>
             <a href="world-clock.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
-                <div style="color: #e6edf3; font-weight: 500;">世界时钟</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">全球时区时间</div>
+                <div style="color: #e6edf3; font-weight: 500;">World Clock</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Global timezone times</div>
             </a>
             <a href="calculator.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
-                <div style="color: #e6edf3; font-weight: 500;">科学计算器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">支持复杂表达式</div>
+                <div style="color: #e6edf3; font-weight: 500;">Scientific Calculator</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Complex expressions</div>
             </a>
             <a href="handheld-danmaku.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
-                <div style="color: #e6edf3; font-weight: 500;">手持弹幕</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">LED 滚动字幕</div>
+                <div style="color: #e6edf3; font-weight: 500;">LED Banner</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">LED scrolling text</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p>Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

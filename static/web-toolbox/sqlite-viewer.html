@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SQLite 查看器 - 在线浏览和查询SQLite数据库 | Web Toolbox</title>
+    <title>SQLite Viewer - Online SQLite Database Browser & Query Tool | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线SQLite数据库查看器，支持浏览器直接打开.db/.sqlite文件，查看表结构，执行SQL查询。纯前端运行，数据不上传服务器，安全可靠。">
-    <meta name="keywords" content="SQLite查看器,SQLite浏览器,在线SQL,数据库工具,db文件打开,sqlite文件查看,SQL查询,免费工具">
+    <meta name="description" content="Free online SQLite database viewer. Open .db/.sqlite files directly in browser, view table structure, execute SQL queries. Pure frontend, no upload required, secure and private.">
+    <meta name="keywords" content="SQLite viewer,SQLite browser,online SQL,database tool,db file viewer,sqlite file viewer,SQL query,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/sqlite-viewer.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/sqlite-viewer.html">
-    <meta property="og:title" content="SQLite 查看器 - 在线浏览和查询SQLite数据库">
-    <meta property="og:description" content="免费在线SQLite数据库查看器，浏览器直接打开.db文件，查看表结构，执行SQL查询。纯前端运行。">
+    <meta property="og:title" content="SQLite Viewer - Online SQLite Database Browser & Query Tool">
+    <meta property="og:description" content="Free online SQLite database viewer. Open .db files in browser, view table structure, execute SQL queries. Pure frontend processing.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/sqlite-viewer.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="SQLite 查看器 - 在线浏览和查询SQLite数据库">
-    <meta name="twitter:description" content="免费在线SQLite数据库查看器，浏览器直接打开.db文件，执行SQL查询。">
+    <meta name="twitter:title" content="SQLite Viewer - Online SQLite Database Browser & Query Tool">
+    <meta name="twitter:description" content="Free online SQLite database viewer. Open .db files in browser, execute SQL queries.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/sqlite-viewer.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "SQLite 查看器",
+        "name": "SQLite Viewer",
         "url": "https://www.heyuan110.com/web-toolbox/sqlite-viewer.html",
-        "description": "在线浏览和查询SQLite数据库文件",
+        "description": "Online SQLite database viewer and query tool",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "SQLite 查看器支持多大的数据库文件？",
+                "name": "What is the maximum database file size supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持的文件大小取决于浏览器内存，建议不超过 100MB。对于较大的数据库文件，建议使用桌面端 SQLite 管理工具。"
+                    "text": "The supported file size depends on browser memory, recommended not to exceed 100MB. For larger database files, consider using desktop SQLite management tools."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以修改数据库吗？",
+                "name": "Can I modify the database?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持执行 INSERT、UPDATE、DELETE 等 SQL 语句，但所有修改仅在浏览器内存中进行，不会影响原始文件。如需保存修改，请导出为新文件。"
+                    "text": "You can execute INSERT, UPDATE, DELETE and other SQL statements, but all modifications are only made in browser memory and won't affect the original file. Export to a new file to save changes."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何保存修改后的数据库？",
+                "name": "How do I save the modified database?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以将查询结果导出为 CSV、JSON 或 SQL 格式。目前暂不支持直接导出为 SQLite 数据库文件，建议使用导出的 SQL 语句在其他工具中重建数据库。"
+                    "text": "You can export query results to CSV, JSON or SQL format. Currently direct export to SQLite database file is not supported, use exported SQL statements to rebuild the database in other tools."
                 }
             },
             {
                 "@type": "Question",
-                "name": "数据库文件会上传到服务器吗？",
+                "name": "Will my database file be uploaded to a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会。本工具使用 sql.js 库，所有数据处理都在本地浏览器中完成，数据库文件不会上传到任何服务器，确保您的数据安全和隐私。"
+                    "text": "No. This tool uses the sql.js library, all data processing is done locally in your browser, database files are never uploaded to any server, ensuring your data security and privacy."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持哪些 SQLite 版本？",
+                "name": "Which SQLite versions are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持 SQLite 3.x 版本的数据库文件，包括 .db、.sqlite、.sqlite3、.db3 等常见扩展名格式。"
+                    "text": "Supports SQLite 3.x database files, including .db, .sqlite, .sqlite3, .db3 and other common extension formats."
                 }
             }
         ]
@@ -118,6 +118,7 @@
             padding: 20px 0;
             border-bottom: 1px solid #333;
             margin-bottom: 20px;
+            position: relative;
         }
 
         header h1 {
@@ -130,6 +131,16 @@
             color: #888;
             font-size: 14px;
         }
+
+        /* 语言切换器样式 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         .upload-area {
             border: 2px dashed #444;
@@ -673,87 +684,98 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #888; text-decoration: none; font-size: 14px; transition: color 0.2s;">← 返回工具箱</a>
-            <h1>🗄️ SQLite 数据库查看器</h1>
-            <p>在浏览器中直接查看和查询 SQLite 数据库文件</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #888; text-decoration: none; font-size: 14px; transition: color 0.2s;" data-i18n="backToToolbox">← Back to Toolbox</a>
+            <h1 data-i18n="pageTitle">🗄️ SQLite Database Viewer</h1>
+            <p data-i18n="pageSubtitle">View and query SQLite database files directly in your browser</p>
         </header>
 
         <!-- 功能特点区块 -->
         <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px;">
             <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
                 <div style="font-size: 28px; margin-bottom: 12px;">🌐</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">在线查看</h3>
-                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">无需安装软件，浏览器直接打开 SQLite 数据库，支持 .db/.sqlite/.sqlite3 等格式</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureOnlineTitle">Online Viewing</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;" data-i18n="featureOnlineDesc">No software installation required. Open SQLite databases directly in browser, supports .db/.sqlite/.sqlite3 formats</p>
             </div>
             <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
                 <div style="font-size: 28px; margin-bottom: 12px;">💻</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">SQL 查询</h3>
-                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">支持执行 SQL 语句，查询和分析数据，内置查询历史记录功能</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureSqlTitle">SQL Query</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;" data-i18n="featureSqlDesc">Execute SQL statements to query and analyze data, with built-in query history feature</p>
             </div>
             <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
                 <div style="font-size: 28px; margin-bottom: 12px;">📋</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">表结构展示</h3>
-                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">清晰显示表结构、字段类型、主键和索引信息，一目了然</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureSchemaTitle">Schema Display</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;" data-i18n="featureSchemaDesc">Clearly shows table structure, field types, primary keys and index information at a glance</p>
             </div>
             <div style="background: linear-gradient(135deg, #16213e 0%, #1a2744 100%); border: 1px solid #333; border-radius: 12px; padding: 20px;">
                 <div style="font-size: 28px; margin-bottom: 12px;">📥</div>
-                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;">数据导出</h3>
-                <p style="color: #aaa; font-size: 13px; line-height: 1.5;">支持将查询结果导出为 CSV、JSON 或 SQL 格式</p>
+                <h3 style="color: #00d9ff; font-size: 16px; margin-bottom: 8px;" data-i18n="featureExportTitle">Data Export</h3>
+                <p style="color: #aaa; font-size: 13px; line-height: 1.5;" data-i18n="featureExportDesc">Export query results to CSV, JSON or SQL format</p>
             </div>
         </section>
 
         <div class="upload-area" id="uploadArea">
             <input type="file" id="fileInput" accept=".db,.sqlite,.sqlite3,.db3" style="display: none;">
             <button class="upload-btn" onclick="document.getElementById('fileInput').click()">
-                📂 选择数据库文件
+                <span data-i18n="selectFile">📂 Select Database File</span>
             </button>
-            <p>或将 .db / .sqlite 文件拖放到此处</p>
-            <p style="margin-top: 10px; font-size: 12px;">支持格式: .db, .sqlite, .sqlite3, .db3</p>
+            <p data-i18n="dropFileHint">Or drag and drop .db / .sqlite file here</p>
+            <p style="margin-top: 10px; font-size: 12px;" data-i18n="supportedFormats">Supported formats: .db, .sqlite, .sqlite3, .db3</p>
         </div>
 
         <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p>正在加载数据库...</p>
+            <p data-i18n="loadingDb">Loading database...</p>
         </div>
 
         <div class="db-info" id="dbInfo"></div>
 
         <div class="main-content" id="mainContent">
             <aside class="sidebar">
-                <h3>📑 数据表</h3>
+                <h3 data-i18n="tablesTitle">📑 Tables</h3>
                 <ul class="table-list" id="tableList"></ul>
             </aside>
 
             <div class="content-area">
                 <section class="query-section">
-                    <h3>💻 SQL 查询</h3>
-                    <textarea class="query-input" id="queryInput" placeholder="输入 SQL 查询语句...&#10;例如: SELECT * FROM table_name LIMIT 100"></textarea>
+                    <h3 data-i18n="sqlQueryTitle">💻 SQL Query</h3>
+                    <textarea class="query-input" id="queryInput" data-i18n-placeholder="queryPlaceholder" placeholder="Enter SQL query...&#10;Example: SELECT * FROM table_name LIMIT 100"></textarea>
                     <div class="query-actions">
                         <button class="btn btn-primary" onclick="executeQuery()">
-                            ▶️ 执行查询 (Ctrl+Enter)
+                            <span data-i18n="executeBtn">▶️ Execute (Ctrl+Enter)</span>
                         </button>
                         <button class="btn btn-secondary" onclick="formatQuery()">
-                            🎨 格式化
+                            <span data-i18n="formatBtn">🎨 Format</span>
                         </button>
                         <button class="btn btn-secondary" onclick="clearQuery()">
-                            🗑️ 清空
+                            <span data-i18n="clearBtn">🗑️ Clear</span>
                         </button>
                         <div class="export-dropdown">
                             <button class="btn btn-success" onclick="toggleExportMenu()">
-                                📥 导出结果
+                                <span data-i18n="exportBtn">📥 Export Results</span>
                             </button>
                             <div class="export-menu" id="exportMenu">
-                                <button onclick="exportCSV()">📄 导出为 CSV</button>
-                                <button onclick="exportJSON()">📋 导出为 JSON</button>
-                                <button onclick="exportSQL()">🗃️ 导出为 SQL</button>
+                                <button onclick="exportCSV()" data-i18n="exportCsv">📄 Export as CSV</button>
+                                <button onclick="exportJSON()" data-i18n="exportJson">📋 Export as JSON</button>
+                                <button onclick="exportSQL()" data-i18n="exportSql">🗃️ Export as SQL</button>
                             </div>
                         </div>
                     </div>
 
                     <div class="history-section" id="historySection" style="display: none;">
                         <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
-                            <h4 style="color: #888; font-size: 12px;">📜 查询历史 <span style="color: #00d9ff;" id="historyCount"></span></h4>
-                            <button class="btn btn-secondary" onclick="clearHistory()" style="padding: 4px 8px; font-size: 11px;">🗑️ 清空</button>
+                            <h4 style="color: #888; font-size: 12px;"><span data-i18n="historyTitle">📜 Query History</span> <span style="color: #00d9ff;" id="historyCount"></span></h4>
+                            <button class="btn btn-secondary" onclick="clearHistory()" style="padding: 4px 8px; font-size: 11px;" data-i18n="clearHistoryBtn">🗑️ Clear</button>
                         </div>
                         <div class="history-list" id="historyList"></div>
                     </div>
@@ -762,8 +784,8 @@
                 <section class="results-section">
                     <div class="results-header">
                         <div class="tabs">
-                            <button class="tab active" data-tab="data" onclick="switchTab('data')">📊 数据</button>
-                            <button class="tab" data-tab="schema" onclick="switchTab('schema')">🔧 结构</button>
+                            <button class="tab active" data-tab="data" onclick="switchTab('data')" data-i18n="tabData">📊 Data</button>
+                            <button class="tab" data-tab="schema" onclick="switchTab('schema')" data-i18n="tabSchema">🔧 Structure</button>
                         </div>
                         <span class="results-info" id="resultsInfo"></span>
                     </div>
@@ -772,18 +794,18 @@
 
                     <div id="dataTab" class="tab-content">
                         <div class="table-container" id="tableContainer">
-                            <div class="empty-state">选择一个表或执行查询以查看数据</div>
+                            <div class="empty-state" data-i18n="emptyState">Select a table or execute a query to view data</div>
                         </div>
                         <div class="pagination" id="pagination" style="display: none;">
-                            <button onclick="prevPage()">◀ 上一页</button>
-                            <span id="pageInfo">第 1 页</span>
-                            <button onclick="nextPage()">下一页 ▶</button>
+                            <button onclick="prevPage()" data-i18n="prevPage">◀ Previous</button>
+                            <span id="pageInfo" data-i18n="pageInfo">Page 1</span>
+                            <button onclick="nextPage()" data-i18n="nextPage">Next ▶</button>
                         </div>
                     </div>
 
                     <div id="schemaTab" class="tab-content" style="display: none;">
                         <div class="schema-view" id="schemaView">
-                            <div class="empty-state">选择一个表以查看结构</div>
+                            <div class="empty-state" data-i18n="emptySchemaState">Select a table to view structure</div>
                         </div>
                     </div>
                 </section>
@@ -792,11 +814,421 @@
     </div>
 
     <div class="shortcuts">
-        <kbd>Ctrl</kbd> + <kbd>Enter</kbd> 执行查询 &nbsp;|&nbsp;
-        <kbd>F5</kbd> 刷新数据库
+        <kbd>Ctrl</kbd> + <kbd>Enter</kbd> <span data-i18n="shortcutExecute">Execute query</span> &nbsp;|&nbsp;
+        <kbd>F5</kbd> <span data-i18n="shortcutRefresh">Refresh database</span>
     </div>
 
     <script>
+        // ==================== 国际化 (i18n) ====================
+        const translations = {
+            'en': {
+                backToToolbox: '← Back to Toolbox',
+                pageTitle: '🗄️ SQLite Database Viewer',
+                pageSubtitle: 'View and query SQLite database files directly in your browser',
+                featureOnlineTitle: 'Online Viewing',
+                featureOnlineDesc: 'No software installation required. Open SQLite databases directly in browser, supports .db/.sqlite/.sqlite3 formats',
+                featureSqlTitle: 'SQL Query',
+                featureSqlDesc: 'Execute SQL statements to query and analyze data, with built-in query history feature',
+                featureSchemaTitle: 'Schema Display',
+                featureSchemaDesc: 'Clearly shows table structure, field types, primary keys and index information at a glance',
+                featureExportTitle: 'Data Export',
+                featureExportDesc: 'Export query results to CSV, JSON or SQL format',
+                selectFile: '📂 Select Database File',
+                dropFileHint: 'Or drag and drop .db / .sqlite file here',
+                supportedFormats: 'Supported formats: .db, .sqlite, .sqlite3, .db3',
+                loadingDb: 'Loading database...',
+                tablesTitle: '📑 Tables',
+                sqlQueryTitle: '💻 SQL Query',
+                queryPlaceholder: 'Enter SQL query...\nExample: SELECT * FROM table_name LIMIT 100',
+                executeBtn: '▶️ Execute (Ctrl+Enter)',
+                formatBtn: '🎨 Format',
+                clearBtn: '🗑️ Clear',
+                exportBtn: '📥 Export Results',
+                exportCsv: '📄 Export as CSV',
+                exportJson: '📋 Export as JSON',
+                exportSql: '🗃️ Export as SQL',
+                historyTitle: '📜 Query History',
+                clearHistoryBtn: '🗑️ Clear',
+                tabData: '📊 Data',
+                tabSchema: '🔧 Structure',
+                emptyState: 'Select a table or execute a query to view data',
+                emptySchemaState: 'Select a table to view structure',
+                prevPage: '◀ Previous',
+                nextPage: 'Next ▶',
+                pageInfo: 'Page {current} / {total}',
+                shortcutExecute: 'Execute query',
+                shortcutRefresh: 'Refresh database',
+                // 动态消息
+                sqlLoading: 'SQL.js is loading, please wait...',
+                noTables: 'No tables found in database',
+                dbLoaded: 'Database loaded successfully: {name}',
+                dbLoadError: 'Failed to load database: {error}',
+                noDbFile: 'No database file loaded',
+                dbRefreshed: '✓ Database refreshed ({time})',
+                refreshError: 'Refresh failed: {error}',
+                enterQuery: 'Please enter a SQL query',
+                loadDbFirst: 'Please load a database first',
+                querySuccess: 'Query executed successfully, no data returned ({time}ms)',
+                queryError: 'Query error: {error}',
+                noDataExport: 'No data to export',
+                historyCleared: 'History cleared',
+                confirmClearHistory: 'Are you sure you want to clear all query history?',
+                // 数据库信息
+                fileName: 'Filename',
+                fileSize: 'File Size',
+                tableCount: 'Table Count',
+                refreshData: '🔄 Refresh Data',
+                changeFile: '📂 Change File',
+                rows: 'rows',
+                indexes: 'Indexes:',
+                // FAQ
+                faqTitle: '❓ Frequently Asked Questions',
+                faq1Title: 'What is the maximum database file size supported?',
+                faq1Answer: 'The supported file size depends on browser memory, recommended not to exceed 100MB. For larger database files, consider using desktop SQLite management tools like DB Browser for SQLite or DBeaver.',
+                faq2Title: 'Can I modify the database?',
+                faq2Answer: 'You can execute INSERT, UPDATE, DELETE and other SQL statements, but all modifications are only made in browser memory and will not affect your original file. Export results to a new file if you need to save changes.',
+                faq3Title: 'How do I save the modified database?',
+                faq3Answer: 'You can export query results to CSV, JSON or SQL format. To fully save the database, use the exported SQL statements to rebuild the database in other SQLite tools.',
+                faq4Title: 'Will my database file be uploaded to a server?',
+                faq4Answer: '<strong style="color: #00ff88;">No!</strong> This tool uses the sql.js library, all data processing is done locally in your browser, database files are never uploaded to any server, ensuring your data security and privacy.',
+                faq5Title: 'Which SQLite versions are supported?',
+                faq5Answer: 'Supports SQLite 3.x database files, including .db, .sqlite, .sqlite3, .db3 and other common extension formats.',
+                // 相关工具
+                relatedToolsTitle: '🔗 Related Tools',
+                jsonViewer: 'JSON Viewer',
+                jsonViewerDesc: 'JSON formatting and visualization',
+                cryptoTools: 'Crypto Toolbox',
+                cryptoToolsDesc: 'Base64/MD5/AES encoding & encryption',
+                regexTester: 'Regex Tester',
+                regexTesterDesc: 'Online regex matching and debugging',
+                fileRenamer: 'File Renamer',
+                fileRenamerDesc: 'Batch rename files',
+                // Footer
+                footerPrivacy: 'Pure frontend processing, database files are never uploaded to server',
+                footerBack: '← Back to Web Toolbox'
+            },
+            'zh-CN': {
+                backToToolbox: '← 返回工具箱',
+                pageTitle: '🗄️ SQLite 数据库查看器',
+                pageSubtitle: '在浏览器中直接查看和查询 SQLite 数据库文件',
+                featureOnlineTitle: '在线查看',
+                featureOnlineDesc: '无需安装软件，浏览器直接打开 SQLite 数据库，支持 .db/.sqlite/.sqlite3 等格式',
+                featureSqlTitle: 'SQL 查询',
+                featureSqlDesc: '支持执行 SQL 语句，查询和分析数据，内置查询历史记录功能',
+                featureSchemaTitle: '表结构展示',
+                featureSchemaDesc: '清晰显示表结构、字段类型、主键和索引信息，一目了然',
+                featureExportTitle: '数据导出',
+                featureExportDesc: '支持将查询结果导出为 CSV、JSON 或 SQL 格式',
+                selectFile: '📂 选择数据库文件',
+                dropFileHint: '或将 .db / .sqlite 文件拖放到此处',
+                supportedFormats: '支持格式: .db, .sqlite, .sqlite3, .db3',
+                loadingDb: '正在加载数据库...',
+                tablesTitle: '📑 数据表',
+                sqlQueryTitle: '💻 SQL 查询',
+                queryPlaceholder: '输入 SQL 查询语句...\n例如: SELECT * FROM table_name LIMIT 100',
+                executeBtn: '▶️ 执行查询 (Ctrl+Enter)',
+                formatBtn: '🎨 格式化',
+                clearBtn: '🗑️ 清空',
+                exportBtn: '📥 导出结果',
+                exportCsv: '📄 导出为 CSV',
+                exportJson: '📋 导出为 JSON',
+                exportSql: '🗃️ 导出为 SQL',
+                historyTitle: '📜 查询历史',
+                clearHistoryBtn: '🗑️ 清空',
+                tabData: '📊 数据',
+                tabSchema: '🔧 结构',
+                emptyState: '选择一个表或执行查询以查看数据',
+                emptySchemaState: '选择一个表以查看结构',
+                prevPage: '◀ 上一页',
+                nextPage: '下一页 ▶',
+                pageInfo: '第 {current} / {total} 页',
+                shortcutExecute: '执行查询',
+                shortcutRefresh: '刷新数据库',
+                // 动态消息
+                sqlLoading: 'SQL.js 正在加载，请稍候...',
+                noTables: '数据库中没有找到表',
+                dbLoaded: '成功加载数据库: {name}',
+                dbLoadError: '加载数据库失败: {error}',
+                noDbFile: '没有已加载的数据库文件',
+                dbRefreshed: '✓ 数据库已刷新 ({time})',
+                refreshError: '刷新失败: {error}',
+                enterQuery: '请输入 SQL 查询语句',
+                loadDbFirst: '请先加载数据库',
+                querySuccess: '查询执行成功，无返回数据 ({time}ms)',
+                queryError: '查询错误: {error}',
+                noDataExport: '没有数据可导出',
+                historyCleared: '历史记录已清空',
+                confirmClearHistory: '确定要清空所有查询历史吗？',
+                // 数据库信息
+                fileName: '文件名',
+                fileSize: '文件大小',
+                tableCount: '表数量',
+                refreshData: '🔄 刷新数据',
+                changeFile: '📂 更换文件',
+                rows: '行',
+                indexes: '索引:',
+                // FAQ
+                faqTitle: '❓ 常见问题',
+                faq1Title: 'SQLite 查看器支持多大的数据库文件？',
+                faq1Answer: '支持的文件大小取决于浏览器内存，建议不超过 100MB。对于较大的数据库文件，建议使用桌面端 SQLite 管理工具如 DB Browser for SQLite 或 DBeaver。',
+                faq2Title: '可以修改数据库吗？',
+                faq2Answer: '支持执行 INSERT、UPDATE、DELETE 等 SQL 语句，但所有修改仅在浏览器内存中进行，不会影响您的原始文件。如需保存修改，请将结果导出为新文件。',
+                faq3Title: '如何保存修改后的数据库？',
+                faq3Answer: '可以将查询结果导出为 CSV、JSON 或 SQL 格式。如需完整保存数据库，建议使用导出的 SQL 语句在其他 SQLite 工具中重建数据库。',
+                faq4Title: '数据库文件会上传到服务器吗？',
+                faq4Answer: '<strong style="color: #00ff88;">不会！</strong>本工具使用 sql.js 库，所有数据处理都在您的本地浏览器中完成，数据库文件不会上传到任何服务器，确保您的数据安全和隐私。',
+                faq5Title: '支持哪些 SQLite 版本？',
+                faq5Answer: '支持 SQLite 3.x 版本的数据库文件，包括 .db、.sqlite、.sqlite3、.db3 等常见扩展名格式。',
+                // 相关工具
+                relatedToolsTitle: '🔗 相关工具推荐',
+                jsonViewer: 'JSON 查看器',
+                jsonViewerDesc: 'JSON 格式化与可视化',
+                cryptoTools: '加解密工具箱',
+                cryptoToolsDesc: 'Base64/MD5/AES 等编码加密',
+                regexTester: '正则表达式测试',
+                regexTesterDesc: '在线正则匹配与调试',
+                fileRenamer: '文件批量重命名',
+                fileRenamerDesc: '批量修改文件名',
+                // Footer
+                footerPrivacy: '纯前端处理，数据库文件不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页'
+            },
+            'fr': {
+                backToToolbox: '← Retour à la Boîte à outils',
+                pageTitle: '🗄️ Visualiseur SQLite',
+                pageSubtitle: 'Visualisez et interrogez des fichiers SQLite directement dans votre navigateur',
+                featureOnlineTitle: 'Visualisation en ligne',
+                featureOnlineDesc: 'Aucune installation requise. Ouvrez les bases SQLite directement dans le navigateur, supporte .db/.sqlite/.sqlite3',
+                featureSqlTitle: 'Requête SQL',
+                featureSqlDesc: 'Exécutez des requêtes SQL pour interroger et analyser les données, avec historique intégré',
+                featureSchemaTitle: 'Affichage du schéma',
+                featureSchemaDesc: 'Affiche clairement la structure des tables, types de champs, clés primaires et index',
+                featureExportTitle: 'Export de données',
+                featureExportDesc: 'Exportez les résultats en format CSV, JSON ou SQL',
+                selectFile: '📂 Sélectionner un fichier',
+                dropFileHint: 'Ou glissez-déposez un fichier .db / .sqlite ici',
+                supportedFormats: 'Formats supportés: .db, .sqlite, .sqlite3, .db3',
+                loadingDb: 'Chargement de la base de données...',
+                tablesTitle: '📑 Tables',
+                sqlQueryTitle: '💻 Requête SQL',
+                queryPlaceholder: 'Entrez une requête SQL...\nExemple: SELECT * FROM table_name LIMIT 100',
+                executeBtn: '▶️ Exécuter (Ctrl+Enter)',
+                formatBtn: '🎨 Formater',
+                clearBtn: '🗑️ Effacer',
+                exportBtn: '📥 Exporter',
+                exportCsv: '📄 Exporter en CSV',
+                exportJson: '📋 Exporter en JSON',
+                exportSql: '🗃️ Exporter en SQL',
+                historyTitle: '📜 Historique des requêtes',
+                clearHistoryBtn: '🗑️ Effacer',
+                tabData: '📊 Données',
+                tabSchema: '🔧 Structure',
+                emptyState: 'Sélectionnez une table ou exécutez une requête pour voir les données',
+                emptySchemaState: 'Sélectionnez une table pour voir sa structure',
+                prevPage: '◀ Précédent',
+                nextPage: 'Suivant ▶',
+                pageInfo: 'Page {current} / {total}',
+                shortcutExecute: 'Exécuter la requête',
+                shortcutRefresh: 'Actualiser la base de données',
+                // 动态消息
+                sqlLoading: 'SQL.js est en cours de chargement, veuillez patienter...',
+                noTables: 'Aucune table trouvée dans la base de données',
+                dbLoaded: 'Base de données chargée avec succès: {name}',
+                dbLoadError: 'Échec du chargement: {error}',
+                noDbFile: 'Aucun fichier de base de données chargé',
+                dbRefreshed: '✓ Base de données actualisée ({time})',
+                refreshError: 'Échec de l\'actualisation: {error}',
+                enterQuery: 'Veuillez entrer une requête SQL',
+                loadDbFirst: 'Veuillez d\'abord charger une base de données',
+                querySuccess: 'Requête exécutée avec succès, aucune donnée retournée ({time}ms)',
+                queryError: 'Erreur de requête: {error}',
+                noDataExport: 'Aucune donnée à exporter',
+                historyCleared: 'Historique effacé',
+                confirmClearHistory: 'Voulez-vous vraiment effacer tout l\'historique des requêtes?',
+                // 数据库信息
+                fileName: 'Nom du fichier',
+                fileSize: 'Taille du fichier',
+                tableCount: 'Nombre de tables',
+                refreshData: '🔄 Actualiser',
+                changeFile: '📂 Changer de fichier',
+                rows: 'lignes',
+                indexes: 'Index:',
+                // FAQ
+                faqTitle: '❓ Questions fréquentes',
+                faq1Title: 'Quelle est la taille maximale des fichiers supportée?',
+                faq1Answer: 'La taille supportée dépend de la mémoire du navigateur, il est recommandé de ne pas dépasser 100 Mo. Pour les fichiers plus volumineux, utilisez des outils de bureau comme DB Browser for SQLite ou DBeaver.',
+                faq2Title: 'Puis-je modifier la base de données?',
+                faq2Answer: 'Vous pouvez exécuter des requêtes INSERT, UPDATE, DELETE, mais toutes les modifications sont effectuées uniquement en mémoire du navigateur et n\'affecteront pas votre fichier original. Exportez les résultats pour sauvegarder.',
+                faq3Title: 'Comment sauvegarder la base de données modifiée?',
+                faq3Answer: 'Vous pouvez exporter les résultats en format CSV, JSON ou SQL. Pour sauvegarder complètement la base de données, utilisez les requêtes SQL exportées pour reconstruire la base dans d\'autres outils.',
+                faq4Title: 'Mon fichier sera-t-il téléchargé sur un serveur?',
+                faq4Answer: '<strong style="color: #00ff88;">Non!</strong> Cet outil utilise la bibliothèque sql.js, tout le traitement est effectué localement dans votre navigateur, les fichiers ne sont jamais téléchargés sur aucun serveur.',
+                faq5Title: 'Quelles versions de SQLite sont supportées?',
+                faq5Answer: 'Supporte les fichiers SQLite 3.x, y compris les extensions .db, .sqlite, .sqlite3, .db3.',
+                // 相关工具
+                relatedToolsTitle: '🔗 Outils connexes',
+                jsonViewer: 'Visualiseur JSON',
+                jsonViewerDesc: 'Formatage et visualisation JSON',
+                cryptoTools: 'Outils de cryptage',
+                cryptoToolsDesc: 'Encodage Base64/MD5/AES',
+                regexTester: 'Testeur Regex',
+                regexTesterDesc: 'Test et débogage regex en ligne',
+                fileRenamer: 'Renommeur de fichiers',
+                fileRenamerDesc: 'Renommer des fichiers en lot',
+                // Footer
+                footerPrivacy: 'Traitement côté client uniquement, les fichiers ne sont jamais téléchargés sur un serveur',
+                footerBack: '← Retour à Web Toolbox'
+            },
+            'es': {
+                backToToolbox: '← Volver a Herramientas',
+                pageTitle: '🗄️ Visor SQLite',
+                pageSubtitle: 'Visualiza y consulta archivos SQLite directamente en tu navegador',
+                featureOnlineTitle: 'Visualización en línea',
+                featureOnlineDesc: 'Sin instalación requerida. Abre bases de datos SQLite directamente en el navegador, soporta .db/.sqlite/.sqlite3',
+                featureSqlTitle: 'Consulta SQL',
+                featureSqlDesc: 'Ejecuta sentencias SQL para consultar y analizar datos, con historial de consultas integrado',
+                featureSchemaTitle: 'Mostrar esquema',
+                featureSchemaDesc: 'Muestra claramente la estructura de tablas, tipos de campos, claves primarias e índices',
+                featureExportTitle: 'Exportar datos',
+                featureExportDesc: 'Exporta resultados de consultas en formato CSV, JSON o SQL',
+                selectFile: '📂 Seleccionar archivo',
+                dropFileHint: 'O arrastra y suelta un archivo .db / .sqlite aquí',
+                supportedFormats: 'Formatos soportados: .db, .sqlite, .sqlite3, .db3',
+                loadingDb: 'Cargando base de datos...',
+                tablesTitle: '📑 Tablas',
+                sqlQueryTitle: '💻 Consulta SQL',
+                queryPlaceholder: 'Introduce una consulta SQL...\nEjemplo: SELECT * FROM table_name LIMIT 100',
+                executeBtn: '▶️ Ejecutar (Ctrl+Enter)',
+                formatBtn: '🎨 Formatear',
+                clearBtn: '🗑️ Limpiar',
+                exportBtn: '📥 Exportar',
+                exportCsv: '📄 Exportar como CSV',
+                exportJson: '📋 Exportar como JSON',
+                exportSql: '🗃️ Exportar como SQL',
+                historyTitle: '📜 Historial de consultas',
+                clearHistoryBtn: '🗑️ Limpiar',
+                tabData: '📊 Datos',
+                tabSchema: '🔧 Estructura',
+                emptyState: 'Selecciona una tabla o ejecuta una consulta para ver datos',
+                emptySchemaState: 'Selecciona una tabla para ver su estructura',
+                prevPage: '◀ Anterior',
+                nextPage: 'Siguiente ▶',
+                pageInfo: 'Página {current} / {total}',
+                shortcutExecute: 'Ejecutar consulta',
+                shortcutRefresh: 'Actualizar base de datos',
+                // 动态消息
+                sqlLoading: 'SQL.js está cargando, por favor espera...',
+                noTables: 'No se encontraron tablas en la base de datos',
+                dbLoaded: 'Base de datos cargada exitosamente: {name}',
+                dbLoadError: 'Error al cargar: {error}',
+                noDbFile: 'No hay archivo de base de datos cargado',
+                dbRefreshed: '✓ Base de datos actualizada ({time})',
+                refreshError: 'Error al actualizar: {error}',
+                enterQuery: 'Por favor introduce una consulta SQL',
+                loadDbFirst: 'Por favor carga primero una base de datos',
+                querySuccess: 'Consulta ejecutada exitosamente, sin datos retornados ({time}ms)',
+                queryError: 'Error de consulta: {error}',
+                noDataExport: 'No hay datos para exportar',
+                historyCleared: 'Historial limpiado',
+                confirmClearHistory: '¿Estás seguro de que quieres limpiar todo el historial de consultas?',
+                // 数据库信息
+                fileName: 'Nombre del archivo',
+                fileSize: 'Tamaño',
+                tableCount: 'Número de tablas',
+                refreshData: '🔄 Actualizar',
+                changeFile: '📂 Cambiar archivo',
+                rows: 'filas',
+                indexes: 'Índices:',
+                // FAQ
+                faqTitle: '❓ Preguntas frecuentes',
+                faq1Title: '¿Cuál es el tamaño máximo de archivo soportado?',
+                faq1Answer: 'El tamaño soportado depende de la memoria del navegador, se recomienda no exceder 100 MB. Para archivos más grandes, usa herramientas de escritorio como DB Browser for SQLite o DBeaver.',
+                faq2Title: '¿Puedo modificar la base de datos?',
+                faq2Answer: 'Puedes ejecutar sentencias INSERT, UPDATE, DELETE, pero todas las modificaciones se hacen solo en la memoria del navegador y no afectarán tu archivo original. Exporta los resultados para guardar cambios.',
+                faq3Title: '¿Cómo guardo la base de datos modificada?',
+                faq3Answer: 'Puedes exportar los resultados en formato CSV, JSON o SQL. Para guardar completamente la base de datos, usa las sentencias SQL exportadas para reconstruirla en otras herramientas.',
+                faq4Title: '¿Se subirá mi archivo a un servidor?',
+                faq4Answer: '<strong style="color: #00ff88;">¡No!</strong> Esta herramienta usa la biblioteca sql.js, todo el procesamiento se hace localmente en tu navegador, los archivos nunca se suben a ningún servidor.',
+                faq5Title: '¿Qué versiones de SQLite son soportadas?',
+                faq5Answer: 'Soporta archivos SQLite 3.x, incluyendo extensiones .db, .sqlite, .sqlite3, .db3.',
+                // 相关工具
+                relatedToolsTitle: '🔗 Herramientas relacionadas',
+                jsonViewer: 'Visor JSON',
+                jsonViewerDesc: 'Formateo y visualización JSON',
+                cryptoTools: 'Herramientas de cifrado',
+                cryptoToolsDesc: 'Codificación Base64/MD5/AES',
+                regexTester: 'Probador Regex',
+                regexTesterDesc: 'Prueba y depuración de regex en línea',
+                fileRenamer: 'Renombrador de archivos',
+                fileRenamerDesc: 'Renombrar archivos en lote',
+                // Footer
+                footerPrivacy: 'Procesamiento solo del lado del cliente, los archivos nunca se suben a un servidor',
+                footerBack: '← Volver a Web Toolbox'
+            }
+        };
+
+        const langNames = {
+            'en': '🇺🇸 English',
+            'zh-CN': '🇨🇳 中文',
+            'fr': '🇫🇷 Français',
+            'es': '🇪🇸 Español'
+        };
+
+        let currentLang = localStorage.getItem('sqlite-viewer-lang') || 'en';
+
+        function t(key, params = {}) {
+            let text = translations[currentLang]?.[key] || translations['en'][key] || key;
+            Object.keys(params).forEach(k => {
+                text = text.replace(`{${k}}`, params[k]);
+            });
+            return text;
+        }
+
+        function applyTranslations() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (translations[currentLang]?.[key]) {
+                    el.textContent = translations[currentLang][key];
+                }
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (translations[currentLang]?.[key]) {
+                    el.placeholder = translations[currentLang][key];
+                }
+            });
+            document.getElementById('langCurrent').textContent = langNames[currentLang] || '🌐 English';
+            // 更新 FAQ 和 Footer
+            updateFaqSection();
+            updateRelatedToolsSection();
+            updateFooterSection();
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('sqlite-viewer-lang', lang);
+            applyTranslations();
+            document.getElementById('langDropdown').classList.remove('active');
+        }
+
+        // 语言切换器事件
+        document.getElementById('langCurrent').addEventListener('click', (e) => {
+            e.stopPropagation();
+            document.getElementById('langDropdown').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                setLanguage(btn.getAttribute('data-lang'));
+            });
+        });
+
+        document.addEventListener('click', () => {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
+        // ==================== 主要功能代码 ====================
         // 全局变量
         let db = null;
         let currentTable = null;
@@ -805,16 +1237,15 @@
         let queryHistory = [];
         let currentPage = 1;
         const pageSize = 100;
-        let currentFile = null;  // 保存当前加载的文件引用
-        const STORAGE_KEY = 'sqlite_viewer_history';  // localStorage 键名
+        let currentFile = null;
+        const STORAGE_KEY = 'sqlite_viewer_history';
 
         // 初始化 SQL.js
         let SQL = null;
         initSqlJs({ locateFile: file => `https://cdnjs.cloudflare.com/ajax/libs/sql.js/1.8.0/${file}` })
             .then(function(sql) {
                 SQL = sql;
-                console.log('SQL.js 加载完成');
-                // 从 localStorage 加载历史记录
+                console.log('SQL.js loaded');
                 loadHistoryFromStorage();
             });
 
@@ -846,12 +1277,12 @@
         // 加载数据库
         async function loadDatabase(file) {
             if (!SQL) {
-                showMessage('SQL.js 正在加载，请稍候...', 'info');
+                showMessage(t('sqlLoading'), 'info');
                 return;
             }
 
             showLoading(true);
-            currentFile = file;  // 保存文件引用用于刷新
+            currentFile = file;
 
             try {
                 const arrayBuffer = await file.arrayBuffer();
@@ -859,29 +1290,24 @@
 
                 db = new SQL.Database(uint8Array);
 
-                // 获取表列表
                 const tables = db.exec("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name");
 
                 if (tables.length === 0 || tables[0].values.length === 0) {
-                    showMessage('数据库中没有找到表', 'error');
+                    showMessage(t('noTables'), 'error');
                     showLoading(false);
                     return;
                 }
 
-                // 显示数据库信息
                 showDbInfo(file, tables[0].values.length);
-
-                // 显示表列表
                 showTableList(tables[0].values);
 
-                // 显示主界面
                 document.getElementById('uploadArea').style.display = 'none';
                 document.getElementById('mainContent').classList.add('active');
 
-                showMessage(`成功加载数据库: ${file.name}`, 'success');
+                showMessage(t('dbLoaded', { name: file.name }), 'success');
 
             } catch (error) {
-                showMessage(`加载数据库失败: ${error.message}`, 'error');
+                showMessage(t('dbLoadError', { error: error.message }), 'error');
             }
 
             showLoading(false);
@@ -890,40 +1316,33 @@
         // 刷新数据库
         async function refreshDatabase() {
             if (!currentFile) {
-                showMessage('没有已加载的数据库文件', 'error');
+                showMessage(t('noDbFile'), 'error');
                 return;
             }
 
             showLoading(true);
 
             try {
-                // 重新读取文件
                 const arrayBuffer = await currentFile.arrayBuffer();
                 const uint8Array = new Uint8Array(arrayBuffer);
 
-                // 关闭旧数据库，创建新数据库
                 if (db) db.close();
                 db = new SQL.Database(uint8Array);
 
-                // 获取表列表
                 const tables = db.exec("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' ORDER BY name");
 
-                // 更新表列表
                 showTableList(tables[0]?.values || []);
-
-                // 更新数据库信息
                 showDbInfo(currentFile, tables[0]?.values.length || 0);
 
-                // 如果当前有选中的表，刷新数据
                 if (currentTable) {
                     selectTable(currentTable);
                 }
 
                 const now = new Date().toLocaleTimeString();
-                showMessage(`✓ 数据库已刷新 (${now})`, 'success');
+                showMessage(t('dbRefreshed', { time: now }), 'success');
 
             } catch (error) {
-                showMessage(`刷新失败: ${error.message}`, 'error');
+                showMessage(t('refreshError', { error: error.message }), 'error');
             }
 
             showLoading(false);
@@ -938,23 +1357,23 @@
 
             dbInfo.innerHTML = `
                 <div class="db-info-item">
-                    <label>文件名</label>
+                    <label>${t('fileName')}</label>
                     <span style="font-size: 14px;">${file.name}</span>
                 </div>
                 <div class="db-info-item">
-                    <label>文件大小</label>
+                    <label>${t('fileSize')}</label>
                     <span>${sizeDisplay}</span>
                 </div>
                 <div class="db-info-item">
-                    <label>表数量</label>
+                    <label>${t('tableCount')}</label>
                     <span>${tableCount}</span>
                 </div>
                 <div class="db-info-item" style="justify-content: center;">
                     <button class="btn btn-primary" onclick="refreshDatabase()" style="margin-bottom: 5px;">
-                        🔄 刷新数据
+                        ${t('refreshData')}
                     </button>
                     <button class="btn btn-secondary" onclick="document.getElementById('fileInput').click()" style="font-size: 12px;">
-                        📂 更换文件
+                        ${t('changeFile')}
                     </button>
                 </div>
             `;
@@ -966,12 +1385,11 @@
             tableList.innerHTML = '';
 
             tables.forEach(([tableName]) => {
-                // 获取行数
                 const countResult = db.exec(`SELECT COUNT(*) FROM "${tableName}"`);
                 const rowCount = countResult[0]?.values[0][0] || 0;
 
                 const li = document.createElement('li');
-                li.innerHTML = `${tableName}<span class="table-info">${rowCount} 行</span>`;
+                li.innerHTML = `${tableName}<span class="table-info">${rowCount} ${t('rows')}</span>`;
                 li.onclick = () => selectTable(tableName);
                 tableList.appendChild(li);
             });
@@ -982,12 +1400,10 @@
             currentTable = tableName;
             currentPage = 1;
 
-            // 更新选中状态
             document.querySelectorAll('.table-list li').forEach(li => {
                 li.classList.toggle('active', li.textContent.startsWith(tableName));
             });
 
-            // 显示表数据
             const query = `SELECT * FROM "${tableName}" LIMIT ${pageSize} OFFSET 0`;
             document.getElementById('queryInput').value = query;
 
@@ -1001,7 +1417,7 @@
             const pragmaResult = db.exec(`PRAGMA table_info("${tableName}")`);
 
             if (pragmaResult.length === 0) {
-                schemaView.innerHTML = '<div class="empty-state">无法获取表结构</div>';
+                schemaView.innerHTML = `<div class="empty-state">${t('emptySchemaState')}</div>`;
                 return;
             }
 
@@ -1019,10 +1435,9 @@
                 `;
             });
 
-            // 获取索引信息
             const indexResult = db.exec(`PRAGMA index_list("${tableName}")`);
             if (indexResult.length > 0 && indexResult[0].values.length > 0) {
-                html += '<div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #333;"><strong style="color: #ff9f43;">索引:</strong></div>';
+                html += `<div style="margin-top: 20px; padding-top: 15px; border-top: 1px solid #333;"><strong style="color: #ff9f43;">${t('indexes')}</strong></div>`;
                 indexResult[0].values.forEach(idx => {
                     html += `<div class="column" style="color: #888;">📑 ${idx[1]} ${idx[2] ? '(UNIQUE)' : ''}</div>`;
                 });
@@ -1036,12 +1451,12 @@
             const query = customQuery || document.getElementById('queryInput').value.trim();
 
             if (!query) {
-                showMessage('请输入 SQL 查询语句', 'error');
+                showMessage(t('enterQuery'), 'error');
                 return;
             }
 
             if (!db) {
-                showMessage('请先加载数据库', 'error');
+                showMessage(t('loadDbFirst'), 'error');
                 return;
             }
 
@@ -1052,7 +1467,7 @@
                 const duration = (endTime - startTime).toFixed(2);
 
                 if (results.length === 0) {
-                    showMessage(`查询执行成功，无返回数据 (${duration}ms)`, 'success');
+                    showMessage(t('querySuccess', { time: duration }), 'success');
                     currentResults = [];
                     currentColumns = [];
                     showResults([], []);
@@ -1065,13 +1480,12 @@
 
                 showResults(columns, values);
                 document.getElementById('resultsInfo').textContent =
-                    `${values.length} 行 · ${duration}ms`;
+                    `${values.length} ${t('rows')} · ${duration}ms`;
 
-                // 添加到历史
                 addToHistory(query);
 
             } catch (error) {
-                showMessage(`查询错误: ${error.message}`, 'error');
+                showMessage(t('queryError', { error: error.message }), 'error');
             }
         }
 
@@ -1080,12 +1494,11 @@
             const container = document.getElementById('tableContainer');
 
             if (columns.length === 0) {
-                container.innerHTML = '<div class="empty-state">无数据</div>';
+                container.innerHTML = `<div class="empty-state">${t('emptyState')}</div>`;
                 document.getElementById('pagination').style.display = 'none';
                 return;
             }
 
-            // 分页显示
             const startIdx = (currentPage - 1) * pageSize;
             const endIdx = Math.min(startIdx + pageSize, values.length);
             const pageData = values.slice(startIdx, endIdx);
@@ -1116,11 +1529,10 @@
             html += '</tbody></table>';
             container.innerHTML = html;
 
-            // 分页控制
             const pagination = document.getElementById('pagination');
             if (totalPages > 1) {
                 pagination.style.display = 'flex';
-                document.getElementById('pageInfo').textContent = `第 ${currentPage} / ${totalPages} 页`;
+                document.getElementById('pageInfo').textContent = t('pageInfo', { current: currentPage, total: totalPages });
                 pagination.querySelector('button:first-child').disabled = currentPage === 1;
                 pagination.querySelector('button:last-child').disabled = currentPage === totalPages;
             } else {
@@ -1160,10 +1572,9 @@
                 if (stored) {
                     queryHistory = JSON.parse(stored);
                     updateHistoryDisplay();
-                    console.log(`已从 localStorage 加载 ${queryHistory.length} 条历史记录`);
                 }
             } catch (e) {
-                console.error('加载历史记录失败:', e);
+                console.error('Failed to load history:', e);
                 queryHistory = [];
             }
         }
@@ -1173,23 +1584,22 @@
             try {
                 localStorage.setItem(STORAGE_KEY, JSON.stringify(queryHistory));
             } catch (e) {
-                console.error('保存历史记录失败:', e);
+                console.error('Failed to save history:', e);
             }
         }
 
         // 添加到历史
         function addToHistory(query) {
-            // 如果已存在，移到最前面
             const existingIndex = queryHistory.indexOf(query);
             if (existingIndex > -1) {
                 queryHistory.splice(existingIndex, 1);
             }
 
             queryHistory.unshift(query);
-            if (queryHistory.length > 50) queryHistory.pop();  // 保留更多历史
+            if (queryHistory.length > 50) queryHistory.pop();
 
             updateHistoryDisplay();
-            saveHistoryToStorage();  // 保存到 localStorage
+            saveHistoryToStorage();
         }
 
         function updateHistoryDisplay() {
@@ -1203,7 +1613,7 @@
             }
 
             historySection.style.display = 'block';
-            historyCount.textContent = `(${queryHistory.length}条)`;
+            historyCount.textContent = `(${queryHistory.length})`;
             historyList.innerHTML = queryHistory.map((q, idx) =>
                 `<div class="history-item" onclick="loadHistoryByIndex(${idx})" title="${escapeHtml(q)}">
                     <span style="color:#666;margin-right:8px;">${idx + 1}.</span>${escapeHtml(q.length > 80 ? q.substring(0, 80) + '...' : q)}
@@ -1223,11 +1633,11 @@
 
         // 清空历史记录
         function clearHistory() {
-            if (confirm('确定要清空所有查询历史吗？')) {
+            if (confirm(t('confirmClearHistory'))) {
                 queryHistory = [];
                 updateHistoryDisplay();
                 saveHistoryToStorage();
-                showMessage('历史记录已清空', 'success');
+                showMessage(t('historyCleared'), 'success');
             }
         }
 
@@ -1236,7 +1646,6 @@
             const input = document.getElementById('queryInput');
             let query = input.value;
 
-            // 简单格式化
             const keywords = ['SELECT', 'FROM', 'WHERE', 'AND', 'OR', 'ORDER BY', 'GROUP BY', 'HAVING', 'LIMIT', 'OFFSET', 'JOIN', 'LEFT JOIN', 'RIGHT JOIN', 'INNER JOIN', 'ON', 'INSERT INTO', 'VALUES', 'UPDATE', 'SET', 'DELETE FROM'];
 
             query = query.replace(/\s+/g, ' ').trim();
@@ -1259,7 +1668,6 @@
             menu.classList.toggle('show');
         }
 
-        // 点击其他地方关闭菜单
         document.addEventListener('click', (e) => {
             if (!e.target.closest('.export-dropdown')) {
                 document.getElementById('exportMenu').classList.remove('show');
@@ -1268,7 +1676,7 @@
 
         function exportCSV() {
             if (currentResults.length === 0) {
-                showMessage('没有数据可导出', 'error');
+                showMessage(t('noDataExport'), 'error');
                 return;
             }
 
@@ -1287,7 +1695,7 @@
 
         function exportJSON() {
             if (currentResults.length === 0) {
-                showMessage('没有数据可导出', 'error');
+                showMessage(t('noDataExport'), 'error');
                 return;
             }
 
@@ -1306,7 +1714,7 @@
 
         function exportSQL() {
             if (currentResults.length === 0 || !currentTable) {
-                showMessage('没有数据可导出', 'error');
+                showMessage(t('noDataExport'), 'error');
                 return;
             }
 
@@ -1358,56 +1766,162 @@
             if (e.ctrlKey && e.key === 'Enter') {
                 executeQuery();
             }
-            // F5 刷新数据库
             if (e.key === 'F5' && currentFile) {
                 e.preventDefault();
                 refreshDatabase();
             }
         });
+
+        // 动态更新 FAQ 部分
+        function updateFaqSection() {
+            const faqSection = document.querySelector('.faq-section');
+            if (faqSection) {
+                faqSection.innerHTML = `
+                    <h2 style="color: #eee; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #333;">${t('faqTitle')}</h2>
+                    <div style="display: flex; flex-direction: column; gap: 16px;">
+                        <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                            <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                                <span style="transition: transform 0.2s;">▶</span> ${t('faq1Title')}
+                            </summary>
+                            <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                                ${t('faq1Answer')}
+                            </div>
+                        </details>
+                        <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                            <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                                <span style="transition: transform 0.2s;">▶</span> ${t('faq2Title')}
+                            </summary>
+                            <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                                ${t('faq2Answer')}
+                            </div>
+                        </details>
+                        <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                            <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                                <span style="transition: transform 0.2s;">▶</span> ${t('faq3Title')}
+                            </summary>
+                            <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                                ${t('faq3Answer')}
+                            </div>
+                        </details>
+                        <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                            <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                                <span style="transition: transform 0.2s;">▶</span> ${t('faq4Title')}
+                            </summary>
+                            <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                                ${t('faq4Answer')}
+                            </div>
+                        </details>
+                        <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
+                            <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
+                                <span style="transition: transform 0.2s;">▶</span> ${t('faq5Title')}
+                            </summary>
+                            <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
+                                ${t('faq5Answer')}
+                            </div>
+                        </details>
+                    </div>
+                `;
+            }
+        }
+
+        // 动态更新相关工具部分
+        function updateRelatedToolsSection() {
+            const relatedTools = document.querySelector('.related-tools');
+            if (relatedTools) {
+                relatedTools.innerHTML = `
+                    <h3 style="color: #eee; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">${t('relatedToolsTitle')}</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                        <a href="json-viewer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
+                            <div style="color: #eee; font-weight: 500;">${t('jsonViewer')}</div>
+                            <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('jsonViewerDesc')}</div>
+                        </a>
+                        <a href="crypto-tools.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                            <div style="color: #eee; font-weight: 500;">${t('cryptoTools')}</div>
+                            <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('cryptoToolsDesc')}</div>
+                        </a>
+                        <a href="regex-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
+                            <div style="color: #eee; font-weight: 500;">${t('regexTester')}</div>
+                            <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('regexTesterDesc')}</div>
+                        </a>
+                        <a href="file-renamer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">📝</div>
+                            <div style="color: #eee; font-weight: 500;">${t('fileRenamer')}</div>
+                            <div style="color: #888; font-size: 12px; margin-top: 4px;">${t('fileRenamerDesc')}</div>
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        // 动态更新 Footer 部分
+        function updateFooterSection() {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                footer.innerHTML = `
+                    <p>${t('footerPrivacy')}</p>
+                    <p style="margin-top: 12px;">
+                        <a href="index.html" style="color: #00d9ff; text-decoration: none;">${t('footerBack')}</a>
+                        <span style="margin: 0 12px;">|</span>
+                        <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
+                    </p>
+                `;
+            }
+        }
+
+        // 页面加载时应用翻译
+        document.addEventListener('DOMContentLoaded', () => {
+            applyTranslations();
+        });
+
+        // 立即应用翻译（针对直接执行的情况）
+        applyTranslations();
     </script>
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section" style="max-width: 1400px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #eee; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #333;">❓ 常见问题</h2>
+        <h2 style="color: #eee; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #333;" data-i18n="faqTitle">❓ Frequently Asked Questions</h2>
         <div style="display: flex; flex-direction: column; gap: 16px;">
             <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
-                    <span style="transition: transform 0.2s;">▶</span> SQLite 查看器支持多大的数据库文件？
+                    <span style="transition: transform 0.2s;">▶</span> <span data-i18n="faq1Title">What is the maximum database file size supported?</span>
                 </summary>
-                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
-                    支持的文件大小取决于浏览器内存，建议不超过 100MB。对于较大的数据库文件，建议使用桌面端 SQLite 管理工具如 DB Browser for SQLite 或 DBeaver。
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;" data-i18n="faq1Answer">
+                    The supported file size depends on browser memory, recommended not to exceed 100MB. For larger database files, consider using desktop SQLite management tools like DB Browser for SQLite or DBeaver.
                 </div>
             </details>
             <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
-                    <span style="transition: transform 0.2s;">▶</span> 可以修改数据库吗？
+                    <span style="transition: transform 0.2s;">▶</span> <span data-i18n="faq2Title">Can I modify the database?</span>
                 </summary>
-                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
-                    支持执行 INSERT、UPDATE、DELETE 等 SQL 语句，但所有修改仅在浏览器内存中进行，不会影响您的原始文件。如需保存修改，请将结果导出为新文件。
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;" data-i18n="faq2Answer">
+                    You can execute INSERT, UPDATE, DELETE and other SQL statements, but all modifications are only made in browser memory and will not affect your original file. Export results to a new file if you need to save changes.
                 </div>
             </details>
             <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
-                    <span style="transition: transform 0.2s;">▶</span> 如何保存修改后的数据库？
+                    <span style="transition: transform 0.2s;">▶</span> <span data-i18n="faq3Title">How do I save the modified database?</span>
                 </summary>
-                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
-                    可以将查询结果导出为 CSV、JSON 或 SQL 格式。如需完整保存数据库，建议使用导出的 SQL 语句在其他 SQLite 工具中重建数据库。
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;" data-i18n="faq3Answer">
+                    You can export query results to CSV, JSON or SQL format. To fully save the database, use the exported SQL statements to rebuild the database in other SQLite tools.
                 </div>
             </details>
             <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
-                    <span style="transition: transform 0.2s;">▶</span> 数据库文件会上传到服务器吗？
+                    <span style="transition: transform 0.2s;">▶</span> <span data-i18n="faq4Title">Will my database file be uploaded to a server?</span>
                 </summary>
                 <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
-                    <strong style="color: #00ff88;">不会！</strong>本工具使用 sql.js 库，所有数据处理都在您的本地浏览器中完成，数据库文件不会上传到任何服务器，确保您的数据安全和隐私。
+                    <strong style="color: #00ff88;">No!</strong> <span data-i18n="faq4Answer">This tool uses the sql.js library, all data processing is done locally in your browser, database files are never uploaded to any server, ensuring your data security and privacy.</span>
                 </div>
             </details>
             <details style="background: #16213e; border: 1px solid #333; border-radius: 10px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #00d9ff; font-weight: 500; font-size: 15px; list-style: none; display: flex; align-items: center; gap: 10px;">
-                    <span style="transition: transform 0.2s;">▶</span> 支持哪些 SQLite 版本？
+                    <span style="transition: transform 0.2s;">▶</span> <span data-i18n="faq5Title">Which SQLite versions are supported?</span>
                 </summary>
-                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;">
-                    支持 SQLite 3.x 版本的数据库文件，包括 .db、.sqlite、.sqlite3、.db3 等常见扩展名格式。
+                <div style="padding: 0 20px 16px 46px; color: #bbb; font-size: 14px; line-height: 1.6;" data-i18n="faq5Answer">
+                    Supports SQLite 3.x database files, including .db, .sqlite, .sqlite3, .db3 and other common extension formats.
                 </div>
             </details>
         </div>
@@ -1415,35 +1929,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1400px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #eee; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #eee; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedToolsTitle">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="json-viewer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
-                <div style="color: #eee; font-weight: 500;">JSON 查看器</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+                <div style="color: #eee; font-weight: 500;" data-i18n="jsonViewer">JSON Viewer</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="jsonViewerDesc">JSON formatting and visualization</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #eee; font-weight: 500;">加解密工具箱</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等编码加密</div>
+                <div style="color: #eee; font-weight: 500;" data-i18n="cryptoTools">Crypto Toolbox</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="cryptoToolsDesc">Base64/MD5/AES encoding & encryption</div>
             </a>
             <a href="regex-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
-                <div style="color: #eee; font-weight: 500;">正则表达式测试</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+                <div style="color: #eee; font-weight: 500;" data-i18n="regexTester">Regex Tester</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="regexTesterDesc">Online regex matching and debugging</div>
             </a>
             <a href="file-renamer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📝</div>
-                <div style="color: #eee; font-weight: 500;">文件批量重命名</div>
-                <div style="color: #888; font-size: 12px; margin-top: 4px;">批量修改文件名</div>
+                <div style="color: #eee; font-weight: 500;" data-i18n="fileRenamer">File Renamer</div>
+                <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="fileRenamerDesc">Batch rename files</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #888; font-size: 14px;">
-        <p>纯前端处理，数据库文件不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, database files are never uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #00d9ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #00d9ff; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
         </p>

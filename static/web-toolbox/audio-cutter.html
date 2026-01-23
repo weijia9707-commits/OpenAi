@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>音频剪辑 - 在线可视化音频裁剪工具 | Web Toolbox</title>
+    <title>Audio Cutter - Online Visual Audio Trimming Tool | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线音频剪辑工具，支持 MP3、WAV、M4A、FLAC、AAC 格式。可视化波形显示，拖动选择剪辑区间，快捷键操作，本地处理保护隐私。">
-    <meta name="keywords" content="音频剪辑,音频裁剪,MP3剪辑,在线音频编辑,音频切割,铃声制作,音乐剪辑,WAV剪辑,免费音频工具">
+    <meta name="description" content="Free online audio cutter tool, supports MP3, WAV, M4A, FLAC, AAC formats. Visual waveform display, drag to select clip range, keyboard shortcuts, local processing for privacy.">
+    <meta name="keywords" content="audio cutter,audio trimmer,MP3 cutter,online audio editor,audio splitter,ringtone maker,music cutter,WAV cutter,free audio tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/audio-cutter.html">
@@ -15,16 +15,17 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/audio-cutter.html">
-    <meta property="og:title" content="音频剪辑 - 在线可视化音频裁剪工具">
-    <meta property="og:description" content="免费在线音频剪辑，可视化波形，支持多种格式。">
+    <meta property="og:title" content="Audio Cutter - Online Visual Audio Trimming Tool">
+    <meta property="og:description" content="Free online audio cutter with visual waveform, supports multiple formats.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/audio-cutter.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="音频剪辑 - 在线可视化音频裁剪工具">
-    <meta name="twitter:description" content="免费在线音频剪辑，可视化波形显示。">
+    <meta name="twitter:title" content="Audio Cutter - Online Visual Audio Trimming Tool">
+    <meta name="twitter:description" content="Free online audio cutter with visual waveform display.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/audio-cutter.png">
 
     <!-- JSON-LD -->
@@ -32,12 +33,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "音频剪辑",
+        "name": "Audio Cutter",
         "url": "https://www.heyuan110.com/web-toolbox/audio-cutter.html",
-        "description": "在线可视化音频剪辑工具，支持多种音频格式",
+        "description": "Online visual audio cutting tool, supports multiple audio formats",
         "applicationCategory": "MultimediaApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +51,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "支持哪些音频格式？",
+                "name": "What audio formats are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "本工具支持 MP3、WAV、M4A、FLAC、AAC、OGG 等主流音频格式。您可以直接拖拽或选择这些格式的音频文件进行剪辑，工具会自动识别并加载音频波形。"
+                    "text": "This tool supports MP3, WAV, M4A, FLAC, AAC, OGG and other mainstream audio formats. You can directly drag or select audio files in these formats for editing, and the tool will automatically recognize and load the audio waveform."
                 }
             },
             {
                 "@type": "Question",
-                "name": "最大支持多大的音频文件？",
+                "name": "What is the maximum audio file size supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "音频文件大小取决于您的浏览器内存限制，建议不超过 100MB。较大的文件可能会导致加载缓慢或浏览器内存不足。如果需要处理大文件，建议先使用其他工具分割后再进行剪辑。"
+                    "text": "The audio file size depends on your browser's memory limit, recommended not to exceed 100MB. Larger files may cause slow loading or browser memory issues. For large files, it's recommended to split them using other tools first before editing."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何精确选择剪辑区间？",
+                "name": "How to precisely select the clip range?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "您可以通过以下方式精确选择剪辑区间：1) 直接在波形上拖动起止标记；2) 播放时使用快捷键 [ 设置起点、] 设置终点；3) 点击试听按钮预览选中片段。时间精度可达毫秒级。"
+                    "text": "You can precisely select the clip range in the following ways: 1) Drag the start and end markers directly on the waveform; 2) Use keyboard shortcuts [ to set the start point and ] to set the end point during playback; 3) Click the preview button to listen to the selected segment. Time precision can reach milliseconds."
                 }
             },
             {
                 "@type": "Question",
-                "name": "剪辑后的音频格式是什么？",
+                "name": "What format is the clipped audio?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "您可以自由选择导出格式，支持 MP3、WAV、OGG、M4A、FLAC、AAC 六种格式。WAV 格式无需编码器，其他格式会自动加载编码器进行转换。"
+                    "text": "You can freely choose the export format, supporting MP3, WAV, OGG, M4A, FLAC, AAC six formats. WAV format does not require an encoder, other formats will automatically load the encoder for conversion."
                 }
             },
             {
                 "@type": "Question",
-                "name": "音频会上传到服务器吗？",
+                "name": "Will the audio be uploaded to the server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会。所有音频处理完全在您的浏览器本地完成，音频文件不会上传到任何服务器。这意味着您的音频内容完全私密安全，即使在离线状态下也可以使用本工具（需要先加载页面）。"
+                    "text": "No. All audio processing is done completely in your browser locally, audio files will not be uploaded to any server. This means your audio content is completely private and secure, and you can use this tool even offline (after loading the page first)."
                 }
             }
         ]
@@ -136,6 +137,7 @@
         header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         h1 {
@@ -151,6 +153,74 @@
         .subtitle {
             color: #a1a1aa;
             font-size: 0.95rem;
+        }
+
+        /* 语言切换器 */
+        .lang-switcher {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-current {
+            background: rgba(255, 255, 255, 0.1);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            padding: 8px 16px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 14px;
+            color: #e0e0e0;
+            transition: all 0.3s ease;
+        }
+
+        .lang-current:hover {
+            background: rgba(255, 255, 255, 0.15);
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 4px;
+            background: #1e1e2e;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 8px;
+            padding: 4px;
+            min-width: 140px;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all 0.3s ease;
+            z-index: 1000;
+        }
+
+        .lang-dropdown.active .lang-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-btn {
+            display: block;
+            width: 100%;
+            padding: 10px 16px;
+            background: none;
+            border: none;
+            color: #e0e0e0;
+            font-size: 14px;
+            text-align: left;
+            cursor: pointer;
+            border-radius: 6px;
+            transition: background 0.2s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.1);
         }
 
         /* 主面板 */
@@ -774,53 +844,75 @@
                 flex-direction: column;
                 align-items: center;
             }
+
+            .lang-switcher {
+                position: static;
+                margin-bottom: 15px;
+            }
+
+            header {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+            }
         }
     </style>
 </head>
 <body>
     <div class="loading-overlay" id="loadingOverlay">
         <div class="loading-spinner"></div>
-        <div class="loading-text" id="loadingText">正在处理...</div>
+        <div class="loading-text" id="loadingText" data-i18n="loading">Processing...</div>
     </div>
 
     <div class="container">
-        <a href="index.html" class="back-home">← 返回工具箱</a>
+        <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox</a>
 
         <header>
-            <h1>音频剪辑</h1>
-            <p class="subtitle">在线可视化音频裁剪，支持多种格式</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <h1 data-i18n="title">Audio Cutter</h1>
+            <p class="subtitle" data-i18n="subtitle">Online visual audio trimming, supports multiple formats</p>
         </header>
 
         <!-- 功能特点 -->
         <section class="features-section" style="background: linear-gradient(135deg, rgba(124, 58, 237, 0.1), rgba(99, 102, 241, 0.1)); border: 1px solid rgba(124, 58, 237, 0.2); border-radius: 16px; padding: 25px; margin-bottom: 25px;">
-            <h2 style="font-size: 1.1rem; color: #a78bfa; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">✨ 功能特点</h2>
+            <h2 style="font-size: 1.1rem; color: #a78bfa; margin-bottom: 15px; display: flex; align-items: center; gap: 8px;" data-i18n="featuresTitle">✨ Features</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">📊</span>
                     <div>
-                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">可视化波形</div>
-                        <div style="font-size: 0.9rem; color: #a1a1aa;">直观显示音频波形，精准选择剪辑区间</div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;" data-i18n="feature1Title">Visual Waveform</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;" data-i18n="feature1Desc">Intuitively display audio waveform, precisely select clip range</div>
                     </div>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">🎵</span>
                     <div>
-                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">多格式支持</div>
-                        <div style="font-size: 0.9rem; color: #a1a1aa;">支持 MP3、WAV、M4A、FLAC、AAC 等主流格式</div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;" data-i18n="feature2Title">Multiple Formats</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;" data-i18n="feature2Desc">Supports MP3, WAV, M4A, FLAC, AAC and other mainstream formats</div>
                     </div>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">⌨️</span>
                     <div>
-                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">快捷键操作</div>
-                        <div style="font-size: 0.9rem; color: #a1a1aa;">空格播放/暂停，[ ] 设置起止点，方便快速预览</div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;" data-i18n="feature3Title">Keyboard Shortcuts</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;" data-i18n="feature3Desc">Space to play/pause, [ ] to set start/end points for quick preview</div>
                     </div>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">🔒</span>
                     <div>
-                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;">隐私安全</div>
-                        <div style="font-size: 0.9rem; color: #a1a1aa;">纯前端处理，音频文件不上传服务器</div>
+                        <div style="font-weight: 500; color: #e4e4e7; margin-bottom: 4px;" data-i18n="feature4Title">Privacy & Security</div>
+                        <div style="font-size: 0.9rem; color: #a1a1aa;" data-i18n="feature4Desc">Pure frontend processing, audio files are not uploaded to server</div>
                     </div>
                 </div>
             </div>
@@ -830,9 +922,9 @@
             <!-- 上传区域 -->
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">🎵</div>
-                <div class="upload-text">拖拽音频到这里，或点击选择文件</div>
-                <div class="upload-hint">支持 MP3、WAV、M4A、FLAC、AAC 格式</div>
-                <button class="upload-btn" id="uploadBtn">选择音频</button>
+                <div class="upload-text" data-i18n="uploadText">Drag audio here, or click to select file</div>
+                <div class="upload-hint" data-i18n="uploadHint">Supports MP3, WAV, M4A, FLAC, AAC formats</div>
+                <button class="upload-btn" id="uploadBtn" data-i18n="uploadBtn">Select Audio</button>
                 <input type="file" id="fileInput" accept="audio/*">
             </div>
 
@@ -842,9 +934,9 @@
                 <div class="audio-info">
                     <div>
                         <div class="audio-name" id="audioName">audio.mp3</div>
-                        <div class="audio-duration" id="audioDuration">时长: 00:00</div>
+                        <div class="audio-duration" id="audioDuration" data-i18n="duration">Duration: 00:00</div>
                     </div>
-                    <button class="change-file-btn" id="changeFileBtn">更换文件</button>
+                    <button class="change-file-btn" id="changeFileBtn" data-i18n="changeFile">Change File</button>
                 </div>
 
                 <!-- 波形 -->
@@ -862,48 +954,48 @@
                 <!-- 剪辑区间 -->
                 <div class="region-info">
                     <div class="region-time">
-                        <span class="region-label">起点</span>
+                        <span class="region-label" data-i18n="startPoint">Start</span>
                         <input type="text" class="region-input" id="startTime" value="00:00.000" readonly>
                     </div>
                     <div class="region-time">
-                        <span class="region-label">终点</span>
+                        <span class="region-label" data-i18n="endPoint">End</span>
                         <input type="text" class="region-input" id="endTime" value="00:00.000" readonly>
                     </div>
-                    <div class="region-duration" id="regionDuration">选中时长: 00:00</div>
+                    <div class="region-duration" id="regionDuration" data-i18n="selectedDuration">Selected: 00:00</div>
                 </div>
 
                 <!-- 播放控制 -->
                 <div class="controls">
                     <span class="current-time" id="currentTime">00:00.000</span>
-                    <button class="control-btn" id="skipBackBtn" title="后退5秒">⏪</button>
-                    <button class="control-btn play-btn" id="playBtn" title="播放/暂停">▶</button>
-                    <button class="control-btn" id="skipForwardBtn" title="前进5秒">⏩</button>
-                    <button class="control-btn" id="previewRegionBtn" title="试听剪辑片段" style="background: rgba(34, 197, 94, 0.3); border: 2px solid #22c55e;">🎧</button>
+                    <button class="control-btn" id="skipBackBtn" title="Rewind 5s" data-i18n-title="rewind5s">⏪</button>
+                    <button class="control-btn play-btn" id="playBtn" title="Play/Pause" data-i18n-title="playPause">▶</button>
+                    <button class="control-btn" id="skipForwardBtn" title="Forward 5s" data-i18n-title="forward5s">⏩</button>
+                    <button class="control-btn" id="previewRegionBtn" title="Preview clip" data-i18n-title="previewClip" style="background: rgba(34, 197, 94, 0.3); border: 2px solid #22c55e;">🎧</button>
                 </div>
 
                 <!-- 快捷键提示 -->
                 <div class="shortcuts">
                     <div class="shortcut-item">
                         <span class="shortcut-key">[</span>
-                        <span>设置起点</span>
+                        <span data-i18n="setStart">Set start</span>
                     </div>
                     <div class="shortcut-item">
                         <span class="shortcut-key">]</span>
-                        <span>设置终点</span>
+                        <span data-i18n="setEnd">Set end</span>
                     </div>
                     <div class="shortcut-item">
-                        <span class="shortcut-key">空格</span>
-                        <span>播放/暂停</span>
+                        <span class="shortcut-key" data-i18n="spaceKey">Space</span>
+                        <span data-i18n="playPauseText">Play/Pause</span>
                     </div>
                     <div class="shortcut-item">
                         <span class="shortcut-key">🎧</span>
-                        <span>试听剪辑片段</span>
+                        <span data-i18n="previewClipText">Preview clip</span>
                     </div>
                 </div>
 
                 <!-- 导出设置 -->
                 <div class="export-settings show" id="exportSettings">
-                    <h3>选择导出格式</h3>
+                    <h3 data-i18n="selectExportFormat">Select Export Format</h3>
                     <div class="format-options" id="formatOptions">
                         <button class="format-btn" data-format="mp3">MP3</button>
                         <button class="format-btn active" data-format="wav">WAV</button>
@@ -913,29 +1005,29 @@
                         <button class="format-btn" data-format="aac">AAC</button>
                     </div>
                     <div class="quality-row" id="qualityRow">
-                        <span class="quality-label">音质：</span>
+                        <span class="quality-label" data-i18n="quality">Quality:</span>
                         <select class="quality-select" id="qualitySelect">
-                            <option value="320">320 kbps (高质量)</option>
+                            <option value="320" data-i18n="quality320">320 kbps (High Quality)</option>
                             <option value="256">256 kbps</option>
-                            <option value="192" selected>192 kbps (推荐)</option>
+                            <option value="192" selected data-i18n="quality192">192 kbps (Recommended)</option>
                             <option value="128">128 kbps</option>
-                            <option value="96">96 kbps (小文件)</option>
+                            <option value="96" data-i18n="quality96">96 kbps (Small File)</option>
                         </select>
                     </div>
-                    <p class="export-note" id="exportNote">WAV 格式为无损音频，文件较大，无需编码器</p>
+                    <p class="export-note" id="exportNote" data-i18n="exportNoteWav">WAV format is lossless audio, larger file size, no encoder needed</p>
                 </div>
 
                 <!-- 操作按钮 -->
                 <div class="action-buttons" style="margin-top: 25px;">
-                    <button class="action-btn cut-btn" id="cutBtn">✂ 开始剪辑</button>
-                    <a class="download-link" id="downloadLink" href="#" download>⬇ 下载剪辑</a>
+                    <button class="action-btn cut-btn" id="cutBtn" data-i18n="startCut">✂ Start Cutting</button>
+                    <a class="download-link" id="downloadLink" href="#" download data-i18n="downloadCut">⬇ Download</a>
                 </div>
             </div>
         </div>
 
         <!-- 说明 -->
         <div class="info-section">
-            <h2>支持的格式</h2>
+            <h2 data-i18n="supportedFormats">Supported Formats</h2>
             <div class="format-tags">
                 <span class="format-tag">MP3</span>
                 <span class="format-tag">WAV</span>
@@ -944,80 +1036,80 @@
                 <span class="format-tag">AAC</span>
                 <span class="format-tag">OGG</span>
             </div>
-            <div class="warning-box">
-                ⚠️ 移动设备浏览器上可能存在兼容性问题，建议使用电脑浏览器进行编辑。
+            <div class="warning-box" data-i18n="mobileWarning">
+                ⚠️ Compatibility issues may exist on mobile device browsers, recommend using desktop browser for editing.
             </div>
         </div>
 
         <div class="info-section">
-            <h2>使用说明</h2>
+            <h2 data-i18n="instructions">Instructions</h2>
             <ol>
-                <li><strong>上传音频</strong>：拖拽文件或点击选择按钮，也可以使用 Ctrl+V / Command+V 粘贴</li>
-                <li><strong>选择剪辑区间</strong>：在波形上拖动调整起点和终点</li>
-                <li><strong>快捷键操作</strong>：
+                <li data-i18n="instruction1"><strong>Upload Audio</strong>: Drag file or click select button, also can use Ctrl+V / Command+V to paste</li>
+                <li data-i18n="instruction2"><strong>Select Clip Range</strong>: Drag on waveform to adjust start and end points</li>
+                <li data-i18n="instruction3"><strong>Keyboard Shortcuts</strong>:
                     <ul style="margin-top: 5px; padding-left: 20px;">
-                        <li><code>[</code> 设置当前播放进度为剪辑起点</li>
-                        <li><code>]</code> 设置当前播放进度为剪辑终点</li>
-                        <li><code>空格键</code> 控制播放/暂停</li>
+                        <li data-i18n="instruction3a"><code>[</code> Set current playback position as start point</li>
+                        <li data-i18n="instruction3b"><code>]</code> Set current playback position as end point</li>
+                        <li data-i18n="instruction3c"><code>Space</code> Control play/pause</li>
                     </ul>
                 </li>
-                <li><strong>选择导出格式</strong>：点击格式按钮选择 MP3/WAV/OGG/M4A/FLAC/AAC</li>
-                <li><strong>剪辑导出</strong>：点击"开始剪辑"按钮，完成后点击下载</li>
+                <li data-i18n="instruction4"><strong>Select Export Format</strong>: Click format button to select MP3/WAV/OGG/M4A/FLAC/AAC</li>
+                <li data-i18n="instruction5"><strong>Cut and Export</strong>: Click "Start Cutting" button, then download after completion</li>
             </ol>
         </div>
 
         <!-- FAQ 常见问题 -->
         <section class="faq-section" style="background: rgba(255, 255, 255, 0.05); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 25px; margin-bottom: 20px;">
-            <h2 style="font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; color: #a78bfa;">❓ 常见问题（FAQ）</h2>
+            <h2 style="font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; color: #a78bfa;" data-i18n="faqTitle">❓ FAQ</h2>
 
             <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px;">
                 <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>支持哪些音频格式？</span>
+                        <span data-i18n="faq1Q">What audio formats are supported?</span>
                         <span style="color: #a1a1aa;">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
-                        本工具支持 MP3、WAV、M4A、FLAC、AAC、OGG 等主流音频格式。您可以直接拖拽或选择这些格式的音频文件进行剪辑，工具会自动识别并加载音频波形。
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;" data-i18n="faq1A">
+                        This tool supports MP3, WAV, M4A, FLAC, AAC, OGG and other mainstream audio formats. You can directly drag or select audio files in these formats for editing, and the tool will automatically recognize and load the audio waveform.
                     </div>
                 </details>
 
                 <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>最大支持多大的音频文件？</span>
+                        <span data-i18n="faq2Q">What is the maximum audio file size supported?</span>
                         <span style="color: #a1a1aa;">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
-                        音频文件大小取决于您的浏览器内存限制，建议不超过 100MB。较大的文件可能会导致加载缓慢或浏览器内存不足。如果需要处理大文件，建议先使用其他工具分割后再进行剪辑。
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;" data-i18n="faq2A">
+                        The audio file size depends on your browser's memory limit, recommended not to exceed 100MB. Larger files may cause slow loading or browser memory issues. For large files, it's recommended to split them using other tools first before editing.
                     </div>
                 </details>
 
                 <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>如何精确选择剪辑区间？</span>
+                        <span data-i18n="faq3Q">How to precisely select the clip range?</span>
                         <span style="color: #a1a1aa;">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
-                        您可以通过以下方式精确选择剪辑区间：1) 直接在波形上拖动起止标记；2) 播放时使用快捷键 [ 设置起点、] 设置终点；3) 点击试听按钮预览选中片段。时间精度可达毫秒级。
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;" data-i18n="faq3A">
+                        You can precisely select the clip range in the following ways: 1) Drag the start and end markers directly on the waveform; 2) Use keyboard shortcuts [ to set the start point and ] to set the end point during playback; 3) Click the preview button to listen to the selected segment. Time precision can reach milliseconds.
                     </div>
                 </details>
 
                 <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>剪辑后的音频格式是什么？</span>
+                        <span data-i18n="faq4Q">What format is the clipped audio?</span>
                         <span style="color: #a1a1aa;">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
-                        您可以自由选择导出格式，支持 MP3、WAV、OGG、M4A、FLAC、AAC 六种格式。WAV 格式无需编码器，其他格式会自动加载编码器进行转换。
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;" data-i18n="faq4A">
+                        You can freely choose the export format, supporting MP3, WAV, OGG, M4A, FLAC, AAC six formats. WAV format does not require an encoder, other formats will automatically load the encoder for conversion.
                     </div>
                 </details>
 
                 <details style="background: rgba(0, 0, 0, 0.2); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: #e4e4e7; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>音频会上传到服务器吗？</span>
+                        <span data-i18n="faq5Q">Will the audio be uploaded to the server?</span>
                         <span style="color: #a1a1aa;">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;">
-                        不会。所有音频处理完全在您的浏览器本地完成，音频文件不会上传到任何服务器。这意味着您的音频内容完全私密安全，即使在离线状态下也可以使用本工具（需要先加载页面）。
+                    <div style="margin-top: 12px; color: #a1a1aa; line-height: 1.8; font-size: 0.95rem;" data-i18n="faq5A">
+                        No. All audio processing is done completely in your browser locally, audio files will not be uploaded to any server. This means your audio content is completely private and secure, and you can use this tool even offline (after loading the page first).
                     </div>
                 </details>
             </div>
@@ -1069,15 +1161,48 @@
         const qualitySelect = document.getElementById('qualitySelect');
         const exportNote = document.getElementById('exportNote');
 
-        // 格式说明
-        const formatNotes = {
-            mp3: 'MP3 格式兼容性最好，文件较小（需加载编码器）',
-            wav: 'WAV 格式为无损音频，文件较大，无需编码器（推荐）',
-            ogg: 'OGG 格式开源免费，质量好（需加载编码器）',
-            m4a: 'M4A 格式适合 Apple 设备（需加载编码器）',
-            flac: 'FLAC 格式无损压缩，音质最佳（需加载编码器）',
-            aac: 'AAC 格式高效压缩，音质好（需加载编码器）'
+        // 格式说明（多语言）
+        const formatNotesI18n = {
+            'en': {
+                mp3: 'MP3 format has best compatibility, smaller file size (requires encoder)',
+                wav: 'WAV format is lossless audio, larger file size, no encoder needed (Recommended)',
+                ogg: 'OGG format is open source and free, good quality (requires encoder)',
+                m4a: 'M4A format is suitable for Apple devices (requires encoder)',
+                flac: 'FLAC format is lossless compression, best audio quality (requires encoder)',
+                aac: 'AAC format has efficient compression, good quality (requires encoder)'
+            },
+            'zh-CN': {
+                mp3: 'MP3 格式兼容性最好，文件较小（需加载编码器）',
+                wav: 'WAV 格式为无损音频，文件较大，无需编码器（推荐）',
+                ogg: 'OGG 格式开源免费，质量好（需加载编码器）',
+                m4a: 'M4A 格式适合 Apple 设备（需加载编码器）',
+                flac: 'FLAC 格式无损压缩，音质最佳（需加载编码器）',
+                aac: 'AAC 格式高效压缩，音质好（需加载编码器）'
+            },
+            'fr': {
+                mp3: 'Le format MP3 a la meilleure compatibilité, fichier plus petit (nécessite un encodeur)',
+                wav: 'Le format WAV est audio sans perte, fichier plus grand, pas d\'encodeur nécessaire (Recommandé)',
+                ogg: 'Le format OGG est open source et gratuit, bonne qualité (nécessite un encodeur)',
+                m4a: 'Le format M4A convient aux appareils Apple (nécessite un encodeur)',
+                flac: 'Le format FLAC est compression sans perte, meilleure qualité audio (nécessite un encodeur)',
+                aac: 'Le format AAC a une compression efficace, bonne qualité (nécessite un encodeur)'
+            },
+            'es': {
+                mp3: 'El formato MP3 tiene la mejor compatibilidad, archivo más pequeño (requiere codificador)',
+                wav: 'El formato WAV es audio sin pérdida, archivo más grande, no necesita codificador (Recomendado)',
+                ogg: 'El formato OGG es de código abierto y gratuito, buena calidad (requiere codificador)',
+                m4a: 'El formato M4A es adecuado para dispositivos Apple (requiere codificador)',
+                flac: 'El formato FLAC es compresión sin pérdida, mejor calidad de audio (requiere codificador)',
+                aac: 'El formato AAC tiene compresión eficiente, buena calidad (requiere codificador)'
+            }
         };
+
+        // 获取当前语言的格式说明
+        function getFormatNote(format) {
+            const lang = localStorage.getItem('toolbox_lang') || 'en';
+            const notes = formatNotesI18n[lang] || formatNotesI18n['en'];
+            return notes[format] || notes['wav'];
+        }
 
         // 需要比特率设置的格式
         const bitrateFormats = ['mp3', 'ogg', 'm4a', 'aac'];
@@ -1111,7 +1236,7 @@
             // 加载完成
             wavesurfer.on('ready', () => {
                 const duration = wavesurfer.getDuration();
-                audioDuration.textContent = `时长: ${formatTime(duration)}`;
+                updateDurationDisplay(duration);
                 timeEnd.textContent = formatTime(duration);
 
                 // 创建默认选区（全选）
@@ -1139,6 +1264,18 @@
             wavesurfer.on('click', (relativeX) => {
                 wavesurfer.seekTo(relativeX);
             });
+        }
+
+        // 更新时长显示
+        function updateDurationDisplay(duration) {
+            const lang = localStorage.getItem('toolbox_lang') || 'en';
+            const labels = {
+                'en': 'Duration',
+                'zh-CN': '时长',
+                'fr': 'Durée',
+                'es': 'Duración'
+            };
+            audioDuration.textContent = `${labels[lang] || labels['en']}: ${formatTime(duration)}`;
         }
 
         // 创建选区
@@ -1213,7 +1350,14 @@
             endTime.value = formatTimeMs(currentRegion.end);
 
             const duration = currentRegion.end - currentRegion.start;
-            regionDuration.textContent = `选中时长: ${formatTime(duration)}`;
+            const lang = localStorage.getItem('toolbox_lang') || 'en';
+            const labels = {
+                'en': 'Selected',
+                'zh-CN': '选中时长',
+                'fr': 'Sélectionné',
+                'es': 'Seleccionado'
+            };
+            regionDuration.textContent = `${labels[lang] || labels['en']}: ${formatTime(duration)}`;
         }
 
         // 格式化时间
@@ -1233,7 +1377,14 @@
         // 加载音频
         function loadAudio(file) {
             originalFile = file;
-            showLoading('正在加载音频...');
+            const lang = localStorage.getItem('toolbox_lang') || 'en';
+            const loadingTexts = {
+                'en': 'Loading audio...',
+                'zh-CN': '正在加载音频...',
+                'fr': 'Chargement audio...',
+                'es': 'Cargando audio...'
+            };
+            showLoading(loadingTexts[lang] || loadingTexts['en']);
 
             initWaveSurfer();
 
@@ -1252,7 +1403,7 @@
                     audioBuffer = await audioContext.decodeAudioData(e.target.result);
                     hideLoading();
                 } catch (err) {
-                    console.error('音频解码失败:', err);
+                    console.error('Audio decode failed:', err);
                     hideLoading();
                 }
             };
@@ -1363,7 +1514,7 @@
             selectedFormat = btn.dataset.format;
 
             // 更新说明文字
-            exportNote.textContent = formatNotes[selectedFormat];
+            exportNote.textContent = getFormatNote(selectedFormat);
 
             // 显示/隐藏比特率设置
             if (bitrateFormats.includes(selectedFormat)) {
@@ -1380,20 +1531,36 @@
         async function initFFmpeg() {
             if (ffmpegLoaded) return true;
 
+            const lang = localStorage.getItem('toolbox_lang') || 'en';
+
             // 检查是否为本地文件协议
             if (window.location.protocol === 'file:') {
-                alert('本地预览模式不支持 MP3/OGG/M4A/AAC/FLAC 格式转换。\n\n请选择 WAV 格式导出，或将网页部署到服务器后使用完整功能。');
+                const messages = {
+                    'en': 'Local preview mode does not support MP3/OGG/M4A/AAC/FLAC format conversion.\n\nPlease select WAV format for export, or deploy the page to a server for full functionality.',
+                    'zh-CN': '本地预览模式不支持 MP3/OGG/M4A/AAC/FLAC 格式转换。\n\n请选择 WAV 格式导出，或将网页部署到服务器后使用完整功能。',
+                    'fr': 'Le mode aperçu local ne prend pas en charge la conversion MP3/OGG/M4A/AAC/FLAC.\n\nVeuillez sélectionner le format WAV pour l\'exportation, ou déployer la page sur un serveur pour une fonctionnalité complète.',
+                    'es': 'El modo de vista previa local no admite la conversión de formato MP3/OGG/M4A/AAC/FLAC.\n\nSeleccione el formato WAV para exportar, o implemente la página en un servidor para obtener la funcionalidad completa.'
+                };
+                alert(messages[lang] || messages['en']);
                 return false;
             }
 
             try {
-                console.log('开始加载 FFmpeg...');
+                console.log('Starting FFmpeg load...');
                 const loadStartTime = Date.now();
+
+                const loadingTextsProgress = {
+                    'en': { core: 'Downloading core module...', wasm: 'Downloading WASM engine...', init: 'Initializing encoder...' },
+                    'zh-CN': { core: '正在下载核心模块...', wasm: '正在下载 WASM 引擎...', init: '正在初始化编码器...' },
+                    'fr': { core: 'Téléchargement du module principal...', wasm: 'Téléchargement du moteur WASM...', init: 'Initialisation de l\'encodeur...' },
+                    'es': { core: 'Descargando módulo principal...', wasm: 'Descargando motor WASM...', init: 'Inicializando codificador...' }
+                };
+                const progressTexts = loadingTextsProgress[lang] || loadingTextsProgress['en'];
 
                 // 带进度的文件下载
                 async function fetchWithProgress(url, label) {
                     const response = await fetch(url);
-                    if (!response.ok) throw new Error(`下载失败: ${url}`);
+                    if (!response.ok) throw new Error(`Download failed: ${url}`);
 
                     const contentLength = response.headers.get('content-length');
                     const total = contentLength ? parseInt(contentLength, 10) : 0;
@@ -1432,40 +1599,54 @@
                 const coreBaseURL = `https://unpkg.com/@ffmpeg/core-st@${CORE_VERSION}/dist`;
 
                 // 1. 加载 FFmpeg 主模块
-                loadingText.textContent = '正在加载编码器模块...';
+                const loadingModuleTexts = {
+                    'en': 'Loading encoder module...',
+                    'zh-CN': '正在加载编码器模块...',
+                    'fr': 'Chargement du module encodeur...',
+                    'es': 'Cargando módulo codificador...'
+                };
+                loadingText.textContent = loadingModuleTexts[lang] || loadingModuleTexts['en'];
+
                 if (!window.FFmpeg || !window.FFmpeg.createFFmpeg) {
                     await new Promise((resolve, reject) => {
                         const script = document.createElement('script');
                         script.src = ffmpegURL;
                         script.onload = () => {
-                            console.log('FFmpeg 0.11.x 模块加载完成');
+                            console.log('FFmpeg 0.11.x module loaded');
                             resolve();
                         };
-                        script.onerror = () => reject(new Error('FFmpeg 模块加载失败'));
+                        script.onerror = () => reject(new Error('FFmpeg module load failed'));
                         document.head.appendChild(script);
                     });
                 }
 
                 // 2. 手动下载 core 文件并显示进度
-                console.log('下载 FFmpeg core 文件...');
+                console.log('Downloading FFmpeg core files...');
 
                 // 下载 ffmpeg-core.js
-                loadingText.textContent = '正在下载核心模块... 0%';
-                const coreJsData = await fetchWithProgress(`${coreBaseURL}/ffmpeg-core.js`, '正在下载核心模块...');
+                loadingText.textContent = `${progressTexts.core} 0%`;
+                const coreJsData = await fetchWithProgress(`${coreBaseURL}/ffmpeg-core.js`, progressTexts.core);
                 const coreJsBlob = new Blob([coreJsData], { type: 'text/javascript' });
                 const coreJsURL = URL.createObjectURL(coreJsBlob);
-                console.log('核心模块下载完成');
+                console.log('Core module downloaded');
 
                 // 下载 ffmpeg-core.wasm（最大，约 25MB）
-                loadingText.textContent = '正在下载 WASM 引擎... 0%';
-                const wasmData = await fetchWithProgress(`${coreBaseURL}/ffmpeg-core.wasm`, '正在下载 WASM 引擎...');
+                loadingText.textContent = `${progressTexts.wasm} 0%`;
+                const wasmData = await fetchWithProgress(`${coreBaseURL}/ffmpeg-core.wasm`, progressTexts.wasm);
                 const wasmBlob = new Blob([wasmData], { type: 'application/wasm' });
                 const wasmURL = URL.createObjectURL(wasmBlob);
-                console.log('WASM 引擎下载完成');
+                console.log('WASM engine downloaded');
 
                 // 3. 创建 FFmpeg 实例
-                loadingText.textContent = '正在初始化编码器...';
-                console.log('创建 FFmpeg 实例...');
+                loadingText.textContent = progressTexts.init;
+                console.log('Creating FFmpeg instance...');
+
+                const convertingTexts = {
+                    'en': 'Converting...',
+                    'zh-CN': '正在转换...',
+                    'fr': 'Conversion...',
+                    'es': 'Convirtiendo...'
+                };
 
                 const { createFFmpeg, fetchFile: ffmpegFetchFile } = FFmpeg;
 
@@ -1478,7 +1659,7 @@
                     progress: ({ ratio }) => {
                         if (ratio >= 0 && ratio <= 1) {
                             const percent = Math.round(ratio * 100);
-                            loadingText.textContent = `正在转换... ${percent}%`;
+                            loadingText.textContent = `${convertingTexts[lang] || convertingTexts['en']} ${percent}%`;
                         }
                     }
                 });
@@ -1487,19 +1668,31 @@
                 window.ffmpegFetchFile = ffmpegFetchFile;
 
                 // 4. 加载 FFmpeg
-                console.log('初始化 FFmpeg...');
+                console.log('Initializing FFmpeg...');
                 await ffmpeg.load();
 
                 const totalTime = ((Date.now() - loadStartTime) / 1000).toFixed(1);
-                console.log(`FFmpeg 加载完成，总耗时: ${totalTime}s`);
-                loadingText.textContent = '编码器加载完成';
+                console.log(`FFmpeg loaded, total time: ${totalTime}s`);
+
+                const loadedTexts = {
+                    'en': 'Encoder loaded',
+                    'zh-CN': '编码器加载完成',
+                    'fr': 'Encodeur chargé',
+                    'es': 'Codificador cargado'
+                };
+                loadingText.textContent = loadedTexts[lang] || loadedTexts['en'];
 
                 ffmpegLoaded = true;
                 return true;
             } catch (err) {
-                console.error('FFmpeg 加载失败:', err);
-                // 显示更详细的错误信息
-                alert('编码器加载失败: ' + err.message + '\n\n建议：\n1. 请使用现代浏览器（Chrome/Edge/Firefox）\n2. 确保网络连接正常\n3. 选择 WAV 格式可直接导出（无需编码器）');
+                console.error('FFmpeg load failed:', err);
+                const errorMessages = {
+                    'en': 'Encoder load failed: ' + err.message + '\n\nSuggestions:\n1. Use a modern browser (Chrome/Edge/Firefox)\n2. Ensure network connection is stable\n3. Select WAV format for direct export (no encoder needed)',
+                    'zh-CN': '编码器加载失败: ' + err.message + '\n\n建议：\n1. 请使用现代浏览器（Chrome/Edge/Firefox）\n2. 确保网络连接正常\n3. 选择 WAV 格式可直接导出（无需编码器）',
+                    'fr': 'Échec du chargement de l\'encodeur: ' + err.message + '\n\nSuggestions:\n1. Utilisez un navigateur moderne (Chrome/Edge/Firefox)\n2. Assurez-vous que la connexion réseau est stable\n3. Sélectionnez le format WAV pour l\'exportation directe (pas d\'encodeur nécessaire)',
+                    'es': 'Error al cargar el codificador: ' + err.message + '\n\nSugerencias:\n1. Use un navegador moderno (Chrome/Edge/Firefox)\n2. Asegúrese de que la conexión de red sea estable\n3. Seleccione el formato WAV para exportación directa (no necesita codificador)'
+                };
+                alert(errorMessages[lang] || errorMessages['en']);
                 return false;
             }
         }
@@ -1536,7 +1729,14 @@
         cutBtn.addEventListener('click', async () => {
             if (!audioBuffer || !currentRegion) return;
 
-            showLoading('正在剪辑音频...');
+            const lang = localStorage.getItem('toolbox_lang') || 'en';
+            const cuttingTexts = {
+                'en': 'Cutting audio...',
+                'zh-CN': '正在剪辑音频...',
+                'fr': 'Découpage audio...',
+                'es': 'Cortando audio...'
+            };
+            showLoading(cuttingTexts[lang] || cuttingTexts['en']);
 
             try {
                 const startSample = Math.floor(currentRegion.start * audioBuffer.sampleRate);
@@ -1574,14 +1774,26 @@
                 }
 
                 // 其他格式需要使用 FFmpeg 转换
-                showLoading('正在加载编码器...');
+                const loadingEncoderTexts = {
+                    'en': 'Loading encoder...',
+                    'zh-CN': '正在加载编码器...',
+                    'fr': 'Chargement de l\'encodeur...',
+                    'es': 'Cargando codificador...'
+                };
+                showLoading(loadingEncoderTexts[lang] || loadingEncoderTexts['en']);
 
                 const loaded = await initFFmpeg();
                 if (!loaded) {
-                    throw new Error('编码器加载失败，请刷新页面重试');
+                    throw new Error('Encoder load failed, please refresh and try again');
                 }
 
-                showLoading('正在转换格式...');
+                const convertingTexts = {
+                    'en': 'Converting format...',
+                    'zh-CN': '正在转换格式...',
+                    'fr': 'Conversion du format...',
+                    'es': 'Convirtiendo formato...'
+                };
+                showLoading(convertingTexts[lang] || convertingTexts['en']);
 
                 // 写入 WAV 文件（0.11.x API 使用 FS）
                 const wavData = new Uint8Array(await wavBlob.arrayBuffer());
@@ -1645,7 +1857,7 @@
                     ffmpeg.FS('unlink', 'input.wav');
                     ffmpeg.FS('unlink', outputFile);
                 } catch (e) {
-                    console.warn('清理临时文件失败:', e);
+                    console.warn('Failed to clean temp files:', e);
                 }
 
                 // 重置 FFmpeg 状态，以便下次可以重新使用
@@ -1653,28 +1865,34 @@
                 try {
                     ffmpeg.exit();
                 } catch (e) {
-                    console.warn('FFmpeg exit 失败:', e);
+                    console.warn('FFmpeg exit failed:', e);
                 }
                 ffmpegLoaded = false;
                 ffmpeg = null;
 
                 hideLoading();
             } catch (err) {
-                console.error('剪辑失败:', err);
+                console.error('Cut failed:', err);
 
                 // 出错时也要重置 FFmpeg 状态
                 if (ffmpeg) {
                     try {
                         ffmpeg.exit();
                     } catch (e) {
-                        console.warn('FFmpeg exit 失败:', e);
+                        console.warn('FFmpeg exit failed:', e);
                     }
                     ffmpegLoaded = false;
                     ffmpeg = null;
                 }
 
                 hideLoading();
-                alert('剪辑失败: ' + err.message);
+                const failTexts = {
+                    'en': 'Cut failed: ',
+                    'zh-CN': '剪辑失败: ',
+                    'fr': 'Échec de la découpe: ',
+                    'es': 'Error al cortar: '
+                };
+                alert((failTexts[lang] || failTexts['en']) + err.message);
             }
         });
 
@@ -1745,37 +1963,404 @@
         });
     </script>
 
+    <!-- 多语言支持 -->
+    <script>
+    (function() {
+        const translations = {
+            'zh-CN': {
+                'loading': '正在处理...',
+                'backHome': '← 返回工具箱',
+                'title': '音频剪辑',
+                'subtitle': '在线可视化音频裁剪，支持多种格式',
+                'featuresTitle': '✨ 功能特点',
+                'feature1Title': '可视化波形',
+                'feature1Desc': '直观显示音频波形，精准选择剪辑区间',
+                'feature2Title': '多格式支持',
+                'feature2Desc': '支持 MP3、WAV、M4A、FLAC、AAC 等主流格式',
+                'feature3Title': '快捷键操作',
+                'feature3Desc': '空格播放/暂停，[ ] 设置起止点，方便快速预览',
+                'feature4Title': '隐私安全',
+                'feature4Desc': '纯前端处理，音频文件不上传服务器',
+                'uploadText': '拖拽音频到这里，或点击选择文件',
+                'uploadHint': '支持 MP3、WAV、M4A、FLAC、AAC 格式',
+                'uploadBtn': '选择音频',
+                'duration': '时长: 00:00',
+                'changeFile': '更换文件',
+                'startPoint': '起点',
+                'endPoint': '终点',
+                'selectedDuration': '选中时长: 00:00',
+                'setStart': '设置起点',
+                'setEnd': '设置终点',
+                'spaceKey': '空格',
+                'playPauseText': '播放/暂停',
+                'previewClipText': '试听剪辑片段',
+                'selectExportFormat': '选择导出格式',
+                'quality': '音质：',
+                'quality320': '320 kbps (高质量)',
+                'quality192': '192 kbps (推荐)',
+                'quality96': '96 kbps (小文件)',
+                'exportNoteWav': 'WAV 格式为无损音频，文件较大，无需编码器',
+                'startCut': '✂ 开始剪辑',
+                'downloadCut': '⬇ 下载剪辑',
+                'supportedFormats': '支持的格式',
+                'mobileWarning': '⚠️ 移动设备浏览器上可能存在兼容性问题，建议使用电脑浏览器进行编辑。',
+                'instructions': '使用说明',
+                'instruction1': '<strong>上传音频</strong>：拖拽文件或点击选择按钮，也可以使用 Ctrl+V / Command+V 粘贴',
+                'instruction2': '<strong>选择剪辑区间</strong>：在波形上拖动调整起点和终点',
+                'instruction3': '<strong>快捷键操作</strong>：',
+                'instruction3a': '<code>[</code> 设置当前播放进度为剪辑起点',
+                'instruction3b': '<code>]</code> 设置当前播放进度为剪辑终点',
+                'instruction3c': '<code>空格键</code> 控制播放/暂停',
+                'instruction4': '<strong>选择导出格式</strong>：点击格式按钮选择 MP3/WAV/OGG/M4A/FLAC/AAC',
+                'instruction5': '<strong>剪辑导出</strong>：点击"开始剪辑"按钮，完成后点击下载',
+                'faqTitle': '❓ 常见问题（FAQ）',
+                'faq1Q': '支持哪些音频格式？',
+                'faq1A': '本工具支持 MP3、WAV、M4A、FLAC、AAC、OGG 等主流音频格式。您可以直接拖拽或选择这些格式的音频文件进行剪辑，工具会自动识别并加载音频波形。',
+                'faq2Q': '最大支持多大的音频文件？',
+                'faq2A': '音频文件大小取决于您的浏览器内存限制，建议不超过 100MB。较大的文件可能会导致加载缓慢或浏览器内存不足。如果需要处理大文件，建议先使用其他工具分割后再进行剪辑。',
+                'faq3Q': '如何精确选择剪辑区间？',
+                'faq3A': '您可以通过以下方式精确选择剪辑区间：1) 直接在波形上拖动起止标记；2) 播放时使用快捷键 [ 设置起点、] 设置终点；3) 点击试听按钮预览选中片段。时间精度可达毫秒级。',
+                'faq4Q': '剪辑后的音频格式是什么？',
+                'faq4A': '您可以自由选择导出格式，支持 MP3、WAV、OGG、M4A、FLAC、AAC 六种格式。WAV 格式无需编码器，其他格式会自动加载编码器进行转换。',
+                'faq5Q': '音频会上传到服务器吗？',
+                'faq5A': '不会。所有音频处理完全在您的浏览器本地完成，音频文件不会上传到任何服务器。这意味着您的音频内容完全私密安全，即使在离线状态下也可以使用本工具（需要先加载页面）。',
+                'relatedTools': '🔗 相关工具推荐',
+                'm3u8Title': 'M3U8 视频下载',
+                'm3u8Desc': '下载 M3U8 流媒体视频',
+                'imageCompressorTitle': '图片压缩',
+                'imageCompressorDesc': '批量压缩图片体积',
+                'socialVideoTitle': 'X/TikTok 视频下载',
+                'socialVideoDesc': '下载社交媒体视频',
+                'metronomeTitle': '在线节拍器',
+                'metronomeDesc': '音乐练习节拍器',
+                'footerPrivacy': '纯前端处理，音频不会上传到服务器',
+                'footerBack': '← 返回 Web Toolbox 首页'
+            },
+            'en': {
+                'loading': 'Processing...',
+                'backHome': '← Back to Toolbox',
+                'title': 'Audio Cutter',
+                'subtitle': 'Online visual audio trimming, supports multiple formats',
+                'featuresTitle': '✨ Features',
+                'feature1Title': 'Visual Waveform',
+                'feature1Desc': 'Intuitively display audio waveform, precisely select clip range',
+                'feature2Title': 'Multiple Formats',
+                'feature2Desc': 'Supports MP3, WAV, M4A, FLAC, AAC and other mainstream formats',
+                'feature3Title': 'Keyboard Shortcuts',
+                'feature3Desc': 'Space to play/pause, [ ] to set start/end points for quick preview',
+                'feature4Title': 'Privacy & Security',
+                'feature4Desc': 'Pure frontend processing, audio files are not uploaded to server',
+                'uploadText': 'Drag audio here, or click to select file',
+                'uploadHint': 'Supports MP3, WAV, M4A, FLAC, AAC formats',
+                'uploadBtn': 'Select Audio',
+                'duration': 'Duration: 00:00',
+                'changeFile': 'Change File',
+                'startPoint': 'Start',
+                'endPoint': 'End',
+                'selectedDuration': 'Selected: 00:00',
+                'setStart': 'Set start',
+                'setEnd': 'Set end',
+                'spaceKey': 'Space',
+                'playPauseText': 'Play/Pause',
+                'previewClipText': 'Preview clip',
+                'selectExportFormat': 'Select Export Format',
+                'quality': 'Quality:',
+                'quality320': '320 kbps (High Quality)',
+                'quality192': '192 kbps (Recommended)',
+                'quality96': '96 kbps (Small File)',
+                'exportNoteWav': 'WAV format is lossless audio, larger file size, no encoder needed',
+                'startCut': '✂ Start Cutting',
+                'downloadCut': '⬇ Download',
+                'supportedFormats': 'Supported Formats',
+                'mobileWarning': '⚠️ Compatibility issues may exist on mobile device browsers, recommend using desktop browser for editing.',
+                'instructions': 'Instructions',
+                'instruction1': '<strong>Upload Audio</strong>: Drag file or click select button, also can use Ctrl+V / Command+V to paste',
+                'instruction2': '<strong>Select Clip Range</strong>: Drag on waveform to adjust start and end points',
+                'instruction3': '<strong>Keyboard Shortcuts</strong>:',
+                'instruction3a': '<code>[</code> Set current playback position as start point',
+                'instruction3b': '<code>]</code> Set current playback position as end point',
+                'instruction3c': '<code>Space</code> Control play/pause',
+                'instruction4': '<strong>Select Export Format</strong>: Click format button to select MP3/WAV/OGG/M4A/FLAC/AAC',
+                'instruction5': '<strong>Cut and Export</strong>: Click "Start Cutting" button, then download after completion',
+                'faqTitle': '❓ FAQ',
+                'faq1Q': 'What audio formats are supported?',
+                'faq1A': 'This tool supports MP3, WAV, M4A, FLAC, AAC, OGG and other mainstream audio formats. You can directly drag or select audio files in these formats for editing, and the tool will automatically recognize and load the audio waveform.',
+                'faq2Q': 'What is the maximum audio file size supported?',
+                'faq2A': 'The audio file size depends on your browser\'s memory limit, recommended not to exceed 100MB. Larger files may cause slow loading or browser memory issues. For large files, it\'s recommended to split them using other tools first before editing.',
+                'faq3Q': 'How to precisely select the clip range?',
+                'faq3A': 'You can precisely select the clip range in the following ways: 1) Drag the start and end markers directly on the waveform; 2) Use keyboard shortcuts [ to set the start point and ] to set the end point during playback; 3) Click the preview button to listen to the selected segment. Time precision can reach milliseconds.',
+                'faq4Q': 'What format is the clipped audio?',
+                'faq4A': 'You can freely choose the export format, supporting MP3, WAV, OGG, M4A, FLAC, AAC six formats. WAV format does not require an encoder, other formats will automatically load the encoder for conversion.',
+                'faq5Q': 'Will the audio be uploaded to the server?',
+                'faq5A': 'No. All audio processing is done completely in your browser locally, audio files will not be uploaded to any server. This means your audio content is completely private and secure, and you can use this tool even offline (after loading the page first).',
+                'relatedTools': '🔗 Related Tools',
+                'm3u8Title': 'M3U8 Video Download',
+                'm3u8Desc': 'Download M3U8 streaming videos',
+                'imageCompressorTitle': 'Image Compressor',
+                'imageCompressorDesc': 'Batch compress image files',
+                'socialVideoTitle': 'X/TikTok Video Download',
+                'socialVideoDesc': 'Download social media videos',
+                'metronomeTitle': 'Online Metronome',
+                'metronomeDesc': 'Music practice metronome',
+                'footerPrivacy': 'Pure frontend processing, audio will not be uploaded to server',
+                'footerBack': '← Back to Web Toolbox Home'
+            },
+            'fr': {
+                'loading': 'Traitement...',
+                'backHome': '← Retour à la boîte à outils',
+                'title': 'Découpeur Audio',
+                'subtitle': 'Découpage audio visuel en ligne, supporte plusieurs formats',
+                'featuresTitle': '✨ Fonctionnalités',
+                'feature1Title': 'Forme d\'onde visuelle',
+                'feature1Desc': 'Affichage intuitif de la forme d\'onde, sélection précise de la zone de découpe',
+                'feature2Title': 'Formats multiples',
+                'feature2Desc': 'Supporte MP3, WAV, M4A, FLAC, AAC et autres formats populaires',
+                'feature3Title': 'Raccourcis clavier',
+                'feature3Desc': 'Espace pour lecture/pause, [ ] pour définir les points de début/fin',
+                'feature4Title': 'Confidentialité et sécurité',
+                'feature4Desc': 'Traitement frontend pur, les fichiers audio ne sont pas téléchargés sur le serveur',
+                'uploadText': 'Glissez l\'audio ici, ou cliquez pour sélectionner un fichier',
+                'uploadHint': 'Supporte les formats MP3, WAV, M4A, FLAC, AAC',
+                'uploadBtn': 'Sélectionner Audio',
+                'duration': 'Durée: 00:00',
+                'changeFile': 'Changer de fichier',
+                'startPoint': 'Début',
+                'endPoint': 'Fin',
+                'selectedDuration': 'Sélectionné: 00:00',
+                'setStart': 'Définir le début',
+                'setEnd': 'Définir la fin',
+                'spaceKey': 'Espace',
+                'playPauseText': 'Lecture/Pause',
+                'previewClipText': 'Aperçu du clip',
+                'selectExportFormat': 'Sélectionner le format d\'export',
+                'quality': 'Qualité:',
+                'quality320': '320 kbps (Haute qualité)',
+                'quality192': '192 kbps (Recommandé)',
+                'quality96': '96 kbps (Petit fichier)',
+                'exportNoteWav': 'Le format WAV est audio sans perte, fichier plus grand, pas d\'encodeur nécessaire',
+                'startCut': '✂ Commencer la découpe',
+                'downloadCut': '⬇ Télécharger',
+                'supportedFormats': 'Formats supportés',
+                'mobileWarning': '⚠️ Des problèmes de compatibilité peuvent exister sur les navigateurs mobiles, il est recommandé d\'utiliser un navigateur de bureau pour l\'édition.',
+                'instructions': 'Instructions',
+                'instruction1': '<strong>Télécharger l\'audio</strong>: Glissez le fichier ou cliquez sur le bouton de sélection, vous pouvez aussi utiliser Ctrl+V / Command+V pour coller',
+                'instruction2': '<strong>Sélectionner la zone de découpe</strong>: Glissez sur la forme d\'onde pour ajuster les points de début et de fin',
+                'instruction3': '<strong>Raccourcis clavier</strong>:',
+                'instruction3a': '<code>[</code> Définir la position de lecture actuelle comme point de début',
+                'instruction3b': '<code>]</code> Définir la position de lecture actuelle comme point de fin',
+                'instruction3c': '<code>Espace</code> Contrôler lecture/pause',
+                'instruction4': '<strong>Sélectionner le format d\'export</strong>: Cliquez sur le bouton de format pour sélectionner MP3/WAV/OGG/M4A/FLAC/AAC',
+                'instruction5': '<strong>Découper et exporter</strong>: Cliquez sur le bouton "Commencer la découpe", puis téléchargez après la fin',
+                'faqTitle': '❓ FAQ',
+                'faq1Q': 'Quels formats audio sont supportés?',
+                'faq1A': 'Cet outil supporte MP3, WAV, M4A, FLAC, AAC, OGG et autres formats audio populaires. Vous pouvez directement glisser ou sélectionner des fichiers audio dans ces formats pour l\'édition, et l\'outil reconnaîtra automatiquement et chargera la forme d\'onde audio.',
+                'faq2Q': 'Quelle est la taille maximale de fichier audio supportée?',
+                'faq2A': 'La taille du fichier audio dépend de la limite de mémoire de votre navigateur, il est recommandé de ne pas dépasser 100MB. Les fichiers plus grands peuvent causer un chargement lent ou des problèmes de mémoire du navigateur. Pour les grands fichiers, il est recommandé de les diviser d\'abord avec d\'autres outils avant l\'édition.',
+                'faq3Q': 'Comment sélectionner précisément la zone de découpe?',
+                'faq3A': 'Vous pouvez sélectionner précisément la zone de découpe des manières suivantes: 1) Glissez les marqueurs de début et de fin directement sur la forme d\'onde; 2) Utilisez les raccourcis clavier [ pour définir le point de début et ] pour définir le point de fin pendant la lecture; 3) Cliquez sur le bouton d\'aperçu pour écouter le segment sélectionné. La précision temporelle peut atteindre les millisecondes.',
+                'faq4Q': 'Quel format est l\'audio découpé?',
+                'faq4A': 'Vous pouvez librement choisir le format d\'export, supportant MP3, WAV, OGG, M4A, FLAC, AAC six formats. Le format WAV ne nécessite pas d\'encodeur, les autres formats chargeront automatiquement l\'encodeur pour la conversion.',
+                'faq5Q': 'L\'audio sera-t-il téléchargé sur le serveur?',
+                'faq5A': 'Non. Tout le traitement audio est fait complètement dans votre navigateur localement, les fichiers audio ne seront pas téléchargés sur aucun serveur. Cela signifie que votre contenu audio est complètement privé et sécurisé, et vous pouvez utiliser cet outil même hors ligne (après avoir chargé la page d\'abord).',
+                'relatedTools': '🔗 Outils connexes',
+                'm3u8Title': 'Téléchargement vidéo M3U8',
+                'm3u8Desc': 'Télécharger des vidéos streaming M3U8',
+                'imageCompressorTitle': 'Compresseur d\'images',
+                'imageCompressorDesc': 'Compresser des fichiers image par lots',
+                'socialVideoTitle': 'Téléchargement vidéo X/TikTok',
+                'socialVideoDesc': 'Télécharger des vidéos de réseaux sociaux',
+                'metronomeTitle': 'Métronome en ligne',
+                'metronomeDesc': 'Métronome pour pratique musicale',
+                'footerPrivacy': 'Traitement frontend pur, l\'audio ne sera pas téléchargé sur le serveur',
+                'footerBack': '← Retour à l\'accueil Web Toolbox'
+            },
+            'es': {
+                'loading': 'Procesando...',
+                'backHome': '← Volver a la caja de herramientas',
+                'title': 'Cortador de Audio',
+                'subtitle': 'Recorte de audio visual en línea, soporta múltiples formatos',
+                'featuresTitle': '✨ Características',
+                'feature1Title': 'Forma de onda visual',
+                'feature1Desc': 'Visualización intuitiva de la forma de onda, selección precisa del rango de recorte',
+                'feature2Title': 'Múltiples formatos',
+                'feature2Desc': 'Soporta MP3, WAV, M4A, FLAC, AAC y otros formatos populares',
+                'feature3Title': 'Atajos de teclado',
+                'feature3Desc': 'Espacio para reproducir/pausar, [ ] para establecer puntos de inicio/fin',
+                'feature4Title': 'Privacidad y seguridad',
+                'feature4Desc': 'Procesamiento frontend puro, los archivos de audio no se suben al servidor',
+                'uploadText': 'Arrastra el audio aquí, o haz clic para seleccionar archivo',
+                'uploadHint': 'Soporta formatos MP3, WAV, M4A, FLAC, AAC',
+                'uploadBtn': 'Seleccionar Audio',
+                'duration': 'Duración: 00:00',
+                'changeFile': 'Cambiar archivo',
+                'startPoint': 'Inicio',
+                'endPoint': 'Fin',
+                'selectedDuration': 'Seleccionado: 00:00',
+                'setStart': 'Establecer inicio',
+                'setEnd': 'Establecer fin',
+                'spaceKey': 'Espacio',
+                'playPauseText': 'Reproducir/Pausar',
+                'previewClipText': 'Vista previa del clip',
+                'selectExportFormat': 'Seleccionar formato de exportación',
+                'quality': 'Calidad:',
+                'quality320': '320 kbps (Alta calidad)',
+                'quality192': '192 kbps (Recomendado)',
+                'quality96': '96 kbps (Archivo pequeño)',
+                'exportNoteWav': 'El formato WAV es audio sin pérdida, archivo más grande, no necesita codificador',
+                'startCut': '✂ Empezar a cortar',
+                'downloadCut': '⬇ Descargar',
+                'supportedFormats': 'Formatos soportados',
+                'mobileWarning': '⚠️ Pueden existir problemas de compatibilidad en navegadores móviles, se recomienda usar un navegador de escritorio para la edición.',
+                'instructions': 'Instrucciones',
+                'instruction1': '<strong>Subir audio</strong>: Arrastra el archivo o haz clic en el botón de selección, también puedes usar Ctrl+V / Command+V para pegar',
+                'instruction2': '<strong>Seleccionar rango de recorte</strong>: Arrastra en la forma de onda para ajustar los puntos de inicio y fin',
+                'instruction3': '<strong>Atajos de teclado</strong>:',
+                'instruction3a': '<code>[</code> Establecer la posición de reproducción actual como punto de inicio',
+                'instruction3b': '<code>]</code> Establecer la posición de reproducción actual como punto de fin',
+                'instruction3c': '<code>Espacio</code> Controlar reproducir/pausar',
+                'instruction4': '<strong>Seleccionar formato de exportación</strong>: Haz clic en el botón de formato para seleccionar MP3/WAV/OGG/M4A/FLAC/AAC',
+                'instruction5': '<strong>Cortar y exportar</strong>: Haz clic en el botón "Empezar a cortar", luego descarga después de completar',
+                'faqTitle': '❓ Preguntas frecuentes',
+                'faq1Q': '¿Qué formatos de audio son soportados?',
+                'faq1A': 'Esta herramienta soporta MP3, WAV, M4A, FLAC, AAC, OGG y otros formatos de audio populares. Puedes arrastrar directamente o seleccionar archivos de audio en estos formatos para editar, y la herramienta reconocerá automáticamente y cargará la forma de onda de audio.',
+                'faq2Q': '¿Cuál es el tamaño máximo de archivo de audio soportado?',
+                'faq2A': 'El tamaño del archivo de audio depende del límite de memoria de tu navegador, se recomienda no exceder 100MB. Los archivos más grandes pueden causar carga lenta o problemas de memoria del navegador. Para archivos grandes, se recomienda dividirlos primero con otras herramientas antes de editar.',
+                'faq3Q': '¿Cómo seleccionar precisamente el rango de recorte?',
+                'faq3A': 'Puedes seleccionar precisamente el rango de recorte de las siguientes maneras: 1) Arrastra los marcadores de inicio y fin directamente en la forma de onda; 2) Usa los atajos de teclado [ para establecer el punto de inicio y ] para establecer el punto de fin durante la reproducción; 3) Haz clic en el botón de vista previa para escuchar el segmento seleccionado. La precisión temporal puede alcanzar milisegundos.',
+                'faq4Q': '¿Qué formato tiene el audio recortado?',
+                'faq4A': 'Puedes elegir libremente el formato de exportación, soportando MP3, WAV, OGG, M4A, FLAC, AAC seis formatos. El formato WAV no requiere codificador, otros formatos cargarán automáticamente el codificador para la conversión.',
+                'faq5Q': '¿El audio se subirá al servidor?',
+                'faq5A': 'No. Todo el procesamiento de audio se hace completamente en tu navegador localmente, los archivos de audio no se subirán a ningún servidor. Esto significa que tu contenido de audio es completamente privado y seguro, y puedes usar esta herramienta incluso sin conexión (después de cargar la página primero).',
+                'relatedTools': '🔗 Herramientas relacionadas',
+                'm3u8Title': 'Descarga de video M3U8',
+                'm3u8Desc': 'Descargar videos streaming M3U8',
+                'imageCompressorTitle': 'Compresor de imágenes',
+                'imageCompressorDesc': 'Comprimir archivos de imagen por lotes',
+                'socialVideoTitle': 'Descarga de video X/TikTok',
+                'socialVideoDesc': 'Descargar videos de redes sociales',
+                'metronomeTitle': 'Metrónomo en línea',
+                'metronomeDesc': 'Metrónomo para práctica musical',
+                'footerPrivacy': 'Procesamiento frontend puro, el audio no se subirá al servidor',
+                'footerBack': '← Volver a la página principal de Web Toolbox'
+            }
+        };
+
+        const langNames = {
+            'en': '🇺🇸 English',
+            'zh-CN': '🇨🇳 中文',
+            'fr': '🇫🇷 Français',
+            'es': '🇪🇸 Español'
+        };
+
+        function detectLanguage() {
+            const saved = localStorage.getItem('toolbox_lang');
+            if (saved && translations[saved]) return saved;
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('zh')) return 'zh-CN';
+            if (browserLang.startsWith('fr')) return 'fr';
+            if (browserLang.startsWith('es')) return 'es';
+            return 'en';
+        }
+
+        let currentLang = detectLanguage();
+
+        function applyTranslations(lang) {
+            const t = translations[lang] || translations['en'];
+            document.documentElement.lang = lang === 'zh-CN' ? 'zh-CN' : lang;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (t[key]) el.innerHTML = t[key];
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (t[key]) el.placeholder = t[key];
+            });
+
+            document.querySelectorAll('[data-i18n-title]').forEach(el => {
+                const key = el.getAttribute('data-i18n-title');
+                if (t[key]) el.title = t[key];
+            });
+
+            const langCurrent = document.getElementById('langCurrent');
+            if (langCurrent) langCurrent.textContent = langNames[lang] || langNames['en'];
+
+            // 更新格式说明
+            if (typeof getFormatNote === 'function' && typeof selectedFormat !== 'undefined') {
+                const exportNoteEl = document.getElementById('exportNote');
+                if (exportNoteEl) {
+                    exportNoteEl.textContent = getFormatNote(selectedFormat);
+                }
+            }
+        }
+
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('toolbox_lang', lang);
+            applyTranslations(lang);
+            const dropdown = document.getElementById('langDropdown');
+            if (dropdown) dropdown.classList.remove('active');
+        }
+
+        document.addEventListener('DOMContentLoaded', function() {
+            applyTranslations(currentLang);
+
+            const langCurrent = document.getElementById('langCurrent');
+            const langDropdown = document.getElementById('langDropdown');
+
+            if (langCurrent && langDropdown) {
+                langCurrent.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('active');
+                });
+
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.addEventListener('click', function() {
+                        const lang = this.getAttribute('data-lang');
+                        switchLanguage(lang);
+                    });
+                });
+
+                document.addEventListener('click', function() {
+                    langDropdown.classList.remove('active');
+                });
+            }
+        });
+    })();
+    </script>
+
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="m3u8-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎬</div>
-                <div style="color: #f0f0f0; font-weight: 500;">M3U8 视频下载</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">下载 M3U8 流媒体视频</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="m3u8Title">M3U8 Video Download</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="m3u8Desc">Download M3U8 streaming videos</div>
             </a>
             <a href="image-compressor.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片压缩</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="imageCompressorTitle">Image Compressor</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="imageCompressorDesc">Batch compress image files</div>
             </a>
             <a href="social-video-downloader.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📱</div>
-                <div style="color: #f0f0f0; font-weight: 500;">X/TikTok 视频下载</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">下载社交媒体视频</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="socialVideoTitle">X/TikTok Video Download</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="socialVideoDesc">Download social media videos</div>
             </a>
             <a href="metronome.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎵</div>
-                <div style="color: #f0f0f0; font-weight: 500;">在线节拍器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">音乐练习节拍器</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="metronomeTitle">Online Metronome</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="metronomeDesc">Music practice metronome</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
-        <p>纯前端处理，音频不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, audio will not be uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox Home</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
         </p>

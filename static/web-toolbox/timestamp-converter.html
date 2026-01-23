@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>时间戳转换工具 - Unix时间戳在线转换 | 在线工具箱</title>
-    <meta name="description" content="在线时间戳转换工具，支持Unix时间戳与日期时间互转，显示多时区时间，提供各编程语言获取时间戳代码示例。">
-    <meta name="keywords" content="时间戳,Unix时间戳,时间戳转换,日期转时间戳,时间戳转日期,北京时间,UTC时间">
+    <title>Timestamp Converter - Unix Timestamp Online Converter | Web Toolbox</title>
+    <meta name="description" content="Online timestamp converter tool. Convert between Unix timestamps and date/time, view multiple time zones, with code examples for various programming languages.">
+    <meta name="keywords" content="timestamp,Unix timestamp,timestamp converter,date to timestamp,timestamp to date,UTC time,epoch time">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/timestamp-converter.html">
@@ -14,16 +14,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/timestamp-converter.html">
-    <meta property="og:title" content="时间戳转换工具 - Unix时间戳在线转换">
-    <meta property="og:description" content="在线时间戳转换工具，支持Unix时间戳与日期时间互转，显示多时区时间。">
+    <meta property="og:title" content="Timestamp Converter - Unix Timestamp Online Converter">
+    <meta property="og:description" content="Online timestamp converter tool. Convert between Unix timestamps and date/time, view multiple time zones.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/timestamp-converter.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="时间戳转换工具 - Unix时间戳在线转换">
-    <meta name="twitter:description" content="在线时间戳转换，支持多时区和编程语言代码示例。">
+    <meta name="twitter:title" content="Timestamp Converter - Unix Timestamp Online Converter">
+    <meta name="twitter:description" content="Online timestamp conversion with multi-timezone support and programming language code examples.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/timestamp-converter.png">
 
     <!-- JSON-LD -->
@@ -31,12 +31,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "时间戳转换工具",
+        "name": "Timestamp Converter",
         "url": "https://www.heyuan110.com/web-toolbox/timestamp-converter.html",
-        "description": "在线时间戳转换工具，支持Unix时间戳与日期时间互转",
+        "description": "Online timestamp converter tool for converting between Unix timestamps and date/time",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -49,50 +49,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "什么是 Unix 时间戳？",
+                "name": "What is a Unix timestamp?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Unix 时间戳（Unix Timestamp）是一种时间表示方式，定义为从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数。这个起始时间点被称为"Unix 纪元"（Unix Epoch）。时间戳是一个整数，在计算机系统中被广泛用于记录和计算时间，因为它便于存储和计算时间差。"
+                    "text": "A Unix timestamp is a way to represent time as the total number of seconds that have elapsed since the Unix Epoch (January 1, 1970, 00:00:00 UTC). It's widely used in computer systems for recording and calculating time because it's easy to store and compute time differences."
                 }
             },
             {
                 "@type": "Question",
-                "name": "时间戳和日期时间有什么区别？",
+                "name": "What's the difference between timestamps and date/time?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "日期时间（如"2024-01-01 12:00:00"）是人类可读的时间格式，需要指定时区才能准确表示时间点。而时间戳是一个与时区无关的整数，表示从 Unix 纪元开始经过的秒数。时间戳的优势在于：存储空间小（只需一个整数）、跨时区一致、便于计算时间差、适合数据库排序和索引。"
+                    "text": "Date/time formats like '2024-01-01 12:00:00' are human-readable but require timezone specification. Timestamps are timezone-independent integers representing seconds since the Unix Epoch. Benefits include: smaller storage, cross-timezone consistency, easy time difference calculation, and database-friendly sorting."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何将时间戳转换为北京时间？",
+                "name": "What's the difference between second and millisecond timestamps?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "在本工具的"时间戳 → 日期时间"区域输入时间戳数值，选择单位（秒或毫秒），点击"转换"按钮即可获得北京时间（UTC+8）。转换结果会同时显示 UTC 时间和本地时间。例如：时间戳 1703836800（秒）对应北京时间 2023-12-29 16:00:00。"
+                    "text": "Second timestamps are typically 10-digit numbers (e.g., 1703836800), representing seconds since Unix Epoch. Millisecond timestamps are 13-digit numbers (e.g., 1703836800000), representing milliseconds. JavaScript's Date.now() returns milliseconds, while most backend languages use seconds."
                 }
             },
             {
                 "@type": "Question",
-                "name": "秒级时间戳和毫秒级时间戳有什么区别？",
+                "name": "What is the Year 2038 problem?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "秒级时间戳通常是 10 位数字（如 1703836800），表示从 Unix 纪元起经过的秒数。毫秒级时间戳是 13 位数字（如 1703836800000），表示经过的毫秒数。JavaScript 的 Date.now() 返回毫秒级时间戳，而大多数后端语言和数据库使用秒级时间戳。"
+                    "text": "The Year 2038 problem occurs in systems using 32-bit signed integers for timestamps. On January 19, 2038, at 03:14:07 UTC, the timestamp will reach its maximum value (2147483647) and overflow. Modern 64-bit systems are unaffected and can handle dates billions of years in the future."
                 }
             },
             {
                 "@type": "Question",
-                "name": "什么是 2038 年问题？",
+                "name": "Why was 1970 chosen as the starting point?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "2038 年问题是指在使用 32 位有符号整数存储时间戳的系统中，时间戳将在 2038年1月19日 03:14:07 UTC 达到最大值（2147483647），之后会发生整数溢出。这类似于千年虫问题。现代 64 位系统不受此影响，可支持到约 2920 亿年后的时间。"
-                }
-            },
-            {
-                "@type": "Question",
-                "name": "为什么选择 1970 年作为起始时间？",
-                "acceptedAnswer": {
-                    "@type": "Answer",
-                    "text": "1970年1月1日被选为 Unix 纪元，这是因为 Unix 操作系统在 1970 年代初期开发。最初的设计者选择了一个接近当时的"圆整"日期，1970年1月1日午夜 UTC。这个选择使得在当时的计算能力下，32 位整数可以表示直到 2038 年的时间范围。"
+                    "text": "January 1, 1970 was chosen as the Unix Epoch because Unix was developed in the early 1970s. The designers chose a 'round' date close to their time. With 32-bit integers, this allowed representing dates until 2038, which seemed sufficiently far in the future at the time."
                 }
             }
         ]
@@ -139,6 +131,7 @@
             padding: 30px 0;
             border-bottom: 1px solid var(--border);
             margin-bottom: 30px;
+            position: relative;
         }
 
         .header h1 {
@@ -172,6 +165,16 @@
         .back-link:hover {
             color: var(--accent);
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 当前时间戳显示 */
         .current-timestamp {
@@ -576,44 +579,55 @@
     </style>
 </head>
 <body>
-    <a href="index.html" class="back-link">← 返回工具箱</a>
+    <a href="index.html" class="back-link" data-i18n="backToToolbox">← Back to Toolbox</a>
 
     <div class="container">
         <header class="header">
-            <h1>🕐 时间戳转换工具</h1>
-            <p>时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，本工具支持时间戳与日期时间互转，以及多时区对照。</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <h1>🕐 <span data-i18n="title">Timestamp Converter</span></h1>
+            <p data-i18n="subtitle">A timestamp is the number of seconds since January 1, 1970 (UTC midnight). This tool supports conversion between timestamps and date/time, as well as multi-timezone comparison.</p>
         </header>
 
         <!-- 工具简介 -->
         <section class="intro-section" style="background: linear-gradient(135deg, rgba(59, 130, 246, 0.1), rgba(139, 92, 246, 0.1)); border: 1px solid rgba(59, 130, 246, 0.2); border-radius: 12px; padding: 25px; margin-bottom: 30px;">
-            <h2 style="font-size: 1.1rem; color: var(--accent-light); margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">✨ 功能特点</h2>
+            <h2 style="font-size: 1.1rem; color: var(--accent-light); margin-bottom: 15px; display: flex; align-items: center; gap: 8px;">✨ <span data-i18n="featuresTitle">Features</span></h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 20px;">
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">⚡</span>
                     <div>
-                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">实时转换</div>
-                        <div style="font-size: 0.9rem; color: var(--text-secondary);">支持秒级和毫秒级时间戳与日期时间的双向互转</div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;" data-i18n="featureRealtime">Real-time Conversion</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="featureRealtimeDesc">Supports bidirectional conversion between second/millisecond timestamps and date/time</div>
                     </div>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">🌐</span>
                     <div>
-                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">多时区支持</div>
-                        <div style="font-size: 0.9rem; color: var(--text-secondary);">一键查看全球12个主要城市的当前时间</div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;" data-i18n="featureTimezone">Multi-timezone Support</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="featureTimezoneDesc">View current time in 12 major cities worldwide with one click</div>
                     </div>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">💻</span>
                     <div>
-                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">代码示例</div>
-                        <div style="font-size: 0.9rem; color: var(--text-secondary);">提供 19 种编程语言的时间戳获取代码示例</div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;" data-i18n="featureCode">Code Examples</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="featureCodeDesc">Provides timestamp code examples for 19 programming languages</div>
                     </div>
                 </div>
                 <div style="display: flex; gap: 12px; align-items: flex-start;">
                     <span style="font-size: 1.5rem;">🔒</span>
                     <div>
-                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;">隐私安全</div>
-                        <div style="font-size: 0.9rem; color: var(--text-secondary);">纯前端处理，所有数据在本地浏览器完成转换</div>
+                        <div style="font-weight: 500; color: var(--text-primary); margin-bottom: 4px;" data-i18n="featurePrivacy">Privacy Safe</div>
+                        <div style="font-size: 0.9rem; color: var(--text-secondary);" data-i18n="featurePrivacyDesc">Pure frontend processing, all data is converted locally in your browser</div>
                     </div>
                 </div>
             </div>
@@ -621,10 +635,10 @@
 
         <!-- 当前时间戳 -->
         <div class="current-timestamp">
-            <button class="copy-btn" onclick="copyCurrentTimestamp()">复制</button>
-            <div class="current-timestamp-label">当前 Unix 时间戳（秒）</div>
+            <button class="copy-btn" onclick="copyCurrentTimestamp()" data-i18n="copy">Copy</button>
+            <div class="current-timestamp-label" data-i18n="currentTimestampLabel">Current Unix Timestamp (seconds)</div>
             <div class="current-timestamp-value" id="currentTimestamp">0</div>
-            <div class="current-timestamp-ms" id="currentTimestampMs">毫秒：0</div>
+            <div class="current-timestamp-ms" id="currentTimestampMs">Milliseconds: 0</div>
             <div class="current-datetime" id="currentDatetime">--</div>
         </div>
 
@@ -632,21 +646,21 @@
         <div class="converter-grid">
             <!-- 时间戳转日期 -->
             <div class="converter-card">
-                <h2>⏱️ 时间戳 → 日期时间</h2>
+                <h2>⏱️ <span data-i18n="timestampToDate">Timestamp → Date/Time</span></h2>
                 <div class="input-group">
-                    <label>输入时间戳</label>
+                    <label data-i18n="inputTimestamp">Enter Timestamp</label>
                     <div class="input-row">
-                        <input type="text" id="timestampInput" placeholder="例如：1703836800">
+                        <input type="text" id="timestampInput" data-i18n-placeholder="timestampPlaceholder" placeholder="e.g., 1703836800">
                         <select id="timestampUnit">
-                            <option value="s">秒 (s)</option>
-                            <option value="ms">毫秒 (ms)</option>
+                            <option value="s" data-i18n="seconds">Seconds (s)</option>
+                            <option value="ms" data-i18n="milliseconds">Milliseconds (ms)</option>
                         </select>
                     </div>
                 </div>
-                <button class="btn btn-primary" onclick="timestampToDate()">转换</button>
-                <button class="btn btn-secondary" onclick="useCurrentTimestamp()">使用当前时间戳</button>
+                <button class="btn btn-primary" onclick="timestampToDate()" data-i18n="convert">Convert</button>
+                <button class="btn btn-secondary" onclick="useCurrentTimestamp()" data-i18n="useCurrentTimestamp">Use Current Timestamp</button>
                 <div class="result-box">
-                    <div class="result-label">转换结果</div>
+                    <div class="result-label" data-i18n="result">Result</div>
                     <div class="result-value" id="timestampResult">--</div>
                     <div class="result-extra" id="timestampExtra"></div>
                 </div>
@@ -654,28 +668,28 @@
 
             <!-- 日期转时间戳 -->
             <div class="converter-card">
-                <h2>📅 日期时间 → 时间戳</h2>
+                <h2>📅 <span data-i18n="dateToTimestamp">Date/Time → Timestamp</span></h2>
                 <div class="input-group">
-                    <label>选择日期时间</label>
+                    <label data-i18n="selectDateTime">Select Date/Time</label>
                     <input type="datetime-local" id="datetimeInput" step="1">
                 </div>
                 <div class="input-group">
-                    <label>时区</label>
+                    <label data-i18n="timezone">Timezone</label>
                     <select id="timezoneSelect">
-                        <option value="local">本地时区</option>
-                        <option value="Asia/Shanghai">北京时间 (UTC+8)</option>
-                        <option value="UTC">UTC (UTC+0)</option>
-                        <option value="America/New_York">纽约时间 (UTC-5/-4)</option>
-                        <option value="America/Los_Angeles">洛杉矶时间 (UTC-8/-7)</option>
-                        <option value="Europe/London">伦敦时间 (UTC+0/+1)</option>
-                        <option value="Europe/Paris">巴黎时间 (UTC+1/+2)</option>
-                        <option value="Asia/Tokyo">东京时间 (UTC+9)</option>
+                        <option value="local" data-i18n="localTimezone">Local Timezone</option>
+                        <option value="Asia/Shanghai" data-i18n="tzBeijing">Beijing Time (UTC+8)</option>
+                        <option value="UTC" data-i18n="tzUTC">UTC (UTC+0)</option>
+                        <option value="America/New_York" data-i18n="tzNewYork">New York Time (UTC-5/-4)</option>
+                        <option value="America/Los_Angeles" data-i18n="tzLosAngeles">Los Angeles Time (UTC-8/-7)</option>
+                        <option value="Europe/London" data-i18n="tzLondon">London Time (UTC+0/+1)</option>
+                        <option value="Europe/Paris" data-i18n="tzParis">Paris Time (UTC+1/+2)</option>
+                        <option value="Asia/Tokyo" data-i18n="tzTokyo">Tokyo Time (UTC+9)</option>
                     </select>
                 </div>
-                <button class="btn btn-primary" onclick="dateToTimestamp()">转换</button>
-                <button class="btn btn-secondary" onclick="useCurrentDatetime()">使用当前时间</button>
+                <button class="btn btn-primary" onclick="dateToTimestamp()" data-i18n="convert">Convert</button>
+                <button class="btn btn-secondary" onclick="useCurrentDatetime()" data-i18n="useCurrentTime">Use Current Time</button>
                 <div class="result-box">
-                    <div class="result-label">转换结果</div>
+                    <div class="result-label" data-i18n="result">Result</div>
                     <div class="result-value" id="datetimeResult">--</div>
                     <div class="result-extra" id="datetimeExtra"></div>
                 </div>
@@ -684,7 +698,7 @@
 
         <!-- 时区对照 -->
         <div class="timezone-section">
-            <h2>🌍 各时区当前时间</h2>
+            <h2>🌍 <span data-i18n="worldTime">World Time Zones</span></h2>
             <div class="timezone-grid" id="timezoneGrid">
                 <!-- 由 JS 生成 -->
             </div>
@@ -692,107 +706,586 @@
 
         <!-- 代码示例 -->
         <div class="code-section">
-            <h2>💻 获取当前时间戳代码示例</h2>
+            <h2>💻 <span data-i18n="codeExamples">Get Current Timestamp Code Examples</span></h2>
             <div class="code-tabs" id="codeTabs">
                 <!-- 由 JS 生成 -->
             </div>
             <div class="code-content">
-                <button class="copy-code" onclick="copyCode()">复制代码</button>
+                <button class="copy-code" onclick="copyCode()" data-i18n="copyCode">Copy Code</button>
                 <pre id="codeDisplay"></pre>
             </div>
         </div>
 
         <!-- 说明信息 -->
         <div class="info-section">
-            <h2>📖 关于时间戳</h2>
-            <p>Unix 时间戳（Unix timestamp）是从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数，不考虑闰秒。它被广泛应用于各种编程语言和数据库系统中。</p>
+            <h2>📖 <span data-i18n="aboutTimestamp">About Timestamps</span></h2>
+            <p data-i18n="aboutTimestampDesc">Unix timestamp is the number of seconds elapsed since January 1, 1970, 00:00:00 UTC, not counting leap seconds. It is widely used in various programming languages and database systems.</p>
 
-            <h3>🌞 关于夏令时</h3>
-            <p>1986年至1991年，中华人民共和国在全国范围实行了六年夏令时，每年从4月中旬的第一个星期日2时整（北京时间）到9月中旬第一个星期日的凌晨2时整（北京夏令时）。夏令时实施期间，将时间向后调快一小时。1992年4月5日后不再实行。</p>
+            <h3>🌞 <span data-i18n="aboutDST">About Daylight Saving Time</span></h3>
+            <p data-i18n="aboutDSTDesc">From 1986 to 1991, China implemented daylight saving time nationwide, from the first Sunday in mid-April at 2:00 AM to the first Sunday in mid-September at 2:00 AM. During DST, clocks were advanced by one hour. This practice was discontinued after April 5, 1992.</p>
 
-            <h3>⚠️ JDK 的夏令时问题</h3>
-            <p>夏令时的起止是政令对日历描述的人为干预，每年均可能发生变化。JDK 通过穷举所有变化并配置在系统中来处理这个问题。详见：Timezone Data Versions in the JRE Software。</p>
-            <p>不同版本下 Asia/Shanghai 时区夏令时起始时间不同，早期维护者认为中国标准时间的夏令时切换发生在0时，而后来又经证明发生在2时，新版本 JDK 及时修正了这个问题。</p>
+            <h3>⚠️ <span data-i18n="aboutJDK">JDK Daylight Saving Time Issues</span></h3>
+            <p data-i18n="aboutJDKDesc">The start and end of DST are policy decisions that may change annually. JDK handles this by enumerating all changes in the system configuration. See: Timezone Data Versions in the JRE Software.</p>
+            <p data-i18n="aboutJDKDesc2">Different JDK versions have different DST start times for Asia/Shanghai timezone. Earlier maintainers believed Chinese Standard Time DST switching occurred at midnight, but later it was proven to occur at 2:00 AM. Newer JDK versions have corrected this issue.</p>
 
-            <h3>📌 常见时间戳</h3>
+            <h3>📌 <span data-i18n="commonTimestamps">Common Timestamps</span></h3>
             <ul>
-                <li><strong>0</strong> → 1970-01-01 00:00:00 UTC（Unix 纪元）</li>
-                <li><strong>1000000000</strong> → 2001-09-09 01:46:40 UTC（十亿秒纪念）</li>
-                <li><strong>2147483647</strong> → 2038-01-19 03:14:07 UTC（32位系统最大值）</li>
+                <li><strong>0</strong> → 1970-01-01 00:00:00 UTC (<span data-i18n="unixEpoch">Unix Epoch</span>)</li>
+                <li><strong>1000000000</strong> → 2001-09-09 01:46:40 UTC (<span data-i18n="billionSeconds">One Billion Seconds</span>)</li>
+                <li><strong>2147483647</strong> → 2038-01-19 03:14:07 UTC (<span data-i18n="max32bit">32-bit Max Value</span>)</li>
             </ul>
         </div>
 
         <!-- FAQ 常见问题 -->
         <section class="faq-section" style="background: var(--bg-secondary); border-radius: 12px; padding: 25px; margin-bottom: 30px; border: 1px solid var(--border);">
-            <h2 style="font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; color: var(--accent-light);">❓ 常见问题（FAQ）</h2>
+            <h2 style="font-size: 1.1rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px; color: var(--accent-light);">❓ <span data-i18n="faqTitle">Frequently Asked Questions (FAQ)</span></h2>
 
             <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px;">
                 <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>什么是 Unix 时间戳？</span>
+                        <span data-i18n="faq1q">What is a Unix timestamp?</span>
                         <span style="color: var(--text-secondary);">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-                        Unix 时间戳（Unix Timestamp）是一种时间表示方式，定义为从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数。这个起始时间点被称为"Unix 纪元"（Unix Epoch）。时间戳是一个整数，在计算机系统中被广泛用于记录和计算时间，因为它便于存储和计算时间差。
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;" data-i18n="faq1a">
+                        A Unix timestamp is a way to represent time as the total number of seconds that have elapsed since the Unix Epoch (January 1, 1970, 00:00:00 UTC). It's an integer widely used in computer systems for recording and calculating time because it's easy to store and compute time differences.
                     </div>
                 </details>
 
                 <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>时间戳和日期时间有什么区别？</span>
+                        <span data-i18n="faq2q">What's the difference between timestamps and date/time?</span>
                         <span style="color: var(--text-secondary);">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-                        日期时间（如"2024-01-01 12:00:00"）是人类可读的时间格式，需要指定时区才能准确表示时间点。而时间戳是一个与时区无关的整数，表示从 Unix 纪元开始经过的秒数。时间戳的优势在于：存储空间小（只需一个整数）、跨时区一致、便于计算时间差、适合数据库排序和索引。
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;" data-i18n="faq2a">
+                        Date/time formats like "2024-01-01 12:00:00" are human-readable but require timezone specification for accuracy. Timestamps are timezone-independent integers representing seconds since the Unix Epoch. Benefits include: smaller storage (just one integer), cross-timezone consistency, easy time difference calculation, and database-friendly sorting and indexing.
                     </div>
                 </details>
 
                 <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>如何将时间戳转换为北京时间？</span>
+                        <span data-i18n="faq3q">How to convert a timestamp to local time?</span>
                         <span style="color: var(--text-secondary);">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-                        在本工具的"时间戳 → 日期时间"区域输入时间戳数值，选择单位（秒或毫秒），点击"转换"按钮即可获得北京时间（UTC+8）。转换结果会同时显示 UTC 时间和本地时间。例如：时间戳 1703836800（秒）对应北京时间 2023-12-29 16:00:00。
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;" data-i18n="faq3a">
+                        Enter the timestamp value in the "Timestamp → Date/Time" section, select the unit (seconds or milliseconds), and click "Convert" to get the local time. The result will display both UTC time and local time. For example: timestamp 1703836800 (seconds) corresponds to 2023-12-29 08:00:00 UTC.
                     </div>
                 </details>
 
                 <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>秒级时间戳和毫秒级时间戳有什么区别？</span>
+                        <span data-i18n="faq4q">What's the difference between second and millisecond timestamps?</span>
                         <span style="color: var(--text-secondary);">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-                        秒级时间戳通常是 10 位数字（如 1703836800），表示从 Unix 纪元起经过的秒数。毫秒级时间戳是 13 位数字（如 1703836800000），表示经过的毫秒数。JavaScript 的 Date.now() 返回毫秒级时间戳，而大多数后端语言和数据库使用秒级时间戳。本工具同时支持这两种格式的转换。
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;" data-i18n="faq4a">
+                        Second timestamps are typically 10-digit numbers (e.g., 1703836800), representing seconds since the Unix Epoch. Millisecond timestamps are 13-digit numbers (e.g., 1703836800000), representing milliseconds. JavaScript's Date.now() returns milliseconds, while most backend languages and databases use seconds. This tool supports both formats.
                     </div>
                 </details>
 
                 <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>什么是 2038 年问题？</span>
+                        <span data-i18n="faq5q">What is the Year 2038 problem?</span>
                         <span style="color: var(--text-secondary);">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-                        2038 年问题是指在使用 32 位有符号整数存储时间戳的系统中，时间戳将在 2038年1月19日 03:14:07 UTC 达到最大值（2147483647），之后会发生整数溢出。这类似于千年虫问题。现代 64 位系统不受此影响，可支持到约 2920 亿年后的时间。建议使用 64 位系统或数据库字段来存储时间戳。
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;" data-i18n="faq5a">
+                        The Year 2038 problem occurs in systems using 32-bit signed integers for timestamps. On January 19, 2038, at 03:14:07 UTC, the timestamp will reach its maximum value (2147483647) and overflow. This is similar to the Y2K bug. Modern 64-bit systems are unaffected and can handle dates billions of years in the future. It's recommended to use 64-bit systems or database fields for timestamp storage.
                     </div>
                 </details>
 
                 <details style="background: var(--bg-card); border-radius: 8px; padding: 16px; cursor: pointer;">
                     <summary style="font-weight: 500; color: var(--text-primary); list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                        <span>为什么选择 1970 年作为起始时间？</span>
+                        <span data-i18n="faq6q">Why was 1970 chosen as the starting point?</span>
                         <span style="color: var(--text-secondary);">▼</span>
                     </summary>
-                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;">
-                        1970年1月1日被选为 Unix 纪元，这是因为 Unix 操作系统在 1970 年代初期开发。最初的设计者选择了一个接近当时的"圆整"日期，1970年1月1日午夜 UTC。这个选择使得在当时的计算能力下，32 位整数可以表示直到 2038 年的时间范围，被认为是足够长的周期。
+                    <div style="margin-top: 12px; color: var(--text-secondary); line-height: 1.8; font-size: 0.95rem;" data-i18n="faq6a">
+                        January 1, 1970 was chosen as the Unix Epoch because Unix was developed in the early 1970s. The original designers chose a "round" date close to their time, January 1, 1970, at midnight UTC. With the computing power of that era, 32-bit integers could represent dates until 2038, which was considered a sufficiently long period.
                     </div>
                 </details>
             </div>
         </section>
     </div>
 
-    <div class="toast" id="toast">已复制到剪贴板</div>
+    <div class="toast" id="toast" data-i18n="copied">Copied to clipboard</div>
 
     <script>
+        // i18n 翻译数据
+        const i18nData = {
+            'en': {
+                backToToolbox: '← Back to Toolbox',
+                title: 'Timestamp Converter',
+                subtitle: 'A timestamp is the number of seconds since January 1, 1970 (UTC midnight). This tool supports conversion between timestamps and date/time, as well as multi-timezone comparison.',
+                featuresTitle: 'Features',
+                featureRealtime: 'Real-time Conversion',
+                featureRealtimeDesc: 'Supports bidirectional conversion between second/millisecond timestamps and date/time',
+                featureTimezone: 'Multi-timezone Support',
+                featureTimezoneDesc: 'View current time in 12 major cities worldwide with one click',
+                featureCode: 'Code Examples',
+                featureCodeDesc: 'Provides timestamp code examples for 19 programming languages',
+                featurePrivacy: 'Privacy Safe',
+                featurePrivacyDesc: 'Pure frontend processing, all data is converted locally in your browser',
+                currentTimestampLabel: 'Current Unix Timestamp (seconds)',
+                milliseconds: 'Milliseconds',
+                localTime: 'Local Time',
+                timestampToDate: 'Timestamp → Date/Time',
+                inputTimestamp: 'Enter Timestamp',
+                timestampPlaceholder: 'e.g., 1703836800',
+                seconds: 'Seconds (s)',
+                milliseconds: 'Milliseconds (ms)',
+                convert: 'Convert',
+                useCurrentTimestamp: 'Use Current Timestamp',
+                result: 'Result',
+                dateToTimestamp: 'Date/Time → Timestamp',
+                selectDateTime: 'Select Date/Time',
+                timezone: 'Timezone',
+                localTimezone: 'Local Timezone',
+                tzBeijing: 'Beijing Time (UTC+8)',
+                tzUTC: 'UTC (UTC+0)',
+                tzNewYork: 'New York Time (UTC-5/-4)',
+                tzLosAngeles: 'Los Angeles Time (UTC-8/-7)',
+                tzLondon: 'London Time (UTC+0/+1)',
+                tzParis: 'Paris Time (UTC+1/+2)',
+                tzTokyo: 'Tokyo Time (UTC+9)',
+                useCurrentTime: 'Use Current Time',
+                worldTime: 'World Time Zones',
+                codeExamples: 'Get Current Timestamp Code Examples',
+                copyCode: 'Copy Code',
+                copy: 'Copy',
+                copied: 'Copied to clipboard',
+                aboutTimestamp: 'About Timestamps',
+                aboutTimestampDesc: 'Unix timestamp is the number of seconds elapsed since January 1, 1970, 00:00:00 UTC, not counting leap seconds. It is widely used in various programming languages and database systems.',
+                aboutDST: 'About Daylight Saving Time',
+                aboutDSTDesc: 'From 1986 to 1991, China implemented daylight saving time nationwide, from the first Sunday in mid-April at 2:00 AM to the first Sunday in mid-September at 2:00 AM. During DST, clocks were advanced by one hour. This practice was discontinued after April 5, 1992.',
+                aboutJDK: 'JDK Daylight Saving Time Issues',
+                aboutJDKDesc: 'The start and end of DST are policy decisions that may change annually. JDK handles this by enumerating all changes in the system configuration. See: Timezone Data Versions in the JRE Software.',
+                aboutJDKDesc2: 'Different JDK versions have different DST start times for Asia/Shanghai timezone. Earlier maintainers believed Chinese Standard Time DST switching occurred at midnight, but later it was proven to occur at 2:00 AM. Newer JDK versions have corrected this issue.',
+                commonTimestamps: 'Common Timestamps',
+                unixEpoch: 'Unix Epoch',
+                billionSeconds: 'One Billion Seconds',
+                max32bit: '32-bit Max Value',
+                faqTitle: 'Frequently Asked Questions (FAQ)',
+                faq1q: 'What is a Unix timestamp?',
+                faq1a: 'A Unix timestamp is a way to represent time as the total number of seconds that have elapsed since the Unix Epoch (January 1, 1970, 00:00:00 UTC). It\'s an integer widely used in computer systems for recording and calculating time because it\'s easy to store and compute time differences.',
+                faq2q: 'What\'s the difference between timestamps and date/time?',
+                faq2a: 'Date/time formats like "2024-01-01 12:00:00" are human-readable but require timezone specification for accuracy. Timestamps are timezone-independent integers representing seconds since the Unix Epoch. Benefits include: smaller storage (just one integer), cross-timezone consistency, easy time difference calculation, and database-friendly sorting and indexing.',
+                faq3q: 'How to convert a timestamp to local time?',
+                faq3a: 'Enter the timestamp value in the "Timestamp → Date/Time" section, select the unit (seconds or milliseconds), and click "Convert" to get the local time. The result will display both UTC time and local time. For example: timestamp 1703836800 (seconds) corresponds to 2023-12-29 08:00:00 UTC.',
+                faq4q: 'What\'s the difference between second and millisecond timestamps?',
+                faq4a: 'Second timestamps are typically 10-digit numbers (e.g., 1703836800), representing seconds since the Unix Epoch. Millisecond timestamps are 13-digit numbers (e.g., 1703836800000), representing milliseconds. JavaScript\'s Date.now() returns milliseconds, while most backend languages and databases use seconds. This tool supports both formats.',
+                faq5q: 'What is the Year 2038 problem?',
+                faq5a: 'The Year 2038 problem occurs in systems using 32-bit signed integers for timestamps. On January 19, 2038, at 03:14:07 UTC, the timestamp will reach its maximum value (2147483647) and overflow. This is similar to the Y2K bug. Modern 64-bit systems are unaffected and can handle dates billions of years in the future. It\'s recommended to use 64-bit systems or database fields for timestamp storage.',
+                faq6q: 'Why was 1970 chosen as the starting point?',
+                faq6a: 'January 1, 1970 was chosen as the Unix Epoch because Unix was developed in the early 1970s. The original designers chose a "round" date close to their time, January 1, 1970, at midnight UTC. With the computing power of that era, 32-bit integers could represent dates until 2038, which was considered a sufficiently long period.',
+                enterTimestamp: 'Please enter a timestamp',
+                invalidTimestamp: 'Invalid timestamp',
+                utcTime: 'UTC Time',
+                localTimeLabel: 'Local Time',
+                secondsLabel: 'Seconds',
+                millisecondsLabel: 'Milliseconds',
+                isoFormat: 'ISO Format',
+                selectDatetime: 'Please select a date/time',
+                invalidDatetime: 'Invalid date/time',
+                weekdays: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'],
+                footerPrivacy: 'Pure frontend processing, data is not uploaded to servers',
+                footerBack: '← Back to Web Toolbox Home',
+                relatedTools: 'Related Tools',
+                worldClock: 'World Clock',
+                worldClockDesc: 'Global timezone query',
+                cryptoTools: 'Crypto Toolbox',
+                cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                jsonViewer: 'JSON Viewer',
+                jsonViewerDesc: 'JSON formatting & visualization',
+                calculator: 'Calculator',
+                calculatorDesc: 'Scientific & radix conversion',
+                // 时区名称
+                tzBeijingName: 'Beijing Time',
+                tzTokyoName: 'Tokyo Time',
+                tzSingaporeName: 'Singapore Time',
+                tzSydneyName: 'Sydney Time',
+                tzUTCName: 'UTC Time',
+                tzLondonName: 'London Time',
+                tzParisName: 'Paris Time',
+                tzMoscowName: 'Moscow Time',
+                tzNewYorkName: 'New York Time',
+                tzLosAngelesName: 'Los Angeles Time',
+                tzChicagoName: 'Chicago Time',
+                tzVancouverName: 'Vancouver Time'
+            },
+            'zh-CN': {
+                backToToolbox: '← 返回工具箱',
+                title: '时间戳转换工具',
+                subtitle: '时间戳是从1970年1月1日（UTC/GMT的午夜）开始所经过的秒数，本工具支持时间戳与日期时间互转，以及多时区对照。',
+                featuresTitle: '功能特点',
+                featureRealtime: '实时转换',
+                featureRealtimeDesc: '支持秒级和毫秒级时间戳与日期时间的双向互转',
+                featureTimezone: '多时区支持',
+                featureTimezoneDesc: '一键查看全球12个主要城市的当前时间',
+                featureCode: '代码示例',
+                featureCodeDesc: '提供 19 种编程语言的时间戳获取代码示例',
+                featurePrivacy: '隐私安全',
+                featurePrivacyDesc: '纯前端处理，所有数据在本地浏览器完成转换',
+                currentTimestampLabel: '当前 Unix 时间戳（秒）',
+                milliseconds: '毫秒',
+                localTime: '北京时间',
+                timestampToDate: '时间戳 → 日期时间',
+                inputTimestamp: '输入时间戳',
+                timestampPlaceholder: '例如：1703836800',
+                seconds: '秒 (s)',
+                milliseconds: '毫秒 (ms)',
+                convert: '转换',
+                useCurrentTimestamp: '使用当前时间戳',
+                result: '转换结果',
+                dateToTimestamp: '日期时间 → 时间戳',
+                selectDateTime: '选择日期时间',
+                timezone: '时区',
+                localTimezone: '本地时区',
+                tzBeijing: '北京时间 (UTC+8)',
+                tzUTC: 'UTC (UTC+0)',
+                tzNewYork: '纽约时间 (UTC-5/-4)',
+                tzLosAngeles: '洛杉矶时间 (UTC-8/-7)',
+                tzLondon: '伦敦时间 (UTC+0/+1)',
+                tzParis: '巴黎时间 (UTC+1/+2)',
+                tzTokyo: '东京时间 (UTC+9)',
+                useCurrentTime: '使用当前时间',
+                worldTime: '各时区当前时间',
+                codeExamples: '获取当前时间戳代码示例',
+                copyCode: '复制代码',
+                copy: '复制',
+                copied: '已复制到剪贴板',
+                aboutTimestamp: '关于时间戳',
+                aboutTimestampDesc: 'Unix 时间戳（Unix timestamp）是从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数，不考虑闰秒。它被广泛应用于各种编程语言和数据库系统中。',
+                aboutDST: '关于夏令时',
+                aboutDSTDesc: '1986年至1991年，中华人民共和国在全国范围实行了六年夏令时，每年从4月中旬的第一个星期日2时整（北京时间）到9月中旬第一个星期日的凌晨2时整（北京夏令时）。夏令时实施期间，将时间向后调快一小时。1992年4月5日后不再实行。',
+                aboutJDK: 'JDK 的夏令时问题',
+                aboutJDKDesc: '夏令时的起止是政令对日历描述的人为干预，每年均可能发生变化。JDK 通过穷举所有变化并配置在系统中来处理这个问题。详见：Timezone Data Versions in the JRE Software。',
+                aboutJDKDesc2: '不同版本下 Asia/Shanghai 时区夏令时起始时间不同，早期维护者认为中国标准时间的夏令时切换发生在0时，而后来又经证明发生在2时，新版本 JDK 及时修正了这个问题。',
+                commonTimestamps: '常见时间戳',
+                unixEpoch: 'Unix 纪元',
+                billionSeconds: '十亿秒纪念',
+                max32bit: '32位系统最大值',
+                faqTitle: '常见问题（FAQ）',
+                faq1q: '什么是 Unix 时间戳？',
+                faq1a: 'Unix 时间戳（Unix Timestamp）是一种时间表示方式，定义为从协调世界时（UTC）1970年1月1日0时0分0秒起至现在的总秒数。这个起始时间点被称为"Unix 纪元"（Unix Epoch）。时间戳是一个整数，在计算机系统中被广泛用于记录和计算时间，因为它便于存储和计算时间差。',
+                faq2q: '时间戳和日期时间有什么区别？',
+                faq2a: '日期时间（如"2024-01-01 12:00:00"）是人类可读的时间格式，需要指定时区才能准确表示时间点。而时间戳是一个与时区无关的整数，表示从 Unix 纪元开始经过的秒数。时间戳的优势在于：存储空间小（只需一个整数）、跨时区一致、便于计算时间差、适合数据库排序和索引。',
+                faq3q: '如何将时间戳转换为北京时间？',
+                faq3a: '在本工具的"时间戳 → 日期时间"区域输入时间戳数值，选择单位（秒或毫秒），点击"转换"按钮即可获得北京时间（UTC+8）。转换结果会同时显示 UTC 时间和本地时间。例如：时间戳 1703836800（秒）对应北京时间 2023-12-29 16:00:00。',
+                faq4q: '秒级时间戳和毫秒级时间戳有什么区别？',
+                faq4a: '秒级时间戳通常是 10 位数字（如 1703836800），表示从 Unix 纪元起经过的秒数。毫秒级时间戳是 13 位数字（如 1703836800000），表示经过的毫秒数。JavaScript 的 Date.now() 返回毫秒级时间戳，而大多数后端语言和数据库使用秒级时间戳。本工具同时支持这两种格式的转换。',
+                faq5q: '什么是 2038 年问题？',
+                faq5a: '2038 年问题是指在使用 32 位有符号整数存储时间戳的系统中，时间戳将在 2038年1月19日 03:14:07 UTC 达到最大值（2147483647），之后会发生整数溢出。这类似于千年虫问题。现代 64 位系统不受此影响，可支持到约 2920 亿年后的时间。建议使用 64 位系统或数据库字段来存储时间戳。',
+                faq6q: '为什么选择 1970 年作为起始时间？',
+                faq6a: '1970年1月1日被选为 Unix 纪元，这是因为 Unix 操作系统在 1970 年代初期开发。最初的设计者选择了一个接近当时的"圆整"日期，1970年1月1日午夜 UTC。这个选择使得在当时的计算能力下，32 位整数可以表示直到 2038 年的时间范围，被认为是足够长的周期。',
+                enterTimestamp: '请输入时间戳',
+                invalidTimestamp: '无效的时间戳',
+                utcTime: 'UTC 时间',
+                localTimeLabel: '本地时间',
+                secondsLabel: '秒',
+                millisecondsLabel: '毫秒',
+                isoFormat: 'ISO 格式',
+                selectDatetime: '请选择日期时间',
+                invalidDatetime: '无效的日期时间',
+                weekdays: ['日', '一', '二', '三', '四', '五', '六'],
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页',
+                relatedTools: '相关工具推荐',
+                worldClock: '世界时钟',
+                worldClockDesc: '全球时区时间查询',
+                cryptoTools: '加解密工具箱',
+                cryptoToolsDesc: 'Base64/MD5/AES 等',
+                jsonViewer: 'JSON 查看器',
+                jsonViewerDesc: 'JSON 格式化与可视化',
+                calculator: '万能计算器',
+                calculatorDesc: '科学计算与进制转换',
+                // 时区名称
+                tzBeijingName: '北京时间',
+                tzTokyoName: '东京时间',
+                tzSingaporeName: '新加坡时间',
+                tzSydneyName: '悉尼时间',
+                tzUTCName: 'UTC 时间',
+                tzLondonName: '伦敦时间',
+                tzParisName: '巴黎时间',
+                tzMoscowName: '莫斯科时间',
+                tzNewYorkName: '纽约时间',
+                tzLosAngelesName: '洛杉矶时间',
+                tzChicagoName: '芝加哥时间',
+                tzVancouverName: '温哥华时间'
+            },
+            'fr': {
+                backToToolbox: '← Retour à la boîte à outils',
+                title: 'Convertisseur de Timestamp',
+                subtitle: 'Un timestamp est le nombre de secondes écoulées depuis le 1er janvier 1970 (minuit UTC). Cet outil prend en charge la conversion entre les timestamps et les dates/heures, ainsi que la comparaison multi-fuseaux horaires.',
+                featuresTitle: 'Fonctionnalités',
+                featureRealtime: 'Conversion en temps réel',
+                featureRealtimeDesc: 'Prend en charge la conversion bidirectionnelle entre les timestamps en secondes/millisecondes et les dates/heures',
+                featureTimezone: 'Support multi-fuseaux horaires',
+                featureTimezoneDesc: 'Consultez l\'heure actuelle dans 12 grandes villes du monde en un clic',
+                featureCode: 'Exemples de code',
+                featureCodeDesc: 'Fournit des exemples de code pour obtenir le timestamp dans 19 langages de programmation',
+                featurePrivacy: 'Confidentialité garantie',
+                featurePrivacyDesc: 'Traitement entièrement côté client, toutes les données sont converties localement dans votre navigateur',
+                currentTimestampLabel: 'Timestamp Unix actuel (secondes)',
+                milliseconds: 'Millisecondes',
+                localTime: 'Heure locale',
+                timestampToDate: 'Timestamp → Date/Heure',
+                inputTimestamp: 'Entrez le timestamp',
+                timestampPlaceholder: 'ex: 1703836800',
+                seconds: 'Secondes (s)',
+                milliseconds: 'Millisecondes (ms)',
+                convert: 'Convertir',
+                useCurrentTimestamp: 'Utiliser le timestamp actuel',
+                result: 'Résultat',
+                dateToTimestamp: 'Date/Heure → Timestamp',
+                selectDateTime: 'Sélectionnez la date/heure',
+                timezone: 'Fuseau horaire',
+                localTimezone: 'Fuseau horaire local',
+                tzBeijing: 'Heure de Pékin (UTC+8)',
+                tzUTC: 'UTC (UTC+0)',
+                tzNewYork: 'Heure de New York (UTC-5/-4)',
+                tzLosAngeles: 'Heure de Los Angeles (UTC-8/-7)',
+                tzLondon: 'Heure de Londres (UTC+0/+1)',
+                tzParis: 'Heure de Paris (UTC+1/+2)',
+                tzTokyo: 'Heure de Tokyo (UTC+9)',
+                useCurrentTime: 'Utiliser l\'heure actuelle',
+                worldTime: 'Fuseaux horaires mondiaux',
+                codeExamples: 'Exemples de code pour obtenir le timestamp',
+                copyCode: 'Copier le code',
+                copy: 'Copier',
+                copied: 'Copié dans le presse-papiers',
+                aboutTimestamp: 'À propos des timestamps',
+                aboutTimestampDesc: 'Le timestamp Unix est le nombre de secondes écoulées depuis le 1er janvier 1970, 00:00:00 UTC, sans compter les secondes intercalaires. Il est largement utilisé dans divers langages de programmation et systèmes de bases de données.',
+                aboutDST: 'À propos de l\'heure d\'été',
+                aboutDSTDesc: 'De 1986 à 1991, la Chine a mis en place l\'heure d\'été à l\'échelle nationale, du premier dimanche de mi-avril à 2h00 au premier dimanche de mi-septembre à 2h00. Pendant l\'heure d\'été, les horloges étaient avancées d\'une heure. Cette pratique a été abandonnée après le 5 avril 1992.',
+                aboutJDK: 'Problèmes d\'heure d\'été JDK',
+                aboutJDKDesc: 'Le début et la fin de l\'heure d\'été sont des décisions politiques qui peuvent changer chaque année. JDK gère cela en énumérant tous les changements dans la configuration du système.',
+                aboutJDKDesc2: 'Différentes versions de JDK ont des heures de début d\'heure d\'été différentes pour le fuseau horaire Asia/Shanghai. Les versions plus récentes de JDK ont corrigé ce problème.',
+                commonTimestamps: 'Timestamps courants',
+                unixEpoch: 'Époque Unix',
+                billionSeconds: 'Un milliard de secondes',
+                max32bit: 'Valeur maximale 32 bits',
+                faqTitle: 'Questions fréquemment posées (FAQ)',
+                faq1q: 'Qu\'est-ce qu\'un timestamp Unix ?',
+                faq1a: 'Un timestamp Unix est une façon de représenter le temps comme le nombre total de secondes écoulées depuis l\'époque Unix (1er janvier 1970, 00:00:00 UTC). C\'est un entier largement utilisé dans les systèmes informatiques pour enregistrer et calculer le temps car il est facile à stocker et à calculer les différences de temps.',
+                faq2q: 'Quelle est la différence entre les timestamps et les dates/heures ?',
+                faq2a: 'Les formats de date/heure comme "2024-01-01 12:00:00" sont lisibles par l\'homme mais nécessitent une spécification de fuseau horaire. Les timestamps sont des entiers indépendants du fuseau horaire. Avantages : stockage plus petit, cohérence entre fuseaux horaires, calcul facile des différences de temps, tri et indexation dans les bases de données.',
+                faq3q: 'Comment convertir un timestamp en heure locale ?',
+                faq3a: 'Entrez la valeur du timestamp dans la section "Timestamp → Date/Heure", sélectionnez l\'unité (secondes ou millisecondes), et cliquez sur "Convertir" pour obtenir l\'heure locale. Le résultat affichera à la fois l\'heure UTC et l\'heure locale.',
+                faq4q: 'Quelle est la différence entre les timestamps en secondes et en millisecondes ?',
+                faq4a: 'Les timestamps en secondes sont généralement des nombres à 10 chiffres (ex: 1703836800). Les timestamps en millisecondes sont des nombres à 13 chiffres (ex: 1703836800000). Date.now() en JavaScript retourne des millisecondes, tandis que la plupart des langages backend utilisent des secondes.',
+                faq5q: 'Qu\'est-ce que le problème de l\'an 2038 ?',
+                faq5a: 'Le problème de l\'an 2038 survient dans les systèmes utilisant des entiers signés de 32 bits pour les timestamps. Le 19 janvier 2038, à 03:14:07 UTC, le timestamp atteindra sa valeur maximale (2147483647) et débordera. Les systèmes 64 bits modernes ne sont pas affectés.',
+                faq6q: 'Pourquoi 1970 a-t-il été choisi comme point de départ ?',
+                faq6a: 'Le 1er janvier 1970 a été choisi comme époque Unix car Unix a été développé au début des années 1970. Les concepteurs originaux ont choisi une date "ronde" proche de leur époque. Avec les entiers 32 bits, cela permettait de représenter des dates jusqu\'en 2038.',
+                enterTimestamp: 'Veuillez entrer un timestamp',
+                invalidTimestamp: 'Timestamp invalide',
+                utcTime: 'Heure UTC',
+                localTimeLabel: 'Heure locale',
+                secondsLabel: 'Secondes',
+                millisecondsLabel: 'Millisecondes',
+                isoFormat: 'Format ISO',
+                selectDatetime: 'Veuillez sélectionner une date/heure',
+                invalidDatetime: 'Date/heure invalide',
+                weekdays: ['Dimanche', 'Lundi', 'Mardi', 'Mercredi', 'Jeudi', 'Vendredi', 'Samedi'],
+                footerPrivacy: 'Traitement côté client, les données ne sont pas téléchargées sur les serveurs',
+                footerBack: '← Retour à l\'accueil Web Toolbox',
+                relatedTools: 'Outils connexes',
+                worldClock: 'Horloge mondiale',
+                worldClockDesc: 'Requête de fuseaux horaires mondiaux',
+                cryptoTools: 'Boîte à outils crypto',
+                cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                jsonViewer: 'Visualiseur JSON',
+                jsonViewerDesc: 'Formatage et visualisation JSON',
+                calculator: 'Calculatrice',
+                calculatorDesc: 'Calcul scientifique et conversion',
+                // 时区名称
+                tzBeijingName: 'Heure de Pékin',
+                tzTokyoName: 'Heure de Tokyo',
+                tzSingaporeName: 'Heure de Singapour',
+                tzSydneyName: 'Heure de Sydney',
+                tzUTCName: 'Heure UTC',
+                tzLondonName: 'Heure de Londres',
+                tzParisName: 'Heure de Paris',
+                tzMoscowName: 'Heure de Moscou',
+                tzNewYorkName: 'Heure de New York',
+                tzLosAngelesName: 'Heure de Los Angeles',
+                tzChicagoName: 'Heure de Chicago',
+                tzVancouverName: 'Heure de Vancouver'
+            },
+            'es': {
+                backToToolbox: '← Volver a la caja de herramientas',
+                title: 'Convertidor de Timestamp',
+                subtitle: 'Un timestamp es el número de segundos desde el 1 de enero de 1970 (medianoche UTC). Esta herramienta soporta la conversión entre timestamps y fecha/hora, así como la comparación de múltiples zonas horarias.',
+                featuresTitle: 'Características',
+                featureRealtime: 'Conversión en tiempo real',
+                featureRealtimeDesc: 'Soporta conversión bidireccional entre timestamps en segundos/milisegundos y fecha/hora',
+                featureTimezone: 'Soporte multi-zona horaria',
+                featureTimezoneDesc: 'Ver la hora actual en 12 ciudades principales del mundo con un clic',
+                featureCode: 'Ejemplos de código',
+                featureCodeDesc: 'Proporciona ejemplos de código para obtener timestamp en 19 lenguajes de programación',
+                featurePrivacy: 'Privacidad segura',
+                featurePrivacyDesc: 'Procesamiento completamente en el navegador, todos los datos se convierten localmente',
+                currentTimestampLabel: 'Timestamp Unix actual (segundos)',
+                milliseconds: 'Milisegundos',
+                localTime: 'Hora local',
+                timestampToDate: 'Timestamp → Fecha/Hora',
+                inputTimestamp: 'Ingrese el timestamp',
+                timestampPlaceholder: 'ej: 1703836800',
+                seconds: 'Segundos (s)',
+                milliseconds: 'Milisegundos (ms)',
+                convert: 'Convertir',
+                useCurrentTimestamp: 'Usar timestamp actual',
+                result: 'Resultado',
+                dateToTimestamp: 'Fecha/Hora → Timestamp',
+                selectDateTime: 'Seleccione fecha/hora',
+                timezone: 'Zona horaria',
+                localTimezone: 'Zona horaria local',
+                tzBeijing: 'Hora de Pekín (UTC+8)',
+                tzUTC: 'UTC (UTC+0)',
+                tzNewYork: 'Hora de Nueva York (UTC-5/-4)',
+                tzLosAngeles: 'Hora de Los Ángeles (UTC-8/-7)',
+                tzLondon: 'Hora de Londres (UTC+0/+1)',
+                tzParis: 'Hora de París (UTC+1/+2)',
+                tzTokyo: 'Hora de Tokio (UTC+9)',
+                useCurrentTime: 'Usar hora actual',
+                worldTime: 'Zonas horarias mundiales',
+                codeExamples: 'Ejemplos de código para obtener timestamp',
+                copyCode: 'Copiar código',
+                copy: 'Copiar',
+                copied: 'Copiado al portapapeles',
+                aboutTimestamp: 'Acerca de los timestamps',
+                aboutTimestampDesc: 'El timestamp Unix es el número de segundos transcurridos desde el 1 de enero de 1970, 00:00:00 UTC, sin contar los segundos intercalares. Se usa ampliamente en varios lenguajes de programación y sistemas de bases de datos.',
+                aboutDST: 'Acerca del horario de verano',
+                aboutDSTDesc: 'De 1986 a 1991, China implementó el horario de verano a nivel nacional, desde el primer domingo de mediados de abril a las 2:00 AM hasta el primer domingo de mediados de septiembre a las 2:00 AM. Durante el horario de verano, los relojes se adelantaban una hora. Esta práctica se discontinuó después del 5 de abril de 1992.',
+                aboutJDK: 'Problemas de horario de verano en JDK',
+                aboutJDKDesc: 'El inicio y fin del horario de verano son decisiones políticas que pueden cambiar anualmente. JDK maneja esto enumerando todos los cambios en la configuración del sistema.',
+                aboutJDKDesc2: 'Diferentes versiones de JDK tienen diferentes horas de inicio del horario de verano para la zona horaria Asia/Shanghai. Las versiones más nuevas de JDK han corregido este problema.',
+                commonTimestamps: 'Timestamps comunes',
+                unixEpoch: 'Época Unix',
+                billionSeconds: 'Mil millones de segundos',
+                max32bit: 'Valor máximo de 32 bits',
+                faqTitle: 'Preguntas frecuentes (FAQ)',
+                faq1q: '¿Qué es un timestamp Unix?',
+                faq1a: 'Un timestamp Unix es una forma de representar el tiempo como el número total de segundos transcurridos desde la época Unix (1 de enero de 1970, 00:00:00 UTC). Es un entero ampliamente usado en sistemas informáticos para registrar y calcular tiempo porque es fácil de almacenar y calcular diferencias de tiempo.',
+                faq2q: '¿Cuál es la diferencia entre timestamps y fecha/hora?',
+                faq2a: 'Los formatos de fecha/hora como "2024-01-01 12:00:00" son legibles por humanos pero requieren especificación de zona horaria. Los timestamps son enteros independientes de la zona horaria. Beneficios: almacenamiento más pequeño, consistencia entre zonas horarias, cálculo fácil de diferencias de tiempo, ordenación e indexación en bases de datos.',
+                faq3q: '¿Cómo convertir un timestamp a hora local?',
+                faq3a: 'Ingrese el valor del timestamp en la sección "Timestamp → Fecha/Hora", seleccione la unidad (segundos o milisegundos), y haga clic en "Convertir" para obtener la hora local. El resultado mostrará tanto la hora UTC como la hora local.',
+                faq4q: '¿Cuál es la diferencia entre timestamps en segundos y milisegundos?',
+                faq4a: 'Los timestamps en segundos son típicamente números de 10 dígitos (ej: 1703836800). Los timestamps en milisegundos son números de 13 dígitos (ej: 1703836800000). Date.now() de JavaScript retorna milisegundos, mientras que la mayoría de lenguajes backend usan segundos.',
+                faq5q: '¿Qué es el problema del año 2038?',
+                faq5a: 'El problema del año 2038 ocurre en sistemas que usan enteros con signo de 32 bits para timestamps. El 19 de enero de 2038, a las 03:14:07 UTC, el timestamp alcanzará su valor máximo (2147483647) y se desbordará. Los sistemas de 64 bits modernos no se ven afectados.',
+                faq6q: '¿Por qué se eligió 1970 como punto de inicio?',
+                faq6a: 'El 1 de enero de 1970 fue elegido como la época Unix porque Unix se desarrolló a principios de los años 1970. Los diseñadores originales eligieron una fecha "redonda" cercana a su tiempo. Con enteros de 32 bits, esto permitía representar fechas hasta 2038.',
+                enterTimestamp: 'Por favor ingrese un timestamp',
+                invalidTimestamp: 'Timestamp inválido',
+                utcTime: 'Hora UTC',
+                localTimeLabel: 'Hora local',
+                secondsLabel: 'Segundos',
+                millisecondsLabel: 'Milisegundos',
+                isoFormat: 'Formato ISO',
+                selectDatetime: 'Por favor seleccione una fecha/hora',
+                invalidDatetime: 'Fecha/hora inválida',
+                weekdays: ['Domingo', 'Lunes', 'Martes', 'Miércoles', 'Jueves', 'Viernes', 'Sábado'],
+                footerPrivacy: 'Procesamiento en el navegador, los datos no se suben a servidores',
+                footerBack: '← Volver a Web Toolbox',
+                relatedTools: 'Herramientas relacionadas',
+                worldClock: 'Reloj mundial',
+                worldClockDesc: 'Consulta de zonas horarias globales',
+                cryptoTools: 'Herramientas de cifrado',
+                cryptoToolsDesc: 'Base64/MD5/AES etc.',
+                jsonViewer: 'Visor JSON',
+                jsonViewerDesc: 'Formateo y visualización JSON',
+                calculator: 'Calculadora',
+                calculatorDesc: 'Cálculo científico y conversión',
+                // 时区名称
+                tzBeijingName: 'Hora de Pekín',
+                tzTokyoName: 'Hora de Tokio',
+                tzSingaporeName: 'Hora de Singapur',
+                tzSydneyName: 'Hora de Sídney',
+                tzUTCName: 'Hora UTC',
+                tzLondonName: 'Hora de Londres',
+                tzParisName: 'Hora de París',
+                tzMoscowName: 'Hora de Moscú',
+                tzNewYorkName: 'Hora de Nueva York',
+                tzLosAngelesName: 'Hora de Los Ángeles',
+                tzChicagoName: 'Hora de Chicago',
+                tzVancouverName: 'Hora de Vancouver'
+            }
+        };
+
+        // 当前语言
+        let currentLanguage = localStorage.getItem('timestamp-converter-lang') || 'en';
+
+        // 语言显示名称
+        const langNames = {
+            'en': '🌐 English',
+            'zh-CN': '🌐 中文',
+            'fr': '🌐 Français',
+            'es': '🌐 Español'
+        };
+
+        // i18n 函数
+        function t(key) {
+            return i18nData[currentLanguage]?.[key] || i18nData['en'][key] || key;
+        }
+
+        // 应用翻译
+        function applyTranslations() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18nData[currentLanguage]?.[key]) {
+                    el.textContent = i18nData[currentLanguage][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (i18nData[currentLanguage]?.[key]) {
+                    el.placeholder = i18nData[currentLanguage][key];
+                }
+            });
+
+            // 更新语言按钮
+            document.getElementById('langCurrent').textContent = langNames[currentLanguage];
+
+            // 更新时区网格
+            initTimezoneGrid();
+
+            // 更新动态内容
+            updateCurrentTimestamp();
+        }
+
+        // 切换语言
+        function switchLanguage(lang) {
+            currentLanguage = lang;
+            localStorage.setItem('timestamp-converter-lang', lang);
+            applyTranslations();
+
+            // 关闭下拉菜单
+            document.getElementById('langDropdown').classList.remove('active');
+        }
+
+        // 语言切换器事件
+        function initLangSwitcher() {
+            const dropdown = document.getElementById('langDropdown');
+            const current = document.getElementById('langCurrent');
+
+            current.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', (e) => {
+                    e.stopPropagation();
+                    const lang = btn.getAttribute('data-lang');
+                    switchLanguage(lang);
+                });
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.remove('active');
+            });
+        }
+
         // 代码示例数据
         const codeExamples = {
             'JavaScript': `// 获取当前时间戳（秒）
@@ -941,24 +1434,27 @@ new Date().time`
 
         // 时区列表
         const timezones = [
-            { name: '北京时间', zone: 'Asia/Shanghai', offset: 'UTC+8' },
-            { name: '东京时间', zone: 'Asia/Tokyo', offset: 'UTC+9' },
-            { name: '新加坡时间', zone: 'Asia/Singapore', offset: 'UTC+8' },
-            { name: '悉尼时间', zone: 'Australia/Sydney', offset: 'UTC+10/+11' },
-            { name: 'UTC 时间', zone: 'UTC', offset: 'UTC+0' },
-            { name: '伦敦时间', zone: 'Europe/London', offset: 'UTC+0/+1' },
-            { name: '巴黎时间', zone: 'Europe/Paris', offset: 'UTC+1/+2' },
-            { name: '莫斯科时间', zone: 'Europe/Moscow', offset: 'UTC+3' },
-            { name: '纽约时间', zone: 'America/New_York', offset: 'UTC-5/-4' },
-            { name: '洛杉矶时间', zone: 'America/Los_Angeles', offset: 'UTC-8/-7' },
-            { name: '芝加哥时间', zone: 'America/Chicago', offset: 'UTC-6/-5' },
-            { name: '温哥华时间', zone: 'America/Vancouver', offset: 'UTC-8/-7' }
+            { nameKey: 'tzBeijingName', zone: 'Asia/Shanghai', offset: 'UTC+8' },
+            { nameKey: 'tzTokyoName', zone: 'Asia/Tokyo', offset: 'UTC+9' },
+            { nameKey: 'tzSingaporeName', zone: 'Asia/Singapore', offset: 'UTC+8' },
+            { nameKey: 'tzSydneyName', zone: 'Australia/Sydney', offset: 'UTC+10/+11' },
+            { nameKey: 'tzUTCName', zone: 'UTC', offset: 'UTC+0' },
+            { nameKey: 'tzLondonName', zone: 'Europe/London', offset: 'UTC+0/+1' },
+            { nameKey: 'tzParisName', zone: 'Europe/Paris', offset: 'UTC+1/+2' },
+            { nameKey: 'tzMoscowName', zone: 'Europe/Moscow', offset: 'UTC+3' },
+            { nameKey: 'tzNewYorkName', zone: 'America/New_York', offset: 'UTC-5/-4' },
+            { nameKey: 'tzLosAngelesName', zone: 'America/Los_Angeles', offset: 'UTC-8/-7' },
+            { nameKey: 'tzChicagoName', zone: 'America/Chicago', offset: 'UTC-6/-5' },
+            { nameKey: 'tzVancouverName', zone: 'America/Vancouver', offset: 'UTC-8/-7' }
         ];
 
         let currentLang = 'JavaScript';
 
         // 初始化
         function init() {
+            initLangSwitcher();
+            applyTranslations();
+
             updateCurrentTimestamp();
             setInterval(updateCurrentTimestamp, 100);
 
@@ -978,11 +1474,11 @@ new Date().time`
             const seconds = Math.floor(now / 1000);
 
             document.getElementById('currentTimestamp').textContent = seconds;
-            document.getElementById('currentTimestampMs').textContent = `毫秒：${now}`;
+            document.getElementById('currentTimestampMs').textContent = `${t('milliseconds')}: ${now}`;
 
             const date = new Date(now);
-            const beijingTime = date.toLocaleString('zh-CN', {
-                timeZone: 'Asia/Shanghai',
+            const localTime = date.toLocaleString(currentLanguage === 'zh-CN' ? 'zh-CN' : 'en-US', {
+                timeZone: Intl.DateTimeFormat().resolvedOptions().timeZone,
                 year: 'numeric',
                 month: '2-digit',
                 day: '2-digit',
@@ -991,7 +1487,7 @@ new Date().time`
                 second: '2-digit',
                 hour12: false
             });
-            document.getElementById('currentDatetime').textContent = `北京时间：${beijingTime}`;
+            document.getElementById('currentDatetime').textContent = `${t('localTime')}: ${localTime}`;
 
             // 更新时区时间
             updateTimezones();
@@ -1002,7 +1498,7 @@ new Date().time`
             const grid = document.getElementById('timezoneGrid');
             grid.innerHTML = timezones.map(tz => `
                 <div class="timezone-item">
-                    <div class="timezone-name">${tz.name} (${tz.offset})</div>
+                    <div class="timezone-name">${t(tz.nameKey)} (${tz.offset})</div>
                     <div class="timezone-time" data-zone="${tz.zone}">--:--:--</div>
                 </div>
             `).join('');
@@ -1011,10 +1507,11 @@ new Date().time`
         // 更新时区时间
         function updateTimezones() {
             const now = new Date();
+            const locale = currentLanguage === 'zh-CN' ? 'zh-CN' : 'en-US';
             document.querySelectorAll('[data-zone]').forEach(el => {
                 const zone = el.dataset.zone;
                 try {
-                    el.textContent = now.toLocaleString('zh-CN', {
+                    el.textContent = now.toLocaleString(locale, {
                         timeZone: zone,
                         hour: '2-digit',
                         minute: '2-digit',
@@ -1072,13 +1569,13 @@ new Date().time`
             const unit = document.getElementById('timestampUnit').value;
 
             if (!input) {
-                showResult('timestampResult', '请输入时间戳', 'timestampExtra', '');
+                showResult('timestampResult', t('enterTimestamp'), 'timestampExtra', '');
                 return;
             }
 
             let timestamp = parseInt(input);
             if (isNaN(timestamp)) {
-                showResult('timestampResult', '无效的时间戳', 'timestampExtra', '');
+                showResult('timestampResult', t('invalidTimestamp'), 'timestampExtra', '');
                 return;
             }
 
@@ -1089,12 +1586,12 @@ new Date().time`
 
             const date = new Date(timestamp);
             if (isNaN(date.getTime())) {
-                showResult('timestampResult', '无效的时间戳', 'timestampExtra', '');
+                showResult('timestampResult', t('invalidTimestamp'), 'timestampExtra', '');
                 return;
             }
 
-            const beijingTime = date.toLocaleString('zh-CN', {
-                timeZone: 'Asia/Shanghai',
+            const locale = currentLanguage === 'zh-CN' ? 'zh-CN' : 'en-US';
+            const localTime = date.toLocaleString(locale, {
                 year: 'numeric',
                 month: '2-digit',
                 day: '2-digit',
@@ -1105,13 +1602,13 @@ new Date().time`
             });
 
             const utcTime = date.toISOString();
-            const localTime = date.toLocaleString('zh-CN');
+            const weekday = t('weekdays')[date.getDay()];
 
             showResult(
                 'timestampResult',
-                `北京时间：${beijingTime}`,
+                `${t('localTimeLabel')}: ${localTime}`,
                 'timestampExtra',
-                `UTC 时间：${utcTime}<br>本地时间：${localTime}<br>星期${['日','一','二','三','四','五','六'][date.getDay()]}`
+                `${t('utcTime')}: ${utcTime}<br>${weekday}`
             );
         }
 
@@ -1121,7 +1618,7 @@ new Date().time`
             const timezone = document.getElementById('timezoneSelect').value;
 
             if (!input) {
-                showResult('datetimeResult', '请选择日期时间', 'datetimeExtra', '');
+                showResult('datetimeResult', t('selectDatetime'), 'datetimeExtra', '');
                 return;
             }
 
@@ -1153,7 +1650,7 @@ new Date().time`
             }
 
             if (isNaN(date.getTime())) {
-                showResult('datetimeResult', '无效的日期时间', 'datetimeExtra', '');
+                showResult('datetimeResult', t('invalidDatetime'), 'datetimeExtra', '');
                 return;
             }
 
@@ -1162,9 +1659,9 @@ new Date().time`
 
             showResult(
                 'datetimeResult',
-                `秒：${seconds}`,
+                `${t('secondsLabel')}: ${seconds}`,
                 'datetimeExtra',
-                `毫秒：${milliseconds}<br>ISO 格式：${date.toISOString()}`
+                `${t('millisecondsLabel')}: ${milliseconds}<br>${t('isoFormat')}: ${date.toISOString()}`
             );
         }
 
@@ -1198,7 +1695,7 @@ new Date().time`
         // 复制到剪贴板
         function copyToClipboard(text) {
             navigator.clipboard.writeText(text).then(() => {
-                showToast('已复制到剪贴板');
+                showToast(t('copied'));
             }).catch(() => {
                 // 降级方案
                 const textarea = document.createElement('textarea');
@@ -1207,7 +1704,7 @@ new Date().time`
                 textarea.select();
                 document.execCommand('copy');
                 document.body.removeChild(textarea);
-                showToast('已复制到剪贴板');
+                showToast(t('copied'));
             });
         }
 
@@ -1225,35 +1722,35 @@ new Date().time`
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="world-clock.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🌍</div>
-                <div style="color: #f0f0f0; font-weight: 500;">世界时钟</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">全球时区时间查询</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="worldClock">World Clock</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="worldClockDesc">Global timezone query</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="cryptoTools">Crypto Toolbox</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="cryptoToolsDesc">Base64/MD5/AES etc.</div>
             </a>
             <a href="json-viewer.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">{ }</div>
-                <div style="color: #f0f0f0; font-weight: 500;">JSON 查看器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="jsonViewer">JSON Viewer</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="jsonViewerDesc">JSON formatting & visualization</div>
             </a>
             <a href="calculator.html" style="display: block; padding: 16px; background: rgba(255,255,255,0.05); border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔢</div>
-                <div style="color: #f0f0f0; font-weight: 500;">万能计算器</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">科学计算与进制转换</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="calculator">Calculator</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="calculatorDesc">Scientific & radix conversion</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to servers</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #7c3aed; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #7c3aed; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox Home</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #7c3aed; text-decoration: none;">GitHub</a>
         </p>

@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线调色板 - HEX/RGB/HSL颜色转换与配色方案 | Web Toolbox</title>
+    <title>Online Color Palette - HEX/RGB/HSL Color Converter & Color Scheme | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线调色板工具，支持HEX、RGB、HSL、CMYK多种颜色格式转换。自动生成互补色、相似色、三等分色配色方案，收藏常用颜色，一键复制颜色代码。">
-    <meta name="keywords" content="调色板,颜色转换,HEX转RGB,RGB转HEX,HSL颜色,颜色选择器,配色方案,互补色,在线调色,颜色代码">
+    <meta name="description" content="Free online color palette tool. Convert colors between HEX, RGB, HSL, and CMYK formats. Generate complementary, analogous, and triadic color schemes. Save favorite colors and copy color codes instantly.">
+    <meta name="keywords" content="color palette,color converter,HEX to RGB,RGB to HEX,HSL color,color picker,color scheme,complementary colors,online color tool,color code">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/color-palette.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/color-palette.html">
-    <meta property="og:title" content="在线调色板 - HEX/RGB/HSL颜色转换">
-    <meta property="og:description" content="免费在线调色板，支持多种颜色格式转换，自动生成配色方案。">
+    <meta property="og:title" content="Online Color Palette - HEX/RGB/HSL Color Converter">
+    <meta property="og:description" content="Free online color palette with multi-format color conversion and automatic color scheme generation.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/color-palette.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="在线调色板 - HEX/RGB/HSL颜色转换">
-    <meta name="twitter:description" content="免费在线调色板，支持多种颜色格式转换。">
+    <meta name="twitter:title" content="Online Color Palette - HEX/RGB/HSL Color Converter">
+    <meta name="twitter:description" content="Free online color palette with multi-format color conversion.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/color-palette.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "在线调色板",
+        "name": "Online Color Palette",
         "url": "https://www.heyuan110.com/web-toolbox/color-palette.html",
-        "description": "在线调色板，支持HEX/RGB/HSL/CMYK颜色格式转换与配色方案",
+        "description": "Online color palette supporting HEX/RGB/HSL/CMYK color format conversion and color scheme generation",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "HEX 和 RGB 有什么区别？",
+                "name": "What is the difference between HEX and RGB?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "HEX 是十六进制颜色码（如#FF0000），RGB 是红绿蓝数值（如255,0,0），本质相同，只是表示方式不同。HEX 更简洁，常用于网页 CSS；RGB 更直观，便于理解颜色组成。"
+                    "text": "HEX is a hexadecimal color code (e.g., #FF0000), while RGB represents red, green, blue values (e.g., 255, 0, 0). They are essentially the same, just different representations. HEX is more concise and commonly used in web CSS; RGB is more intuitive for understanding color composition."
                 }
             },
             {
                 "@type": "Question",
-                "name": "什么是互补色？",
+                "name": "What are complementary colors?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "互补色是色轮上相对的两个颜色，如红色和青色、蓝色和橙色。搭配使用时对比强烈，视觉冲击力强，常用于需要突出重点的设计。"
+                    "text": "Complementary colors are two colors opposite each other on the color wheel, such as red and cyan, or blue and orange. When used together, they create strong contrast and visual impact, often used in designs that need to highlight key elements."
                 }
             },
             {
                 "@type": "Question",
-                "name": "什么是 HSL 颜色？",
+                "name": "What is HSL color?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "HSL 表示色相(Hue)、饱和度(Saturation)、亮度(Lightness)。相比 RGB，HSL 更符合人类对颜色的认知，可以更直观地调整颜色的明暗和鲜艳程度。"
+                    "text": "HSL represents Hue, Saturation, and Lightness. Compared to RGB, HSL is more aligned with human perception of color, allowing more intuitive adjustments to color brightness and vibrancy."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何保存常用颜色？",
+                "name": "How to save favorite colors?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "点击颜色旁的收藏按钮，颜色会保存到浏览器本地存储。收藏的颜色会在您下次访问时自动加载，最多可保存 16 个常用颜色。"
+                    "text": "Click the favorite button next to a color to save it to browser local storage. Saved colors will automatically load on your next visit, with a maximum of 16 favorite colors."
                 }
             },
             {
                 "@type": "Question",
-                "name": "CMYK 是什么格式？",
+                "name": "What is CMYK format?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "CMYK 是印刷四分色模式，分别代表青(Cyan)、品红(Magenta)、黄(Yellow)、黑(Key/Black)。主要用于印刷品设计，与屏幕显示的 RGB 模式不同。"
+                    "text": "CMYK is a four-color printing mode representing Cyan, Magenta, Yellow, and Key (Black). It is mainly used for print design and differs from the RGB mode used for screen display."
                 }
             }
         ]
@@ -119,6 +119,7 @@
             align-items: center;
             justify-content: space-between;
             margin-bottom: 30px;
+            position: relative;
         }
 
         .back-home {
@@ -146,6 +147,16 @@
             -webkit-text-fill-color: transparent;
             background-clip: text;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 主布局 */
         .main-layout {
@@ -265,7 +276,7 @@
         }
 
         .color-preview-large::after {
-            content: '点击选色';
+            content: attr(data-click-hint);
             position: absolute;
             bottom: 0;
             left: 0;
@@ -752,9 +763,19 @@
 <body>
     <div class="container">
         <div class="header">
-            <a href="index.html" class="back-home">← 返回工具箱</a>
-            <h1>🎨 在线调色板</h1>
-            <div></div>
+            <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox</a>
+            <h1 data-i18n="title">🎨 Online Color Palette</h1>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
         </div>
 
         <!-- 功能特点 -->
@@ -762,23 +783,23 @@
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
-                    <h3 class="feature-title">多格式转换</h3>
-                    <p class="feature-desc">支持 HEX、RGB、HSL、CMYK 四种颜色格式互转</p>
+                    <h3 class="feature-title" data-i18n="featureConvertTitle">Multi-format Conversion</h3>
+                    <p class="feature-desc" data-i18n="featureConvertDesc">Convert between HEX, RGB, HSL, and CMYK color formats</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎯</div>
-                    <h3 class="feature-title">配色方案</h3>
-                    <p class="feature-desc">自动生成互补色、相似色、三等分色等配色方案</p>
+                    <h3 class="feature-title" data-i18n="featureSchemeTitle">Color Schemes</h3>
+                    <p class="feature-desc" data-i18n="featureSchemeDesc">Auto-generate complementary, analogous, and triadic color schemes</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">⭐</div>
-                    <h3 class="feature-title">颜色收藏</h3>
-                    <p class="feature-desc">可保存常用颜色到收藏夹，方便快速使用</p>
+                    <h3 class="feature-title" data-i18n="featureFavoriteTitle">Color Favorites</h3>
+                    <p class="feature-desc" data-i18n="featureFavoriteDesc">Save frequently used colors to favorites for quick access</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">📋</div>
-                    <h3 class="feature-title">一键复制</h3>
-                    <p class="feature-desc">点击即可复制任意格式的颜色代码</p>
+                    <h3 class="feature-title" data-i18n="featureCopyTitle">One-click Copy</h3>
+                    <p class="feature-desc" data-i18n="featureCopyDesc">Click to copy color codes in any format instantly</p>
                 </div>
             </div>
         </section>
@@ -786,18 +807,18 @@
         <div class="main-layout">
             <!-- 左侧 - 收藏的颜色 -->
             <div class="panel favorites-panel">
-                <h2 class="panel-title">⭐ 我的收藏</h2>
+                <h2 class="panel-title" data-i18n="myFavorites">⭐ My Favorites</h2>
                 <div class="favorites-grid" id="favoritesGrid">
                     <!-- 动态生成 -->
                 </div>
-                <p class="favorites-hint">点击调色板颜色添加到收藏</p>
+                <p class="favorites-hint" data-i18n="favoritesHint">Click palette colors to add to favorites</p>
             </div>
 
             <!-- 中间 - 主调色区 -->
             <div class="panel palette-panel">
                 <!-- 当前颜色 -->
                 <div class="current-color-section">
-                    <div class="color-preview-large" id="colorPreview" style="background: #7c3aed;">
+                    <div class="color-preview-large" id="colorPreview" style="background: #7c3aed;" data-click-hint="Click to pick">
                         <input type="color" class="color-input-hidden" id="colorPicker" value="#7c3aed">
                     </div>
                     <div class="color-codes" id="colorCodes">
@@ -808,15 +829,15 @@
                 <!-- 颜色输入 -->
                 <div class="color-input-section">
                     <div class="input-group">
-                        <label>HEX 颜色值</label>
+                        <label data-i18n="hexLabel">HEX Color Value</label>
                         <input type="text" id="hexInput" value="#7c3aed" placeholder="#000000">
                     </div>
                     <div class="input-group">
-                        <label>RGB 颜色值</label>
+                        <label data-i18n="rgbLabel">RGB Color Value</label>
                         <input type="text" id="rgbInput" value="124, 58, 237" placeholder="255, 255, 255">
                     </div>
                     <div class="input-group">
-                        <label>HSL 颜色值</label>
+                        <label data-i18n="hslLabel">HSL Color Value</label>
                         <input type="text" id="hslInput" value="262, 83%, 58%" placeholder="0, 100%, 50%">
                     </div>
                 </div>
@@ -854,7 +875,7 @@
 
                 <!-- 调色板网格 -->
                 <div class="palette-grid-section">
-                    <h3>🎨 快速选色</h3>
+                    <h3 data-i18n="quickPick">🎨 Quick Color Pick</h3>
                     <div class="palette-grid" id="paletteGrid">
                         <!-- 动态生成 -->
                     </div>
@@ -864,37 +885,37 @@
             <!-- 右侧 - 相关颜色 -->
             <div class="panel related-panel">
                 <button class="add-favorite-btn" onclick="addToFavorites()">
-                    <span>⭐</span> 添加到收藏
+                    <span>⭐</span> <span data-i18n="addToFavorites">Add to Favorites</span>
                 </button>
 
                 <!-- 明暗变化 -->
                 <div class="related-section">
-                    <h3 class="related-title">明暗变化</h3>
+                    <h3 class="related-title" data-i18n="shadesTitle">Shades & Tints</h3>
                     <div class="related-colors" id="shadesColors"></div>
                     <div class="gradient-preview" id="shadesGradient"></div>
                 </div>
 
                 <!-- 相似色 -->
                 <div class="related-section">
-                    <h3 class="related-title">相似色 (Analogous)</h3>
+                    <h3 class="related-title" data-i18n="analogousTitle">Analogous Colors</h3>
                     <div class="related-colors" id="analogousColors"></div>
                 </div>
 
                 <!-- 互补色 -->
                 <div class="related-section">
-                    <h3 class="related-title">互补色 & 对比色</h3>
+                    <h3 class="related-title" data-i18n="complementaryTitle">Complementary & Contrast</h3>
                     <div class="contrast-section" id="contrastColors"></div>
                 </div>
 
                 <!-- 三等分色 -->
                 <div class="related-section">
-                    <h3 class="related-title">三等分色 (Triadic)</h3>
+                    <h3 class="related-title" data-i18n="triadicTitle">Triadic Colors</h3>
                     <div class="related-colors" id="triadicColors"></div>
                 </div>
 
                 <!-- 四等分色 -->
                 <div class="related-section">
-                    <h3 class="related-title">四等分色 (Tetradic)</h3>
+                    <h3 class="related-title" data-i18n="tetradicTitle">Tetradic Colors</h3>
                     <div class="related-colors" id="tetradicColors"></div>
                 </div>
             </div>
@@ -902,6 +923,390 @@
     </div>
 
     <script>
+        // ==================== i18n 多语言支持 ====================
+        const i18n = {
+            en: {
+                backHome: "← Back to Toolbox",
+                title: "🎨 Online Color Palette",
+                featureConvertTitle: "Multi-format Conversion",
+                featureConvertDesc: "Convert between HEX, RGB, HSL, and CMYK color formats",
+                featureSchemeTitle: "Color Schemes",
+                featureSchemeDesc: "Auto-generate complementary, analogous, and triadic color schemes",
+                featureFavoriteTitle: "Color Favorites",
+                featureFavoriteDesc: "Save frequently used colors to favorites for quick access",
+                featureCopyTitle: "One-click Copy",
+                featureCopyDesc: "Click to copy color codes in any format instantly",
+                myFavorites: "⭐ My Favorites",
+                favoritesHint: "Click palette colors to add to favorites",
+                hexLabel: "HEX Color Value",
+                rgbLabel: "RGB Color Value",
+                hslLabel: "HSL Color Value",
+                quickPick: "🎨 Quick Color Pick",
+                addToFavorites: "Add to Favorites",
+                shadesTitle: "Shades & Tints",
+                analogousTitle: "Analogous Colors",
+                complementaryTitle: "Complementary & Contrast",
+                triadicTitle: "Triadic Colors",
+                tetradicTitle: "Tetradic Colors",
+                copy: "Copy",
+                copied: "Copied",
+                currentColor: "Current",
+                complementary: "Complement",
+                clickToPick: "Click to pick",
+                alreadyInFavorites: "Color already in favorites",
+                addedToFavorites: "Added to favorites",
+                faqTitle: "FAQ",
+                faq1Q: "What is the difference between HEX and RGB?",
+                faq1A: "HEX is a hexadecimal color code (e.g., #FF0000), while RGB represents red, green, blue values (e.g., 255, 0, 0). They are essentially the same, just different representations. HEX is more concise and commonly used in web CSS; RGB is more intuitive for understanding color composition.",
+                faq2Q: "What are complementary colors?",
+                faq2A: "Complementary colors are two colors opposite each other on the color wheel, such as red and cyan, or blue and orange. When used together, they create strong contrast and visual impact, often used in designs that need to highlight key elements.",
+                faq3Q: "What is HSL color?",
+                faq3A: "HSL represents Hue, Saturation, and Lightness. Compared to RGB, HSL is more aligned with human perception of color, allowing more intuitive adjustments to color brightness and vibrancy.",
+                faq4Q: "How to save favorite colors?",
+                faq4A: "Click the favorite button next to a color to save it to browser local storage. Saved colors will automatically load on your next visit, with a maximum of 16 favorite colors.",
+                faq5Q: "What is CMYK format?",
+                faq5A: "CMYK is a four-color printing mode representing Cyan, Magenta, Yellow, and Key (Black). It is mainly used for print design and differs from the RGB mode used for screen display.",
+                relatedTools: "🔗 Related Tools",
+                imageEditor: "Image Editor",
+                imageEditorDesc: "Crop, rotate, filters",
+                paintBoard: "Paint Board",
+                paintBoardDesc: "Online drawing tool",
+                icoMaker: "ICO Maker",
+                icoMakerDesc: "Generate website icons",
+                imageConverter: "Image Converter",
+                imageConverterDesc: "PNG/JPG/WebP conversion",
+                footerPrivacy: "Pure frontend processing, data is not uploaded to server",
+                footerBack: "← Back to Web Toolbox",
+                langName: "🌐 English"
+            },
+            "zh-CN": {
+                backHome: "← 返回工具箱",
+                title: "🎨 在线调色板",
+                featureConvertTitle: "多格式转换",
+                featureConvertDesc: "支持 HEX、RGB、HSL、CMYK 四种颜色格式互转",
+                featureSchemeTitle: "配色方案",
+                featureSchemeDesc: "自动生成互补色、相似色、三等分色等配色方案",
+                featureFavoriteTitle: "颜色收藏",
+                featureFavoriteDesc: "可保存常用颜色到收藏夹，方便快速使用",
+                featureCopyTitle: "一键复制",
+                featureCopyDesc: "点击即可复制任意格式的颜色代码",
+                myFavorites: "⭐ 我的收藏",
+                favoritesHint: "点击调色板颜色添加到收藏",
+                hexLabel: "HEX 颜色值",
+                rgbLabel: "RGB 颜色值",
+                hslLabel: "HSL 颜色值",
+                quickPick: "🎨 快速选色",
+                addToFavorites: "添加到收藏",
+                shadesTitle: "明暗变化",
+                analogousTitle: "相似色 (Analogous)",
+                complementaryTitle: "互补色 & 对比色",
+                triadicTitle: "三等分色 (Triadic)",
+                tetradicTitle: "四等分色 (Tetradic)",
+                copy: "复制",
+                copied: "已复制",
+                currentColor: "当前色",
+                complementary: "互补色",
+                clickToPick: "点击选色",
+                alreadyInFavorites: "该颜色已在收藏中",
+                addedToFavorites: "已添加到收藏",
+                faqTitle: "常见问题",
+                faq1Q: "HEX 和 RGB 有什么区别？",
+                faq1A: "HEX 是十六进制颜色码（如 #FF0000），RGB 是红绿蓝数值（如 255, 0, 0），本质相同，只是表示方式不同。HEX 更简洁，常用于网页 CSS；RGB 更直观，便于理解颜色组成。",
+                faq2Q: "什么是互补色？",
+                faq2A: "互补色是色轮上相对的两个颜色，如红色和青色、蓝色和橙色。搭配使用时对比强烈，视觉冲击力强，常用于需要突出重点的设计。",
+                faq3Q: "什么是 HSL 颜色？",
+                faq3A: "HSL 表示色相(Hue)、饱和度(Saturation)、亮度(Lightness)。相比 RGB，HSL 更符合人类对颜色的认知，可以更直观地调整颜色的明暗和鲜艳程度。",
+                faq4Q: "如何保存常用颜色？",
+                faq4A: "点击颜色旁的收藏按钮，颜色会保存到浏览器本地存储。收藏的颜色会在您下次访问时自动加载，最多可保存 16 个常用颜色。",
+                faq5Q: "CMYK 是什么格式？",
+                faq5A: "CMYK 是印刷四分色模式，分别代表青(Cyan)、品红(Magenta)、黄(Yellow)、黑(Key/Black)。主要用于印刷品设计，与屏幕显示的 RGB 模式不同。",
+                relatedTools: "🔗 相关工具推荐",
+                imageEditor: "图片编辑器",
+                imageEditorDesc: "裁剪、旋转、滤镜",
+                paintBoard: "画板",
+                paintBoardDesc: "在线绘画工具",
+                icoMaker: "ICO 图标制作",
+                icoMakerDesc: "生成网站图标",
+                imageConverter: "图片格式转换",
+                imageConverterDesc: "PNG/JPG/WebP 互转",
+                footerPrivacy: "纯前端处理，数据不会上传到服务器",
+                footerBack: "← 返回 Web Toolbox 首页",
+                langName: "🌐 中文"
+            },
+            fr: {
+                backHome: "← Retour à la boîte à outils",
+                title: "🎨 Palette de couleurs en ligne",
+                featureConvertTitle: "Conversion multi-formats",
+                featureConvertDesc: "Convertir entre les formats de couleur HEX, RGB, HSL et CMYK",
+                featureSchemeTitle: "Schémas de couleurs",
+                featureSchemeDesc: "Génération automatique de schémas complémentaires, analogues et triadiques",
+                featureFavoriteTitle: "Couleurs favorites",
+                featureFavoriteDesc: "Enregistrez les couleurs fréquemment utilisées pour un accès rapide",
+                featureCopyTitle: "Copie en un clic",
+                featureCopyDesc: "Cliquez pour copier instantanément les codes couleur",
+                myFavorites: "⭐ Mes favoris",
+                favoritesHint: "Cliquez sur les couleurs de la palette pour les ajouter aux favoris",
+                hexLabel: "Valeur couleur HEX",
+                rgbLabel: "Valeur couleur RGB",
+                hslLabel: "Valeur couleur HSL",
+                quickPick: "🎨 Sélection rapide",
+                addToFavorites: "Ajouter aux favoris",
+                shadesTitle: "Nuances et teintes",
+                analogousTitle: "Couleurs analogues",
+                complementaryTitle: "Complémentaire et contraste",
+                triadicTitle: "Couleurs triadiques",
+                tetradicTitle: "Couleurs tétradiques",
+                copy: "Copier",
+                copied: "Copié",
+                currentColor: "Actuelle",
+                complementary: "Complémentaire",
+                clickToPick: "Cliquez pour choisir",
+                alreadyInFavorites: "Couleur déjà dans les favoris",
+                addedToFavorites: "Ajouté aux favoris",
+                faqTitle: "FAQ",
+                faq1Q: "Quelle est la différence entre HEX et RGB ?",
+                faq1A: "HEX est un code couleur hexadécimal (ex: #FF0000), tandis que RGB représente les valeurs rouge, vert, bleu (ex: 255, 0, 0). Ce sont essentiellement les mêmes, juste des représentations différentes. HEX est plus concis et couramment utilisé dans le CSS web; RGB est plus intuitif pour comprendre la composition des couleurs.",
+                faq2Q: "Que sont les couleurs complémentaires ?",
+                faq2A: "Les couleurs complémentaires sont deux couleurs opposées sur le cercle chromatique, comme le rouge et le cyan, ou le bleu et l'orange. Utilisées ensemble, elles créent un contraste fort et un impact visuel, souvent utilisées dans les designs qui doivent mettre en évidence des éléments clés.",
+                faq3Q: "Qu'est-ce que la couleur HSL ?",
+                faq3A: "HSL représente Teinte (Hue), Saturation et Luminosité (Lightness). Comparé à RGB, HSL est plus aligné avec la perception humaine des couleurs, permettant des ajustements plus intuitifs de la luminosité et de la vivacité des couleurs.",
+                faq4Q: "Comment sauvegarder les couleurs favorites ?",
+                faq4A: "Cliquez sur le bouton favori à côté d'une couleur pour l'enregistrer dans le stockage local du navigateur. Les couleurs sauvegardées se chargeront automatiquement lors de votre prochaine visite, avec un maximum de 16 couleurs favorites.",
+                faq5Q: "Qu'est-ce que le format CMYK ?",
+                faq5A: "CMYK est un mode d'impression en quatre couleurs représentant Cyan, Magenta, Jaune et Noir (Key). Il est principalement utilisé pour la conception d'impression et diffère du mode RGB utilisé pour l'affichage à l'écran.",
+                relatedTools: "🔗 Outils connexes",
+                imageEditor: "Éditeur d'images",
+                imageEditorDesc: "Recadrer, rotation, filtres",
+                paintBoard: "Tableau de peinture",
+                paintBoardDesc: "Outil de dessin en ligne",
+                icoMaker: "Créateur ICO",
+                icoMakerDesc: "Générer des icônes de site web",
+                imageConverter: "Convertisseur d'images",
+                imageConverterDesc: "Conversion PNG/JPG/WebP",
+                footerPrivacy: "Traitement purement frontend, les données ne sont pas téléchargées sur le serveur",
+                footerBack: "← Retour à Web Toolbox",
+                langName: "🌐 Français"
+            },
+            es: {
+                backHome: "← Volver a herramientas",
+                title: "🎨 Paleta de colores en línea",
+                featureConvertTitle: "Conversión multiformato",
+                featureConvertDesc: "Convertir entre formatos de color HEX, RGB, HSL y CMYK",
+                featureSchemeTitle: "Esquemas de color",
+                featureSchemeDesc: "Generación automática de esquemas complementarios, análogos y triádicos",
+                featureFavoriteTitle: "Colores favoritos",
+                featureFavoriteDesc: "Guarda los colores más usados para acceso rápido",
+                featureCopyTitle: "Copiar con un clic",
+                featureCopyDesc: "Haz clic para copiar códigos de color instantáneamente",
+                myFavorites: "⭐ Mis favoritos",
+                favoritesHint: "Haz clic en los colores de la paleta para añadir a favoritos",
+                hexLabel: "Valor de color HEX",
+                rgbLabel: "Valor de color RGB",
+                hslLabel: "Valor de color HSL",
+                quickPick: "🎨 Selección rápida",
+                addToFavorites: "Añadir a favoritos",
+                shadesTitle: "Tonos y matices",
+                analogousTitle: "Colores análogos",
+                complementaryTitle: "Complementario y contraste",
+                triadicTitle: "Colores triádicos",
+                tetradicTitle: "Colores tetrádicos",
+                copy: "Copiar",
+                copied: "Copiado",
+                currentColor: "Actual",
+                complementary: "Complementario",
+                clickToPick: "Clic para elegir",
+                alreadyInFavorites: "El color ya está en favoritos",
+                addedToFavorites: "Añadido a favoritos",
+                faqTitle: "Preguntas frecuentes",
+                faq1Q: "¿Cuál es la diferencia entre HEX y RGB?",
+                faq1A: "HEX es un código de color hexadecimal (ej: #FF0000), mientras que RGB representa valores de rojo, verde y azul (ej: 255, 0, 0). Son esencialmente lo mismo, solo representaciones diferentes. HEX es más conciso y comúnmente usado en CSS web; RGB es más intuitivo para entender la composición del color.",
+                faq2Q: "¿Qué son los colores complementarios?",
+                faq2A: "Los colores complementarios son dos colores opuestos en el círculo cromático, como rojo y cian, o azul y naranja. Cuando se usan juntos, crean un fuerte contraste e impacto visual, a menudo usados en diseños que necesitan destacar elementos clave.",
+                faq3Q: "¿Qué es el color HSL?",
+                faq3A: "HSL representa Tono (Hue), Saturación y Luminosidad (Lightness). Comparado con RGB, HSL está más alineado con la percepción humana del color, permitiendo ajustes más intuitivos del brillo y la viveza del color.",
+                faq4Q: "¿Cómo guardar colores favoritos?",
+                faq4A: "Haz clic en el botón de favorito junto a un color para guardarlo en el almacenamiento local del navegador. Los colores guardados se cargarán automáticamente en tu próxima visita, con un máximo de 16 colores favoritos.",
+                faq5Q: "¿Qué es el formato CMYK?",
+                faq5A: "CMYK es un modo de impresión de cuatro colores que representa Cian, Magenta, Amarillo y Negro (Key). Se utiliza principalmente para diseño de impresión y difiere del modo RGB utilizado para visualización en pantalla.",
+                relatedTools: "🔗 Herramientas relacionadas",
+                imageEditor: "Editor de imágenes",
+                imageEditorDesc: "Recortar, rotar, filtros",
+                paintBoard: "Tablero de pintura",
+                paintBoardDesc: "Herramienta de dibujo en línea",
+                icoMaker: "Creador de ICO",
+                icoMakerDesc: "Generar iconos de sitio web",
+                imageConverter: "Convertidor de imágenes",
+                imageConverterDesc: "Conversión PNG/JPG/WebP",
+                footerPrivacy: "Procesamiento puro en frontend, los datos no se suben al servidor",
+                footerBack: "← Volver a Web Toolbox",
+                langName: "🌐 Español"
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferredLanguage') || 'en';
+
+        function t(key) {
+            return i18n[currentLang][key] || i18n['en'][key] || key;
+        }
+
+        function updatePageLanguage() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[currentLang][key]) {
+                    el.textContent = i18n[currentLang][key];
+                }
+            });
+
+            // 更新颜色预览提示
+            const colorPreview = document.getElementById('colorPreview');
+            if (colorPreview) {
+                colorPreview.setAttribute('data-click-hint', t('clickToPick'));
+            }
+
+            // 更新语言切换器显示
+            document.getElementById('langCurrent').textContent = t('langName');
+
+            // 更新动态生成的内容
+            updateAllDisplays();
+            updateFaqContent();
+            updateRelatedToolsContent();
+            updateFooterContent();
+        }
+
+        function updateFaqContent() {
+            const faqSection = document.querySelector('.faq-section');
+            if (faqSection) {
+                faqSection.innerHTML = `
+                    <h2 class="faq-title" data-i18n="faqTitle">${t('faqTitle')}</h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span data-i18n="faq1Q">${t('faq1Q')}</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="faq-answer-content" data-i18n="faq1A">${t('faq1A')}</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span data-i18n="faq2Q">${t('faq2Q')}</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="faq-answer-content" data-i18n="faq2A">${t('faq2A')}</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span data-i18n="faq3Q">${t('faq3Q')}</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="faq-answer-content" data-i18n="faq3A">${t('faq3A')}</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span data-i18n="faq4Q">${t('faq4Q')}</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="faq-answer-content" data-i18n="faq4A">${t('faq4A')}</p>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <button class="faq-question" onclick="toggleFaq(this)">
+                                <span data-i18n="faq5Q">${t('faq5Q')}</span>
+                                <span class="faq-icon">+</span>
+                            </button>
+                            <div class="faq-answer">
+                                <p class="faq-answer-content" data-i18n="faq5A">${t('faq5A')}</p>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        function updateRelatedToolsContent() {
+            const relatedTools = document.querySelector('.related-tools');
+            if (relatedTools) {
+                relatedTools.innerHTML = `
+                    <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="relatedTools">${t('relatedTools')}</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                        <a href="image-editor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
+                            <div style="color: #e6edf3; font-weight: 500;" data-i18n="imageEditor">${t('imageEditor')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="imageEditorDesc">${t('imageEditorDesc')}</div>
+                        </a>
+                        <a href="paint-board.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
+                            <div style="color: #e6edf3; font-weight: 500;" data-i18n="paintBoard">${t('paintBoard')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="paintBoardDesc">${t('paintBoardDesc')}</div>
+                        </a>
+                        <a href="ico-maker.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
+                            <div style="color: #e6edf3; font-weight: 500;" data-i18n="icoMaker">${t('icoMaker')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="icoMakerDesc">${t('icoMakerDesc')}</div>
+                        </a>
+                        <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
+                            <div style="color: #e6edf3; font-weight: 500;" data-i18n="imageConverter">${t('imageConverter')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="imageConverterDesc">${t('imageConverterDesc')}</div>
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        function updateFooterContent() {
+            const footer = document.querySelector('footer');
+            if (footer) {
+                footer.innerHTML = `
+                    <p data-i18n="footerPrivacy">${t('footerPrivacy')}</p>
+                    <p style="margin-top: 12px;">
+                        <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="footerBack">${t('footerBack')}</a>
+                        <span style="margin: 0 12px;">|</span>
+                        <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+                    </p>
+                `;
+            }
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferredLanguage', lang);
+            updatePageLanguage();
+            document.getElementById('langDropdown').classList.remove('active');
+        }
+
+        // 语言切换器事件
+        document.addEventListener('DOMContentLoaded', function() {
+            const langDropdown = document.getElementById('langDropdown');
+            const langCurrent = document.getElementById('langCurrent');
+
+            langCurrent.addEventListener('click', function(e) {
+                e.stopPropagation();
+                langDropdown.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    setLanguage(this.getAttribute('data-lang'));
+                });
+            });
+
+            document.addEventListener('click', function() {
+                langDropdown.classList.remove('active');
+            });
+
+            // 初始化语言
+            updatePageLanguage();
+        });
+
+        // ==================== 调色板功能 ====================
+
         // 当前颜色
         let currentColor = { r: 124, g: 58, b: 237 };
         let favorites = JSON.parse(localStorage.getItem('colorPaletteFavorites') || '[]');
@@ -1043,42 +1448,42 @@
                     <span class="code-label">HEX</span>
                     <span class="code-value">
                         <span>${hex.toUpperCase()}</span>
-                        <button class="copy-btn" onclick="copyText('${hex.toUpperCase()}', this)">复制</button>
+                        <button class="copy-btn" onclick="copyText('${hex.toUpperCase()}', this)">${t('copy')}</button>
                     </span>
                 </div>
                 <div class="code-item">
                     <span class="code-label">RGB</span>
                     <span class="code-value">
                         <span>rgb(${r}, ${g}, ${b})</span>
-                        <button class="copy-btn" onclick="copyText('rgb(${r}, ${g}, ${b})', this)">复制</button>
+                        <button class="copy-btn" onclick="copyText('rgb(${r}, ${g}, ${b})', this)">${t('copy')}</button>
                     </span>
                 </div>
                 <div class="code-item">
                     <span class="code-label">HSL</span>
                     <span class="code-value">
                         <span>hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)</span>
-                        <button class="copy-btn" onclick="copyText('hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)', this)">复制</button>
+                        <button class="copy-btn" onclick="copyText('hsl(${hsl.h}, ${hsl.s}%, ${hsl.l}%)', this)">${t('copy')}</button>
                     </span>
                 </div>
                 <div class="code-item">
                     <span class="code-label">HSV/HSB</span>
                     <span class="code-value">
                         <span>hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)</span>
-                        <button class="copy-btn" onclick="copyText('hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)', this)">复制</button>
+                        <button class="copy-btn" onclick="copyText('hsv(${hsv.h}, ${hsv.s}%, ${hsv.v}%)', this)">${t('copy')}</button>
                     </span>
                 </div>
                 <div class="code-item">
                     <span class="code-label">CMYK</span>
                     <span class="code-value">
                         <span>${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%</span>
-                        <button class="copy-btn" onclick="copyText('cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)', this)">复制</button>
+                        <button class="copy-btn" onclick="copyText('cmyk(${cmyk.c}%, ${cmyk.m}%, ${cmyk.y}%, ${cmyk.k}%)', this)">${t('copy')}</button>
                     </span>
                 </div>
                 <div class="code-item">
                     <span class="code-label">Integer</span>
                     <span class="code-value">
                         <span>${(r << 16) + (g << 8) + b}</span>
-                        <button class="copy-btn" onclick="copyText('${(r << 16) + (g << 8) + b}', this)">复制</button>
+                        <button class="copy-btn" onclick="copyText('${(r << 16) + (g << 8) + b}', this)">${t('copy')}</button>
                     </span>
                 </div>
             `;
@@ -1131,11 +1536,11 @@
 
             document.getElementById('contrastColors').innerHTML = `
                 <div class="contrast-box" style="background: ${hex}; color: ${textColor};" onclick="selectColor('${hex}')">
-                    <div class="contrast-label">当前色</div>
+                    <div class="contrast-label">${t('currentColor')}</div>
                     <div class="contrast-hex">${hex.toUpperCase()}</div>
                 </div>
                 <div class="contrast-box" style="background: ${complementary}; color: ${compTextColor};" onclick="selectColor('${complementary}')">
-                    <div class="contrast-label">互补色</div>
+                    <div class="contrast-label">${t('complementary')}</div>
                     <div class="contrast-hex">${complementary.toUpperCase()}</div>
                 </div>
             `;
@@ -1186,7 +1591,7 @@
         function addToFavorites() {
             const hex = rgbToHex(currentColor.r, currentColor.g, currentColor.b);
             if (favorites.includes(hex)) {
-                showToast('该颜色已在收藏中');
+                showToast(t('alreadyInFavorites'));
                 return;
             }
             if (favorites.length >= 16) {
@@ -1195,7 +1600,7 @@
             favorites.push(hex);
             localStorage.setItem('colorPaletteFavorites', JSON.stringify(favorites));
             renderFavorites();
-            showToast('已添加到收藏');
+            showToast(t('addedToFavorites'));
         }
 
         function removeFavorite(index) {
@@ -1207,10 +1612,10 @@
         // 复制文本
         function copyText(text, btn) {
             navigator.clipboard.writeText(text).then(() => {
-                btn.textContent = '已复制';
+                btn.textContent = t('copied');
                 btn.classList.add('copied');
                 setTimeout(() => {
-                    btn.textContent = '复制';
+                    btn.textContent = t('copy');
                     btn.classList.remove('copied');
                 }, 1500);
             });
@@ -1349,51 +1754,51 @@
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section">
-        <h2 class="faq-title">常见问题</h2>
+        <h2 class="faq-title" data-i18n="faqTitle">FAQ</h2>
         <div class="faq-list">
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>HEX 和 RGB 有什么区别？</span>
+                    <span data-i18n="faq1Q">What is the difference between HEX and RGB?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">HEX 是十六进制颜色码（如 #FF0000），RGB 是红绿蓝数值（如 255, 0, 0），本质相同，只是表示方式不同。HEX 更简洁，常用于网页 CSS；RGB 更直观，便于理解颜色组成。</p>
+                    <p class="faq-answer-content" data-i18n="faq1A">HEX is a hexadecimal color code (e.g., #FF0000), while RGB represents red, green, blue values (e.g., 255, 0, 0). They are essentially the same, just different representations. HEX is more concise and commonly used in web CSS; RGB is more intuitive for understanding color composition.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>什么是互补色？</span>
+                    <span data-i18n="faq2Q">What are complementary colors?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">互补色是色轮上相对的两个颜色，如红色和青色、蓝色和橙色。搭配使用时对比强烈，视觉冲击力强，常用于需要突出重点的设计。</p>
+                    <p class="faq-answer-content" data-i18n="faq2A">Complementary colors are two colors opposite each other on the color wheel, such as red and cyan, or blue and orange. When used together, they create strong contrast and visual impact, often used in designs that need to highlight key elements.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>什么是 HSL 颜色？</span>
+                    <span data-i18n="faq3Q">What is HSL color?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">HSL 表示色相(Hue)、饱和度(Saturation)、亮度(Lightness)。相比 RGB，HSL 更符合人类对颜色的认知，可以更直观地调整颜色的明暗和鲜艳程度。</p>
+                    <p class="faq-answer-content" data-i18n="faq3A">HSL represents Hue, Saturation, and Lightness. Compared to RGB, HSL is more aligned with human perception of color, allowing more intuitive adjustments to color brightness and vibrancy.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>如何保存常用颜色？</span>
+                    <span data-i18n="faq4Q">How to save favorite colors?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">点击颜色旁的收藏按钮，颜色会保存到浏览器本地存储。收藏的颜色会在您下次访问时自动加载，最多可保存 16 个常用颜色。</p>
+                    <p class="faq-answer-content" data-i18n="faq4A">Click the favorite button next to a color to save it to browser local storage. Saved colors will automatically load on your next visit, with a maximum of 16 favorite colors.</p>
                 </div>
             </div>
             <div class="faq-item">
                 <button class="faq-question" onclick="toggleFaq(this)">
-                    <span>CMYK 是什么格式？</span>
+                    <span data-i18n="faq5Q">What is CMYK format?</span>
                     <span class="faq-icon">+</span>
                 </button>
                 <div class="faq-answer">
-                    <p class="faq-answer-content">CMYK 是印刷四分色模式，分别代表青(Cyan)、品红(Magenta)、黄(Yellow)、黑(Key/Black)。主要用于印刷品设计，与屏幕显示的 RGB 模式不同。</p>
+                    <p class="faq-answer-content" data-i18n="faq5A">CMYK is a four-color printing mode representing Cyan, Magenta, Yellow, and Key (Black). It is mainly used for print design and differs from the RGB mode used for screen display.</p>
                 </div>
             </div>
         </div>
@@ -1401,35 +1806,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="image-editor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
-                <div style="color: #e6edf3; font-weight: 500;">图片编辑器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">裁剪、旋转、滤镜</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="imageEditor">Image Editor</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="imageEditorDesc">Crop, rotate, filters</div>
             </a>
             <a href="paint-board.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <div style="color: #e6edf3; font-weight: 500;">画板</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线绘画工具</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="paintBoard">Paint Board</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="paintBoardDesc">Online drawing tool</div>
             </a>
             <a href="ico-maker.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
-                <div style="color: #e6edf3; font-weight: 500;">ICO 图标制作</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">生成网站图标</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="icoMaker">ICO Maker</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="icoMakerDesc">Generate website icons</div>
             </a>
             <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
-                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="imageConverter">Image Converter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="imageConverterDesc">PNG/JPG/WebP conversion</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

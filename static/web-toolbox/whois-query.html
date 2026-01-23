@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Whois 域名查询 - 在线查询域名注册信息 | Web Toolbox</title>
+    <title>Whois Domain Lookup - Query Domain Registration Info | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线Whois域名查询工具，查询域名注册信息、注册商、所有者、注册/到期日期、DNS服务器、域名状态等详细信息。基于RDAP协议，纯前端运行。">
-    <meta name="keywords" content="Whois查询,域名查询,域名注册信息,域名所有者,域名到期时间,DNS查询,域名状态,RDAP查询,免费工具">
+    <meta name="description" content="Free online Whois domain lookup tool. Query domain registration info, registrar, owner, registration/expiration dates, DNS servers, and domain status. Based on RDAP protocol, runs entirely in browser.">
+    <meta name="keywords" content="Whois lookup,domain query,domain registration,domain owner,domain expiration,DNS query,domain status,RDAP query,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/whois-query.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/whois-query.html">
-    <meta property="og:title" content="Whois 域名查询 - 在线查询域名注册信息">
-    <meta property="og:description" content="免费在线Whois域名查询，查询注册商、所有者、到期日期、DNS服务器等信息。">
+    <meta property="og:title" content="Whois Domain Lookup - Query Domain Registration Info">
+    <meta property="og:description" content="Free online Whois domain lookup. Query registrar, owner, expiration date, DNS servers and more.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/whois-query.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Whois 域名查询 - 在线查询域名注册信息">
-    <meta name="twitter:description" content="免费在线Whois域名查询，查询注册商、所有者、到期日期等信息。">
+    <meta name="twitter:title" content="Whois Domain Lookup - Query Domain Registration Info">
+    <meta name="twitter:description" content="Free online Whois domain lookup. Query registrar, owner, expiration date and more.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/whois-query.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "Whois 域名查询",
+        "name": "Whois Domain Lookup",
         "url": "https://www.heyuan110.com/web-toolbox/whois-query.html",
-        "description": "在线查询域名注册信息、注册商、所有者、DNS服务器等",
+        "description": "Online query for domain registration info, registrar, owner, DNS servers and more",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "什么是 WHOIS？",
+                "name": "What is WHOIS?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "WHOIS 是用于查询域名注册信息的协议，可查看域名所有者、注册商等信息。"
+                    "text": "WHOIS is a protocol for querying domain registration information, allowing you to view domain owner, registrar, and other details."
                 }
             },
             {
                 "@type": "Question",
-                "name": "为什么有些域名查不到信息？",
+                "name": "Why can't I find information for some domains?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可能是域名开启了隐私保护，或使用了不支持的域名后缀。"
+                    "text": "The domain may have privacy protection enabled, or uses an unsupported domain extension."
                 }
             },
             {
                 "@type": "Question",
-                "name": "WHOIS 信息准确吗？",
+                "name": "Is WHOIS information accurate?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "信息来自域名注册商，通常是准确的，但部分注册者可能填写虚假信息。"
+                    "text": "Information comes from domain registrars and is usually accurate, but some registrants may provide false information."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以查询 IP 的 WHOIS 吗？",
+                "name": "Can I query IP WHOIS?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "本工具仅支持域名查询，IP 查询请使用 IP 查询工具。"
+                    "text": "This tool only supports domain queries. Please use the IP Lookup tool for IP queries."
                 }
             },
             {
                 "@type": "Question",
-                "name": "查询是否有次数限制？",
+                "name": "Are there query limits?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "免费使用，但频繁查询可能触发 API 限制。"
+                    "text": "Free to use, but frequent queries may trigger API rate limits."
                 }
             }
         ]
@@ -117,6 +117,7 @@
         header {
             text-align: center;
             margin-bottom: 40px;
+            position: relative;
         }
 
         .back-link {
@@ -148,6 +149,16 @@
             color: #a1a1aa;
             font-size: 1.1rem;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 搜索框 */
         .search-section {
@@ -728,46 +739,57 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link">← 返回工具箱</a>
-            <h1>🔍 Whois 域名查询</h1>
-            <p class="subtitle">查询域名注册信息、所有者、注册商、有效期等详细信息</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" data-i18n="backToToolbox">← Back to Toolbox</a>
+            <h1>🔍 <span data-i18n="pageTitle">Whois Domain Lookup</span></h1>
+            <p class="subtitle" data-i18n="pageSubtitle">Query domain registration info, owner, registrar, expiration date and more</p>
         </header>
 
         <!-- 功能特点 -->
         <div class="features-section">
             <div class="feature-card">
                 <div class="feature-icon">📋</div>
-                <div class="feature-title">域名信息</div>
-                <div class="feature-desc">查询域名注册商、注册日期、到期日期等信息</div>
+                <div class="feature-title" data-i18n="featureDomainInfo">Domain Info</div>
+                <div class="feature-desc" data-i18n="featureDomainInfoDesc">Query registrar, registration date, expiration date and more</div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🌐</div>
-                <div class="feature-title">多后缀支持</div>
-                <div class="feature-desc">支持 .com、.net、.org、.cn 等主流域名后缀</div>
+                <div class="feature-title" data-i18n="featureMultiTld">Multi-TLD Support</div>
+                <div class="feature-desc" data-i18n="featureMultiTldDesc">Supports .com, .net, .org, .cn and other popular TLDs</div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">🔒</div>
-                <div class="feature-title">隐私保护</div>
-                <div class="feature-desc">显示域名是否开启隐私保护服务</div>
+                <div class="feature-title" data-i18n="featurePrivacy">Privacy Protection</div>
+                <div class="feature-desc" data-i18n="featurePrivacyDesc">Shows if domain has privacy protection enabled</div>
             </div>
             <div class="feature-card">
                 <div class="feature-icon">⚡</div>
-                <div class="feature-title">一键查询</div>
-                <div class="feature-desc">输入域名即可获取完整 WHOIS 信息</div>
+                <div class="feature-title" data-i18n="featureOneClick">One-Click Query</div>
+                <div class="feature-desc" data-i18n="featureOneClickDesc">Enter domain to get complete WHOIS information</div>
             </div>
         </div>
 
         <!-- 搜索区域 -->
         <div class="search-section">
             <div class="search-box">
-                <input type="text" class="search-input" id="domainInput" placeholder="输入域名，如 example.com" autocomplete="off">
+                <input type="text" class="search-input" id="domainInput" data-i18n-placeholder="inputPlaceholder" placeholder="Enter domain, e.g. example.com" autocomplete="off">
                 <button class="search-btn" id="searchBtn" onclick="queryWhois()">
                     <span>🔍</span>
-                    <span>查询</span>
+                    <span data-i18n="queryBtn">Query</span>
                 </button>
             </div>
             <div class="search-tips">
-                试试查询：
+                <span data-i18n="tryQuery">Try querying:</span>
                 <span onclick="setDomain('google.com')">google.com</span>
                 <span onclick="setDomain('github.com')">github.com</span>
                 <span onclick="setDomain('apple.com')">apple.com</span>
@@ -778,14 +800,14 @@
         <!-- 加载动画 -->
         <div class="loading" id="loading">
             <div class="spinner"></div>
-            <p>正在查询域名信息...</p>
+            <p data-i18n="loadingText">Querying domain information...</p>
         </div>
 
         <!-- 错误提示 -->
         <div class="error-section" id="errorSection">
             <div class="error-icon">😕</div>
-            <h2 class="error-title" id="errorTitle">查询失败</h2>
-            <p class="error-message" id="errorMessage">请检查域名格式是否正确，或稍后重试。</p>
+            <h2 class="error-title" id="errorTitle" data-i18n="queryFailed">Query Failed</h2>
+            <p class="error-message" id="errorMessage" data-i18n="errorDefault">Please check the domain format or try again later.</p>
         </div>
 
         <!-- 查询结果 -->
@@ -795,7 +817,7 @@
                 <div class="domain-name" id="domainName">-</div>
                 <div class="domain-status status-registered" id="domainStatus">
                     <span>🔒</span>
-                    <span>已注册</span>
+                    <span data-i18n="statusRegistered">Registered</span>
                 </div>
             </div>
 
@@ -805,18 +827,18 @@
                 <div class="info-card">
                     <div class="info-card-header">
                         <div class="info-card-icon icon-registrar">🏢</div>
-                        <div class="info-card-title">注册商信息</div>
+                        <div class="info-card-title" data-i18n="registrarInfo">Registrar Info</div>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">注册商</span>
+                        <span class="info-label" data-i18n="registrar">Registrar</span>
                         <span class="info-value" id="registrar">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">注册商 URL</span>
+                        <span class="info-label" data-i18n="registrarUrl">Registrar URL</span>
                         <span class="info-value" id="registrarUrl">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">IANA ID</span>
+                        <span class="info-label" data-i18n="ianaId">IANA ID</span>
                         <span class="info-value" id="ianaId">-</span>
                     </div>
                 </div>
@@ -825,22 +847,22 @@
                 <div class="info-card">
                     <div class="info-card-header">
                         <div class="info-card-icon icon-dates">📅</div>
-                        <div class="info-card-title">重要日期</div>
+                        <div class="info-card-title" data-i18n="importantDates">Important Dates</div>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">注册日期</span>
+                        <span class="info-label" data-i18n="creationDate">Registration Date</span>
                         <span class="info-value" id="creationDate">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">更新日期</span>
+                        <span class="info-label" data-i18n="updateDate">Update Date</span>
                         <span class="info-value" id="updateDate">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">到期日期</span>
+                        <span class="info-label" data-i18n="expirationDate">Expiration Date</span>
                         <span class="info-value" id="expirationDate">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">域名年龄</span>
+                        <span class="info-label" data-i18n="domainAge">Domain Age</span>
                         <span class="info-value highlight" id="domainAge">-</span>
                     </div>
                 </div>
@@ -849,7 +871,7 @@
                 <div class="info-card">
                     <div class="info-card-header">
                         <div class="info-card-icon icon-nameservers">🌐</div>
-                        <div class="info-card-title">DNS 名称服务器</div>
+                        <div class="info-card-title" data-i18n="dnsNameservers">DNS Nameservers</div>
                     </div>
                     <ul class="ns-list" id="nameservers">
                         <li>-</li>
@@ -860,22 +882,22 @@
                 <div class="info-card">
                     <div class="info-card-header">
                         <div class="info-card-icon icon-contact">👤</div>
-                        <div class="info-card-title">联系信息</div>
+                        <div class="info-card-title" data-i18n="contactInfo">Contact Info</div>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">注册人</span>
+                        <span class="info-label" data-i18n="registrantName">Registrant</span>
                         <span class="info-value" id="registrantName">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">组织</span>
+                        <span class="info-label" data-i18n="organization">Organization</span>
                         <span class="info-value" id="registrantOrg">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">国家/地区</span>
+                        <span class="info-label" data-i18n="country">Country/Region</span>
                         <span class="info-value" id="registrantCountry">-</span>
                     </div>
                     <div class="info-item">
-                        <span class="info-label">邮箱</span>
+                        <span class="info-label" data-i18n="email">Email</span>
                         <span class="info-value" id="registrantEmail">-</span>
                     </div>
                 </div>
@@ -884,7 +906,7 @@
                 <div class="info-card" style="grid-column: 1 / -1;">
                     <div class="info-card-header">
                         <div class="info-card-icon icon-status">🏷️</div>
-                        <div class="info-card-title">域名状态</div>
+                        <div class="info-card-title" data-i18n="domainStatus">Domain Status</div>
                     </div>
                     <div class="status-list" id="statusList">
                         <span class="status-tag">-</span>
@@ -896,7 +918,7 @@
             <div class="raw-data-section">
                 <button class="raw-data-toggle" onclick="toggleRawData()">
                     <span id="rawToggleIcon">▶</span>
-                    <span>查看原始 RDAP 数据</span>
+                    <span data-i18n="viewRawData">View Raw RDAP Data</span>
                 </button>
                 <div class="raw-data-content" id="rawDataContent">
                     <pre id="rawData"></pre>
@@ -905,14 +927,480 @@
         </div>
 
         <footer>
-            <p>数据来源：RDAP (Registration Data Access Protocol)</p>
+            <p data-i18n="dataSource">Data source: RDAP (Registration Data Access Protocol)</p>
             <p style="margin-top: 8px;">
-                <a href="index.html">← 返回 Web Toolbox</a>
+                <a href="index.html" data-i18n="backToHome">← Back to Web Toolbox</a>
             </p>
         </footer>
     </div>
 
     <script>
+        // 多语言翻译
+        const i18n = {
+            en: {
+                backToToolbox: '← Back to Toolbox',
+                pageTitle: 'Whois Domain Lookup',
+                pageSubtitle: 'Query domain registration info, owner, registrar, expiration date and more',
+                featureDomainInfo: 'Domain Info',
+                featureDomainInfoDesc: 'Query registrar, registration date, expiration date and more',
+                featureMultiTld: 'Multi-TLD Support',
+                featureMultiTldDesc: 'Supports .com, .net, .org, .cn and other popular TLDs',
+                featurePrivacy: 'Privacy Protection',
+                featurePrivacyDesc: 'Shows if domain has privacy protection enabled',
+                featureOneClick: 'One-Click Query',
+                featureOneClickDesc: 'Enter domain to get complete WHOIS information',
+                inputPlaceholder: 'Enter domain, e.g. example.com',
+                queryBtn: 'Query',
+                tryQuery: 'Try querying:',
+                loadingText: 'Querying domain information...',
+                queryFailed: 'Query Failed',
+                errorDefault: 'Please check the domain format or try again later.',
+                statusRegistered: 'Registered',
+                registrarInfo: 'Registrar Info',
+                registrar: 'Registrar',
+                registrarUrl: 'Registrar URL',
+                ianaId: 'IANA ID',
+                importantDates: 'Important Dates',
+                creationDate: 'Registration Date',
+                updateDate: 'Update Date',
+                expirationDate: 'Expiration Date',
+                domainAge: 'Domain Age',
+                dnsNameservers: 'DNS Nameservers',
+                contactInfo: 'Contact Info',
+                registrantName: 'Registrant',
+                organization: 'Organization',
+                country: 'Country/Region',
+                email: 'Email',
+                domainStatus: 'Domain Status',
+                viewRawData: 'View Raw RDAP Data',
+                dataSource: 'Data source: RDAP (Registration Data Access Protocol)',
+                backToHome: '← Back to Web Toolbox',
+                faqTitle: 'FAQ',
+                faq1Q: 'What is WHOIS?',
+                faq1A: 'WHOIS is a protocol for querying domain registration information, allowing you to view domain owner, registrar, and other details. Through WHOIS queries, you can learn about domain registration time, expiration time, DNS server configuration, and registrant contact information.',
+                faq2Q: 'Why can\'t I find information for some domains?',
+                faq2A: 'The domain may have privacy protection enabled, or uses an unsupported domain extension. Many registrars offer privacy protection services that hide the registrant\'s real information. Additionally, some country-code domains or new TLDs may not support RDAP protocol queries.',
+                faq3Q: 'Is WHOIS information accurate?',
+                faq3A: 'Information comes from domain registrars and is usually accurate, but some registrants may provide false information. ICANN requires domain registration information to be true and valid, but enforcement varies by registrar. Use query results as reference rather than absolute truth.',
+                faq4Q: 'Can I query IP WHOIS?',
+                faq4A: 'This tool only supports domain queries. Please use the IP Lookup tool for IP queries. IP address WHOIS information is managed by Regional Internet Registries (RIRs), separate from the domain WHOIS system.',
+                faq5Q: 'Are there query limits?',
+                faq5A: 'Free to use, but frequent queries may trigger API rate limits. This tool uses public RDAP interfaces, and registries may limit query frequency to prevent abuse. Please use responsibly and avoid bulk queries in short periods.',
+                relatedTools: 'Related Tools',
+                ipLookup: 'IP Lookup',
+                ipLookupDesc: 'Query IP location',
+                websocketTest: 'WebSocket Test',
+                websocketTestDesc: 'WebSocket connection debug',
+                jsonFormat: 'JSON Formatter',
+                jsonFormatDesc: 'JSON format and validate',
+                cryptoTools: 'Crypto Tools',
+                cryptoToolsDesc: 'Base64/MD5/SHA etc',
+                frontendNote: 'Pure frontend processing, data is not uploaded to server',
+                enterDomain: 'Please enter a domain',
+                enterValidDomain: 'Please enter a valid domain to query.',
+                invalidFormat: 'Invalid domain format',
+                invalidFormatMsg: '"{domain}" is not a valid domain format. Please enter a domain like example.com.',
+                domainNotFound: 'Domain not found',
+                domainNotFoundMsg: 'Domain "{domain}" may not be registered or is not in the RDAP database.',
+                queryError: 'Query failed',
+                queryErrorMsg: 'Unable to get domain information. This may be a network issue or the domain does not support RDAP queries.',
+                notProvided: 'Not provided',
+                unknown: 'Unknown',
+                expired: 'Expired',
+                daysLeft: '{days} days left',
+                yearsMonths: '{years} years {months} months',
+                months: '{months} months',
+                langName: '🌐 English'
+            },
+            'zh-CN': {
+                backToToolbox: '← 返回工具箱',
+                pageTitle: 'Whois 域名查询',
+                pageSubtitle: '查询域名注册信息、所有者、注册商、有效期等详细信息',
+                featureDomainInfo: '域名信息',
+                featureDomainInfoDesc: '查询域名注册商、注册日期、到期日期等信息',
+                featureMultiTld: '多后缀支持',
+                featureMultiTldDesc: '支持 .com、.net、.org、.cn 等主流域名后缀',
+                featurePrivacy: '隐私保护',
+                featurePrivacyDesc: '显示域名是否开启隐私保护服务',
+                featureOneClick: '一键查询',
+                featureOneClickDesc: '输入域名即可获取完整 WHOIS 信息',
+                inputPlaceholder: '输入域名，如 example.com',
+                queryBtn: '查询',
+                tryQuery: '试试查询：',
+                loadingText: '正在查询域名信息...',
+                queryFailed: '查询失败',
+                errorDefault: '请检查域名格式是否正确，或稍后重试。',
+                statusRegistered: '已注册',
+                registrarInfo: '注册商信息',
+                registrar: '注册商',
+                registrarUrl: '注册商 URL',
+                ianaId: 'IANA ID',
+                importantDates: '重要日期',
+                creationDate: '注册日期',
+                updateDate: '更新日期',
+                expirationDate: '到期日期',
+                domainAge: '域名年龄',
+                dnsNameservers: 'DNS 名称服务器',
+                contactInfo: '联系信息',
+                registrantName: '注册人',
+                organization: '组织',
+                country: '国家/地区',
+                email: '邮箱',
+                domainStatus: '域名状态',
+                viewRawData: '查看原始 RDAP 数据',
+                dataSource: '数据来源：RDAP (Registration Data Access Protocol)',
+                backToHome: '← 返回 Web Toolbox',
+                faqTitle: '常见问题',
+                faq1Q: '什么是 WHOIS？',
+                faq1A: 'WHOIS 是用于查询域名注册信息的协议，可查看域名所有者、注册商等信息。通过 WHOIS 查询，您可以了解域名的注册时间、到期时间、DNS 服务器配置以及注册人联系方式等关键信息。',
+                faq2Q: '为什么有些域名查不到信息？',
+                faq2A: '可能是域名开启了隐私保护，或使用了不支持的域名后缀。许多域名注册商提供隐私保护服务，会隐藏注册人的真实信息。此外，部分国别域名或新顶级域名可能不支持 RDAP 协议查询。',
+                faq3Q: 'WHOIS 信息准确吗？',
+                faq3A: '信息来自域名注册商，通常是准确的，但部分注册者可能填写虚假信息。ICANN 要求域名注册信息真实有效，但实际执行力度因注册商而异。建议将查询结果作为参考而非绝对依据。',
+                faq4Q: '可以查询 IP 的 WHOIS 吗？',
+                faq4A: '本工具仅支持域名查询，IP 查询请使用 IP 查询工具。IP 地址的 WHOIS 信息由区域互联网注册机构（RIR）管理，与域名 WHOIS 系统是分开的。',
+                faq5Q: '查询是否有次数限制？',
+                faq5A: '免费使用，但频繁查询可能触发 API 限制。本工具使用公共 RDAP 接口，为避免滥用，各注册局可能会对查询频率进行限制。建议合理使用，避免短时间内大量查询。',
+                relatedTools: '相关工具推荐',
+                ipLookup: 'IP 地址查询',
+                ipLookupDesc: '查询 IP 归属地',
+                websocketTest: 'WebSocket 测试',
+                websocketTestDesc: 'WebSocket 连接调试',
+                jsonFormat: 'JSON 格式化',
+                jsonFormatDesc: 'JSON 格式化与校验',
+                cryptoTools: '加密解密工具',
+                cryptoToolsDesc: 'Base64/MD5/SHA等',
+                frontendNote: '纯前端处理，数据不会上传到服务器',
+                enterDomain: '请输入域名',
+                enterValidDomain: '请输入一个有效的域名进行查询。',
+                invalidFormat: '域名格式不正确',
+                invalidFormatMsg: '"{domain}" 不是有效的域名格式。请输入如 example.com 这样的域名。',
+                domainNotFound: '域名未找到',
+                domainNotFoundMsg: '域名 "{domain}" 可能未注册或不在 RDAP 数据库中。',
+                queryError: '查询失败',
+                queryErrorMsg: '无法获取域名信息。可能是网络问题或该域名不支持 RDAP 查询。',
+                notProvided: '未提供',
+                unknown: '未知',
+                expired: '已过期',
+                daysLeft: '剩余 {days} 天',
+                yearsMonths: '{years} 年 {months} 个月',
+                months: '{months} 个月',
+                langName: '🇨🇳 中文'
+            },
+            fr: {
+                backToToolbox: '← Retour à la boîte à outils',
+                pageTitle: 'Recherche Whois',
+                pageSubtitle: 'Rechercher les informations d\'enregistrement de domaine, propriétaire, registraire, date d\'expiration et plus',
+                featureDomainInfo: 'Info Domaine',
+                featureDomainInfoDesc: 'Rechercher le registraire, date d\'enregistrement, date d\'expiration et plus',
+                featureMultiTld: 'Multi-TLD',
+                featureMultiTldDesc: 'Prend en charge .com, .net, .org, .cn et autres TLD populaires',
+                featurePrivacy: 'Protection de la vie privée',
+                featurePrivacyDesc: 'Affiche si le domaine a la protection de la vie privée activée',
+                featureOneClick: 'Recherche en un clic',
+                featureOneClickDesc: 'Entrez le domaine pour obtenir les informations WHOIS complètes',
+                inputPlaceholder: 'Entrez le domaine, ex: example.com',
+                queryBtn: 'Rechercher',
+                tryQuery: 'Essayez:',
+                loadingText: 'Recherche des informations du domaine...',
+                queryFailed: 'Échec de la recherche',
+                errorDefault: 'Veuillez vérifier le format du domaine ou réessayer plus tard.',
+                statusRegistered: 'Enregistré',
+                registrarInfo: 'Info Registraire',
+                registrar: 'Registraire',
+                registrarUrl: 'URL du Registraire',
+                ianaId: 'ID IANA',
+                importantDates: 'Dates importantes',
+                creationDate: 'Date d\'enregistrement',
+                updateDate: 'Date de mise à jour',
+                expirationDate: 'Date d\'expiration',
+                domainAge: 'Âge du domaine',
+                dnsNameservers: 'Serveurs DNS',
+                contactInfo: 'Coordonnées',
+                registrantName: 'Titulaire',
+                organization: 'Organisation',
+                country: 'Pays/Région',
+                email: 'Email',
+                domainStatus: 'Statut du domaine',
+                viewRawData: 'Voir les données RDAP brutes',
+                dataSource: 'Source des données: RDAP (Registration Data Access Protocol)',
+                backToHome: '← Retour à Web Toolbox',
+                faqTitle: 'FAQ',
+                faq1Q: 'Qu\'est-ce que WHOIS?',
+                faq1A: 'WHOIS est un protocole pour interroger les informations d\'enregistrement de domaine, permettant de voir le propriétaire, le registraire et d\'autres détails. Grâce aux requêtes WHOIS, vous pouvez connaître la date d\'enregistrement, la date d\'expiration, la configuration des serveurs DNS et les coordonnées du titulaire.',
+                faq2Q: 'Pourquoi certains domaines n\'affichent pas d\'informations?',
+                faq2A: 'Le domaine peut avoir la protection de la vie privée activée, ou utilise une extension non prise en charge. De nombreux registraires offrent des services de protection qui masquent les vraies informations du titulaire. De plus, certains domaines nationaux ou nouveaux TLD peuvent ne pas prendre en charge les requêtes RDAP.',
+                faq3Q: 'Les informations WHOIS sont-elles exactes?',
+                faq3A: 'Les informations proviennent des registraires et sont généralement exactes, mais certains titulaires peuvent fournir de fausses informations. L\'ICANN exige que les informations soient vraies, mais l\'application varie selon le registraire. Utilisez les résultats comme référence.',
+                faq4Q: 'Puis-je rechercher le WHOIS d\'une IP?',
+                faq4A: 'Cet outil ne prend en charge que les domaines. Veuillez utiliser l\'outil de recherche IP pour les adresses IP. Les informations WHOIS des IP sont gérées par les RIR, séparément du système WHOIS des domaines.',
+                faq5Q: 'Y a-t-il des limites de requêtes?',
+                faq5A: 'Gratuit, mais les requêtes fréquentes peuvent déclencher des limites de taux. Cet outil utilise des interfaces RDAP publiques, et les registres peuvent limiter la fréquence des requêtes. Utilisez de manière responsable.',
+                relatedTools: 'Outils connexes',
+                ipLookup: 'Recherche IP',
+                ipLookupDesc: 'Rechercher la localisation IP',
+                websocketTest: 'Test WebSocket',
+                websocketTestDesc: 'Débogage de connexion WebSocket',
+                jsonFormat: 'Formateur JSON',
+                jsonFormatDesc: 'Formater et valider JSON',
+                cryptoTools: 'Outils Crypto',
+                cryptoToolsDesc: 'Base64/MD5/SHA etc',
+                frontendNote: 'Traitement côté client, les données ne sont pas téléchargées sur le serveur',
+                enterDomain: 'Veuillez entrer un domaine',
+                enterValidDomain: 'Veuillez entrer un domaine valide pour la recherche.',
+                invalidFormat: 'Format de domaine invalide',
+                invalidFormatMsg: '"{domain}" n\'est pas un format de domaine valide. Veuillez entrer un domaine comme example.com.',
+                domainNotFound: 'Domaine non trouvé',
+                domainNotFoundMsg: 'Le domaine "{domain}" n\'est peut-être pas enregistré ou n\'est pas dans la base RDAP.',
+                queryError: 'Échec de la recherche',
+                queryErrorMsg: 'Impossible d\'obtenir les informations. Cela peut être un problème réseau ou le domaine ne prend pas en charge RDAP.',
+                notProvided: 'Non fourni',
+                unknown: 'Inconnu',
+                expired: 'Expiré',
+                daysLeft: '{days} jours restants',
+                yearsMonths: '{years} ans {months} mois',
+                months: '{months} mois',
+                langName: '🇫🇷 Français'
+            },
+            es: {
+                backToToolbox: '← Volver a herramientas',
+                pageTitle: 'Consulta Whois',
+                pageSubtitle: 'Consultar información de registro de dominio, propietario, registrador, fecha de vencimiento y más',
+                featureDomainInfo: 'Info de Dominio',
+                featureDomainInfoDesc: 'Consultar registrador, fecha de registro, fecha de vencimiento y más',
+                featureMultiTld: 'Multi-TLD',
+                featureMultiTldDesc: 'Soporta .com, .net, .org, .cn y otros TLD populares',
+                featurePrivacy: 'Protección de Privacidad',
+                featurePrivacyDesc: 'Muestra si el dominio tiene protección de privacidad activada',
+                featureOneClick: 'Consulta en un clic',
+                featureOneClickDesc: 'Ingrese el dominio para obtener información WHOIS completa',
+                inputPlaceholder: 'Ingrese dominio, ej: example.com',
+                queryBtn: 'Consultar',
+                tryQuery: 'Pruebe consultar:',
+                loadingText: 'Consultando información del dominio...',
+                queryFailed: 'Consulta fallida',
+                errorDefault: 'Por favor verifique el formato del dominio o intente más tarde.',
+                statusRegistered: 'Registrado',
+                registrarInfo: 'Info del Registrador',
+                registrar: 'Registrador',
+                registrarUrl: 'URL del Registrador',
+                ianaId: 'ID IANA',
+                importantDates: 'Fechas importantes',
+                creationDate: 'Fecha de registro',
+                updateDate: 'Fecha de actualización',
+                expirationDate: 'Fecha de vencimiento',
+                domainAge: 'Antigüedad del dominio',
+                dnsNameservers: 'Servidores DNS',
+                contactInfo: 'Información de contacto',
+                registrantName: 'Titular',
+                organization: 'Organización',
+                country: 'País/Región',
+                email: 'Email',
+                domainStatus: 'Estado del dominio',
+                viewRawData: 'Ver datos RDAP sin procesar',
+                dataSource: 'Fuente de datos: RDAP (Registration Data Access Protocol)',
+                backToHome: '← Volver a Web Toolbox',
+                faqTitle: 'Preguntas frecuentes',
+                faq1Q: '¿Qué es WHOIS?',
+                faq1A: 'WHOIS es un protocolo para consultar información de registro de dominios, permitiendo ver el propietario, registrador y otros detalles. A través de consultas WHOIS, puede conocer la fecha de registro, fecha de vencimiento, configuración de servidores DNS e información de contacto del titular.',
+                faq2Q: '¿Por qué algunos dominios no muestran información?',
+                faq2A: 'El dominio puede tener protección de privacidad activada, o usa una extensión no soportada. Muchos registradores ofrecen servicios de privacidad que ocultan la información real del titular. Además, algunos dominios de país o nuevos TLD pueden no soportar consultas RDAP.',
+                faq3Q: '¿Es precisa la información WHOIS?',
+                faq3A: 'La información proviene de los registradores y generalmente es precisa, pero algunos titulares pueden proporcionar información falsa. ICANN requiere que la información sea verdadera, pero la aplicación varía según el registrador. Use los resultados como referencia.',
+                faq4Q: '¿Puedo consultar WHOIS de IP?',
+                faq4A: 'Esta herramienta solo soporta dominios. Use la herramienta de búsqueda de IP para direcciones IP. La información WHOIS de IP es gestionada por los RIR, separada del sistema WHOIS de dominios.',
+                faq5Q: '¿Hay límites de consultas?',
+                faq5A: 'Gratis, pero las consultas frecuentes pueden activar límites de tasa. Esta herramienta usa interfaces RDAP públicas, y los registros pueden limitar la frecuencia de consultas. Use responsablemente.',
+                relatedTools: 'Herramientas relacionadas',
+                ipLookup: 'Búsqueda de IP',
+                ipLookupDesc: 'Consultar ubicación de IP',
+                websocketTest: 'Prueba WebSocket',
+                websocketTestDesc: 'Depuración de conexión WebSocket',
+                jsonFormat: 'Formateador JSON',
+                jsonFormatDesc: 'Formatear y validar JSON',
+                cryptoTools: 'Herramientas Crypto',
+                cryptoToolsDesc: 'Base64/MD5/SHA etc',
+                frontendNote: 'Procesamiento del lado del cliente, los datos no se cargan al servidor',
+                enterDomain: 'Por favor ingrese un dominio',
+                enterValidDomain: 'Por favor ingrese un dominio válido para consultar.',
+                invalidFormat: 'Formato de dominio inválido',
+                invalidFormatMsg: '"{domain}" no es un formato de dominio válido. Por favor ingrese un dominio como example.com.',
+                domainNotFound: 'Dominio no encontrado',
+                domainNotFoundMsg: 'El dominio "{domain}" puede no estar registrado o no está en la base de datos RDAP.',
+                queryError: 'Consulta fallida',
+                queryErrorMsg: 'No se puede obtener información del dominio. Puede ser un problema de red o el dominio no soporta consultas RDAP.',
+                notProvided: 'No proporcionado',
+                unknown: 'Desconocido',
+                expired: 'Expirado',
+                daysLeft: '{days} días restantes',
+                yearsMonths: '{years} años {months} meses',
+                months: '{months} meses',
+                langName: '🇪🇸 Español'
+            }
+        };
+
+        let currentLang = localStorage.getItem('whois-lang') || 'en';
+
+        // 获取翻译文本
+        function t(key, params = {}) {
+            let text = i18n[currentLang][key] || i18n['en'][key] || key;
+            Object.keys(params).forEach(param => {
+                text = text.replace(`{${param}}`, params[param]);
+            });
+            return text;
+        }
+
+        // 应用翻译
+        function applyTranslations() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                el.textContent = t(key);
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                el.placeholder = t(key);
+            });
+            document.getElementById('langCurrent').textContent = t('langName');
+
+            // 更新 FAQ 区块
+            updateFaqSection();
+            // 更新相关工具区块
+            updateRelatedToolsSection();
+            // 更新底部页脚
+            updateFooterSection();
+        }
+
+        // 更新 FAQ 区块
+        function updateFaqSection() {
+            const faqSection = document.querySelector('.faq-section');
+            if (faqSection) {
+                faqSection.innerHTML = `
+                    <h2 class="faq-title">
+                        <span>❓</span>
+                        <span>${t('faqTitle')}</span>
+                    </h2>
+                    <div class="faq-list">
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>${t('faq1Q')}</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">${t('faq1A')}</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>${t('faq2Q')}</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">${t('faq2A')}</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>${t('faq3Q')}</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">${t('faq3A')}</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>${t('faq4Q')}</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">${t('faq4A')}</div>
+                            </div>
+                        </div>
+                        <div class="faq-item">
+                            <div class="faq-question" onclick="toggleFaq(this)">
+                                <span>${t('faq5Q')}</span>
+                                <span class="faq-toggle">+</span>
+                            </div>
+                            <div class="faq-answer">
+                                <div class="faq-answer-content">${t('faq5A')}</div>
+                            </div>
+                        </div>
+                    </div>
+                `;
+            }
+        }
+
+        // 更新相关工具区块
+        function updateRelatedToolsSection() {
+            const relatedSection = document.querySelector('.related-tools');
+            if (relatedSection) {
+                relatedSection.innerHTML = `
+                    <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 ${t('relatedTools')}</h3>
+                    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
+                        <a href="ip-lookup.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
+                            <div style="color: #e6edf3; font-weight: 500;">${t('ipLookup')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">${t('ipLookupDesc')}</div>
+                        </a>
+                        <a href="websocket-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
+                            <div style="color: #e6edf3; font-weight: 500;">${t('websocketTest')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">${t('websocketTestDesc')}</div>
+                        </a>
+                        <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
+                            <div style="color: #e6edf3; font-weight: 500;">${t('jsonFormat')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">${t('jsonFormatDesc')}</div>
+                        </a>
+                        <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
+                            <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
+                            <div style="color: #e6edf3; font-weight: 500;">${t('cryptoTools')}</div>
+                            <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">${t('cryptoToolsDesc')}</div>
+                        </a>
+                    </div>
+                `;
+            }
+        }
+
+        // 更新底部页脚
+        function updateFooterSection() {
+            const footerSection = document.querySelector('footer.bottom-footer');
+            if (footerSection) {
+                footerSection.innerHTML = `
+                    <p>${t('frontendNote')}</p>
+                    <p style="margin-top: 12px;">
+                        <a href="index.html" style="color: #58a6ff; text-decoration: none;">${t('backToHome')}</a>
+                        <span style="margin: 0 12px;">|</span>
+                        <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
+                    </p>
+                `;
+            }
+        }
+
+        // 切换语言
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('whois-lang', lang);
+            applyTranslations();
+            document.getElementById('langDropdown').classList.remove('active');
+        }
+
+        // 语言下拉菜单事件
+        document.getElementById('langCurrent').addEventListener('click', function(e) {
+            e.stopPropagation();
+            document.getElementById('langDropdown').classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function() {
+                switchLanguage(this.dataset.lang);
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
         // 域名输入框回车事件
         document.getElementById('domainInput').addEventListener('keypress', function(e) {
             if (e.key === 'Enter') {
@@ -947,7 +1435,8 @@
             if (!dateStr) return '-';
             try {
                 const date = new Date(dateStr);
-                return date.toLocaleDateString('zh-CN', {
+                const locale = currentLang === 'zh-CN' ? 'zh-CN' : currentLang === 'fr' ? 'fr-FR' : currentLang === 'es' ? 'es-ES' : 'en-US';
+                return date.toLocaleDateString(locale, {
                     year: 'numeric',
                     month: '2-digit',
                     day: '2-digit',
@@ -969,9 +1458,9 @@
                 const months = Math.floor(((now - created) % (365.25 * 24 * 60 * 60 * 1000)) / (30.44 * 24 * 60 * 60 * 1000));
 
                 if (years > 0) {
-                    return `${years} 年 ${months} 个月`;
+                    return t('yearsMonths', { years, months });
                 } else {
-                    return `${months} 个月`;
+                    return t('months', { months });
                 }
             } catch (e) {
                 return '-';
@@ -987,13 +1476,13 @@
                 const daysLeft = Math.floor((expiry - now) / (24 * 60 * 60 * 1000));
 
                 if (daysLeft < 0) {
-                    return '<span class="time-badge danger">已过期</span>';
+                    return `<span class="time-badge danger">${t('expired')}</span>`;
                 } else if (daysLeft <= 30) {
-                    return `<span class="time-badge danger">剩余 ${daysLeft} 天</span>`;
+                    return `<span class="time-badge danger">${t('daysLeft', { days: daysLeft })}</span>`;
                 } else if (daysLeft <= 90) {
-                    return `<span class="time-badge warning">剩余 ${daysLeft} 天</span>`;
+                    return `<span class="time-badge warning">${t('daysLeft', { days: daysLeft })}</span>`;
                 } else {
-                    return `<span class="time-badge safe">剩余 ${daysLeft} 天</span>`;
+                    return `<span class="time-badge safe">${t('daysLeft', { days: daysLeft })}</span>`;
                 }
             } catch (e) {
                 return '';
@@ -1003,31 +1492,24 @@
         // 解析状态描述
         function getStatusDescription(status) {
             const statusMap = {
-                'active': '活跃',
-                'inactive': '未激活',
-                'client delete prohibited': '禁止删除',
-                'client hold': '客户端暂停',
-                'client renew prohibited': '禁止续费',
-                'client transfer prohibited': '禁止转移',
-                'client update prohibited': '禁止更新',
-                'server delete prohibited': '服务器禁止删除',
-                'server hold': '服务器暂停',
-                'server renew prohibited': '服务器禁止续费',
-                'server transfer prohibited': '服务器禁止转移',
-                'server update prohibited': '服务器禁止更新',
-                'add period': '新增保护期',
-                'auto renew period': '自动续费期',
-                'pending create': '等待创建',
-                'pending delete': '等待删除',
-                'pending renew': '等待续费',
-                'pending restore': '等待恢复',
-                'pending transfer': '等待转移',
-                'pending update': '等待更新',
-                'redemption period': '赎回期',
-                'renew period': '续费期',
-                'transfer period': '转移期'
+                'active': { en: 'Active', 'zh-CN': '活跃', fr: 'Actif', es: 'Activo' },
+                'inactive': { en: 'Inactive', 'zh-CN': '未激活', fr: 'Inactif', es: 'Inactivo' },
+                'client delete prohibited': { en: 'Delete Prohibited', 'zh-CN': '禁止删除', fr: 'Suppression interdite', es: 'Eliminación prohibida' },
+                'client hold': { en: 'Client Hold', 'zh-CN': '客户端暂停', fr: 'Suspension client', es: 'Suspensión cliente' },
+                'client renew prohibited': { en: 'Renew Prohibited', 'zh-CN': '禁止续费', fr: 'Renouvellement interdit', es: 'Renovación prohibida' },
+                'client transfer prohibited': { en: 'Transfer Prohibited', 'zh-CN': '禁止转移', fr: 'Transfert interdit', es: 'Transferencia prohibida' },
+                'client update prohibited': { en: 'Update Prohibited', 'zh-CN': '禁止更新', fr: 'Mise à jour interdite', es: 'Actualización prohibida' },
+                'server delete prohibited': { en: 'Server Delete Prohibited', 'zh-CN': '服务器禁止删除', fr: 'Suppression serveur interdite', es: 'Eliminación servidor prohibida' },
+                'server hold': { en: 'Server Hold', 'zh-CN': '服务器暂停', fr: 'Suspension serveur', es: 'Suspensión servidor' },
+                'server renew prohibited': { en: 'Server Renew Prohibited', 'zh-CN': '服务器禁止续费', fr: 'Renouvellement serveur interdit', es: 'Renovación servidor prohibida' },
+                'server transfer prohibited': { en: 'Server Transfer Prohibited', 'zh-CN': '服务器禁止转移', fr: 'Transfert serveur interdit', es: 'Transferencia servidor prohibida' },
+                'server update prohibited': { en: 'Server Update Prohibited', 'zh-CN': '服务器禁止更新', fr: 'Mise à jour serveur interdite', es: 'Actualización servidor prohibida' }
             };
-            return statusMap[status.toLowerCase()] || status;
+            const statusLower = status.toLowerCase();
+            if (statusMap[statusLower]) {
+                return statusMap[statusLower][currentLang] || statusMap[statusLower]['en'];
+            }
+            return status;
         }
 
         // 主查询函数
@@ -1036,12 +1518,12 @@
             const domain = cleanDomain(input);
 
             if (!domain) {
-                showError('请输入域名', '请输入一个有效的域名进行查询。');
+                showError(t('enterDomain'), t('enterValidDomain'));
                 return;
             }
 
             if (!isValidDomain(domain)) {
-                showError('域名格式不正确', `"${domain}" 不是有效的域名格式。请输入如 example.com 这样的域名。`);
+                showError(t('invalidFormat'), t('invalidFormatMsg', { domain }));
                 return;
             }
 
@@ -1060,7 +1542,7 @@
 
                 if (!response.ok) {
                     if (response.status === 404) {
-                        showError('域名未找到', `域名 "${domain}" 可能未注册或不在 RDAP 数据库中。`);
+                        showError(t('domainNotFound'), t('domainNotFoundMsg', { domain }));
                     } else {
                         throw new Error(`HTTP ${response.status}`);
                     }
@@ -1071,8 +1553,8 @@
                 displayResult(domain, data);
 
             } catch (error) {
-                console.error('查询失败:', error);
-                showError('查询失败', '无法获取域名信息。可能是网络问题或该域名不支持 RDAP 查询。');
+                console.error('Query failed:', error);
+                showError(t('queryError'), t('queryErrorMsg'));
             } finally {
                 showLoading(false);
             }
@@ -1138,7 +1620,7 @@
                     nsListEl.appendChild(li);
                 });
             } else {
-                nsListEl.innerHTML = '<li>未提供</li>';
+                nsListEl.innerHTML = `<li>${t('notProvided')}</li>`;
             }
 
             // 解析联系信息
@@ -1182,7 +1664,7 @@
                     statusListEl.appendChild(span);
                 });
             } else {
-                statusListEl.innerHTML = '<span class="status-tag">未知</span>';
+                statusListEl.innerHTML = `<span class="status-tag">${t('unknown')}</span>`;
             }
 
             // 原始数据
@@ -1228,67 +1710,28 @@
             const faqItem = element.parentElement;
             faqItem.classList.toggle('active');
         }
+
+        // 页面加载时应用翻译
+        document.addEventListener('DOMContentLoaded', function() {
+            applyTranslations();
+        });
     </script>
 
     <!-- FAQ 问答区块 -->
     <section class="faq-section">
         <h2 class="faq-title">
             <span>❓</span>
-            <span>常见问题</span>
+            <span data-i18n="faqTitle">FAQ</span>
         </h2>
         <div class="faq-list">
             <div class="faq-item">
                 <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>什么是 WHOIS？</span>
+                    <span>What is WHOIS?</span>
                     <span class="faq-toggle">+</span>
                 </div>
                 <div class="faq-answer">
                     <div class="faq-answer-content">
-                        WHOIS 是用于查询域名注册信息的协议，可查看域名所有者、注册商等信息。通过 WHOIS 查询，您可以了解域名的注册时间、到期时间、DNS 服务器配置以及注册人联系方式等关键信息。
-                    </div>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>为什么有些域名查不到信息？</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        可能是域名开启了隐私保护，或使用了不支持的域名后缀。许多域名注册商提供隐私保护服务，会隐藏注册人的真实信息。此外，部分国别域名或新顶级域名可能不支持 RDAP 协议查询。
-                    </div>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>WHOIS 信息准确吗？</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        信息来自域名注册商，通常是准确的，但部分注册者可能填写虚假信息。ICANN 要求域名注册信息真实有效，但实际执行力度因注册商而异。建议将查询结果作为参考而非绝对依据。
-                    </div>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>可以查询 IP 的 WHOIS 吗？</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        本工具仅支持域名查询，IP 查询请使用 <a href="ip-lookup.html" style="color: #667eea;">IP 查询工具</a>。IP 地址的 WHOIS 信息由区域互联网注册机构（RIR）管理，与域名 WHOIS 系统是分开的。
-                    </div>
-                </div>
-            </div>
-            <div class="faq-item">
-                <div class="faq-question" onclick="toggleFaq(this)">
-                    <span>查询是否有次数限制？</span>
-                    <span class="faq-toggle">+</span>
-                </div>
-                <div class="faq-answer">
-                    <div class="faq-answer-content">
-                        免费使用，但频繁查询可能触发 API 限制。本工具使用公共 RDAP 接口，为避免滥用，各注册局可能会对查询频率进行限制。建议合理使用，避免短时间内大量查询。
+                        WHOIS is a protocol for querying domain registration information, allowing you to view domain owner, registrar, and other details. Through WHOIS queries, you can learn about domain registration time, expiration time, DNS server configuration, and registrant contact information.
                     </div>
                 </div>
             </div>
@@ -1297,35 +1740,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="ip-lookup.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🌐</div>
-                <div style="color: #e6edf3; font-weight: 500;">IP 地址查询</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">查询 IP 归属地</div>
+                <div style="color: #e6edf3; font-weight: 500;">IP Lookup</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Query IP location</div>
             </a>
             <a href="websocket-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
-                <div style="color: #e6edf3; font-weight: 500;">WebSocket 测试</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+                <div style="color: #e6edf3; font-weight: 500;">WebSocket Test</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">WebSocket connection debug</div>
             </a>
             <a href="json-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
-                <div style="color: #e6edf3; font-weight: 500;">JSON 格式化</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON 格式化与校验</div>
+                <div style="color: #e6edf3; font-weight: 500;">JSON Formatter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">JSON format and validate</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #e6edf3; font-weight: 500;">加密解密工具</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA等</div>
+                <div style="color: #e6edf3; font-weight: 500;">Crypto Tools</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/SHA etc</div>
             </a>
         </div>
     </section>
 
-    <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+    <footer class="bottom-footer" style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
+        <p data-i18n="frontendNote">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="backToHome">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

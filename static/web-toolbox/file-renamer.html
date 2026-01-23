@@ -1,38 +1,38 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- ===================== SEO META ===================== -->
-    <title>文件批量重命名 - 在线文件重命名工具 | Web Toolbox</title>
-    <meta name="description" content="免费在线文件批量重命名工具，支持顺序编号、查找替换、添加前后缀、正则替换等多种模式。拖拽排序，实时预览，完全本地处理保护隐私。">
-    <meta name="keywords" content="文件重命名,批量重命名,文件改名,顺序编号,查找替换,在线工具,隐私保护">
+    <title>Batch File Renamer - Online File Rename Tool | Web Toolbox</title>
+    <meta name="description" content="Free online batch file renaming tool. Supports sequential numbering, find & replace, prefix/suffix, regex replacement. Drag to reorder, real-time preview, fully local processing for privacy.">
+    <meta name="keywords" content="file rename,batch rename,file renamer,sequential numbering,find replace,online tool,privacy protection">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/file-renamer.html">
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/file-renamer.html">
-    <meta property="og:title" content="文件批量重命名 - 在线文件重命名工具">
-    <meta property="og:description" content="免费在线文件批量重命名，支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理。">
+    <meta property="og:title" content="Batch File Renamer - Online File Rename Tool">
+    <meta property="og:description" content="Free online batch file renaming with sequential numbering, find & replace, prefix/suffix modes. Fully local processing.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/file-renamer.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
 
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="文件批量重命名 - 在线文件重命名工具">
-    <meta name="twitter:description" content="免费在线文件批量重命名，支持多种模式，完全本地处理保护隐私。">
+    <meta name="twitter:title" content="Batch File Renamer - Online File Rename Tool">
+    <meta name="twitter:description" content="Free online batch file renaming with multiple modes. Fully local processing for privacy.">
 
     <script type="application/ld+json">
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "文件批量重命名",
-        "description": "免费在线文件批量重命名工具，支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理",
+        "name": "Batch File Renamer",
+        "description": "Free online batch file renaming tool with sequential numbering, find & replace, prefix/suffix modes. Fully local processing.",
         "url": "https://www.heyuan110.com/web-toolbox/file-renamer.html",
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -43,42 +43,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "可以批量重命名多少文件？",
+                "name": "How many files can be batch renamed?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "理论上无限制，取决于浏览器性能，建议一次不超过1000个。"
+                    "text": "Theoretically unlimited, depends on browser performance. Recommended not to exceed 1000 files at once."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持哪些重命名规则？",
+                "name": "What renaming rules are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持添加前缀后缀、插入序号、添加日期、查找替换、大小写转换等多种重命名规则。"
+                    "text": "Supports prefix/suffix, sequential numbering, date insertion, find & replace, case conversion and more."
                 }
             },
             {
                 "@type": "Question",
-                "name": "文件会上传到服务器吗？",
+                "name": "Are files uploaded to a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会，所有处理在本地完成，文件不会离开你的电脑，完全保护隐私。"
+                    "text": "No, all processing is done locally. Files never leave your computer, ensuring complete privacy."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以撤销重命名吗？",
+                "name": "Can I undo the rename?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "下载前可以重新调整规则，下载后需要手动恢复原文件名。"
+                    "text": "Before downloading, you can readjust rules. After downloading, you need to manually restore original filenames."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持重命名文件夹吗？",
+                "name": "Can folders be renamed?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "仅支持文件重命名，不支持文件夹重命名。"
+                    "text": "Only file renaming is supported, not folder renaming."
                 }
             }
         ]
@@ -90,9 +90,9 @@
     <script>
     const TOOL_META = {
         slug: 'file-renamer',
-        name: '文件批量重命名',
-        description: '支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理保护隐私',
-        keywords: ['文件重命名', '批量重命名', '顺序编号', '查找替换']
+        name: 'Batch File Renamer',
+        description: 'Supports sequential numbering, find & replace, prefix/suffix modes. Fully local processing for privacy.',
+        keywords: ['file rename', 'batch rename', 'sequential numbering', 'find replace']
     };
     </script>
     <!-- ===================== /TOOL_META ===================== -->
@@ -127,6 +127,7 @@
         header {
             text-align: center;
             margin-bottom: 30px;
+            position: relative;
         }
 
         .back-link {
@@ -171,6 +172,16 @@
             font-size: 0.85rem;
             margin-top: 12px;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 卡片 */
         .card {
@@ -460,7 +471,7 @@
         }
 
         .file-list:empty::before {
-            content: "请上传文件";
+            content: attr(data-empty-text);
             display: block;
             text-align: center;
             color: #71717a;
@@ -713,33 +724,44 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link">← 返回工具列表</a>
-            <h1>📝 文件批量重命名</h1>
-            <p class="subtitle">支持顺序编号、查找替换、添加前后缀等多种模式</p>
-            <span class="privacy-badge">🔒 完全本地处理，不上传服务器</span>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" data-i18n="backLink">← Back to Tools</a>
+            <h1 data-i18n="title">📝 Batch File Renamer</h1>
+            <p class="subtitle" data-i18n="subtitle">Supports sequential numbering, find & replace, prefix/suffix and more</p>
+            <span class="privacy-badge" data-i18n="privacyBadge">🔒 Fully local processing, no server upload</span>
         </header>
 
         <!-- 功能特点 -->
         <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; margin-bottom: 30px;">
             <div class="feature-card" style="background: rgba(124, 58, 237, 0.1); border: 1px solid rgba(124, 58, 237, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">📁</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">批量重命名</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">支持同时处理多个文件，一键批量重命名，提高工作效率</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="featureBatchTitle">Batch Rename</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="featureBatchDesc">Process multiple files at once, one-click batch rename to improve efficiency</p>
             </div>
             <div class="feature-card" style="background: rgba(6, 182, 212, 0.1); border: 1px solid rgba(6, 182, 212, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">⚙️</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">多种规则</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">支持添加前缀后缀、序号、日期、查找替换等多种重命名规则</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="featureRulesTitle">Multiple Rules</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="featureRulesDesc">Supports prefix/suffix, numbering, date, find & replace, case conversion and more</p>
             </div>
             <div class="feature-card" style="background: rgba(34, 197, 94, 0.1); border: 1px solid rgba(34, 197, 94, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">👁️</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">实时预览</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">修改规则时实时预览重命名效果，确认无误后再应用</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="featurePreviewTitle">Real-time Preview</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="featurePreviewDesc">Preview rename results in real-time as you adjust rules, confirm before applying</p>
             </div>
             <div class="feature-card" style="background: rgba(244, 114, 182, 0.1); border: 1px solid rgba(244, 114, 182, 0.2); border-radius: 12px; padding: 20px; text-align: center;">
                 <div style="font-size: 2rem; margin-bottom: 10px;">🔒</div>
-                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;">本地处理</h3>
-                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;">文件不上传，仅在浏览器中处理文件名，隐私安全有保障</p>
+                <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 8px;" data-i18n="featureLocalTitle">Local Processing</h3>
+                <p style="color: #a1a1aa; font-size: 0.85rem; line-height: 1.5;" data-i18n="featureLocalDesc">Files are not uploaded, only filenames are processed in browser, privacy secured</p>
             </div>
         </section>
 
@@ -747,11 +769,11 @@
         <div class="card">
             <div class="upload-zone" id="uploadZone">
                 <div class="upload-icon">📁</div>
-                <p class="upload-text">点击选择文件/文件夹 或 拖拽到此处</p>
-                <p class="upload-hint">支持任意类型文件，选择文件夹会自动读取所有文件</p>
+                <p class="upload-text" data-i18n="uploadText">Click to select files/folder or drag & drop here</p>
+                <p class="upload-hint" data-i18n="uploadHint">Supports any file type, selecting folder will read all files automatically</p>
                 <div class="upload-btns">
-                    <button class="upload-btn" id="btnSelectFiles">📄 选择文件</button>
-                    <button class="upload-btn" id="btnSelectFolder">📂 选择文件夹</button>
+                    <button class="upload-btn" id="btnSelectFiles" data-i18n="selectFiles">📄 Select Files</button>
+                    <button class="upload-btn" id="btnSelectFolder" data-i18n="selectFolder">📂 Select Folder</button>
                 </div>
             </div>
             <input type="file" id="fileInput" class="hidden-input" multiple>
@@ -760,37 +782,37 @@
 
         <!-- 重命名设置 -->
         <div class="card">
-            <h2 class="card-title">⚙️ 重命名模式</h2>
+            <h2 class="card-title" data-i18n="renameMode">⚙️ Rename Mode</h2>
 
             <!-- 选项卡 -->
             <div class="tabs">
-                <button class="tab-btn active" data-tab="sequence">顺序编号</button>
-                <button class="tab-btn" data-tab="replace">查找替换</button>
-                <button class="tab-btn" data-tab="prefix">添加前后缀</button>
-                <button class="tab-btn" data-tab="regex">正则替换</button>
-                <button class="tab-btn" data-tab="case">大小写转换</button>
+                <button class="tab-btn active" data-tab="sequence" data-i18n="tabSequence">Sequential Numbering</button>
+                <button class="tab-btn" data-tab="replace" data-i18n="tabReplace">Find & Replace</button>
+                <button class="tab-btn" data-tab="prefix" data-i18n="tabPrefix">Add Prefix/Suffix</button>
+                <button class="tab-btn" data-tab="regex" data-i18n="tabRegex">Regex Replace</button>
+                <button class="tab-btn" data-tab="case" data-i18n="tabCase">Case Conversion</button>
             </div>
 
             <!-- 顺序编号 -->
             <div class="tab-panel active" id="panel-sequence">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">命名模板</label>
-                        <input type="text" class="form-input" id="seqTemplate" value="file_###" placeholder="例如: IMG_###">
-                        <p class="form-hint"># 表示编号位置，位数决定补零数量；{self} 表示原文件名</p>
+                        <label class="form-label" data-i18n="templateLabel">Naming Template</label>
+                        <input type="text" class="form-input" id="seqTemplate" value="file_###" data-i18n-placeholder="templatePlaceholder">
+                        <p class="form-hint" data-i18n="templateHint"># indicates number position, count determines zero padding; {self} represents original filename</p>
                         <div class="template-tags">
                             <span class="template-tag" data-template="###">###</span>
                             <span class="template-tag" data-template="{self}_###">{self}_###</span>
                             <span class="template-tag" data-template="IMG_####">IMG_####</span>
-                            <span class="template-tag" data-template="{self}">仅保留原名</span>
+                            <span class="template-tag" data-template="{self}" data-i18n="keepOriginal">Keep original</span>
                         </div>
                     </div>
                     <div class="form-group" style="max-width: 150px;">
-                        <label class="form-label">起始编号</label>
+                        <label class="form-label" data-i18n="startNumber">Start Number</label>
                         <input type="number" class="form-input" id="seqStart" value="1" min="0">
                     </div>
                     <div class="form-group" style="max-width: 150px;">
-                        <label class="form-label">步长</label>
+                        <label class="form-label" data-i18n="stepLabel">Step</label>
                         <input type="number" class="form-input" id="seqStep" value="1" min="1">
                     </div>
                 </div>
@@ -800,23 +822,23 @@
             <div class="tab-panel" id="panel-replace">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">查找内容</label>
-                        <input type="text" class="form-input" id="replaceFind" placeholder="要替换的文本">
+                        <label class="form-label" data-i18n="findLabel">Find Text</label>
+                        <input type="text" class="form-input" id="replaceFind" data-i18n-placeholder="findPlaceholder">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">替换为</label>
-                        <input type="text" class="form-input" id="replaceWith" placeholder="新文本（留空则删除）">
+                        <label class="form-label" data-i18n="replaceLabel">Replace With</label>
+                        <input type="text" class="form-input" id="replaceWith" data-i18n-placeholder="replacePlaceholder">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group" style="max-width: 200px;">
                         <label class="form-label">
-                            <input type="checkbox" id="replaceCaseSensitive"> 区分大小写
+                            <input type="checkbox" id="replaceCaseSensitive"> <span data-i18n="caseSensitive">Case sensitive</span>
                         </label>
                     </div>
                     <div class="form-group" style="max-width: 200px;">
                         <label class="form-label">
-                            <input type="checkbox" id="replaceAll" checked> 替换所有匹配
+                            <input type="checkbox" id="replaceAll" checked> <span data-i18n="replaceAll">Replace all matches</span>
                         </label>
                     </div>
                 </div>
@@ -826,12 +848,12 @@
             <div class="tab-panel" id="panel-prefix">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">添加前缀</label>
-                        <input type="text" class="form-input" id="prefixText" placeholder="添加到文件名开头">
+                        <label class="form-label" data-i18n="prefixLabel">Add Prefix</label>
+                        <input type="text" class="form-input" id="prefixText" data-i18n-placeholder="prefixPlaceholder">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">添加后缀</label>
-                        <input type="text" class="form-input" id="suffixText" placeholder="添加到文件名末尾（扩展名前）">
+                        <label class="form-label" data-i18n="suffixLabel">Add Suffix</label>
+                        <input type="text" class="form-input" id="suffixText" data-i18n-placeholder="suffixPlaceholder">
                     </div>
                 </div>
             </div>
@@ -840,23 +862,23 @@
             <div class="tab-panel" id="panel-regex">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">正则表达式</label>
-                        <input type="text" class="form-input" id="regexPattern" placeholder="例如: \d+">
+                        <label class="form-label" data-i18n="regexLabel">Regular Expression</label>
+                        <input type="text" class="form-input" id="regexPattern" data-i18n-placeholder="regexPlaceholder">
                     </div>
                     <div class="form-group">
-                        <label class="form-label">替换为</label>
-                        <input type="text" class="form-input" id="regexReplace" placeholder="支持 $1 等捕获组">
+                        <label class="form-label" data-i18n="regexReplaceLabel">Replace With</label>
+                        <input type="text" class="form-input" id="regexReplace" data-i18n-placeholder="regexReplacePlaceholder">
                     </div>
                 </div>
                 <div class="form-row">
                     <div class="form-group" style="max-width: 200px;">
                         <label class="form-label">
-                            <input type="checkbox" id="regexCaseInsensitive"> 忽略大小写
+                            <input type="checkbox" id="regexCaseInsensitive"> <span data-i18n="ignoreCase">Ignore case</span>
                         </label>
                     </div>
                     <div class="form-group" style="max-width: 200px;">
                         <label class="form-label">
-                            <input type="checkbox" id="regexGlobal" checked> 全局匹配
+                            <input type="checkbox" id="regexGlobal" checked> <span data-i18n="globalMatch">Global match</span>
                         </label>
                     </div>
                 </div>
@@ -866,17 +888,17 @@
             <div class="tab-panel" id="panel-case">
                 <div class="form-row">
                     <div class="form-group">
-                        <label class="form-label">转换方式</label>
+                        <label class="form-label" data-i18n="caseTypeLabel">Conversion Type</label>
                         <select class="form-select" id="caseType">
-                            <option value="lower">全部小写 (lowercase)</option>
-                            <option value="upper">全部大写 (UPPERCASE)</option>
-                            <option value="title">首字母大写 (Title Case)</option>
-                            <option value="sentence">句首大写 (Sentence case)</option>
+                            <option value="lower" data-i18n="caseLower">All lowercase (lowercase)</option>
+                            <option value="upper" data-i18n="caseUpper">All uppercase (UPPERCASE)</option>
+                            <option value="title" data-i18n="caseTitle">Title Case</option>
+                            <option value="sentence" data-i18n="caseSentence">Sentence case</option>
                         </select>
                     </div>
                     <div class="form-group" style="max-width: 250px;">
                         <label class="form-label">
-                            <input type="checkbox" id="caseIncludeExt"> 包含扩展名
+                            <input type="checkbox" id="caseIncludeExt"> <span data-i18n="includeExtension">Include extension</span>
                         </label>
                     </div>
                 </div>
@@ -884,47 +906,47 @@
 
             <!-- 操作按钮 -->
             <div class="action-bar">
-                <button class="btn btn-primary" id="btnPreview" disabled>👁️ 预览效果</button>
-                <button class="btn btn-success" id="btnApply" disabled>✅ 应用重命名</button>
-                <button class="btn btn-secondary" id="btnReset">🔄 重置</button>
-                <button class="btn btn-secondary" id="btnClear">🗑️ 清空文件</button>
+                <button class="btn btn-primary" id="btnPreview" disabled data-i18n="btnPreview">👁️ Preview</button>
+                <button class="btn btn-success" id="btnApply" disabled data-i18n="btnApply">✅ Apply Rename</button>
+                <button class="btn btn-secondary" id="btnReset" data-i18n="btnReset">🔄 Reset</button>
+                <button class="btn btn-secondary" id="btnClear" data-i18n="btnClear">🗑️ Clear Files</button>
             </div>
         </div>
 
         <!-- 文件列表 -->
         <div class="card">
             <div class="file-list-header">
-                <h2 class="card-title" style="margin-bottom: 0;">📋 文件列表</h2>
+                <h2 class="card-title" style="margin-bottom: 0;" data-i18n="fileListTitle">📋 File List</h2>
                 <div style="display: flex; align-items: center; gap: 16px;">
-                    <span class="file-count" id="fileCount">共 0 个文件</span>
+                    <span class="file-count" id="fileCount" data-i18n="fileCount">0 files total</span>
                     <div class="sort-btns">
-                        <button class="sort-btn" data-sort="name-asc">名称 ↑</button>
-                        <button class="sort-btn" data-sort="name-desc">名称 ↓</button>
-                        <button class="sort-btn" data-sort="size-asc">大小 ↑</button>
-                        <button class="sort-btn" data-sort="size-desc">大小 ↓</button>
+                        <button class="sort-btn" data-sort="name-asc" data-i18n="sortNameAsc">Name ↑</button>
+                        <button class="sort-btn" data-sort="name-desc" data-i18n="sortNameDesc">Name ↓</button>
+                        <button class="sort-btn" data-sort="size-asc" data-i18n="sortSizeAsc">Size ↑</button>
+                        <button class="sort-btn" data-sort="size-desc" data-i18n="sortSizeDesc">Size ↓</button>
                     </div>
                 </div>
             </div>
-            <div class="file-list" id="fileList"></div>
+            <div class="file-list" id="fileList" data-empty-text="Please upload files"></div>
 
             <!-- 下载选项 -->
             <div class="download-section" id="downloadSection" style="display: none;">
-                <h3 class="card-title">📥 下载文件</h3>
+                <h3 class="card-title" data-i18n="downloadTitle">📥 Download Files</h3>
                 <div class="download-options">
                     <div class="download-option" id="downloadSingle">
                         <div class="download-option-icon">📄</div>
-                        <div class="download-option-title">单独下载</div>
-                        <div class="download-option-desc">点击文件列表中的下载按钮</div>
+                        <div class="download-option-title" data-i18n="downloadSingle">Download Single</div>
+                        <div class="download-option-desc" data-i18n="downloadSingleDesc">Click download button in file list</div>
                     </div>
                     <div class="download-option" id="downloadZip">
                         <div class="download-option-icon">📦</div>
-                        <div class="download-option-title">打包下载</div>
-                        <div class="download-option-desc">所有文件打包为 ZIP</div>
+                        <div class="download-option-title" data-i18n="downloadZip">Download as ZIP</div>
+                        <div class="download-option-desc" data-i18n="downloadZipDesc">Package all files into ZIP</div>
                     </div>
                     <div class="download-option" id="downloadSequence">
                         <div class="download-option-icon">⬇️</div>
-                        <div class="download-option-title">逐个下载</div>
-                        <div class="download-option-desc">依次下载每个文件</div>
+                        <div class="download-option-title" data-i18n="downloadSequence">Download One by One</div>
+                        <div class="download-option-desc" data-i18n="downloadSequenceDesc">Download each file sequentially</div>
                     </div>
                 </div>
                 <div class="progress-bar" id="progressBar">
@@ -934,7 +956,7 @@
         </div>
 
         <footer>
-            <p>Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">返回工具列表</a></p>
+            <p data-i18n="footerCredit">Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">Back to Tools</a></p>
         </footer>
     </div>
 
@@ -945,6 +967,482 @@
     <script>
     (function() {
         'use strict';
+
+        // ===== i18n 多语言支持 =====
+        const translations = {
+            en: {
+                backLink: '← Back to Tools',
+                title: '📝 Batch File Renamer',
+                subtitle: 'Supports sequential numbering, find & replace, prefix/suffix and more',
+                privacyBadge: '🔒 Fully local processing, no server upload',
+                featureBatchTitle: 'Batch Rename',
+                featureBatchDesc: 'Process multiple files at once, one-click batch rename to improve efficiency',
+                featureRulesTitle: 'Multiple Rules',
+                featureRulesDesc: 'Supports prefix/suffix, numbering, date, find & replace, case conversion and more',
+                featurePreviewTitle: 'Real-time Preview',
+                featurePreviewDesc: 'Preview rename results in real-time as you adjust rules, confirm before applying',
+                featureLocalTitle: 'Local Processing',
+                featureLocalDesc: 'Files are not uploaded, only filenames are processed in browser, privacy secured',
+                uploadText: 'Click to select files/folder or drag & drop here',
+                uploadHint: 'Supports any file type, selecting folder will read all files automatically',
+                selectFiles: '📄 Select Files',
+                selectFolder: '📂 Select Folder',
+                renameMode: '⚙️ Rename Mode',
+                tabSequence: 'Sequential Numbering',
+                tabReplace: 'Find & Replace',
+                tabPrefix: 'Add Prefix/Suffix',
+                tabRegex: 'Regex Replace',
+                tabCase: 'Case Conversion',
+                templateLabel: 'Naming Template',
+                templatePlaceholder: 'e.g. IMG_###',
+                templateHint: '# indicates number position, count determines zero padding; {self} represents original filename',
+                keepOriginal: 'Keep original',
+                startNumber: 'Start Number',
+                stepLabel: 'Step',
+                findLabel: 'Find Text',
+                findPlaceholder: 'Text to replace',
+                replaceLabel: 'Replace With',
+                replacePlaceholder: 'New text (empty to delete)',
+                caseSensitive: 'Case sensitive',
+                replaceAll: 'Replace all matches',
+                prefixLabel: 'Add Prefix',
+                prefixPlaceholder: 'Add to beginning of filename',
+                suffixLabel: 'Add Suffix',
+                suffixPlaceholder: 'Add to end of filename (before extension)',
+                regexLabel: 'Regular Expression',
+                regexPlaceholder: 'e.g. \\d+',
+                regexReplaceLabel: 'Replace With',
+                regexReplacePlaceholder: 'Supports $1 capture groups',
+                ignoreCase: 'Ignore case',
+                globalMatch: 'Global match',
+                caseTypeLabel: 'Conversion Type',
+                caseLower: 'All lowercase (lowercase)',
+                caseUpper: 'All uppercase (UPPERCASE)',
+                caseTitle: 'Title Case',
+                caseSentence: 'Sentence case',
+                includeExtension: 'Include extension',
+                btnPreview: '👁️ Preview',
+                btnApply: '✅ Apply Rename',
+                btnReset: '🔄 Reset',
+                btnClear: '🗑️ Clear Files',
+                fileListTitle: '📋 File List',
+                fileCount: '{count} files total',
+                sortNameAsc: 'Name ↑',
+                sortNameDesc: 'Name ↓',
+                sortSizeAsc: 'Size ↑',
+                sortSizeDesc: 'Size ↓',
+                fileListEmpty: 'Please upload files',
+                downloadTitle: '📥 Download Files',
+                downloadSingle: 'Download Single',
+                downloadSingleDesc: 'Click download button in file list',
+                downloadZip: 'Download as ZIP',
+                downloadZipDesc: 'Package all files into ZIP',
+                downloadSequence: 'Download One by One',
+                downloadSequenceDesc: 'Download each file sequentially',
+                footerCredit: 'Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">Back to Tools</a>',
+                toastAdded: 'Added {count} files',
+                toastCleared: 'All files cleared',
+                toastSorted: 'Sorted',
+                toastPreviewUpdated: 'Preview updated',
+                toastNoChanges: 'No files to rename',
+                toastApplied: 'Rename applied, please select download method',
+                toastReset: 'All filenames reset',
+                toastZipDone: 'ZIP packaging complete',
+                toastZipFailed: 'Packaging failed: ',
+                toastAllDownloaded: 'All files downloaded',
+                confirmClear: 'Are you sure you want to clear all files?',
+                faqTitle: '❓ FAQ',
+                faqQ1: 'How many files can be batch renamed?',
+                faqA1: 'Theoretically unlimited, depends on browser performance. Recommended not to exceed 1000 files for smooth operation.',
+                faqQ2: 'What renaming rules are supported?',
+                faqA2: 'Supports prefix/suffix, sequential numbering, date insertion, find & replace, case conversion and more to meet most needs.',
+                faqQ3: 'Are files uploaded to a server?',
+                faqA3: 'No, all processing is done locally. Files never leave your computer, ensuring complete privacy.',
+                faqQ4: 'Can I undo the rename?',
+                faqA4: 'Before downloading, you can readjust rules or click "Reset" to restore. After downloading, you need to manually restore filenames.',
+                faqQ5: 'Can folders be renamed?',
+                faqA5: 'Only file renaming is supported, not folders. Selecting a folder will automatically read all files within for renaming.',
+                relatedTools: '🔗 Related Tools',
+                relatedImageToPdf: 'Images to PDF',
+                relatedImageToPdfDesc: 'Merge multiple images into PDF',
+                relatedImageCompressor: 'Image Compressor',
+                relatedImageCompressorDesc: 'Batch compress image size',
+                relatedImageConverter: 'Image Converter',
+                relatedImageConverterDesc: 'WebP/PNG/JPG conversion',
+                relatedCryptoTools: 'Crypto Toolbox',
+                relatedCryptoToolsDesc: 'Base64/MD5/AES etc.',
+                footerPrivacy: 'Pure frontend processing, files are not uploaded to server',
+                footerBack: '← Back to Web Toolbox'
+            },
+            'zh-CN': {
+                backLink: '← 返回工具列表',
+                title: '📝 文件批量重命名',
+                subtitle: '支持顺序编号、查找替换、添加前后缀等多种模式',
+                privacyBadge: '🔒 完全本地处理，不上传服务器',
+                featureBatchTitle: '批量重命名',
+                featureBatchDesc: '支持同时处理多个文件，一键批量重命名，提高工作效率',
+                featureRulesTitle: '多种规则',
+                featureRulesDesc: '支持添加前缀后缀、序号、日期、查找替换等多种重命名规则',
+                featurePreviewTitle: '实时预览',
+                featurePreviewDesc: '修改规则时实时预览重命名效果，确认无误后再应用',
+                featureLocalTitle: '本地处理',
+                featureLocalDesc: '文件不上传，仅在浏览器中处理文件名，隐私安全有保障',
+                uploadText: '点击选择文件/文件夹 或 拖拽到此处',
+                uploadHint: '支持任意类型文件，选择文件夹会自动读取所有文件',
+                selectFiles: '📄 选择文件',
+                selectFolder: '📂 选择文件夹',
+                renameMode: '⚙️ 重命名模式',
+                tabSequence: '顺序编号',
+                tabReplace: '查找替换',
+                tabPrefix: '添加前后缀',
+                tabRegex: '正则替换',
+                tabCase: '大小写转换',
+                templateLabel: '命名模板',
+                templatePlaceholder: '例如: IMG_###',
+                templateHint: '# 表示编号位置，位数决定补零数量；{self} 表示原文件名',
+                keepOriginal: '仅保留原名',
+                startNumber: '起始编号',
+                stepLabel: '步长',
+                findLabel: '查找内容',
+                findPlaceholder: '要替换的文本',
+                replaceLabel: '替换为',
+                replacePlaceholder: '新文本（留空则删除）',
+                caseSensitive: '区分大小写',
+                replaceAll: '替换所有匹配',
+                prefixLabel: '添加前缀',
+                prefixPlaceholder: '添加到文件名开头',
+                suffixLabel: '添加后缀',
+                suffixPlaceholder: '添加到文件名末尾（扩展名前）',
+                regexLabel: '正则表达式',
+                regexPlaceholder: '例如: \\d+',
+                regexReplaceLabel: '替换为',
+                regexReplacePlaceholder: '支持 $1 等捕获组',
+                ignoreCase: '忽略大小写',
+                globalMatch: '全局匹配',
+                caseTypeLabel: '转换方式',
+                caseLower: '全部小写 (lowercase)',
+                caseUpper: '全部大写 (UPPERCASE)',
+                caseTitle: '首字母大写 (Title Case)',
+                caseSentence: '句首大写 (Sentence case)',
+                includeExtension: '包含扩展名',
+                btnPreview: '👁️ 预览效果',
+                btnApply: '✅ 应用重命名',
+                btnReset: '🔄 重置',
+                btnClear: '🗑️ 清空文件',
+                fileListTitle: '📋 文件列表',
+                fileCount: '共 {count} 个文件',
+                sortNameAsc: '名称 ↑',
+                sortNameDesc: '名称 ↓',
+                sortSizeAsc: '大小 ↑',
+                sortSizeDesc: '大小 ↓',
+                fileListEmpty: '请上传文件',
+                downloadTitle: '📥 下载文件',
+                downloadSingle: '单独下载',
+                downloadSingleDesc: '点击文件列表中的下载按钮',
+                downloadZip: '打包下载',
+                downloadZipDesc: '所有文件打包为 ZIP',
+                downloadSequence: '逐个下载',
+                downloadSequenceDesc: '依次下载每个文件',
+                footerCredit: 'Made with ❤️ by <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">返回工具列表</a>',
+                toastAdded: '已添加 {count} 个文件',
+                toastCleared: '已清空所有文件',
+                toastSorted: '已排序',
+                toastPreviewUpdated: '预览已更新',
+                toastNoChanges: '没有需要重命名的文件',
+                toastApplied: '重命名已应用，请选择下载方式',
+                toastReset: '已重置所有文件名',
+                toastZipDone: 'ZIP 打包完成',
+                toastZipFailed: '打包失败: ',
+                toastAllDownloaded: '所有文件下载完成',
+                confirmClear: '确定要清空所有文件吗？',
+                faqTitle: '❓ 常见问题',
+                faqQ1: '可以批量重命名多少文件？',
+                faqA1: '理论上无限制，取决于浏览器性能，建议一次不超过1000个文件，以保证流畅的操作体验。',
+                faqQ2: '支持哪些重命名规则？',
+                faqA2: '支持添加前缀后缀、插入序号、添加日期、查找替换、大小写转换等多种规则，可以满足大部分重命名需求。',
+                faqQ3: '文件会上传到服务器吗？',
+                faqA3: '不会，所有处理在本地完成，文件不会离开你的电脑，完全保护你的隐私安全。',
+                faqQ4: '可以撤销重命名吗？',
+                faqA4: '下载前可以重新调整规则或点击"重置"按钮恢复原名，下载后需要手动恢复文件名。',
+                faqQ5: '支持重命名文件夹吗？',
+                faqA5: '仅支持文件重命名，不支持文件夹。选择文件夹时会自动读取其中的所有文件进行重命名。',
+                relatedTools: '🔗 相关工具推荐',
+                relatedImageToPdf: '图片合并为PDF',
+                relatedImageToPdfDesc: '多图合并生成PDF',
+                relatedImageCompressor: '图片压缩',
+                relatedImageCompressorDesc: '批量压缩图片体积',
+                relatedImageConverter: '图片格式转换',
+                relatedImageConverterDesc: 'WebP/PNG/JPG 互转',
+                relatedCryptoTools: '加解密工具箱',
+                relatedCryptoToolsDesc: 'Base64/MD5/AES 等',
+                footerPrivacy: '纯前端处理，文件不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页'
+            },
+            fr: {
+                backLink: '← Retour aux outils',
+                title: '📝 Renommeur de fichiers par lot',
+                subtitle: 'Prend en charge la numérotation séquentielle, rechercher/remplacer, préfixe/suffixe et plus',
+                privacyBadge: '🔒 Traitement entièrement local, pas de téléversement',
+                featureBatchTitle: 'Renommage par lot',
+                featureBatchDesc: 'Traitez plusieurs fichiers à la fois, renommage par lot en un clic pour améliorer l\'efficacité',
+                featureRulesTitle: 'Règles multiples',
+                featureRulesDesc: 'Prend en charge préfixe/suffixe, numérotation, date, rechercher/remplacer, conversion de casse et plus',
+                featurePreviewTitle: 'Aperçu en temps réel',
+                featurePreviewDesc: 'Prévisualisez les résultats en temps réel lors de l\'ajustement des règles, confirmez avant d\'appliquer',
+                featureLocalTitle: 'Traitement local',
+                featureLocalDesc: 'Les fichiers ne sont pas téléversés, seuls les noms sont traités dans le navigateur, confidentialité assurée',
+                uploadText: 'Cliquez pour sélectionner des fichiers/dossier ou glissez-déposez ici',
+                uploadHint: 'Prend en charge tout type de fichier, la sélection d\'un dossier lira automatiquement tous les fichiers',
+                selectFiles: '📄 Sélectionner des fichiers',
+                selectFolder: '📂 Sélectionner un dossier',
+                renameMode: '⚙️ Mode de renommage',
+                tabSequence: 'Numérotation séquentielle',
+                tabReplace: 'Rechercher/Remplacer',
+                tabPrefix: 'Ajouter préfixe/suffixe',
+                tabRegex: 'Remplacement regex',
+                tabCase: 'Conversion de casse',
+                templateLabel: 'Modèle de nommage',
+                templatePlaceholder: 'ex: IMG_###',
+                templateHint: '# indique la position du numéro, le nombre détermine le remplissage par zéros; {self} représente le nom original',
+                keepOriginal: 'Garder l\'original',
+                startNumber: 'Numéro de départ',
+                stepLabel: 'Pas',
+                findLabel: 'Texte à rechercher',
+                findPlaceholder: 'Texte à remplacer',
+                replaceLabel: 'Remplacer par',
+                replacePlaceholder: 'Nouveau texte (vide pour supprimer)',
+                caseSensitive: 'Sensible à la casse',
+                replaceAll: 'Remplacer toutes les occurrences',
+                prefixLabel: 'Ajouter un préfixe',
+                prefixPlaceholder: 'Ajouter au début du nom de fichier',
+                suffixLabel: 'Ajouter un suffixe',
+                suffixPlaceholder: 'Ajouter à la fin du nom (avant l\'extension)',
+                regexLabel: 'Expression régulière',
+                regexPlaceholder: 'ex: \\d+',
+                regexReplaceLabel: 'Remplacer par',
+                regexReplacePlaceholder: 'Prend en charge les groupes de capture $1',
+                ignoreCase: 'Ignorer la casse',
+                globalMatch: 'Correspondance globale',
+                caseTypeLabel: 'Type de conversion',
+                caseLower: 'Tout en minuscules (lowercase)',
+                caseUpper: 'Tout en majuscules (UPPERCASE)',
+                caseTitle: 'Casse du titre (Title Case)',
+                caseSentence: 'Casse de phrase (Sentence case)',
+                includeExtension: 'Inclure l\'extension',
+                btnPreview: '👁️ Aperçu',
+                btnApply: '✅ Appliquer le renommage',
+                btnReset: '🔄 Réinitialiser',
+                btnClear: '🗑️ Effacer les fichiers',
+                fileListTitle: '📋 Liste des fichiers',
+                fileCount: '{count} fichiers au total',
+                sortNameAsc: 'Nom ↑',
+                sortNameDesc: 'Nom ↓',
+                sortSizeAsc: 'Taille ↑',
+                sortSizeDesc: 'Taille ↓',
+                fileListEmpty: 'Veuillez téléverser des fichiers',
+                downloadTitle: '📥 Télécharger les fichiers',
+                downloadSingle: 'Télécharger individuellement',
+                downloadSingleDesc: 'Cliquez sur le bouton de téléchargement dans la liste',
+                downloadZip: 'Télécharger en ZIP',
+                downloadZipDesc: 'Empaqueter tous les fichiers en ZIP',
+                downloadSequence: 'Télécharger un par un',
+                downloadSequenceDesc: 'Télécharger chaque fichier séquentiellement',
+                footerCredit: 'Fait avec ❤️ par <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">Retour aux outils</a>',
+                toastAdded: '{count} fichiers ajoutés',
+                toastCleared: 'Tous les fichiers effacés',
+                toastSorted: 'Trié',
+                toastPreviewUpdated: 'Aperçu mis à jour',
+                toastNoChanges: 'Aucun fichier à renommer',
+                toastApplied: 'Renommage appliqué, veuillez sélectionner la méthode de téléchargement',
+                toastReset: 'Tous les noms de fichiers réinitialisés',
+                toastZipDone: 'Empaquetage ZIP terminé',
+                toastZipFailed: 'Échec de l\'empaquetage: ',
+                toastAllDownloaded: 'Tous les fichiers téléchargés',
+                confirmClear: 'Êtes-vous sûr de vouloir effacer tous les fichiers?',
+                faqTitle: '❓ FAQ',
+                faqQ1: 'Combien de fichiers peuvent être renommés par lot?',
+                faqA1: 'Théoriquement illimité, dépend des performances du navigateur. Recommandé de ne pas dépasser 1000 fichiers pour un fonctionnement fluide.',
+                faqQ2: 'Quelles règles de renommage sont prises en charge?',
+                faqA2: 'Prend en charge préfixe/suffixe, numérotation séquentielle, insertion de date, rechercher/remplacer, conversion de casse et plus.',
+                faqQ3: 'Les fichiers sont-ils téléversés sur un serveur?',
+                faqA3: 'Non, tout le traitement est fait localement. Les fichiers ne quittent jamais votre ordinateur, assurant une confidentialité totale.',
+                faqQ4: 'Puis-je annuler le renommage?',
+                faqA4: 'Avant le téléchargement, vous pouvez réajuster les règles ou cliquer sur "Réinitialiser". Après le téléchargement, vous devez restaurer manuellement.',
+                faqQ5: 'Les dossiers peuvent-ils être renommés?',
+                faqA5: 'Seul le renommage de fichiers est pris en charge, pas les dossiers. Sélectionner un dossier lira automatiquement tous les fichiers pour le renommage.',
+                relatedTools: '🔗 Outils connexes',
+                relatedImageToPdf: 'Images vers PDF',
+                relatedImageToPdfDesc: 'Fusionner plusieurs images en PDF',
+                relatedImageCompressor: 'Compresseur d\'images',
+                relatedImageCompressorDesc: 'Compresser les images par lot',
+                relatedImageConverter: 'Convertisseur d\'images',
+                relatedImageConverterDesc: 'Conversion WebP/PNG/JPG',
+                relatedCryptoTools: 'Boîte à outils crypto',
+                relatedCryptoToolsDesc: 'Base64/MD5/AES etc.',
+                footerPrivacy: 'Traitement côté client, les fichiers ne sont pas téléversés',
+                footerBack: '← Retour à Web Toolbox'
+            },
+            es: {
+                backLink: '← Volver a herramientas',
+                title: '📝 Renombrador de archivos por lotes',
+                subtitle: 'Soporta numeración secuencial, buscar/reemplazar, prefijo/sufijo y más',
+                privacyBadge: '🔒 Procesamiento completamente local, sin subir al servidor',
+                featureBatchTitle: 'Renombrado por lotes',
+                featureBatchDesc: 'Procesa múltiples archivos a la vez, renombrado por lotes con un clic para mejorar la eficiencia',
+                featureRulesTitle: 'Múltiples reglas',
+                featureRulesDesc: 'Soporta prefijo/sufijo, numeración, fecha, buscar/reemplazar, conversión de mayúsculas y más',
+                featurePreviewTitle: 'Vista previa en tiempo real',
+                featurePreviewDesc: 'Vista previa de resultados en tiempo real al ajustar reglas, confirma antes de aplicar',
+                featureLocalTitle: 'Procesamiento local',
+                featureLocalDesc: 'Los archivos no se suben, solo se procesan los nombres en el navegador, privacidad asegurada',
+                uploadText: 'Clic para seleccionar archivos/carpeta o arrastrar y soltar aquí',
+                uploadHint: 'Soporta cualquier tipo de archivo, seleccionar carpeta leerá todos los archivos automáticamente',
+                selectFiles: '📄 Seleccionar archivos',
+                selectFolder: '📂 Seleccionar carpeta',
+                renameMode: '⚙️ Modo de renombrado',
+                tabSequence: 'Numeración secuencial',
+                tabReplace: 'Buscar/Reemplazar',
+                tabPrefix: 'Añadir prefijo/sufijo',
+                tabRegex: 'Reemplazo regex',
+                tabCase: 'Conversión de mayúsculas',
+                templateLabel: 'Plantilla de nombre',
+                templatePlaceholder: 'ej: IMG_###',
+                templateHint: '# indica posición del número, la cantidad determina el relleno con ceros; {self} representa el nombre original',
+                keepOriginal: 'Mantener original',
+                startNumber: 'Número inicial',
+                stepLabel: 'Paso',
+                findLabel: 'Texto a buscar',
+                findPlaceholder: 'Texto a reemplazar',
+                replaceLabel: 'Reemplazar con',
+                replacePlaceholder: 'Nuevo texto (vacío para eliminar)',
+                caseSensitive: 'Distinguir mayúsculas',
+                replaceAll: 'Reemplazar todas las coincidencias',
+                prefixLabel: 'Añadir prefijo',
+                prefixPlaceholder: 'Añadir al inicio del nombre',
+                suffixLabel: 'Añadir sufijo',
+                suffixPlaceholder: 'Añadir al final del nombre (antes de la extensión)',
+                regexLabel: 'Expresión regular',
+                regexPlaceholder: 'ej: \\d+',
+                regexReplaceLabel: 'Reemplazar con',
+                regexReplacePlaceholder: 'Soporta grupos de captura $1',
+                ignoreCase: 'Ignorar mayúsculas',
+                globalMatch: 'Coincidencia global',
+                caseTypeLabel: 'Tipo de conversión',
+                caseLower: 'Todo minúsculas (lowercase)',
+                caseUpper: 'Todo mayúsculas (UPPERCASE)',
+                caseTitle: 'Mayúscula inicial (Title Case)',
+                caseSentence: 'Mayúscula de oración (Sentence case)',
+                includeExtension: 'Incluir extensión',
+                btnPreview: '👁️ Vista previa',
+                btnApply: '✅ Aplicar renombrado',
+                btnReset: '🔄 Restablecer',
+                btnClear: '🗑️ Limpiar archivos',
+                fileListTitle: '📋 Lista de archivos',
+                fileCount: '{count} archivos en total',
+                sortNameAsc: 'Nombre ↑',
+                sortNameDesc: 'Nombre ↓',
+                sortSizeAsc: 'Tamaño ↑',
+                sortSizeDesc: 'Tamaño ↓',
+                fileListEmpty: 'Por favor suba archivos',
+                downloadTitle: '📥 Descargar archivos',
+                downloadSingle: 'Descargar individual',
+                downloadSingleDesc: 'Clic en el botón de descarga en la lista',
+                downloadZip: 'Descargar como ZIP',
+                downloadZipDesc: 'Empaquetar todos los archivos en ZIP',
+                downloadSequence: 'Descargar uno por uno',
+                downloadSequenceDesc: 'Descargar cada archivo secuencialmente',
+                footerCredit: 'Hecho con ❤️ por <a href="https://github.com/heyuan110" target="_blank">@heyuan110</a> | <a href="index.html">Volver a herramientas</a>',
+                toastAdded: '{count} archivos añadidos',
+                toastCleared: 'Todos los archivos eliminados',
+                toastSorted: 'Ordenado',
+                toastPreviewUpdated: 'Vista previa actualizada',
+                toastNoChanges: 'No hay archivos para renombrar',
+                toastApplied: 'Renombrado aplicado, por favor seleccione método de descarga',
+                toastReset: 'Todos los nombres de archivos restablecidos',
+                toastZipDone: 'Empaquetado ZIP completado',
+                toastZipFailed: 'Error al empaquetar: ',
+                toastAllDownloaded: 'Todos los archivos descargados',
+                confirmClear: '¿Está seguro de que desea limpiar todos los archivos?',
+                faqTitle: '❓ Preguntas frecuentes',
+                faqQ1: '¿Cuántos archivos se pueden renombrar por lotes?',
+                faqA1: 'Teóricamente ilimitado, depende del rendimiento del navegador. Se recomienda no exceder 1000 archivos para una operación fluida.',
+                faqQ2: '¿Qué reglas de renombrado se soportan?',
+                faqA2: 'Soporta prefijo/sufijo, numeración secuencial, inserción de fecha, buscar/reemplazar, conversión de mayúsculas y más.',
+                faqQ3: '¿Se suben los archivos a un servidor?',
+                faqA3: 'No, todo el procesamiento se hace localmente. Los archivos nunca salen de su computadora, asegurando privacidad completa.',
+                faqQ4: '¿Puedo deshacer el renombrado?',
+                faqA4: 'Antes de descargar, puede reajustar reglas o hacer clic en "Restablecer". Después de descargar, debe restaurar manualmente.',
+                faqQ5: '¿Se pueden renombrar carpetas?',
+                faqA5: 'Solo se soporta renombrar archivos, no carpetas. Seleccionar una carpeta leerá automáticamente todos los archivos para renombrar.',
+                relatedTools: '🔗 Herramientas relacionadas',
+                relatedImageToPdf: 'Imágenes a PDF',
+                relatedImageToPdfDesc: 'Combinar múltiples imágenes en PDF',
+                relatedImageCompressor: 'Compresor de imágenes',
+                relatedImageCompressorDesc: 'Comprimir imágenes por lotes',
+                relatedImageConverter: 'Convertidor de imágenes',
+                relatedImageConverterDesc: 'Conversión WebP/PNG/JPG',
+                relatedCryptoTools: 'Caja de herramientas crypto',
+                relatedCryptoToolsDesc: 'Base64/MD5/AES etc.',
+                footerPrivacy: 'Procesamiento frontend, los archivos no se suben al servidor',
+                footerBack: '← Volver a Web Toolbox'
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferred-lang') || 'en';
+
+        function t(key, params = {}) {
+            let text = translations[currentLang]?.[key] || translations['en'][key] || key;
+            Object.keys(params).forEach(k => {
+                text = text.replace(`{${k}}`, params[k]);
+            });
+            return text;
+        }
+
+        function applyTranslations() {
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const text = t(key);
+                if (el.tagName === 'INPUT' || el.tagName === 'TEXTAREA') {
+                    el.value = text;
+                } else {
+                    el.innerHTML = text;
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                el.placeholder = t(key);
+            });
+
+            // 更新 select 选项
+            const caseType = document.getElementById('caseType');
+            if (caseType) {
+                caseType.options[0].textContent = t('caseLower');
+                caseType.options[1].textContent = t('caseUpper');
+                caseType.options[2].textContent = t('caseTitle');
+                caseType.options[3].textContent = t('caseSentence');
+            }
+
+            // 更新空列表提示
+            const fileListEl = document.getElementById('fileList');
+            if (fileListEl) {
+                fileListEl.setAttribute('data-empty-text', t('fileListEmpty'));
+            }
+
+            // 更新语言切换器显示
+            const langNames = { en: '🌐 English', 'zh-CN': '🌐 中文', fr: '🌐 Français', es: '🌐 Español' };
+            document.getElementById('langCurrent').textContent = langNames[currentLang] || '🌐 English';
+
+            // 更新文件计数
+            updateUI();
+        }
+
+        function setLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred-lang', lang);
+            applyTranslations();
+            document.getElementById('langDropdown').classList.remove('active');
+        }
 
         // ===== 全局变量 =====
         let files = []; // { id, file, originalName, newName, applied }
@@ -970,6 +1468,28 @@
         function init() {
             initEventListeners();
             initSortable();
+            initLanguageSwitcher();
+            applyTranslations();
+        }
+
+        function initLanguageSwitcher() {
+            const dropdown = document.getElementById('langDropdown');
+            const current = document.getElementById('langCurrent');
+
+            current.addEventListener('click', (e) => {
+                e.stopPropagation();
+                dropdown.classList.toggle('active');
+            });
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.addEventListener('click', () => {
+                    setLanguage(btn.dataset.lang);
+                });
+            });
+
+            document.addEventListener('click', () => {
+                dropdown.classList.remove('active');
+            });
         }
 
         function initEventListeners() {
@@ -1061,7 +1581,7 @@
 
             renderFileList();
             updateUI();
-            showToast(`已添加 ${newFiles.length} 个文件`, 'success');
+            showToast(t('toastAdded', { count: newFiles.length }), 'success');
         }
 
         function removeFile(id) {
@@ -1072,11 +1592,11 @@
 
         function clearFiles() {
             if (files.length === 0) return;
-            if (!confirm('确定要清空所有文件吗？')) return;
+            if (!confirm(t('confirmClear'))) return;
             files = [];
             renderFileList();
             updateUI();
-            showToast('已清空所有文件', 'success');
+            showToast(t('toastCleared'), 'success');
         }
 
         // ===== 排序 =====
@@ -1098,7 +1618,7 @@
                 }
             });
             renderFileList();
-            showToast('已排序', 'success');
+            showToast(t('toastSorted'), 'success');
         }
 
         // ===== 选项卡 =====
@@ -1121,7 +1641,7 @@
             });
 
             renderFileList();
-            showToast('预览已更新', 'success');
+            showToast(t('toastPreviewUpdated'), 'success');
         }
 
         function generateNewName(fileData, index) {
@@ -1257,13 +1777,13 @@
             });
 
             if (!hasChanges) {
-                showToast('没有需要重命名的文件', 'error');
+                showToast(t('toastNoChanges'), 'error');
                 return;
             }
 
             renderFileList();
             downloadSection.style.display = 'block';
-            showToast('重命名已应用，请选择下载方式', 'success');
+            showToast(t('toastApplied'), 'success');
         }
 
         function resetNames() {
@@ -1273,7 +1793,7 @@
             });
             renderFileList();
             downloadSection.style.display = 'none';
-            showToast('已重置所有文件名', 'success');
+            showToast(t('toastReset'), 'success');
         }
 
         // ===== 渲染 =====
@@ -1293,8 +1813,8 @@
                     <span class="file-arrow">→</span>
                     <span class="file-new ${isChanged ? '' : 'unchanged'}" title="${f.newName}">${f.newName}</span>
                     <div class="file-actions">
-                        <button class="file-action-btn download" title="下载">⬇️</button>
-                        <button class="file-action-btn delete" title="删除">✕</button>
+                        <button class="file-action-btn download" title="Download">⬇️</button>
+                        <button class="file-action-btn delete" title="Delete">✕</button>
                     </div>
                 `;
 
@@ -1313,7 +1833,7 @@
         }
 
         function updateUI() {
-            fileCount.textContent = `共 ${files.length} 个文件`;
+            fileCount.textContent = t('fileCount', { count: files.length });
             btnPreview.disabled = files.length === 0;
             btnApply.disabled = files.length === 0;
             if (files.length === 0) {
@@ -1363,9 +1883,9 @@
                 document.body.removeChild(a);
                 URL.revokeObjectURL(url);
 
-                showToast('ZIP 打包完成', 'success');
+                showToast(t('toastZipDone'), 'success');
             } catch (err) {
-                showToast('打包失败: ' + err.message, 'error');
+                showToast(t('toastZipFailed') + err.message, 'error');
             } finally {
                 progressBar.classList.remove('active');
             }
@@ -1383,7 +1903,7 @@
             }
 
             progressBar.classList.remove('active');
-            showToast('所有文件下载完成', 'success');
+            showToast(t('toastAllDownloaded'), 'success');
         }
 
         // ===== Toast =====
@@ -1402,46 +1922,46 @@
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #f0f0f0; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.3);">❓ 常见问题</h2>
+        <h2 style="color: #f0f0f0; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid rgba(124, 58, 237, 0.3);" data-i18n="faqTitle">❓ FAQ</h2>
         <div class="faq-list" style="display: flex; flex-direction: column; gap: 16px;">
             <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
                 <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                    <span style="color: #7c3aed;">Q:</span> 可以批量重命名多少文件？
+                    <span style="color: #7c3aed;">Q:</span> <span data-i18n="faqQ1">How many files can be batch renamed?</span>
                 </h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
-                    理论上无限制，取决于浏览器性能，建议一次不超过1000个文件，以保证流畅的操作体验。
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;" data-i18n="faqA1">
+                    Theoretically unlimited, depends on browser performance. Recommended not to exceed 1000 files for smooth operation.
                 </p>
             </div>
             <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
                 <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                    <span style="color: #7c3aed;">Q:</span> 支持哪些重命名规则？
+                    <span style="color: #7c3aed;">Q:</span> <span data-i18n="faqQ2">What renaming rules are supported?</span>
                 </h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
-                    支持添加前缀后缀、插入序号、添加日期、查找替换、大小写转换等多种规则，可以满足大部分重命名需求。
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;" data-i18n="faqA2">
+                    Supports prefix/suffix, sequential numbering, date insertion, find & replace, case conversion and more to meet most needs.
                 </p>
             </div>
             <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
                 <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                    <span style="color: #7c3aed;">Q:</span> 文件会上传到服务器吗？
+                    <span style="color: #7c3aed;">Q:</span> <span data-i18n="faqQ3">Are files uploaded to a server?</span>
                 </h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
-                    不会，所有处理在本地完成，文件不会离开你的电脑，完全保护你的隐私安全。
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;" data-i18n="faqA3">
+                    No, all processing is done locally. Files never leave your computer, ensuring complete privacy.
                 </p>
             </div>
             <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
                 <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                    <span style="color: #7c3aed;">Q:</span> 可以撤销重命名吗？
+                    <span style="color: #7c3aed;">Q:</span> <span data-i18n="faqQ4">Can I undo the rename?</span>
                 </h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
-                    下载前可以重新调整规则或点击"重置"按钮恢复原名，下载后需要手动恢复文件名。
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;" data-i18n="faqA4">
+                    Before downloading, you can readjust rules or click "Reset" to restore. After downloading, you need to manually restore filenames.
                 </p>
             </div>
             <div class="faq-item" style="background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 20px;">
                 <h3 style="color: #e4e4e7; font-size: 1rem; margin-bottom: 10px; display: flex; align-items: center; gap: 8px;">
-                    <span style="color: #7c3aed;">Q:</span> 支持重命名文件夹吗？
+                    <span style="color: #7c3aed;">Q:</span> <span data-i18n="faqQ5">Can folders be renamed?</span>
                 </h3>
-                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;">
-                    仅支持文件重命名，不支持文件夹。选择文件夹时会自动读取其中的所有文件进行重命名。
+                <p style="color: #a1a1aa; font-size: 0.9rem; line-height: 1.6; padding-left: 24px;" data-i18n="faqA5">
+                    Only file renaming is supported, not folders. Selecting a folder will automatically read all files within for renaming.
                 </p>
             </div>
         </div>
@@ -1449,35 +1969,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1000px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+        <h3 style="color: #f0f0f0; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="image-to-pdf.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📄</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片合并为PDF</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">多图合并生成PDF</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedImageToPdf">Images to PDF</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedImageToPdfDesc">Merge multiple images into PDF</div>
             </a>
             <a href="image-compressor.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📦</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片压缩</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">批量压缩图片体积</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedImageCompressor">Image Compressor</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedImageCompressorDesc">Batch compress image size</div>
             </a>
             <a href="image-converter.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🖼️</div>
-                <div style="color: #f0f0f0; font-weight: 500;">图片格式转换</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">WebP/PNG/JPG 互转</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedImageConverter">Image Converter</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedImageConverterDesc">WebP/PNG/JPG conversion</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: #1e293b; border: 1px solid #334155; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #f0f0f0; font-weight: 500;">加解密工具箱</div>
-                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等</div>
+                <div style="color: #f0f0f0; font-weight: 500;" data-i18n="relatedCryptoTools">Crypto Toolbox</div>
+                <div style="color: #94a3b8; font-size: 12px; margin-top: 4px;" data-i18n="relatedCryptoToolsDesc">Base64/MD5/AES etc.</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #333; color: #94a3b8; font-size: 14px;">
-        <p>纯前端处理，文件不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, files are not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #6366f1; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #6366f1; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #6366f1; text-decoration: none;">GitHub</a>
         </p>

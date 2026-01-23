@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>加解密编码工具箱 - MD5/SHA/AES/Base64在线加密解密 | Web Toolbox</title>
+    <title>Crypto & Encoding Toolbox - MD5/SHA/AES/Base64 Online Encryption | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线加解密编码工具箱，集成20+种工具：MD5/SHA/AES/DES加密、Base64/URL/Unicode编码、摩尔斯电码、二维码条形码生成、密码生成器、UUID生成等。纯前端运行，安全可靠。">
-    <meta name="keywords" content="MD5加密,SHA加密,AES加密,Base64编码,URL编码,Unicode转换,摩尔斯电码,二维码生成,条形码生成,密码生成器,UUID生成,在线加密解密">
+    <meta name="description" content="Free online crypto and encoding toolbox with 20+ tools: MD5/SHA/AES/DES encryption, Base64/URL/Unicode encoding, Morse code, QR code & barcode generator, password generator, UUID generator. Runs entirely in browser, secure and reliable.">
+    <meta name="keywords" content="MD5 encryption,SHA encryption,AES encryption,Base64 encoding,URL encoding,Unicode converter,Morse code,QR code generator,barcode generator,password generator,UUID generator,online encryption">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/crypto-tools.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/crypto-tools.html">
-    <meta property="og:title" content="加解密编码工具箱 - 20+种在线加密解密编码工具">
-    <meta property="og:description" content="集成MD5/SHA/AES加密、Base64/URL编码、二维码生成、密码生成器等20+种工具，纯前端运行。">
+    <meta property="og:title" content="Crypto & Encoding Toolbox - 20+ Online Encryption & Encoding Tools">
+    <meta property="og:description" content="Integrated MD5/SHA/AES encryption, Base64/URL encoding, QR code generator, password generator and 20+ more tools. Runs entirely in browser.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/crypto-tools.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="加解密编码工具箱 - 20+种在线加密解密编码工具">
-    <meta name="twitter:description" content="集成MD5/SHA/AES加密、Base64编码、二维码生成等20+种工具。">
+    <meta name="twitter:title" content="Crypto & Encoding Toolbox - 20+ Online Encryption & Encoding Tools">
+    <meta name="twitter:description" content="Integrated MD5/SHA/AES encryption, Base64 encoding, QR code generator and 20+ more tools.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/crypto-tools.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "加解密编码工具箱",
+        "name": "Crypto & Encoding Toolbox",
         "url": "https://www.heyuan110.com/web-toolbox/crypto-tools.html",
-        "description": "集成20+种加密解密和编码转换工具的综合工具箱",
+        "description": "Comprehensive toolbox with 20+ encryption, decryption and encoding conversion tools",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "Base64 编码是加密吗？",
+                "name": "Is Base64 encoding encryption?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Base64 是编码方式，不是加密，可以直接解码还原，不提供安全保护。Base64 主要用于将二进制数据转换为文本格式，便于在文本协议中传输。"
+                    "text": "Base64 is an encoding method, not encryption. It can be decoded directly and provides no security protection. Base64 is mainly used to convert binary data to text format for transmission in text-based protocols."
                 }
             },
             {
                 "@type": "Question",
-                "name": "MD5 可以解密吗？",
+                "name": "Can MD5 be decrypted?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "MD5 是单向哈希函数，不可逆，无法从哈希值还原原始数据。MD5 将任意长度的数据压缩成固定长度的摘要，设计上就是不可逆的。"
+                    "text": "MD5 is a one-way hash function that is irreversible. The original data cannot be restored from the hash value. MD5 compresses data of any length into a fixed-length digest and is designed to be irreversible."
                 }
             },
             {
                 "@type": "Question",
-                "name": "AES 加密安全吗？",
+                "name": "Is AES encryption secure?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "AES 是目前最安全的对称加密算法之一，广泛用于政府和金融机构。AES-256 被美国政府用于加密最高机密文件，至今未被破解。"
+                    "text": "AES is one of the most secure symmetric encryption algorithms, widely used by governments and financial institutions. AES-256 is used by the US government to encrypt top-secret documents and has never been cracked."
                 }
             },
             {
                 "@type": "Question",
-                "name": "SHA-256 和 MD5 哪个更安全？",
+                "name": "Which is more secure, SHA-256 or MD5?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "SHA-256 更安全，MD5 已发现碰撞漏洞，不建议用于安全场景。SHA-256 输出更长、算法更复杂，目前仍被认为是安全的哈希算法。"
+                    "text": "SHA-256 is more secure. MD5 has known collision vulnerabilities and is not recommended for security purposes. SHA-256 has longer output and more complex algorithms, and is still considered a secure hash algorithm."
                 }
             },
             {
                 "@type": "Question",
-                "name": "数据会上传到服务器吗？",
+                "name": "Is data uploaded to the server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会，所有加解密操作在浏览器本地完成。本工具采用纯前端技术，敏感数据不会离开您的设备，安全可靠。"
+                    "text": "No, all encryption and decryption operations are performed locally in your browser. This tool uses pure front-end technology, and sensitive data never leaves your device."
                 }
             }
         ]
@@ -129,7 +129,18 @@
             padding: 20px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             text-align: center;
+            position: relative;
         }
+
+        /* Language Switcher */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         .sidebar-header h1 {
             font-size: 1.4rem;
@@ -732,68 +743,79 @@
     <!-- 侧边栏导航 -->
     <nav class="sidebar">
         <div class="sidebar-header">
-            <h1>🔐 加解密工具箱</h1>
-            <p>在线加密解密编码工具</p>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <h1 data-i18n="siteTitle">🔐 Crypto Toolbox</h1>
+            <p data-i18n="siteSubtitle">Online Encryption & Encoding Tools</p>
         </div>
 
-        <div class="nav-category">哈希/散列</div>
-        <div class="nav-item active" data-panel="md5"><span class="icon">🔒</span>MD5 加密</div>
-        <div class="nav-item" data-panel="sha"><span class="icon">🛡️</span>SHA 系列加密</div>
-        <div class="nav-item" data-panel="hash-all"><span class="icon">📊</span>哈希大全</div>
+        <div class="nav-category" data-i18n="navHash">Hash/Digest</div>
+        <div class="nav-item active" data-panel="md5"><span class="icon">🔒</span><span data-i18n="navMd5">MD5 Encryption</span></div>
+        <div class="nav-item" data-panel="sha"><span class="icon">🛡️</span><span data-i18n="navSha">SHA Series</span></div>
+        <div class="nav-item" data-panel="hash-all"><span class="icon">📊</span><span data-i18n="navHashAll">All Hash Algorithms</span></div>
 
-        <div class="nav-category">对称加密</div>
-        <div class="nav-item" data-panel="aes"><span class="icon">🔑</span>AES 加密/解密</div>
-        <div class="nav-item" data-panel="des"><span class="icon">🗝️</span>DES 加密/解密</div>
-        <div class="nav-item" data-panel="tripledes"><span class="icon">🔐</span>TripleDES 加密/解密</div>
-        <div class="nav-item" data-panel="rc4"><span class="icon">🔏</span>RC4 加密/解密</div>
-        <div class="nav-item" data-panel="rabbit"><span class="icon">🐰</span>Rabbit 加密/解密</div>
+        <div class="nav-category" data-i18n="navSymmetric">Symmetric Encryption</div>
+        <div class="nav-item" data-panel="aes"><span class="icon">🔑</span><span data-i18n="navAes">AES Encrypt/Decrypt</span></div>
+        <div class="nav-item" data-panel="des"><span class="icon">🗝️</span><span data-i18n="navDes">DES Encrypt/Decrypt</span></div>
+        <div class="nav-item" data-panel="tripledes"><span class="icon">🔐</span><span data-i18n="navTripleDes">TripleDES Encrypt/Decrypt</span></div>
+        <div class="nav-item" data-panel="rc4"><span class="icon">🔏</span><span data-i18n="navRc4">RC4 Encrypt/Decrypt</span></div>
+        <div class="nav-item" data-panel="rabbit"><span class="icon">🐰</span><span data-i18n="navRabbit">Rabbit Encrypt/Decrypt</span></div>
 
-        <div class="nav-category">编码转换</div>
-        <div class="nav-item" data-panel="base64"><span class="icon">📝</span>Base64 编码/解码</div>
-        <div class="nav-item" data-panel="url"><span class="icon">🔗</span>URL 编码/解码</div>
-        <div class="nav-item" data-panel="url-hex"><span class="icon">🌐</span>URL 十六进制编码</div>
-        <div class="nav-item" data-panel="escape"><span class="icon">⚡</span>Escape 编码/解码</div>
-        <div class="nav-item" data-panel="unicode"><span class="icon">🌍</span>Unicode/ASCII 转换</div>
-        <div class="nav-item" data-panel="native-unicode"><span class="icon">📜</span>Native/Unicode 转换</div>
-        <div class="nav-item" data-panel="utf8-gbk"><span class="icon">🔄</span>UTF-8/GBK 转换</div>
+        <div class="nav-category" data-i18n="navEncoding">Encoding Conversion</div>
+        <div class="nav-item" data-panel="base64"><span class="icon">📝</span><span data-i18n="navBase64">Base64 Encode/Decode</span></div>
+        <div class="nav-item" data-panel="url"><span class="icon">🔗</span><span data-i18n="navUrl">URL Encode/Decode</span></div>
+        <div class="nav-item" data-panel="url-hex"><span class="icon">🌐</span><span data-i18n="navUrlHex">URL Hex Encoding</span></div>
+        <div class="nav-item" data-panel="escape"><span class="icon">⚡</span><span data-i18n="navEscape">Escape Encode/Decode</span></div>
+        <div class="nav-item" data-panel="unicode"><span class="icon">🌍</span><span data-i18n="navUnicode">Unicode/ASCII Convert</span></div>
+        <div class="nav-item" data-panel="native-unicode"><span class="icon">📜</span><span data-i18n="navNativeUnicode">Native/Unicode Convert</span></div>
+        <div class="nav-item" data-panel="utf8-gbk"><span class="icon">🔄</span><span data-i18n="navUtf8Gbk">UTF-8/GBK Convert</span></div>
 
-        <div class="nav-category">其他工具</div>
-        <div class="nav-item" data-panel="morse"><span class="icon">📡</span>摩尔斯电码</div>
-        <div class="nav-item" data-panel="password"><span class="icon">🎲</span>密码生成器</div>
-        <div class="nav-item" data-panel="uuid"><span class="icon">🆔</span>UUID/GUID 生成</div>
-        <div class="nav-item" data-panel="htpasswd"><span class="icon">🔒</span>htpasswd 生成</div>
-        <div class="nav-item" data-panel="barcode"><span class="icon">📊</span>条形码生成器</div>
-        <div class="nav-item" data-panel="qrcode"><span class="icon">📱</span>二维码生成器</div>
-        <div class="nav-item" data-panel="ip-convert"><span class="icon">🖥️</span>IP/数字地址转换</div>
-        <div class="nav-item" data-panel="image-base64"><span class="icon">🖼️</span>图片转 Base64</div>
+        <div class="nav-category" data-i18n="navOther">Other Tools</div>
+        <div class="nav-item" data-panel="morse"><span class="icon">📡</span><span data-i18n="navMorse">Morse Code</span></div>
+        <div class="nav-item" data-panel="password"><span class="icon">🎲</span><span data-i18n="navPassword">Password Generator</span></div>
+        <div class="nav-item" data-panel="uuid"><span class="icon">🆔</span><span data-i18n="navUuid">UUID/GUID Generator</span></div>
+        <div class="nav-item" data-panel="htpasswd"><span class="icon">🔒</span><span data-i18n="navHtpasswd">htpasswd Generator</span></div>
+        <div class="nav-item" data-panel="barcode"><span class="icon">📊</span><span data-i18n="navBarcode">Barcode Generator</span></div>
+        <div class="nav-item" data-panel="qrcode"><span class="icon">📱</span><span data-i18n="navQrcode">QR Code Generator</span></div>
+        <div class="nav-item" data-panel="ip-convert"><span class="icon">🖥️</span><span data-i18n="navIpConvert">IP/Number Convert</span></div>
+        <div class="nav-item" data-panel="image-base64"><span class="icon">🖼️</span><span data-i18n="navImageBase64">Image to Base64</span></div>
     </nav>
 
     <!-- 主内容区 -->
     <main class="main-content">
-        <a href="index.html" class="back-home">← 返回工具箱首页</a>
+        <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox Home</a>
 
         <!-- 功能特点 -->
         <section class="features-section">
             <div class="features-grid">
                 <div class="feature-card">
                     <div class="feature-icon">🔄</div>
-                    <h3 class="feature-title">编码转换</h3>
-                    <p class="feature-desc">支持 Base64、URL编码、Unicode、HTML实体编码互转</p>
+                    <h3 class="feature-title" data-i18n="featureEncodingTitle">Encoding Conversion</h3>
+                    <p class="feature-desc" data-i18n="featureEncodingDesc">Support Base64, URL encoding, Unicode, HTML entity encoding conversion</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">#️⃣</div>
-                    <h3 class="feature-title">哈希计算</h3>
-                    <p class="feature-desc">MD5、SHA-1、SHA-256、SHA-512 等哈希算法</p>
+                    <h3 class="feature-title" data-i18n="featureHashTitle">Hash Calculation</h3>
+                    <p class="feature-desc" data-i18n="featureHashDesc">MD5, SHA-1, SHA-256, SHA-512 and more hash algorithms</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🔐</div>
-                    <h3 class="feature-title">对称加密</h3>
-                    <p class="feature-desc">AES、DES、3DES 加解密，支持多种工作模式</p>
+                    <h3 class="feature-title" data-i18n="featureEncryptTitle">Symmetric Encryption</h3>
+                    <p class="feature-desc" data-i18n="featureEncryptDesc">AES, DES, 3DES encryption/decryption with multiple modes</p>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🛡️</div>
-                    <h3 class="feature-title">安全可靠</h3>
-                    <p class="feature-desc">纯前端处理，敏感数据不会上传服务器</p>
+                    <h3 class="feature-title" data-i18n="featureSecureTitle">Secure & Reliable</h3>
+                    <p class="feature-desc" data-i18n="featureSecureDesc">Pure frontend processing, sensitive data never uploaded to server</p>
                 </div>
             </div>
         </section>
@@ -801,23 +823,23 @@
         <!-- MD5 加密 -->
         <div class="tool-panel active" id="panel-md5">
             <div class="tool-header">
-                <h2>🔒 MD5 加密</h2>
-                <p>将文本转换为 MD5 哈希值，常用于密码存储和数据完整性校验</p>
+                <h2 data-i18n="md5Title">🔒 MD5 Encryption</h2>
+                <p data-i18n="md5Desc">Convert text to MD5 hash, commonly used for password storage and data integrity verification</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="md5-input" placeholder="请输入要加密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="md5-input" data-i18n-placeholder="placeholderEncrypt" placeholder="Enter text to encrypt..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="md5Encrypt()">🔒 MD5 加密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('md5-input', 'md5-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="md5Encrypt()" data-i18n="btnMd5Encrypt">🔒 MD5 Encrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('md5-input', 'md5-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>加密结果</label>
+                    <label data-i18n="encryptResult">Encryption Result</label>
                     <div class="result-box">
-                        <pre id="md5-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('md5-output')">复制</button>
+                        <pre id="md5-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('md5-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -826,8 +848,8 @@
         <!-- SHA 系列加密 -->
         <div class="tool-panel" id="panel-sha">
             <div class="tool-header">
-                <h2>🛡️ SHA 系列加密</h2>
-                <p>安全哈希算法，提供 SHA-1、SHA-256、SHA-384、SHA-512 等多种加密方式</p>
+                <h2 data-i18n="shaTitle">🛡️ SHA Series Encryption</h2>
+                <p data-i18n="shaDesc">Secure Hash Algorithm, providing SHA-1, SHA-256, SHA-384, SHA-512 and more</p>
             </div>
             <div class="tool-card">
                 <div class="tabs">
@@ -838,18 +860,18 @@
                     <div class="tab" data-sha="3">SHA-3</div>
                 </div>
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="sha-input" placeholder="请输入要加密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="sha-input" data-i18n-placeholder="placeholderEncrypt" placeholder="Enter text to encrypt..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="shaEncrypt()">🛡️ SHA 加密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('sha-input', 'sha-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="shaEncrypt()" data-i18n="btnShaEncrypt">🛡️ SHA Encrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('sha-input', 'sha-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>加密结果</label>
+                    <label data-i18n="encryptResult">Encryption Result</label>
                     <div class="result-box">
-                        <pre id="sha-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('sha-output')">复制</button>
+                        <pre id="sha-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('sha-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -858,23 +880,23 @@
         <!-- 哈希大全 -->
         <div class="tool-panel" id="panel-hash-all">
             <div class="tool-header">
-                <h2>📊 哈希/散列加密大全</h2>
-                <p>一键生成所有常用哈希算法的结果</p>
+                <h2 data-i18n="hashAllTitle">📊 All Hash Algorithms</h2>
+                <p data-i18n="hashAllDesc">Generate all common hash algorithm results with one click</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="hash-all-input" placeholder="请输入要加密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="hash-all-input" data-i18n-placeholder="placeholderEncrypt" placeholder="Enter text to encrypt..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="hashAll()">📊 生成所有哈希</button>
-                    <button class="btn btn-secondary" onclick="clearInput('hash-all-input', 'hash-all-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="hashAll()" data-i18n="btnGenerateAllHash">📊 Generate All Hashes</button>
+                    <button class="btn btn-secondary" onclick="clearInput('hash-all-input', 'hash-all-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>所有哈希结果</label>
+                    <label data-i18n="allHashResult">All Hash Results</label>
                     <div class="result-box">
-                        <pre id="hash-all-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('hash-all-output')">复制</button>
+                        <pre id="hash-all-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('hash-all-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -883,21 +905,21 @@
         <!-- AES 加密/解密 -->
         <div class="tool-panel" id="panel-aes">
             <div class="tool-header">
-                <h2>🔑 AES 加密/解密</h2>
-                <p>高级加密标准，目前最流行的对称加密算法</p>
+                <h2 data-i18n="aesTitle">🔑 AES Encrypt/Decrypt</h2>
+                <p data-i18n="aesDesc">Advanced Encryption Standard, the most popular symmetric encryption algorithm</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="aes-input" placeholder="请输入要加密/解密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="aes-input" data-i18n-placeholder="placeholderEncryptDecrypt" placeholder="Enter text to encrypt/decrypt..."></textarea>
                 </div>
                 <div class="options-row">
                     <div class="input-group">
-                        <label>密钥 (Key)</label>
-                        <input type="text" id="aes-key" placeholder="请输入密钥">
+                        <label data-i18n="labelKey">Key</label>
+                        <input type="text" id="aes-key" data-i18n-placeholder="placeholderKey" placeholder="Enter key">
                     </div>
                     <div class="input-group">
-                        <label>模式</label>
+                        <label data-i18n="labelMode">Mode</label>
                         <select id="aes-mode">
                             <option value="CBC">CBC</option>
                             <option value="ECB">ECB</option>
@@ -907,7 +929,7 @@
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>填充</label>
+                        <label data-i18n="labelPadding">Padding</label>
                         <select id="aes-padding">
                             <option value="Pkcs7">PKCS7</option>
                             <option value="ZeroPadding">ZeroPadding</option>
@@ -916,15 +938,15 @@
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="aesEncrypt()">🔒 加密</button>
-                    <button class="btn btn-success" onclick="aesDecrypt()">🔓 解密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('aes-input', 'aes-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="aesEncrypt()" data-i18n="btnEncrypt">🔒 Encrypt</button>
+                    <button class="btn btn-success" onclick="aesDecrypt()" data-i18n="btnDecrypt">🔓 Decrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('aes-input', 'aes-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="aes-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('aes-output')">复制</button>
+                        <pre id="aes-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('aes-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -933,30 +955,30 @@
         <!-- DES 加密/解密 -->
         <div class="tool-panel" id="panel-des">
             <div class="tool-header">
-                <h2>🗝️ DES 加密/解密</h2>
-                <p>数据加密标准，经典的对称加密算法</p>
+                <h2 data-i18n="desTitle">🗝️ DES Encrypt/Decrypt</h2>
+                <p data-i18n="desDesc">Data Encryption Standard, classic symmetric encryption algorithm</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="des-input" placeholder="请输入要加密/解密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="des-input" data-i18n-placeholder="placeholderEncryptDecrypt" placeholder="Enter text to encrypt/decrypt..."></textarea>
                 </div>
                 <div class="options-row">
                     <div class="input-group">
-                        <label>密钥 (Key)</label>
-                        <input type="text" id="des-key" placeholder="请输入密钥">
+                        <label data-i18n="labelKey">Key</label>
+                        <input type="text" id="des-key" data-i18n-placeholder="placeholderKey" placeholder="Enter key">
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="desEncrypt()">🔒 加密</button>
-                    <button class="btn btn-success" onclick="desDecrypt()">🔓 解密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('des-input', 'des-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="desEncrypt()" data-i18n="btnEncrypt">🔒 Encrypt</button>
+                    <button class="btn btn-success" onclick="desDecrypt()" data-i18n="btnDecrypt">🔓 Decrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('des-input', 'des-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="des-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('des-output')">复制</button>
+                        <pre id="des-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('des-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -965,30 +987,30 @@
         <!-- TripleDES 加密/解密 -->
         <div class="tool-panel" id="panel-tripledes">
             <div class="tool-header">
-                <h2>🔐 TripleDES 加密/解密</h2>
-                <p>三重数据加密算法，比 DES 更安全</p>
+                <h2 data-i18n="tripleDesTitle">🔐 TripleDES Encrypt/Decrypt</h2>
+                <p data-i18n="tripleDesDesc">Triple Data Encryption Algorithm, more secure than DES</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="tripledes-input" placeholder="请输入要加密/解密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="tripledes-input" data-i18n-placeholder="placeholderEncryptDecrypt" placeholder="Enter text to encrypt/decrypt..."></textarea>
                 </div>
                 <div class="options-row">
                     <div class="input-group">
-                        <label>密钥 (Key)</label>
-                        <input type="text" id="tripledes-key" placeholder="请输入密钥">
+                        <label data-i18n="labelKey">Key</label>
+                        <input type="text" id="tripledes-key" data-i18n-placeholder="placeholderKey" placeholder="Enter key">
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="tripledesEncrypt()">🔒 加密</button>
-                    <button class="btn btn-success" onclick="tripledesDecrypt()">🔓 解密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('tripledes-input', 'tripledes-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="tripledesEncrypt()" data-i18n="btnEncrypt">🔒 Encrypt</button>
+                    <button class="btn btn-success" onclick="tripledesDecrypt()" data-i18n="btnDecrypt">🔓 Decrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('tripledes-input', 'tripledes-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="tripledes-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('tripledes-output')">复制</button>
+                        <pre id="tripledes-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('tripledes-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -997,30 +1019,30 @@
         <!-- RC4 加密/解密 -->
         <div class="tool-panel" id="panel-rc4">
             <div class="tool-header">
-                <h2>🔏 RC4 加密/解密</h2>
-                <p>流加密算法，速度快但安全性较低</p>
+                <h2 data-i18n="rc4Title">🔏 RC4 Encrypt/Decrypt</h2>
+                <p data-i18n="rc4Desc">Stream cipher algorithm, fast but lower security</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="rc4-input" placeholder="请输入要加密/解密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="rc4-input" data-i18n-placeholder="placeholderEncryptDecrypt" placeholder="Enter text to encrypt/decrypt..."></textarea>
                 </div>
                 <div class="options-row">
                     <div class="input-group">
-                        <label>密钥 (Key)</label>
-                        <input type="text" id="rc4-key" placeholder="请输入密钥">
+                        <label data-i18n="labelKey">Key</label>
+                        <input type="text" id="rc4-key" data-i18n-placeholder="placeholderKey" placeholder="Enter key">
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="rc4Encrypt()">🔒 加密</button>
-                    <button class="btn btn-success" onclick="rc4Decrypt()">🔓 解密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('rc4-input', 'rc4-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="rc4Encrypt()" data-i18n="btnEncrypt">🔒 Encrypt</button>
+                    <button class="btn btn-success" onclick="rc4Decrypt()" data-i18n="btnDecrypt">🔓 Decrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('rc4-input', 'rc4-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="rc4-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('rc4-output')">复制</button>
+                        <pre id="rc4-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('rc4-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1029,30 +1051,30 @@
         <!-- Rabbit 加密/解密 -->
         <div class="tool-panel" id="panel-rabbit">
             <div class="tool-header">
-                <h2>🐰 Rabbit 加密/解密</h2>
-                <p>高性能流加密算法</p>
+                <h2 data-i18n="rabbitTitle">🐰 Rabbit Encrypt/Decrypt</h2>
+                <p data-i18n="rabbitDesc">High-performance stream cipher algorithm</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="rabbit-input" placeholder="请输入要加密/解密的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="rabbit-input" data-i18n-placeholder="placeholderEncryptDecrypt" placeholder="Enter text to encrypt/decrypt..."></textarea>
                 </div>
                 <div class="options-row">
                     <div class="input-group">
-                        <label>密钥 (Key)</label>
-                        <input type="text" id="rabbit-key" placeholder="请输入密钥">
+                        <label data-i18n="labelKey">Key</label>
+                        <input type="text" id="rabbit-key" data-i18n-placeholder="placeholderKey" placeholder="Enter key">
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="rabbitEncrypt()">🔒 加密</button>
-                    <button class="btn btn-success" onclick="rabbitDecrypt()">🔓 解密</button>
-                    <button class="btn btn-secondary" onclick="clearInput('rabbit-input', 'rabbit-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="rabbitEncrypt()" data-i18n="btnEncrypt">🔒 Encrypt</button>
+                    <button class="btn btn-success" onclick="rabbitDecrypt()" data-i18n="btnDecrypt">🔓 Decrypt</button>
+                    <button class="btn btn-secondary" onclick="clearInput('rabbit-input', 'rabbit-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="rabbit-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('rabbit-output')">复制</button>
+                        <pre id="rabbit-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('rabbit-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1061,24 +1083,24 @@
         <!-- Base64 编码/解码 -->
         <div class="tool-panel" id="panel-base64">
             <div class="tool-header">
-                <h2>📝 Base64 编码/解码</h2>
-                <p>将二进制数据转换为 ASCII 字符串，常用于数据传输</p>
+                <h2 data-i18n="base64Title">📝 Base64 Encode/Decode</h2>
+                <p data-i18n="base64Desc">Convert binary data to ASCII string, commonly used for data transmission</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="base64-input" placeholder="请输入要编码/解码的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="base64-input" data-i18n-placeholder="placeholderEncodeDecode" placeholder="Enter text to encode/decode..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="base64Encode()">📤 编码</button>
-                    <button class="btn btn-success" onclick="base64Decode()">📥 解码</button>
-                    <button class="btn btn-secondary" onclick="clearInput('base64-input', 'base64-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="base64Encode()" data-i18n="btnEncode">📤 Encode</button>
+                    <button class="btn btn-success" onclick="base64Decode()" data-i18n="btnDecode">📥 Decode</button>
+                    <button class="btn btn-secondary" onclick="clearInput('base64-input', 'base64-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="base64-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('base64-output')">复制</button>
+                        <pre id="base64-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('base64-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1087,26 +1109,26 @@
         <!-- URL 编码/解码 -->
         <div class="tool-panel" id="panel-url">
             <div class="tool-header">
-                <h2>🔗 URL 编码/解码</h2>
-                <p>对 URL 中的特殊字符进行编码和解码</p>
+                <h2 data-i18n="urlTitle">🔗 URL Encode/Decode</h2>
+                <p data-i18n="urlDesc">Encode and decode special characters in URLs</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="url-input" placeholder="请输入要编码/解码的 URL 或文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="url-input" data-i18n-placeholder="placeholderUrlEncodeDecode" placeholder="Enter URL or text to encode/decode..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="urlEncode()">📤 编码</button>
-                    <button class="btn btn-success" onclick="urlDecode()">📥 解码</button>
-                    <button class="btn btn-secondary" onclick="urlEncodeComponent()">📤 组件编码</button>
-                    <button class="btn btn-secondary" onclick="urlDecodeComponent()">📥 组件解码</button>
-                    <button class="btn btn-secondary" onclick="clearInput('url-input', 'url-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="urlEncode()" data-i18n="btnEncode">📤 Encode</button>
+                    <button class="btn btn-success" onclick="urlDecode()" data-i18n="btnDecode">📥 Decode</button>
+                    <button class="btn btn-secondary" onclick="urlEncodeComponent()" data-i18n="btnComponentEncode">📤 Component Encode</button>
+                    <button class="btn btn-secondary" onclick="urlDecodeComponent()" data-i18n="btnComponentDecode">📥 Component Decode</button>
+                    <button class="btn btn-secondary" onclick="clearInput('url-input', 'url-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="url-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('url-output')">复制</button>
+                        <pre id="url-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('url-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1115,24 +1137,24 @@
         <!-- URL 十六进制编码 -->
         <div class="tool-panel" id="panel-url-hex">
             <div class="tool-header">
-                <h2>🌐 URL 十六进制编码</h2>
-                <p>将 URL 转换为十六进制编码格式</p>
+                <h2 data-i18n="urlHexTitle">🌐 URL Hex Encoding</h2>
+                <p data-i18n="urlHexDesc">Convert URL to hexadecimal encoding format</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入 URL</label>
-                    <textarea id="url-hex-input" placeholder="请输入 URL..."></textarea>
+                    <label data-i18n="inputUrl">Input URL</label>
+                    <textarea id="url-hex-input" data-i18n-placeholder="placeholderUrl" placeholder="Enter URL..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="urlHexEncode()">📤 十六进制编码</button>
-                    <button class="btn btn-success" onclick="urlHexDecode()">📥 十六进制解码</button>
-                    <button class="btn btn-secondary" onclick="clearInput('url-hex-input', 'url-hex-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="urlHexEncode()" data-i18n="btnHexEncode">📤 Hex Encode</button>
+                    <button class="btn btn-success" onclick="urlHexDecode()" data-i18n="btnHexDecode">📥 Hex Decode</button>
+                    <button class="btn btn-secondary" onclick="clearInput('url-hex-input', 'url-hex-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="url-hex-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('url-hex-output')">复制</button>
+                        <pre id="url-hex-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('url-hex-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1141,24 +1163,24 @@
         <!-- Escape 编码/解码 -->
         <div class="tool-panel" id="panel-escape">
             <div class="tool-header">
-                <h2>⚡ Escape 编码/解码</h2>
-                <p>JavaScript escape/unescape 函数的编码和解码</p>
+                <h2 data-i18n="escapeTitle">⚡ Escape Encode/Decode</h2>
+                <p data-i18n="escapeDesc">JavaScript escape/unescape function encoding and decoding</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="escape-input" placeholder="请输入要编码/解码的文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="escape-input" data-i18n-placeholder="placeholderEncodeDecode" placeholder="Enter text to encode/decode..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="escapeEncode()">📤 Escape 编码</button>
-                    <button class="btn btn-success" onclick="escapeDecode()">📥 Unescape 解码</button>
-                    <button class="btn btn-secondary" onclick="clearInput('escape-input', 'escape-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="escapeEncode()" data-i18n="btnEscapeEncode">📤 Escape Encode</button>
+                    <button class="btn btn-success" onclick="escapeDecode()" data-i18n="btnUnescapeDecode">📥 Unescape Decode</button>
+                    <button class="btn btn-secondary" onclick="clearInput('escape-input', 'escape-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="escape-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('escape-output')">复制</button>
+                        <pre id="escape-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('escape-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1167,26 +1189,26 @@
         <!-- Unicode/ASCII 转换 -->
         <div class="tool-panel" id="panel-unicode">
             <div class="tool-header">
-                <h2>🌍 Unicode/ASCII 转换</h2>
-                <p>在 Unicode 编码和普通文本之间转换</p>
+                <h2 data-i18n="unicodeTitle">🌍 Unicode/ASCII Convert</h2>
+                <p data-i18n="unicodeDesc">Convert between Unicode encoding and plain text</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="unicode-input" placeholder="请输入文本或 Unicode 编码 (如: \u4e2d\u6587)..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="unicode-input" data-i18n-placeholder="placeholderUnicode" placeholder="Enter text or Unicode code (e.g., \u4e2d\u6587)..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="toUnicode()">📤 转 Unicode</button>
-                    <button class="btn btn-success" onclick="fromUnicode()">📥 Unicode 转文本</button>
-                    <button class="btn btn-secondary" onclick="toAsciiCode()">🔢 转 ASCII 码</button>
-                    <button class="btn btn-secondary" onclick="fromAsciiCode()">🔤 ASCII 码转文本</button>
-                    <button class="btn btn-secondary" onclick="clearInput('unicode-input', 'unicode-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="toUnicode()" data-i18n="btnToUnicode">📤 To Unicode</button>
+                    <button class="btn btn-success" onclick="fromUnicode()" data-i18n="btnFromUnicode">📥 Unicode to Text</button>
+                    <button class="btn btn-secondary" onclick="toAsciiCode()" data-i18n="btnToAscii">🔢 To ASCII Code</button>
+                    <button class="btn btn-secondary" onclick="fromAsciiCode()" data-i18n="btnFromAscii">🔤 ASCII to Text</button>
+                    <button class="btn btn-secondary" onclick="clearInput('unicode-input', 'unicode-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="unicode-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('unicode-output')">复制</button>
+                        <pre id="unicode-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('unicode-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1195,24 +1217,24 @@
         <!-- Native/Unicode 编码转换 -->
         <div class="tool-panel" id="panel-native-unicode">
             <div class="tool-header">
-                <h2>📜 Native/Unicode 编码转换</h2>
-                <p>Native 编码与 Unicode 编码相互转换</p>
+                <h2 data-i18n="nativeUnicodeTitle">📜 Native/Unicode Convert</h2>
+                <p data-i18n="nativeUnicodeDesc">Convert between Native encoding and Unicode encoding</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="native-unicode-input" placeholder="请输入文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="native-unicode-input" data-i18n-placeholder="placeholderText" placeholder="Enter text..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="nativeToUnicode()">📤 Native → Unicode</button>
-                    <button class="btn btn-success" onclick="unicodeToNative()">📥 Unicode → Native</button>
-                    <button class="btn btn-secondary" onclick="clearInput('native-unicode-input', 'native-unicode-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="nativeToUnicode()" data-i18n="btnNativeToUnicode">📤 Native → Unicode</button>
+                    <button class="btn btn-success" onclick="unicodeToNative()" data-i18n="btnUnicodeToNative">📥 Unicode → Native</button>
+                    <button class="btn btn-secondary" onclick="clearInput('native-unicode-input', 'native-unicode-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="native-unicode-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('native-unicode-output')">复制</button>
+                        <pre id="native-unicode-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('native-unicode-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1221,24 +1243,24 @@
         <!-- UTF-8/GBK 转换 -->
         <div class="tool-panel" id="panel-utf8-gbk">
             <div class="tool-header">
-                <h2>🔄 UTF-8/GBK 转换</h2>
-                <p>查看文本的 UTF-8 和 GBK 编码表示</p>
+                <h2 data-i18n="utf8GbkTitle">🔄 UTF-8/GBK Convert</h2>
+                <p data-i18n="utf8GbkDesc">View UTF-8 and GBK encoding representation of text</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本</label>
-                    <textarea id="utf8-gbk-input" placeholder="请输入文本..."></textarea>
+                    <label data-i18n="inputText">Input Text</label>
+                    <textarea id="utf8-gbk-input" data-i18n-placeholder="placeholderText" placeholder="Enter text..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="showUtf8()">📤 显示 UTF-8 编码</button>
-                    <button class="btn btn-success" onclick="utf8ToText()">📥 UTF-8 编码转文本</button>
-                    <button class="btn btn-secondary" onclick="clearInput('utf8-gbk-input', 'utf8-gbk-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="showUtf8()" data-i18n="btnShowUtf8">📤 Show UTF-8 Encoding</button>
+                    <button class="btn btn-success" onclick="utf8ToText()" data-i18n="btnUtf8ToText">📥 UTF-8 to Text</button>
+                    <button class="btn btn-secondary" onclick="clearInput('utf8-gbk-input', 'utf8-gbk-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="utf8-gbk-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('utf8-gbk-output')">复制</button>
+                        <pre id="utf8-gbk-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('utf8-gbk-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1247,24 +1269,24 @@
         <!-- 摩尔斯电码 -->
         <div class="tool-panel" id="panel-morse">
             <div class="tool-header">
-                <h2>📡 摩尔斯电码</h2>
-                <p>将文本转换为摩尔斯电码，或将摩尔斯电码转换为文本</p>
+                <h2 data-i18n="morseTitle">📡 Morse Code</h2>
+                <p data-i18n="morseDesc">Convert text to Morse code or Morse code to text</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>输入文本/摩尔斯电码</label>
-                    <textarea id="morse-input" placeholder="请输入文本或摩尔斯电码 (用空格分隔字母，用 / 分隔单词)..."></textarea>
+                    <label data-i18n="inputTextMorse">Input Text/Morse Code</label>
+                    <textarea id="morse-input" data-i18n-placeholder="placeholderMorse" placeholder="Enter text or Morse code (space between letters, / between words)..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="textToMorse()">📤 文本 → 摩尔斯</button>
-                    <button class="btn btn-success" onclick="morseToText()">📥 摩尔斯 → 文本</button>
-                    <button class="btn btn-secondary" onclick="clearInput('morse-input', 'morse-output')">🗑️ 清空</button>
+                    <button class="btn btn-primary" onclick="textToMorse()" data-i18n="btnTextToMorse">📤 Text → Morse</button>
+                    <button class="btn btn-success" onclick="morseToText()" data-i18n="btnMorseToText">📥 Morse → Text</button>
+                    <button class="btn btn-secondary" onclick="clearInput('morse-input', 'morse-output')" data-i18n="btnClear">🗑️ Clear</button>
                 </div>
                 <div class="input-group">
-                    <label>结果</label>
+                    <label data-i18n="labelResult">Result</label>
                     <div class="result-box">
-                        <pre id="morse-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('morse-output')">复制</button>
+                        <pre id="morse-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('morse-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1273,44 +1295,44 @@
         <!-- 密码生成器 -->
         <div class="tool-panel" id="panel-password">
             <div class="tool-header">
-                <h2>🎲 密码生成器</h2>
-                <p>生成安全的随机密码</p>
+                <h2 data-i18n="passwordTitle">🎲 Password Generator</h2>
+                <p data-i18n="passwordDesc">Generate secure random passwords</p>
             </div>
             <div class="tool-card">
                 <div class="options-row">
                     <div class="input-group">
-                        <label>密码长度: <span id="pwd-length-value">16</span></label>
+                        <label><span data-i18n="labelPasswordLength">Password Length</span>: <span id="pwd-length-value">16</span></label>
                         <input type="range" id="pwd-length" min="4" max="64" value="16" oninput="document.getElementById('pwd-length-value').textContent = this.value">
                     </div>
                     <div class="input-group">
-                        <label>生成数量</label>
+                        <label data-i18n="labelCount">Count</label>
                         <input type="number" id="pwd-count" value="5" min="1" max="20">
                     </div>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="pwd-upper" checked>
-                    <label for="pwd-upper">大写字母 (A-Z)</label>
+                    <label for="pwd-upper" data-i18n="optUppercase">Uppercase (A-Z)</label>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="pwd-lower" checked>
-                    <label for="pwd-lower">小写字母 (a-z)</label>
+                    <label for="pwd-lower" data-i18n="optLowercase">Lowercase (a-z)</label>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="pwd-number" checked>
-                    <label for="pwd-number">数字 (0-9)</label>
+                    <label for="pwd-number" data-i18n="optNumbers">Numbers (0-9)</label>
                 </div>
                 <div class="checkbox-group">
                     <input type="checkbox" id="pwd-symbol" checked>
-                    <label for="pwd-symbol">特殊符号 (!@#$%^&*)</label>
+                    <label for="pwd-symbol" data-i18n="optSymbols">Symbols (!@#$%^&*)</label>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="generatePassword()">🎲 生成密码</button>
+                    <button class="btn btn-primary" onclick="generatePassword()" data-i18n="btnGeneratePassword">🎲 Generate Password</button>
                 </div>
                 <div class="input-group">
-                    <label>生成的密码</label>
+                    <label data-i18n="generatedPasswords">Generated Passwords</label>
                     <div class="result-box">
-                        <pre id="password-output">密码将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('password-output')">复制</button>
+                        <pre id="password-output" data-i18n="passwordPlaceholder">Passwords will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('password-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1319,34 +1341,34 @@
         <!-- UUID/GUID 生成 -->
         <div class="tool-panel" id="panel-uuid">
             <div class="tool-header">
-                <h2>🆔 UUID/GUID 生成</h2>
-                <p>生成通用唯一识别码</p>
+                <h2 data-i18n="uuidTitle">🆔 UUID/GUID Generator</h2>
+                <p data-i18n="uuidDesc">Generate universally unique identifiers</p>
             </div>
             <div class="tool-card">
                 <div class="options-row">
                     <div class="input-group">
-                        <label>生成数量</label>
+                        <label data-i18n="labelCount">Count</label>
                         <input type="number" id="uuid-count" value="5" min="1" max="100">
                     </div>
                     <div class="input-group">
-                        <label>格式</label>
+                        <label data-i18n="labelFormat">Format</label>
                         <select id="uuid-format">
-                            <option value="standard">标准格式 (带连字符)</option>
-                            <option value="compact">紧凑格式 (无连字符)</option>
-                            <option value="upper">大写格式</option>
-                            <option value="braces">花括号格式 {UUID}</option>
+                            <option value="standard" data-i18n="optStandard">Standard (with hyphens)</option>
+                            <option value="compact" data-i18n="optCompact">Compact (no hyphens)</option>
+                            <option value="upper" data-i18n="optUppercaseFormat">Uppercase</option>
+                            <option value="braces" data-i18n="optBraces">Braces {UUID}</option>
                         </select>
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="generateUUID()">🆔 生成 UUID</button>
-                    <button class="btn btn-success" onclick="generateGUID()">🔖 生成 GUID</button>
+                    <button class="btn btn-primary" onclick="generateUUID()" data-i18n="btnGenerateUuid">🆔 Generate UUID</button>
+                    <button class="btn btn-success" onclick="generateGUID()" data-i18n="btnGenerateGuid">🔖 Generate GUID</button>
                 </div>
                 <div class="input-group">
-                    <label>生成结果</label>
+                    <label data-i18n="generatedResult">Generated Result</label>
                     <div class="result-box">
-                        <pre id="uuid-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('uuid-output')">复制</button>
+                        <pre id="uuid-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('uuid-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1355,38 +1377,38 @@
         <!-- htpasswd 生成 -->
         <div class="tool-panel" id="panel-htpasswd">
             <div class="tool-header">
-                <h2>🔒 htpasswd 生成</h2>
-                <p>生成 Apache htpasswd 格式的密码</p>
+                <h2 data-i18n="htpasswdTitle">🔒 htpasswd Generator</h2>
+                <p data-i18n="htpasswdDesc">Generate Apache htpasswd format passwords</p>
             </div>
             <div class="tool-card">
                 <div class="options-row">
                     <div class="input-group">
-                        <label>用户名</label>
-                        <input type="text" id="htpasswd-user" placeholder="请输入用户名">
+                        <label data-i18n="labelUsername">Username</label>
+                        <input type="text" id="htpasswd-user" data-i18n-placeholder="placeholderUsername" placeholder="Enter username">
                     </div>
                     <div class="input-group">
-                        <label>密码</label>
-                        <input type="password" id="htpasswd-pass" placeholder="请输入密码">
+                        <label data-i18n="labelPassword">Password</label>
+                        <input type="password" id="htpasswd-pass" data-i18n-placeholder="placeholderPassword" placeholder="Enter password">
                     </div>
                 </div>
                 <div class="options-row">
                     <div class="input-group">
-                        <label>加密方式</label>
+                        <label data-i18n="labelEncryptMethod">Encryption Method</label>
                         <select id="htpasswd-method">
                             <option value="md5">MD5 (APR1)</option>
                             <option value="sha1">SHA-1</option>
-                            <option value="plain">明文 (不推荐)</option>
+                            <option value="plain" data-i18n="optPlaintext">Plain text (not recommended)</option>
                         </select>
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="generateHtpasswd()">🔒 生成 htpasswd</button>
+                    <button class="btn btn-primary" onclick="generateHtpasswd()" data-i18n="btnGenerateHtpasswd">🔒 Generate htpasswd</button>
                 </div>
                 <div class="input-group">
-                    <label>生成结果</label>
+                    <label data-i18n="generatedResult">Generated Result</label>
                     <div class="result-box">
-                        <pre id="htpasswd-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('htpasswd-output')">复制</button>
+                        <pre id="htpasswd-output" data-i18n="resultPlaceholder">Result will be displayed here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('htpasswd-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1395,19 +1417,19 @@
         <!-- 条形码生成器 -->
         <div class="tool-panel" id="panel-barcode">
             <div class="tool-header">
-                <h2>📊 条形码生成器</h2>
-                <p>生成各种格式的条形码</p>
+                <h2 data-i18n="barcodeTitle">📊 Barcode Generator</h2>
+                <p data-i18n="barcodeDesc">Generate various formats of barcodes</p>
             </div>
             <div class="tool-card">
                 <div class="options-row">
                     <div class="input-group">
-                        <label>条形码内容</label>
-                        <input type="text" id="barcode-text" placeholder="请输入条形码内容">
+                        <label data-i18n="labelBarcodeContent">Barcode Content</label>
+                        <input type="text" id="barcode-text" data-i18n-placeholder="placeholderBarcodeContent" placeholder="Enter barcode content">
                     </div>
                     <div class="input-group">
-                        <label>条形码格式</label>
+                        <label data-i18n="labelBarcodeFormat">Barcode Format</label>
                         <select id="barcode-format">
-                            <option value="CODE128">CODE128 (通用)</option>
+                            <option value="CODE128" data-i18n="optCode128">CODE128 (Universal)</option>
                             <option value="CODE39">CODE39</option>
                             <option value="EAN13">EAN-13</option>
                             <option value="EAN8">EAN-8</option>
@@ -1418,11 +1440,11 @@
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="generateBarcode()">📊 生成条形码</button>
-                    <button class="btn btn-success" onclick="downloadBarcode()">💾 下载图片</button>
+                    <button class="btn btn-primary" onclick="generateBarcode()" data-i18n="btnGenerateBarcode">📊 Generate Barcode</button>
+                    <button class="btn btn-success" onclick="downloadBarcode()" data-i18n="btnDownloadImage">💾 Download Image</button>
                 </div>
                 <div class="input-group">
-                    <label>条形码预览</label>
+                    <label data-i18n="labelBarcodePreview">Barcode Preview</label>
                     <div style="background: #fff; padding: 20px; border-radius: 8px; text-align: center;">
                         <svg id="barcode-canvas"></svg>
                     </div>
@@ -1433,116 +1455,116 @@
         <!-- 二维码生成器 -->
         <div class="tool-panel" id="panel-qrcode">
             <div class="tool-header">
-                <h2>📱 二维码生成器</h2>
-                <p>生成自定义样式的二维码，支持多种形状和颜色</p>
+                <h2 data-i18n="qrcodeTitle">📱 QR Code Generator</h2>
+                <p data-i18n="qrcodeDesc">Generate custom styled QR codes with various shapes and colors</p>
             </div>
             <div class="tool-card">
                 <div class="input-group">
-                    <label>二维码内容</label>
-                    <textarea id="qrcode-text" placeholder="请输入文本、网址或其他内容..." style="min-height: 80px;">https://github.com</textarea>
+                    <label data-i18n="qrcodeContent">QR Code Content</label>
+                    <textarea id="qrcode-text" data-i18n-placeholder="qrcodeContentPlaceholder" placeholder="Enter text, URL or other content..." style="min-height: 80px;">https://github.com</textarea>
                 </div>
 
                 <div class="options-row">
                     <div class="input-group">
-                        <label>尺寸: <span id="qr-size-value">300</span>px</label>
+                        <label><span data-i18n="qrcodeSize">Size</span>: <span id="qr-size-value">300</span>px</label>
                         <input type="range" id="qr-size" min="100" max="500" value="300" oninput="document.getElementById('qr-size-value').textContent = this.value">
                     </div>
                     <div class="input-group">
-                        <label>容错级别</label>
+                        <label data-i18n="qrcodeErrorLevel">Error Correction</label>
                         <select id="qr-error-level">
-                            <option value="L">L - 7% 容错</option>
-                            <option value="M" selected>M - 15% 容错</option>
-                            <option value="Q">Q - 25% 容错</option>
-                            <option value="H">H - 30% 容错</option>
+                            <option value="L" data-i18n="qrcodeErrorL">L - 7% Recovery</option>
+                            <option value="M" selected data-i18n="qrcodeErrorM">M - 15% Recovery</option>
+                            <option value="Q" data-i18n="qrcodeErrorQ">Q - 25% Recovery</option>
+                            <option value="H" data-i18n="qrcodeErrorH">H - 30% Recovery</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="divider"></div>
-                <h3 style="margin-bottom: 15px; font-size: 1rem;">🎨 样式设置</h3>
+                <h3 style="margin-bottom: 15px; font-size: 1rem;" data-i18n="qrcodeStyleSettings">🎨 Style Settings</h3>
 
                 <div class="options-row">
                     <div class="input-group">
-                        <label>码点样式</label>
+                        <label data-i18n="qrcodeDotsStyle">Dots Style</label>
                         <select id="qr-dots-type">
-                            <option value="square">方形</option>
-                            <option value="dots">圆点</option>
-                            <option value="rounded" selected>圆角方形</option>
-                            <option value="extra-rounded">超圆角</option>
-                            <option value="classy">经典</option>
-                            <option value="classy-rounded">圆角经典</option>
+                            <option value="square" data-i18n="qrcodeStyleSquare">Square</option>
+                            <option value="dots" data-i18n="qrcodeStyleDots">Dots</option>
+                            <option value="rounded" selected data-i18n="qrcodeStyleRounded">Rounded</option>
+                            <option value="extra-rounded" data-i18n="qrcodeStyleExtraRounded">Extra Rounded</option>
+                            <option value="classy" data-i18n="qrcodeStyleClassy">Classy</option>
+                            <option value="classy-rounded" data-i18n="qrcodeStyleClassyRounded">Classy Rounded</option>
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>码点颜色</label>
+                        <label data-i18n="qrcodeDotsColor">Dots Color</label>
                         <input type="color" id="qr-dots-color" value="#000000" style="width: 100%; height: 38px; cursor: pointer;">
                     </div>
                 </div>
 
                 <div class="options-row">
                     <div class="input-group">
-                        <label>定位角样式</label>
+                        <label data-i18n="qrcodeCornersStyle">Corners Style</label>
                         <select id="qr-corners-type">
-                            <option value="square">方形</option>
-                            <option value="dot">圆形</option>
-                            <option value="extra-rounded" selected>圆角</option>
+                            <option value="square" data-i18n="qrcodeStyleSquare">Square</option>
+                            <option value="dot" data-i18n="qrcodeStyleCircle">Circle</option>
+                            <option value="extra-rounded" selected data-i18n="qrcodeStyleRounded">Rounded</option>
                         </select>
                     </div>
                     <div class="input-group">
-                        <label>定位角颜色</label>
+                        <label data-i18n="qrcodeCornersColor">Corners Color</label>
                         <input type="color" id="qr-corners-color" value="#000000" style="width: 100%; height: 38px; cursor: pointer;">
                     </div>
                 </div>
 
                 <div class="options-row">
                     <div class="input-group">
-                        <label>背景颜色</label>
+                        <label data-i18n="qrcodeBgColor">Background Color</label>
                         <input type="color" id="qr-bg-color" value="#ffffff" style="width: 100%; height: 38px; cursor: pointer;">
                     </div>
                     <div class="input-group">
-                        <label>透明背景</label>
+                        <label data-i18n="qrcodeTransparentBg">Transparent Background</label>
                         <select id="qr-bg-transparent">
-                            <option value="no" selected>否</option>
-                            <option value="yes">是</option>
+                            <option value="no" selected data-i18n="optionNo">No</option>
+                            <option value="yes" data-i18n="optionYes">Yes</option>
                         </select>
                     </div>
                 </div>
 
                 <div class="divider"></div>
-                <h3 style="margin-bottom: 15px; font-size: 1rem;">🖼️ Logo 设置 (可选)</h3>
+                <h3 style="margin-bottom: 15px; font-size: 1rem;" data-i18n="qrcodeLogoSettings">🖼️ Logo Settings (Optional)</h3>
 
                 <div class="options-row">
                     <div class="input-group">
-                        <label>上传 Logo</label>
+                        <label data-i18n="qrcodeUploadLogo">Upload Logo</label>
                         <input type="file" id="qr-logo" accept="image/*" style="padding: 8px;">
                     </div>
                     <div class="input-group">
-                        <label>Logo 大小: <span id="qr-logo-size-value">0.4</span></label>
+                        <label><span data-i18n="qrcodeLogoSize">Logo Size</span>: <span id="qr-logo-size-value">0.4</span></label>
                         <input type="range" id="qr-logo-size" min="0.1" max="0.5" step="0.05" value="0.4" oninput="document.getElementById('qr-logo-size-value').textContent = this.value">
                     </div>
                 </div>
 
                 <div class="divider"></div>
-                <h3 style="margin-bottom: 15px; font-size: 1rem;">🌈 预设主题</h3>
+                <h3 style="margin-bottom: 15px; font-size: 1rem;" data-i18n="qrcodePresetThemes">🌈 Preset Themes</h3>
                 <div class="btn-group" style="margin-bottom: 15px;">
-                    <button class="btn btn-secondary" onclick="applyQRTheme('classic')">经典黑白</button>
-                    <button class="btn btn-secondary" onclick="applyQRTheme('blue')">科技蓝</button>
-                    <button class="btn btn-secondary" onclick="applyQRTheme('gradient')">渐变紫</button>
-                    <button class="btn btn-secondary" onclick="applyQRTheme('green')">清新绿</button>
-                    <button class="btn btn-secondary" onclick="applyQRTheme('sunset')">日落橙</button>
-                    <button class="btn btn-secondary" onclick="applyQRTheme('pink')">甜美粉</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('classic')" data-i18n="qrcodeThemeClassic">Classic B&W</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('blue')" data-i18n="qrcodeThemeBlue">Tech Blue</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('gradient')" data-i18n="qrcodeThemeGradient">Gradient Purple</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('green')" data-i18n="qrcodeThemeGreen">Fresh Green</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('sunset')" data-i18n="qrcodeThemeSunset">Sunset Orange</button>
+                    <button class="btn btn-secondary" onclick="applyQRTheme('pink')" data-i18n="qrcodeThemePink">Sweet Pink</button>
                 </div>
 
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="generateQRCode()">📱 生成二维码</button>
-                    <button class="btn btn-success" onclick="downloadQRCode('png')">💾 下载 PNG</button>
-                    <button class="btn btn-success" onclick="downloadQRCode('svg')">💾 下载 SVG</button>
+                    <button class="btn btn-primary" onclick="generateQRCode()" data-i18n="qrcodeGenerate">📱 Generate QR Code</button>
+                    <button class="btn btn-success" onclick="downloadQRCode('png')" data-i18n="qrcodeDownloadPng">💾 Download PNG</button>
+                    <button class="btn btn-success" onclick="downloadQRCode('svg')" data-i18n="qrcodeDownloadSvg">💾 Download SVG</button>
                 </div>
 
                 <div class="input-group" style="margin-top: 20px;">
-                    <label>二维码预览</label>
+                    <label data-i18n="qrcodePreview">QR Code Preview</label>
                     <div id="qrcode-preview" style="background: #fff; padding: 20px; border-radius: 8px; text-align: center; min-height: 200px; display: flex; align-items: center; justify-content: center;">
-                        <span style="color: #999;">点击"生成二维码"按钮预览</span>
+                        <span style="color: #999;" data-i18n="qrcodePreviewHint">Click "Generate QR Code" to preview</span>
                     </div>
                 </div>
             </div>
@@ -1551,31 +1573,31 @@
         <!-- IP/数字地址转换 -->
         <div class="tool-panel" id="panel-ip-convert">
             <div class="tool-header">
-                <h2>🖥️ IP/数字地址转换</h2>
-                <p>IP 地址与数字格式相互转换</p>
+                <h2 data-i18n="ipConvertTitle">🖥️ IP/Number Converter</h2>
+                <p data-i18n="ipConvertDesc">Convert between IP address and numeric format</p>
             </div>
             <div class="tool-card">
                 <div class="grid-2">
                     <div class="input-group">
-                        <label>IP 地址</label>
-                        <input type="text" id="ip-input" placeholder="如: 192.168.1.1">
+                        <label data-i18n="ipAddress">IP Address</label>
+                        <input type="text" id="ip-input" data-i18n-placeholder="ipAddressPlaceholder" placeholder="e.g. 192.168.1.1">
                     </div>
                     <div class="input-group">
-                        <label>数字地址</label>
-                        <input type="text" id="ip-number-input" placeholder="如: 3232235777">
+                        <label data-i18n="ipNumber">Numeric Address</label>
+                        <input type="text" id="ip-number-input" data-i18n-placeholder="ipNumberPlaceholder" placeholder="e.g. 3232235777">
                     </div>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="ipToNumber()">📤 IP → 数字</button>
-                    <button class="btn btn-success" onclick="numberToIp()">📥 数字 → IP</button>
-                    <button class="btn btn-secondary" onclick="ipToBinary()">🔢 IP → 二进制</button>
-                    <button class="btn btn-secondary" onclick="ipToHex()">🔣 IP → 十六进制</button>
+                    <button class="btn btn-primary" onclick="ipToNumber()" data-i18n="ipToNumber">📤 IP → Number</button>
+                    <button class="btn btn-success" onclick="numberToIp()" data-i18n="numberToIp">📥 Number → IP</button>
+                    <button class="btn btn-secondary" onclick="ipToBinary()" data-i18n="ipToBinary">🔢 IP → Binary</button>
+                    <button class="btn btn-secondary" onclick="ipToHex()" data-i18n="ipToHex">🔣 IP → Hex</button>
                 </div>
                 <div class="input-group">
-                    <label>转换结果</label>
+                    <label data-i18n="conversionResult">Conversion Result</label>
                     <div class="result-box">
-                        <pre id="ip-output">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('ip-output')">复制</button>
+                        <pre id="ip-output" data-i18n="resultPlaceholder">Result will appear here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('ip-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
             </div>
@@ -1584,32 +1606,32 @@
         <!-- 图片转 Base64 -->
         <div class="tool-panel" id="panel-image-base64">
             <div class="tool-header">
-                <h2>🖼️ 图片转 Base64</h2>
-                <p>将图片文件转换为 Base64 编码</p>
+                <h2 data-i18n="imageBase64Title">🖼️ Image to Base64</h2>
+                <p data-i18n="imageBase64Desc">Convert image files to Base64 encoding</p>
             </div>
             <div class="tool-card">
                 <div class="file-upload" onclick="document.getElementById('image-file').click()">
                     <input type="file" id="image-file" accept="image/*" onchange="imageToBase64(this)">
                     <div class="icon">🖼️</div>
-                    <p>点击或拖拽图片到此处上传</p>
-                    <p style="font-size: 0.8rem; margin-top: 5px;">支持 JPG、PNG、GIF、WebP 等格式</p>
+                    <p data-i18n="imageUploadHint">Click or drag image here to upload</p>
+                    <p style="font-size: 0.8rem; margin-top: 5px;" data-i18n="imageFormatsHint">Supports JPG, PNG, GIF, WebP formats</p>
                 </div>
                 <img id="image-preview" class="image-preview" style="display: none;">
                 <div class="input-group" style="margin-top: 20px;">
-                    <label>Base64 编码结果</label>
+                    <label data-i18n="base64Result">Base64 Encoding Result</label>
                     <div class="result-box">
-                        <pre id="image-base64-output" style="max-height: 200px; overflow: auto;">结果将显示在这里...</pre>
-                        <button class="btn btn-secondary copy-btn" onclick="copyResult('image-base64-output')">复制</button>
+                        <pre id="image-base64-output" style="max-height: 200px; overflow: auto;" data-i18n="resultPlaceholder">Result will appear here...</pre>
+                        <button class="btn btn-secondary copy-btn" onclick="copyResult('image-base64-output')" data-i18n="btnCopy">Copy</button>
                     </div>
                 </div>
                 <div class="divider"></div>
-                <h3 style="margin-bottom: 15px;">Base64 转图片</h3>
+                <h3 style="margin-bottom: 15px;" data-i18n="base64ToImage">Base64 to Image</h3>
                 <div class="input-group">
-                    <label>输入 Base64 编码</label>
-                    <textarea id="base64-to-image-input" placeholder="请输入图片的 Base64 编码..."></textarea>
+                    <label data-i18n="inputBase64">Input Base64 Encoding</label>
+                    <textarea id="base64-to-image-input" data-i18n-placeholder="inputBase64Placeholder" placeholder="Enter image Base64 encoding..."></textarea>
                 </div>
                 <div class="btn-group">
-                    <button class="btn btn-primary" onclick="base64ToImage()">🖼️ 转换为图片</button>
+                    <button class="btn btn-primary" onclick="base64ToImage()" data-i18n="convertToImage">🖼️ Convert to Image</button>
                 </div>
                 <img id="base64-image-preview" class="image-preview" style="display: none; margin-top: 15px;">
             </div>
@@ -1617,51 +1639,51 @@
 
         <!-- FAQ 常见问题 -->
         <section class="faq-section">
-            <h2 class="faq-title">常见问题</h2>
+            <h2 class="faq-title" data-i18n="faqTitle">Frequently Asked Questions</h2>
             <div class="faq-list">
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>Base64 编码是加密吗？</span>
+                        <span data-i18n="faqQ1">Is Base64 encoding encryption?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="faq-answer-content">Base64 是编码方式，不是加密，可以直接解码还原，不提供安全保护。Base64 主要用于将二进制数据转换为文本格式，便于在文本协议中传输，任何人都可以轻松解码。</p>
+                        <p class="faq-answer-content" data-i18n="faqA1">Base64 is an encoding method, not encryption. It can be directly decoded and provides no security protection. Base64 is mainly used to convert binary data into text format for transmission in text protocols. Anyone can easily decode it.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>MD5 可以解密吗？</span>
+                        <span data-i18n="faqQ2">Can MD5 be decrypted?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="faq-answer-content">MD5 是单向哈希函数，不可逆，无法从哈希值还原原始数据。MD5 将任意长度的数据压缩成固定 128 位的摘要，设计上就是不可逆的，只能通过彩虹表或暴力破解尝试碰撞。</p>
+                        <p class="faq-answer-content" data-i18n="faqA2">MD5 is a one-way hash function and cannot be reversed. It's impossible to recover original data from the hash. MD5 compresses data of any length into a fixed 128-bit digest, designed to be irreversible. Only rainbow tables or brute force can attempt collision attacks.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>AES 加密安全吗？</span>
+                        <span data-i18n="faqQ3">Is AES encryption secure?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="faq-answer-content">AES 是目前最安全的对称加密算法之一，广泛用于政府和金融机构。AES-256 被美国政府用于加密最高机密文件，至今未被破解，是保护敏感数据的首选算法。</p>
+                        <p class="faq-answer-content" data-i18n="faqA3">AES is one of the most secure symmetric encryption algorithms, widely used by governments and financial institutions. AES-256 is used by the US government to encrypt top secret documents and has never been broken. It's the preferred algorithm for protecting sensitive data.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>SHA-256 和 MD5 哪个更安全？</span>
+                        <span data-i18n="faqQ4">Which is more secure: SHA-256 or MD5?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="faq-answer-content">SHA-256 更安全，MD5 已发现碰撞漏洞，不建议用于安全场景。SHA-256 输出 256 位、算法更复杂，目前仍被认为是安全的哈希算法，广泛用于数字签名和区块链。</p>
+                        <p class="faq-answer-content" data-i18n="faqA4">SHA-256 is more secure. MD5 has known collision vulnerabilities and is not recommended for security-critical scenarios. SHA-256 outputs 256 bits with a more complex algorithm, still considered secure, and widely used in digital signatures and blockchain.</p>
                     </div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" onclick="toggleFaq(this)">
-                        <span>数据会上传到服务器吗？</span>
+                        <span data-i18n="faqQ5">Will my data be uploaded to servers?</span>
                         <span class="faq-icon">+</span>
                     </button>
                     <div class="faq-answer">
-                        <p class="faq-answer-content">不会，所有加解密操作在浏览器本地完成。本工具采用纯前端技术，使用 JavaScript 加密库（CryptoJS）在您的设备上处理数据，敏感信息不会离开您的浏览器。</p>
+                        <p class="faq-answer-content" data-i18n="faqA5">No, all encryption and decryption operations are performed locally in your browser. This tool uses pure frontend technology with the CryptoJS library to process data on your device. Sensitive information never leaves your browser.</p>
                     </div>
                 </div>
             </div>
@@ -1669,35 +1691,35 @@
 
         <!-- 相关工具推荐 -->
         <section class="related-tools" style="margin-top: 40px; padding: 20px; background: rgba(0, 0, 0, 0.2); border-radius: 12px;">
-            <h3 style="color: #fff; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;">🔗 相关工具推荐</h3>
+            <h3 style="color: #fff; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #333;" data-i18n="relatedTools">🔗 Related Tools</h3>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
                 <a href="json-viewer.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                     <div style="font-size: 24px; margin-bottom: 8px;">📋</div>
-                    <div style="color: #fff; font-weight: 500;">JSON 查看器</div>
-                    <div style="color: #888; font-size: 12px; margin-top: 4px;">JSON 格式化与可视化</div>
+                    <div style="color: #fff; font-weight: 500;" data-i18n="relatedJsonViewer">JSON Viewer</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="relatedJsonViewerDesc">JSON formatting and visualization</div>
                 </a>
                 <a href="regex-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                     <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
-                    <div style="color: #fff; font-weight: 500;">正则表达式测试</div>
-                    <div style="color: #888; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+                    <div style="color: #fff; font-weight: 500;" data-i18n="relatedRegexTester">Regex Tester</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="relatedRegexTesterDesc">Online regex matching and debugging</div>
                 </a>
                 <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                     <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
-                    <div style="color: #fff; font-weight: 500;">时间戳转换</div>
-                    <div style="color: #888; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+                    <div style="color: #fff; font-weight: 500;" data-i18n="relatedTimestamp">Timestamp Converter</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="relatedTimestampDesc">Convert Unix timestamp and date</div>
                 </a>
                 <a href="websocket-tester.html" style="display: block; padding: 16px; background: #16213e; border: 1px solid #333; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                     <div style="font-size: 24px; margin-bottom: 8px;">🔌</div>
-                    <div style="color: #fff; font-weight: 500;">WebSocket 测试</div>
-                    <div style="color: #888; font-size: 12px; margin-top: 4px;">WebSocket 连接调试</div>
+                    <div style="color: #fff; font-weight: 500;" data-i18n="relatedWebSocket">WebSocket Tester</div>
+                    <div style="color: #888; font-size: 12px; margin-top: 4px;" data-i18n="relatedWebSocketDesc">WebSocket connection debugging</div>
                 </a>
             </div>
         </section>
 
         <footer style="text-align: center; padding: 30px 0; margin-top: 30px; border-top: 1px solid #333; color: #888; font-size: 14px;">
-            <p>纯前端处理，数据不会上传到服务器</p>
+            <p data-i18n="footerPrivacy">Pure frontend processing, data is not uploaded to servers</p>
             <p style="margin-top: 12px;">
-                <a href="index.html" style="color: #00d9ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+                <a href="index.html" style="color: #00d9ff; text-decoration: none;" data-i18n="footerBackHome">← Back to Web Toolbox Home</a>
                 <span style="margin: 0 12px;">|</span>
                 <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #00d9ff; text-decoration: none;">GitHub</a>
             </p>
@@ -2614,6 +2636,1102 @@
                 });
             } catch(e) {}
         };
+
+        // ==================== 国际化 (i18n) ====================
+        const i18n = {
+            en: {
+                // Site header
+                siteTitle: '🔐 Crypto Toolbox',
+                siteSubtitle: 'Online Encryption & Encoding Tools',
+                backToHome: '← Back to Home',
+                // Navigation
+                navEncryption: '🔒 Encryption',
+                navMd5: 'MD5',
+                navSha: 'SHA',
+                navHashAll: 'Hash All',
+                navAes: 'AES',
+                navDes: 'DES',
+                navTripleDes: '3DES',
+                navRc4: 'RC4',
+                navRabbit: 'Rabbit',
+                navEncoding: '📝 Encoding',
+                navBase64: 'Base64',
+                navUrl: 'URL',
+                navUrlHex: 'URL Hex',
+                navEscape: 'Escape',
+                navUnicode: 'Unicode',
+                navNativeUnicode: 'Native/Unicode',
+                navUtf8Gbk: 'UTF-8/GBK',
+                navOther: '🛠️ Other Tools',
+                navMorse: 'Morse',
+                navPassword: 'Password',
+                navUuid: 'UUID',
+                navHtpasswd: 'htpasswd',
+                navBarcode: 'Barcode',
+                navQrcode: 'QR Code',
+                navIpConvert: 'IP Convert',
+                navImageBase64: 'Image Base64',
+                // Features section
+                featuresTitle: '✨ Features',
+                feature1Title: 'Secure & Private',
+                feature1Desc: 'All operations performed locally in your browser',
+                feature2Title: 'Multiple Algorithms',
+                feature2Desc: 'Supports 20+ encryption and encoding methods',
+                feature3Title: 'Easy to Use',
+                feature3Desc: 'One-click operations with instant results',
+                // MD5
+                md5Title: '🔐 MD5 Encryption',
+                md5Desc: 'Generate 32-bit MD5 hash value',
+                inputText: 'Input Text',
+                inputPlaceholder: 'Enter text to encrypt...',
+                btnEncrypt: '🔒 Encrypt',
+                btnClear: '🗑️ Clear',
+                encryptionResult: 'Encryption Result',
+                resultPlaceholder: 'Result will appear here...',
+                btnCopy: 'Copy',
+                // SHA
+                shaTitle: '🔑 SHA Encryption',
+                shaDesc: 'Supports SHA-1, SHA-256, SHA-384, SHA-512, SHA-3 algorithms',
+                selectAlgorithm: 'Select Algorithm',
+                // Hash All
+                hashAllTitle: '🎯 Hash All Algorithms',
+                hashAllDesc: 'Encrypt text with all hash algorithms at once',
+                btnHashAll: '🎯 Hash All',
+                // AES
+                aesTitle: '🔐 AES Encryption/Decryption',
+                aesDesc: 'Advanced Encryption Standard symmetric encryption',
+                encryptionKey: 'Encryption Key',
+                keyPlaceholder: 'Enter encryption key...',
+                encryptionMode: 'Mode',
+                paddingMode: 'Padding',
+                btnDecrypt: '🔓 Decrypt',
+                // DES
+                desTitle: '🔒 DES Encryption/Decryption',
+                desDesc: 'Data Encryption Standard symmetric encryption',
+                // TripleDES
+                tripleDesTitle: '🔒 TripleDES (3DES) Encryption/Decryption',
+                tripleDesDesc: 'Triple DES symmetric encryption',
+                // RC4
+                rc4Title: '🔑 RC4 Encryption/Decryption',
+                rc4Desc: 'RC4 stream cipher encryption',
+                // Rabbit
+                rabbitTitle: '🐰 Rabbit Encryption/Decryption',
+                rabbitDesc: 'Rabbit stream cipher encryption',
+                // Base64
+                base64Title: '📄 Base64 Encoding/Decoding',
+                base64Desc: 'Base64 text encoding and decoding',
+                btnEncode: '📤 Encode',
+                btnDecode: '📥 Decode',
+                // URL
+                urlTitle: '🔗 URL Encoding/Decoding',
+                urlDesc: 'Standard URL encoding and decoding',
+                urlInputPlaceholder: 'Enter URL or encoded text...',
+                btnUrlEncode: 'encodeURI',
+                btnUrlDecode: 'decodeURI',
+                btnUrlEncodeComponent: 'Component Encode',
+                btnUrlDecodeComponent: 'Component Decode',
+                // URL Hex
+                urlHexTitle: '🔢 URL Hex Encoding',
+                urlHexDesc: 'Convert URL to hex encoding',
+                urlHexInputPlaceholder: 'Enter URL or hex code...',
+                btnHexEncode: '📤 Hex Encode',
+                btnHexDecode: '📥 Hex Decode',
+                // Escape
+                escapeTitle: '⚡ Escape Encoding/Decoding',
+                escapeDesc: 'JavaScript Escape encoding and decoding',
+                escapeInputPlaceholder: 'Enter text to encode/decode...',
+                // Unicode
+                unicodeTitle: '🌐 Unicode/ASCII Converter',
+                unicodeDesc: 'Convert between text, Unicode and ASCII',
+                unicodeInputPlaceholder: 'Enter text, Unicode (\\u0000) or ASCII codes...',
+                btnToUnicode: '→ Unicode',
+                btnFromUnicode: 'Unicode →',
+                btnToAscii: '→ ASCII',
+                btnFromAscii: 'ASCII →',
+                // Native Unicode
+                nativeUnicodeTitle: '📝 Native/Unicode Encoding',
+                nativeUnicodeDesc: 'Convert between native characters and Unicode',
+                nativeUnicodeInputPlaceholder: 'Enter native text or Unicode encoding...',
+                btnNativeToUnicode: '📤 Native → Unicode',
+                btnUnicodeToNative: '📥 Unicode → Native',
+                // UTF-8/GBK
+                utf8GbkTitle: '🔤 UTF-8/GBK Encoding',
+                utf8GbkDesc: 'View and convert text encoding',
+                utf8GbkInputPlaceholder: 'Enter text or encoding...',
+                btnShowUtf8: '📊 Show UTF-8',
+                btnUtf8ToText: '📥 UTF-8 → Text',
+                // Morse
+                morseTitle: '📡 Morse Code Converter',
+                morseDesc: 'Convert between text and Morse code',
+                morseInputPlaceholder: 'Enter text or Morse code (use / to separate words)...',
+                btnTextToMorse: '📤 Text → Morse',
+                btnMorseToText: '📥 Morse → Text',
+                // Password
+                passwordTitle: '🔑 Password Generator',
+                passwordDesc: 'Generate secure random passwords',
+                passwordLength: 'Password Length',
+                passwordCount: 'Number of Passwords',
+                includeUppercase: 'Uppercase (A-Z)',
+                includeLowercase: 'Lowercase (a-z)',
+                includeNumbers: 'Numbers (0-9)',
+                includeSymbols: 'Symbols (!@#$...)',
+                btnGenerate: '🎲 Generate Password',
+                // UUID
+                uuidTitle: '🆔 UUID/GUID Generator',
+                uuidDesc: 'Generate unique identifiers',
+                uuidCount: 'Number to Generate',
+                uuidFormat: 'Format',
+                uuidFormatStandard: 'Standard (with dashes)',
+                uuidFormatCompact: 'Compact (no dashes)',
+                uuidFormatUpper: 'Uppercase',
+                uuidFormatBraces: 'With Braces',
+                btnGenerateUuid: '🆔 Generate UUID',
+                btnGenerateGuid: '🆔 Generate GUID',
+                // htpasswd
+                htpasswdTitle: '🔐 htpasswd Generator',
+                htpasswdDesc: 'Generate Apache htpasswd entries',
+                username: 'Username',
+                usernamePlaceholder: 'Enter username...',
+                password: 'Password',
+                passwordPlaceholder: 'Enter password...',
+                hashMethod: 'Hash Method',
+                btnGenerateHtpasswd: '🔐 Generate htpasswd',
+                // Barcode
+                barcodeTitle: '📊 Barcode Generator',
+                barcodeDesc: 'Generate various formats of barcodes',
+                barcodeContent: 'Barcode Content',
+                barcodeContentPlaceholder: 'Enter barcode content...',
+                barcodeFormat: 'Barcode Format',
+                btnGenerateBarcode: '📊 Generate Barcode',
+                btnDownloadBarcode: '💾 Download',
+                barcodePreview: 'Barcode Preview',
+                // QR Code
+                qrcodeTitle: '📱 QR Code Generator',
+                qrcodeDesc: 'Generate custom styled QR codes with various shapes and colors',
+                qrcodeContent: 'QR Code Content',
+                qrcodeContentPlaceholder: 'Enter text, URL or other content...',
+                qrcodeSize: 'Size',
+                qrcodeErrorLevel: 'Error Correction',
+                qrcodeErrorL: 'L - 7% Recovery',
+                qrcodeErrorM: 'M - 15% Recovery',
+                qrcodeErrorQ: 'Q - 25% Recovery',
+                qrcodeErrorH: 'H - 30% Recovery',
+                qrcodeStyleSettings: '🎨 Style Settings',
+                qrcodeDotsStyle: 'Dots Style',
+                qrcodeStyleSquare: 'Square',
+                qrcodeStyleDots: 'Dots',
+                qrcodeStyleRounded: 'Rounded',
+                qrcodeStyleExtraRounded: 'Extra Rounded',
+                qrcodeStyleClassy: 'Classy',
+                qrcodeStyleClassyRounded: 'Classy Rounded',
+                qrcodeStyleCircle: 'Circle',
+                qrcodeDotsColor: 'Dots Color',
+                qrcodeCornersStyle: 'Corners Style',
+                qrcodeCornersColor: 'Corners Color',
+                qrcodeBgColor: 'Background Color',
+                qrcodeTransparentBg: 'Transparent Background',
+                optionYes: 'Yes',
+                optionNo: 'No',
+                qrcodeLogoSettings: '🖼️ Logo Settings (Optional)',
+                qrcodeUploadLogo: 'Upload Logo',
+                qrcodeLogoSize: 'Logo Size',
+                qrcodePresetThemes: '🌈 Preset Themes',
+                qrcodeThemeClassic: 'Classic B&W',
+                qrcodeThemeBlue: 'Tech Blue',
+                qrcodeThemeGradient: 'Gradient Purple',
+                qrcodeThemeGreen: 'Fresh Green',
+                qrcodeThemeSunset: 'Sunset Orange',
+                qrcodeThemePink: 'Sweet Pink',
+                qrcodeGenerate: '📱 Generate QR Code',
+                qrcodeDownloadPng: '💾 Download PNG',
+                qrcodeDownloadSvg: '💾 Download SVG',
+                qrcodePreview: 'QR Code Preview',
+                qrcodePreviewHint: 'Click "Generate QR Code" to preview',
+                // IP Convert
+                ipConvertTitle: '🖥️ IP/Number Converter',
+                ipConvertDesc: 'Convert between IP address and numeric format',
+                ipAddress: 'IP Address',
+                ipAddressPlaceholder: 'e.g. 192.168.1.1',
+                ipNumber: 'Numeric Address',
+                ipNumberPlaceholder: 'e.g. 3232235777',
+                ipToNumber: '📤 IP → Number',
+                numberToIp: '📥 Number → IP',
+                ipToBinary: '🔢 IP → Binary',
+                ipToHex: '🔣 IP → Hex',
+                conversionResult: 'Conversion Result',
+                // Image Base64
+                imageBase64Title: '🖼️ Image to Base64',
+                imageBase64Desc: 'Convert image files to Base64 encoding',
+                imageUploadHint: 'Click or drag image here to upload',
+                imageFormatsHint: 'Supports JPG, PNG, GIF, WebP formats',
+                base64Result: 'Base64 Encoding Result',
+                base64ToImage: 'Base64 to Image',
+                inputBase64: 'Input Base64 Encoding',
+                inputBase64Placeholder: 'Enter image Base64 encoding...',
+                convertToImage: '🖼️ Convert to Image',
+                // FAQ
+                faqTitle: 'Frequently Asked Questions',
+                faqQ1: 'Is Base64 encoding encryption?',
+                faqA1: 'Base64 is an encoding method, not encryption. It can be directly decoded and provides no security protection. Base64 is mainly used to convert binary data into text format for transmission in text protocols. Anyone can easily decode it.',
+                faqQ2: 'Can MD5 be decrypted?',
+                faqA2: 'MD5 is a one-way hash function and cannot be reversed. It\'s impossible to recover original data from the hash. MD5 compresses data of any length into a fixed 128-bit digest, designed to be irreversible. Only rainbow tables or brute force can attempt collision attacks.',
+                faqQ3: 'Is AES encryption secure?',
+                faqA3: 'AES is one of the most secure symmetric encryption algorithms, widely used by governments and financial institutions. AES-256 is used by the US government to encrypt top secret documents and has never been broken. It\'s the preferred algorithm for protecting sensitive data.',
+                faqQ4: 'Which is more secure: SHA-256 or MD5?',
+                faqA4: 'SHA-256 is more secure. MD5 has known collision vulnerabilities and is not recommended for security-critical scenarios. SHA-256 outputs 256 bits with a more complex algorithm, still considered secure, and widely used in digital signatures and blockchain.',
+                faqQ5: 'Will my data be uploaded to servers?',
+                faqA5: 'No, all encryption and decryption operations are performed locally in your browser. This tool uses pure frontend technology with the CryptoJS library to process data on your device. Sensitive information never leaves your browser.',
+                // Related Tools
+                relatedTools: '🔗 Related Tools',
+                relatedJsonViewer: 'JSON Viewer',
+                relatedJsonViewerDesc: 'JSON formatting and visualization',
+                relatedRegexTester: 'Regex Tester',
+                relatedRegexTesterDesc: 'Online regex matching and debugging',
+                relatedTimestamp: 'Timestamp Converter',
+                relatedTimestampDesc: 'Convert Unix timestamp and date',
+                relatedWebSocket: 'WebSocket Tester',
+                relatedWebSocketDesc: 'WebSocket connection debugging',
+                // Footer
+                footerPrivacy: 'Pure frontend processing, data is not uploaded to servers',
+                footerBackHome: '← Back to Web Toolbox Home'
+            },
+            'zh-CN': {
+                // Site header
+                siteTitle: '🔐 加密工具箱',
+                siteSubtitle: '在线加密解密编码工具',
+                backToHome: '← 返回首页',
+                // Navigation
+                navEncryption: '🔒 加密算法',
+                navMd5: 'MD5',
+                navSha: 'SHA',
+                navHashAll: '哈希大全',
+                navAes: 'AES',
+                navDes: 'DES',
+                navTripleDes: '3DES',
+                navRc4: 'RC4',
+                navRabbit: 'Rabbit',
+                navEncoding: '📝 编码转换',
+                navBase64: 'Base64',
+                navUrl: 'URL',
+                navUrlHex: 'URL十六进制',
+                navEscape: 'Escape',
+                navUnicode: 'Unicode',
+                navNativeUnicode: 'Native/Unicode',
+                navUtf8Gbk: 'UTF-8/GBK',
+                navOther: '🛠️ 其他工具',
+                navMorse: '摩尔斯电码',
+                navPassword: '密码生成',
+                navUuid: 'UUID',
+                navHtpasswd: 'htpasswd',
+                navBarcode: '条形码',
+                navQrcode: '二维码',
+                navIpConvert: 'IP转换',
+                navImageBase64: '图片Base64',
+                // Features section
+                featuresTitle: '✨ 功能特点',
+                feature1Title: '安全私密',
+                feature1Desc: '所有操作在浏览器本地完成',
+                feature2Title: '多种算法',
+                feature2Desc: '支持 20+ 种加密编码方式',
+                feature3Title: '简单易用',
+                feature3Desc: '一键操作，即时获取结果',
+                // MD5
+                md5Title: '🔐 MD5 加密',
+                md5Desc: '生成 32 位 MD5 哈希值',
+                inputText: '输入文本',
+                inputPlaceholder: '请输入要加密的文本...',
+                btnEncrypt: '🔒 加密',
+                btnClear: '🗑️ 清空',
+                encryptionResult: '加密结果',
+                resultPlaceholder: '结果将显示在这里...',
+                btnCopy: '复制',
+                // SHA
+                shaTitle: '🔑 SHA 加密',
+                shaDesc: '支持 SHA-1、SHA-256、SHA-384、SHA-512、SHA-3 算法',
+                selectAlgorithm: '选择算法',
+                // Hash All
+                hashAllTitle: '🎯 哈希大全',
+                hashAllDesc: '一键使用所有哈希算法加密',
+                btnHashAll: '🎯 全部加密',
+                // AES
+                aesTitle: '🔐 AES 加密/解密',
+                aesDesc: '高级加密标准对称加密算法',
+                encryptionKey: '加密密钥',
+                keyPlaceholder: '请输入加密密钥...',
+                encryptionMode: '加密模式',
+                paddingMode: '填充方式',
+                btnDecrypt: '🔓 解密',
+                // DES
+                desTitle: '🔒 DES 加密/解密',
+                desDesc: '数据加密标准对称加密算法',
+                // TripleDES
+                tripleDesTitle: '🔒 TripleDES (3DES) 加密/解密',
+                tripleDesDesc: '三重 DES 对称加密算法',
+                // RC4
+                rc4Title: '🔑 RC4 加密/解密',
+                rc4Desc: 'RC4 流密码加密算法',
+                // Rabbit
+                rabbitTitle: '🐰 Rabbit 加密/解密',
+                rabbitDesc: 'Rabbit 流密码加密算法',
+                // Base64
+                base64Title: '📄 Base64 编码/解码',
+                base64Desc: 'Base64 文本编码与解码',
+                btnEncode: '📤 编码',
+                btnDecode: '📥 解码',
+                // URL
+                urlTitle: '🔗 URL 编码/解码',
+                urlDesc: '标准 URL 编码与解码',
+                urlInputPlaceholder: '请输入 URL 或编码文本...',
+                btnUrlEncode: 'encodeURI',
+                btnUrlDecode: 'decodeURI',
+                btnUrlEncodeComponent: '组件编码',
+                btnUrlDecodeComponent: '组件解码',
+                // URL Hex
+                urlHexTitle: '🔢 URL 十六进制编码',
+                urlHexDesc: '将 URL 转换为十六进制编码',
+                urlHexInputPlaceholder: '请输入 URL 或十六进制编码...',
+                btnHexEncode: '📤 十六进制编码',
+                btnHexDecode: '📥 十六进制解码',
+                // Escape
+                escapeTitle: '⚡ Escape 编码/解码',
+                escapeDesc: 'JavaScript Escape 编码与解码',
+                escapeInputPlaceholder: '请输入要编码/解码的文本...',
+                // Unicode
+                unicodeTitle: '🌐 Unicode/ASCII 转换',
+                unicodeDesc: '文本与 Unicode、ASCII 码互转',
+                unicodeInputPlaceholder: '输入文本、Unicode (\\u0000) 或 ASCII 码...',
+                btnToUnicode: '→ Unicode',
+                btnFromUnicode: 'Unicode →',
+                btnToAscii: '→ ASCII',
+                btnFromAscii: 'ASCII →',
+                // Native Unicode
+                nativeUnicodeTitle: '📝 Native/Unicode 编码',
+                nativeUnicodeDesc: '原生字符与 Unicode 编码转换',
+                nativeUnicodeInputPlaceholder: '请输入原生文本或 Unicode 编码...',
+                btnNativeToUnicode: '📤 Native → Unicode',
+                btnUnicodeToNative: '📥 Unicode → Native',
+                // UTF-8/GBK
+                utf8GbkTitle: '🔤 UTF-8/GBK 编码',
+                utf8GbkDesc: '查看和转换文本编码',
+                utf8GbkInputPlaceholder: '请输入文本或编码...',
+                btnShowUtf8: '📊 显示 UTF-8',
+                btnUtf8ToText: '📥 UTF-8 → 文本',
+                // Morse
+                morseTitle: '📡 摩尔斯电码转换',
+                morseDesc: '文本与摩尔斯电码互转',
+                morseInputPlaceholder: '输入文本或摩尔斯电码（用 / 分隔单词）...',
+                btnTextToMorse: '📤 文本 → 摩尔斯',
+                btnMorseToText: '📥 摩尔斯 → 文本',
+                // Password
+                passwordTitle: '🔑 密码生成器',
+                passwordDesc: '生成安全的随机密码',
+                passwordLength: '密码长度',
+                passwordCount: '生成数量',
+                includeUppercase: '大写字母 (A-Z)',
+                includeLowercase: '小写字母 (a-z)',
+                includeNumbers: '数字 (0-9)',
+                includeSymbols: '符号 (!@#$...)',
+                btnGenerate: '🎲 生成密码',
+                // UUID
+                uuidTitle: '🆔 UUID/GUID 生成器',
+                uuidDesc: '生成唯一标识符',
+                uuidCount: '生成数量',
+                uuidFormat: '格式',
+                uuidFormatStandard: '标准（带连字符）',
+                uuidFormatCompact: '紧凑（无连字符）',
+                uuidFormatUpper: '大写',
+                uuidFormatBraces: '带大括号',
+                btnGenerateUuid: '🆔 生成 UUID',
+                btnGenerateGuid: '🆔 生成 GUID',
+                // htpasswd
+                htpasswdTitle: '🔐 htpasswd 生成器',
+                htpasswdDesc: '生成 Apache htpasswd 条目',
+                username: '用户名',
+                usernamePlaceholder: '请输入用户名...',
+                password: '密码',
+                passwordPlaceholder: '请输入密码...',
+                hashMethod: '哈希方法',
+                btnGenerateHtpasswd: '🔐 生成 htpasswd',
+                // Barcode
+                barcodeTitle: '📊 条形码生成器',
+                barcodeDesc: '生成多种格式的条形码',
+                barcodeContent: '条形码内容',
+                barcodeContentPlaceholder: '请输入条形码内容...',
+                barcodeFormat: '条形码格式',
+                btnGenerateBarcode: '📊 生成条形码',
+                btnDownloadBarcode: '💾 下载',
+                barcodePreview: '条形码预览',
+                // QR Code
+                qrcodeTitle: '📱 二维码生成器',
+                qrcodeDesc: '生成自定义样式的二维码，支持多种形状和颜色',
+                qrcodeContent: '二维码内容',
+                qrcodeContentPlaceholder: '请输入文本、网址或其他内容...',
+                qrcodeSize: '尺寸',
+                qrcodeErrorLevel: '容错级别',
+                qrcodeErrorL: 'L - 7% 容错',
+                qrcodeErrorM: 'M - 15% 容错',
+                qrcodeErrorQ: 'Q - 25% 容错',
+                qrcodeErrorH: 'H - 30% 容错',
+                qrcodeStyleSettings: '🎨 样式设置',
+                qrcodeDotsStyle: '码点样式',
+                qrcodeStyleSquare: '方形',
+                qrcodeStyleDots: '圆点',
+                qrcodeStyleRounded: '圆角方形',
+                qrcodeStyleExtraRounded: '超圆角',
+                qrcodeStyleClassy: '经典',
+                qrcodeStyleClassyRounded: '圆角经典',
+                qrcodeStyleCircle: '圆形',
+                qrcodeDotsColor: '码点颜色',
+                qrcodeCornersStyle: '定位角样式',
+                qrcodeCornersColor: '定位角颜色',
+                qrcodeBgColor: '背景颜色',
+                qrcodeTransparentBg: '透明背景',
+                optionYes: '是',
+                optionNo: '否',
+                qrcodeLogoSettings: '🖼️ Logo 设置 (可选)',
+                qrcodeUploadLogo: '上传 Logo',
+                qrcodeLogoSize: 'Logo 大小',
+                qrcodePresetThemes: '🌈 预设主题',
+                qrcodeThemeClassic: '经典黑白',
+                qrcodeThemeBlue: '科技蓝',
+                qrcodeThemeGradient: '渐变紫',
+                qrcodeThemeGreen: '清新绿',
+                qrcodeThemeSunset: '日落橙',
+                qrcodeThemePink: '甜美粉',
+                qrcodeGenerate: '📱 生成二维码',
+                qrcodeDownloadPng: '💾 下载 PNG',
+                qrcodeDownloadSvg: '💾 下载 SVG',
+                qrcodePreview: '二维码预览',
+                qrcodePreviewHint: '点击"生成二维码"按钮预览',
+                // IP Convert
+                ipConvertTitle: '🖥️ IP/数字地址转换',
+                ipConvertDesc: 'IP 地址与数字格式相互转换',
+                ipAddress: 'IP 地址',
+                ipAddressPlaceholder: '如: 192.168.1.1',
+                ipNumber: '数字地址',
+                ipNumberPlaceholder: '如: 3232235777',
+                ipToNumber: '📤 IP → 数字',
+                numberToIp: '📥 数字 → IP',
+                ipToBinary: '🔢 IP → 二进制',
+                ipToHex: '🔣 IP → 十六进制',
+                conversionResult: '转换结果',
+                // Image Base64
+                imageBase64Title: '🖼️ 图片转 Base64',
+                imageBase64Desc: '将图片文件转换为 Base64 编码',
+                imageUploadHint: '点击或拖拽图片到此处上传',
+                imageFormatsHint: '支持 JPG、PNG、GIF、WebP 等格式',
+                base64Result: 'Base64 编码结果',
+                base64ToImage: 'Base64 转图片',
+                inputBase64: '输入 Base64 编码',
+                inputBase64Placeholder: '请输入图片的 Base64 编码...',
+                convertToImage: '🖼️ 转换为图片',
+                // FAQ
+                faqTitle: '常见问题',
+                faqQ1: 'Base64 编码是加密吗？',
+                faqA1: 'Base64 是编码方式，不是加密，可以直接解码还原，不提供安全保护。Base64 主要用于将二进制数据转换为文本格式，便于在文本协议中传输，任何人都可以轻松解码。',
+                faqQ2: 'MD5 可以解密吗？',
+                faqA2: 'MD5 是单向哈希函数，不可逆，无法从哈希值还原原始数据。MD5 将任意长度的数据压缩成固定 128 位的摘要，设计上就是不可逆的，只能通过彩虹表或暴力破解尝试碰撞。',
+                faqQ3: 'AES 加密安全吗？',
+                faqA3: 'AES 是目前最安全的对称加密算法之一，广泛用于政府和金融机构。AES-256 被美国政府用于加密最高机密文件，至今未被破解，是保护敏感数据的首选算法。',
+                faqQ4: 'SHA-256 和 MD5 哪个更安全？',
+                faqA4: 'SHA-256 更安全，MD5 已发现碰撞漏洞，不建议用于安全场景。SHA-256 输出 256 位、算法更复杂，目前仍被认为是安全的哈希算法，广泛用于数字签名和区块链。',
+                faqQ5: '数据会上传到服务器吗？',
+                faqA5: '不会，所有加解密操作在浏览器本地完成。本工具采用纯前端技术，使用 JavaScript 加密库（CryptoJS）在您的设备上处理数据，敏感信息不会离开您的浏览器。',
+                // Related Tools
+                relatedTools: '🔗 相关工具推荐',
+                relatedJsonViewer: 'JSON 查看器',
+                relatedJsonViewerDesc: 'JSON 格式化与可视化',
+                relatedRegexTester: '正则表达式测试',
+                relatedRegexTesterDesc: '在线正则匹配与调试',
+                relatedTimestamp: '时间戳转换',
+                relatedTimestampDesc: 'Unix 时间戳与日期互转',
+                relatedWebSocket: 'WebSocket 测试',
+                relatedWebSocketDesc: 'WebSocket 连接调试',
+                // Footer
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBackHome: '← 返回 Web Toolbox 首页'
+            },
+            fr: {
+                // Site header
+                siteTitle: '🔐 Boîte à outils Crypto',
+                siteSubtitle: 'Outils de chiffrement et encodage en ligne',
+                backToHome: '← Retour à l\'accueil',
+                // Navigation
+                navEncryption: '🔒 Chiffrement',
+                navMd5: 'MD5',
+                navSha: 'SHA',
+                navHashAll: 'Tous les Hash',
+                navAes: 'AES',
+                navDes: 'DES',
+                navTripleDes: '3DES',
+                navRc4: 'RC4',
+                navRabbit: 'Rabbit',
+                navEncoding: '📝 Encodage',
+                navBase64: 'Base64',
+                navUrl: 'URL',
+                navUrlHex: 'URL Hex',
+                navEscape: 'Escape',
+                navUnicode: 'Unicode',
+                navNativeUnicode: 'Native/Unicode',
+                navUtf8Gbk: 'UTF-8/GBK',
+                navOther: '🛠️ Autres outils',
+                navMorse: 'Morse',
+                navPassword: 'Mot de passe',
+                navUuid: 'UUID',
+                navHtpasswd: 'htpasswd',
+                navBarcode: 'Code-barres',
+                navQrcode: 'QR Code',
+                navIpConvert: 'Conversion IP',
+                navImageBase64: 'Image Base64',
+                // Features section
+                featuresTitle: '✨ Fonctionnalités',
+                feature1Title: 'Sécurisé et privé',
+                feature1Desc: 'Toutes les opérations effectuées localement',
+                feature2Title: 'Multiples algorithmes',
+                feature2Desc: 'Supporte 20+ méthodes de chiffrement',
+                feature3Title: 'Facile à utiliser',
+                feature3Desc: 'Opérations en un clic avec résultats instantanés',
+                // MD5
+                md5Title: '🔐 Chiffrement MD5',
+                md5Desc: 'Générer une valeur de hachage MD5 32 bits',
+                inputText: 'Texte d\'entrée',
+                inputPlaceholder: 'Entrez le texte à chiffrer...',
+                btnEncrypt: '🔒 Chiffrer',
+                btnClear: '🗑️ Effacer',
+                encryptionResult: 'Résultat du chiffrement',
+                resultPlaceholder: 'Le résultat apparaîtra ici...',
+                btnCopy: 'Copier',
+                // SHA
+                shaTitle: '🔑 Chiffrement SHA',
+                shaDesc: 'Supporte SHA-1, SHA-256, SHA-384, SHA-512, SHA-3',
+                selectAlgorithm: 'Sélectionner l\'algorithme',
+                // Hash All
+                hashAllTitle: '🎯 Tous les algorithmes de hachage',
+                hashAllDesc: 'Chiffrer le texte avec tous les algorithmes',
+                btnHashAll: '🎯 Hacher tout',
+                // AES
+                aesTitle: '🔐 Chiffrement/Déchiffrement AES',
+                aesDesc: 'Chiffrement symétrique AES',
+                encryptionKey: 'Clé de chiffrement',
+                keyPlaceholder: 'Entrez la clé de chiffrement...',
+                encryptionMode: 'Mode',
+                paddingMode: 'Remplissage',
+                btnDecrypt: '🔓 Déchiffrer',
+                // DES
+                desTitle: '🔒 Chiffrement/Déchiffrement DES',
+                desDesc: 'Chiffrement symétrique DES',
+                // TripleDES
+                tripleDesTitle: '🔒 Chiffrement/Déchiffrement TripleDES',
+                tripleDesDesc: 'Chiffrement symétrique Triple DES',
+                // RC4
+                rc4Title: '🔑 Chiffrement/Déchiffrement RC4',
+                rc4Desc: 'Chiffrement par flux RC4',
+                // Rabbit
+                rabbitTitle: '🐰 Chiffrement/Déchiffrement Rabbit',
+                rabbitDesc: 'Chiffrement par flux Rabbit',
+                // Base64
+                base64Title: '📄 Encodage/Décodage Base64',
+                base64Desc: 'Encodage et décodage de texte Base64',
+                btnEncode: '📤 Encoder',
+                btnDecode: '📥 Décoder',
+                // URL
+                urlTitle: '🔗 Encodage/Décodage URL',
+                urlDesc: 'Encodage et décodage URL standard',
+                urlInputPlaceholder: 'Entrez l\'URL ou le texte encodé...',
+                btnUrlEncode: 'encodeURI',
+                btnUrlDecode: 'decodeURI',
+                btnUrlEncodeComponent: 'Encoder composant',
+                btnUrlDecodeComponent: 'Décoder composant',
+                // URL Hex
+                urlHexTitle: '🔢 Encodage URL hexadécimal',
+                urlHexDesc: 'Convertir l\'URL en encodage hexadécimal',
+                urlHexInputPlaceholder: 'Entrez l\'URL ou le code hexadécimal...',
+                btnHexEncode: '📤 Encoder en Hex',
+                btnHexDecode: '📥 Décoder Hex',
+                // Escape
+                escapeTitle: '⚡ Encodage/Décodage Escape',
+                escapeDesc: 'Encodage JavaScript Escape',
+                escapeInputPlaceholder: 'Entrez le texte à encoder/décoder...',
+                // Unicode
+                unicodeTitle: '🌐 Convertisseur Unicode/ASCII',
+                unicodeDesc: 'Convertir entre texte, Unicode et ASCII',
+                unicodeInputPlaceholder: 'Entrez texte, Unicode (\\u0000) ou codes ASCII...',
+                btnToUnicode: '→ Unicode',
+                btnFromUnicode: 'Unicode →',
+                btnToAscii: '→ ASCII',
+                btnFromAscii: 'ASCII →',
+                // Native Unicode
+                nativeUnicodeTitle: '📝 Encodage Native/Unicode',
+                nativeUnicodeDesc: 'Convertir entre caractères natifs et Unicode',
+                nativeUnicodeInputPlaceholder: 'Entrez texte natif ou encodage Unicode...',
+                btnNativeToUnicode: '📤 Natif → Unicode',
+                btnUnicodeToNative: '📥 Unicode → Natif',
+                // UTF-8/GBK
+                utf8GbkTitle: '🔤 Encodage UTF-8/GBK',
+                utf8GbkDesc: 'Afficher et convertir l\'encodage de texte',
+                utf8GbkInputPlaceholder: 'Entrez texte ou encodage...',
+                btnShowUtf8: '📊 Afficher UTF-8',
+                btnUtf8ToText: '📥 UTF-8 → Texte',
+                // Morse
+                morseTitle: '📡 Convertisseur code Morse',
+                morseDesc: 'Convertir entre texte et code Morse',
+                morseInputPlaceholder: 'Entrez texte ou code Morse (/ pour séparer les mots)...',
+                btnTextToMorse: '📤 Texte → Morse',
+                btnMorseToText: '📥 Morse → Texte',
+                // Password
+                passwordTitle: '🔑 Générateur de mot de passe',
+                passwordDesc: 'Générer des mots de passe aléatoires sécurisés',
+                passwordLength: 'Longueur du mot de passe',
+                passwordCount: 'Nombre de mots de passe',
+                includeUppercase: 'Majuscules (A-Z)',
+                includeLowercase: 'Minuscules (a-z)',
+                includeNumbers: 'Chiffres (0-9)',
+                includeSymbols: 'Symboles (!@#$...)',
+                btnGenerate: '🎲 Générer mot de passe',
+                // UUID
+                uuidTitle: '🆔 Générateur UUID/GUID',
+                uuidDesc: 'Générer des identifiants uniques',
+                uuidCount: 'Nombre à générer',
+                uuidFormat: 'Format',
+                uuidFormatStandard: 'Standard (avec tirets)',
+                uuidFormatCompact: 'Compact (sans tirets)',
+                uuidFormatUpper: 'Majuscules',
+                uuidFormatBraces: 'Avec accolades',
+                btnGenerateUuid: '🆔 Générer UUID',
+                btnGenerateGuid: '🆔 Générer GUID',
+                // htpasswd
+                htpasswdTitle: '🔐 Générateur htpasswd',
+                htpasswdDesc: 'Générer des entrées Apache htpasswd',
+                username: 'Nom d\'utilisateur',
+                usernamePlaceholder: 'Entrez le nom d\'utilisateur...',
+                password: 'Mot de passe',
+                passwordPlaceholder: 'Entrez le mot de passe...',
+                hashMethod: 'Méthode de hachage',
+                btnGenerateHtpasswd: '🔐 Générer htpasswd',
+                // Barcode
+                barcodeTitle: '📊 Générateur de code-barres',
+                barcodeDesc: 'Générer des codes-barres de différents formats',
+                barcodeContent: 'Contenu du code-barres',
+                barcodeContentPlaceholder: 'Entrez le contenu du code-barres...',
+                barcodeFormat: 'Format du code-barres',
+                btnGenerateBarcode: '📊 Générer code-barres',
+                btnDownloadBarcode: '💾 Télécharger',
+                barcodePreview: 'Aperçu du code-barres',
+                // QR Code
+                qrcodeTitle: '📱 Générateur de QR Code',
+                qrcodeDesc: 'Générer des QR codes personnalisés avec diverses formes et couleurs',
+                qrcodeContent: 'Contenu du QR Code',
+                qrcodeContentPlaceholder: 'Entrez texte, URL ou autre contenu...',
+                qrcodeSize: 'Taille',
+                qrcodeErrorLevel: 'Correction d\'erreur',
+                qrcodeErrorL: 'L - 7% récupération',
+                qrcodeErrorM: 'M - 15% récupération',
+                qrcodeErrorQ: 'Q - 25% récupération',
+                qrcodeErrorH: 'H - 30% récupération',
+                qrcodeStyleSettings: '🎨 Paramètres de style',
+                qrcodeDotsStyle: 'Style des points',
+                qrcodeStyleSquare: 'Carré',
+                qrcodeStyleDots: 'Points',
+                qrcodeStyleRounded: 'Arrondi',
+                qrcodeStyleExtraRounded: 'Très arrondi',
+                qrcodeStyleClassy: 'Classique',
+                qrcodeStyleClassyRounded: 'Classique arrondi',
+                qrcodeStyleCircle: 'Cercle',
+                qrcodeDotsColor: 'Couleur des points',
+                qrcodeCornersStyle: 'Style des coins',
+                qrcodeCornersColor: 'Couleur des coins',
+                qrcodeBgColor: 'Couleur de fond',
+                qrcodeTransparentBg: 'Fond transparent',
+                optionYes: 'Oui',
+                optionNo: 'Non',
+                qrcodeLogoSettings: '🖼️ Paramètres du logo (Optionnel)',
+                qrcodeUploadLogo: 'Télécharger le logo',
+                qrcodeLogoSize: 'Taille du logo',
+                qrcodePresetThemes: '🌈 Thèmes prédéfinis',
+                qrcodeThemeClassic: 'Noir et blanc classique',
+                qrcodeThemeBlue: 'Bleu tech',
+                qrcodeThemeGradient: 'Violet dégradé',
+                qrcodeThemeGreen: 'Vert frais',
+                qrcodeThemeSunset: 'Orange coucher de soleil',
+                qrcodeThemePink: 'Rose doux',
+                qrcodeGenerate: '📱 Générer QR Code',
+                qrcodeDownloadPng: '💾 Télécharger PNG',
+                qrcodeDownloadSvg: '💾 Télécharger SVG',
+                qrcodePreview: 'Aperçu du QR Code',
+                qrcodePreviewHint: 'Cliquez sur "Générer QR Code" pour prévisualiser',
+                // IP Convert
+                ipConvertTitle: '🖥️ Convertisseur IP/Nombre',
+                ipConvertDesc: 'Convertir entre adresse IP et format numérique',
+                ipAddress: 'Adresse IP',
+                ipAddressPlaceholder: 'ex: 192.168.1.1',
+                ipNumber: 'Adresse numérique',
+                ipNumberPlaceholder: 'ex: 3232235777',
+                ipToNumber: '📤 IP → Nombre',
+                numberToIp: '📥 Nombre → IP',
+                ipToBinary: '🔢 IP → Binaire',
+                ipToHex: '🔣 IP → Hex',
+                conversionResult: 'Résultat de conversion',
+                // Image Base64
+                imageBase64Title: '🖼️ Image vers Base64',
+                imageBase64Desc: 'Convertir les fichiers image en encodage Base64',
+                imageUploadHint: 'Cliquez ou glissez l\'image ici pour télécharger',
+                imageFormatsHint: 'Supporte les formats JPG, PNG, GIF, WebP',
+                base64Result: 'Résultat de l\'encodage Base64',
+                base64ToImage: 'Base64 vers image',
+                inputBase64: 'Entrer l\'encodage Base64',
+                inputBase64Placeholder: 'Entrez l\'encodage Base64 de l\'image...',
+                convertToImage: '🖼️ Convertir en image',
+                // FAQ
+                faqTitle: 'Questions fréquemment posées',
+                faqQ1: 'L\'encodage Base64 est-il un chiffrement ?',
+                faqA1: 'Base64 est une méthode d\'encodage, pas de chiffrement. Il peut être directement décodé et ne fournit aucune protection de sécurité. Base64 est principalement utilisé pour convertir des données binaires en format texte pour la transmission. N\'importe qui peut facilement le décoder.',
+                faqQ2: 'Peut-on déchiffrer MD5 ?',
+                faqA2: 'MD5 est une fonction de hachage unidirectionnelle et ne peut pas être inversée. Il est impossible de récupérer les données originales à partir du hachage. MD5 compresse des données de n\'importe quelle longueur en un condensé fixe de 128 bits, conçu pour être irréversible.',
+                faqQ3: 'Le chiffrement AES est-il sécurisé ?',
+                faqA3: 'AES est l\'un des algorithmes de chiffrement symétrique les plus sûrs, largement utilisé par les gouvernements et les institutions financières. AES-256 est utilisé par le gouvernement américain pour chiffrer des documents top secret et n\'a jamais été cassé.',
+                faqQ4: 'Lequel est plus sûr : SHA-256 ou MD5 ?',
+                faqA4: 'SHA-256 est plus sûr. MD5 a des vulnérabilités de collision connues et n\'est pas recommandé pour les scénarios critiques de sécurité. SHA-256 produit 256 bits avec un algorithme plus complexe, toujours considéré comme sûr.',
+                faqQ5: 'Mes données seront-elles téléchargées sur des serveurs ?',
+                faqA5: 'Non, toutes les opérations de chiffrement et de déchiffrement sont effectuées localement dans votre navigateur. Cet outil utilise une technologie purement frontend avec la bibliothèque CryptoJS. Les informations sensibles ne quittent jamais votre navigateur.',
+                // Related Tools
+                relatedTools: '🔗 Outils connexes',
+                relatedJsonViewer: 'Visualiseur JSON',
+                relatedJsonViewerDesc: 'Formatage et visualisation JSON',
+                relatedRegexTester: 'Testeur Regex',
+                relatedRegexTesterDesc: 'Correspondance et débogage regex en ligne',
+                relatedTimestamp: 'Convertisseur d\'horodatage',
+                relatedTimestampDesc: 'Convertir horodatage Unix et date',
+                relatedWebSocket: 'Testeur WebSocket',
+                relatedWebSocketDesc: 'Débogage de connexion WebSocket',
+                // Footer
+                footerPrivacy: 'Traitement purement frontend, les données ne sont pas téléchargées',
+                footerBackHome: '← Retour à l\'accueil Web Toolbox'
+            },
+            es: {
+                // Site header
+                siteTitle: '🔐 Caja de herramientas Crypto',
+                siteSubtitle: 'Herramientas de cifrado y codificación en línea',
+                backToHome: '← Volver al inicio',
+                // Navigation
+                navEncryption: '🔒 Cifrado',
+                navMd5: 'MD5',
+                navSha: 'SHA',
+                navHashAll: 'Todos los Hash',
+                navAes: 'AES',
+                navDes: 'DES',
+                navTripleDes: '3DES',
+                navRc4: 'RC4',
+                navRabbit: 'Rabbit',
+                navEncoding: '📝 Codificación',
+                navBase64: 'Base64',
+                navUrl: 'URL',
+                navUrlHex: 'URL Hex',
+                navEscape: 'Escape',
+                navUnicode: 'Unicode',
+                navNativeUnicode: 'Native/Unicode',
+                navUtf8Gbk: 'UTF-8/GBK',
+                navOther: '🛠️ Otras herramientas',
+                navMorse: 'Morse',
+                navPassword: 'Contraseña',
+                navUuid: 'UUID',
+                navHtpasswd: 'htpasswd',
+                navBarcode: 'Código de barras',
+                navQrcode: 'Código QR',
+                navIpConvert: 'Conversión IP',
+                navImageBase64: 'Imagen Base64',
+                // Features section
+                featuresTitle: '✨ Características',
+                feature1Title: 'Seguro y privado',
+                feature1Desc: 'Todas las operaciones se realizan localmente',
+                feature2Title: 'Múltiples algoritmos',
+                feature2Desc: 'Soporta más de 20 métodos de cifrado',
+                feature3Title: 'Fácil de usar',
+                feature3Desc: 'Operaciones con un clic y resultados instantáneos',
+                // MD5
+                md5Title: '🔐 Cifrado MD5',
+                md5Desc: 'Generar valor hash MD5 de 32 bits',
+                inputText: 'Texto de entrada',
+                inputPlaceholder: 'Ingrese el texto a cifrar...',
+                btnEncrypt: '🔒 Cifrar',
+                btnClear: '🗑️ Limpiar',
+                encryptionResult: 'Resultado del cifrado',
+                resultPlaceholder: 'El resultado aparecerá aquí...',
+                btnCopy: 'Copiar',
+                // SHA
+                shaTitle: '🔑 Cifrado SHA',
+                shaDesc: 'Soporta SHA-1, SHA-256, SHA-384, SHA-512, SHA-3',
+                selectAlgorithm: 'Seleccionar algoritmo',
+                // Hash All
+                hashAllTitle: '🎯 Todos los algoritmos de hash',
+                hashAllDesc: 'Cifrar texto con todos los algoritmos',
+                btnHashAll: '🎯 Hash todo',
+                // AES
+                aesTitle: '🔐 Cifrado/Descifrado AES',
+                aesDesc: 'Cifrado simétrico AES',
+                encryptionKey: 'Clave de cifrado',
+                keyPlaceholder: 'Ingrese la clave de cifrado...',
+                encryptionMode: 'Modo',
+                paddingMode: 'Relleno',
+                btnDecrypt: '🔓 Descifrar',
+                // DES
+                desTitle: '🔒 Cifrado/Descifrado DES',
+                desDesc: 'Cifrado simétrico DES',
+                // TripleDES
+                tripleDesTitle: '🔒 Cifrado/Descifrado TripleDES',
+                tripleDesDesc: 'Cifrado simétrico Triple DES',
+                // RC4
+                rc4Title: '🔑 Cifrado/Descifrado RC4',
+                rc4Desc: 'Cifrado de flujo RC4',
+                // Rabbit
+                rabbitTitle: '🐰 Cifrado/Descifrado Rabbit',
+                rabbitDesc: 'Cifrado de flujo Rabbit',
+                // Base64
+                base64Title: '📄 Codificación/Decodificación Base64',
+                base64Desc: 'Codificación y decodificación de texto Base64',
+                btnEncode: '📤 Codificar',
+                btnDecode: '📥 Decodificar',
+                // URL
+                urlTitle: '🔗 Codificación/Decodificación URL',
+                urlDesc: 'Codificación y decodificación URL estándar',
+                urlInputPlaceholder: 'Ingrese URL o texto codificado...',
+                btnUrlEncode: 'encodeURI',
+                btnUrlDecode: 'decodeURI',
+                btnUrlEncodeComponent: 'Codificar componente',
+                btnUrlDecodeComponent: 'Decodificar componente',
+                // URL Hex
+                urlHexTitle: '🔢 Codificación URL hexadecimal',
+                urlHexDesc: 'Convertir URL a codificación hexadecimal',
+                urlHexInputPlaceholder: 'Ingrese URL o código hexadecimal...',
+                btnHexEncode: '📤 Codificar Hex',
+                btnHexDecode: '📥 Decodificar Hex',
+                // Escape
+                escapeTitle: '⚡ Codificación/Decodificación Escape',
+                escapeDesc: 'Codificación JavaScript Escape',
+                escapeInputPlaceholder: 'Ingrese texto a codificar/decodificar...',
+                // Unicode
+                unicodeTitle: '🌐 Convertidor Unicode/ASCII',
+                unicodeDesc: 'Convertir entre texto, Unicode y ASCII',
+                unicodeInputPlaceholder: 'Ingrese texto, Unicode (\\u0000) o códigos ASCII...',
+                btnToUnicode: '→ Unicode',
+                btnFromUnicode: 'Unicode →',
+                btnToAscii: '→ ASCII',
+                btnFromAscii: 'ASCII →',
+                // Native Unicode
+                nativeUnicodeTitle: '📝 Codificación Native/Unicode',
+                nativeUnicodeDesc: 'Convertir entre caracteres nativos y Unicode',
+                nativeUnicodeInputPlaceholder: 'Ingrese texto nativo o codificación Unicode...',
+                btnNativeToUnicode: '📤 Nativo → Unicode',
+                btnUnicodeToNative: '📥 Unicode → Nativo',
+                // UTF-8/GBK
+                utf8GbkTitle: '🔤 Codificación UTF-8/GBK',
+                utf8GbkDesc: 'Ver y convertir codificación de texto',
+                utf8GbkInputPlaceholder: 'Ingrese texto o codificación...',
+                btnShowUtf8: '📊 Mostrar UTF-8',
+                btnUtf8ToText: '📥 UTF-8 → Texto',
+                // Morse
+                morseTitle: '📡 Convertidor código Morse',
+                morseDesc: 'Convertir entre texto y código Morse',
+                morseInputPlaceholder: 'Ingrese texto o código Morse (use / para separar palabras)...',
+                btnTextToMorse: '📤 Texto → Morse',
+                btnMorseToText: '📥 Morse → Texto',
+                // Password
+                passwordTitle: '🔑 Generador de contraseñas',
+                passwordDesc: 'Generar contraseñas aleatorias seguras',
+                passwordLength: 'Longitud de contraseña',
+                passwordCount: 'Cantidad de contraseñas',
+                includeUppercase: 'Mayúsculas (A-Z)',
+                includeLowercase: 'Minúsculas (a-z)',
+                includeNumbers: 'Números (0-9)',
+                includeSymbols: 'Símbolos (!@#$...)',
+                btnGenerate: '🎲 Generar contraseña',
+                // UUID
+                uuidTitle: '🆔 Generador UUID/GUID',
+                uuidDesc: 'Generar identificadores únicos',
+                uuidCount: 'Cantidad a generar',
+                uuidFormat: 'Formato',
+                uuidFormatStandard: 'Estándar (con guiones)',
+                uuidFormatCompact: 'Compacto (sin guiones)',
+                uuidFormatUpper: 'Mayúsculas',
+                uuidFormatBraces: 'Con llaves',
+                btnGenerateUuid: '🆔 Generar UUID',
+                btnGenerateGuid: '🆔 Generar GUID',
+                // htpasswd
+                htpasswdTitle: '🔐 Generador htpasswd',
+                htpasswdDesc: 'Generar entradas Apache htpasswd',
+                username: 'Nombre de usuario',
+                usernamePlaceholder: 'Ingrese nombre de usuario...',
+                password: 'Contraseña',
+                passwordPlaceholder: 'Ingrese contraseña...',
+                hashMethod: 'Método de hash',
+                btnGenerateHtpasswd: '🔐 Generar htpasswd',
+                // Barcode
+                barcodeTitle: '📊 Generador de código de barras',
+                barcodeDesc: 'Generar códigos de barras de varios formatos',
+                barcodeContent: 'Contenido del código de barras',
+                barcodeContentPlaceholder: 'Ingrese contenido del código de barras...',
+                barcodeFormat: 'Formato de código de barras',
+                btnGenerateBarcode: '📊 Generar código de barras',
+                btnDownloadBarcode: '💾 Descargar',
+                barcodePreview: 'Vista previa del código de barras',
+                // QR Code
+                qrcodeTitle: '📱 Generador de código QR',
+                qrcodeDesc: 'Generar códigos QR personalizados con varias formas y colores',
+                qrcodeContent: 'Contenido del código QR',
+                qrcodeContentPlaceholder: 'Ingrese texto, URL u otro contenido...',
+                qrcodeSize: 'Tamaño',
+                qrcodeErrorLevel: 'Corrección de errores',
+                qrcodeErrorL: 'L - 7% recuperación',
+                qrcodeErrorM: 'M - 15% recuperación',
+                qrcodeErrorQ: 'Q - 25% recuperación',
+                qrcodeErrorH: 'H - 30% recuperación',
+                qrcodeStyleSettings: '🎨 Configuración de estilo',
+                qrcodeDotsStyle: 'Estilo de puntos',
+                qrcodeStyleSquare: 'Cuadrado',
+                qrcodeStyleDots: 'Puntos',
+                qrcodeStyleRounded: 'Redondeado',
+                qrcodeStyleExtraRounded: 'Muy redondeado',
+                qrcodeStyleClassy: 'Clásico',
+                qrcodeStyleClassyRounded: 'Clásico redondeado',
+                qrcodeStyleCircle: 'Círculo',
+                qrcodeDotsColor: 'Color de puntos',
+                qrcodeCornersStyle: 'Estilo de esquinas',
+                qrcodeCornersColor: 'Color de esquinas',
+                qrcodeBgColor: 'Color de fondo',
+                qrcodeTransparentBg: 'Fondo transparente',
+                optionYes: 'Sí',
+                optionNo: 'No',
+                qrcodeLogoSettings: '🖼️ Configuración del logo (Opcional)',
+                qrcodeUploadLogo: 'Subir logo',
+                qrcodeLogoSize: 'Tamaño del logo',
+                qrcodePresetThemes: '🌈 Temas predefinidos',
+                qrcodeThemeClassic: 'Blanco y negro clásico',
+                qrcodeThemeBlue: 'Azul tech',
+                qrcodeThemeGradient: 'Púrpura degradado',
+                qrcodeThemeGreen: 'Verde fresco',
+                qrcodeThemeSunset: 'Naranja atardecer',
+                qrcodeThemePink: 'Rosa dulce',
+                qrcodeGenerate: '📱 Generar código QR',
+                qrcodeDownloadPng: '💾 Descargar PNG',
+                qrcodeDownloadSvg: '💾 Descargar SVG',
+                qrcodePreview: 'Vista previa del código QR',
+                qrcodePreviewHint: 'Haga clic en "Generar código QR" para previsualizar',
+                // IP Convert
+                ipConvertTitle: '🖥️ Convertidor IP/Número',
+                ipConvertDesc: 'Convertir entre dirección IP y formato numérico',
+                ipAddress: 'Dirección IP',
+                ipAddressPlaceholder: 'ej: 192.168.1.1',
+                ipNumber: 'Dirección numérica',
+                ipNumberPlaceholder: 'ej: 3232235777',
+                ipToNumber: '📤 IP → Número',
+                numberToIp: '📥 Número → IP',
+                ipToBinary: '🔢 IP → Binario',
+                ipToHex: '🔣 IP → Hex',
+                conversionResult: 'Resultado de conversión',
+                // Image Base64
+                imageBase64Title: '🖼️ Imagen a Base64',
+                imageBase64Desc: 'Convertir archivos de imagen a codificación Base64',
+                imageUploadHint: 'Haga clic o arrastre la imagen aquí para subir',
+                imageFormatsHint: 'Soporta formatos JPG, PNG, GIF, WebP',
+                base64Result: 'Resultado de codificación Base64',
+                base64ToImage: 'Base64 a imagen',
+                inputBase64: 'Ingresar codificación Base64',
+                inputBase64Placeholder: 'Ingrese la codificación Base64 de la imagen...',
+                convertToImage: '🖼️ Convertir a imagen',
+                // FAQ
+                faqTitle: 'Preguntas frecuentes',
+                faqQ1: '¿La codificación Base64 es cifrado?',
+                faqA1: 'Base64 es un método de codificación, no de cifrado. Se puede decodificar directamente y no proporciona protección de seguridad. Base64 se utiliza principalmente para convertir datos binarios a formato de texto para transmisión. Cualquiera puede decodificarlo fácilmente.',
+                faqQ2: '¿Se puede descifrar MD5?',
+                faqA2: 'MD5 es una función hash unidireccional y no se puede revertir. Es imposible recuperar los datos originales del hash. MD5 comprime datos de cualquier longitud en un resumen fijo de 128 bits, diseñado para ser irreversible.',
+                faqQ3: '¿Es seguro el cifrado AES?',
+                faqA3: 'AES es uno de los algoritmos de cifrado simétrico más seguros, ampliamente utilizado por gobiernos e instituciones financieras. AES-256 es utilizado por el gobierno de EE.UU. para cifrar documentos de alto secreto y nunca ha sido vulnerado.',
+                faqQ4: '¿Cuál es más seguro: SHA-256 o MD5?',
+                faqA4: 'SHA-256 es más seguro. MD5 tiene vulnerabilidades de colisión conocidas y no se recomienda para escenarios críticos de seguridad. SHA-256 produce 256 bits con un algoritmo más complejo, todavía considerado seguro.',
+                faqQ5: '¿Mis datos se subirán a los servidores?',
+                faqA5: 'No, todas las operaciones de cifrado y descifrado se realizan localmente en su navegador. Esta herramienta utiliza tecnología puramente frontend con la biblioteca CryptoJS. La información sensible nunca sale de su navegador.',
+                // Related Tools
+                relatedTools: '🔗 Herramientas relacionadas',
+                relatedJsonViewer: 'Visor JSON',
+                relatedJsonViewerDesc: 'Formateo y visualización JSON',
+                relatedRegexTester: 'Probador Regex',
+                relatedRegexTesterDesc: 'Coincidencia y depuración regex en línea',
+                relatedTimestamp: 'Convertidor de marca de tiempo',
+                relatedTimestampDesc: 'Convertir marca de tiempo Unix y fecha',
+                relatedWebSocket: 'Probador WebSocket',
+                relatedWebSocketDesc: 'Depuración de conexión WebSocket',
+                // Footer
+                footerPrivacy: 'Procesamiento puro frontend, los datos no se suben a servidores',
+                footerBackHome: '← Volver a Web Toolbox Inicio'
+            }
+        };
+
+        // Language switcher functionality
+        let currentLang = localStorage.getItem('crypto-tools-lang') || 'en';
+
+        function updateLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('crypto-tools-lang', lang);
+
+            // Update all elements with data-i18n
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.textContent = i18n[lang][key];
+                }
+            });
+
+            // Update all placeholders with data-i18n-placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (i18n[lang] && i18n[lang][key]) {
+                    el.placeholder = i18n[lang][key];
+                }
+            });
+
+            // Update language button text
+            const langNames = {
+                'en': '🌐 English',
+                'zh-CN': '🌐 中文',
+                'fr': '🌐 Français',
+                'es': '🌐 Español'
+            };
+            const langCurrent = document.getElementById('langCurrent');
+            if (langCurrent) {
+                langCurrent.textContent = langNames[lang] || langNames['en'];
+            }
+        }
+
+        // Initialize language switcher
+        document.addEventListener('DOMContentLoaded', function() {
+            const langDropdown = document.getElementById('langDropdown');
+            const langCurrent = document.getElementById('langCurrent');
+
+            if (langDropdown && langCurrent) {
+                // Toggle dropdown
+                langCurrent.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langDropdown.classList.toggle('active');
+                });
+
+                // Language selection
+                document.querySelectorAll('.lang-btn').forEach(btn => {
+                    btn.addEventListener('click', function(e) {
+                        e.stopPropagation();
+                        const lang = this.getAttribute('data-lang');
+                        updateLanguage(lang);
+                        langDropdown.classList.remove('active');
+                    });
+                });
+
+                // Close dropdown when clicking outside
+                document.addEventListener('click', function() {
+                    langDropdown.classList.remove('active');
+                });
+            }
+
+            // Apply saved language
+            updateLanguage(currentLang);
+        });
     </script>
 
 </body>

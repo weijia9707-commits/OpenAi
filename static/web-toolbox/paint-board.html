@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线涂鸦画板 - 免费绘图工具支持画笔形状文字 | Web Toolbox</title>
+    <title>Online Paint Board - Free Drawing Tool with Brush, Shapes & Text | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线涂鸦画板，支持画笔、橡皮擦、填充、矩形、圆形、直线、箭头、文字等工具。可自定义颜色透明度，支持撤销重做，导出PNG/JPG格式。">
-    <meta name="keywords" content="在线画板,涂鸦工具,绘图工具,在线绘画,画笔工具,免费画板,网页画板,在线涂鸦,图片编辑">
+    <meta name="description" content="Free online paint board with brush, eraser, fill, rectangle, circle, line, arrow, text tools. Customize colors and opacity, undo/redo support, export to PNG/JPG.">
+    <meta name="keywords" content="online paint board,drawing tool,free drawing,paint tool,canvas drawing,web paint,online doodle,image editor">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/paint-board.html">
@@ -15,16 +15,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/paint-board.html">
-    <meta property="og:title" content="在线涂鸦画板 - 免费绘图工具">
-    <meta property="og:description" content="免费在线涂鸦画板，支持画笔、形状、文字等工具，可导出PNG/JPG格式。">
+    <meta property="og:title" content="Online Paint Board - Free Drawing Tool">
+    <meta property="og:description" content="Free online paint board with brush, shapes, text tools. Export to PNG/JPG format.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/paint-board.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="在线涂鸦画板 - 免费绘图工具">
-    <meta name="twitter:description" content="免费在线涂鸦画板，支持画笔、形状、文字等工具。">
+    <meta name="twitter:title" content="Online Paint Board - Free Drawing Tool">
+    <meta name="twitter:description" content="Free online paint board with brush, shapes, text tools.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/paint-board.png">
 
     <!-- JSON-LD -->
@@ -32,12 +32,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "在线涂鸦画板",
+        "name": "Online Paint Board",
         "url": "https://www.heyuan110.com/web-toolbox/paint-board.html",
-        "description": "在线涂鸦画板，支持画笔、形状、文字等多种绘图工具",
+        "description": "Online paint board with brush, shapes, text and various drawing tools",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -50,42 +50,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "在线画板支持哪些绘图工具？",
+                "name": "What drawing tools are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持铅笔、毛笔、直线、矩形、圆形、橡皮擦等工具，可满足各种绘图需求。"
+                    "text": "Supports pencil, brush, line, rectangle, circle, eraser and other tools to meet various drawing needs."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以调整画笔粗细吗？",
+                "name": "Can I adjust the brush size?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以，支持从 1px 到 50px 的画笔粗细调节，您可以根据需要自由调整。"
+                    "text": "Yes, supports brush size adjustment from 1px to 50px. You can adjust freely according to your needs."
                 }
             },
             {
                 "@type": "Question",
-                "name": "如何保存画作？",
+                "name": "How to save artwork?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "点击导出按钮可将画作保存为 PNG 格式图片，方便下载和分享。"
+                    "text": "Click the export button to save your artwork as PNG format image for easy download and sharing."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持触摸屏绘图吗？",
+                "name": "Does it support touch screen drawing?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持，可在平板电脑或触摸屏上使用手指或触控笔绘图，操作流畅自然。"
+                    "text": "Yes, you can draw with finger or stylus on tablets or touch screens with smooth operation."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以打开已有图片编辑吗？",
+                "name": "Can I open existing images for editing?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以导入图片作为背景，在其上进行绘制，方便进行图片标注和二次创作。"
+                    "text": "You can import images as background and draw on them, convenient for image annotation and secondary creation."
                 }
             }
         ]
@@ -124,6 +124,7 @@
             border-radius: 12px;
             margin-bottom: 15px;
             flex-wrap: wrap;
+            position: relative;
         }
 
         .toolbar-section {
@@ -155,6 +156,16 @@
             background: rgba(255, 255, 255, 0.1);
             color: #fff;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         /* 工具按钮 */
         .tool-btn {
@@ -845,32 +856,44 @@
     <div class="container">
         <!-- 顶部工具栏 -->
         <div class="toolbar">
-            <a href="index.html" class="back-home">← 返回</a>
+            <div class="lang-switcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+
+            <a href="index.html" class="back-home" data-i18n="back">← Back</a>
 
             <div class="toolbar-section">
-                <button class="tool-btn active" data-tool="brush" data-tooltip="画笔 (B)">🖌️</button>
-                <button class="tool-btn" data-tool="eraser" data-tooltip="橡皮擦 (E)">🧹</button>
-                <button class="tool-btn" data-tool="fill" data-tooltip="填充 (G)">🪣</button>
-                <button class="tool-btn" data-tool="text" data-tooltip="文字 (X)">📝</button>
+                <button class="tool-btn active" data-tool="brush" data-tooltip="Brush (B)" data-i18n-tooltip="tooltip.brush">🖌️</button>
+                <button class="tool-btn" data-tool="eraser" data-tooltip="Eraser (E)" data-i18n-tooltip="tooltip.eraser">🧹</button>
+                <button class="tool-btn" data-tool="fill" data-tooltip="Fill (G)" data-i18n-tooltip="tooltip.fill">🪣</button>
+                <button class="tool-btn" data-tool="text" data-tooltip="Text (X)" data-i18n-tooltip="tooltip.text">📝</button>
             </div>
 
             <div class="toolbar-section">
-                <button class="tool-btn" data-tool="line" data-tooltip="直线 (L)">📏</button>
-                <button class="tool-btn" data-tool="arrowRight" data-tooltip="右箭头 (A)">→</button>
-                <button class="tool-btn" data-tool="arrowLeft" data-tooltip="左箭头 (S)">←</button>
-                <button class="tool-btn" data-tool="rect" data-tooltip="矩形 (R)">⬜</button>
-                <button class="tool-btn" data-tool="circle" data-tooltip="圆形 (C)">⭕</button>
-                <button class="tool-btn" data-tool="triangle" data-tooltip="三角形 (T)">🔺</button>
-                <label class="fill-toggle" data-tooltip="填充形状">
+                <button class="tool-btn" data-tool="line" data-tooltip="Line (L)" data-i18n-tooltip="tooltip.line">📏</button>
+                <button class="tool-btn" data-tool="arrowRight" data-tooltip="Right Arrow (A)" data-i18n-tooltip="tooltip.arrowRight">→</button>
+                <button class="tool-btn" data-tool="arrowLeft" data-tooltip="Left Arrow (S)" data-i18n-tooltip="tooltip.arrowLeft">←</button>
+                <button class="tool-btn" data-tool="rect" data-tooltip="Rectangle (R)" data-i18n-tooltip="tooltip.rect">⬜</button>
+                <button class="tool-btn" data-tool="circle" data-tooltip="Circle (C)" data-i18n-tooltip="tooltip.circle">⭕</button>
+                <button class="tool-btn" data-tool="triangle" data-tooltip="Triangle (T)" data-i18n-tooltip="tooltip.triangle">🔺</button>
+                <label class="fill-toggle" data-tooltip="Fill Shape">
                     <input type="checkbox" id="fillShape">
-                    <span>填充</span>
+                    <span data-i18n="fill">Fill</span>
                 </label>
             </div>
 
             <div class="toolbar-section">
                 <div class="color-picker-wrapper">
                     <input type="color" id="colorPicker" class="color-input" value="#000000">
-                    <div class="color-btn" id="colorBtn" style="background: #000000;" data-tooltip="选择颜色"></div>
+                    <div class="color-btn" id="colorBtn" style="background: #000000;" data-tooltip="Choose Color" data-i18n-tooltip="tooltip.chooseColor"></div>
                 </div>
                 <div class="color-presets">
                     <div class="color-preset active" style="background: #000000;" data-color="#000000"></div>
@@ -886,7 +909,7 @@
 
             <div class="toolbar-section">
                 <div class="slider-group">
-                    <label>粗细</label>
+                    <label data-i18n="size">Size</label>
                     <input type="range" id="brushSize" min="1" max="50" value="5">
                     <span class="slider-value" id="brushSizeValue">5</span>
                 </div>
@@ -894,20 +917,20 @@
 
             <div class="toolbar-section">
                 <div class="slider-group">
-                    <label>透明度</label>
+                    <label data-i18n="opacity">Opacity</label>
                     <input type="range" id="opacity" min="10" max="100" value="100">
                     <span class="slider-value" id="opacityValue">100%</span>
                 </div>
             </div>
 
             <div class="toolbar-section">
-                <button class="tool-btn" data-tooltip="撤销 (Ctrl+Z)" onclick="undo()">↩️</button>
-                <button class="tool-btn" data-tooltip="重做 (Ctrl+Y)" onclick="redo()">↪️</button>
+                <button class="tool-btn" data-tooltip="Undo (Ctrl+Z)" data-i18n-tooltip="tooltip.undo" onclick="undo()">↩️</button>
+                <button class="tool-btn" data-tooltip="Redo (Ctrl+Y)" data-i18n-tooltip="tooltip.redo" onclick="redo()">↪️</button>
             </div>
 
             <div class="toolbar-section">
-                <button class="tool-btn" data-tooltip="新建画布" onclick="showNewCanvasModal()">📄</button>
-                <button class="tool-btn" data-tooltip="清空画布" onclick="clearCanvas()">🗑️</button>
+                <button class="tool-btn" data-tooltip="New Canvas" data-i18n-tooltip="tooltip.newCanvas" onclick="showNewCanvasModal()">📄</button>
+                <button class="tool-btn" data-tooltip="Clear Canvas" data-i18n-tooltip="tooltip.clearCanvas" onclick="clearCanvas()">🗑️</button>
             </div>
         </div>
 
@@ -917,29 +940,29 @@
                 <div class="feature-card">
                     <div class="feature-icon">🖌️</div>
                     <div class="feature-content">
-                        <h4>多种画笔</h4>
-                        <p>支持铅笔、毛笔、橡皮擦等多种绘图工具</p>
+                        <h4 data-i18n="feature.brushes">Multiple Brushes</h4>
+                        <p data-i18n="feature.brushesDesc">Pencil, brush, eraser and more drawing tools</p>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">🎨</div>
                     <div class="feature-content">
-                        <h4>丰富颜色</h4>
-                        <p>自由选择画笔颜色，支持透明度调节</p>
+                        <h4 data-i18n="feature.colors">Rich Colors</h4>
+                        <p data-i18n="feature.colorsDesc">Free color selection with opacity adjustment</p>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">↩️</div>
                     <div class="feature-content">
-                        <h4>撤销重做</h4>
-                        <p>支持撤销和重做操作，方便修改</p>
+                        <h4 data-i18n="feature.undoRedo">Undo/Redo</h4>
+                        <p data-i18n="feature.undoRedoDesc">Support undo and redo for easy editing</p>
                     </div>
                 </div>
                 <div class="feature-card">
                     <div class="feature-icon">💾</div>
                     <div class="feature-content">
-                        <h4>导出保存</h4>
-                        <p>可将画作导出为 PNG 图片保存</p>
+                        <h4 data-i18n="feature.export">Export & Save</h4>
+                        <p data-i18n="feature.exportDesc">Export artwork as PNG image</p>
                     </div>
                 </div>
             </div>
@@ -955,22 +978,22 @@
                 <!-- 文本编辑面板 -->
                 <div class="text-panel" id="textPanel" onmousedown="event.stopPropagation()">
                     <div class="text-panel-header">
-                        <h4>📝 添加文字</h4>
+                        <h4 data-i18n="textPanel.title">📝 Add Text</h4>
                         <button class="text-panel-close" onclick="hideTextPanel()">×</button>
                     </div>
                     <div class="text-panel-row">
-                        <label>内容</label>
-                        <textarea id="textContent" placeholder="输入文字内容..."></textarea>
+                        <label data-i18n="textPanel.content">Content</label>
+                        <textarea id="textContent" placeholder="Enter text content..." data-i18n-placeholder="textPanel.placeholder"></textarea>
                     </div>
                     <div class="text-panel-row">
-                        <label>字体</label>
+                        <label data-i18n="textPanel.font">Font</label>
                         <select id="textFont">
                             <option value="Arial">Arial</option>
-                            <option value="Microsoft YaHei">微软雅黑</option>
-                            <option value="SimSun">宋体</option>
-                            <option value="SimHei">黑体</option>
-                            <option value="KaiTi">楷体</option>
-                            <option value="FangSong">仿宋</option>
+                            <option value="Microsoft YaHei">Microsoft YaHei</option>
+                            <option value="SimSun">SimSun</option>
+                            <option value="SimHei">SimHei</option>
+                            <option value="KaiTi">KaiTi</option>
+                            <option value="FangSong">FangSong</option>
                             <option value="Georgia">Georgia</option>
                             <option value="Times New Roman">Times New Roman</option>
                             <option value="Courier New">Courier New</option>
@@ -978,23 +1001,23 @@
                         </select>
                     </div>
                     <div class="text-panel-row">
-                        <label>大小</label>
+                        <label data-i18n="textPanel.size">Size</label>
                         <input type="number" id="textSize" value="24" min="8" max="200">
-                        <label style="min-width: auto;">颜色</label>
+                        <label style="min-width: auto;" data-i18n="textPanel.color">Color</label>
                         <input type="color" id="textColor" value="#000000">
                     </div>
                     <div class="text-panel-row">
-                        <label>样式</label>
+                        <label data-i18n="textPanel.style">Style</label>
                         <label style="min-width: auto; display: flex; align-items: center; gap: 4px;">
-                            <input type="checkbox" id="textBold"> 粗体
+                            <input type="checkbox" id="textBold"> <span data-i18n="textPanel.bold">Bold</span>
                         </label>
                         <label style="min-width: auto; display: flex; align-items: center; gap: 4px;">
-                            <input type="checkbox" id="textItalic"> 斜体
+                            <input type="checkbox" id="textItalic"> <span data-i18n="textPanel.italic">Italic</span>
                         </label>
                     </div>
                     <div class="text-panel-actions">
-                        <button class="action-btn action-btn-secondary" onmousedown="event.stopPropagation()" onclick="hideTextPanel()">取消</button>
-                        <button class="action-btn action-btn-primary" onmousedown="event.stopPropagation()" onclick="confirmText()">确定</button>
+                        <button class="action-btn action-btn-secondary" onmousedown="event.stopPropagation()" onclick="hideTextPanel()" data-i18n="cancel">Cancel</button>
+                        <button class="action-btn action-btn-primary" onmousedown="event.stopPropagation()" onclick="confirmText()" data-i18n="confirm">Confirm</button>
                     </div>
                 </div>
             </div>
@@ -1003,23 +1026,23 @@
         <!-- 底部状态栏 -->
         <div class="status-bar">
             <div class="status-item">
-                <span>画布尺寸:</span>
+                <span data-i18n="status.canvasSize">Canvas Size:</span>
                 <span id="canvasSize">1000 × 600</span>
             </div>
             <div class="status-item">
-                <span>鼠标位置:</span>
+                <span data-i18n="status.mousePos">Mouse Position:</span>
                 <span id="mousePos">0, 0</span>
             </div>
             <div class="status-item">
-                <span>当前工具:</span>
-                <span id="currentTool">画笔</span>
+                <span data-i18n="status.currentTool">Current Tool:</span>
+                <span id="currentTool" data-i18n="tool.brush">Brush</span>
             </div>
             <div class="status-item">
-                <span>💡 提示: 滚轮调整粗细</span>
+                <span data-i18n="status.tip">💡 Tip: Scroll wheel adjusts size</span>
             </div>
             <div style="display: flex; gap: 10px;">
-                <button class="action-btn action-btn-success" onclick="saveImage('png')">💾 保存 PNG</button>
-                <button class="action-btn action-btn-primary" onclick="saveImage('jpg')">💾 保存 JPG</button>
+                <button class="action-btn action-btn-success" onclick="saveImage('png')" data-i18n="savePng">💾 Save PNG</button>
+                <button class="action-btn action-btn-primary" onclick="saveImage('jpg')" data-i18n="saveJpg">💾 Save JPG</button>
             </div>
         </div>
     </div>
@@ -1027,7 +1050,7 @@
     <!-- 新建画布模态框 -->
     <div class="modal-overlay" id="newCanvasModal">
         <div class="modal">
-            <h3>📄 新建画布</h3>
+            <h3 data-i18n="modal.newCanvas">📄 New Canvas</h3>
             <div class="modal-presets">
                 <span class="modal-preset" onclick="setCanvasSize(800, 600)">800×600</span>
                 <span class="modal-preset" onclick="setCanvasSize(1024, 768)">1024×768</span>
@@ -1037,21 +1060,611 @@
                 <span class="modal-preset" onclick="setCanvasSize(1000, 1000)">1000×1000</span>
             </div>
             <div class="modal-input-group">
-                <label>宽度 (px)</label>
+                <label data-i18n="modal.width">Width (px)</label>
                 <input type="number" id="canvasWidth" value="1000" min="100" max="3000">
             </div>
             <div class="modal-input-group">
-                <label>高度 (px)</label>
+                <label data-i18n="modal.height">Height (px)</label>
                 <input type="number" id="canvasHeight" value="600" min="100" max="3000">
             </div>
             <div class="modal-actions">
-                <button class="action-btn action-btn-secondary" onclick="hideNewCanvasModal()">取消</button>
-                <button class="action-btn action-btn-primary" onclick="createNewCanvas()">创建</button>
+                <button class="action-btn action-btn-secondary" onclick="hideNewCanvasModal()" data-i18n="cancel">Cancel</button>
+                <button class="action-btn action-btn-primary" onclick="createNewCanvas()" data-i18n="modal.create">Create</button>
             </div>
         </div>
     </div>
 
     <script>
+        // ==================== 国际化 i18n ====================
+        const i18n = {
+            'en': {
+                back: '← Back',
+                fill: 'Fill',
+                size: 'Size',
+                opacity: 'Opacity',
+                cancel: 'Cancel',
+                confirm: 'Confirm',
+                savePng: '💾 Save PNG',
+                saveJpg: '💾 Save JPG',
+                tooltip: {
+                    brush: 'Brush (B)',
+                    eraser: 'Eraser (E)',
+                    fill: 'Fill (G)',
+                    text: 'Text (X)',
+                    line: 'Line (L)',
+                    arrowRight: 'Right Arrow (A)',
+                    arrowLeft: 'Left Arrow (S)',
+                    rect: 'Rectangle (R)',
+                    circle: 'Circle (C)',
+                    triangle: 'Triangle (T)',
+                    chooseColor: 'Choose Color',
+                    undo: 'Undo (Ctrl+Z)',
+                    redo: 'Redo (Ctrl+Y)',
+                    newCanvas: 'New Canvas',
+                    clearCanvas: 'Clear Canvas'
+                },
+                feature: {
+                    brushes: 'Multiple Brushes',
+                    brushesDesc: 'Pencil, brush, eraser and more drawing tools',
+                    colors: 'Rich Colors',
+                    colorsDesc: 'Free color selection with opacity adjustment',
+                    undoRedo: 'Undo/Redo',
+                    undoRedoDesc: 'Support undo and redo for easy editing',
+                    export: 'Export & Save',
+                    exportDesc: 'Export artwork as PNG image'
+                },
+                textPanel: {
+                    title: '📝 Add Text',
+                    content: 'Content',
+                    placeholder: 'Enter text content...',
+                    font: 'Font',
+                    size: 'Size',
+                    color: 'Color',
+                    style: 'Style',
+                    bold: 'Bold',
+                    italic: 'Italic'
+                },
+                status: {
+                    canvasSize: 'Canvas Size:',
+                    mousePos: 'Mouse Position:',
+                    currentTool: 'Current Tool:',
+                    tip: '💡 Tip: Scroll wheel adjusts size'
+                },
+                tool: {
+                    brush: 'Brush',
+                    eraser: 'Eraser',
+                    fill: 'Fill',
+                    text: 'Text',
+                    line: 'Line',
+                    arrowRight: 'Right Arrow',
+                    arrowLeft: 'Left Arrow',
+                    rect: 'Rectangle',
+                    circle: 'Circle',
+                    triangle: 'Triangle'
+                },
+                modal: {
+                    newCanvas: '📄 New Canvas',
+                    width: 'Width (px)',
+                    height: 'Height (px)',
+                    create: 'Create'
+                },
+                faq: {
+                    title: 'FAQ',
+                    q1: 'What drawing tools are supported?',
+                    a1: 'Supports pencil, brush, line, rectangle, circle, eraser and other tools to meet various drawing needs. Each tool can adjust size and opacity.',
+                    q2: 'Can I adjust the brush size?',
+                    a2: 'Yes, supports brush size adjustment from 1px to 50px. You can adjust via slider or use mouse scroll wheel for quick adjustment.',
+                    q3: 'How to save artwork?',
+                    a3: 'Click "Save PNG" or "Save JPG" button at the bottom to export your artwork as an image file, which will be automatically downloaded to your device.',
+                    q4: 'Does it support touch screen drawing?',
+                    a4: 'Yes, you can draw with finger or stylus on tablets or touch screens with smooth operation, suitable for mobile devices.',
+                    q5: 'Can I open existing images for editing?',
+                    a5: 'You can import images as background and draw on them, convenient for image annotation and secondary creation. Use "New Canvas" to set appropriate canvas size.'
+                },
+                related: {
+                    title: '🔗 Related Tools',
+                    colorPalette: 'Color Palette',
+                    colorPaletteDesc: 'Color selection and conversion',
+                    imageEditor: 'Image Editor',
+                    imageEditorDesc: 'Crop, rotate, filters',
+                    imageConverter: 'Image Converter',
+                    imageConverterDesc: 'PNG/JPG/WebP conversion',
+                    icoMaker: 'ICO Maker',
+                    icoMakerDesc: 'Generate website icons'
+                },
+                footer: {
+                    privacy: 'Pure frontend processing, data is not uploaded to server',
+                    backHome: '← Back to Web Toolbox Home'
+                },
+                toast: {
+                    undoSuccess: 'Undo successful',
+                    redoSuccess: 'Redo successful',
+                    canvasCleared: 'Canvas cleared',
+                    newCanvasCreated: 'New canvas created',
+                    sizeRange: 'Canvas size should be between 100-3000',
+                    imageSaved: 'Image saved as',
+                    textAdded: 'Text added, drag to move',
+                    textDeleted: 'Text deleted',
+                    enterText: 'Please enter text content',
+                    confirmClear: 'Are you sure you want to clear the canvas?',
+                    confirmClearWithText: 'Are you sure you want to clear the canvas? (including all text)'
+                },
+                langName: '🌐 English'
+            },
+            'zh-CN': {
+                back: '← 返回',
+                fill: '填充',
+                size: '粗细',
+                opacity: '透明度',
+                cancel: '取消',
+                confirm: '确定',
+                savePng: '💾 保存 PNG',
+                saveJpg: '💾 保存 JPG',
+                tooltip: {
+                    brush: '画笔 (B)',
+                    eraser: '橡皮擦 (E)',
+                    fill: '填充 (G)',
+                    text: '文字 (X)',
+                    line: '直线 (L)',
+                    arrowRight: '右箭头 (A)',
+                    arrowLeft: '左箭头 (S)',
+                    rect: '矩形 (R)',
+                    circle: '圆形 (C)',
+                    triangle: '三角形 (T)',
+                    chooseColor: '选择颜色',
+                    undo: '撤销 (Ctrl+Z)',
+                    redo: '重做 (Ctrl+Y)',
+                    newCanvas: '新建画布',
+                    clearCanvas: '清空画布'
+                },
+                feature: {
+                    brushes: '多种画笔',
+                    brushesDesc: '支持铅笔、毛笔、橡皮擦等多种绘图工具',
+                    colors: '丰富颜色',
+                    colorsDesc: '自由选择画笔颜色，支持透明度调节',
+                    undoRedo: '撤销重做',
+                    undoRedoDesc: '支持撤销和重做操作，方便修改',
+                    export: '导出保存',
+                    exportDesc: '可将画作导出为 PNG 图片保存'
+                },
+                textPanel: {
+                    title: '📝 添加文字',
+                    content: '内容',
+                    placeholder: '输入文字内容...',
+                    font: '字体',
+                    size: '大小',
+                    color: '颜色',
+                    style: '样式',
+                    bold: '粗体',
+                    italic: '斜体'
+                },
+                status: {
+                    canvasSize: '画布尺寸:',
+                    mousePos: '鼠标位置:',
+                    currentTool: '当前工具:',
+                    tip: '💡 提示: 滚轮调整粗细'
+                },
+                tool: {
+                    brush: '画笔',
+                    eraser: '橡皮擦',
+                    fill: '填充',
+                    text: '文字',
+                    line: '直线',
+                    arrowRight: '右箭头',
+                    arrowLeft: '左箭头',
+                    rect: '矩形',
+                    circle: '圆形',
+                    triangle: '三角形'
+                },
+                modal: {
+                    newCanvas: '📄 新建画布',
+                    width: '宽度 (px)',
+                    height: '高度 (px)',
+                    create: '创建'
+                },
+                faq: {
+                    title: '常见问题',
+                    q1: '支持哪些绘图工具？',
+                    a1: '支持铅笔、毛笔、直线、矩形、圆形、橡皮擦等工具，可以满足各种绘图需求。每种工具都可以调整粗细和透明度。',
+                    q2: '可以调整画笔粗细吗？',
+                    a2: '可以，支持从 1px 到 50px 的画笔粗细调节。您可以通过滑块调整，也可以使用鼠标滚轮快速调节粗细。',
+                    q3: '如何保存画作？',
+                    a3: '点击底部的"保存 PNG"或"保存 JPG"按钮，即可将画作导出为相应格式的图片文件，自动下载到您的设备。',
+                    q4: '支持触摸屏绘图吗？',
+                    a4: '支持，可在平板电脑或触摸屏上使用手指或触控笔绘图，操作流畅自然，适合移动设备使用。',
+                    q5: '可以打开已有图片编辑吗？',
+                    a5: '可以导入图片作为背景，在其上进行绘制，方便进行图片标注和二次创作。使用"新建画布"功能可以设置合适的画布尺寸。'
+                },
+                related: {
+                    title: '🔗 相关工具推荐',
+                    colorPalette: '调色板',
+                    colorPaletteDesc: '颜色选择与转换',
+                    imageEditor: '图片编辑器',
+                    imageEditorDesc: '裁剪、旋转、滤镜',
+                    imageConverter: '图片格式转换',
+                    imageConverterDesc: 'PNG/JPG/WebP 互转',
+                    icoMaker: 'ICO 图标制作',
+                    icoMakerDesc: '生成网站图标'
+                },
+                footer: {
+                    privacy: '纯前端处理，数据不会上传到服务器',
+                    backHome: '← 返回 Web Toolbox 首页'
+                },
+                toast: {
+                    undoSuccess: '撤销成功',
+                    redoSuccess: '重做成功',
+                    canvasCleared: '画布已清空',
+                    newCanvasCreated: '新画布已创建',
+                    sizeRange: '画布尺寸应在 100-3000 之间',
+                    imageSaved: '图片已保存为',
+                    textAdded: '文字已添加，拖动可移动位置',
+                    textDeleted: '文字已删除',
+                    enterText: '请输入文字内容',
+                    confirmClear: '确定要清空画布吗？',
+                    confirmClearWithText: '确定要清空画布吗？（包括所有文字）'
+                },
+                langName: '🌐 中文'
+            },
+            'fr': {
+                back: '← Retour',
+                fill: 'Remplir',
+                size: 'Taille',
+                opacity: 'Opacité',
+                cancel: 'Annuler',
+                confirm: 'Confirmer',
+                savePng: '💾 Sauver PNG',
+                saveJpg: '💾 Sauver JPG',
+                tooltip: {
+                    brush: 'Pinceau (B)',
+                    eraser: 'Gomme (E)',
+                    fill: 'Remplir (G)',
+                    text: 'Texte (X)',
+                    line: 'Ligne (L)',
+                    arrowRight: 'Flèche droite (A)',
+                    arrowLeft: 'Flèche gauche (S)',
+                    rect: 'Rectangle (R)',
+                    circle: 'Cercle (C)',
+                    triangle: 'Triangle (T)',
+                    chooseColor: 'Choisir la couleur',
+                    undo: 'Annuler (Ctrl+Z)',
+                    redo: 'Refaire (Ctrl+Y)',
+                    newCanvas: 'Nouveau canevas',
+                    clearCanvas: 'Effacer le canevas'
+                },
+                feature: {
+                    brushes: 'Pinceaux multiples',
+                    brushesDesc: 'Crayon, pinceau, gomme et autres outils',
+                    colors: 'Couleurs riches',
+                    colorsDesc: 'Sélection libre des couleurs avec opacité',
+                    undoRedo: 'Annuler/Refaire',
+                    undoRedoDesc: 'Annuler et refaire pour faciliter l\'édition',
+                    export: 'Exporter & Sauver',
+                    exportDesc: 'Exporter l\'œuvre en image PNG'
+                },
+                textPanel: {
+                    title: '📝 Ajouter du texte',
+                    content: 'Contenu',
+                    placeholder: 'Entrez le texte...',
+                    font: 'Police',
+                    size: 'Taille',
+                    color: 'Couleur',
+                    style: 'Style',
+                    bold: 'Gras',
+                    italic: 'Italique'
+                },
+                status: {
+                    canvasSize: 'Taille du canevas:',
+                    mousePos: 'Position souris:',
+                    currentTool: 'Outil actuel:',
+                    tip: '💡 Astuce: Molette ajuste la taille'
+                },
+                tool: {
+                    brush: 'Pinceau',
+                    eraser: 'Gomme',
+                    fill: 'Remplir',
+                    text: 'Texte',
+                    line: 'Ligne',
+                    arrowRight: 'Flèche droite',
+                    arrowLeft: 'Flèche gauche',
+                    rect: 'Rectangle',
+                    circle: 'Cercle',
+                    triangle: 'Triangle'
+                },
+                modal: {
+                    newCanvas: '📄 Nouveau canevas',
+                    width: 'Largeur (px)',
+                    height: 'Hauteur (px)',
+                    create: 'Créer'
+                },
+                faq: {
+                    title: 'FAQ',
+                    q1: 'Quels outils de dessin sont supportés?',
+                    a1: 'Supporte crayon, pinceau, ligne, rectangle, cercle, gomme et autres outils. Chaque outil peut ajuster la taille et l\'opacité.',
+                    q2: 'Puis-je ajuster la taille du pinceau?',
+                    a2: 'Oui, supporte l\'ajustement de 1px à 50px. Vous pouvez utiliser le curseur ou la molette de la souris.',
+                    q3: 'Comment sauvegarder l\'œuvre?',
+                    a3: 'Cliquez sur "Sauver PNG" ou "Sauver JPG" en bas pour exporter votre œuvre en fichier image.',
+                    q4: 'Supporte-t-il le dessin tactile?',
+                    a4: 'Oui, vous pouvez dessiner avec le doigt ou le stylet sur tablettes ou écrans tactiles.',
+                    q5: 'Puis-je ouvrir des images existantes?',
+                    a5: 'Vous pouvez importer des images comme arrière-plan et dessiner dessus, pratique pour l\'annotation.'
+                },
+                related: {
+                    title: '🔗 Outils connexes',
+                    colorPalette: 'Palette de couleurs',
+                    colorPaletteDesc: 'Sélection et conversion',
+                    imageEditor: 'Éditeur d\'images',
+                    imageEditorDesc: 'Recadrer, rotation, filtres',
+                    imageConverter: 'Convertisseur d\'images',
+                    imageConverterDesc: 'Conversion PNG/JPG/WebP',
+                    icoMaker: 'Créateur d\'ICO',
+                    icoMakerDesc: 'Générer des icônes web'
+                },
+                footer: {
+                    privacy: 'Traitement côté client, données non envoyées au serveur',
+                    backHome: '← Retour à Web Toolbox'
+                },
+                toast: {
+                    undoSuccess: 'Annulation réussie',
+                    redoSuccess: 'Refaire réussi',
+                    canvasCleared: 'Canevas effacé',
+                    newCanvasCreated: 'Nouveau canevas créé',
+                    sizeRange: 'La taille doit être entre 100-3000',
+                    imageSaved: 'Image sauvegardée en',
+                    textAdded: 'Texte ajouté, glisser pour déplacer',
+                    textDeleted: 'Texte supprimé',
+                    enterText: 'Veuillez entrer le contenu',
+                    confirmClear: 'Êtes-vous sûr de vouloir effacer?',
+                    confirmClearWithText: 'Êtes-vous sûr de vouloir effacer? (y compris le texte)'
+                },
+                langName: '🌐 Français'
+            },
+            'es': {
+                back: '← Volver',
+                fill: 'Rellenar',
+                size: 'Tamaño',
+                opacity: 'Opacidad',
+                cancel: 'Cancelar',
+                confirm: 'Confirmar',
+                savePng: '💾 Guardar PNG',
+                saveJpg: '💾 Guardar JPG',
+                tooltip: {
+                    brush: 'Pincel (B)',
+                    eraser: 'Borrador (E)',
+                    fill: 'Rellenar (G)',
+                    text: 'Texto (X)',
+                    line: 'Línea (L)',
+                    arrowRight: 'Flecha derecha (A)',
+                    arrowLeft: 'Flecha izquierda (S)',
+                    rect: 'Rectángulo (R)',
+                    circle: 'Círculo (C)',
+                    triangle: 'Triángulo (T)',
+                    chooseColor: 'Elegir color',
+                    undo: 'Deshacer (Ctrl+Z)',
+                    redo: 'Rehacer (Ctrl+Y)',
+                    newCanvas: 'Nuevo lienzo',
+                    clearCanvas: 'Limpiar lienzo'
+                },
+                feature: {
+                    brushes: 'Múltiples pinceles',
+                    brushesDesc: 'Lápiz, pincel, borrador y más herramientas',
+                    colors: 'Colores ricos',
+                    colorsDesc: 'Selección libre de colores con opacidad',
+                    undoRedo: 'Deshacer/Rehacer',
+                    undoRedoDesc: 'Deshacer y rehacer para edición fácil',
+                    export: 'Exportar y Guardar',
+                    exportDesc: 'Exportar obra como imagen PNG'
+                },
+                textPanel: {
+                    title: '📝 Añadir texto',
+                    content: 'Contenido',
+                    placeholder: 'Ingrese el texto...',
+                    font: 'Fuente',
+                    size: 'Tamaño',
+                    color: 'Color',
+                    style: 'Estilo',
+                    bold: 'Negrita',
+                    italic: 'Cursiva'
+                },
+                status: {
+                    canvasSize: 'Tamaño del lienzo:',
+                    mousePos: 'Posición del ratón:',
+                    currentTool: 'Herramienta actual:',
+                    tip: '💡 Consejo: Rueda ajusta el tamaño'
+                },
+                tool: {
+                    brush: 'Pincel',
+                    eraser: 'Borrador',
+                    fill: 'Rellenar',
+                    text: 'Texto',
+                    line: 'Línea',
+                    arrowRight: 'Flecha derecha',
+                    arrowLeft: 'Flecha izquierda',
+                    rect: 'Rectángulo',
+                    circle: 'Círculo',
+                    triangle: 'Triángulo'
+                },
+                modal: {
+                    newCanvas: '📄 Nuevo lienzo',
+                    width: 'Ancho (px)',
+                    height: 'Alto (px)',
+                    create: 'Crear'
+                },
+                faq: {
+                    title: 'Preguntas frecuentes',
+                    q1: '¿Qué herramientas de dibujo se soportan?',
+                    a1: 'Soporta lápiz, pincel, línea, rectángulo, círculo, borrador y otras herramientas. Cada herramienta puede ajustar tamaño y opacidad.',
+                    q2: '¿Puedo ajustar el tamaño del pincel?',
+                    a2: 'Sí, soporta ajuste de 1px a 50px. Puede usar el deslizador o la rueda del ratón.',
+                    q3: '¿Cómo guardar la obra?',
+                    a3: 'Haga clic en "Guardar PNG" o "Guardar JPG" en la parte inferior para exportar su obra como archivo de imagen.',
+                    q4: '¿Soporta dibujo táctil?',
+                    a4: 'Sí, puede dibujar con el dedo o lápiz en tabletas o pantallas táctiles.',
+                    q5: '¿Puedo abrir imágenes existentes?',
+                    a5: 'Puede importar imágenes como fondo y dibujar sobre ellas, conveniente para anotaciones.'
+                },
+                related: {
+                    title: '🔗 Herramientas relacionadas',
+                    colorPalette: 'Paleta de colores',
+                    colorPaletteDesc: 'Selección y conversión',
+                    imageEditor: 'Editor de imágenes',
+                    imageEditorDesc: 'Recortar, rotar, filtros',
+                    imageConverter: 'Convertidor de imágenes',
+                    imageConverterDesc: 'Conversión PNG/JPG/WebP',
+                    icoMaker: 'Creador de ICO',
+                    icoMakerDesc: 'Generar iconos web'
+                },
+                footer: {
+                    privacy: 'Procesamiento frontend, datos no se envían al servidor',
+                    backHome: '← Volver a Web Toolbox'
+                },
+                toast: {
+                    undoSuccess: 'Deshacer exitoso',
+                    redoSuccess: 'Rehacer exitoso',
+                    canvasCleared: 'Lienzo limpiado',
+                    newCanvasCreated: 'Nuevo lienzo creado',
+                    sizeRange: 'El tamaño debe estar entre 100-3000',
+                    imageSaved: 'Imagen guardada como',
+                    textAdded: 'Texto añadido, arrastrar para mover',
+                    textDeleted: 'Texto eliminado',
+                    enterText: 'Por favor ingrese el contenido',
+                    confirmClear: '¿Está seguro de que desea limpiar?',
+                    confirmClearWithText: '¿Está seguro de que desea limpiar? (incluyendo texto)'
+                },
+                langName: '🌐 Español'
+            }
+        };
+
+        let currentLang = localStorage.getItem('preferred-lang') || 'en';
+
+        // 获取嵌套翻译
+        function getNestedTranslation(obj, path) {
+            return path.split('.').reduce((o, k) => (o || {})[k], obj);
+        }
+
+        // 切换语言
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('preferred-lang', lang);
+            document.getElementById('langCurrent').textContent = i18n[lang].langName;
+            document.getElementById('langDropdown').classList.remove('active');
+            applyTranslations();
+            updateFaqSection();
+            updateRelatedSection();
+            updateFooter();
+        }
+
+        // 应用翻译
+        function applyTranslations() {
+            const t = i18n[currentLang];
+
+            // 普通文本
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                const translation = getNestedTranslation(t, key);
+                if (translation) el.textContent = translation;
+            });
+
+            // Tooltip
+            document.querySelectorAll('[data-i18n-tooltip]').forEach(el => {
+                const key = el.getAttribute('data-i18n-tooltip');
+                const translation = getNestedTranslation(t, key);
+                if (translation) el.setAttribute('data-tooltip', translation);
+            });
+
+            // Placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                const translation = getNestedTranslation(t, key);
+                if (translation) el.setAttribute('placeholder', translation);
+            });
+        }
+
+        // 更新 FAQ 区块
+        function updateFaqSection() {
+            const t = i18n[currentLang].faq;
+            const faqSection = document.querySelector('.faq-section');
+            if (faqSection) {
+                faqSection.querySelector('h3').textContent = t.title;
+                const items = faqSection.querySelectorAll('.faq-item');
+                if (items[0]) {
+                    items[0].querySelector('.faq-question').childNodes[0].textContent = t.q1;
+                    items[0].querySelector('.faq-answer p').textContent = t.a1;
+                }
+                if (items[1]) {
+                    items[1].querySelector('.faq-question').childNodes[0].textContent = t.q2;
+                    items[1].querySelector('.faq-answer p').textContent = t.a2;
+                }
+                if (items[2]) {
+                    items[2].querySelector('.faq-question').childNodes[0].textContent = t.q3;
+                    items[2].querySelector('.faq-answer p').textContent = t.a3;
+                }
+                if (items[3]) {
+                    items[3].querySelector('.faq-question').childNodes[0].textContent = t.q4;
+                    items[3].querySelector('.faq-answer p').textContent = t.a4;
+                }
+                if (items[4]) {
+                    items[4].querySelector('.faq-question').childNodes[0].textContent = t.q5;
+                    items[4].querySelector('.faq-answer p').textContent = t.a5;
+                }
+            }
+        }
+
+        // 更新相关工具区块
+        function updateRelatedSection() {
+            const t = i18n[currentLang].related;
+            const section = document.querySelector('.related-tools');
+            if (section) {
+                section.querySelector('h3').textContent = t.title;
+                const links = section.querySelectorAll('a');
+                if (links[0]) {
+                    links[0].querySelector('div:nth-child(2)').textContent = t.colorPalette;
+                    links[0].querySelector('div:nth-child(3)').textContent = t.colorPaletteDesc;
+                }
+                if (links[1]) {
+                    links[1].querySelector('div:nth-child(2)').textContent = t.imageEditor;
+                    links[1].querySelector('div:nth-child(3)').textContent = t.imageEditorDesc;
+                }
+                if (links[2]) {
+                    links[2].querySelector('div:nth-child(2)').textContent = t.imageConverter;
+                    links[2].querySelector('div:nth-child(3)').textContent = t.imageConverterDesc;
+                }
+                if (links[3]) {
+                    links[3].querySelector('div:nth-child(2)').textContent = t.icoMaker;
+                    links[3].querySelector('div:nth-child(3)').textContent = t.icoMakerDesc;
+                }
+            }
+        }
+
+        // 更新页脚
+        function updateFooter() {
+            const t = i18n[currentLang].footer;
+            const footer = document.querySelector('footer');
+            if (footer) {
+                const paragraphs = footer.querySelectorAll('p');
+                if (paragraphs[0]) paragraphs[0].textContent = t.privacy;
+                const links = footer.querySelectorAll('a');
+                if (links[0]) links[0].textContent = t.backHome;
+            }
+        }
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            e.stopPropagation();
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                switchLanguage(this.dataset.lang);
+            });
+        });
+
+        document.addEventListener('click', function() {
+            document.getElementById('langDropdown').classList.remove('active');
+        });
+
         // 画布和上下文
         const canvas = document.getElementById('canvas');
         const ctx = canvas.getContext('2d');
@@ -1075,19 +1688,10 @@
         let historyIndex = -1;
         const maxHistory = 50;
 
-        // 工具名称映射
-        const toolNames = {
-            brush: '画笔',
-            eraser: '橡皮擦',
-            fill: '填充',
-            text: '文字',
-            line: '直线',
-            arrowRight: '右箭头',
-            arrowLeft: '左箭头',
-            rect: '矩形',
-            circle: '圆形',
-            triangle: '三角形'
-        };
+        // 工具名称映射（使用 i18n）
+        function getToolName(tool) {
+            return i18n[currentLang].tool[tool] || tool;
+        }
 
         // 快捷键映射
         const shortcuts = {
@@ -1179,7 +1783,7 @@
                 brushSize = Math.max(1, Math.min(50, brushSize + delta));
                 brushSizeSlider.value = brushSize;
                 brushSizeValue.textContent = brushSize;
-                showToast(`粗细: ${brushSize}px`);
+                showToast(`${i18n[currentLang].size}: ${brushSize}px`);
             });
 
             // 触摸支持
@@ -1189,6 +1793,9 @@
 
             // 键盘快捷键
             document.addEventListener('keydown', handleKeyboard);
+
+            // 初始化语言
+            switchLanguage(currentLang);
         }
 
         // 选择工具
@@ -1196,7 +1803,7 @@
             document.querySelectorAll('.tool-btn[data-tool]').forEach(b => b.classList.remove('active'));
             document.querySelector(`[data-tool="${tool}"]`).classList.add('active');
             currentTool = tool;
-            document.getElementById('currentTool').textContent = toolNames[currentTool];
+            document.getElementById('currentTool').textContent = getToolName(tool);
 
             // 根据工具类型设置光标
             let cursor = 'crosshair';
@@ -1574,7 +2181,7 @@
             if (historyIndex > 0) {
                 historyIndex--;
                 loadHistory();
-                showToast('撤销成功');
+                showToast(i18n[currentLang].toast.undoSuccess);
             }
         }
 
@@ -1582,7 +2189,7 @@
             if (historyIndex < history.length - 1) {
                 historyIndex++;
                 loadHistory();
-                showToast('重做成功');
+                showToast(i18n[currentLang].toast.redoSuccess);
             }
         }
 
@@ -1597,16 +2204,20 @@
 
         // 清空画布
         function clearCanvas() {
-            if (confirm('确定要清空画布吗？')) {
+            if (confirm(i18n[currentLang].toast.confirmClearWithText)) {
                 ctx.fillStyle = '#ffffff';
                 ctx.fillRect(0, 0, canvas.width, canvas.height);
+                clearTextLayer();
                 saveHistory();
-                showToast('画布已清空');
+                showToast(i18n[currentLang].toast.canvasCleared);
             }
         }
 
         // 保存图片
         function saveImage(format) {
+            // 先将文本渲染到画布
+            renderAllTextToCanvas();
+
             const link = document.createElement('a');
             const timestamp = new Date().toISOString().slice(0, 19).replace(/[:-]/g, '');
 
@@ -1626,7 +2237,10 @@
             }
 
             link.click();
-            showToast(`图片已保存为 ${format.toUpperCase()} 格式`);
+            showToast(`${i18n[currentLang].toast.imageSaved} ${format.toUpperCase()}`);
+
+            // 保存后恢复历史记录
+            saveHistory();
         }
 
         // 新建画布模态框
@@ -1648,7 +2262,7 @@
             const height = parseInt(document.getElementById('canvasHeight').value);
 
             if (width < 100 || width > 3000 || height < 100 || height > 3000) {
-                showToast('画布尺寸应在 100-3000 之间', true);
+                showToast(i18n[currentLang].toast.sizeRange, true);
                 return;
             }
 
@@ -1666,7 +2280,7 @@
             saveHistory();
 
             hideNewCanvasModal();
-            showToast(`新画布已创建 (${width}×${height})`);
+            showToast(`${i18n[currentLang].toast.newCanvasCreated} (${width}×${height})`);
         }
 
         // Toast 提示
@@ -1741,7 +2355,7 @@
         function confirmText() {
             const content = document.getElementById('textContent').value.trim();
             if (!content) {
-                showToast('请输入文字内容', true);
+                showToast(i18n[currentLang].toast.enterText, true);
                 return;
             }
 
@@ -1770,7 +2384,7 @@
             };
             textObjects.push(textObj);
             renderTextObject(textObj);
-            showToast('文字已添加，拖动可移动位置');
+            showToast(i18n[currentLang].toast.textAdded);
         }
 
         // 渲染文本对象到 DOM
@@ -1931,7 +2545,7 @@
                 if (div) div.remove();
                 textObjects = textObjects.filter(t => t.id !== selectedTextObject);
                 selectedTextObject = null;
-                showToast('文字已删除');
+                showToast(i18n[currentLang].toast.textDeleted);
             }
         }
 
@@ -1958,29 +2572,6 @@
             originalHandleKeyboard(e);
         };
 
-        // 修改保存图片函数，先渲染文本到画布
-        const originalSaveImage = saveImage;
-        saveImage = function(format) {
-            // 先将文本渲染到画布
-            renderAllTextToCanvas();
-            // 调用原始保存函数
-            originalSaveImage(format);
-            // 保存后恢复历史记录
-            saveHistory();
-        };
-
-        // 修改清空画布函数
-        const originalClearCanvas = clearCanvas;
-        clearCanvas = function() {
-            if (confirm('确定要清空画布吗？（包括所有文字）')) {
-                ctx.fillStyle = '#ffffff';
-                ctx.fillRect(0, 0, canvas.width, canvas.height);
-                clearTextLayer();
-                saveHistory();
-                showToast('画布已清空');
-            }
-        };
-
         // 初始化
         init();
 
@@ -2001,36 +2592,36 @@
 
     <!-- FAQ 问答区块 -->
     <section class="faq-section">
-        <h3>常见问题</h3>
+        <h3 data-i18n="faq.title">FAQ</h3>
         <div class="faq-list">
             <div class="faq-item">
-                <div class="faq-question">支持哪些绘图工具？</div>
+                <div class="faq-question">What drawing tools are supported?</div>
                 <div class="faq-answer">
-                    <p>支持铅笔、毛笔、直线、矩形、圆形、橡皮擦等工具，可以满足各种绘图需求。每种工具都可以调整粗细和透明度。</p>
+                    <p>Supports pencil, brush, line, rectangle, circle, eraser and other tools to meet various drawing needs. Each tool can adjust size and opacity.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">可以调整画笔粗细吗？</div>
+                <div class="faq-question">Can I adjust the brush size?</div>
                 <div class="faq-answer">
-                    <p>可以，支持从 1px 到 50px 的画笔粗细调节。您可以通过滑块调整，也可以使用鼠标滚轮快速调节粗细。</p>
+                    <p>Yes, supports brush size adjustment from 1px to 50px. You can adjust via slider or use mouse scroll wheel for quick adjustment.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">如何保存画作？</div>
+                <div class="faq-question">How to save artwork?</div>
                 <div class="faq-answer">
-                    <p>点击底部的"保存 PNG"或"保存 JPG"按钮，即可将画作导出为相应格式的图片文件，自动下载到您的设备。</p>
+                    <p>Click "Save PNG" or "Save JPG" button at the bottom to export your artwork as an image file, which will be automatically downloaded to your device.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">支持触摸屏绘图吗？</div>
+                <div class="faq-question">Does it support touch screen drawing?</div>
                 <div class="faq-answer">
-                    <p>支持，可在平板电脑或触摸屏上使用手指或触控笔绘图，操作流畅自然，适合移动设备使用。</p>
+                    <p>Yes, you can draw with finger or stylus on tablets or touch screens with smooth operation, suitable for mobile devices.</p>
                 </div>
             </div>
             <div class="faq-item">
-                <div class="faq-question">可以打开已有图片编辑吗？</div>
+                <div class="faq-question">Can I open existing images for editing?</div>
                 <div class="faq-answer">
-                    <p>可以导入图片作为背景，在其上进行绘制，方便进行图片标注和二次创作。使用"新建画布"功能可以设置合适的画布尺寸。</p>
+                    <p>You can import images as background and draw on them, convenient for image annotation and secondary creation. Use "New Canvas" to set appropriate canvas size.</p>
                 </div>
             </div>
         </div>
@@ -2038,35 +2629,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="color-palette.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <div style="color: #e6edf3; font-weight: 500;">调色板</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">颜色选择与转换</div>
+                <div style="color: #e6edf3; font-weight: 500;">Color Palette</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Color selection and conversion</div>
             </a>
             <a href="image-editor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">✏️</div>
-                <div style="color: #e6edf3; font-weight: 500;">图片编辑器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">裁剪、旋转、滤镜</div>
+                <div style="color: #e6edf3; font-weight: 500;">Image Editor</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Crop, rotate, filters</div>
             </a>
             <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
-                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+                <div style="color: #e6edf3; font-weight: 500;">Image Converter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP conversion</div>
             </a>
             <a href="ico-maker.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎯</div>
-                <div style="color: #e6edf3; font-weight: 500;">ICO 图标制作</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">生成网站图标</div>
+                <div style="color: #e6edf3; font-weight: 500;">ICO Maker</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Generate website icons</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p>Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← Back to Web Toolbox Home</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

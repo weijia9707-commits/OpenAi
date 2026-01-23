@@ -1,13 +1,13 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>JSON 查看器 - 在线JSON格式化与可视化工具 | Web Toolbox</title>
+    <title>JSON Viewer - Online JSON Formatter & Visualizer | Web Toolbox</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="免费在线JSON查看器，支持JSON格式化、语法高亮、节点折叠展开、关键字搜索。可粘贴或上传JSON文件，纯前端运行，数据安全不上传服务器。">
-    <meta name="keywords" content="JSON查看器,JSON格式化,JSON美化,JSON编辑器,JSON校验,在线JSON工具,JSON可视化,免费工具">
+    <meta name="description" content="Free online JSON viewer with formatting, syntax highlighting, tree view, node collapse/expand, and keyword search. Paste or upload JSON files. Pure frontend, data never uploaded to server.">
+    <meta name="keywords" content="JSON viewer,JSON formatter,JSON beautifier,JSON editor,JSON validator,online JSON tool,JSON visualizer,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/json-viewer.html">
@@ -15,16 +15,17 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/json-viewer.html">
-    <meta property="og:title" content="JSON 查看器 - 在线JSON格式化与可视化工具">
-    <meta property="og:description" content="免费在线JSON查看器，支持格式化、语法高亮、节点折叠、关键字搜索。纯前端运行，数据安全。">
+    <meta property="og:title" content="JSON Viewer - Online JSON Formatter & Visualizer">
+    <meta property="og:description" content="Free online JSON viewer with formatting, syntax highlighting, tree view, and keyword search. Pure frontend, data safe.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/json-viewer.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="JSON 查看器 - 在线JSON格式化与可视化工具">
-    <meta name="twitter:description" content="免费在线JSON查看器，支持格式化、语法高亮、节点折叠、关键字搜索。">
+    <meta name="twitter:title" content="JSON Viewer - Online JSON Formatter & Visualizer">
+    <meta name="twitter:description" content="Free online JSON viewer with formatting, syntax highlighting, tree view, and keyword search.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/json-viewer.png">
 
     <!-- JSON-LD -->
@@ -32,13 +33,14 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "JSON 查看器",
+        "name": "JSON Viewer",
         "url": "https://www.heyuan110.com/web-toolbox/json-viewer.html",
-        "description": "在线JSON格式化、语法高亮、可视化工具",
+        "description": "Online JSON formatting, syntax highlighting, visualization tool",
         "applicationCategory": "DeveloperApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
-        "author": {"@type": "Person", "name": "heyuan110"}
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "author": {"@type": "Person", "name": "heyuan110"},
+        "inLanguage": ["en", "zh-CN", "fr", "es"]
     }
     </script>
 
@@ -50,42 +52,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "什么是 JSON 格式？",
+                "name": "What is JSON format?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "JSON 是 JavaScript Object Notation 的缩写，是一种轻量级的数据交换格式。它基于 JavaScript 语言的一个子集，易于人阅读和编写，同时也易于机器解析和生成。JSON 格式常用于 Web 应用程序中前后端数据传输。"
+                    "text": "JSON (JavaScript Object Notation) is a lightweight data interchange format. It's easy for humans to read and write, and easy for machines to parse and generate. JSON is commonly used for data transmission between frontend and backend in web applications."
                 }
             },
             {
                 "@type": "Question",
-                "name": "为什么我的 JSON 解析失败？",
+                "name": "Why does my JSON parsing fail?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "JSON 解析失败的常见原因包括：缺少引号（所有键名和字符串值都需要双引号）、多余的逗号（最后一个元素后不能有逗号）、使用了单引号（JSON 标准只支持双引号）、缺少括号或括号不匹配、包含注释（标准 JSON 不支持注释）等。"
+                    "text": "Common reasons for JSON parsing failure include: missing quotes (all keys and string values need double quotes), trailing commas (no comma after the last element), using single quotes (JSON standard only supports double quotes), missing or mismatched brackets, containing comments (standard JSON doesn't support comments)."
                 }
             },
             {
                 "@type": "Question",
-                "name": "支持多大的 JSON 数据？",
+                "name": "What is the maximum JSON data size supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "JSON 数据大小取决于浏览器内存限制，建议不超过 10MB。过大的 JSON 数据可能导致浏览器卡顿或崩溃。对于超大数据，建议使用专业的桌面 JSON 编辑器或命令行工具处理。"
+                    "text": "JSON data size depends on browser memory limits, recommended not to exceed 10MB. Large JSON data may cause browser lag or crash. For very large data, use professional desktop JSON editors or command line tools."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以编辑 JSON 吗？",
+                "name": "Can I edit JSON?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以。您可以直接在输入框中编辑 JSON 数据，修改后点击格式化按钮即可验证语法是否正确。工具会自动检测错误并提示具体位置，方便您快速定位和修复问题。"
+                    "text": "Yes. You can edit JSON data directly in the input box, then click the Format button to validate the syntax. The tool will automatically detect errors and indicate their location for quick troubleshooting."
                 }
             },
             {
                 "@type": "Question",
-                "name": "JSON 数据会上传到服务器吗？",
+                "name": "Will JSON data be uploaded to the server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会。所有 JSON 解析和格式化操作都在您的本地浏览器中完成，数据不会上传到任何服务器。您可以放心处理敏感数据，完全保护您的隐私安全。"
+                    "text": "No. All JSON parsing and formatting operations are performed locally in your browser. Data is never uploaded to any server. You can safely process sensitive data with complete privacy protection."
                 }
             }
         ]
@@ -136,6 +138,7 @@
             padding: 30px 0;
             border-bottom: 1px solid var(--border-color);
             margin-bottom: 30px;
+            position: relative;
         }
 
         header h1 {
@@ -151,6 +154,94 @@
         header p {
             color: var(--text-secondary);
             font-size: 14px;
+        }
+
+        /* 语言切换器样式 */
+        .lang-switcher {
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+
+        .lang-dropdown {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-current {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            color: #e4e4e7;
+            padding: 8px 14px;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.2s ease;
+        }
+
+        .lang-current:hover {
+            background: rgba(88, 166, 255, 0.2);
+            border-color: rgba(88, 166, 255, 0.4);
+        }
+
+        .lang-current::after {
+            content: '▼';
+            font-size: 0.6rem;
+            opacity: 0.7;
+            transition: transform 0.2s ease;
+        }
+
+        .lang-dropdown.open .lang-current::after {
+            transform: rotate(180deg);
+        }
+
+        .lang-menu {
+            position: absolute;
+            top: calc(100% + 6px);
+            right: 0;
+            background: rgba(22, 27, 34, 0.98);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            border-radius: 8px;
+            min-width: 140px;
+            box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-8px);
+            transition: all 0.2s ease;
+            z-index: 100;
+            overflow: hidden;
+        }
+
+        .lang-dropdown.open .lang-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+        .lang-btn {
+            display: block;
+            width: 100%;
+            background: transparent;
+            border: none;
+            color: #a1a1aa;
+            padding: 10px 14px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            text-align: left;
+            transition: all 0.15s ease;
+        }
+
+        .lang-btn:hover {
+            background: rgba(88, 166, 255, 0.2);
+            color: #e4e4e7;
+        }
+
+        .lang-btn.active {
+            background: rgba(88, 166, 255, 0.3);
+            color: #58a6ff;
         }
 
         .main-layout {
@@ -675,41 +766,53 @@
 <body>
     <div class="container">
         <header>
-            <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #8b949e; text-decoration: none; font-size: 14px; transition: color 0.2s;">← 返回工具箱</a>
-            <h1>{ } JSON 查看器</h1>
-            <p>粘贴 JSON 数据，即刻获得美观、可交互的树形视图</p>
+            <!-- 语言切换器 -->
+            <div class="lang-switcher" id="langSwitcher">
+                <div class="lang-dropdown" id="langDropdown">
+                    <div class="lang-current" id="langCurrent">🌐 English</div>
+                    <div class="lang-menu">
+                        <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                        <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                        <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                        <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                    </div>
+                </div>
+            </div>
+            <a href="index.html" class="back-link" style="display: inline-block; margin-bottom: 16px; color: #8b949e; text-decoration: none; font-size: 14px; transition: color 0.2s;" data-i18n="backToToolbox">← Back to Toolbox</a>
+            <h1 data-i18n="pageTitle">{ } JSON Viewer</h1>
+            <p data-i18n="pageSubtitle">Paste JSON data and instantly get a beautiful, interactive tree view</p>
         </header>
 
         <!-- 功能特点 -->
         <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.1)); border: 1px solid #30363d; border-radius: 12px;">
-            <h2 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; text-align: center;">功能特点</h2>
+            <h2 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; text-align: center;" data-i18n="featuresTitle">Features</h2>
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px;">
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 28px; flex-shrink: 0;">🎨</span>
                     <div>
-                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">格式化显示</h3>
-                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">自动格式化 JSON，支持语法高亮显示，让数据结构一目了然</p>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;" data-i18n="feature1Title">Formatted Display</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;" data-i18n="feature1Desc">Auto-format JSON with syntax highlighting for clear data structure visualization</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 28px; flex-shrink: 0;">🌳</span>
                     <div>
-                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">树形视图</h3>
-                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">可折叠的树形结构，清晰展示数据层级，支持快速导航</p>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;" data-i18n="feature2Title">Tree View</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;" data-i18n="feature2Desc">Collapsible tree structure clearly displays data hierarchy with quick navigation</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 28px; flex-shrink: 0;">⚠️</span>
                     <div>
-                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">错误检测</h3>
-                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">自动检测 JSON 语法错误并提示具体位置，快速定位问题</p>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;" data-i18n="feature3Title">Error Detection</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;" data-i18n="feature3Desc">Automatically detect JSON syntax errors and indicate specific location for quick fixes</p>
                     </div>
                 </div>
                 <div style="display: flex; align-items: flex-start; gap: 12px;">
                     <span style="font-size: 28px; flex-shrink: 0;">📋</span>
                     <div>
-                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;">一键复制</h3>
-                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;">格式化后的 JSON 一键复制到剪贴板，方便快速使用</p>
+                        <h3 style="color: #58a6ff; font-size: 15px; font-weight: 600; margin-bottom: 6px;" data-i18n="feature4Title">One-Click Copy</h3>
+                        <p style="color: #8b949e; font-size: 13px; line-height: 1.5;" data-i18n="feature4Desc">Copy formatted JSON to clipboard with one click for quick use</p>
                     </div>
                 </div>
             </div>
@@ -719,41 +822,41 @@
             <!-- 输入面板 -->
             <div class="panel">
                 <div class="panel-header">
-                    <span class="panel-title">📝 输入 JSON</span>
+                    <span class="panel-title">📝 <span data-i18n="inputPanelTitle">Input JSON</span></span>
                     <div class="panel-actions">
-                        <button class="btn" onclick="openFile()">📂 打开</button>
-                        <button class="btn" onclick="loadSample()">📋 示例</button>
-                        <button class="btn" onclick="clearInput()">🗑️ 清空</button>
-                        <button class="btn btn-primary" onclick="formatAndParse()">✨ 格式化</button>
+                        <button class="btn" onclick="openFile()">📂 <span data-i18n="btnOpen">Open</span></button>
+                        <button class="btn" onclick="loadSample()">📋 <span data-i18n="btnSample">Sample</span></button>
+                        <button class="btn" onclick="clearInput()">🗑️ <span data-i18n="btnClear">Clear</span></button>
+                        <button class="btn btn-primary" onclick="formatAndParse()">✨ <span data-i18n="btnFormat">Format</span></button>
                     </div>
                 </div>
                 <input type="file" id="fileInput" accept=".json,.txt" style="display: none;">
                 <div class="input-area" id="inputAreaWrapper">
-                    <textarea id="jsonInput" placeholder='在此粘贴 JSON 数据，或拖放 JSON 文件到此处
+                    <textarea id="jsonInput" data-i18n-placeholder="inputPlaceholder" placeholder='Paste JSON data here, or drag and drop a JSON file
 
-示例：
+Example:
 {
-  "name": "张三",
+  "name": "John",
   "age": 28,
   "skills": ["JavaScript", "Python", "Go"]
 }'></textarea>
                     <div class="drop-overlay" id="dropOverlay">
                         <div class="drop-icon">📄</div>
-                        <div>释放文件以加载 JSON</div>
+                        <div data-i18n="dropHint">Release to load JSON file</div>
                     </div>
                 </div>
                 <div class="toolbar">
                     <div class="toolbar-group">
-                        <button class="btn" onclick="minifyJSON()">🗜️ 压缩</button>
-                        <button class="btn" onclick="beautifyJSON()">🎨 美化</button>
+                        <button class="btn" onclick="minifyJSON()">🗜️ <span data-i18n="btnMinify">Minify</span></button>
+                        <button class="btn" onclick="beautifyJSON()">🎨 <span data-i18n="btnBeautify">Beautify</span></button>
                     </div>
                     <div class="toolbar-group">
-                        <button class="btn" onclick="copyInput()">📋 复制</button>
-                        <button class="btn" onclick="downloadJSON()">💾 下载</button>
+                        <button class="btn" onclick="copyInput()">📋 <span data-i18n="btnCopy">Copy</span></button>
+                        <button class="btn" onclick="downloadJSON()">💾 <span data-i18n="btnDownload">Download</span></button>
                     </div>
                     <div class="toolbar-group">
-                        <button class="btn" onclick="escapeJSON()">🔒 转义</button>
-                        <button class="btn" onclick="unescapeJSON()">🔓 反转义</button>
+                        <button class="btn" onclick="escapeJSON()">🔒 <span data-i18n="btnEscape">Escape</span></button>
+                        <button class="btn" onclick="unescapeJSON()">🔓 <span data-i18n="btnUnescape">Unescape</span></button>
                     </div>
                 </div>
             </div>
@@ -761,34 +864,34 @@
             <!-- 输出面板 -->
             <div class="panel">
                 <div class="panel-header">
-                    <span class="panel-title">🌳 树形视图</span>
+                    <span class="panel-title">🌳 <span data-i18n="outputPanelTitle">Tree View</span></span>
                     <div class="panel-actions">
-                        <button class="btn" onclick="expandAll()">📂 全部展开</button>
-                        <button class="btn" onclick="collapseAll()">📁 全部收起</button>
-                        <button class="btn btn-accent" onclick="copyFormatted()">📋 复制</button>
+                        <button class="btn" onclick="expandAll()">📂 <span data-i18n="btnExpandAll">Expand All</span></button>
+                        <button class="btn" onclick="collapseAll()">📁 <span data-i18n="btnCollapseAll">Collapse All</span></button>
+                        <button class="btn btn-accent" onclick="copyFormatted()">📋 <span data-i18n="btnCopy">Copy</span></button>
                     </div>
                 </div>
                 <div class="search-box">
-                    <input type="text" class="search-input" id="searchInput" placeholder="🔍 搜索键名或值..." oninput="handleSearch()">
+                    <input type="text" class="search-input" id="searchInput" data-i18n-placeholder="searchPlaceholder" placeholder="🔍 Search keys or values..." oninput="handleSearch()">
                     <span class="search-info" id="searchInfo"></span>
                 </div>
                 <div id="pathBar" class="path-bar" style="display: none;">
-                    路径: <span id="pathContent">$</span>
+                    <span data-i18n="pathLabel">Path:</span> <span id="pathContent">$</span>
                 </div>
                 <div class="output-area" id="outputArea">
                     <div class="message">
                         <div class="message-icon">📄</div>
-                        <div>在左侧输入 JSON 数据后点击「格式化」</div>
+                        <div data-i18n="emptyMessage">Enter JSON data on the left and click "Format"</div>
                     </div>
                 </div>
                 <div class="stats" id="statsBar" style="display: none;">
-                    <span class="stat-item">对象: <span class="stat-value" id="statObjects">0</span></span>
-                    <span class="stat-item">数组: <span class="stat-value" id="statArrays">0</span></span>
-                    <span class="stat-item">字符串: <span class="stat-value" id="statStrings">0</span></span>
-                    <span class="stat-item">数字: <span class="stat-value" id="statNumbers">0</span></span>
-                    <span class="stat-item">布尔: <span class="stat-value" id="statBooleans">0</span></span>
+                    <span class="stat-item"><span data-i18n="statObjects">Objects</span>: <span class="stat-value" id="statObjects">0</span></span>
+                    <span class="stat-item"><span data-i18n="statArrays">Arrays</span>: <span class="stat-value" id="statArrays">0</span></span>
+                    <span class="stat-item"><span data-i18n="statStrings">Strings</span>: <span class="stat-value" id="statStrings">0</span></span>
+                    <span class="stat-item"><span data-i18n="statNumbers">Numbers</span>: <span class="stat-value" id="statNumbers">0</span></span>
+                    <span class="stat-item"><span data-i18n="statBooleans">Booleans</span>: <span class="stat-value" id="statBooleans">0</span></span>
                     <span class="stat-item">Null: <span class="stat-value" id="statNulls">0</span></span>
-                    <span class="stat-item">深度: <span class="stat-value" id="statDepth">0</span></span>
+                    <span class="stat-item"><span data-i18n="statDepth">Depth</span>: <span class="stat-value" id="statDepth">0</span></span>
                 </div>
             </div>
         </div>
@@ -799,6 +902,433 @@
     <script>
         let parsedData = null;
         let stats = { objects: 0, arrays: 0, strings: 0, numbers: 0, booleans: 0, nulls: 0, maxDepth: 0 };
+
+        // 多语言翻译数据
+        const translations = {
+            'en': {
+                backToToolbox: '← Back to Toolbox',
+                pageTitle: '{ } JSON Viewer',
+                pageSubtitle: 'Paste JSON data and instantly get a beautiful, interactive tree view',
+                featuresTitle: 'Features',
+                feature1Title: 'Formatted Display',
+                feature1Desc: 'Auto-format JSON with syntax highlighting for clear data structure visualization',
+                feature2Title: 'Tree View',
+                feature2Desc: 'Collapsible tree structure clearly displays data hierarchy with quick navigation',
+                feature3Title: 'Error Detection',
+                feature3Desc: 'Automatically detect JSON syntax errors and indicate specific location for quick fixes',
+                feature4Title: 'One-Click Copy',
+                feature4Desc: 'Copy formatted JSON to clipboard with one click for quick use',
+                inputPanelTitle: 'Input JSON',
+                outputPanelTitle: 'Tree View',
+                btnOpen: 'Open',
+                btnSample: 'Sample',
+                btnClear: 'Clear',
+                btnFormat: 'Format',
+                btnMinify: 'Minify',
+                btnBeautify: 'Beautify',
+                btnCopy: 'Copy',
+                btnDownload: 'Download',
+                btnEscape: 'Escape',
+                btnUnescape: 'Unescape',
+                btnExpandAll: 'Expand All',
+                btnCollapseAll: 'Collapse All',
+                inputPlaceholder: 'Paste JSON data here, or drag and drop a JSON file\n\nExample:\n{\n  "name": "John",\n  "age": 28,\n  "skills": ["JavaScript", "Python", "Go"]\n}',
+                searchPlaceholder: '🔍 Search keys or values...',
+                dropHint: 'Release to load JSON file',
+                pathLabel: 'Path:',
+                emptyMessage: 'Enter JSON data on the left and click "Format"',
+                pleaseInputJson: 'Please enter JSON data',
+                statObjects: 'Objects',
+                statArrays: 'Arrays',
+                statStrings: 'Strings',
+                statNumbers: 'Numbers',
+                statBooleans: 'Booleans',
+                statDepth: 'Depth',
+                items: 'items',
+                elements: 'elements',
+                copyPath: 'Copy Path',
+                copyValue: 'Copy',
+                foundMatches: 'Found {count} matches',
+                noMatches: 'No matches',
+                parseSuccess: '✓ JSON parsed successfully',
+                parseSuccessWithFix: '✓ Parse success (auto-removed comments and trailing commas)',
+                parseError: 'JSON Parse Error',
+                jsonMinified: '✓ JSON minified',
+                jsonBeautified: '✓ JSON beautified',
+                invalidJson: '❌ Invalid JSON',
+                escaped: '✓ Escaped',
+                unescaped: '✓ Unescaped',
+                unescapeFailed: '❌ Unescape failed',
+                copiedToClipboard: '✓ Copied to clipboard',
+                copiedFormattedJson: '✓ Formatted JSON copied',
+                pathCopied: '✓ Path copied: ',
+                valueCopied: '✓ Value copied',
+                fileLoaded: '✓ File loaded: ',
+                fileLoadFailed: '❌ File load failed',
+                faqTitle: 'FAQ',
+                faq1Q: 'What is JSON format?',
+                faq1A: 'JSON (JavaScript Object Notation) is a lightweight data interchange format. It\'s easy for humans to read and write, and easy for machines to parse and generate. JSON is commonly used for data transmission between frontend and backend in web applications and is one of the most common formats for modern APIs.',
+                faq2Q: 'Why does my JSON parsing fail?',
+                faq2A: 'Common reasons for JSON parsing failure include:',
+                faq2List1: 'Missing quotes: All keys and string values need double quotes',
+                faq2List2: 'Trailing commas: No comma after the last element',
+                faq2List3: 'Using single quotes: JSON standard only supports double quotes',
+                faq2List4: 'Missing or mismatched brackets',
+                faq2List5: 'Containing comments: Standard JSON doesn\'t support comments (this tool auto-removes them)',
+                faq3Q: 'What is the maximum JSON data size supported?',
+                faq3A: 'JSON data size depends on browser memory limits, recommended not to exceed 10MB. Large JSON data may cause browser lag or crash. For very large data, use professional desktop JSON editors or command line tools (like jq).',
+                faq4Q: 'Can I edit JSON?',
+                faq4A: 'Yes. You can edit JSON data directly in the input box, then click the "Format" button to validate the syntax. The tool will automatically detect errors and indicate their location for quick troubleshooting.',
+                faq5Q: 'Will JSON data be uploaded to the server?',
+                faq5A: 'No. All JSON parsing and formatting operations are performed locally in your browser. Data is never uploaded to any server. You can safely process sensitive data with complete privacy protection.',
+                relatedTools: '🔗 Related Tools',
+                relatedSqlite: 'SQLite Viewer',
+                relatedSqliteDesc: 'Browse SQLite databases online',
+                relatedCrypto: 'Crypto Toolkit',
+                relatedCryptoDesc: 'Base64/MD5/AES encoding & encryption',
+                relatedRegex: 'Regex Tester',
+                relatedRegexDesc: 'Online regex matching & debugging',
+                relatedTimestamp: 'Timestamp Converter',
+                relatedTimestampDesc: 'Unix timestamp & date conversion',
+                footerPrivacy: 'Pure frontend processing, data never uploaded to server',
+                footerBack: '← Back to Web Toolbox'
+            },
+            'zh-CN': {
+                backToToolbox: '← 返回工具箱',
+                pageTitle: '{ } JSON 查看器',
+                pageSubtitle: '粘贴 JSON 数据，即刻获得美观、可交互的树形视图',
+                featuresTitle: '功能特点',
+                feature1Title: '格式化显示',
+                feature1Desc: '自动格式化 JSON，支持语法高亮显示，让数据结构一目了然',
+                feature2Title: '树形视图',
+                feature2Desc: '可折叠的树形结构，清晰展示数据层级，支持快速导航',
+                feature3Title: '错误检测',
+                feature3Desc: '自动检测 JSON 语法错误并提示具体位置，快速定位问题',
+                feature4Title: '一键复制',
+                feature4Desc: '格式化后的 JSON 一键复制到剪贴板，方便快速使用',
+                inputPanelTitle: '输入 JSON',
+                outputPanelTitle: '树形视图',
+                btnOpen: '打开',
+                btnSample: '示例',
+                btnClear: '清空',
+                btnFormat: '格式化',
+                btnMinify: '压缩',
+                btnBeautify: '美化',
+                btnCopy: '复制',
+                btnDownload: '下载',
+                btnEscape: '转义',
+                btnUnescape: '反转义',
+                btnExpandAll: '全部展开',
+                btnCollapseAll: '全部收起',
+                inputPlaceholder: '在此粘贴 JSON 数据，或拖放 JSON 文件到此处\n\n示例：\n{\n  "name": "张三",\n  "age": 28,\n  "skills": ["JavaScript", "Python", "Go"]\n}',
+                searchPlaceholder: '🔍 搜索键名或值...',
+                dropHint: '释放文件以加载 JSON',
+                pathLabel: '路径:',
+                emptyMessage: '在左侧输入 JSON 数据后点击「格式化」',
+                pleaseInputJson: '请输入 JSON 数据',
+                statObjects: '对象',
+                statArrays: '数组',
+                statStrings: '字符串',
+                statNumbers: '数字',
+                statBooleans: '布尔',
+                statDepth: '深度',
+                items: '项',
+                elements: '个元素',
+                copyPath: '复制路径',
+                copyValue: '复制',
+                foundMatches: '找到 {count} 个匹配',
+                noMatches: '无匹配',
+                parseSuccess: '✓ JSON 解析成功',
+                parseSuccessWithFix: '✓ 解析成功（已自动移除注释和尾逗号）',
+                parseError: 'JSON 解析错误',
+                jsonMinified: '✓ JSON 已压缩',
+                jsonBeautified: '✓ JSON 已美化',
+                invalidJson: '❌ 无效的 JSON',
+                escaped: '✓ 已转义',
+                unescaped: '✓ 已反转义',
+                unescapeFailed: '❌ 反转义失败',
+                copiedToClipboard: '✓ 已复制到剪贴板',
+                copiedFormattedJson: '✓ 已复制格式化JSON',
+                pathCopied: '✓ 路径已复制: ',
+                valueCopied: '✓ 值已复制',
+                fileLoaded: '✓ 已加载文件: ',
+                fileLoadFailed: '❌ 文件读取失败',
+                faqTitle: '常见问题',
+                faq1Q: '什么是 JSON 格式？',
+                faq1A: 'JSON 是 JavaScript Object Notation 的缩写，是一种轻量级的数据交换格式。它基于 JavaScript 语言的一个子集，易于人阅读和编写，同时也易于机器解析和生成。JSON 格式常用于 Web 应用程序中前后端数据传输，是现代 API 最常用的数据格式之一。',
+                faq2Q: '为什么我的 JSON 解析失败？',
+                faq2A: 'JSON 解析失败的常见原因包括：',
+                faq2List1: '缺少引号：所有键名和字符串值都需要使用双引号',
+                faq2List2: '多余的逗号：最后一个元素后不能有逗号',
+                faq2List3: '使用了单引号：JSON 标准只支持双引号',
+                faq2List4: '缺少括号或括号不匹配',
+                faq2List5: '包含注释：标准 JSON 不支持注释（本工具已支持自动移除）',
+                faq3Q: '支持多大的 JSON 数据？',
+                faq3A: 'JSON 数据大小取决于浏览器内存限制，建议不超过 10MB。过大的 JSON 数据可能导致浏览器卡顿或崩溃。对于超大数据，建议使用专业的桌面 JSON 编辑器或命令行工具（如 jq）处理。',
+                faq4Q: '可以编辑 JSON 吗？',
+                faq4A: '可以。您可以直接在输入框中编辑 JSON 数据，修改后点击「格式化」按钮即可验证语法是否正确。工具会自动检测错误并提示具体位置，方便您快速定位和修复问题。',
+                faq5Q: 'JSON 数据会上传到服务器吗？',
+                faq5A: '不会。所有 JSON 解析和格式化操作都在您的本地浏览器中完成，数据不会上传到任何服务器。您可以放心处理敏感数据，完全保护您的隐私安全。',
+                relatedTools: '🔗 相关工具推荐',
+                relatedSqlite: 'SQLite 查看器',
+                relatedSqliteDesc: '在线浏览 SQLite 数据库',
+                relatedCrypto: '加解密工具箱',
+                relatedCryptoDesc: 'Base64/MD5/AES 等编码加密',
+                relatedRegex: '正则表达式测试',
+                relatedRegexDesc: '在线正则匹配与调试',
+                relatedTimestamp: '时间戳转换',
+                relatedTimestampDesc: 'Unix 时间戳与日期互转',
+                footerPrivacy: '纯前端处理，数据不会上传到服务器',
+                footerBack: '← 返回 Web Toolbox 首页'
+            },
+            'fr': {
+                backToToolbox: '← Retour à la boîte à outils',
+                pageTitle: '{ } Visionneur JSON',
+                pageSubtitle: 'Collez des données JSON et obtenez instantanément une vue arborescente interactive',
+                featuresTitle: 'Fonctionnalités',
+                feature1Title: 'Affichage formaté',
+                feature1Desc: 'Formatage automatique du JSON avec coloration syntaxique pour une visualisation claire',
+                feature2Title: 'Vue arborescente',
+                feature2Desc: 'Structure arborescente pliable affichant clairement la hiérarchie des données',
+                feature3Title: 'Détection d\'erreurs',
+                feature3Desc: 'Détection automatique des erreurs de syntaxe JSON avec indication de l\'emplacement',
+                feature4Title: 'Copie en un clic',
+                feature4Desc: 'Copiez le JSON formaté dans le presse-papiers en un clic',
+                inputPanelTitle: 'Entrée JSON',
+                outputPanelTitle: 'Vue arborescente',
+                btnOpen: 'Ouvrir',
+                btnSample: 'Exemple',
+                btnClear: 'Effacer',
+                btnFormat: 'Formater',
+                btnMinify: 'Minifier',
+                btnBeautify: 'Embellir',
+                btnCopy: 'Copier',
+                btnDownload: 'Télécharger',
+                btnEscape: 'Échapper',
+                btnUnescape: 'Désechapper',
+                btnExpandAll: 'Tout déplier',
+                btnCollapseAll: 'Tout replier',
+                inputPlaceholder: 'Collez des données JSON ici, ou glissez-déposez un fichier JSON\n\nExemple:\n{\n  "nom": "Jean",\n  "age": 28,\n  "competences": ["JavaScript", "Python", "Go"]\n}',
+                searchPlaceholder: '🔍 Rechercher clés ou valeurs...',
+                dropHint: 'Relâchez pour charger le fichier JSON',
+                pathLabel: 'Chemin:',
+                emptyMessage: 'Entrez des données JSON à gauche et cliquez sur "Formater"',
+                pleaseInputJson: 'Veuillez entrer des données JSON',
+                statObjects: 'Objets',
+                statArrays: 'Tableaux',
+                statStrings: 'Chaînes',
+                statNumbers: 'Nombres',
+                statBooleans: 'Booléens',
+                statDepth: 'Profondeur',
+                items: 'éléments',
+                elements: 'éléments',
+                copyPath: 'Copier le chemin',
+                copyValue: 'Copier',
+                foundMatches: 'Trouvé {count} correspondances',
+                noMatches: 'Aucune correspondance',
+                parseSuccess: '✓ JSON analysé avec succès',
+                parseSuccessWithFix: '✓ Analyse réussie (commentaires et virgules supprimés)',
+                parseError: 'Erreur d\'analyse JSON',
+                jsonMinified: '✓ JSON minifié',
+                jsonBeautified: '✓ JSON embelli',
+                invalidJson: '❌ JSON invalide',
+                escaped: '✓ Échappé',
+                unescaped: '✓ Désechappé',
+                unescapeFailed: '❌ Échec du désechappement',
+                copiedToClipboard: '✓ Copié dans le presse-papiers',
+                copiedFormattedJson: '✓ JSON formaté copié',
+                pathCopied: '✓ Chemin copié: ',
+                valueCopied: '✓ Valeur copiée',
+                fileLoaded: '✓ Fichier chargé: ',
+                fileLoadFailed: '❌ Échec du chargement du fichier',
+                faqTitle: 'FAQ',
+                faq1Q: 'Qu\'est-ce que le format JSON?',
+                faq1A: 'JSON (JavaScript Object Notation) est un format d\'échange de données léger. Il est facile à lire et à écrire pour les humains, et facile à analyser et générer pour les machines. JSON est couramment utilisé pour la transmission de données entre le frontend et le backend dans les applications web.',
+                faq2Q: 'Pourquoi mon analyse JSON échoue-t-elle?',
+                faq2A: 'Raisons courantes d\'échec d\'analyse JSON:',
+                faq2List1: 'Guillemets manquants: Toutes les clés et valeurs de chaîne ont besoin de guillemets doubles',
+                faq2List2: 'Virgules de fin: Pas de virgule après le dernier élément',
+                faq2List3: 'Utilisation de guillemets simples: Le standard JSON ne supporte que les guillemets doubles',
+                faq2List4: 'Crochets manquants ou mal appariés',
+                faq2List5: 'Contient des commentaires: Le JSON standard ne supporte pas les commentaires (cet outil les supprime automatiquement)',
+                faq3Q: 'Quelle taille maximale de données JSON est supportée?',
+                faq3A: 'La taille des données JSON dépend des limites de mémoire du navigateur, il est recommandé de ne pas dépasser 10 Mo. Des données JSON volumineuses peuvent causer des ralentissements ou des plantages du navigateur. Pour des données très volumineuses, utilisez des éditeurs JSON de bureau professionnels ou des outils en ligne de commande (comme jq).',
+                faq4Q: 'Puis-je modifier le JSON?',
+                faq4A: 'Oui. Vous pouvez modifier les données JSON directement dans la zone de saisie, puis cliquer sur le bouton "Formater" pour valider la syntaxe. L\'outil détectera automatiquement les erreurs et indiquera leur emplacement.',
+                faq5Q: 'Les données JSON seront-elles téléchargées sur le serveur?',
+                faq5A: 'Non. Toutes les opérations d\'analyse et de formatage JSON sont effectuées localement dans votre navigateur. Les données ne sont jamais téléchargées sur aucun serveur. Vous pouvez traiter des données sensibles en toute sécurité.',
+                relatedTools: '🔗 Outils connexes',
+                relatedSqlite: 'Visionneur SQLite',
+                relatedSqliteDesc: 'Parcourir les bases de données SQLite en ligne',
+                relatedCrypto: 'Boîte à outils Crypto',
+                relatedCryptoDesc: 'Encodage et chiffrement Base64/MD5/AES',
+                relatedRegex: 'Testeur Regex',
+                relatedRegexDesc: 'Correspondance et débogage regex en ligne',
+                relatedTimestamp: 'Convertisseur Timestamp',
+                relatedTimestampDesc: 'Conversion timestamp Unix et date',
+                footerPrivacy: 'Traitement frontend pur, données jamais téléchargées sur le serveur',
+                footerBack: '← Retour à Web Toolbox'
+            },
+            'es': {
+                backToToolbox: '← Volver a la caja de herramientas',
+                pageTitle: '{ } Visor JSON',
+                pageSubtitle: 'Pega datos JSON y obtén instantáneamente una vista de árbol interactiva',
+                featuresTitle: 'Características',
+                feature1Title: 'Visualización formateada',
+                feature1Desc: 'Formateo automático de JSON con resaltado de sintaxis para una visualización clara',
+                feature2Title: 'Vista de árbol',
+                feature2Desc: 'Estructura de árbol plegable que muestra claramente la jerarquía de datos',
+                feature3Title: 'Detección de errores',
+                feature3Desc: 'Detección automática de errores de sintaxis JSON con indicación de ubicación',
+                feature4Title: 'Copiar con un clic',
+                feature4Desc: 'Copia el JSON formateado al portapapeles con un clic',
+                inputPanelTitle: 'Entrada JSON',
+                outputPanelTitle: 'Vista de árbol',
+                btnOpen: 'Abrir',
+                btnSample: 'Ejemplo',
+                btnClear: 'Limpiar',
+                btnFormat: 'Formatear',
+                btnMinify: 'Minificar',
+                btnBeautify: 'Embellecer',
+                btnCopy: 'Copiar',
+                btnDownload: 'Descargar',
+                btnEscape: 'Escapar',
+                btnUnescape: 'Desescapar',
+                btnExpandAll: 'Expandir todo',
+                btnCollapseAll: 'Contraer todo',
+                inputPlaceholder: 'Pega datos JSON aquí, o arrastra y suelta un archivo JSON\n\nEjemplo:\n{\n  "nombre": "Juan",\n  "edad": 28,\n  "habilidades": ["JavaScript", "Python", "Go"]\n}',
+                searchPlaceholder: '🔍 Buscar claves o valores...',
+                dropHint: 'Suelta para cargar el archivo JSON',
+                pathLabel: 'Ruta:',
+                emptyMessage: 'Ingresa datos JSON a la izquierda y haz clic en "Formatear"',
+                pleaseInputJson: 'Por favor ingresa datos JSON',
+                statObjects: 'Objetos',
+                statArrays: 'Arrays',
+                statStrings: 'Cadenas',
+                statNumbers: 'Números',
+                statBooleans: 'Booleanos',
+                statDepth: 'Profundidad',
+                items: 'elementos',
+                elements: 'elementos',
+                copyPath: 'Copiar ruta',
+                copyValue: 'Copiar',
+                foundMatches: 'Encontrado {count} coincidencias',
+                noMatches: 'Sin coincidencias',
+                parseSuccess: '✓ JSON analizado con éxito',
+                parseSuccessWithFix: '✓ Análisis exitoso (se eliminaron comentarios y comas finales)',
+                parseError: 'Error de análisis JSON',
+                jsonMinified: '✓ JSON minificado',
+                jsonBeautified: '✓ JSON embellecido',
+                invalidJson: '❌ JSON inválido',
+                escaped: '✓ Escapado',
+                unescaped: '✓ Desescapado',
+                unescapeFailed: '❌ Falló el desescapado',
+                copiedToClipboard: '✓ Copiado al portapapeles',
+                copiedFormattedJson: '✓ JSON formateado copiado',
+                pathCopied: '✓ Ruta copiada: ',
+                valueCopied: '✓ Valor copiado',
+                fileLoaded: '✓ Archivo cargado: ',
+                fileLoadFailed: '❌ Fallo al cargar archivo',
+                faqTitle: 'Preguntas frecuentes',
+                faq1Q: '¿Qué es el formato JSON?',
+                faq1A: 'JSON (JavaScript Object Notation) es un formato ligero de intercambio de datos. Es fácil de leer y escribir para humanos, y fácil de analizar y generar para máquinas. JSON se usa comúnmente para la transmisión de datos entre frontend y backend en aplicaciones web.',
+                faq2Q: '¿Por qué falla mi análisis de JSON?',
+                faq2A: 'Razones comunes de fallo en el análisis de JSON:',
+                faq2List1: 'Faltan comillas: Todas las claves y valores de cadena necesitan comillas dobles',
+                faq2List2: 'Comas finales: No debe haber coma después del último elemento',
+                faq2List3: 'Uso de comillas simples: El estándar JSON solo soporta comillas dobles',
+                faq2List4: 'Corchetes faltantes o no coincidentes',
+                faq2List5: 'Contiene comentarios: El JSON estándar no soporta comentarios (esta herramienta los elimina automáticamente)',
+                faq3Q: '¿Cuál es el tamaño máximo de datos JSON soportado?',
+                faq3A: 'El tamaño de datos JSON depende de los límites de memoria del navegador, se recomienda no exceder 10MB. Datos JSON grandes pueden causar lentitud o bloqueo del navegador. Para datos muy grandes, usa editores JSON de escritorio profesionales o herramientas de línea de comandos (como jq).',
+                faq4Q: '¿Puedo editar JSON?',
+                faq4A: 'Sí. Puedes editar datos JSON directamente en el cuadro de entrada, luego haz clic en el botón "Formatear" para validar la sintaxis. La herramienta detectará automáticamente los errores e indicará su ubicación.',
+                faq5Q: '¿Se subirán los datos JSON al servidor?',
+                faq5A: 'No. Todas las operaciones de análisis y formateo de JSON se realizan localmente en tu navegador. Los datos nunca se suben a ningún servidor. Puedes procesar datos sensibles de forma segura con total protección de privacidad.',
+                relatedTools: '🔗 Herramientas relacionadas',
+                relatedSqlite: 'Visor SQLite',
+                relatedSqliteDesc: 'Navegar bases de datos SQLite en línea',
+                relatedCrypto: 'Caja de herramientas Crypto',
+                relatedCryptoDesc: 'Codificación y cifrado Base64/MD5/AES',
+                relatedRegex: 'Probador Regex',
+                relatedRegexDesc: 'Coincidencia y depuración regex en línea',
+                relatedTimestamp: 'Convertidor Timestamp',
+                relatedTimestampDesc: 'Conversión timestamp Unix y fecha',
+                footerPrivacy: 'Procesamiento frontend puro, datos nunca subidos al servidor',
+                footerBack: '← Volver a Web Toolbox'
+            }
+        };
+
+        // 当前语言
+        let currentLang = localStorage.getItem('toolbox_lang') || detectLanguage();
+
+        // 语言显示名称映射
+        const langNames = {
+            'en': '🇺🇸 English',
+            'zh-CN': '🇨🇳 中文',
+            'fr': '🇫🇷 Français',
+            'es': '🇪🇸 Español'
+        };
+
+        // 检测浏览器语言
+        function detectLanguage() {
+            const browserLang = navigator.language || navigator.userLanguage;
+            if (browserLang.startsWith('zh')) return 'zh-CN';
+            if (browserLang.startsWith('fr')) return 'fr';
+            if (browserLang.startsWith('es')) return 'es';
+            return 'en';
+        }
+
+        // 获取翻译文本
+        function t(key) {
+            const trans = translations[currentLang] || translations['en'];
+            return trans[key] || translations['en'][key] || key;
+        }
+
+        // 应用翻译
+        function applyTranslations(lang) {
+            const trans = translations[lang] || translations['en'];
+
+            // 更新 HTML lang 属性
+            document.documentElement.lang = lang;
+
+            // 翻译所有带 data-i18n 属性的元素
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (trans[key]) {
+                    el.innerHTML = trans[key];
+                }
+            });
+
+            // 翻译 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (trans[key]) {
+                    el.placeholder = trans[key];
+                }
+            });
+
+            // 更新语言按钮状态
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+
+            // 更新当前语言显示
+            const langCurrent = document.getElementById('langCurrent');
+            if (langCurrent) {
+                langCurrent.textContent = langNames[lang] || langNames['en'];
+            }
+        }
+
+        // 切换语言
+        function switchLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('toolbox_lang', lang);
+            applyTranslations(lang);
+            // 关闭下拉菜单
+            const dropdown = document.getElementById('langDropdown');
+            if (dropdown) dropdown.classList.remove('open');
+        }
 
         // 移除 JSON 中的注释（支持 JSONC 格式）
         function stripJsonComments(jsonString) {
@@ -883,9 +1413,6 @@
             // 2. 移除尾随逗号
             processed = removeTrailingCommas(processed);
 
-            // 3. 尝试处理单引号（非标准但常见）
-            // 注意：这是一个简化处理，可能不适用于所有情况
-
             return processed;
         }
 
@@ -895,7 +1422,7 @@
             const output = document.getElementById('outputArea');
 
             if (!input) {
-                output.innerHTML = '<div class="message"><div class="message-icon">📄</div><div>请输入 JSON 数据</div></div>';
+                output.innerHTML = `<div class="message"><div class="message-icon">📄</div><div>${t('pleaseInputJson')}</div></div>`;
                 document.getElementById('statsBar').style.display = 'none';
                 return;
             }
@@ -926,13 +1453,13 @@
                 updateStats();
 
                 if (wasPreprocessed) {
-                    showToast('✓ 解析成功（已自动移除注释和尾逗号）', 'success');
+                    showToast(t('parseSuccessWithFix'), 'success');
                 } else {
-                    showToast('✓ JSON 解析成功', 'success');
+                    showToast(t('parseSuccess'), 'success');
                 }
 
             } catch (e) {
-                output.innerHTML = `<div class="message error"><div class="message-icon">❌</div><div>JSON 解析错误</div><div style="margin-top: 10px; font-size: 13px;">${escapeHtml(e.message)}</div></div>`;
+                output.innerHTML = `<div class="message error"><div class="message-icon">❌</div><div>${t('parseError')}</div><div style="margin-top: 10px; font-size: 13px;">${escapeHtml(e.message)}</div></div>`;
                 document.getElementById('statsBar').style.display = 'none';
                 parsedData = null;
             }
@@ -959,6 +1486,8 @@
                 if (isObject) stats.objects++;
                 else stats.arrays++;
 
+                const sizeText = isObject ? `${size} ${t('items')}` : `${size} ${t('elements')}`;
+
                 html += `<span class="json-toggle expanded" onclick="toggleNode(this, '${nodeId}')"></span>`;
 
                 if (key !== '') {
@@ -967,9 +1496,9 @@
                 }
 
                 html += `<span class="json-bracket open">${bracket[0]}</span>`;
-                html += `<span class="json-size">${size} ${isObject ? '项' : '个元素'}</span>`;
+                html += `<span class="json-size">${sizeText}</span>`;
                 html += `<span class="json-ellipsis" onclick="toggleNode(document.querySelector('#${nodeId}').previousElementSibling.querySelector('.json-toggle'), '${nodeId}')" style="display: none;">...</span>`;
-                html += `<button class="btn copy-btn" onclick="copyPath('${escapeHtml(currentPath)}')">复制路径</button>`;
+                html += `<button class="btn copy-btn" onclick="copyPath('${escapeHtml(currentPath)}')">${t('copyPath')}</button>`;
                 html += '</div>';
 
                 html += `<div class="json-children" id="${nodeId}">`;
@@ -999,7 +1528,7 @@
 
                 html += renderValue(data, type);
                 if (!isLast) html += '<span class="json-comma">,</span>';
-                html += `<button class="btn copy-btn" onclick="copyValue(\`${escapeHtml(JSON.stringify(data))}\`)">复制</button>`;
+                html += `<button class="btn copy-btn" onclick="copyValue(\`${escapeHtml(JSON.stringify(data))}\`)">${t('copyValue')}</button>`;
                 html += '</div>';
             }
 
@@ -1125,7 +1654,7 @@
                 }
             });
 
-            info.textContent = count > 0 ? `找到 ${count} 个匹配` : '无匹配';
+            info.textContent = count > 0 ? t('foundMatches').replace('{count}', count) : t('noMatches');
         }
 
         // 工具函数
@@ -1142,26 +1671,26 @@
         // 复制路径
         function copyPath(path) {
             navigator.clipboard.writeText(path);
-            showToast('✓ 路径已复制: ' + path, 'success');
+            showToast(t('pathCopied') + path, 'success');
         }
 
         // 复制值
         function copyValue(value) {
             navigator.clipboard.writeText(JSON.parse(value));
-            showToast('✓ 值已复制', 'success');
+            showToast(t('valueCopied'), 'success');
         }
 
         // 复制输入
         function copyInput() {
             navigator.clipboard.writeText(document.getElementById('jsonInput').value);
-            showToast('✓ 已复制到剪贴板', 'success');
+            showToast(t('copiedToClipboard'), 'success');
         }
 
         // 复制格式化后的JSON
         function copyFormatted() {
             if (parsedData) {
                 navigator.clipboard.writeText(JSON.stringify(parsedData, null, 2));
-                showToast('✓ 已复制格式化JSON', 'success');
+                showToast(t('copiedFormattedJson'), 'success');
             }
         }
 
@@ -1185,9 +1714,9 @@
             try {
                 const data = JSON.parse(input.value);
                 input.value = JSON.stringify(data);
-                showToast('✓ JSON 已压缩', 'success');
+                showToast(t('jsonMinified'), 'success');
             } catch (e) {
-                showToast('❌ 无效的 JSON', 'error');
+                showToast(t('invalidJson'), 'error');
             }
         }
 
@@ -1197,9 +1726,9 @@
             try {
                 const data = JSON.parse(input.value);
                 input.value = JSON.stringify(data, null, 2);
-                showToast('✓ JSON 已美化', 'success');
+                showToast(t('jsonBeautified'), 'success');
             } catch (e) {
-                showToast('❌ 无效的 JSON', 'error');
+                showToast(t('invalidJson'), 'error');
             }
         }
 
@@ -1207,7 +1736,7 @@
         function escapeJSON() {
             const input = document.getElementById('jsonInput');
             input.value = JSON.stringify(input.value);
-            showToast('✓ 已转义', 'success');
+            showToast(t('escaped'), 'success');
         }
 
         // 反转义
@@ -1215,23 +1744,23 @@
             const input = document.getElementById('jsonInput');
             try {
                 input.value = JSON.parse(input.value);
-                showToast('✓ 已反转义', 'success');
+                showToast(t('unescaped'), 'success');
             } catch (e) {
-                showToast('❌ 反转义失败', 'error');
+                showToast(t('unescapeFailed'), 'error');
             }
         }
 
         // 清空输入
         function clearInput() {
             document.getElementById('jsonInput').value = '';
-            document.getElementById('outputArea').innerHTML = '<div class="message"><div class="message-icon">📄</div><div>在左侧输入 JSON 数据后点击「格式化」</div></div>';
+            document.getElementById('outputArea').innerHTML = `<div class="message"><div class="message-icon">📄</div><div>${t('emptyMessage')}</div></div>`;
             document.getElementById('statsBar').style.display = 'none';
             parsedData = null;
         }
 
         // 加载示例
         function loadSample() {
-            const sample = {
+            const sampleZh = {
                 "用户信息": {
                     "姓名": "张三",
                     "年龄": 28,
@@ -1285,6 +1814,63 @@
                 "最后登录": "2024-12-25T14:22:33Z",
                 "备注": null
             };
+
+            const sampleEn = {
+                "user_info": {
+                    "name": "John Doe",
+                    "age": 28,
+                    "email": "john@example.com",
+                    "verified": true,
+                    "membership": "Gold Member"
+                },
+                "orders": [
+                    {
+                        "order_id": "ORD20241225001",
+                        "product": "iPhone 15 Pro Max",
+                        "price": 999.00,
+                        "quantity": 1,
+                        "status": "Shipped",
+                        "shipping_address": {
+                            "state": "California",
+                            "city": "San Francisco",
+                            "district": "Financial District",
+                            "street": "100 Tech Park Road"
+                        }
+                    },
+                    {
+                        "order_id": "ORD20241225002",
+                        "product": "AirPods Pro 2",
+                        "price": 249.00,
+                        "quantity": 2,
+                        "status": "Pending Payment",
+                        "shipping_address": null
+                    }
+                ],
+                "cart": {
+                    "item_count": 5,
+                    "total": 3580.50,
+                    "coupons": ["WELCOME10", "NEWYEAR2025"],
+                    "selected": true
+                },
+                "settings": {
+                    "notifications": {
+                        "email": true,
+                        "sms": false,
+                        "push": true
+                    },
+                    "privacy": {
+                        "profile_visible": "Friends Only",
+                        "online_status": true
+                    },
+                    "theme": "Dark Mode"
+                },
+                "tags": ["VIP", "Active User", "New Year Promo"],
+                "registered_at": "2023-06-15T08:30:00Z",
+                "last_login": "2024-12-25T14:22:33Z",
+                "notes": null
+            };
+
+            const sample = currentLang === 'zh-CN' ? sampleZh : sampleEn;
             document.getElementById('jsonInput').value = JSON.stringify(sample, null, 2);
             formatAndParse();
         }
@@ -1334,10 +1920,10 @@
             reader.onload = (event) => {
                 document.getElementById('jsonInput').value = event.target.result;
                 formatAndParse();
-                showToast(`✓ 已加载文件: ${file.name}`, 'success');
+                showToast(t('fileLoaded') + file.name, 'success');
             };
             reader.onerror = () => {
-                showToast('❌ 文件读取失败', 'error');
+                showToast(t('fileLoadFailed'), 'error');
             };
             reader.readAsText(file);
         }
@@ -1385,57 +1971,85 @@
         // 阻止整个页面的拖放默认行为
         document.addEventListener('dragover', (e) => e.preventDefault());
         document.addEventListener('drop', (e) => e.preventDefault());
+
+        // 语言切换器交互
+        const langDropdown = document.getElementById('langDropdown');
+        const langCurrentBtn = document.getElementById('langCurrent');
+
+        if (langCurrentBtn && langDropdown) {
+            // 点击当前语言按钮切换下拉菜单
+            langCurrentBtn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                langDropdown.classList.toggle('open');
+            });
+
+            // 点击页面其他地方关闭下拉菜单
+            document.addEventListener('click', () => {
+                langDropdown.classList.remove('open');
+            });
+        }
+
+        // 绑定语言切换按钮事件
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', (e) => {
+                e.stopPropagation();
+                switchLanguage(btn.dataset.lang);
+            });
+        });
+
+        // 初始化翻译
+        applyTranslations(currentLang);
     </script>
 
     <!-- FAQ 常见问题 -->
     <section class="faq-section" style="max-width: 1600px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;" data-i18n="faqTitle">FAQ</h2>
         <div style="display: flex; flex-direction: column; gap: 16px;">
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
-                    <span style="color: #58a6ff;">Q:</span> 什么是 JSON 格式？
+                    <span style="color: #58a6ff;">Q:</span> <span data-i18n="faq1Q">What is JSON format?</span>
                 </summary>
                 <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
-                    <p>JSON 是 JavaScript Object Notation 的缩写，是一种轻量级的数据交换格式。它基于 JavaScript 语言的一个子集，易于人阅读和编写，同时也易于机器解析和生成。JSON 格式常用于 Web 应用程序中前后端数据传输，是现代 API 最常用的数据格式之一。</p>
+                    <p data-i18n="faq1A">JSON (JavaScript Object Notation) is a lightweight data interchange format. It's easy for humans to read and write, and easy for machines to parse and generate. JSON is commonly used for data transmission between frontend and backend in web applications and is one of the most common formats for modern APIs.</p>
                 </div>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
-                    <span style="color: #58a6ff;">Q:</span> 为什么我的 JSON 解析失败？
+                    <span style="color: #58a6ff;">Q:</span> <span data-i18n="faq2Q">Why does my JSON parsing fail?</span>
                 </summary>
                 <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
-                    <p>JSON 解析失败的常见原因包括：</p>
+                    <p data-i18n="faq2A">Common reasons for JSON parsing failure include:</p>
                     <ul style="margin: 10px 0 0 20px;">
-                        <li>缺少引号：所有键名和字符串值都需要使用双引号</li>
-                        <li>多余的逗号：最后一个元素后不能有逗号</li>
-                        <li>使用了单引号：JSON 标准只支持双引号</li>
-                        <li>缺少括号或括号不匹配</li>
-                        <li>包含注释：标准 JSON 不支持注释（本工具已支持自动移除）</li>
+                        <li data-i18n="faq2List1">Missing quotes: All keys and string values need double quotes</li>
+                        <li data-i18n="faq2List2">Trailing commas: No comma after the last element</li>
+                        <li data-i18n="faq2List3">Using single quotes: JSON standard only supports double quotes</li>
+                        <li data-i18n="faq2List4">Missing or mismatched brackets</li>
+                        <li data-i18n="faq2List5">Containing comments: Standard JSON doesn't support comments (this tool auto-removes them)</li>
                     </ul>
                 </div>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
-                    <span style="color: #58a6ff;">Q:</span> 支持多大的 JSON 数据？
+                    <span style="color: #58a6ff;">Q:</span> <span data-i18n="faq3Q">What is the maximum JSON data size supported?</span>
                 </summary>
                 <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
-                    <p>JSON 数据大小取决于浏览器内存限制，建议不超过 10MB。过大的 JSON 数据可能导致浏览器卡顿或崩溃。对于超大数据，建议使用专业的桌面 JSON 编辑器或命令行工具（如 jq）处理。</p>
+                    <p data-i18n="faq3A">JSON data size depends on browser memory limits, recommended not to exceed 10MB. Large JSON data may cause browser lag or crash. For very large data, use professional desktop JSON editors or command line tools (like jq).</p>
                 </div>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
-                    <span style="color: #58a6ff;">Q:</span> 可以编辑 JSON 吗？
+                    <span style="color: #58a6ff;">Q:</span> <span data-i18n="faq4Q">Can I edit JSON?</span>
                 </summary>
                 <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
-                    <p>可以。您可以直接在输入框中编辑 JSON 数据，修改后点击「格式化」按钮即可验证语法是否正确。工具会自动检测错误并提示具体位置，方便您快速定位和修复问题。</p>
+                    <p data-i18n="faq4A">Yes. You can edit JSON data directly in the input box, then click the "Format" button to validate the syntax. The tool will automatically detect errors and indicate their location for quick troubleshooting.</p>
                 </div>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; overflow: hidden;">
                 <summary style="padding: 16px 20px; cursor: pointer; color: #e6edf3; font-weight: 500; display: flex; align-items: center; gap: 10px; user-select: none;">
-                    <span style="color: #58a6ff;">Q:</span> JSON 数据会上传到服务器吗？
+                    <span style="color: #58a6ff;">Q:</span> <span data-i18n="faq5Q">Will JSON data be uploaded to the server?</span>
                 </summary>
                 <div style="padding: 0 20px 16px 20px; color: #8b949e; line-height: 1.7;">
-                    <p>不会。所有 JSON 解析和格式化操作都在您的本地浏览器中完成，数据不会上传到任何服务器。您可以放心处理敏感数据，完全保护您的隐私安全。</p>
+                    <p data-i18n="faq5A">No. All JSON parsing and formatting operations are performed locally in your browser. Data is never uploaded to any server. You can safely process sensitive data with complete privacy protection.</p>
                 </div>
             </details>
         </div>
@@ -1443,35 +2057,35 @@
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 1600px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="relatedTools">🔗 Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="sqlite-viewer.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🗄️</div>
-                <div style="color: #e6edf3; font-weight: 500;">SQLite 查看器</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线浏览 SQLite 数据库</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedSqlite">SQLite Viewer</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedSqliteDesc">Browse SQLite databases online</div>
             </a>
             <a href="crypto-tools.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔐</div>
-                <div style="color: #e6edf3; font-weight: 500;">加解密工具箱</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Base64/MD5/AES 等编码加密</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedCrypto">Crypto Toolkit</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedCryptoDesc">Base64/MD5/AES encoding & encryption</div>
             </a>
             <a href="regex-tester.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔍</div>
-                <div style="color: #e6edf3; font-weight: 500;">正则表达式测试</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线正则匹配与调试</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedRegex">Regex Tester</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedRegexDesc">Online regex matching & debugging</div>
             </a>
             <a href="timestamp-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">⏰</div>
-                <div style="color: #e6edf3; font-weight: 500;">时间戳转换</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">Unix 时间戳与日期互转</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="relatedTimestamp">Timestamp Converter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="relatedTimestampDesc">Unix timestamp & date conversion</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerPrivacy">Pure frontend processing, data never uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="footerBack">← Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>

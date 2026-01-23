@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>在线图片编辑器 - 裁切/滤镜/调色/标注 | 在线工具箱</title>
-    <meta name="description" content="免费在线图片编辑器，支持裁切、翻转、旋转、调色、滤镜、标注、文字添加等功能。提供灰度、反色、模糊、锐化、浮雕、像素化等丰富滤镜效果。">
-    <meta name="keywords" content="图片编辑,在线P图,图片裁切,图片滤镜,调色,标注,文字添加,抠图,免费工具">
+    <title>Online Image Editor - Crop/Filter/Adjust/Annotate | Web Toolbox</title>
+    <meta name="description" content="Free online image editor with crop, flip, rotate, color adjustment, filters, annotations, and text overlay. Features grayscale, invert, blur, sharpen, emboss, pixelate effects.">
+    <meta name="keywords" content="image editor,online photo editor,crop image,image filter,color adjustment,annotation,text overlay,background removal,free tool">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/image-editor.html">
@@ -14,16 +14,16 @@
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/image-editor.html">
-    <meta property="og:title" content="在线图片编辑器 - 裁切/滤镜/调色/标注">
-    <meta property="og:description" content="免费在线图片编辑器，支持裁切、滤镜、调色、标注等功能。">
+    <meta property="og:title" content="Online Image Editor - Crop/Filter/Adjust/Annotate">
+    <meta property="og:description" content="Free online image editor with crop, filter, color adjustment, and annotation features.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/image-editor.png">
-    <meta property="og:locale" content="zh_CN">
+    <meta property="og:locale" content="en_US">
     <meta property="og:site_name" content="Web Toolbox">
 
     <!-- Twitter Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="在线图片编辑器 - 裁切/滤镜/调色/标注">
-    <meta name="twitter:description" content="免费在线图片编辑器，支持裁切、滤镜、调色、标注。">
+    <meta name="twitter:title" content="Online Image Editor - Crop/Filter/Adjust/Annotate">
+    <meta name="twitter:description" content="Free online image editor with crop, filter, color adjustment, and annotation.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/image-editor.png">
 
     <!-- JSON-LD -->
@@ -31,12 +31,12 @@
     {
         "@context": "https://schema.org",
         "@type": "WebApplication",
-        "name": "在线图片编辑器",
+        "name": "Online Image Editor",
         "url": "https://www.heyuan110.com/web-toolbox/image-editor.html",
-        "description": "在线图片编辑器，支持裁切、滤镜、调色、标注等功能",
+        "description": "Online image editor with crop, filter, color adjustment, and annotation features",
         "applicationCategory": "DesignApplication",
         "operatingSystem": "Web Browser",
-        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "CNY"},
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
         "author": {"@type": "Person", "name": "heyuan110"}
     }
     </script>
@@ -49,42 +49,42 @@
         "mainEntity": [
             {
                 "@type": "Question",
-                "name": "支持编辑哪些格式的图片？",
+                "name": "What image formats are supported?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式。"
+                    "text": "Supports JPG, PNG, WebP, GIF, BMP and other common image formats."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以撤销编辑操作吗？",
+                "name": "Can I undo edits?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可以，支持撤销和重做功能。"
+                    "text": "Yes, undo and redo functions are supported."
                 }
             },
             {
                 "@type": "Question",
-                "name": "编辑后的图片格式是什么？",
+                "name": "What format is the edited image?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "可选择导出为 JPG、PNG 或 WebP 格式。"
+                    "text": "You can choose to export as JPG, PNG, or WebP format."
                 }
             },
             {
                 "@type": "Question",
-                "name": "可以批量编辑图片吗？",
+                "name": "Can I batch edit images?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "暂不支持，每次只能编辑一张图片。"
+                    "text": "Not currently supported, only one image can be edited at a time."
                 }
             },
             {
                 "@type": "Question",
-                "name": "图片会上传到服务器吗？",
+                "name": "Are images uploaded to a server?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "不会，所有编辑在本地浏览器完成。"
+                    "text": "No, all editing is done locally in your browser."
                 }
             }
         ]
@@ -132,7 +132,18 @@
             justify-content: space-between;
             flex-wrap: wrap;
             gap: 10px;
+            position: relative;
         }
+
+        /* 语言切换器 */
+        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
 
         .logo {
             display: flex;
@@ -726,17 +737,28 @@
 </head>
 <body>
     <header class="header">
+        <div class="lang-switcher">
+            <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-current" id="langCurrent">🌐 English</div>
+                <div class="lang-menu">
+                    <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                    <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                    <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                    <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                </div>
+            </div>
+        </div>
         <div class="logo">
             <span style="font-size: 1.5rem;">🖼️</span>
-            <h1>在线图片编辑器</h1>
+            <h1 data-i18n="title">Online Image Editor</h1>
         </div>
         <div class="header-actions">
-            <a href="index.html" class="back-link">← 返回工具箱</a>
-            <label for="fileInput" class="btn btn-secondary">📂 打开图片</label>
-            <button id="undoBtn" class="btn btn-secondary" disabled>↩ 撤销</button>
-            <button id="redoBtn" class="btn btn-secondary" disabled>↪ 重做</button>
-            <button id="resetBtn" class="btn btn-secondary" disabled>🔄 重置</button>
-            <button id="downloadBtn" class="btn btn-success" disabled>💾 保存图片</button>
+            <a href="index.html" class="back-link" data-i18n="backToToolbox">← Back to Toolbox</a>
+            <label for="fileInput" class="btn btn-secondary" data-i18n="openImage">📂 Open Image</label>
+            <button id="undoBtn" class="btn btn-secondary" disabled data-i18n="undo">↩ Undo</button>
+            <button id="redoBtn" class="btn btn-secondary" disabled data-i18n="redo">↪ Redo</button>
+            <button id="resetBtn" class="btn btn-secondary" disabled data-i18n="reset">🔄 Reset</button>
+            <button id="downloadBtn" class="btn btn-success" disabled data-i18n="saveImage">💾 Save Image</button>
         </div>
     </header>
 
@@ -746,29 +768,29 @@
             <div style="display: flex; align-items: flex-start; gap: 12px;">
                 <span style="font-size: 24px; flex-shrink: 0;">✂️</span>
                 <div>
-                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">基础调整</h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">支持裁剪、旋转、翻转、调整大小等基础操作</p>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;" data-i18n="featureBasicTitle">Basic Adjustments</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;" data-i18n="featureBasicDesc">Crop, rotate, flip, resize and other basic operations</p>
                 </div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px;">
                 <span style="font-size: 24px; flex-shrink: 0;">🎨</span>
                 <div>
-                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">滤镜效果</h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">提供亮度、对比度、饱和度、模糊等滤镜调节</p>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;" data-i18n="featureFilterTitle">Filter Effects</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;" data-i18n="featureFilterDesc">Brightness, contrast, saturation, blur and more filters</p>
                 </div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px;">
                 <span style="font-size: 24px; flex-shrink: 0;">📝</span>
                 <div>
-                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">文字水印</h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">可添加自定义文字水印，支持调整字体和位置</p>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;" data-i18n="featureTextTitle">Text Watermark</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;" data-i18n="featureTextDesc">Add custom text watermarks with adjustable font and position</p>
                 </div>
             </div>
             <div style="display: flex; align-items: flex-start; gap: 12px;">
                 <span style="font-size: 24px; flex-shrink: 0;">👁️</span>
                 <div>
-                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;">实时预览</h3>
-                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;">所有调整即时预览，所见即所得</p>
+                    <h3 style="font-size: 15px; color: var(--text-primary); margin-bottom: 6px;" data-i18n="featurePreviewTitle">Live Preview</h3>
+                    <p style="font-size: 13px; color: var(--text-secondary); line-height: 1.5;" data-i18n="featurePreviewDesc">All adjustments preview instantly, what you see is what you get</p>
                 </div>
             </div>
         </div>
@@ -781,31 +803,31 @@
         <aside class="toolbar">
             <button class="tool-btn active" data-tool="adjust">
                 <span class="icon">🎨</span>
-                <span>调色</span>
+                <span data-i18n="toolAdjust">Adjust</span>
             </button>
             <button class="tool-btn" data-tool="filter">
                 <span class="icon">✨</span>
-                <span>滤镜</span>
+                <span data-i18n="toolFilter">Filter</span>
             </button>
             <button class="tool-btn" data-tool="crop">
                 <span class="icon">✂️</span>
-                <span>裁切</span>
+                <span data-i18n="toolCrop">Crop</span>
             </button>
             <button class="tool-btn" data-tool="transform">
                 <span class="icon">🔄</span>
-                <span>变换</span>
+                <span data-i18n="toolTransform">Transform</span>
             </button>
             <button class="tool-btn" data-tool="draw">
                 <span class="icon">✏️</span>
-                <span>标注</span>
+                <span data-i18n="toolDraw">Draw</span>
             </button>
             <button class="tool-btn" data-tool="text">
                 <span class="icon">📝</span>
-                <span>文字</span>
+                <span data-i18n="toolText">Text</span>
             </button>
             <button class="tool-btn" data-tool="chroma">
                 <span class="icon">🎭</span>
-                <span>抠图</span>
+                <span data-i18n="toolChroma">Chroma</span>
             </button>
         </aside>
 
@@ -816,8 +838,8 @@
                 <div class="upload-area" id="uploadArea">
                     <div class="upload-box" id="uploadBox">
                         <div class="upload-icon">🖼️</div>
-                        <h2 class="upload-title">拖拽图片到此处</h2>
-                        <p class="upload-desc">或点击选择图片文件（支持 JPG、PNG、WebP、GIF）</p>
+                        <h2 class="upload-title" data-i18n="uploadTitle">Drag image here</h2>
+                        <p class="upload-desc" data-i18n="uploadDesc">Or click to select image file (supports JPG, PNG, WebP, GIF)</p>
                     </div>
                 </div>
 
@@ -832,14 +854,14 @@
             <div class="crop-overlay" id="cropOverlay">
                 <div class="crop-actions">
                     <div class="crop-ratio-btns">
-                        <button class="ratio-btn active" data-ratio="free">自由</button>
+                        <button class="ratio-btn active" data-ratio="free" data-i18n="ratioFree">Free</button>
                         <button class="ratio-btn" data-ratio="1">1:1</button>
                         <button class="ratio-btn" data-ratio="1.333">4:3</button>
                         <button class="ratio-btn" data-ratio="1.777">16:9</button>
                         <button class="ratio-btn" data-ratio="0.75">3:4</button>
                     </div>
-                    <button class="btn btn-primary" id="applyCrop">✓ 应用裁切</button>
-                    <button class="btn btn-secondary" id="cancelCrop">✕ 取消</button>
+                    <button class="btn btn-primary" id="applyCrop" data-i18n="applyCrop">✓ Apply Crop</button>
+                    <button class="btn btn-secondary" id="cancelCrop" data-i18n="cancel">✕ Cancel</button>
                 </div>
                 <div class="crop-container">
                     <img id="cropImage" src="">
@@ -864,47 +886,47 @@
         <aside class="panel" id="panel">
             <!-- 调色面板 -->
             <div id="adjustPanel">
-                <div class="panel-header">🎨 调色</div>
+                <div class="panel-header" data-i18n="panelAdjust">🎨 Adjust</div>
                 <div class="panel-content">
                     <div class="panel-section">
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>亮度</span>
+                                <span data-i18n="brightness">Brightness</span>
                                 <span class="slider-value" id="brightnessValue">0</span>
                             </div>
                             <input type="range" id="brightness" min="-100" max="100" value="0">
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>对比度</span>
+                                <span data-i18n="contrast">Contrast</span>
                                 <span class="slider-value" id="contrastValue">0</span>
                             </div>
                             <input type="range" id="contrast" min="-100" max="100" value="0">
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>饱和度</span>
+                                <span data-i18n="saturation">Saturation</span>
                                 <span class="slider-value" id="saturationValue">0</span>
                             </div>
                             <input type="range" id="saturation" min="-100" max="100" value="0">
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>色调</span>
+                                <span data-i18n="hue">Hue</span>
                                 <span class="slider-value" id="hueValue">0</span>
                             </div>
                             <input type="range" id="hue" min="-180" max="180" value="0">
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>曝光</span>
+                                <span data-i18n="exposure">Exposure</span>
                                 <span class="slider-value" id="exposureValue">0</span>
                             </div>
                             <input type="range" id="exposure" min="-100" max="100" value="0">
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>噪点</span>
+                                <span data-i18n="noise">Noise</span>
                                 <span class="slider-value" id="noiseValue">0</span>
                             </div>
                             <input type="range" id="noise" min="0" max="100" value="0">
@@ -915,7 +937,7 @@
 
             <!-- 滤镜面板 -->
             <div id="filterPanel" class="hidden">
-                <div class="panel-header">✨ 滤镜</div>
+                <div class="panel-header" data-i18n="panelFilter">✨ Filter</div>
                 <div class="panel-content">
                     <div class="filter-grid" id="filterGrid">
                         <!-- 滤镜项目由 JS 生成 -->
@@ -925,49 +947,49 @@
 
             <!-- 裁切面板 -->
             <div id="cropPanel" class="hidden">
-                <div class="panel-header">✂️ 裁切</div>
+                <div class="panel-header" data-i18n="panelCrop">✂️ Crop</div>
                 <div class="panel-content">
-                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 15px;">
-                        点击下方按钮进入裁切模式，拖拽调整裁切区域
+                    <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 15px;" data-i18n="cropHint">
+                        Click the button below to enter crop mode, drag to adjust crop area
                     </p>
-                    <button class="btn btn-primary" id="startCrop" style="width: 100%;">开始裁切</button>
+                    <button class="btn btn-primary" id="startCrop" style="width: 100%;" data-i18n="startCrop">Start Crop</button>
                 </div>
             </div>
 
             <!-- 变换面板 -->
             <div id="transformPanel" class="hidden">
-                <div class="panel-header">🔄 变换</div>
+                <div class="panel-header" data-i18n="panelTransform">🔄 Transform</div>
                 <div class="panel-content">
                     <div class="panel-section">
-                        <div class="panel-section-title">翻转</div>
+                        <div class="panel-section-title" data-i18n="flip">Flip</div>
                         <div class="action-grid">
                             <button class="action-btn" id="flipH">
                                 <span class="icon">↔️</span>
-                                <span>水平翻转</span>
+                                <span data-i18n="flipHorizontal">Flip H</span>
                             </button>
                             <button class="action-btn" id="flipV">
                                 <span class="icon">↕️</span>
-                                <span>垂直翻转</span>
+                                <span data-i18n="flipVertical">Flip V</span>
                             </button>
                         </div>
                     </div>
                     <div class="panel-section">
-                        <div class="panel-section-title">旋转</div>
+                        <div class="panel-section-title" data-i18n="rotate">Rotate</div>
                         <div class="action-grid">
                             <button class="action-btn" id="rotateL">
                                 <span class="icon">↺</span>
-                                <span>左旋90°</span>
+                                <span data-i18n="rotateLeft">Left 90°</span>
                             </button>
                             <button class="action-btn" id="rotateR">
                                 <span class="icon">↻</span>
-                                <span>右旋90°</span>
+                                <span data-i18n="rotateRight">Right 90°</span>
                             </button>
                         </div>
                     </div>
                     <div class="panel-section">
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>自由旋转</span>
+                                <span data-i18n="freeRotate">Free Rotate</span>
                                 <span class="slider-value" id="rotateValue">0°</span>
                             </div>
                             <input type="range" id="rotateSlider" min="-180" max="180" value="0">
@@ -978,129 +1000,129 @@
 
             <!-- 标注面板 -->
             <div id="drawPanel" class="hidden">
-                <div class="panel-header">✏️ 标注</div>
+                <div class="panel-header" data-i18n="panelDraw">✏️ Draw</div>
                 <div class="panel-content">
                     <div class="panel-section">
-                        <div class="panel-section-title">工具</div>
+                        <div class="panel-section-title" data-i18n="tools">Tools</div>
                         <div class="action-grid">
                             <button class="action-btn active" data-draw="brush">
                                 <span class="icon">🖌️</span>
-                                <span>画笔</span>
+                                <span data-i18n="brush">Brush</span>
                             </button>
                             <button class="action-btn" data-draw="line">
                                 <span class="icon">📏</span>
-                                <span>直线</span>
+                                <span data-i18n="line">Line</span>
                             </button>
                             <button class="action-btn" data-draw="rect">
                                 <span class="icon">⬜</span>
-                                <span>矩形</span>
+                                <span data-i18n="rectangle">Rect</span>
                             </button>
                             <button class="action-btn" data-draw="circle">
                                 <span class="icon">⭕</span>
-                                <span>圆形</span>
+                                <span data-i18n="circle">Circle</span>
                             </button>
                             <button class="action-btn" data-draw="arrow">
                                 <span class="icon">➡️</span>
-                                <span>箭头</span>
+                                <span data-i18n="arrow">Arrow</span>
                             </button>
                             <button class="action-btn" data-draw="eraser">
                                 <span class="icon">🧽</span>
-                                <span>橡皮</span>
+                                <span data-i18n="eraser">Eraser</span>
                             </button>
                         </div>
                     </div>
                     <div class="panel-section">
                         <div class="color-picker-wrapper">
                             <input type="color" id="drawColor" value="#e94560">
-                            <span>画笔颜色</span>
+                            <span data-i18n="brushColor">Brush Color</span>
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>画笔大小</span>
+                                <span data-i18n="brushSize">Brush Size</span>
                                 <span class="slider-value" id="brushSizeValue">5</span>
                             </div>
                             <input type="range" id="brushSize" min="1" max="50" value="5">
                         </div>
                     </div>
-                    <button class="btn btn-secondary" id="clearDraw" style="width: 100%;">清除标注</button>
+                    <button class="btn btn-secondary" id="clearDraw" style="width: 100%;" data-i18n="clearDraw">Clear Drawing</button>
                 </div>
             </div>
 
             <!-- 文字面板 -->
             <div id="textPanel" class="hidden">
-                <div class="panel-header">📝 文字</div>
+                <div class="panel-header" data-i18n="panelText">📝 Text</div>
                 <div class="panel-content">
                     <div class="panel-section">
-                        <input type="text" class="text-input" id="textInput" placeholder="输入文字内容...">
+                        <input type="text" class="text-input" id="textInput" data-i18n-placeholder="textPlaceholder" placeholder="Enter text content...">
                         <div class="color-picker-wrapper">
                             <input type="color" id="textColor" value="#ffffff">
-                            <span>文字颜色</span>
+                            <span data-i18n="textColor">Text Color</span>
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>字体大小</span>
+                                <span data-i18n="fontSize">Font Size</span>
                                 <span class="slider-value" id="fontSizeValue">32</span>
                             </div>
                             <input type="range" id="fontSize" min="12" max="120" value="32">
                         </div>
                         <select class="text-input" id="fontFamily">
                             <option value="Arial">Arial</option>
-                            <option value="Microsoft YaHei">微软雅黑</option>
-                            <option value="SimHei">黑体</option>
-                            <option value="SimSun">宋体</option>
-                            <option value="KaiTi">楷体</option>
+                            <option value="Microsoft YaHei">Microsoft YaHei</option>
+                            <option value="SimHei">SimHei</option>
+                            <option value="SimSun">SimSun</option>
+                            <option value="KaiTi">KaiTi</option>
                             <option value="Georgia">Georgia</option>
                             <option value="Times New Roman">Times New Roman</option>
                             <option value="Courier New">Courier New</option>
                         </select>
                         <div style="margin-top: 10px;">
                             <label style="display: flex; align-items: center; gap: 8px; cursor: pointer;">
-                                <input type="checkbox" id="textBold"> 粗体
+                                <input type="checkbox" id="textBold"> <span data-i18n="bold">Bold</span>
                             </label>
                             <label style="display: flex; align-items: center; gap: 8px; cursor: pointer; margin-top: 8px;">
-                                <input type="checkbox" id="textShadow"> 阴影
+                                <input type="checkbox" id="textShadow"> <span data-i18n="shadow">Shadow</span>
                             </label>
                         </div>
                     </div>
-                    <button class="btn btn-primary" id="addText" style="width: 100%;">添加文字</button>
-                    <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 10px; text-align: center;">
-                        💡 添加后可拖动文字调整位置
+                    <button class="btn btn-primary" id="addText" style="width: 100%;" data-i18n="addText">Add Text</button>
+                    <p style="color: var(--text-secondary); font-size: 0.8rem; margin-top: 10px; text-align: center;" data-i18n="textHint">
+                        Drag text to adjust position after adding
                     </p>
-                    <button class="btn btn-secondary" id="clearText" style="width: 100%; margin-top: 10px;">清除所有文字</button>
+                    <button class="btn btn-secondary" id="clearText" style="width: 100%; margin-top: 10px;" data-i18n="clearAllText">Clear All Text</button>
                 </div>
             </div>
 
             <!-- 抠图面板 -->
             <div id="chromaPanel" class="hidden">
-                <div class="panel-header">🎭 纯色抠图</div>
+                <div class="panel-header" data-i18n="panelChroma">🎭 Chroma Key</div>
                 <div class="panel-content">
-                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 15px;">
-                        选择要去除的背景颜色，调整容差值使抠图效果更自然
+                    <p style="color: var(--text-secondary); font-size: 0.85rem; margin-bottom: 15px;" data-i18n="chromaHint">
+                        Select background color to remove, adjust tolerance for natural effect
                     </p>
                     <div class="panel-section">
                         <div class="color-picker-wrapper">
                             <input type="color" id="chromaColor" value="#00ff00">
-                            <span>选择背景色</span>
+                            <span data-i18n="selectBgColor">Select BG Color</span>
                         </div>
-                        <button class="btn btn-secondary" id="pickColor" style="width: 100%; margin-bottom: 10px;">
-                            🎯 从图片取色
+                        <button class="btn btn-secondary" id="pickColor" style="width: 100%; margin-bottom: 10px;" data-i18n="pickFromImage">
+                            🎯 Pick from Image
                         </button>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>容差</span>
+                                <span data-i18n="tolerance">Tolerance</span>
                                 <span class="slider-value" id="chromaToleranceValue">30</span>
                             </div>
                             <input type="range" id="chromaTolerance" min="0" max="100" value="30">
                         </div>
                         <div class="slider-group">
                             <div class="slider-label">
-                                <span>边缘羽化</span>
+                                <span data-i18n="feather">Edge Feather</span>
                                 <span class="slider-value" id="chromaFeatherValue">0</span>
                             </div>
                             <input type="range" id="chromaFeather" min="0" max="20" value="0">
                         </div>
                     </div>
-                    <button class="btn btn-primary" id="applyChroma" style="width: 100%;">应用抠图</button>
+                    <button class="btn btn-primary" id="applyChroma" style="width: 100%;" data-i18n="applyChroma">Apply Chroma</button>
                 </div>
             </div>
         </aside>
@@ -2235,81 +2257,599 @@
 
         // 启动
         init();
+
+        // ========== 多语言支持 ==========
+        const i18n = {
+            en: {
+                title: "Online Image Editor",
+                backToToolbox: "← Back to Toolbox",
+                openImage: "📂 Open Image",
+                undo: "↩ Undo",
+                redo: "↪ Redo",
+                reset: "🔄 Reset",
+                saveImage: "💾 Save Image",
+                featureBasicTitle: "Basic Adjustments",
+                featureBasicDesc: "Crop, rotate, flip, resize and other basic operations",
+                featureFilterTitle: "Filter Effects",
+                featureFilterDesc: "Brightness, contrast, saturation, blur and more filters",
+                featureTextTitle: "Text Watermark",
+                featureTextDesc: "Add custom text watermarks with adjustable font and position",
+                featurePreviewTitle: "Live Preview",
+                featurePreviewDesc: "All adjustments preview instantly, what you see is what you get",
+                toolAdjust: "Adjust",
+                toolFilter: "Filter",
+                toolCrop: "Crop",
+                toolTransform: "Transform",
+                toolDraw: "Draw",
+                toolText: "Text",
+                toolChroma: "Chroma",
+                uploadTitle: "Drag image here",
+                uploadDesc: "Or click to select image file (supports JPG, PNG, WebP, GIF)",
+                ratioFree: "Free",
+                applyCrop: "✓ Apply Crop",
+                cancel: "✕ Cancel",
+                panelAdjust: "🎨 Adjust",
+                brightness: "Brightness",
+                contrast: "Contrast",
+                saturation: "Saturation",
+                hue: "Hue",
+                exposure: "Exposure",
+                noise: "Noise",
+                panelFilter: "✨ Filter",
+                panelCrop: "✂️ Crop",
+                cropHint: "Click the button below to enter crop mode, drag to adjust crop area",
+                startCrop: "Start Crop",
+                panelTransform: "🔄 Transform",
+                flip: "Flip",
+                flipHorizontal: "Flip H",
+                flipVertical: "Flip V",
+                rotate: "Rotate",
+                rotateLeft: "Left 90°",
+                rotateRight: "Right 90°",
+                freeRotate: "Free Rotate",
+                panelDraw: "✏️ Draw",
+                tools: "Tools",
+                brush: "Brush",
+                line: "Line",
+                rectangle: "Rect",
+                circle: "Circle",
+                arrow: "Arrow",
+                eraser: "Eraser",
+                brushColor: "Brush Color",
+                brushSize: "Brush Size",
+                clearDraw: "Clear Drawing",
+                panelText: "📝 Text",
+                textPlaceholder: "Enter text content...",
+                textColor: "Text Color",
+                fontSize: "Font Size",
+                bold: "Bold",
+                shadow: "Shadow",
+                addText: "Add Text",
+                textHint: "Drag text to adjust position after adding",
+                clearAllText: "Clear All Text",
+                panelChroma: "🎭 Chroma Key",
+                chromaHint: "Select background color to remove, adjust tolerance for natural effect",
+                selectBgColor: "Select BG Color",
+                pickFromImage: "🎯 Pick from Image",
+                tolerance: "Tolerance",
+                feather: "Edge Feather",
+                applyChroma: "Apply Chroma",
+                faqTitle: "FAQ",
+                faq1q: "What image formats are supported?",
+                faq1a: "Supports JPG, PNG, WebP, GIF, BMP and other common image formats.",
+                faq2q: "Can I undo edits?",
+                faq2a: "Yes, undo and redo functions are supported.",
+                faq3q: "What format is the edited image?",
+                faq3a: "You can choose to export as JPG, PNG, or WebP format.",
+                faq4q: "Can I batch edit images?",
+                faq4a: "Not currently supported, only one image can be edited at a time.",
+                faq5q: "Are images uploaded to a server?",
+                faq5a: "No, all editing is done locally in your browser.",
+                relatedTools: "Related Tools",
+                toolCompressor: "Image Compressor",
+                toolCompressorDesc: "Compress image size online",
+                toolConverter: "Image Converter",
+                toolConverterDesc: "PNG/JPG/WebP conversion",
+                toolIdPhoto: "ID Photo Maker",
+                toolIdPhotoDesc: "Change ID photo background",
+                toolPalette: "Color Palette",
+                toolPaletteDesc: "Color selection and conversion",
+                footerText: "Pure frontend processing, data is not uploaded to server",
+                backToHome: "Back to Web Toolbox",
+                filterNone: "Original",
+                filterGrayscale: "Grayscale",
+                filterInvert: "Invert",
+                filterSepia: "Sepia",
+                filterVintage: "Vintage",
+                filterCold: "Cold",
+                filterWarm: "Warm",
+                filterBlur: "Blur",
+                filterSharpen: "Sharpen",
+                filterEmboss: "Emboss",
+                filterPixelate: "Pixelate",
+                filterEdge: "Edge"
+            },
+            "zh-CN": {
+                title: "在线图片编辑器",
+                backToToolbox: "← 返回工具箱",
+                openImage: "📂 打开图片",
+                undo: "↩ 撤销",
+                redo: "↪ 重做",
+                reset: "🔄 重置",
+                saveImage: "💾 保存图片",
+                featureBasicTitle: "基础调整",
+                featureBasicDesc: "支持裁剪、旋转、翻转、调整大小等基础操作",
+                featureFilterTitle: "滤镜效果",
+                featureFilterDesc: "提供亮度、对比度、饱和度、模糊等滤镜调节",
+                featureTextTitle: "文字水印",
+                featureTextDesc: "可添加自定义文字水印，支持调整字体和位置",
+                featurePreviewTitle: "实时预览",
+                featurePreviewDesc: "所有调整即时预览，所见即所得",
+                toolAdjust: "调色",
+                toolFilter: "滤镜",
+                toolCrop: "裁切",
+                toolTransform: "变换",
+                toolDraw: "标注",
+                toolText: "文字",
+                toolChroma: "抠图",
+                uploadTitle: "拖拽图片到此处",
+                uploadDesc: "或点击选择图片文件（支持 JPG、PNG、WebP、GIF）",
+                ratioFree: "自由",
+                applyCrop: "✓ 应用裁切",
+                cancel: "✕ 取消",
+                panelAdjust: "🎨 调色",
+                brightness: "亮度",
+                contrast: "对比度",
+                saturation: "饱和度",
+                hue: "色调",
+                exposure: "曝光",
+                noise: "噪点",
+                panelFilter: "✨ 滤镜",
+                panelCrop: "✂️ 裁切",
+                cropHint: "点击下方按钮进入裁切模式，拖拽调整裁切区域",
+                startCrop: "开始裁切",
+                panelTransform: "🔄 变换",
+                flip: "翻转",
+                flipHorizontal: "水平翻转",
+                flipVertical: "垂直翻转",
+                rotate: "旋转",
+                rotateLeft: "左旋90°",
+                rotateRight: "右旋90°",
+                freeRotate: "自由旋转",
+                panelDraw: "✏️ 标注",
+                tools: "工具",
+                brush: "画笔",
+                line: "直线",
+                rectangle: "矩形",
+                circle: "圆形",
+                arrow: "箭头",
+                eraser: "橡皮",
+                brushColor: "画笔颜色",
+                brushSize: "画笔大小",
+                clearDraw: "清除标注",
+                panelText: "📝 文字",
+                textPlaceholder: "输入文字内容...",
+                textColor: "文字颜色",
+                fontSize: "字体大小",
+                bold: "粗体",
+                shadow: "阴影",
+                addText: "添加文字",
+                textHint: "💡 添加后可拖动文字调整位置",
+                clearAllText: "清除所有文字",
+                panelChroma: "🎭 纯色抠图",
+                chromaHint: "选择要去除的背景颜色，调整容差值使抠图效果更自然",
+                selectBgColor: "选择背景色",
+                pickFromImage: "🎯 从图片取色",
+                tolerance: "容差",
+                feather: "边缘羽化",
+                applyChroma: "应用抠图",
+                faqTitle: "常见问题",
+                faq1q: "支持编辑哪些格式的图片？",
+                faq1a: "支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式。",
+                faq2q: "可以撤销编辑操作吗？",
+                faq2a: "可以，支持撤销和重做功能。",
+                faq3q: "编辑后的图片格式是什么？",
+                faq3a: "可选择导出为 JPG、PNG 或 WebP 格式。",
+                faq4q: "可以批量编辑图片吗？",
+                faq4a: "暂不支持，每次只能编辑一张图片。",
+                faq5q: "图片会上传到服务器吗？",
+                faq5a: "不会，所有编辑在本地浏览器完成。",
+                relatedTools: "🔗 相关工具推荐",
+                toolCompressor: "图片压缩",
+                toolCompressorDesc: "在线压缩图片大小",
+                toolConverter: "图片格式转换",
+                toolConverterDesc: "PNG/JPG/WebP 互转",
+                toolIdPhoto: "证件照制作",
+                toolIdPhotoDesc: "证件照换底色",
+                toolPalette: "调色板",
+                toolPaletteDesc: "颜色选择与转换",
+                footerText: "纯前端处理，数据不会上传到服务器",
+                backToHome: "← 返回 Web Toolbox 首页",
+                filterNone: "原图",
+                filterGrayscale: "灰度",
+                filterInvert: "反色",
+                filterSepia: "棕褐",
+                filterVintage: "复古",
+                filterCold: "冷调",
+                filterWarm: "暖调",
+                filterBlur: "模糊",
+                filterSharpen: "锐化",
+                filterEmboss: "浮雕",
+                filterPixelate: "像素化",
+                filterEdge: "边缘"
+            },
+            fr: {
+                title: "Editeur d'images en ligne",
+                backToToolbox: "← Retour à la boîte à outils",
+                openImage: "📂 Ouvrir image",
+                undo: "↩ Annuler",
+                redo: "↪ Rétablir",
+                reset: "🔄 Réinitialiser",
+                saveImage: "💾 Enregistrer",
+                featureBasicTitle: "Ajustements de base",
+                featureBasicDesc: "Recadrage, rotation, retournement, redimensionnement et autres opérations",
+                featureFilterTitle: "Effets de filtre",
+                featureFilterDesc: "Luminosité, contraste, saturation, flou et plus de filtres",
+                featureTextTitle: "Filigrane texte",
+                featureTextDesc: "Ajouter des filigranes texte personnalisés avec police et position ajustables",
+                featurePreviewTitle: "Aperçu en direct",
+                featurePreviewDesc: "Tous les ajustements prévisualisés instantanément",
+                toolAdjust: "Ajuster",
+                toolFilter: "Filtre",
+                toolCrop: "Recadrer",
+                toolTransform: "Transformer",
+                toolDraw: "Dessiner",
+                toolText: "Texte",
+                toolChroma: "Chroma",
+                uploadTitle: "Déposez l'image ici",
+                uploadDesc: "Ou cliquez pour sélectionner un fichier image (JPG, PNG, WebP, GIF)",
+                ratioFree: "Libre",
+                applyCrop: "✓ Appliquer",
+                cancel: "✕ Annuler",
+                panelAdjust: "🎨 Ajuster",
+                brightness: "Luminosité",
+                contrast: "Contraste",
+                saturation: "Saturation",
+                hue: "Teinte",
+                exposure: "Exposition",
+                noise: "Bruit",
+                panelFilter: "✨ Filtre",
+                panelCrop: "✂️ Recadrer",
+                cropHint: "Cliquez sur le bouton ci-dessous pour entrer en mode recadrage",
+                startCrop: "Commencer",
+                panelTransform: "🔄 Transformer",
+                flip: "Retourner",
+                flipHorizontal: "Horiz.",
+                flipVertical: "Vert.",
+                rotate: "Rotation",
+                rotateLeft: "Gauche 90°",
+                rotateRight: "Droite 90°",
+                freeRotate: "Rotation libre",
+                panelDraw: "✏️ Dessiner",
+                tools: "Outils",
+                brush: "Pinceau",
+                line: "Ligne",
+                rectangle: "Rect",
+                circle: "Cercle",
+                arrow: "Flèche",
+                eraser: "Gomme",
+                brushColor: "Couleur pinceau",
+                brushSize: "Taille pinceau",
+                clearDraw: "Effacer dessin",
+                panelText: "📝 Texte",
+                textPlaceholder: "Entrez le texte...",
+                textColor: "Couleur texte",
+                fontSize: "Taille police",
+                bold: "Gras",
+                shadow: "Ombre",
+                addText: "Ajouter texte",
+                textHint: "Faites glisser le texte pour ajuster la position",
+                clearAllText: "Effacer tout",
+                panelChroma: "🎭 Clé chromatique",
+                chromaHint: "Sélectionnez la couleur de fond à supprimer, ajustez la tolérance",
+                selectBgColor: "Couleur fond",
+                pickFromImage: "🎯 Prélever couleur",
+                tolerance: "Tolérance",
+                feather: "Contour progressif",
+                applyChroma: "Appliquer",
+                faqTitle: "FAQ",
+                faq1q: "Quels formats d'image sont pris en charge?",
+                faq1a: "JPG, PNG, WebP, GIF, BMP et autres formats courants.",
+                faq2q: "Puis-je annuler les modifications?",
+                faq2a: "Oui, les fonctions annuler et rétablir sont prises en charge.",
+                faq3q: "Quel est le format de l'image éditée?",
+                faq3a: "Vous pouvez exporter en JPG, PNG ou WebP.",
+                faq4q: "Puis-je éditer des images en lot?",
+                faq4a: "Non, une seule image à la fois.",
+                faq5q: "Les images sont-elles téléchargées sur un serveur?",
+                faq5a: "Non, tout est traité localement dans votre navigateur.",
+                relatedTools: "Outils connexes",
+                toolCompressor: "Compresseur d'images",
+                toolCompressorDesc: "Compresser la taille des images",
+                toolConverter: "Convertisseur d'images",
+                toolConverterDesc: "Conversion PNG/JPG/WebP",
+                toolIdPhoto: "Photo d'identité",
+                toolIdPhotoDesc: "Changer le fond de la photo",
+                toolPalette: "Palette de couleurs",
+                toolPaletteDesc: "Sélection et conversion de couleurs",
+                footerText: "Traitement frontend pur, données non téléchargées",
+                backToHome: "Retour à Web Toolbox",
+                filterNone: "Original",
+                filterGrayscale: "Gris",
+                filterInvert: "Inverser",
+                filterSepia: "Sépia",
+                filterVintage: "Vintage",
+                filterCold: "Froid",
+                filterWarm: "Chaud",
+                filterBlur: "Flou",
+                filterSharpen: "Netteté",
+                filterEmboss: "Relief",
+                filterPixelate: "Pixeliser",
+                filterEdge: "Contour"
+            },
+            es: {
+                title: "Editor de imágenes en línea",
+                backToToolbox: "← Volver a herramientas",
+                openImage: "📂 Abrir imagen",
+                undo: "↩ Deshacer",
+                redo: "↪ Rehacer",
+                reset: "🔄 Restablecer",
+                saveImage: "💾 Guardar",
+                featureBasicTitle: "Ajustes básicos",
+                featureBasicDesc: "Recortar, rotar, voltear, redimensionar y otras operaciones básicas",
+                featureFilterTitle: "Efectos de filtro",
+                featureFilterDesc: "Brillo, contraste, saturación, desenfoque y más filtros",
+                featureTextTitle: "Marca de agua",
+                featureTextDesc: "Agregar marcas de agua de texto personalizadas con fuente y posición ajustables",
+                featurePreviewTitle: "Vista previa en vivo",
+                featurePreviewDesc: "Todos los ajustes se previsualizan instantáneamente",
+                toolAdjust: "Ajustar",
+                toolFilter: "Filtro",
+                toolCrop: "Recortar",
+                toolTransform: "Transformar",
+                toolDraw: "Dibujar",
+                toolText: "Texto",
+                toolChroma: "Croma",
+                uploadTitle: "Arrastra la imagen aquí",
+                uploadDesc: "O haz clic para seleccionar archivo (JPG, PNG, WebP, GIF)",
+                ratioFree: "Libre",
+                applyCrop: "✓ Aplicar",
+                cancel: "✕ Cancelar",
+                panelAdjust: "🎨 Ajustar",
+                brightness: "Brillo",
+                contrast: "Contraste",
+                saturation: "Saturación",
+                hue: "Tono",
+                exposure: "Exposición",
+                noise: "Ruido",
+                panelFilter: "✨ Filtro",
+                panelCrop: "✂️ Recortar",
+                cropHint: "Haz clic en el botón de abajo para entrar en modo recorte",
+                startCrop: "Iniciar recorte",
+                panelTransform: "🔄 Transformar",
+                flip: "Voltear",
+                flipHorizontal: "Horiz.",
+                flipVertical: "Vert.",
+                rotate: "Rotar",
+                rotateLeft: "Izq. 90°",
+                rotateRight: "Der. 90°",
+                freeRotate: "Rotación libre",
+                panelDraw: "✏️ Dibujar",
+                tools: "Herramientas",
+                brush: "Pincel",
+                line: "Línea",
+                rectangle: "Rect",
+                circle: "Círculo",
+                arrow: "Flecha",
+                eraser: "Borrador",
+                brushColor: "Color pincel",
+                brushSize: "Tamaño pincel",
+                clearDraw: "Borrar dibujo",
+                panelText: "📝 Texto",
+                textPlaceholder: "Ingresa el texto...",
+                textColor: "Color texto",
+                fontSize: "Tamaño fuente",
+                bold: "Negrita",
+                shadow: "Sombra",
+                addText: "Agregar texto",
+                textHint: "Arrastra el texto para ajustar la posición",
+                clearAllText: "Borrar todo",
+                panelChroma: "🎭 Clave de croma",
+                chromaHint: "Selecciona el color de fondo a eliminar, ajusta la tolerancia",
+                selectBgColor: "Color fondo",
+                pickFromImage: "🎯 Tomar color",
+                tolerance: "Tolerancia",
+                feather: "Difuminar borde",
+                applyChroma: "Aplicar",
+                faqTitle: "Preguntas frecuentes",
+                faq1q: "¿Qué formatos de imagen son compatibles?",
+                faq1a: "JPG, PNG, WebP, GIF, BMP y otros formatos comunes.",
+                faq2q: "¿Puedo deshacer ediciones?",
+                faq2a: "Sí, se admiten las funciones de deshacer y rehacer.",
+                faq3q: "¿En qué formato se guarda la imagen editada?",
+                faq3a: "Puedes exportar como JPG, PNG o WebP.",
+                faq4q: "¿Puedo editar imágenes en lote?",
+                faq4a: "No, solo una imagen a la vez.",
+                faq5q: "¿Se suben las imágenes a un servidor?",
+                faq5a: "No, todo se procesa localmente en tu navegador.",
+                relatedTools: "Herramientas relacionadas",
+                toolCompressor: "Compresor de imágenes",
+                toolCompressorDesc: "Comprimir tamaño de imagen",
+                toolConverter: "Convertidor de imágenes",
+                toolConverterDesc: "Conversión PNG/JPG/WebP",
+                toolIdPhoto: "Foto de identificación",
+                toolIdPhotoDesc: "Cambiar fondo de foto",
+                toolPalette: "Paleta de colores",
+                toolPaletteDesc: "Selección y conversión de colores",
+                footerText: "Procesamiento frontend puro, datos no se suben al servidor",
+                backToHome: "Volver a Web Toolbox",
+                filterNone: "Original",
+                filterGrayscale: "Grises",
+                filterInvert: "Invertir",
+                filterSepia: "Sepia",
+                filterVintage: "Vintage",
+                filterCold: "Frío",
+                filterWarm: "Cálido",
+                filterBlur: "Desenfoque",
+                filterSharpen: "Nitidez",
+                filterEmboss: "Relieve",
+                filterPixelate: "Pixelar",
+                filterEdge: "Borde"
+            }
+        };
+
+        const langNames = {
+            en: "🇺🇸 English",
+            "zh-CN": "🇨🇳 中文",
+            fr: "🇫🇷 Français",
+            es: "🇪🇸 Español"
+        };
+
+        function setLanguage(lang) {
+            if (!i18n[lang]) lang = 'en';
+            localStorage.setItem('language', lang);
+            document.getElementById('langCurrent').textContent = langNames[lang] || langNames.en;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.getAttribute('data-i18n');
+                if (i18n[lang][key]) {
+                    el.textContent = i18n[lang][key];
+                }
+            });
+
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(el => {
+                const key = el.getAttribute('data-i18n-placeholder');
+                if (i18n[lang][key]) {
+                    el.placeholder = i18n[lang][key];
+                }
+            });
+
+            // 更新滤镜名称
+            updateFilterNames(lang);
+        }
+
+        function updateFilterNames(lang) {
+            const filterMap = {
+                'none': 'filterNone',
+                'grayscale': 'filterGrayscale',
+                'invert': 'filterInvert',
+                'sepia': 'filterSepia',
+                'vintage': 'filterVintage',
+                'cold': 'filterCold',
+                'warm': 'filterWarm',
+                'blur': 'filterBlur',
+                'sharpen': 'filterSharpen',
+                'emboss': 'filterEmboss',
+                'pixelate': 'filterPixelate',
+                'edge': 'filterEdge'
+            };
+
+            document.querySelectorAll('.filter-item').forEach(item => {
+                const filterId = item.getAttribute('data-filter');
+                const nameEl = item.querySelector('.filter-name');
+                if (nameEl && filterMap[filterId] && i18n[lang][filterMap[filterId]]) {
+                    nameEl.textContent = i18n[lang][filterMap[filterId]];
+                }
+            });
+        }
+
+        // 语言切换器事件
+        document.getElementById('langDropdown').addEventListener('click', function(e) {
+            this.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                setLanguage(this.getAttribute('data-lang'));
+                document.getElementById('langDropdown').classList.remove('active');
+            });
+        });
+
+        document.addEventListener('click', function(e) {
+            if (!e.target.closest('.lang-dropdown')) {
+                document.getElementById('langDropdown').classList.remove('active');
+            }
+        });
+
+        // 初始化语言
+        const savedLang = localStorage.getItem('language') || (navigator.language.startsWith('zh') ? 'zh-CN' : navigator.language.startsWith('fr') ? 'fr' : navigator.language.startsWith('es') ? 'es' : 'en');
+        setLanguage(savedLang);
     </script>
 
     <!-- FAQ 问答区块 -->
     <section class="faq-section" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;">常见问题</h2>
+        <h2 style="color: #e6edf3; font-size: 20px; margin-bottom: 24px; padding-bottom: 12px; border-bottom: 1px solid #30363d;" data-i18n="faqTitle">FAQ</h2>
         <div style="display: flex; flex-direction: column; gap: 16px;">
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
                 <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    支持编辑哪些格式的图片？
+                    <span data-i18n="faq1q">What image formats are supported?</span>
                     <span style="color: #8b949e; font-size: 18px;">+</span>
                 </summary>
-                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">支持 JPG、PNG、WebP、GIF、BMP 等常见图片格式。</p>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;" data-i18n="faq1a">Supports JPG, PNG, WebP, GIF, BMP and other common image formats.</p>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
                 <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    可以撤销编辑操作吗？
+                    <span data-i18n="faq2q">Can I undo edits?</span>
                     <span style="color: #8b949e; font-size: 18px;">+</span>
                 </summary>
-                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">可以，支持撤销和重做功能。</p>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;" data-i18n="faq2a">Yes, undo and redo functions are supported.</p>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
                 <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    编辑后的图片格式是什么？
+                    <span data-i18n="faq3q">What format is the edited image?</span>
                     <span style="color: #8b949e; font-size: 18px;">+</span>
                 </summary>
-                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">可选择导出为 JPG、PNG 或 WebP 格式。</p>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;" data-i18n="faq3a">You can choose to export as JPG, PNG, or WebP format.</p>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
                 <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    可以批量编辑图片吗？
+                    <span data-i18n="faq4q">Can I batch edit images?</span>
                     <span style="color: #8b949e; font-size: 18px;">+</span>
                 </summary>
-                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">暂不支持，每次只能编辑一张图片。</p>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;" data-i18n="faq4a">Not currently supported, only one image can be edited at a time.</p>
             </details>
             <details style="background: #161b22; border: 1px solid #30363d; border-radius: 8px; padding: 16px;">
                 <summary style="color: #e6edf3; font-weight: 500; cursor: pointer; list-style: none; display: flex; justify-content: space-between; align-items: center;">
-                    图片会上传到服务器吗？
+                    <span data-i18n="faq5q">Are images uploaded to a server?</span>
                     <span style="color: #8b949e; font-size: 18px;">+</span>
                 </summary>
-                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;">不会，所有编辑在本地浏览器完成。</p>
+                <p style="color: #8b949e; margin-top: 12px; padding-top: 12px; border-top: 1px solid #30363d; line-height: 1.6;" data-i18n="faq5a">No, all editing is done locally in your browser.</p>
             </details>
         </div>
     </section>
 
     <!-- 相关工具推荐 -->
     <section class="related-tools" style="max-width: 900px; margin: 40px auto; padding: 0 20px;">
-        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;">🔗 相关工具推荐</h3>
+        <h3 style="color: #e6edf3; font-size: 18px; margin-bottom: 20px; padding-bottom: 10px; border-bottom: 1px solid #30363d;" data-i18n="relatedTools">Related Tools</h3>
         <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px;">
             <a href="image-compressor.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🗜️</div>
-                <div style="color: #e6edf3; font-weight: 500;">图片压缩</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">在线压缩图片大小</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolCompressor">Image Compressor</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolCompressorDesc">Compress image size online</div>
             </a>
             <a href="image-converter.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🔄</div>
-                <div style="color: #e6edf3; font-weight: 500;">图片格式转换</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">PNG/JPG/WebP 互转</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolConverter">Image Converter</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolConverterDesc">PNG/JPG/WebP conversion</div>
             </a>
             <a href="id-photo-tool.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">📷</div>
-                <div style="color: #e6edf3; font-weight: 500;">证件照制作</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">证件照换底色</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolIdPhoto">ID Photo Maker</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolIdPhotoDesc">Change ID photo background</div>
             </a>
             <a href="color-palette.html" style="display: block; padding: 16px; background: #161b22; border: 1px solid #30363d; border-radius: 8px; text-decoration: none; transition: all 0.2s;">
                 <div style="font-size: 24px; margin-bottom: 8px;">🎨</div>
-                <div style="color: #e6edf3; font-weight: 500;">调色板</div>
-                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;">颜色选择与转换</div>
+                <div style="color: #e6edf3; font-weight: 500;" data-i18n="toolPalette">Color Palette</div>
+                <div style="color: #8b949e; font-size: 12px; margin-top: 4px;" data-i18n="toolPaletteDesc">Color selection and conversion</div>
             </a>
         </div>
     </section>
 
     <footer style="text-align: center; padding: 30px 20px; border-top: 1px solid #30363d; color: #8b949e; font-size: 14px;">
-        <p>纯前端处理，数据不会上传到服务器</p>
+        <p data-i18n="footerText">Pure frontend processing, data is not uploaded to server</p>
         <p style="margin-top: 12px;">
-            <a href="index.html" style="color: #58a6ff; text-decoration: none;">← 返回 Web Toolbox 首页</a>
+            <a href="index.html" style="color: #58a6ff; text-decoration: none;" data-i18n="backToHome">Back to Web Toolbox</a>
             <span style="margin: 0 12px;">|</span>
             <a href="https://github.com/heyuan110" target="_blank" rel="noopener" style="color: #58a6ff; text-decoration: none;">GitHub</a>
         </p>
