@@ -1451,68 +1451,76 @@
         }
 
         // Instagram 视频解析
-        // 由于 CORS 限制，直接提供外部下载服务链接
+        // 由于 CORS 限制，提供外部下载服务链接
         async function fetchInstagramVideo(url) {
             return {
                 success: true,
                 platform: 'instagram',
                 title: 'Instagram 视频',
-                author: '选择下载服务',
+                author: '选择下载服务（推荐 Cobalt）',
                 isExternal: true,
                 externalServices: [
                     {
                         name: 'Cobalt',
                         url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`,
-                        icon: '⚡'
+                        icon: '⚡',
+                        desc: '开源、快速、支持高清'
                     },
                     {
-                        name: 'FastDl',
-                        url: `https://fastdl.app/zh?url=${encodeURIComponent(url)}`,
-                        icon: '🚀'
+                        name: 'SnapSave',
+                        url: `https://snapsave.app/zh/instagram-reels-video-download?url=${encodeURIComponent(url)}`,
+                        icon: '💾',
+                        desc: '支持 Reels 和 Stories'
                     },
                     {
-                        name: 'SaveInsta',
-                        url: `https://saveinsta.app/zh?url=${encodeURIComponent(url)}`,
-                        icon: '📸'
+                        name: 'DownloadGram',
+                        url: `https://downloadgram.org/?url=${encodeURIComponent(url)}`,
+                        icon: '📸',
+                        desc: '简洁易用'
                     },
                     {
-                        name: 'SnapInsta',
-                        url: `https://snapinsta.app/?url=${encodeURIComponent(url)}`,
-                        icon: '💾'
+                        name: 'iGram',
+                        url: `https://igram.world/?url=${encodeURIComponent(url)}`,
+                        icon: '📥',
+                        desc: '备用选项'
                     }
                 ]
             };
         }
 
         // Facebook 视频解析
-        // 由于 CORS 限制，直接提供外部下载服务链接
+        // 由于 CORS 限制，提供外部下载服务链接
         async function fetchFacebookVideo(url) {
             return {
                 success: true,
                 platform: 'facebook',
                 title: 'Facebook 视频',
-                author: '选择下载服务',
+                author: '选择下载服务（推荐 Cobalt）',
                 isExternal: true,
                 externalServices: [
                     {
                         name: 'Cobalt',
                         url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`,
-                        icon: '⚡'
-                    },
-                    {
-                        name: 'FDown',
-                        url: `https://fdown.net/?url=${encodeURIComponent(url)}`,
-                        icon: '📘'
+                        icon: '⚡',
+                        desc: '开源、快速、支持高清'
                     },
                     {
                         name: 'SnapSave',
-                        url: `https://snapsave.app/zh?url=${encodeURIComponent(url)}`,
-                        icon: '💾'
+                        url: `https://snapsave.app/zh/facebook-video-downloader?url=${encodeURIComponent(url)}`,
+                        icon: '💾',
+                        desc: '支持 Reels 和视频'
                     },
                     {
-                        name: 'GetFVid',
-                        url: `https://www.getfvid.com/?url=${encodeURIComponent(url)}`,
-                        icon: '📥'
+                        name: 'FVideo',
+                        url: `https://fvideo.tv/?url=${encodeURIComponent(url)}`,
+                        icon: '📘',
+                        desc: '支持 HD 下载'
+                    },
+                    {
+                        name: 'SaveFrom',
+                        url: `https://zh.savefrom.net/?url=${encodeURIComponent(url)}`,
+                        icon: '📥',
+                        desc: '老牌下载服务'
                     }
                 ]
             };
@@ -1560,19 +1568,19 @@
             downloadOptions.innerHTML = '';
 
             if (result.isExternal) {
-                // X 视频 - 使用外部服务
-                result.externalServices.forEach(service => {
+                // 使用外部服务下载
+                result.externalServices.forEach((service, idx) => {
                     const option = document.createElement('div');
                     option.className = 'download-option';
                     option.innerHTML = `
                         <div class="option-info">
                             <div class="option-icon video">${service.icon}</div>
                             <div class="option-details">
-                                <h4>${service.name}</h4>
-                                <p>点击跳转到下载页面</p>
+                                <h4>${service.name}${idx === 0 ? '<span class="option-badge">推荐</span>' : ''}</h4>
+                                <p>${service.desc || '点击跳转到下载页面'}</p>
                             </div>
                         </div>
-                        <a href="${service.url}" target="_blank" class="btn-option">打开 ↗</a>
+                        <a href="${service.url}" target="_blank" rel="noopener noreferrer" class="btn-option">打开 ↗</a>
                     `;
                     downloadOptions.appendChild(option);
                 });
