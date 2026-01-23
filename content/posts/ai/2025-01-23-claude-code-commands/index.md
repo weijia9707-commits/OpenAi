@@ -1,5 +1,5 @@
 +++
-date = '2025-01-23'
+date = '2026-01-23'
 draft = false
 title = 'Claude Code 高手都在用的 24 个技巧'
 tags = ['AI', 'Claude Code', 'CLI', '开发工具', '效率']
