@@ -1587,7 +1587,7 @@
             // 尝试使用 Worker
             const workerResult = await fetchViaWorker(url, 'youtube');
             if (workerResult.success) {
-                // Worker 返回外部服务链接（所有 Cobalt 实例都失败时）
+                // Worker 返回外部服务链接（API 失败时的兜底方案）
                 if (workerResult.isExternal) {
                     return {
                         success: true,
@@ -1598,7 +1598,20 @@
                         externalServices: workerResult.externalServices
                     };
                 }
-                // Worker 返回直接下载链接
+                // Worker 返回 YouTube API 解析结果（包含 videos/audios 数组）
+                if (workerResult.videos && workerResult.videos.length > 0) {
+                    return {
+                        success: true,
+                        platform: 'youtube',
+                        title: workerResult.title || 'YouTube 视频',
+                        author: workerResult.author || 'YouTube',
+                        thumbnail: workerResult.thumbnail,
+                        duration: workerResult.duration,
+                        videos: workerResult.videos,
+                        audios: workerResult.audios
+                    };
+                }
+                // Worker 返回直接下载链接（Cobalt 格式）
                 return {
                     success: true,
                     platform: 'youtube',
