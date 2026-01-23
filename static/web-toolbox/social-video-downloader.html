@@ -1017,6 +1017,11 @@
         const clearHistoryBtn = document.getElementById('clearHistoryBtn');
         const toast = document.getElementById('toast');
 
+        // Cloudflare Worker 代理 URL
+        // 部署你自己的 Worker 后，将下面的 URL 替换为你的 Worker 地址
+        // 如果 Worker 不可用或超出配额，会自动回退到外部服务
+        const WORKER_URL = 'https://videoproxyapi.heyuan110.com/';
+
         // 历史记录
         const HISTORY_KEY = 'social_video_history';
         let history = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]');
@@ -1035,6 +1040,29 @@
             'https://corsproxy.io/?',
             'https://api.allorigins.win/raw?url='
         ];
+
+        // 通过 Cloudflare Worker 代理获取视频
+        async function fetchViaWorker(url, platform) {
+            if (!WORKER_URL) {
+                return { success: false, error: 'worker_not_configured' };
+            }
+
+            try {
+                const response = await fetch(WORKER_URL, {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify({ url, platform }),
+                });
+
+                const data = await response.json();
+                return data;
+            } catch (error) {
+                console.error('Worker 调用失败:', error);
+                return { success: false, error: 'worker_fetch_failed', message: error.message };
+            }
+        }
 
         // 初始化
         function init() {
@@ -1451,8 +1479,36 @@
         }
 
         // Instagram 视频解析
-        // 由于 CORS 限制，提供外部下载服务链接
+        // 优先使用 Worker 代理，失败时回退到外部服务
         async function fetchInstagramVideo(url) {
+            // 尝试使用 Worker
+            const workerResult = await fetchViaWorker(url, 'instagram');
+            if (workerResult.success) {
+                // Worker 返回外部服务链接（所有 Cobalt 实例都失败时）
+                if (workerResult.isExternal) {
+                    return {
+                        success: true,
+                        platform: 'instagram',
+                        title: 'Instagram 视频',
+                        author: '选择下载服务（推荐 Cobalt）',
+                        isExternal: true,
+                        externalServices: workerResult.externalServices
+                    };
+                }
+                // Worker 返回直接下载链接
+                return {
+                    success: true,
+                    platform: 'instagram',
+                    title: workerResult.filename || 'Instagram 视频',
+                    author: '通过 Worker 代理获取',
+                    downloadUrl: workerResult.downloadUrl,
+                    picker: workerResult.picker,
+                    workerStatus: workerResult.status
+                };
+            }
+
+            // Worker 完全不可用，使用本地外部服务列表
+            console.log('Worker 不可用，使用本地外部服务列表:', workerResult.error);
             return {
                 success: true,
                 platform: 'instagram',
@@ -1460,37 +1516,45 @@
                 author: '选择下载服务（推荐 Cobalt）',
                 isExternal: true,
                 externalServices: [
-                    {
-                        name: 'Cobalt',
-                        url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`,
-                        icon: '⚡',
-                        desc: '开源、快速、支持高清'
-                    },
-                    {
-                        name: 'SnapSave',
-                        url: `https://snapsave.app/zh/instagram-reels-video-download?url=${encodeURIComponent(url)}`,
-                        icon: '💾',
-                        desc: '支持 Reels 和 Stories'
-                    },
-                    {
-                        name: 'DownloadGram',
-                        url: `https://downloadgram.org/?url=${encodeURIComponent(url)}`,
-                        icon: '📸',
-                        desc: '简洁易用'
-                    },
-                    {
-                        name: 'iGram',
-                        url: `https://igram.world/?url=${encodeURIComponent(url)}`,
-                        icon: '📥',
-                        desc: '备用选项'
-                    }
+                    { name: 'Cobalt', url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`, icon: '⚡', desc: '开源、快速、支持高清' },
+                    { name: 'SnapSave', url: `https://snapsave.app/zh/instagram-reels-video-download?url=${encodeURIComponent(url)}`, icon: '💾', desc: '支持 Reels 和 Stories' },
+                    { name: 'FastDl', url: `https://fastdl.app/zh/instagram-reels-downloader?url=${encodeURIComponent(url)}`, icon: '🚀', desc: '快速下载' },
+                    { name: 'SaveInsta', url: `https://saveinsta.io/zh?url=${encodeURIComponent(url)}`, icon: '📥', desc: '备用选项' }
                 ]
             };
         }
 
         // Facebook 视频解析
-        // 由于 CORS 限制，提供外部下载服务链接
+        // 优先使用 Worker 代理，失败时回退到外部服务
         async function fetchFacebookVideo(url) {
+            // 尝试使用 Worker
+            const workerResult = await fetchViaWorker(url, 'facebook');
+            if (workerResult.success) {
+                // Worker 返回外部服务链接（所有 Cobalt 实例都失败时）
+                if (workerResult.isExternal) {
+                    return {
+                        success: true,
+                        platform: 'facebook',
+                        title: 'Facebook 视频',
+                        author: '选择下载服务（推荐 Cobalt）',
+                        isExternal: true,
+                        externalServices: workerResult.externalServices
+                    };
+                }
+                // Worker 返回直接下载链接
+                return {
+                    success: true,
+                    platform: 'facebook',
+                    title: workerResult.filename || 'Facebook 视频',
+                    author: '通过 Worker 代理获取',
+                    downloadUrl: workerResult.downloadUrl,
+                    picker: workerResult.picker,
+                    workerStatus: workerResult.status
+                };
+            }
+
+            // Worker 完全不可用，使用本地外部服务列表
+            console.log('Worker 不可用，使用本地外部服务列表:', workerResult.error);
             return {
                 success: true,
                 platform: 'facebook',
@@ -1498,30 +1562,10 @@
                 author: '选择下载服务（推荐 Cobalt）',
                 isExternal: true,
                 externalServices: [
-                    {
-                        name: 'Cobalt',
-                        url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`,
-                        icon: '⚡',
-                        desc: '开源、快速、支持高清'
-                    },
-                    {
-                        name: 'SnapSave',
-                        url: `https://snapsave.app/zh/facebook-video-downloader?url=${encodeURIComponent(url)}`,
-                        icon: '💾',
-                        desc: '支持 Reels 和视频'
-                    },
-                    {
-                        name: 'FVideo',
-                        url: `https://fvideo.tv/?url=${encodeURIComponent(url)}`,
-                        icon: '📘',
-                        desc: '支持 HD 下载'
-                    },
-                    {
-                        name: 'SaveFrom',
-                        url: `https://zh.savefrom.net/?url=${encodeURIComponent(url)}`,
-                        icon: '📥',
-                        desc: '老牌下载服务'
-                    }
+                    { name: 'Cobalt', url: `https://cobalt.tools/?url=${encodeURIComponent(url)}`, icon: '⚡', desc: '开源、快速、支持高清' },
+                    { name: 'SnapSave', url: `https://snapsave.app/zh/facebook-video-downloader?url=${encodeURIComponent(url)}`, icon: '💾', desc: '支持 Reels 和视频' },
+                    { name: 'FDown', url: `https://fdown.net/zh/?url=${encodeURIComponent(url)}`, icon: '📘', desc: '支持 HD 下载' },
+                    { name: 'SaveFrom', url: `https://zh.savefrom.net/?url=${encodeURIComponent(url)}`, icon: '📥', desc: '老牌下载服务' }
                 ]
             };
         }
@@ -1567,7 +1611,40 @@
             // 下载选项
             downloadOptions.innerHTML = '';
 
-            if (result.isExternal) {
+            if (result.downloadUrl) {
+                // Worker 返回的直接下载链接
+                const option = document.createElement('div');
+                option.className = 'download-option';
+                option.innerHTML = `
+                    <div class="option-info">
+                        <div class="option-icon video">🎬</div>
+                        <div class="option-details">
+                            <h4>高清视频<span class="option-badge">直接下载</span></h4>
+                            <p>通过 Worker 代理获取</p>
+                        </div>
+                    </div>
+                    <button class="btn-option" onclick="downloadFile('${result.downloadUrl}', '${result.title || '视频'}')">下载</button>
+                `;
+                downloadOptions.appendChild(option);
+            } else if (result.picker && result.picker.length > 0) {
+                // Worker 返回多个选项（轮播帖子等）
+                result.picker.forEach((item, idx) => {
+                    const option = document.createElement('div');
+                    option.className = 'download-option';
+                    const isVideo = item.type === 'video';
+                    option.innerHTML = `
+                        <div class="option-info">
+                            <div class="option-icon ${isVideo ? 'video' : 'image'}">${isVideo ? '🎬' : '🖼️'}</div>
+                            <div class="option-details">
+                                <h4>${isVideo ? '视频' : '图片'} ${idx + 1}</h4>
+                                <p>点击下载</p>
+                            </div>
+                        </div>
+                        <button class="btn-option" onclick="downloadFile('${item.url}', '${result.title || '媒体'}_${idx + 1}')">下载</button>
+                    `;
+                    downloadOptions.appendChild(option);
+                });
+            } else if (result.isExternal) {
                 // 使用外部服务下载
                 result.externalServices.forEach((service, idx) => {
                     const option = document.createElement('div');
