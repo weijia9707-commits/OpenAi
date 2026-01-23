@@ -158,11 +158,11 @@
         }
 
         /* 语言切换器 */
-        .lang-switcher { position: absolute; top: 0; right: 0; }
+        .lang-switcher { flex-shrink: 0; z-index: 100; }
         .lang-dropdown { position: relative; display: inline-block; }
         .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; }
         .lang-current:hover { background: rgba(255,255,255,0.15); }
-        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-menu { position: absolute; top: 100%; left: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 9999; }
         .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
         .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
         .lang-btn:hover { background: rgba(255,255,255,0.1); }
