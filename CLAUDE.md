@@ -29,17 +29,48 @@ hugo --minify
 git submodule update --remote
 ```
 
+## 博客分类规范
+
+根据 `hugo.toml` 菜单配置，博客文章分类如下：
+
+### AI 文章分类（主要）
+
+| 分类 | URL | 说明 | 示例 |
+|------|-----|------|------|
+| **AI原理** | `categories/ai原理/` | 概念、理论、访谈、思考、趋势分析 | Anthropic CEO 访谈、Agent Skills 原理、AI 时代的 Taste |
+| **AI实战** | `categories/ai实战/` | 教程、指南、工具使用、最佳实践、产品评测 | Claude Code 指南、Cursor 最佳实践、Skills 排行榜 |
+
+### 写文章时的分类设置
+
+```toml
+# AI 教程/指南/工具类 → AI实战
+categories = ['AI实战']
+
+# AI 原理/思考/访谈类 → AI原理
+categories = ['AI原理']
+```
+
+### 旧内容分类（归档）
+
+| 分类 | 目录 |
+|------|------|
+| Java | `posts/java/` |
+| Go | `posts/go/` |
+| Docker | `posts/docker/` |
+| Linux | `posts/linux/` |
+| macOS | `posts/macos/` |
+
 ## 目录结构
 
 ```
 content/
 ├── posts/           # 博客文章目录
-│   ├── ai/          # AI 系列
-│   ├── java/        # Java 系列
-│   ├── go/          # Go 系列
-│   ├── docker/      # Docker 系列
-│   ├── linux/       # Linux 系列
-│   └── ...          # 其他分类
+│   ├── ai/          # AI 系列（主要更新）
+│   ├── java/        # Java 系列（归档）
+│   ├── go/          # Go 系列（归档）
+│   ├── docker/      # Docker 系列（归档）
+│   ├── linux/       # Linux 系列（归档）
+│   └── macos/       # macOS 系列（归档）
 ├── about.md         # 关于页面
 └── *-categories.md  # 各系列的分类页面
 static/              # 静态资源（图片、favicon 等）
