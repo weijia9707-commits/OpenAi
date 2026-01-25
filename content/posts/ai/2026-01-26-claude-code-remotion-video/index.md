@@ -122,6 +122,350 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 </video>
 
 > 💡 这就是 AI Agent 的威力：多个 Skill 协同工作，自动完成从"找素材"到"出成品"的全流程。你只需要描述最终想要什么。
+>
+>
+
+Claude Code 里调用 Remotion Skill 全部过程：
+```
+❯ 使用这 media-download 和 remotion-best-practices 这两个 skill 帮我制作一个 2025 年度抖音年度金曲热榜 Top10，参考主流的剪辑手法
+
+⏺ 好的，我来制作 2025 年度抖音金曲热榜 Top10 视频。先搜索最新的抖音热歌榜单：
+
+⏺ Web Search("2025年抖音热歌榜 年度金曲 Top10 排行榜 最火歌曲")
+  ⎿  Did 1 search in 25s
+
+⏺ Web Search("2025抖音最火歌曲 大展鸿图 揽佬 若月亮没来 APT 玫瑰少年")
+  ⎿  Did 1 search in 25s
+
+⏺ 现在我有了完整的抖音热歌榜单数据。开始创建项目：
+
+⏺ Bash(mkdir -p /Users/bruce.he/douyin-top10-2025/{src/{compositions,components,data,styles},public/{images,videos,audio/songs}} && cd /Users/bruce.he/douyin-top10-202…) timeout: 3m 0s
+  ⎿  Wrote to /Users/bruce.he/douyin-top10-2025/package.json:
+
+     {
+     … +23 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/tsconfig.json)
+  ⎿  Wrote 18 lines to tsconfig.json
+     {
+       "compilerOptions": {
+         "target": "ES2020",
+         "module": "ESNext",
+         "moduleResolution": "bundler",
+         "jsx": "react-jsx",
+         "strict": true,
+         "esModuleInterop": true,
+         "skipLibCheck": true,
+         "forceConsistentCasingInFileNames": true,
+     … +8 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/data/songs.ts)
+  ⎿  Wrote 86 lines to src/data/songs.ts
+     export interface Song {
+       rank: number;
+       title: string;
+       artist: string;
+       audioFile: string;
+       tag?: string; // 热门标签
+     }
+     // 2025 抖音年度金曲热榜 Top 10
+     // 数据来源: MAIGOO、QQ音乐抖音热歌榜、Spotify TikTok热歌榜
+     … +76 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/styles/fonts.ts)
+  ⎿  Wrote 20 lines to src/styles/fonts.ts
+     import { loadFont as loadNotoSansSC } from "@remotion/google-fonts/NotoSansSC";
+     import { loadFont as loadPoppins } from "@remotion/google-fonts/Poppins";
+     export const { fontFamily: notoSansSC } = loadNotoSansSC();
+     export const { fontFamily: poppins } = loadPoppins();
+     export const fonts = {
+       chinese: notoSansSC,
+       english: poppins,
+     };
+     … +10 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/components/DouyinBg.tsx)
+  ⎿  Wrote 121 lines to src/components/DouyinBg.tsx
+     import { useCurrentFrame, interpolate, random } from "remotion";
+     import React from "react";
+     import { douyinColors } from "../styles/fonts";
+     interface DouyinBgProps {
+       variant?: "default" | "champion" | "intro";
+     }
+     export const DouyinBg: React.FC<DouyinBgProps> = ({ variant = "default" }) => {
+       const frame = useCurrentFrame();
+     … +111 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/components/RankBadge.tsx)
+  ⎿  Wrote 99 lines to src/components/RankBadge.tsx
+     import {
+       useCurrentFrame,
+       interpolate,
+       spring,
+       useVideoConfig,
+       Easing,
+     } from "remotion";
+     import React from "react";
+     import { fonts, douyinColors } from "../styles/fonts";
+     … +89 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/components/SongInfo.tsx)
+  ⎿  Wrote 144 lines to src/components/SongInfo.tsx
+     import {
+       useCurrentFrame,
+       interpolate,
+       Easing,
+     } from "remotion";
+     import React from "react";
+     import { fonts, douyinColors } from "../styles/fonts";
+     interface SongInfoProps {
+       title: string;
+     … +134 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/components/MusicBars.tsx)
+  ⎿  Wrote 64 lines to src/components/MusicBars.tsx
+     import { useCurrentFrame, interpolate, random } from "remotion";
+     import React from "react";
+     import { douyinColors } from "../styles/fonts";
+     interface MusicBarsProps {
+       barCount?: number;
+       isChampion?: boolean;
+     }
+     export const MusicBars: React.FC<MusicBarsProps> = ({
+     … +54 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/compositions/Intro.tsx)
+  ⎿  Wrote 242 lines to src/compositions/Intro.tsx
+     import {
+       useCurrentFrame,
+       interpolate,
+       spring,
+       useVideoConfig,
+       Easing,
+     } from "remotion";
+     import React from "react";
+     import { DouyinBg } from "../components/DouyinBg";
+     import { fonts, douyinColors } from "../styles/fonts";
+     … +232 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/compositions/SongCard.tsx)
+  ⎿  Wrote 211 lines to src/compositions/SongCard.tsx
+     import {
+       useCurrentFrame,
+       interpolate,
+       staticFile,
+       Easing,
+     } from "remotion";
+     import { Audio } from "@remotion/media";
+     import React from "react";
+     import { DouyinBg } from "../components/DouyinBg";
+     import { RankBadge } from "../components/RankBadge";
+     … +201 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/compositions/Champion.tsx)
+  ⎿  Wrote 291 lines to src/compositions/Champion.tsx
+     import {
+       useCurrentFrame,
+       interpolate,
+       spring,
+       useVideoConfig,
+       staticFile,
+       Easing,
+     } from "remotion";
+     import { Audio } from "@remotion/media";
+     import React from "react";
+     … +281 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/compositions/Outro.tsx)
+  ⎿  Wrote 309 lines to src/compositions/Outro.tsx
+     import {
+       useCurrentFrame,
+       interpolate,
+       spring,
+       useVideoConfig,
+       Easing,
+     } from "remotion";
+     import React from "react";
+     import { DouyinBg } from "../components/DouyinBg";
+     import { fonts, douyinColors } from "../styles/fonts";
+     … +299 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/compositions/DouyinTop10.tsx)
+  ⎿  Wrote 106 lines to src/compositions/DouyinTop10.tsx
+     import React from "react";
+     import {
+       TransitionSeries,
+       linearTiming,
+       springTiming,
+     } from "@remotion/transitions";
+     import { slide } from "@remotion/transitions/slide";
+     import { fade } from "@remotion/transitions/fade";
+     import { wipe } from "@remotion/transitions/wipe";
+     import { Intro } from "./Intro";
+     … +96 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/Root.tsx)
+  ⎿  Wrote 18 lines to src/Root.tsx
+     import { Composition } from "remotion";
+     import { DouyinTop10, TOTAL_DURATION } from "./compositions/DouyinTop10";
+     export const RemotionRoot: React.FC = () => {
+       return (
+         <>
+           <Composition
+             id="DouyinTop10"
+             component={DouyinTop10}
+             durationInFrames={TOTAL_DURATION}
+     … +8 lines (ctrl+o to expand)
+
+⏺ Write(~/douyin-top10-2025/src/index.ts)
+  ⎿  Wrote 5 lines to src/index.ts
+     import { registerRoot } from "remotion";
+     import { RemotionRoot } from "./Root";
+     registerRoot(RemotionRoot);
+
+⏺ Read(~/douyin-top10-2025/package.json)
+  ⎿  Read 25 lines
+
+⏺ Update(~/douyin-top10-2025/package.json)
+  ⎿  Added 6 lines, removed 5 lines
+       1  {
+       2    "name": "douyin-top10-2025",
+       3    "version": "1.0.0",
+       4 -  "description": "",
+       5 -  "main": "index.js",
+       4 +  "description": "2025 抖音年度金曲热榜 Top10 视频",
+
+
+       5 +  "main": "src/index.ts",
+       6    "scripts": {
+       7 -    "test": "echo \"Error: no test specified\" && exit 1"
+       7 +    "dev": "npx remotion studio src/index.ts",
+       8 +    "build": "npx remotion render src/index.ts DouyinTop10 out/video.mp4",
+       9 +    "render": "npx remotion render src/index.ts DouyinTop10"
+      10    },
+      11 -  "keywords": [],
+      11 +  "keywords": ["remotion", "douyin", "tiktok", "music", "top10"],
+      12    "author": "",
+      13    "license": "ISC",
+      14 -  "type": "commonjs",
+      14    "dependencies": {
+      15      "@remotion/cli": "^4.0.409",
+      16      "@remotion/google-fonts": "^4.0.409",
+
+⏺ 现在下载歌曲音频预览：
+
+⏺ Bash(cd /Users/bruce.he/douyin-top10-2025/public/audio/songs…) timeout: 1m 30s
+  ⎿  📥 下载抖音热歌音频预览...
+     ✅ 01-da-zhan-hong-tu.m4a
+     ✅ 02-apt.m4a
+     … +3 lines (ctrl+o to expand)
+
+⏺ Bash(cd /Users/bruce.he/douyin-top10-2025/public/audio/songs…) timeout: 1m 30s
+  ⎿  ✅ 05-wei-yi.m4a
+     ✅ 06-di-57-ci.m4a
+     ✅ 07-ruo-yue-liang.m4a
+     … +16 lines (ctrl+o to expand)
+
+⏺ 所有 10 首歌曲下载完成！现在下载视频素材：
+
+⏺ Bash(PEXELS_API_KEY="o4Lcc47IpMICVTmCfX0kNTV9qZgdvlkhe5jwZbKrOfwUCcjXUbRvxs78" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "music conc…)
+  ⎿  🔍 搜索视频: music concert red lights
+     ✅ 找到 2 个视频
+       ⬇️ 下载 1/2: music_concert_red_lights_1_pexels.mp4 (9s)
+     … +4 lines (ctrl+o to expand)
+
+⏺ Bash(PEXELS_API_KEY="o4Lcc47IpMICVTmCfX0kNTV9qZgdvlkhe5jwZbKrOfwUCcjXUbRvxs78" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "abstract n…)
+  ⎿  🔍 搜索视频: abstract neon glow
+     ✅ 找到 2 个视频
+       ⬇️ 下载 1/2: abstract_neon_glow_1_pexels.mp4 (8s)
+     … +4 lines (ctrl+o to expand)
+
+⏺ 现在启动项目：
+
+⏺ Bash(cd /Users/bruce.he/douyin-top10-2025 && npm run dev) timeout: 30s
+  ⎿  Running in the background (↓ to manage)
+
+⏺ Bash(sleep 8 && cat /private/tmp/claude/-Users-bruce-he/tasks/b0b98af.output) timeout: 15s
+  ⎿  > douyin-top10-2025@1.0.0 dev
+     > npx remotion studio src/index.ts
+     … +2 lines (ctrl+o to expand)
+
+⏺ Bash(ls -la /Users/bruce.he/douyin-top10-2025/public/videos/)
+  ⎿  total 105584
+     drwxr-xr-x@ 6 bruce.he  staff       192 Jan 26 00:16 .
+     drwxr-xr-x@ 5 bruce.he  staff       160 Jan 26 00:11 ..
+     … +4 lines (ctrl+o to expand)
+
+⏺ ✅ 2025 抖音年度金曲热榜 Top 10 项目已完成！
+
+  项目地址: /Users/bruce.he/douyin-top10-2025
+
+  预览地址: http://localhost:3004
+
+  ---
+  🎵 榜单数据（来源: https://m.maigoo.com/top/444137.html、https://y.qq.com/n/ryqq_v2/toplist/60）
+  ┌──────┬────────────────┬─────────────────────┬─────────────┐
+  │ 排名 │      歌曲      │        艺人         │    标签     │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 1    │ 大展鸿图       │ 揽佬 ft. AR刘夫阳   │ 🔥 年度神曲 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 2    │ APT.           │ ROSÉ & Bruno Mars   │ 🌍 全球爆红 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 3    │ 八方来财       │ 揽佬                │ 💰 财运神曲 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 4    │ 跳楼机         │ 告五人              │ 💔 失恋神曲 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 5    │ 唯一           │ 邓紫棋              │ 🎤 翻唱爆款 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 6    │ 第57次取消发送 │ 王忻辰              │ 💕 治愈情歌 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 7    │ 若月亮没来     │ 王宇宙Leto & 乔浚丞 │ 🌙 浪漫情歌 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 8    │ 座位           │ 承桓                │ 📚 校园青春 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 9    │ 两难           │ 加木                │ 🎵 热门单曲 │
+  ├──────┼────────────────┼─────────────────────┼─────────────┤
+  │ 10   │ 于是           │ 郑润泽              │ ✨ 新声力量 │
+  └──────┴────────────────┴─────────────────────┴─────────────┘
+  ---
+  🎬 视频特点（参考主流剪辑手法）
+
+  1. 抖音品牌风格
+    - 使用抖音红 (#FE2C55) + 抖音青 (#25F4EE) 配色
+    - 动态渐变背景 + 浮动光点效果
+  2. 专业转场效果
+    - slide 滑入转场（左右交替）
+    - wipe 擦除转场
+    - fade 淡入淡出
+  3. 动态动画
+    - Spring 弹性动画排名徽章
+    - 打字机效果歌曲标题
+    - 粒子爆发效果（冠军展示）
+  4. 音频可视化
+    - 实时模拟音频波形
+    - 每首歌 30 秒 iTunes 预览
+  5. 已下载素材
+    - ✅ 10 首歌曲音频预览
+    - ✅ 4 个背景视频（演唱会灯光、霓虹光效）
+
+  ---
+  📁 项目结构
+
+  douyin-top10-2025/
+  ├── src/
+  │   ├── compositions/   # 场景组件
+  │   ├── components/     # UI组件
+  │   ├── data/songs.ts   # 榜单数据
+  │   └── styles/fonts.ts # 字体配置
+  ├── public/
+  │   ├── audio/songs/    # 10首歌曲预览
+  │   └── videos/         # 4个背景视频
+  └── package.json
+
+  打开 http://localhost:3004 预览视频！
+
+✻ Cooked for 7m 16s
+```
 
 ---
 
