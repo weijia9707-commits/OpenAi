@@ -2,15 +2,18 @@
 title: "ClawdBot：海外爆火的个人 AI 管家，30 分钟搭建指南"
 date: 2026-01-25T10:00:00+08:00
 author: "bruce"
-description: "ClawdBot 是一个开源的个人 AI 助手，可以在你的电脑上 24 小时运行，通过微信、Telegram 等聊天工具与你互动。本文用通俗易懂的语言，手把手教你从零开始搭建自己的 AI 管家。"
+description: "ClawdBot 是一个开源的 AI Agent 个人助手，可以在你的电脑上 24 小时运行，通过 Telegram、WhatsApp 等聊天工具与你互动，自动处理邮件、日程、提醒等任务。本文手把手教你从零开始搭建自己的 AI 管家，一看就懂，一学就会。"
 toc: true
 images:
 tags:
   - ClawdBot
+  - AI Agent
   - AI 助手
   - 开源
   - 自动化
   - 个人助理
+  - Anthropic
+  - Claude
 categories:
   - AI
 ---
@@ -29,11 +32,13 @@ categories:
 
 这不是科幻电影，这是 **ClawdBot** 正在帮很多人实现的事情。
 
+---
+
 ## ClawdBot 到底是什么？
 
 ### 用大白话解释
 
-**ClawdBot** 是一个"住"在你电脑里的 AI 助手。
+[ClawdBot](https://clawd.bot/) 是一个"住"在你电脑里的 **AI Agent**（AI 智能体）。
 
 你可以把它想象成一个非常聪明的员工：
 
@@ -48,14 +53,14 @@ categories:
 |---------|----------|
 | 只能聊天，给你建议 | 能聊天，还能帮你干活 |
 | 聊完就忘了 | 记得你说过的所有事 |
-| 只能在网页里用 | 可以通过微信、Telegram 随时联系 |
+| 只能在网页里用 | 可以通过 Telegram、WhatsApp 随时联系 |
 | 运行在别人的服务器上 | 运行在你自己的电脑上，数据完全属于你 |
 
 简单说：**ChatGPT 是顾问，只出主意；ClawdBot 是助理，能动手干活。**
 
 **和 Claude Code 有什么不同？**
 
-可能有人听说过 Claude Code，它也是基于 Claude 的工具，但定位完全不同：
+可能有人听说过 [Claude Code](/posts/ai/2025-01-14-claude-code-guide/)，它也是基于 Claude 的工具，但定位完全不同：
 
 | 对比项 | Claude Code | ClawdBot |
 |--------|-------------|----------|
@@ -70,13 +75,15 @@ categories:
 - **Claude Code** = 你雇的一个程序员，坐在你旁边帮你写代码
 - **ClawdBot** = 你雇的一个私人秘书，24 小时待命处理杂事
 
-如果你是程序员，两个都可以用——Claude Code 帮你写代码，ClawdBot 帮你处理生活琐事。如果你不是程序员，那 ClawdBot 更适合你。
+如果你是程序员，两个都可以用——[Claude Code 帮你写代码](/posts/ai/2025-01-14-claude-code-guide/)，ClawdBot 帮你处理生活琐事。如果你不是程序员，那 ClawdBot 更适合你。
 
 ### 谁做的？
 
-ClawdBot 是由奥地利工程师 **Peter Steinberger** 和社区一起开发的开源项目。
+ClawdBot 是由奥地利工程师 **Peter Steinberger** 和社区一起开发的开源项目。项目托管在 [GitHub](https://github.com/clawdbot/clawdbot)，目前已经获得 9000+ Star。
 
 "开源"是什么意思？就是代码完全公开，你可以免费使用，也可以自己修改。
+
+---
 
 ## 它能帮你做什么？（举例说明）
 
@@ -132,6 +139,8 @@ ClawdBot 是由奥地利工程师 **Peter Steinberger** 和社区一起开发的
 3. 把暖气温度调高
 4. 告诉你："暖气已经开了，回家就暖和"
 
+---
+
 ## 它是怎么工作的？
 
 我用一张图来解释：
@@ -140,7 +149,7 @@ ClawdBot 是由奥地利工程师 **Peter Steinberger** 和社区一起开发的
 ┌─────────────┐     发消息      ┌─────────────┐
 │             │ ───────────────→│             │
 │   你的手机   │                 │  ClawdBot   │
-│  (微信/TG)  │ ←───────────────│  (你的电脑)  │
+│  (Telegram) │ ←───────────────│  (你的电脑)  │
 │             │     回复结果     │             │
 └─────────────┘                 └──────┬──────┘
                                        │
@@ -154,10 +163,14 @@ ClawdBot 是由奥地利工程师 **Peter Steinberger** 和社区一起开发的
 
 **通俗解释**：
 
-1. 你用手机（微信、Telegram 等）给 ClawdBot 发消息
+1. 你用手机（Telegram、WhatsApp 等）给 ClawdBot 发消息
 2. ClawdBot 收到消息，发给 AI 大脑（Claude）思考
 3. AI 大脑想好怎么做后，ClawdBot 就在你的电脑上执行
 4. 做完了，通过手机告诉你结果
+
+这种能自主思考、自主执行的 AI，就叫做 **AI Agent**（AI 智能体）。这是 [2025 年 AI 发展的重要趋势](/posts/ai/2026-01-19-ai-dev-workflow/)。
+
+---
 
 ## 准备工作
 
@@ -198,6 +211,8 @@ ClawdBot 需要一个 AI 大脑来思考。推荐使用 Claude（效果最好）
 - Slack
 - iMessage（仅限 Mac 电脑）
 
+---
+
 ## 手把手安装教程
 
 下面我以 **Mac 电脑 + Telegram** 为例，一步步教你安装。
@@ -210,6 +225,8 @@ ClawdBot 需要一个 AI 大脑来思考。推荐使用 Claude（效果最好）
 
 你会看到一个黑色（或白色）的窗口，里面有一个闪烁的光标。
 
+> 💡 如果你想了解更多终端技巧，可以参考 [终端工具推荐](/posts/macos/2025-01-22-terminal-tools-guide/)。
+
 ### 第二步：安装 ClawdBot
 
 在终端里，复制粘贴下面这行命令，然后按回车：
@@ -219,7 +236,7 @@ curl -fsSL https://clawd.bot/install.sh | bash
 ```
 
 **这行命令在做什么？**
-- 从 ClawdBot 官网下载安装脚本
+- 从 [ClawdBot 官网](https://clawd.bot/) 下载安装脚本
 - 自动安装 ClawdBot 到你的电脑
 
 等待 1-2 分钟，安装完成后，会自动启动配置向导。
@@ -304,6 +321,8 @@ clawdbot start
 
 如果一切正常，它会回复你。
 
+---
+
 ## 新手必试的 3 个命令
 
 安装成功后，试试这 3 个命令，感受一下 ClawdBot 的能力：
@@ -321,7 +340,7 @@ clawdbot start
 ### 命令 2：让它帮你做个简单任务
 
 ```
-帮我搜索一下"2024年最火的AI工具"，
+帮我搜索一下"2025年最火的AI工具"，
 整理成一个清单给我。
 ```
 
@@ -335,13 +354,15 @@ clawdbot start
 
 第二天早上 9 点，它会主动给你发消息。
 
+---
+
 ## 进阶玩法
 
 当你熟悉了基本用法，可以尝试这些进阶玩法：
 
 ### 连接更多工具
 
-ClawdBot 支持 50 多种工具集成：
+ClawdBot 支持 [50 多种工具集成](https://clawd.bot/)：
 
 - **Gmail**：帮你处理邮件
 - **Google 日历**：帮你管理日程
@@ -351,7 +372,7 @@ ClawdBot 支持 50 多种工具集成：
 
 ### 教它新技能
 
-ClawdBot 可以学习新技能。比如：
+ClawdBot 可以学习新技能，这和 [Claude Code 的 Skill 系统](/posts/ai/2026-01-08-claudecode-skill-guide/)类似。比如：
 
 ```
 我教你一个新技能：
@@ -368,6 +389,8 @@ ClawdBot 可以学习新技能。比如：
 - 一个专门处理邮件
 - 一个专门做调研
 - 一个专门管理日程
+
+---
 
 ## 常见问题
 
@@ -396,6 +419,8 @@ ClawdBot 可以学习新技能。比如：
 
 ClawdBot 需要电脑一直开着才能工作。如果你关机了，它就下线了。所以推荐用一台专门的电脑（比如 Mac Mini）来运行它。
 
+---
+
 ## 注意事项
 
 使用 ClawdBot 时，有几点需要注意：
@@ -404,9 +429,11 @@ ClawdBot 需要电脑一直开着才能工作。如果你关机了，它就下�
 2. **注意安全**：因为 ClawdBot 可以操作你的电脑，不要让它做危险的事情
 3. **注意隐私**：虽然数据存在本地，但还是要注意保护敏感信息
 
+---
+
 ## 总结
 
-ClawdBot 是一个真正能帮你"干活"的 AI 助手：
+ClawdBot 是一个真正能帮你"干活"的 AI Agent：
 
 - **24 小时在线**：随时待命，不知疲倦
 - **有记忆**：记得你说过的每一件事
@@ -416,7 +443,22 @@ ClawdBot 是一个真正能帮你"干活"的 AI 助手：
 
 如果你想体验一下"有个 AI 助手是什么感觉"，ClawdBot 是一个很好的起点。
 
-**官方网站**：https://clawd.bot/
+---
+
+## 相关链接
+
+- [ClawdBot 官网](https://clawd.bot/)
+- [ClawdBot GitHub](https://github.com/clawdbot/clawdbot)
+- [Anthropic Console（获取 API Key）](https://console.anthropic.com)
+
+---
+
+## 延伸阅读
+
+- [Claude Code 完全指南：终端里的全能 AI 助手](/posts/ai/2025-01-14-claude-code-guide/) - 程序员专属的 AI 编程助手
+- [AI 开发工作流的变革](/posts/ai/2026-01-19-ai-dev-workflow/) - AI Agent 如何改变我们的工作方式
+- [2025 年最值得使用的 20 个 Claude Code Skills](/posts/ai/2026-01-20-claude-code-skills-top20/) - 提升效率的 Skill 合集
+- [终端工具推荐：23 款高效终端对比](/posts/macos/2025-01-22-terminal-tools-guide/) - 选择适合你的终端
 
 ---
 
