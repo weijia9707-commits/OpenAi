@@ -12,7 +12,7 @@ tags:
   - 开发效率
   - 工作流
 categories:
-  - AI
+  - AI实战
 ---
 
 ![AI开发工作流](cover.webp)

@@ -13,7 +13,7 @@ tags:
   - 效率工具
   - 自动化
 categories:
-  - AI
+  - AI实战
 ---
 
 ![Claude Code 终端 AI 助手](cover.webp)

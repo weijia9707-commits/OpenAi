@@ -6,7 +6,7 @@ toc = true
 author = 'bruce'
 description = 'Anthropic CEO Dario Amodei 在彭博社最新访谈中分享了对 AI 未来的深度见解：从指数级增长的本质，到首席工程师两个月不写代码的现实，再到芯片出口管制和经济影响的预测。本文整理访谈核心观点。'
 tags = ['AI', 'Anthropic', 'Claude', 'AI 趋势', 'AI 经济']
-categories = ['AI']
+categories = ['AI原理']
 keywords = ['Anthropic CEO', 'Dario Amodei', 'AI 指数增长', 'Claude', '芯片出口', 'AI 安全']
 +++
 

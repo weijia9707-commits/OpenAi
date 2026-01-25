@@ -11,7 +11,7 @@ tags:
   - AI 编程
   - 自然语言编程
 categories:
-  - AI
+  - AI原理
 ---
 
 ![Agent Skills 新编程范式](cover.webp)

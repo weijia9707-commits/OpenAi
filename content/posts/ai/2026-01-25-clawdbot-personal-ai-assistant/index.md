@@ -4,7 +4,7 @@ draft = false
 title = 'ClawdBot：海外爆火的个人 AI 管家，30 分钟搭建指南'
 description = 'ClawdBot 是一个开源的 AI Agent 个人助手，可以在你的电脑上 24 小时运行，通过 Telegram、WhatsApp 等聊天工具与你互动，自动处理邮件、日程、提醒等任务。本文手把手教你从零开始搭建自己的 AI 管家，一看就懂，一学就会。'
 tags = ['ClawdBot', 'AI Agent', 'AI 助手', '开源', '自动化', '个人助理', 'Anthropic', 'Claude']
-categories = ['AI']
+categories = ['AI实战']
 +++
 
 ![ClawdBot 个人 AI 管家搭建指南](cover.webp)

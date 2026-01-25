@@ -12,7 +12,7 @@ tags:
   - Agent
   - 开发工具
 categories:
-  - AI
+  - AI实战
 ---
 
 ![Claude Code Skills 生态系统](cover.webp)

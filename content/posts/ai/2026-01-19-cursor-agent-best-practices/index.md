@@ -11,7 +11,7 @@ tags:
   - Agent
   - 最佳实践
 categories:
-  - AI
+  - AI实战
 ---
 
 ![Cursor Agent 编码最佳实践](cover.webp)

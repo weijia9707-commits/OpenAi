@@ -4,7 +4,7 @@ draft = false
 title = 'Claude Code + Remotion：用 AI 对话生成专业视频，程序员的视频制作新姿势'
 description = 'Remotion 是一个用 React 代码生成视频的开源框架，结合 Claude Code 的 AI 能力，只需用自然语言描述，就能自动生成专业级动画视频。本文手把手教你安装配置，让你 10 分钟上手 AI 视频制作。'
 tags = ['Claude Code', 'Remotion', 'AI 视频', 'React', '视频制作', 'AI Agent', '开源', '效率工具']
-categories = ['AI']
+categories = ['AI实战']
 +++
 
 ![Claude Code + Remotion](cover.webp)
