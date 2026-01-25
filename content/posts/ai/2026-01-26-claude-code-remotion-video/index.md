@@ -115,7 +115,7 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 
 **你要做的**：发完这句话，去倒杯咖啡，回来视频就做好了。
 
-下面是用这个方法制作的成品视频：
+下面是用这个方法制作的成品视频(*从 82M 压缩到 1M 后的效果，原视频是高清*)：
 
 <video controls width="100%">
   <source src="DouyinTop10.mp4" type="video/mp4">
