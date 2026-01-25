@@ -164,31 +164,17 @@ claude --version
 
 ## 手把手安装教程
 
-### 第一步：创建 Remotion 项目
+好消息：安装过程非常简单，只需要两步！
 
-打开终端，运行：
+### 第一步：安装 Remotion Skill
 
-```bash
-npx create-video@latest
-```
-
-它会问你几个问题：
-- 项目名称：随便起，比如 `my-video`
-- 模板：选 `Hello World` 或 `Blank`（新手推荐 Hello World）
-
-等它安装完依赖，进入项目目录：
+确保你已经安装了 [Claude Code](/posts/ai/2025-01-14-claude-code-guide/)，然后运行：
 
 ```bash
-cd my-video
+npx skills add remotion-dev/skills
 ```
 
-### 第二步：安装 Remotion Skills
-
-这一步很关键！这个技能包让 Claude Code 知道怎么写 Remotion 代码。
-
-```bash
-npx skills add https://github.com/remotion-dev/skills --skill remotion-best-practices
-```
+就这一行命令，Remotion Skill 就装好了。
 
 下面这个视频演示了如何安装 Remotion Skill：
 
@@ -204,75 +190,73 @@ npx skills add https://github.com/remotion-dev/skills --skill remotion-best-prac
 - 数据可视化
 - 字幕处理
 
-### 第三步：启动预览
+### 第二步：用 Claude Code 开始创作
 
-```bash
-npm start
-```
-
-浏览器会自动打开 `http://localhost:3000`，你能看到一个视频预览界面。这就是 Remotion Studio，你可以在这里实时预览视频效果。
-
-### 第四步：用 Claude Code 开始创作
-
-在项目目录下启动 Claude Code：
+启动 Claude Code，直接告诉它你要做什么：
 
 ```bash
 claude
 ```
 
-然后直接用自然语言告诉它你要做什么：
+然后输入：
 
 ```
-帮我修改这个视频，做一个简单的文字动画：
+帮我创建一个 Remotion 视频项目，做一个简单的文字动画：
 - 首先显示 "Hello"，从左边滑入
 - 然后显示 "World"，从右边滑入
 - 最后两个词合并，放大后淡出
 - 时长 5 秒
 ```
 
-Claude Code 会自动修改 `src/Composition.tsx` 文件，刷新预览就能看到效果。
+**神奇的事情发生了**：Claude Code 会自动帮你：
+1. 创建 Remotion 项目（如果还没有的话）
+2. 安装所有依赖
+3. 生成视频代码
+4. 启动预览
 
-### 第五步：导出视频
+你只需要坐等结果就行了。
 
-满意后，运行：
+### 第三步：导出视频
 
-```bash
-npx remotion render src/index.ts MyComposition out/video.mp4
+预览满意后，告诉 Claude Code：
+
+```
+把这个视频渲染成 MP4 文件
 ```
 
-几秒钟后，`out/video.mp4` 就是你的成品视频了。
+它会自动运行渲染命令，几秒钟后你就得到成品视频了。
+
+> 💡 **重点**：你不需要手动创建项目、安装依赖、写配置文件。Claude Code + Remotion Skill 会自动处理这一切。你只需要描述想要的效果。
 
 ---
 
-## 新手必试的 5 个命令
+## 常用操作
 
-装好后，试试这些，快速建立信心：
+掌握这几个对话技巧，就能玩转 Remotion：
 
-### 1. 预览项目
-```bash
-npm start
+### 修改视频效果
 ```
-打开浏览器看效果。
-
-### 2. 让 AI 改视频
-```bash
-claude
-# 然后输入：把背景色改成渐变色，从蓝色到紫色
+把背景色改成渐变色，从蓝色到紫色
 ```
 
-### 3. 渲染视频
-```bash
-npx remotion render src/index.ts MyComposition out/video.mp4
+### 添加新元素
+```
+在视频开头加一个 Logo，3 秒后淡出
 ```
 
-### 4. 渲染 GIF
-```bash
-npx remotion render src/index.ts MyComposition out/animation.gif
+### 调整时长
+```
+把整个视频时长改成 10 秒
 ```
 
-### 5. 查看所有可用组件
-```bash
-npx remotion compositions src/index.ts
+### 导出不同格式
+```
+把视频导出成 GIF 格式
+```
+
+### 预览效果
+```
+启动预览服务器，让我看看效果
 ```
 
 ---
