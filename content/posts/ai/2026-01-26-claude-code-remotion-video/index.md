@@ -126,7 +126,7 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 >
 
 Claude Code 里调用 Remotion Skill 全部过程：
-```
+``` text
 ❯ 使用这 media-download 和 remotion-best-practices 这两个 skill 帮我制作一个 2025 年度抖音年度金曲热榜 Top10，参考主流的剪辑手法
 
 ⏺ 好的，我来制作 2025 年度抖音金曲热榜 Top10 视频。先搜索最新的抖音热歌榜单：
