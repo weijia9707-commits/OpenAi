@@ -9,7 +9,7 @@ categories = ['AI']
 
 ![Claude Code + Remotion](cover.webp)
 
-## 先讲个故事
+## 一、先讲个故事
 
 想象一下这个场景：
 
@@ -27,9 +27,9 @@ categories = ['AI']
 
 ---
 
-## Remotion 到底是什么？
+## 二、Remotion 到底是什么？
 
-### 用大白话解释
+### 2.1 用大白话解释
 
 **Remotion** 就是一个"用代码写视频"的工具。
 
@@ -43,7 +43,7 @@ categories = ['AI']
 
 这就是为什么 Claude Code + Remotion 这么火的原因：你只需要描述想要什么，AI 帮你把代码写好，视频就生成了。
 
-### 和传统视频工具有什么不同？
+### 2.2 和传统视频工具有什么不同？
 
 | 对比项 | 传统工具（AE/Premiere） | Remotion + AI |
 |--------|------------------------|---------------|
@@ -54,7 +54,7 @@ categories = ['AI']
 | 协作方式 | 发送工程文件 | Git 版本控制 |
 | 价格 | 软件订阅 + 外包费用 | 开源免费 |
 
-### 谁做的？
+### 2.3 谁做的？
 
 Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有 **2.8 万颗星**，月安装量超过 **40 万次**。
 
@@ -62,9 +62,9 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 
 ---
 
-## 它能帮你做什么？（举例说明）
+## 三、它能帮你做什么？（举例说明）
 
-### 例子 1：产品演示视频
+### 3.1 产品演示视频
 
 **你说**："做一个 App 功能介绍视频，依次展示登录、首页、设置三个界面截图，每个停留 3 秒，加上淡入淡出效果和底部文字说明。"
 
@@ -75,7 +75,7 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 4. 底部渲染文字说明
 5. 导出 1080p 的 MP4 文件
 
-### 例子 2：数据可视化动画
+### 3.2 数据可视化动画
 
 **你说**："用柱状图动画展示我们公司这一年的月销售额增长，数据是 [100, 120, 150, 180, 200, 250, 280, 320, 350, 400, 450, 500]，要有数字跳动效果。"
 
@@ -86,7 +86,7 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 4. 背景加上网格线
 5. 最后高亮全年最高点
 
-### 例子 3：社交媒体短视频
+### 3.3 社交媒体短视频
 
 **你说**："做一个 15 秒的 TikTok 风格视频，文字'限时优惠'从屏幕外飞入，然后放大、抖动，最后显示'仅剩 3 天'。"
 
@@ -97,7 +97,7 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 4. 倒计时文字淡入
 5. 导出适合抖音/TikTok 的格式
 
-### 例子 4：多 Skill 协同 - 自动下载素材 + 生成视频
+### 3.4 多 Skill 协同 - 自动下载素材 + 生成视频
 
 这是最酷的玩法：结合多个 Skill，让 AI 自动搜索下载素材，然后生成完整视频。
 
@@ -469,7 +469,7 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ---
 
-## 它是怎么工作的？
+## 四、它是怎么工作的？
 
 整个流程可以用这张图理解：
 
@@ -494,9 +494,9 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ---
 
-## 准备工作
+## 五、准备工作
 
-### 1. 安装 Node.js
+### 5.1 安装 Node.js
 
 Remotion 需要 Node.js 18 以上版本。
 
@@ -508,7 +508,7 @@ node --version
 brew install node
 ```
 
-### 2. 安装 Claude Code
+### 5.2 安装 Claude Code
 
 如果你还没装 Claude Code，参考这篇文章：[Claude Code 完全指南](/posts/ai/2025-01-14-claude-code-guide/)
 
@@ -526,17 +526,17 @@ claude --version
   <source src="claude-code-install.mp4" type="video/mp4">
 </video>
 
-### 3. 准备 Anthropic API Key
+### 5.3 准备 Anthropic API Key
 
 需要一个 Anthropic 账号和 API Key。去 [Anthropic Console](https://console.anthropic.com/) 注册并创建 Key。
 
 ---
 
-## 手把手安装教程
+## 六、手把手安装教程
 
 好消息：安装过程非常简单，只需要两步！
 
-### 第一步：安装 Remotion Skill
+### 6.1 安装 Remotion Skill
 
 确保你已经安装了 [Claude Code](/posts/ai/2025-01-14-claude-code-guide/)，然后运行：
 
@@ -560,7 +560,7 @@ npx skills add remotion-dev/skills
 - 数据可视化
 - 字幕处理
 
-### 第二步：用 Claude Code 开始创作
+### 6.2 用 Claude Code 开始创作
 
 启动 Claude Code，直接告诉它你要做什么：
 
@@ -586,7 +586,7 @@ claude
 
 你只需要坐等结果就行了。
 
-### 第三步：导出视频
+### 6.3 导出视频
 
 预览满意后，告诉 Claude Code：
 
@@ -600,7 +600,7 @@ claude
 
 ---
 
-## 常用操作
+## 七、常用操作
 
 掌握这几个对话技巧，就能玩转 Remotion：
 
@@ -631,9 +631,9 @@ claude
 
 ---
 
-## 进阶玩法
+## 八、进阶玩法
 
-### 1. 批量生成视频
+### 8.1 批量生成视频
 
 Remotion 最强大的地方是**参数化**。比如你要给 100 个客户生成个性化视频：
 
@@ -647,17 +647,17 @@ for name in 张三 李四 王五; do
 done
 ```
 
-### 2. 添加背景音乐
+### 8.2 添加背景音乐
 
 **你说**："给视频添加背景音乐，音频文件是 public/bgm.mp3，从 0 秒开始播放，音量 50%。"
 
-### 3. 使用 3D 效果
+### 8.3 使用 3D 效果
 
 **你说**："添加一个 3D 旋转的 Logo，使用 Three.js，让它绕 Y 轴持续旋转。"
 
 Remotion Skills 包含了 Three.js 和 React Three Fiber 的使用规则，AI 能生成正确的 3D 代码。
 
-### 4. 云端渲染
+### 8.4 云端渲染
 
 视频太长，本地渲染太慢？用 Remotion Lambda 在 AWS 上并行渲染：
 
@@ -667,7 +667,7 @@ npx remotion lambda render ...
 
 ---
 
-## Claude Code vs 直接写代码
+## 九、Claude Code vs 直接写代码
 
 你可能会问：我直接看文档写代码不行吗？为什么要用 Claude Code？
 
@@ -684,9 +684,9 @@ npx remotion lambda render ...
 
 ---
 
-## 常见问题
+## 十、常见问题
 
-### Q：渲染很慢怎么办？
+### 10.1 渲染很慢怎么办？
 
 几个优化方向：
 - 降低分辨率：`--scale=0.5`
@@ -694,7 +694,7 @@ npx remotion lambda render ...
 - 使用 Remotion Lambda 云渲染
 - 升级电脑配置（视频渲染确实吃性能）
 
-### Q：支持中文吗？
+### 10.2 支持中文吗？
 
 支持。Remotion 本质上是在渲染网页，你用什么字体，视频里就显示什么字体。加载中文字体：
 
@@ -703,11 +703,11 @@ import { loadFont } from "@remotion/google-fonts/NotoSansSC";
 loadFont();
 ```
 
-### Q：可以商用吗？
+### 10.3 可以商用吗？
 
 可以。Remotion 是开源的，个人和商业使用都免费。但如果你要用 Remotion Lambda（云渲染服务），需要购买 license。
 
-### Q：和 Sora、Pika 这类 AI 视频工具有什么区别？
+### 10.4 和 Sora、Pika 这类 AI 视频工具有什么区别？
 
 完全不同的东西：
 - **Sora/Pika**：输入文字，AI 生成写实视频内容（人物、场景）
@@ -717,7 +717,7 @@ Remotion 更适合做：产品演示、数据报告、动态图表、文字动�
 
 ---
 
-## 注意事项
+## 十一、注意事项
 
 1. **Node.js 版本**：必须 18 以上，否则会报错
 2. **内存占用**：渲染高清视频时内存占用较高，建议 8GB 以上
@@ -727,7 +727,7 @@ Remotion 更适合做：产品演示、数据报告、动态图表、文字动�
 
 ---
 
-## 总结
+## 十二、总结
 
 **Claude Code + Remotion** 的组合为程序员打开了视频制作的新大门：
 
@@ -740,7 +740,7 @@ Remotion 更适合做：产品演示、数据报告、动态图表、文字动�
 
 ---
 
-## 相关链接
+## 十三、相关链接
 
 - [Remotion 官网](https://www.remotion.dev/)
 - [Remotion GitHub](https://github.com/remotion-dev/remotion)
@@ -751,7 +751,7 @@ Remotion 更适合做：产品演示、数据报告、动态图表、文字动�
 
 ---
 
-## 延伸阅读
+## 十四、延伸阅读
 
 - [Claude Code 完全指南](/posts/ai/2025-01-14-claude-code-guide/) - 从零开始学习 Claude Code
 - [Claude Code Skills 指南](/posts/ai/2026-01-08-claudecode-skill-guide/) - 深入理解 Skills 系统
