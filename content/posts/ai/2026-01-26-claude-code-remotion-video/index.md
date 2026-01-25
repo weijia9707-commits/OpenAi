@@ -104,6 +104,7 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 **你说**："使用 media-download 和 remotion-best-practices 这两个 skill 帮我制作一个 2025 年度抖音年度金曲热榜 Top10，参考主流的剪辑手法。"
 
 **它做**：
+
 1. 自动搜索 2025 年抖音热门歌曲榜单
 2. 用 media-download skill 下载歌曲片段和封面图
 3. 设计榜单视频模板（倒计时排名、歌曲信息、动态背景）
@@ -113,6 +114,12 @@ Remotion 是由 **Jonny Burger** 创立的开源项目，目前在 GitHub 上有
 7. 导出成品
 
 **你要做的**：发完这句话，去倒杯咖啡，回来视频就做好了。
+
+下面是用这个方法制作的成品视频：
+
+<video controls width="100%">
+  <source src="DouyinTop10.mp4" type="video/mp4">
+</video>
 
 > 💡 这就是 AI Agent 的威力：多个 Skill 协同工作，自动完成从"找素材"到"出成品"的全流程。你只需要描述最终想要什么。
 
