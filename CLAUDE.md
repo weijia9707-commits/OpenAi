@@ -80,25 +80,56 @@ hugo.toml            # Hugo 主配置文件
 
 ## 文章格式
 
+### Front Matter 完整模板
+
 文章使用 Markdown 格式，Front Matter 使用 TOML 格式（`+++`）：
 
-```markdown
+```toml
 +++
-date = '2024-01-01'
+date = '2026-01-26T10:00:00+08:00'
 draft = false
-title = '文章标题'
-tags = ['tag1', 'tag2']
+title = '文章标题（50-60字符，核心关键词靠前）'
+description = '文章描述，用于 SEO 和社交分享（120-160字符）'
+toc = true
+tags = ['Claude Code', 'AI 编程', '具体技术标签']
+categories = ['AI实战']
+keywords = ['搜索关键词1', '搜索关键词2']
 +++
-
-文章内容...
 ```
 
-带图片的文章应使用 Page Bundle 结构：
+| 字段 | 必填 | 说明 |
+|------|------|------|
+| `date` | ✓ | ISO 8601 格式，含时区 |
+| `title` | ✓ | 50-60 字符，关键词前置 |
+| `description` | ✓ | 120-160 字符，包含核心关键词 |
+| `categories` | ✓ | `AI实战` 或 `AI原理` |
+| `tags` | ✓ | 3-5 个标签 |
+| `toc` | 推荐 | 长文设为 `true` |
+| `keywords` | 可选 | SEO 补充关键词 |
+| `draft` | 可选 | 默认 `false` |
+
+### 文章目录结构
+
+带图片的文章使用 Page Bundle 结构：
+
 ```
-content/posts/<分类>/<日期>-<文章名>/
-├── index.md
-└── image.png
+content/posts/ai/2026-01-26-article-name/
+├── index.md      # 文章内容
+├── cover.webp    # 封面图（必须叫 cover.webp）
+└── other.webp    # 其他配图
 ```
+
+**命名规范**：`<日期>-<英文短标题>/`，如 `2026-01-26-claude-code-guide/`
+
+### 图片处理规范
+
+| 项目 | 规范 |
+|------|------|
+| **格式** | 优先使用 `.webp`（体积小、质量好） |
+| **封面图** | 必须命名为 `cover.webp` |
+| **尺寸** | 封面图建议 1200×630px（社交分享最佳） |
+| **引用方式** | `![描述](cover.webp)` 或 `![描述](filename.webp)` |
+| **ALT 文本** | 必须填写，描述图片内容 |
 
 ### 嵌套代码块处理规范
 
