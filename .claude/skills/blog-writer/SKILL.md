@@ -363,11 +363,15 @@ content/posts/ai/2026-01-26-ai-agent-principles/
 2. **URL 必须英文**：目录名使用英文或拼音
 3. **Front Matter 用 TOML**：使用 `+++` 而非 `---`
 4. **图片必须 webp**：封面图命名为 `cover.webp`
-5. **参考链接必读**：如果用户提供了参考链接，**必须使用 WebFetch 认真阅读链接内容**，特别关注：
+5. **参考链接必读**：如果用户提供了参考链接，**必须认真阅读链接内容**，特别关注：
    - 文章的核心观点和结构
    - 配图和截图（理解其含义并在文章中合理引用或描述）
    - 代码示例和技术细节
    - 不要仅凭链接标题猜测内容，必须实际读取
+   - **读取方式优先级**：
+     1. 首选 `WebFetch` 工具
+     2. 如遇反爬虫/403/访问限制，改用 Playwright MCP（`browser_navigate` + `browser_snapshot`）
+     3. 如果是 GitHub 链接，可用 `gh` 命令或访问 raw 内容
 6. **分类值必须使用预设值**：`categories` 字段只能使用以下预设值，**禁止自创分类**：
    - AI 类：`AI原理`、`AI实战`
    - 技术类：`Go`、`Java`、`Python`、`Docker`、`Linux`、`MySQL`、`macOS`
