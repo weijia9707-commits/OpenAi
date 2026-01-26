@@ -368,13 +368,13 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ⏺ 所有 10 首歌曲下载完成！现在下载视频素材：
 
-⏺ Bash(PEXELS_API_KEY="o4Lcc47IpMICVTmCfX0kNTV9qZgdvlkhe5jwZbKrOfwUCcjXUbRvxs78" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "music conc…)
+⏺ Bash(PEXELS_API_KEY="xxxxxxxx" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "music conc…)
   ⎿  🔍 搜索视频: music concert red lights
      ✅ 找到 2 个视频
        ⬇️ 下载 1/2: music_concert_red_lights_1_pexels.mp4 (9s)
      … +4 lines (ctrl+o to expand)
 
-⏺ Bash(PEXELS_API_KEY="o4Lcc47IpMICVTmCfX0kNTV9qZgdvlkhe5jwZbKrOfwUCcjXUbRvxs78" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "abstract n…)
+⏺ Bash(PEXELS_API_KEY="xxxxxxx" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "abstract n…)
   ⎿  🔍 搜索视频: abstract neon glow
      ✅ 找到 2 个视频
        ⬇️ 下载 1/2: abstract_neon_glow_1_pexels.mp4 (8s)
