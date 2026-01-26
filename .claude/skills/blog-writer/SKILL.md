@@ -211,7 +211,7 @@ description: "代码审查专家"
 1. 安全漏洞（SQL 注入、XSS 等）
 2. 性能问题（N+1 查询、内存泄漏）
 3. 团队代码规范
-```
+````
 
 以后只需要说"帮我审查这段代码"，Claude 就会自动按照这些标准来做。
 ```
@@ -238,7 +238,7 @@ if response.status_code == 200:
 else:
     print(f"请求失败: {response.status_code}")
 ```
-```
+````
 
 ### SEO/GEO 友好
 
@@ -363,3 +363,13 @@ content/posts/ai/2026-01-26-ai-agent-principles/
 2. **URL 必须英文**：目录名使用英文或拼音
 3. **Front Matter 用 TOML**：使用 `+++` 而非 `---`
 4. **图片必须 webp**：封面图命名为 `cover.webp`
+5. **参考链接必读**：如果用户提供了参考链接，**必须使用 WebFetch 认真阅读链接内容**，特别关注：
+   - 文章的核心观点和结构
+   - 配图和截图（理解其含义并在文章中合理引用或描述）
+   - 代码示例和技术细节
+   - 不要仅凭链接标题猜测内容，必须实际读取
+6. **分类值必须使用预设值**：`categories` 字段只能使用以下预设值，**禁止自创分类**：
+   - AI 类：`AI原理`、`AI实战`
+   - 技术类：`Go`、`Java`、`Python`、`Docker`、`Linux`、`MySQL`、`macOS`
+   - ❌ 错误示例：`Go实战`、`Docker教程`、`AI工具`（这些都是无效分类）
+   - ✅ 正确示例：写 Go 教程时用 `categories = ['Go']`，写 AI 工具教程时用 `categories = ['AI实战']`
