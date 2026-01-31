@@ -1,5 +1,5 @@
 +++
-date = '2026-01-31'
+date = '2026-01-31 06:00:02'
 draft = false
 title = 'CLAUDE.md vs README.md：一个给 AI 看，一个给人看'
 description = 'CLAUDE.md 和 README.md 有什么区别？本文结合 OpenClaw（124k Star）的 AGENTS.md 实践和自己项目的真实案例，讲清楚怎么写好这两个文件，让 AI Agent 和人类开发者各得其所。'
