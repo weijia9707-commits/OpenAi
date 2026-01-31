@@ -14,38 +14,301 @@ description: "技术博客写作专家，专注于 AI、编程、运维等技术
 
 ---
 
-## 一、文章分类
+## 强制执行流程
 
-### AI 文章分类（主要）
+⚠️ **每一步必须完成后才能进入下一步，不可跳过。**
+
+---
+
+### Step 0: 确认需求
+
+在开始任何工作之前，**必须**向用户确认以下信息：
+
+1. **主题**：您想写什么内容？
+2. **素材**：有参考链接吗？（URL、文档、GitHub 仓库等）
+3. **目标关键词**：希望用户搜索什么词找到文章？（可选）
+
+如果用户已在指令中提供了这些信息，无需重复询问，直接进入 Step 1。
+
+---
+
+### Step 1: 确定分类和目录
+
+#### 分类规范
+
+根据文章内容选择分类，**只能使用以下预设值，禁止自创分类**：
 
 | 分类 | 适用内容 |
 |------|----------|
 | **AI原理** | 概念、理论、访谈、思考、趋势分析 |
 | **AI实战** | 教程、指南、工具使用、最佳实践、产品评测 |
+| **Go** | Go 语言相关 |
+| **Java** | Java 相关 |
+| **Python** | Python 相关 |
+| **Docker** | Docker 相关 |
+| **Linux** | Linux 相关 |
+| **MySQL** | MySQL 相关 |
+| **macOS** | macOS 相关 |
 
-### 其他技术分类
+❌ 错误示例：`Go实战`、`Docker教程`、`AI工具`（这些都是无效分类）
+✅ 正确示例：写 Go 教程用 `categories = ['Go']`，写 AI 工具教程用 `categories = ['AI实战']`
 
-| 目录 | categories 值 |
-|------|---------------|
-| `go/` | Go |
-| `java/` | Java |
-| `python/` | Python |
-| `docker/` | Docker |
-| `linux/` | Linux |
-| `mysql/` | MySQL |
-| `macos/` | macOS |
+#### 目录命名
+
+使用 Page Bundle 结构，命名规范：`<日期>-<英文短标题>/`
+
+```
+content/posts/ai/2026-01-26-claude-code-guide/
+├── index.md      # 文章内容
+├── cover.webp    # 封面图（必须叫 cover.webp）
+└── other.webp    # 其他配图
+```
+
+⚠️ **必须**用 `date` 命令获取当前日期，URL 目录名只用英文。
 
 ---
 
-## 二、文章格式
+### Step 2: 收集素材
 
-### Front Matter 模板（TOML 格式）
+#### 2.1 读取用户提供的素材
+
+如果用户提供了参考链接，**必须认真阅读链接内容**，不可仅凭标题猜测：
+
+- **读取方式优先级**：
+  1. 首选 `WebFetch` 工具
+  2. 如遇反爬虫/403/访问限制，改用 Playwright MCP（`browser_navigate` + `browser_snapshot`）
+  3. 如果是 GitHub 链接，可用 `gh` 命令或访问 raw 内容
+- **特别关注**：核心观点、文章结构、配图含义、代码示例、技术细节
+
+#### 2.2 主动研究补充
+
+⚠️ **必须**执行以下主动研究，不能仅依赖用户提供的素材：
+
+- 使用 `WebSearch` 搜索该主题的**最新进展和权威资料**
+- 检查是否有该领域的**经典内容、官方文档、最佳实践**被遗漏
+- 搜索**对比观点或争议点**，确保文章视角全面
+- 如果涉及工具/框架，查找**官方文档和 GitHub 仓库**获取准确信息
+
+#### 2.3 获取已有文章列表（为内链做准备）
+
+⚠️ **必须**执行以下命令，获取博客已有文章目录：
+
+```bash
+ls content/posts/ai/
+```
+
+记录已有文章列表，在 Step 4 撰写时用于添加内链。
+
+---
+
+### Step 3: 生成封面图
+
+⚠️ **必须**为每篇文章生成封面图。按以下优先级尝试：
+
+#### 方案 A（首选）：Rube MCP + Gemini AI 生图
+
+通过 Rube MCP 调用 `GEMINI_GENERATE_IMAGE` 生成封面图：
+
+**第一步：搜索工具并获取 session_id**
+
+调用 `RUBE_SEARCH_TOOLS` 搜索图像生成工具：
+```
+queries: [{use_case: "generate an AI image from a text prompt for a blog cover"}]
+session: {generate_id: true}
+```
+
+**第二步：生成图片**
+
+调用 `RUBE_MULTI_EXECUTE_TOOL` 执行生图：
+```
+tools: [{
+  tool_slug: "GEMINI_GENERATE_IMAGE",
+  arguments: {
+    prompt: "基于文章主题的详细英文描述，描述画面内容、风格、色调",
+    model: "gemini-2.5-flash-image",
+    aspect_ratio: "16:9"
+  }
+}]
+session_id: "上一步返回的 session_id"
+sync_response_to_workbench: false
+memory: {}
+```
+
+**提示词要求**：
+- 用**英文**撰写提示词（Gemini 对英文效果更好）
+- 描述具体的画面内容、风格、色调
+- 风格要求：科技感、简洁、专业，适合技术博客封面
+- 避免包含文字（AI 生成的文字通常不准确）
+
+**第三步：下载并转换**
+
+图片 URL 在返回结果的 `data.image.s3url` 中（URL 有时效，需尽快下载）：
+
+```bash
+# 下载 AI 生成的图片
+curl -L -o cover_raw.png "<s3url>"
+
+# 转换为 webp 并调整尺寸
+cwebp -q 85 -resize 1200 630 cover_raw.png -o cover.webp
+
+# 清理临时文件
+rm cover_raw.png
+```
+
+如果 `cwebp` 不可用，使用 Python 转换：
+```python
+python3 -c "
+from PIL import Image
+img = Image.open('cover_raw.png').resize((1200, 630), Image.LANCZOS)
+img.save('cover.webp', 'WEBP', quality=85)
+import os; os.remove('cover_raw.png')
+"
+```
+
+如果 AI 生图失败（连接不可用、安全过滤拦截等），使用方案 B。
+
+#### 方案 B（兜底）：Python/Pillow 程序化生成
+
+当 AI 生图不可用时，执行以下 Python 脚本生成封面图（根据文章主题调整标题和关键词）：
+
+```python
+python3 -c "
+from PIL import Image, ImageDraw, ImageFont
+import subprocess
+
+# === 配置区：根据文章修改以下内容 ===
+TITLE = '文章标题'           # 封面大标题
+SUBTITLE = '副标题或简短描述'  # 副标题
+TAGS = ['标签1', '标签2', '标签3']  # 关键词标签
+OUTPUT_DIR = 'content/posts/ai/目录名'  # 文章目录路径
+# === 配置区结束 ===
+
+WIDTH, HEIGHT = 1200, 630
+img = Image.new('RGB', (WIDTH, HEIGHT))
+draw = ImageDraw.Draw(img)
+
+# 深色渐变背景
+for y in range(HEIGHT):
+    r = int(15 + (25 - 15) * y / HEIGHT)
+    g = int(23 + (35 - 23) * y / HEIGHT)
+    b = int(42 + (60 - 42) * y / HEIGHT)
+    draw.line([(0, y), (WIDTH, y)], fill=(r, g, b))
+
+# 装饰元素：顶部渐变线条
+for x in range(WIDTH):
+    alpha = int(255 * (1 - abs(x - WIDTH/2) / (WIDTH/2)))
+    draw.line([(x, 0), (x, 3)], fill=(100, 149, 237, alpha))
+
+# 加载中文字体（macOS 系统字体，按优先级尝试多个）
+# ⚠️ 所有字体必须支持中文，否则会出现乱码
+CJK_FONT_PATHS = [
+    '/System/Library/Fonts/STHeiti Medium.ttc',
+    '/System/Library/Fonts/STHeiti Light.ttc',
+    '/Library/Fonts/Arial Unicode.ttf',
+    '/System/Library/Fonts/PingFang.ttc',
+    '/System/Library/Fonts/Hiragino Sans GB.ttc',
+    '/System/Library/Fonts/Supplemental/Songti.ttc',
+]
+
+def load_cjk_font(size):
+    for path in CJK_FONT_PATHS:
+        try:
+            return ImageFont.truetype(path, size)
+        except (IOError, OSError):
+            continue
+    raise RuntimeError('未找到任何中文字体，无法生成封面图。请安装中文字体后重试。')
+
+font_title = load_cjk_font(52)
+font_subtitle = load_cjk_font(28)
+font_tag = load_cjk_font(20)
+
+# 绘制标题（自动换行）
+max_width = WIDTH - 120
+words = TITLE
+lines = []
+current_line = ''
+for char in words:
+    test_line = current_line + char
+    bbox = draw.textbbox((0, 0), test_line, font=font_title)
+    if bbox[2] - bbox[0] > max_width:
+        lines.append(current_line)
+        current_line = char
+    else:
+        current_line = test_line
+if current_line:
+    lines.append(current_line)
+
+y_offset = 180 if len(lines) <= 2 else 140
+for line in lines:
+    bbox = draw.textbbox((0, 0), line, font=font_title)
+    x = (WIDTH - (bbox[2] - bbox[0])) // 2
+    draw.text((x, y_offset), line, fill='white', font=font_title)
+    y_offset += 70
+
+# 绘制副标题
+if SUBTITLE:
+    bbox = draw.textbbox((0, 0), SUBTITLE, font=font_subtitle)
+    x = (WIDTH - (bbox[2] - bbox[0])) // 2
+    draw.text((x, y_offset + 20), SUBTITLE, fill=(180, 180, 200), font=font_subtitle)
+
+# 绘制标签
+tag_y = HEIGHT - 80
+total_width = sum(draw.textbbox((0, 0), f' {t} ', font=font_tag)[2] - draw.textbbox((0, 0), f' {t} ', font=font_tag)[0] + 24 for t in TAGS) + 12 * (len(TAGS) - 1)
+tag_x = (WIDTH - total_width) // 2
+for tag in TAGS:
+    text = f' {tag} '
+    bbox = draw.textbbox((0, 0), text, font=font_tag)
+    tw, th = bbox[2] - bbox[0], bbox[3] - bbox[1]
+    # 标签背景
+    draw.rounded_rectangle(
+        [(tag_x, tag_y), (tag_x + tw + 20, tag_y + th + 14)],
+        radius=6, fill=(40, 60, 100), outline=(80, 120, 180)
+    )
+    draw.text((tag_x + 10, tag_y + 7), text, fill=(160, 200, 255), font=font_tag)
+    tag_x += tw + 32
+
+# 保存为 webp
+png_path = f'{OUTPUT_DIR}/cover.png'
+webp_path = f'{OUTPUT_DIR}/cover.webp'
+img.save(png_path)
+subprocess.run(['cwebp', '-q', '85', png_path, '-o', webp_path], check=True)
+import os
+os.remove(png_path)
+
+# 验证文件大小
+size_kb = os.path.getsize(webp_path) / 1024
+print(f'封面图已生成: {webp_path} ({size_kb:.1f} KB)')
+if size_kb > 200:
+    print('⚠️ 警告：文件超过 200KB，请降低质量参数重新生成')
+"
+```
+
+如果 `cwebp` 不可用，使用 Pillow 直接保存 webp：
+```python
+img.save(f'{OUTPUT_DIR}/cover.webp', 'WEBP', quality=85)
+```
+
+⚠️ **方案 B 生成后必须验证**：用 Read 工具查看生成的封面图，确认中文标题、副标题、标签均正常显示，**不存在任何方框、问号、乱码字符**。如果出现乱码，说明字体不支持中文，必须排查字体路径后重新生成。
+
+#### 封面图检查清单（无论哪种方案都必须满足）
+
+- [ ] 文件名为 `cover.webp`
+- [ ] 尺寸 1200×630px
+- [ ] 大小 < 200KB
+- [ ] 内容与文章主题相关
+- [ ] **无乱码**：必须用 Read 工具查看生成的封面图，确认图片中不存在任何乱码、乱字符或不可读文字。如有乱码必须重新生成
+
+---
+
+### Step 4: 撰写文章
+
+#### 4.1 Front Matter（TOML 格式）
 
 ```toml
 +++
 date = '2026-01-26T10:00:00+08:00'
 draft = false
-title = '文章标题（50-60字符，核心关键词靠前）'
+title = '文章标题（20-60字符，核心关键词靠前）'
 description = '文章描述，用于 SEO 和社交分享（120-160字符）'
 toc = true
 tags = ['标签1', '标签2', '标签3']
@@ -59,109 +322,27 @@ keywords = ['搜索关键词1', '搜索关键词2']
 | `date` | ✓ | ISO 8601 格式，含时区 `+08:00` |
 | `title` | ✓ | 50-60 字符，关键词前置 |
 | `description` | ✓ | 120-160 字符，包含核心关键词 |
-| `categories` | ✓ | `AI实战` 或 `AI原理` |
+| `categories` | ✓ | 只能使用 Step 1 中的预设值 |
 | `tags` | ✓ | 3-5 个标签 |
 | `toc` | 推荐 | 长文设为 `true` |
 | `draft` | 可选 | 默认 `false` |
 
-### 目录结构（Page Bundle）
+#### 4.2 写作规范检查项
 
-```
-content/posts/ai/2026-01-26-article-name/
-├── index.md      # 文章内容
-├── cover.webp    # 封面图（必须叫 cover.webp）
-└── other.webp    # 其他配图
-```
+撰写时必须逐项确保：
 
-**命名规范**：`<日期>-<英文短标题>/`
+**开头三要素**（首段 100 字内必须出现核心关键词）：
+- ✅ 为什么需要这个技术？（背景）
+- ✅ 这个技术是什么？（定义）
+- ✅ 读完能获得什么？（价值）
 
----
+**内容深度**：
+- ✅ 每个核心概念都配实际案例，让读者能举一反三
+- ✅ 复杂概念必须用类比或比喻解释（让小学生也能听懂）
+- ✅ 不浮于表面，深入讲解原理和细节
+- ✅ 代码示例完整可运行，有中文注释
 
-## 三、图片规范
-
-### 封面图要求
-
-| 项目 | 规范 |
-|------|------|
-| **文件名** | 必须为 `cover.webp` |
-| **格式** | WebP |
-| **尺寸** | 1200×630px（社交分享最佳） |
-| **大小** | < 200KB |
-
-### 图片处理命令
-
-```bash
-# 压缩并调整尺寸
-cwebp -q 85 -resize 1200 630 input.jpg -o cover.webp
-
-# 仅压缩
-cwebp -q 85 input.jpg -o cover.webp
-```
-
-### ALT 文本
-
-必须填写描述性 ALT，包含关键词：
-
-```markdown
-![Claude Code Skill 配置界面](cover.webp)
-```
-
----
-
-## 四、嵌套代码块处理
-
-当需要在代码块中展示包含代码块的内容时，**必须使用不同数量的反引号**：
-
-`````markdown
-# 外层使用 4 个反引号，内层使用 3 个
-````markdown
-```python
-print("Hello World")
-```
-````
-`````
-
----
-
-## 五、写作规范
-
-### 核心原则
-
-1. **讲清背景**：为什么会有这个技术？它解决什么问题？
-2. **内容详实**：不浮于表面，深入讲解原理和细节
-3. **案例驱动**：每个概念都配实际案例，让读者能举一反三
-4. **通俗易懂**：用小学生都能听懂的话解释复杂概念
-5. **SEO/GEO 友好**：便于搜索引擎和 AI 引擎理解与推荐
-
-### 标题
-
-- **关键词前置**：核心关键词放在标题前半部分
-- **长度控制**：50-60 字符（约 20-30 汉字）
-- **格式模板**：`[技术名] + [具体内容] + [文章类型]`
-
-**好的标题**：
-- Claude Code Skill 开发指南：从入门到实战
-- Docker Compose 多容器编排实战
-- Go 并发编程：Goroutine 与 Channel 使用指南
-
-**避免**：
-- ❌ "震惊！xxx"、"你不知道的 xxx"
-- ❌ "史上最全"、"一文搞定"
-
-### 开头（讲背景）
-
-首段 100 字内必须出现核心关键词，并**交代背景**：
-
-```markdown
-在 AI 编程工具越来越强大的今天，如何让 Claude 更懂你的工作流程？**Claude Code Skill** 就是答案——它允许你自定义指令，让 AI 按照你的习惯工作。本文将从零开始，手把手教你创建自己的 Skill。
-```
-
-**开头要素**：
-- 为什么需要这个技术？（背景）
-- 这个技术是什么？（定义）
-- 读完能获得什么？（价值）
-
-### 内容结构
+**推荐的内容结构**：
 
 ```markdown
 ## 一、背景与问题（为什么需要）
@@ -173,187 +354,97 @@ print("Hello World")
 ## 总结
 ```
 
-### 通俗化表达
-
-**复杂概念必须用类比或比喻解释**，让小学生也能听懂：
+**通俗化表达示例**：
 
 ```markdown
 # ❌ 不好的写法
 Docker 容器是一种轻量级虚拟化技术，通过 namespace 和 cgroup 实现资源隔离。
 
 # ✅ 好的写法
-Docker 容器就像一个"打包好的便当盒"。你把应用程序和它需要的所有东西（数据库、配置文件等）都放进这个盒子里，不管带到哪台电脑上打开，里面的东西都一模一样。这样就不会出现"在我电脑上明明能跑"的尴尬情况了。
+Docker 容器就像一个"打包好的便当盒"。你把应用程序和它需要的所有东西都放进这个盒子里，
+不管带到哪台电脑上打开，里面的东西都一模一样。
 ```
 
-**技巧**：
-- 用生活中的例子类比技术概念
-- 先说"像什么"，再解释"为什么像"
-- 专业术语首次出现时给出通俗解释
-
-### 案例驱动
-
-**每个核心概念都必须配案例**：
-
-```markdown
-## 配置文件结构
-
-Skill 的核心是 `SKILL.md` 文件，它告诉 Claude 如何工作。
-
-### 实际案例：创建一个代码审查 Skill
-
-假设你每次让 Claude 审查代码时，都要重复说"检查安全漏洞、注意性能问题、遵循团队规范"。有了 Skill，你只需要写一次：
-
-```yaml
-name: code-reviewer
-description: "代码审查专家"
----
-每次审查代码时，请检查：
-1. 安全漏洞（SQL 注入、XSS 等）
-2. 性能问题（N+1 查询、内存泄漏）
-3. 团队代码规范
-````
-
-以后只需要说"帮我审查这段代码"，Claude 就会自动按照这些标准来做。
-```
-
-### 代码示例
-
-- **完整可运行**：不省略关键部分，复制就能跑
-- **有中文注释**：解释每一步在做什么
-- **说明预期输出**：让读者知道正确结果是什么
-- **给出错误示例**：展示常见错误及如何避免
-
-```markdown
-```python
-# 创建一个简单的 API 请求
-import requests
-
-# 发送 GET 请求获取用户信息
-response = requests.get("https://api.example.com/users/1")
-
-# 检查请求是否成功
-if response.status_code == 200:
-    user = response.json()
-    print(f"用户名: {user['name']}")  # 输出: 用户名: 张三
-else:
-    print(f"请求失败: {response.status_code}")
-```
-````
-
-### SEO/GEO 友好
-
-**SEO（搜索引擎优化）**：
+**SEO 要点**：
 - 标题、描述、首段包含核心关键词
 - 使用语义化标题层级（H2 > H3 > H4）
-- 添加内链和权威外链
-- 图片使用描述性 ALT 文本
+- 图片使用描述性 ALT 文本，包含关键词
 
-**GEO（生成式引擎优化）**：
+**GEO（生成式引擎优化）要点**：
 - 内容结构清晰，便于 AI 理解和引用
 - 提供明确的定义和解释
 - 使用列表、表格等结构化格式
 - 给出具体数据和案例支撑观点
-- 避免模糊表述，给出明确答案
+
+#### 4.3 链接策略
+
+⚠️ **必须**基于 Step 2.3 获取的已有文章列表添加链接。
+
+**内链（3-8 个）**：
+- 在正文中自然引用已有相关文章
+- 添加内链前确认目标文章确实存在（基于 Step 2.3 的文章列表）
+- 文末添加「相关阅读」板块
 
 ```markdown
-# ❌ GEO 不友好
-Docker 性能还不错，比虚拟机快一些。
+## 相关阅读
 
-# ✅ GEO 友好
-Docker 容器启动时间通常在 1-2 秒内，而传统虚拟机需要 30 秒以上。在资源占用方面，容器仅需 10-50MB 内存，虚拟机则需要 500MB-1GB。这使得 Docker 特别适合需要快速扩缩容的微服务架构。
+- [相关文章标题1](/posts/ai/2026-xx-xx-article-name/)
+- [相关文章标题2](/posts/ai/2026-xx-xx-article-name/)
 ```
+
+**外链（3-5 个）**：
+- 优先链接权威来源：官方文档、GitHub 仓库、技术标准（RFC、W3C）
+- 在正文中自然引用，为读者提供延伸阅读
+
+#### 4.4 嵌套代码块处理
+
+当需要在代码块中展示包含代码块的内容时，**必须使用不同数量的反引号**：
+
+`````markdown
+````markdown
+```python
+print("Hello World")
+```
+````
+`````
+
+规则：外层反引号数量必须**大于**内层。如外层 4 个，内层 3 个。
 
 ---
 
-## 六、链接策略
+### Step 5: 发布前检查
 
-### 内链（3-8 个）
+⚠️ **以下所有检查项必须逐一确认**，任何不通过的项目必须修复后才能完成。
 
-```markdown
-# 上下文引用
-在了解 Skill 之前，建议先阅读 [Claude Code 入门指南](/posts/ai/2025-01-01-claude-code-intro/)。
-
-# 相关阅读板块
-### 相关阅读
-- [Claude Code 快捷键大全](/posts/ai/...)
-- [MCP Server 配置详解](/posts/ai/...)
-```
-
-**注意**：添加内链前确认目标文章存在：
-```bash
-ls content/posts/ai/
-```
-
-### 外链（3-5 个）
-
-优先链接权威来源：
-- 官方文档（docs.docker.com、golang.org）
-- GitHub 仓库
-- 技术标准（RFC、W3C）
-
----
-
-## 七、创作流程
-
-### 1. 确定分类和目录
-
-```bash
-# AI 教程/指南 → AI实战
-content/posts/ai/2026-01-26-claude-code-guide/
-
-# AI 原理/思考 → AI原理
-content/posts/ai/2026-01-26-ai-agent-principles/
-```
-
-### 2. 收集素材
-
-```
-- WebFetch：抓取指定 URL 内容
-- WebSearch：搜索相关资料
-- GitHub Raw：获取项目 README
-```
-
-### 3. 生成配图
-
-使用 AI 图像生成工具，要求：
-- 比例：约 1.9:1（适配 1200×630）
-- 风格：技术相关
-- 输出后转换为 webp 并命名为 cover.webp
-
-### 4. 撰写文章
-
-按照本文档规范撰写，确保：
-- Front Matter 使用 TOML 格式（`+++`）
-- 首段包含核心关键词
-- 添加内链和外链
-- 图片使用描述性 ALT
-
-### 5. 发布前检查
+#### 格式检查
 
 - [ ] 标题 ≤ 60 字符，关键词前置
-- [ ] Description 120-160 字符
-- [ ] Front Matter 使用 TOML 格式
-- [ ] 目录使用英文命名
-- [ ] 封面图为 cover.webp，≤ 200KB
-- [ ] 内链 ≥ 3 个，指向已存在文章
-- [ ] 代码示例完整可运行
+- [ ] Description 120-160 字符，包含核心关键词
+- [ ] Front Matter 使用 TOML 格式（`+++`）
+- [ ] `categories` 使用预设值，未自创分类
+- [ ] 目录名使用英文命名
+- [ ] 日期使用 `date` 命令获取的真实日期
+- [ ] 封面图为 `cover.webp`，尺寸 1200×630，大小 ≤ 200KB
 
----
+#### 内容质量检查
 
-## 八、使用方式
+- [ ] 开头三要素齐全：背景、定义、价值
+- [ ] 每个核心概念都配了实际案例
+- [ ] 复杂概念有通俗类比
+- [ ] 代码示例完整可运行，有中文注释
+- [ ] 内链数量 ≥ 3，且目标文章确实存在
+- [ ] 外链数量 ≥ 3，指向权威来源
+- [ ] 文末有「相关阅读」板块
 
-请告诉我：
+#### Hugo 构建验证
 
-1. **主题**：您想写什么内容？
-2. **素材**：有参考链接吗？
-3. **目标关键词**：希望用户搜索什么词找到文章？（可选）
+⚠️ **必须**执行构建验证：
 
-我将按照规范创建文章，包括：
-- 确定分类（AI实战/AI原理）
-- 收集整理素材
-- 生成并压缩封面配图
-- 撰写符合 SEO 规范的文章
-- 完成发布前检查
+```bash
+hugo --minify
+```
+
+确认无报错后，文章才算完成。
 
 ---
 
@@ -363,17 +454,5 @@ content/posts/ai/2026-01-26-ai-agent-principles/
 2. **URL 必须英文**：目录名使用英文或拼音
 3. **Front Matter 用 TOML**：使用 `+++` 而非 `---`
 4. **图片必须 webp**：封面图命名为 `cover.webp`
-5. **参考链接必读**：如果用户提供了参考链接，**必须认真阅读链接内容**，特别关注：
-   - 文章的核心观点和结构
-   - 配图和截图（理解其含义并在文章中合理引用或描述）
-   - 代码示例和技术细节
-   - 不要仅凭链接标题猜测内容，必须实际读取
-   - **读取方式优先级**：
-     1. 首选 `WebFetch` 工具
-     2. 如遇反爬虫/403/访问限制，改用 Playwright MCP（`browser_navigate` + `browser_snapshot`）
-     3. 如果是 GitHub 链接，可用 `gh` 命令或访问 raw 内容
-6. **分类值必须使用预设值**：`categories` 字段只能使用以下预设值，**禁止自创分类**：
-   - AI 类：`AI原理`、`AI实战`
-   - 技术类：`Go`、`Java`、`Python`、`Docker`、`Linux`、`MySQL`、`macOS`
-   - ❌ 错误示例：`Go实战`、`Docker教程`、`AI工具`（这些都是无效分类）
-   - ✅ 正确示例：写 Go 教程时用 `categories = ['Go']`，写 AI 工具教程时用 `categories = ['AI实战']`
+5. **素材必须实际阅读**：不可仅凭链接标题猜测内容
+6. **分类只能用预设值**：禁止自创分类
