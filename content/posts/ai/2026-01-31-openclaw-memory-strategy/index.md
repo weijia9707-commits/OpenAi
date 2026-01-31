@@ -22,9 +22,7 @@ keywords = ['OpenClaw 记忆', 'memory_search', 'RAG', 'BM25', '向量数据库'
 
 但 OpenClaw 走了一条更“工具化”的路：**不自动注入记忆，而是把回忆过程交给 Agent，通过工具按需检索**。
 
-本文基于这条推文的观察与总结，聊聊 OpenClaw 的记忆实施策略，以及它对我们做 Agent 系统设计有什么启发：
-
-- 参考：<https://x.com/Stephen4171127/status/2017224470818160658>
+本文聊聊 OpenClaw 的记忆实施策略，以及它对我们做 Agent 系统设计有什么启发：
 
 ## 二、核心观点：OpenClaw 的“记忆”不是 Prompt 拼接，而是 Tool 驱动
 
