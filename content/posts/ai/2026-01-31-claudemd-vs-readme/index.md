@@ -130,14 +130,14 @@ OpenClaw 选择同时维护 `CLAUDE.md` 和 `AGENTS.md`，让不同的 AI 工具
 
 ### 4.1 踩过的坑
 
-我的项目 [Octomira](https://gitee.com/octomira/erp) 是一个跨境电商 SaaS 系统，前端 Vue 3 + 后端 Django。最初的 CLAUDE.md 是这样写的：
+我之前做的一个跨境电商 SaaS 系统，前端 Vue 3 + 后端 Django。最初的 CLAUDE.md 是这样写的：
 
 ```markdown
-# Octomira 项目 - Claude Code 配置
+# 项目 - Claude Code 配置
 
 ## 项目概述
 
-Octomira 是一个跨境电商多租户 SaaS 后台管理系统，采用 Monorepo 结构。
+这是一个跨境电商多租户 SaaS 后台管理系统，采用 Monorepo 结构。
 
 ## 重要规则
 
@@ -162,7 +162,7 @@ Octomira 是一个跨境电商多租户 SaaS 后台管理系统，采用 Monorep
 ```markdown
 # Repository Guidelines
 
-- Repo: `git@gitee.com:octomira/erp.git`, branch: `main`
+- Repo: `git@example.com:myteam/erp.git`, branch: `main`
 - Monorepo: 跨境电商多租户 SaaS 后台管理系统
 
 ## Project Structure
