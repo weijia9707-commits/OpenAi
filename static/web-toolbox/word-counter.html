@@ -1,0 +1,1536 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Counter - Free Online Character & Word Count Tool | 字数统计 | Web Toolbox</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free online word counter. Count words, characters, sentences, paragraphs. Reading time estimation. Keyword density analysis. | 在线字数统计工具">
+    <meta name="keywords" content="word counter,character count,word count online,text counter,字数统计,字符统计,在线字数">
+    <meta name="author" content="heyuan110">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="language" content="English">
+    <link rel="alternate" hreflang="en" href="https://www.heyuan110.com/web-toolbox/word-counter.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.heyuan110.com/web-toolbox/word-counter.html">
+    <link rel="alternate" hreflang="fr" href="https://www.heyuan110.com/web-toolbox/word-counter.html">
+    <link rel="alternate" hreflang="es" href="https://www.heyuan110.com/web-toolbox/word-counter.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.heyuan110.com/web-toolbox/word-counter.html">
+    <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/word-counter.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/word-counter.html">
+    <meta property="og:title" content="Word Counter - Free Online Character & Word Count Tool">
+    <meta property="og:description" content="Free online word counter with reading time estimation and keyword density analysis.">
+    <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/word-counter.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Web Toolbox">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Word Counter - Free Online Character & Word Count Tool">
+    <meta name="twitter:description" content="Free online word counter with reading time estimation and keyword density analysis.">
+    <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/word-counter.webp">
+
+    <!-- JSON-LD WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Word Counter",
+        "alternateName": ["字数统计", "Character Counter", "Text Analyzer"],
+        "url": "https://www.heyuan110.com/web-toolbox/word-counter.html",
+        "description": "Free online word counter tool. Count words, characters, sentences, paragraphs. Reading time estimation and keyword density analysis.",
+        "applicationCategory": "UtilityApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "author": {"@type": "Person", "name": "heyuan110"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Web Toolbox",
+            "url": "https://www.heyuan110.com/web-toolbox/"
+        },
+        "featureList": [
+            "Real-time character, word, sentence, paragraph, and line counting",
+            "CJK (Chinese, Japanese, Korean) language support with per-character counting",
+            "Top 10 keyword density analysis with stop word filtering",
+            "Smart reading time estimation for both English and Chinese text",
+            "Text transformation: uppercase, lowercase, title case, sentence case",
+            "Extra space trimming and empty line removal",
+            "Multi-language interface: English, Chinese, French, Spanish"
+        ],
+        "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/word-counter.webp"
+    }
+    </script>
+
+    <!-- JSON-LD FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "How does the word counter handle Chinese text?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Chinese characters are counted individually since each character typically represents a word. The tool detects CJK (Chinese, Japanese, Korean) characters and counts them separately from English words, providing accurate word counts for mixed-language text."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is keyword density analysis?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Keyword density analysis shows the most frequently used words in your text, along with their occurrence count and percentage. This is useful for SEO optimization, academic writing, and content analysis. The tool displays the top 10 most frequent keywords."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "How is reading time calculated?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Reading time is estimated based on average reading speeds: 200 words per minute for English text and 400 characters per minute for Chinese text. The tool automatically detects the language composition and calculates the reading time accordingly."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does it count spaces as characters?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, the tool provides both counts: total characters (including spaces) and characters without spaces. This gives you flexibility depending on whether your character limit includes spaces or not."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this tool free to use?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, this word counter is completely free to use with no limitations. It runs entirely in your browser, so your text is never sent to any server. There are no sign-up requirements or usage limits."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.heyuan110.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Web Toolbox",
+                "item": "https://www.heyuan110.com/web-toolbox/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Word Counter",
+                "item": "https://www.heyuan110.com/web-toolbox/word-counter.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Count Words and Characters",
+        "description": "Learn how to use the free online Word Counter tool to count words, characters, sentences, paragraphs, estimate reading time, and analyze keyword density.",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Enter or paste your text",
+                "text": "Type directly into the text area or paste your content from any source. The tool accepts text in any language including Chinese, Japanese, and Korean."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "View real-time statistics",
+                "text": "As you type, the tool automatically counts characters, characters without spaces, words, sentences, paragraphs, and lines in real time."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Check reading time estimate",
+                "text": "The estimated reading time is displayed above the text area, calculated at 200 words per minute for English and 400 characters per minute for Chinese."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Analyze keyword density",
+                "text": "Scroll down to see the top 10 most frequently used keywords in your text, with occurrence counts and percentage density, after filtering out common stop words."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 5,
+                "name": "Transform your text (optional)",
+                "text": "Use the action buttons to convert text to UPPERCASE, lowercase, Title Case, or Sentence case. You can also trim extra spaces or remove empty lines."
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* 重置样式 */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e4e4e7;
+            min-height: 100vh;
+            padding: 30px 20px;
+        }
+
+        a { color: #a78bfa; text-decoration: none; }
+        a:hover { color: #c4b5fd; }
+
+        /* 语言切换器 */
+        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; user-select: none; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
+
+        /* 返回链接 */
+        .back-link {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            color: #a78bfa;
+            font-size: 14px;
+            margin-bottom: 20px;
+            transition: color 0.3s;
+        }
+        .back-link:hover { color: #c4b5fd; }
+
+        /* 页面容器 */
+        .container {
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+
+        /* 标题区域 */
+        .header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .header h1 {
+            font-size: 2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #a78bfa, #7c3aed);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #a1a1aa;
+            font-size: 15px;
+        }
+
+        /* 统计卡片网格 */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 14px;
+            margin-bottom: 24px;
+        }
+        @media (max-width: 600px) {
+            .stats-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        .stat-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 20px;
+            text-align: center;
+            transition: transform 0.2s, border-color 0.3s;
+        }
+        .stat-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(124,58,237,0.4);
+        }
+        .stat-number {
+            font-size: 2.2rem;
+            font-weight: 700;
+            color: #a78bfa;
+            line-height: 1.1;
+            margin-bottom: 6px;
+        }
+        .stat-label {
+            font-size: 13px;
+            color: #a1a1aa;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        /* 阅读时间卡片 */
+        .reading-time-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 16px 20px;
+            margin-bottom: 24px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .reading-time-icon {
+            font-size: 28px;
+            flex-shrink: 0;
+        }
+        .reading-time-text {
+            font-size: 15px;
+            color: #d4d4d8;
+        }
+        .reading-time-text strong {
+            color: #a78bfa;
+        }
+
+        /* 文本输入区 */
+        .textarea-wrapper {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .textarea-wrapper label {
+            display: block;
+            font-size: 14px;
+            font-weight: 600;
+            color: #d4d4d8;
+            margin-bottom: 10px;
+        }
+        #textInput {
+            width: 100%;
+            min-height: 220px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 16px;
+            color: #e4e4e7;
+            font-size: 15px;
+            line-height: 1.7;
+            font-family: inherit;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s;
+        }
+        #textInput:focus {
+            border-color: #7c3aed;
+        }
+        #textInput::placeholder {
+            color: #52525b;
+        }
+
+        /* 操作按钮区 */
+        .actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 10px;
+            margin-bottom: 24px;
+        }
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 10px 18px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            cursor: pointer;
+            transition: all 0.2s;
+            color: #fff;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+        }
+        .btn-primary:hover {
+            background: linear-gradient(135deg, #8b5cf6, #7c3aed);
+            transform: translateY(-1px);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.08);
+            border: 1px solid rgba(255,255,255,0.12);
+            color: #d4d4d8;
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.14);
+            transform: translateY(-1px);
+        }
+        .btn-danger {
+            background: rgba(239,68,68,0.15);
+            border: 1px solid rgba(239,68,68,0.3);
+            color: #fca5a5;
+        }
+        .btn-danger:hover {
+            background: rgba(239,68,68,0.25);
+            transform: translateY(-1px);
+        }
+
+        /* 关键词密度区域 */
+        .keyword-section {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+        .keyword-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #d4d4d8;
+            margin-bottom: 16px;
+        }
+        .keyword-list {
+            display: flex;
+            flex-direction: column;
+            gap: 8px;
+        }
+        .keyword-item {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            padding: 8px 0;
+            border-bottom: 1px solid rgba(255,255,255,0.05);
+        }
+        .keyword-item:last-child { border-bottom: none; }
+        .keyword-rank {
+            width: 24px;
+            height: 24px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 6px;
+            font-size: 12px;
+            font-weight: 600;
+            background: rgba(124,58,237,0.2);
+            color: #a78bfa;
+            flex-shrink: 0;
+        }
+        .keyword-word {
+            flex: 1;
+            font-size: 14px;
+            color: #e4e4e7;
+            font-weight: 500;
+        }
+        .keyword-count {
+            font-size: 13px;
+            color: #a1a1aa;
+            min-width: 30px;
+            text-align: right;
+        }
+        .keyword-bar-wrapper {
+            width: 100px;
+            height: 6px;
+            background: rgba(255,255,255,0.06);
+            border-radius: 3px;
+            overflow: hidden;
+            flex-shrink: 0;
+        }
+        .keyword-bar {
+            height: 100%;
+            background: linear-gradient(90deg, #7c3aed, #a78bfa);
+            border-radius: 3px;
+            transition: width 0.4s ease;
+        }
+        .keyword-percent {
+            font-size: 13px;
+            color: #a78bfa;
+            min-width: 48px;
+            text-align: right;
+        }
+        .keyword-empty {
+            color: #52525b;
+            font-size: 14px;
+            text-align: center;
+            padding: 20px 0;
+        }
+
+        /* 功能特点区域 */
+        .features-section {
+            margin-bottom: 24px;
+        }
+        .features-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #d4d4d8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+        @media (max-width: 600px) {
+            .features-grid { grid-template-columns: 1fr; }
+        }
+        .feature-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 24px;
+            transition: transform 0.2s, border-color 0.3s;
+        }
+        .feature-card:hover {
+            transform: translateY(-2px);
+            border-color: rgba(124,58,237,0.4);
+        }
+        .feature-icon {
+            font-size: 2rem;
+            margin-bottom: 12px;
+        }
+        .feature-card h3 {
+            font-size: 1rem;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-bottom: 8px;
+        }
+        .feature-card p {
+            font-size: 14px;
+            color: #a1a1aa;
+            line-height: 1.6;
+        }
+
+        /* FAQ 手风琴区域 */
+        .faq-section {
+            margin-bottom: 24px;
+        }
+        .faq-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #d4d4d8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .faq-item {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+            transition: border-color 0.3s;
+        }
+        .faq-item:hover {
+            border-color: rgba(124,58,237,0.3);
+        }
+        .faq-question {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+            padding: 18px 20px;
+            background: none;
+            border: none;
+            color: #e4e4e7;
+            font-size: 15px;
+            font-weight: 600;
+            cursor: pointer;
+            text-align: left;
+            font-family: inherit;
+            gap: 12px;
+        }
+        .faq-question:hover {
+            color: #a78bfa;
+        }
+        .faq-arrow {
+            font-size: 12px;
+            color: #a78bfa;
+            transition: transform 0.3s;
+            flex-shrink: 0;
+        }
+        .faq-item.active .faq-arrow {
+            transform: rotate(180deg);
+        }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer-inner {
+            padding: 0 20px 18px 20px;
+            font-size: 14px;
+            color: #a1a1aa;
+            line-height: 1.7;
+        }
+
+        /* 相关工具推荐区域 */
+        .related-section {
+            margin-bottom: 24px;
+        }
+        .related-section h2 {
+            font-size: 1.4rem;
+            font-weight: 700;
+            color: #d4d4d8;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 14px;
+        }
+        @media (max-width: 768px) {
+            .related-grid { grid-template-columns: repeat(2, 1fr); }
+        }
+        @media (max-width: 480px) {
+            .related-grid { grid-template-columns: 1fr; }
+        }
+        .related-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 10px;
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 16px;
+            padding: 24px 16px;
+            text-decoration: none;
+            transition: transform 0.2s, border-color 0.3s;
+        }
+        .related-card:hover {
+            transform: translateY(-3px);
+            border-color: rgba(124,58,237,0.4);
+        }
+        .related-icon {
+            font-size: 2rem;
+        }
+        .related-card span {
+            font-size: 14px;
+            font-weight: 600;
+            color: #d4d4d8;
+            text-align: center;
+        }
+
+        /* Toast 提示 */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(20px);
+            background: #7c3aed;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            opacity: 0;
+            transition: all 0.3s;
+            z-index: 2000;
+            pointer-events: none;
+        }
+        .toast.show {
+            opacity: 1;
+            transform: translateX(-50%) translateY(0);
+        }
+
+        /* 页脚 */
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid rgba(255,255,255,0.06);
+            color: #52525b;
+            font-size: 13px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 语言切换器 -->
+    <div class="lang-switcher">
+        <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-current" id="langCurrent">🌐 English</div>
+            <div class="lang-menu">
+                <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <!-- 返回链接 -->
+        <a href="index.html" class="back-link">← <span data-i18n="backHome">Back to Toolbox</span></a>
+
+        <!-- 标题 -->
+        <div class="header">
+            <h1 data-i18n="title">Word Counter</h1>
+            <p data-i18n="subtitle">Count words, characters, sentences, paragraphs. Estimate reading time and analyze keyword density.</p>
+        </div>
+
+        <!-- 统计卡片 -->
+        <div class="stats-grid">
+            <div class="stat-card">
+                <div class="stat-number" id="statChars">0</div>
+                <div class="stat-label" data-i18n="characters">Characters</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="statCharsNoSpace">0</div>
+                <div class="stat-label" data-i18n="charsNoSpace">Chars (no spaces)</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="statWords">0</div>
+                <div class="stat-label" data-i18n="words">Words</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="statSentences">0</div>
+                <div class="stat-label" data-i18n="sentences">Sentences</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="statParagraphs">0</div>
+                <div class="stat-label" data-i18n="paragraphs">Paragraphs</div>
+            </div>
+            <div class="stat-card">
+                <div class="stat-number" id="statLines">0</div>
+                <div class="stat-label" data-i18n="lines">Lines</div>
+            </div>
+        </div>
+
+        <!-- 阅读时间 -->
+        <div class="reading-time-card">
+            <div class="reading-time-icon">⏱️</div>
+            <div class="reading-time-text">
+                <span data-i18n="readingTime">Estimated reading time:</span>
+                <strong id="readingTimeValue">0 min</strong>
+            </div>
+        </div>
+
+        <!-- 文本输入区 -->
+        <div class="textarea-wrapper">
+            <label data-i18n="inputLabel">Enter or paste your text below</label>
+            <textarea id="textInput" data-i18n-placeholder="inputPlaceholder" placeholder="Start typing or paste your text here..."></textarea>
+        </div>
+
+        <!-- 操作按钮 -->
+        <div class="actions">
+            <button class="btn btn-primary" id="btnCopy" data-i18n="copyText">📋 Copy Text</button>
+            <button class="btn btn-secondary" id="btnUppercase" data-i18n="uppercase">UPPERCASE</button>
+            <button class="btn btn-secondary" id="btnLowercase" data-i18n="lowercase">lowercase</button>
+            <button class="btn btn-secondary" id="btnTitleCase" data-i18n="titleCase">Title Case</button>
+            <button class="btn btn-secondary" id="btnSentenceCase" data-i18n="sentenceCase">Sentence case</button>
+            <button class="btn btn-secondary" id="btnTrimSpaces" data-i18n="trimSpaces">✂️ Trim Spaces</button>
+            <button class="btn btn-secondary" id="btnRemoveEmptyLines" data-i18n="removeEmptyLines">🗑️ Remove Empty Lines</button>
+            <button class="btn btn-danger" id="btnClear" data-i18n="clearText">🗑️ Clear</button>
+        </div>
+
+        <!-- 关键词密度 -->
+        <div class="keyword-section">
+            <h3 data-i18n="keywordDensity">Keyword Density (Top 10)</h3>
+            <div class="keyword-list" id="keywordList">
+                <div class="keyword-empty" data-i18n="keywordEmpty">Enter text to see keyword density analysis</div>
+            </div>
+        </div>
+
+        <!-- 功能特点 -->
+        <div class="features-section">
+            <h2 data-i18n="featuresTitle">Key Features</h2>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon">📊</div>
+                    <h3 data-i18n="featureRealtimeTitle">Real-Time Statistics</h3>
+                    <p data-i18n="featureRealtimeDesc">Instantly count characters, words, sentences, paragraphs, and lines as you type. No need to click any button.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🌏</div>
+                    <h3 data-i18n="featureCjkTitle">CJK Language Support</h3>
+                    <p data-i18n="featureCjkDesc">Intelligently recognizes Chinese, Japanese, and Korean text. CJK characters are counted individually for accurate word counts.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">🔍</div>
+                    <h3 data-i18n="featureKeywordTitle">Keyword Density</h3>
+                    <p data-i18n="featureKeywordDesc">Analyze your top 10 keywords by frequency and density percentage, with built-in stop word filtering for accurate results.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon">⏱️</div>
+                    <h3 data-i18n="featureReadingTitle">Reading Time</h3>
+                    <p data-i18n="featureReadingDesc">Smart reading time estimation calculated separately for English (200 wpm) and Chinese (400 cpm) text.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- FAQ 手风琴 -->
+        <div class="faq-section">
+            <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ1">How does the word counter handle Chinese text?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faqA1">Chinese characters are counted individually since each character typically represents a word. The tool detects CJK (Chinese, Japanese, Korean) characters and counts them separately from English words, providing accurate word counts for mixed-language text.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ2">What is keyword density analysis?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faqA2">Keyword density analysis shows the most frequently used words in your text, along with their occurrence count and percentage. This is useful for SEO optimization, academic writing, and content analysis. The tool displays the top 10 most frequent keywords.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ3">How is reading time calculated?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faqA3">Reading time is estimated based on average reading speeds: 200 words per minute for English text and 400 characters per minute for Chinese text. The tool automatically detects the language composition and calculates the reading time accordingly.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ4">Does it count spaces as characters?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faqA4">Yes, the tool provides both counts: total characters (including spaces) and characters without spaces. This gives you flexibility depending on whether your character limit includes spaces or not.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question">
+                    <span data-i18n="faqQ5">Is this tool free to use?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faqA5">Yes, this word counter is completely free to use with no limitations. It runs entirely in your browser, so your text is never sent to any server. There are no sign-up requirements or usage limits.</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 相关工具推荐 -->
+        <div class="related-section">
+            <h2 data-i18n="relatedTitle">Related Tools</h2>
+            <div class="related-grid">
+                <a href="lorem-ipsum.html" class="related-card">
+                    <div class="related-icon">📝</div>
+                    <span data-i18n="relatedLorem">Lorem Ipsum Generator</span>
+                </a>
+                <a href="chinese-converter.html" class="related-card">
+                    <div class="related-icon">🔄</div>
+                    <span data-i18n="relatedChinese">Chinese Converter</span>
+                </a>
+                <a href="base64-tool.html" class="related-card">
+                    <div class="related-icon">🔣</div>
+                    <span data-i18n="relatedBase64">Base64 Encoder/Decoder</span>
+                </a>
+                <a href="url-encoder.html" class="related-card">
+                    <div class="related-icon">🔗</div>
+                    <span data-i18n="relatedUrl">URL Encoder/Decoder</span>
+                </a>
+            </div>
+        </div>
+
+        <!-- 页脚 -->
+        <div class="footer">
+            <p>Word Counter — <a href="index.html">Web Toolbox</a></p>
+        </div>
+    </div>
+
+    <!-- Toast 提示 -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+    (function() {
+        'use strict';
+
+        // ========== 国际化翻译数据 ==========
+        const i18nData = {
+            en: {
+                backHome: 'Back to Toolbox',
+                title: 'Word Counter',
+                subtitle: 'Count words, characters, sentences, paragraphs. Estimate reading time and analyze keyword density.',
+                characters: 'Characters',
+                charsNoSpace: 'Chars (no spaces)',
+                words: 'Words',
+                sentences: 'Sentences',
+                paragraphs: 'Paragraphs',
+                lines: 'Lines',
+                readingTime: 'Estimated reading time:',
+                inputLabel: 'Enter or paste your text below',
+                inputPlaceholder: 'Start typing or paste your text here...',
+                copyText: '📋 Copy Text',
+                uppercase: 'UPPERCASE',
+                lowercase: 'lowercase',
+                titleCase: 'Title Case',
+                sentenceCase: 'Sentence case',
+                trimSpaces: '✂️ Trim Spaces',
+                removeEmptyLines: '🗑️ Remove Empty Lines',
+                clearText: '🗑️ Clear',
+                keywordDensity: 'Keyword Density (Top 10)',
+                keywordEmpty: 'Enter text to see keyword density analysis',
+                copied: 'Copied to clipboard!',
+                cleared: 'Text cleared',
+                trimmed: 'Extra spaces removed',
+                emptyLinesRemoved: 'Empty lines removed',
+                noText: 'No text to copy',
+                minRead: 'min read',
+                secRead: 'sec read',
+                langLabel: '🌐 English',
+                featuresTitle: 'Key Features',
+                featureRealtimeTitle: 'Real-Time Statistics',
+                featureRealtimeDesc: 'Instantly count characters, words, sentences, paragraphs, and lines as you type. No need to click any button.',
+                featureCjkTitle: 'CJK Language Support',
+                featureCjkDesc: 'Intelligently recognizes Chinese, Japanese, and Korean text. CJK characters are counted individually for accurate word counts.',
+                featureKeywordTitle: 'Keyword Density',
+                featureKeywordDesc: 'Analyze your top 10 keywords by frequency and density percentage, with built-in stop word filtering for accurate results.',
+                featureReadingTitle: 'Reading Time',
+                featureReadingDesc: 'Smart reading time estimation calculated separately for English (200 wpm) and Chinese (400 cpm) text.',
+                faqTitle: 'Frequently Asked Questions',
+                faqQ1: 'How does the word counter handle Chinese text?',
+                faqA1: 'Chinese characters are counted individually since each character typically represents a word. The tool detects CJK (Chinese, Japanese, Korean) characters and counts them separately from English words, providing accurate word counts for mixed-language text.',
+                faqQ2: 'What is keyword density analysis?',
+                faqA2: 'Keyword density analysis shows the most frequently used words in your text, along with their occurrence count and percentage. This is useful for SEO optimization, academic writing, and content analysis. The tool displays the top 10 most frequent keywords.',
+                faqQ3: 'How is reading time calculated?',
+                faqA3: 'Reading time is estimated based on average reading speeds: 200 words per minute for English text and 400 characters per minute for Chinese text. The tool automatically detects the language composition and calculates the reading time accordingly.',
+                faqQ4: 'Does it count spaces as characters?',
+                faqA4: 'Yes, the tool provides both counts: total characters (including spaces) and characters without spaces. This gives you flexibility depending on whether your character limit includes spaces or not.',
+                faqQ5: 'Is this tool free to use?',
+                faqA5: 'Yes, this word counter is completely free to use with no limitations. It runs entirely in your browser, so your text is never sent to any server. There are no sign-up requirements or usage limits.',
+                relatedTitle: 'Related Tools',
+                relatedLorem: 'Lorem Ipsum Generator',
+                relatedChinese: 'Chinese Converter',
+                relatedBase64: 'Base64 Encoder/Decoder',
+                relatedUrl: 'URL Encoder/Decoder'
+            },
+            'zh-CN': {
+                backHome: '返回工具箱',
+                title: '字数统计',
+                subtitle: '统计字数、字符数、句子数、段落数，估算阅读时间，分析关键词密度。',
+                characters: '字符数',
+                charsNoSpace: '字符数(不含空格)',
+                words: '单词/字数',
+                sentences: '句子数',
+                paragraphs: '段落数',
+                lines: '行数',
+                readingTime: '预计阅读时间：',
+                inputLabel: '在下方输入或粘贴文本',
+                inputPlaceholder: '在此输入或粘贴文本...',
+                copyText: '📋 复制文本',
+                uppercase: '全部大写',
+                lowercase: '全部小写',
+                titleCase: '首字母大写',
+                sentenceCase: '句首大写',
+                trimSpaces: '✂️ 去除多余空格',
+                removeEmptyLines: '🗑️ 去除空行',
+                clearText: '🗑️ 清空',
+                keywordDensity: '关键词密度（前 10）',
+                keywordEmpty: '输入文本以查看关键词密度分析',
+                copied: '已复制到剪贴板！',
+                cleared: '文本已清空',
+                trimmed: '已去除多余空格',
+                emptyLinesRemoved: '已去除空行',
+                noText: '没有可复制的文本',
+                minRead: '分钟阅读',
+                secRead: '秒阅读',
+                langLabel: '🌐 English',
+                featuresTitle: '功能特点',
+                featureRealtimeTitle: '实时统计',
+                featureRealtimeDesc: '实时统计字符、单词、句子、段落、行数，输入即显示结果，无需点击任何按钮。',
+                featureCjkTitle: '中日韩语言支持',
+                featureCjkDesc: '智能识别中日韩文本，CJK 字符按字计数，混合文本也能精确统计。',
+                featureKeywordTitle: '关键词密度',
+                featureKeywordDesc: 'Top 10 关键词密度分析，显示词频和百分比，内置停用词过滤，结果更准确。',
+                featureReadingTitle: '阅读时间',
+                featureReadingDesc: '智能阅读时间估算，中文按 400 字/分钟、英文按 200 词/分钟分别计算。',
+                faqTitle: '常见问题',
+                faqQ1: '字数统计工具如何处理中文文本？',
+                faqA1: '中文字符按单个字计数，因为每个汉字通常代表一个词。工具能检测 CJK（中日韩）字符，并将其与英文单词分开计数，为混合语言文本提供精确的字数统计。',
+                faqQ2: '什么是关键词密度分析？',
+                faqA2: '关键词密度分析显示文本中使用频率最高的词语，以及它们的出现次数和百分比。这对 SEO 优化、学术写作和内容分析非常有用。工具会显示前 10 个最常用的关键词。',
+                faqQ3: '阅读时间是如何计算的？',
+                faqA3: '阅读时间基于平均阅读速度估算：英文每分钟 200 个单词，中文每分钟 400 个字符。工具会自动检测语言组成并相应计算阅读时间。',
+                faqQ4: '空格是否计入字符数？',
+                faqA4: '是的，工具提供两种计数：总字符数（包含空格）和不含空格的字符数。这样可以灵活应对不同的字数限制要求。',
+                faqQ5: '这个工具是免费的吗？',
+                faqA5: '是的，这个字数统计工具完全免费使用，没有任何限制。它完全在浏览器中运行，您的文本不会被发送到任何服务器。无需注册，没有使用次数限制。',
+                relatedTitle: '相关工具推荐',
+                relatedLorem: 'Lorem Ipsum 生成器',
+                relatedChinese: '中文简繁转换',
+                relatedBase64: 'Base64 编码/解码',
+                relatedUrl: 'URL 编码/解码'
+            },
+            fr: {
+                backHome: 'Retour à la boîte à outils',
+                title: 'Compteur de Mots',
+                subtitle: 'Comptez les mots, caractères, phrases, paragraphes. Estimez le temps de lecture et analysez la densité des mots-clés.',
+                characters: 'Caractères',
+                charsNoSpace: 'Caract. (sans espaces)',
+                words: 'Mots',
+                sentences: 'Phrases',
+                paragraphs: 'Paragraphes',
+                lines: 'Lignes',
+                readingTime: 'Temps de lecture estimé :',
+                inputLabel: 'Entrez ou collez votre texte ci-dessous',
+                inputPlaceholder: 'Commencez à taper ou collez votre texte ici...',
+                copyText: '📋 Copier le texte',
+                uppercase: 'MAJUSCULES',
+                lowercase: 'minuscules',
+                titleCase: 'Casse Titre',
+                sentenceCase: 'Casse phrase',
+                trimSpaces: '✂️ Suppr. espaces',
+                removeEmptyLines: '🗑️ Suppr. lignes vides',
+                clearText: '🗑️ Effacer',
+                keywordDensity: 'Densité des mots-clés (Top 10)',
+                keywordEmpty: 'Entrez du texte pour voir l\'analyse de densité des mots-clés',
+                copied: 'Copié dans le presse-papiers !',
+                cleared: 'Texte effacé',
+                trimmed: 'Espaces supplémentaires supprimés',
+                emptyLinesRemoved: 'Lignes vides supprimées',
+                noText: 'Aucun texte à copier',
+                minRead: 'min de lecture',
+                secRead: 'sec de lecture',
+                langLabel: '🌐 English',
+                featuresTitle: 'Fonctionnalités clés',
+                featureRealtimeTitle: 'Statistiques en temps réel',
+                featureRealtimeDesc: 'Comptez instantanément les caractères, mots, phrases, paragraphes et lignes en tapant. Aucun bouton à cliquer.',
+                featureCjkTitle: 'Support CJK',
+                featureCjkDesc: 'Reconnaissance intelligente du chinois, japonais et coréen. Les caractères CJK sont comptés individuellement pour un comptage précis.',
+                featureKeywordTitle: 'Densité des mots-clés',
+                featureKeywordDesc: 'Analysez vos 10 principaux mots-clés par fréquence et pourcentage, avec filtrage intégré des mots vides.',
+                featureReadingTitle: 'Temps de lecture',
+                featureReadingDesc: 'Estimation intelligente du temps de lecture, calculée séparément pour l\'anglais (200 mpm) et le chinois (400 cpm).',
+                faqTitle: 'Questions fréquentes',
+                faqQ1: 'Comment le compteur traite-t-il le texte chinois ?',
+                faqA1: 'Les caractères chinois sont comptés individuellement car chaque caractère représente généralement un mot. L\'outil détecte les caractères CJK et les compte séparément des mots anglais, offrant un comptage précis pour les textes multilingues.',
+                faqQ2: 'Qu\'est-ce que l\'analyse de densité des mots-clés ?',
+                faqA2: 'L\'analyse de densité montre les mots les plus fréquemment utilisés dans votre texte, avec leur nombre d\'occurrences et leur pourcentage. C\'est utile pour le SEO, la rédaction académique et l\'analyse de contenu.',
+                faqQ3: 'Comment le temps de lecture est-il calculé ?',
+                faqA3: 'Le temps de lecture est estimé selon les vitesses moyennes : 200 mots par minute pour l\'anglais et 400 caractères par minute pour le chinois. L\'outil détecte automatiquement la composition linguistique.',
+                faqQ4: 'Les espaces sont-ils comptés comme des caractères ?',
+                faqA4: 'Oui, l\'outil fournit deux comptages : le total des caractères (espaces inclus) et les caractères sans espaces. Cela offre de la flexibilité selon vos besoins.',
+                faqQ5: 'Cet outil est-il gratuit ?',
+                faqA5: 'Oui, ce compteur de mots est entièrement gratuit et sans limitation. Il fonctionne entièrement dans votre navigateur, donc votre texte n\'est jamais envoyé à un serveur. Aucune inscription requise.',
+                relatedTitle: 'Outils associés',
+                relatedLorem: 'Générateur Lorem Ipsum',
+                relatedChinese: 'Convertisseur chinois',
+                relatedBase64: 'Encodeur/Décodeur Base64',
+                relatedUrl: 'Encodeur/Décodeur URL'
+            },
+            es: {
+                backHome: 'Volver a la caja de herramientas',
+                title: 'Contador de Palabras',
+                subtitle: 'Cuenta palabras, caracteres, oraciones, párrafos. Estima el tiempo de lectura y analiza la densidad de palabras clave.',
+                characters: 'Caracteres',
+                charsNoSpace: 'Caract. (sin espacios)',
+                words: 'Palabras',
+                sentences: 'Oraciones',
+                paragraphs: 'Párrafos',
+                lines: 'Líneas',
+                readingTime: 'Tiempo de lectura estimado:',
+                inputLabel: 'Ingrese o pegue su texto a continuación',
+                inputPlaceholder: 'Comience a escribir o pegue su texto aquí...',
+                copyText: '📋 Copiar texto',
+                uppercase: 'MAYÚSCULAS',
+                lowercase: 'minúsculas',
+                titleCase: 'Tipo Título',
+                sentenceCase: 'Tipo oración',
+                trimSpaces: '✂️ Quitar espacios',
+                removeEmptyLines: '🗑️ Quitar líneas vacías',
+                clearText: '🗑️ Limpiar',
+                keywordDensity: 'Densidad de palabras clave (Top 10)',
+                keywordEmpty: 'Ingrese texto para ver el análisis de densidad de palabras clave',
+                copied: '¡Copiado al portapapeles!',
+                cleared: 'Texto limpiado',
+                trimmed: 'Espacios adicionales eliminados',
+                emptyLinesRemoved: 'Líneas vacías eliminadas',
+                noText: 'No hay texto para copiar',
+                minRead: 'min de lectura',
+                secRead: 'seg de lectura',
+                langLabel: '🌐 English',
+                featuresTitle: 'Características principales',
+                featureRealtimeTitle: 'Estadísticas en tiempo real',
+                featureRealtimeDesc: 'Cuente instantáneamente caracteres, palabras, oraciones, párrafos y líneas mientras escribe. Sin necesidad de hacer clic.',
+                featureCjkTitle: 'Soporte CJK',
+                featureCjkDesc: 'Reconocimiento inteligente de texto chino, japonés y coreano. Los caracteres CJK se cuentan individualmente para mayor precisión.',
+                featureKeywordTitle: 'Densidad de palabras clave',
+                featureKeywordDesc: 'Analice sus 10 principales palabras clave por frecuencia y porcentaje, con filtrado integrado de palabras vacías.',
+                featureReadingTitle: 'Tiempo de lectura',
+                featureReadingDesc: 'Estimación inteligente del tiempo de lectura, calculada por separado para inglés (200 ppm) y chino (400 cpm).',
+                faqTitle: 'Preguntas frecuentes',
+                faqQ1: '¿Cómo maneja el contador el texto en chino?',
+                faqA1: 'Los caracteres chinos se cuentan individualmente ya que cada carácter representa típicamente una palabra. La herramienta detecta caracteres CJK y los cuenta por separado de las palabras en inglés, proporcionando conteos precisos para textos multilingües.',
+                faqQ2: '¿Qué es el análisis de densidad de palabras clave?',
+                faqA2: 'El análisis de densidad muestra las palabras más frecuentes en su texto, junto con su cantidad de ocurrencias y porcentaje. Es útil para optimización SEO, escritura académica y análisis de contenido.',
+                faqQ3: '¿Cómo se calcula el tiempo de lectura?',
+                faqA3: 'El tiempo de lectura se estima según velocidades promedio: 200 palabras por minuto para inglés y 400 caracteres por minuto para chino. La herramienta detecta automáticamente la composición del idioma.',
+                faqQ4: '¿Se cuentan los espacios como caracteres?',
+                faqA4: 'Sí, la herramienta proporciona ambos conteos: total de caracteres (incluyendo espacios) y caracteres sin espacios. Esto ofrece flexibilidad según sus necesidades.',
+                faqQ5: '¿Es gratuita esta herramienta?',
+                faqA5: 'Sí, este contador de palabras es completamente gratuito y sin limitaciones. Funciona íntegramente en su navegador, por lo que su texto nunca se envía a ningún servidor. No requiere registro ni tiene límites de uso.',
+                relatedTitle: 'Herramientas relacionadas',
+                relatedLorem: 'Generador Lorem Ipsum',
+                relatedChinese: 'Convertidor chino',
+                relatedBase64: 'Codificador/Decodificador Base64',
+                relatedUrl: 'Codificador/Decodificador URL'
+            }
+        };
+
+        // 语言名称映射（用于语言切换器显示）
+        const langNames = {
+            en: '🌐 English',
+            'zh-CN': '🌐 中文',
+            fr: '🌐 Français',
+            es: '🌐 Español'
+        };
+
+        // 当前语言
+        let currentLang = localStorage.getItem('wordcnt_lang') || 'en';
+
+        // ========== DOM 元素引用 ==========
+        const textInput = document.getElementById('textInput');
+        const statChars = document.getElementById('statChars');
+        const statCharsNoSpace = document.getElementById('statCharsNoSpace');
+        const statWords = document.getElementById('statWords');
+        const statSentences = document.getElementById('statSentences');
+        const statParagraphs = document.getElementById('statParagraphs');
+        const statLines = document.getElementById('statLines');
+        const readingTimeValue = document.getElementById('readingTimeValue');
+        const keywordList = document.getElementById('keywordList');
+        const toastEl = document.getElementById('toast');
+        const langDropdown = document.getElementById('langDropdown');
+        const langCurrent = document.getElementById('langCurrent');
+
+        // ========== 国际化函数 ==========
+        function applyLanguage(lang) {
+            currentLang = lang;
+            localStorage.setItem('wordcnt_lang', lang);
+            const data = i18nData[lang] || i18nData.en;
+
+            // 更新所有 data-i18n 元素的文本
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                if (data[key] !== undefined) {
+                    el.textContent = data[key];
+                }
+            });
+
+            // 更新所有 data-i18n-placeholder 元素的 placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n-placeholder');
+                if (data[key] !== undefined) {
+                    el.placeholder = data[key];
+                }
+            });
+
+            // 更新语言切换器显示
+            langCurrent.textContent = langNames[lang] || langNames.en;
+
+            // 更新 HTML lang 属性
+            document.documentElement.lang = lang === 'zh-CN' ? 'zh-CN' : lang;
+
+            // 重新渲染统计（更新阅读时间的文字）
+            updateStats();
+        }
+
+        // ========== 语言切换器事件 ==========
+        langCurrent.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('active');
+        });
+
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                var lang = this.getAttribute('data-lang');
+                applyLanguage(lang);
+                langDropdown.classList.remove('active');
+            });
+        });
+
+        // 点击其他区域关闭下拉菜单
+        document.addEventListener('click', function() {
+            langDropdown.classList.remove('active');
+        });
+
+        // ========== 常用停用词（多语言） ==========
+        var stopWords = new Set([
+            // 英文停用词
+            'the','a','an','and','or','but','in','on','at','to','for','of','with','by',
+            'from','is','are','was','were','be','been','being','have','has','had','do',
+            'does','did','will','would','could','should','may','might','shall','can',
+            'not','no','nor','it','its','this','that','these','those','i','me','my',
+            'we','our','you','your','he','him','his','she','her','they','them','their',
+            'what','which','who','whom','how','when','where','why','if','then','than',
+            'so','as','up','out','about','into','over','after','before','between','under',
+            'again','further','once','here','there','all','each','every','both','few',
+            'more','most','other','some','such','only','own','same','too','very','just',
+            'also','now','am','s','t','d','ll','re','ve','m',
+            // 中文停用词
+            '的','了','在','是','我','有','和','就','不','人','都','一','一个','上','也',
+            '很','到','说','要','去','你','会','着','没有','看','好','自己','这','他','她',
+            '它','们','那','些','什么','怎么','为什么','可以','没','吗','吧','呢','啊',
+            '把','被','让','从','对','与','而','但','如果','因为','所以','这个','那个',
+            // 法语停用词
+            'le','la','les','un','une','des','de','du','et','en','est','que','qui','dans',
+            'ce','il','ne','pas','plus','son','se','sur','au','avec','pour','par','je',
+            'tu','nous','vous','ils','elles','mais','ou','donc','car','ni','sa','ses',
+            // 西班牙语停用词
+            'el','la','los','las','un','una','unos','unas','y','o','pero','en','de',
+            'del','al','es','que','no','se','su','por','con','para','como','más','este',
+            'esta','estos','estas','ese','esa','esos','esas','yo','tú','él','ella',
+            'nosotros','vosotros','ellos','ellas'
+        ]);
+
+        // ========== 统计函数 ==========
+
+        // 判断是否是 CJK 字符（中日韩统一表意文字）
+        function isCJK(char) {
+            var code = char.charCodeAt(0);
+            return (code >= 0x4E00 && code <= 0x9FFF)   // CJK 基本区
+                || (code >= 0x3400 && code <= 0x4DBF)    // CJK 扩展 A
+                || (code >= 0xF900 && code <= 0xFAFF)    // CJK 兼容
+                || (code >= 0x20000 && code <= 0x2A6DF)  // CJK 扩展 B
+                || (code >= 0x2A700 && code <= 0x2B73F)  // CJK 扩展 C
+                || (code >= 0x2B740 && code <= 0x2B81F)  // CJK 扩展 D
+                || (code >= 0x3000 && code <= 0x303F)    // CJK 符号
+                || (code >= 0xFF00 && code <= 0xFFEF);   // 全角字符
+        }
+
+        // 统计字符数
+        function countChars(text) {
+            return text.length;
+        }
+
+        // 统计字符数（不含空格）
+        function countCharsNoSpace(text) {
+            return text.replace(/\s/g, '').length;
+        }
+
+        // 统计单词数（英文按空格分割，中文按字计算）
+        function countWords(text) {
+            if (!text.trim()) return 0;
+            var cjkCount = 0;
+            var nonCJKText = '';
+            for (var i = 0; i < text.length; i++) {
+                if (isCJK(text[i])) {
+                    cjkCount++;
+                } else {
+                    nonCJKText += text[i];
+                }
+            }
+            // 英文单词统计
+            var englishWords = nonCJKText.trim().split(/\s+/).filter(function(w) {
+                return w.replace(/[^\w]/g, '').length > 0;
+            });
+            var engCount = nonCJKText.trim() ? englishWords.length : 0;
+            return cjkCount + engCount;
+        }
+
+        // 统计句子数
+        function countSentences(text) {
+            if (!text.trim()) return 0;
+            // 匹配英文句尾标点和中文句尾标点
+            var matches = text.match(/[.!?。！？…]+/g);
+            return matches ? matches.length : (text.trim().length > 0 ? 1 : 0);
+        }
+
+        // 统计段落数
+        function countParagraphs(text) {
+            if (!text.trim()) return 0;
+            var paragraphs = text.split(/\n\s*\n/).filter(function(p) {
+                return p.trim().length > 0;
+            });
+            // 如果没有空行分割，但有内容，至少算 1 段
+            return paragraphs.length || (text.trim() ? 1 : 0);
+        }
+
+        // 统计行数
+        function countLines(text) {
+            if (!text) return 0;
+            return text.split('\n').length;
+        }
+
+        // 估算阅读时间
+        function estimateReadingTime(text) {
+            if (!text.trim()) return 0;
+            // 统计中文字符数
+            var cjkCount = 0;
+            var nonCJKText = '';
+            for (var i = 0; i < text.length; i++) {
+                if (isCJK(text[i])) {
+                    cjkCount++;
+                } else {
+                    nonCJKText += text[i];
+                }
+            }
+            // 英文单词数
+            var engWords = nonCJKText.trim().split(/\s+/).filter(function(w) {
+                return w.replace(/[^\w]/g, '').length > 0;
+            });
+            var engCount = nonCJKText.trim() ? engWords.length : 0;
+            // 中文 400 字/分钟，英文 200 词/分钟
+            var minutes = (cjkCount / 400) + (engCount / 200);
+            return minutes;
+        }
+
+        // 格式化阅读时间
+        function formatReadingTime(minutes) {
+            var data = i18nData[currentLang] || i18nData.en;
+            if (minutes < 1) {
+                var secs = Math.max(1, Math.round(minutes * 60));
+                return secs + ' ' + data.secRead;
+            }
+            return Math.ceil(minutes) + ' ' + data.minRead;
+        }
+
+        // 关键词密度分析
+        function analyzeKeywords(text) {
+            if (!text.trim()) return [];
+
+            // 提取所有词汇
+            var words = [];
+
+            // 提取中文词（单字）
+            for (var i = 0; i < text.length; i++) {
+                if (isCJK(text[i]) && text[i].charCodeAt(0) < 0x3000) {
+                    words.push(text[i]);
+                }
+            }
+
+            // 提取英文单词
+            var engMatches = text.match(/[a-zA-ZÀ-ÿ]+/g);
+            if (engMatches) {
+                engMatches.forEach(function(w) {
+                    var lower = w.toLowerCase();
+                    if (lower.length > 1) {
+                        words.push(lower);
+                    }
+                });
+            }
+
+            // 过滤停用词并统计频率
+            var freq = {};
+            var totalWords = 0;
+            words.forEach(function(w) {
+                if (!stopWords.has(w)) {
+                    freq[w] = (freq[w] || 0) + 1;
+                    totalWords++;
+                }
+            });
+
+            // 排序并取前 10
+            var sorted = Object.keys(freq).map(function(word) {
+                return { word: word, count: freq[word] };
+            }).sort(function(a, b) {
+                return b.count - a.count;
+            }).slice(0, 10);
+
+            // 计算百分比
+            sorted.forEach(function(item) {
+                item.percent = totalWords > 0 ? ((item.count / totalWords) * 100).toFixed(1) : '0.0';
+            });
+
+            return sorted;
+        }
+
+        // ========== 渲染关键词列表 ==========
+        function renderKeywords(keywords) {
+            var data = i18nData[currentLang] || i18nData.en;
+            if (!keywords.length) {
+                keywordList.innerHTML = '<div class="keyword-empty" data-i18n="keywordEmpty">' + data.keywordEmpty + '</div>';
+                return;
+            }
+            var maxCount = keywords[0].count;
+            var html = '';
+            keywords.forEach(function(item, index) {
+                var barWidth = Math.max(5, (item.count / maxCount) * 100);
+                html += '<div class="keyword-item">'
+                    + '<div class="keyword-rank">' + (index + 1) + '</div>'
+                    + '<div class="keyword-word">' + escapeHtml(item.word) + '</div>'
+                    + '<div class="keyword-count">' + item.count + '</div>'
+                    + '<div class="keyword-bar-wrapper"><div class="keyword-bar" style="width:' + barWidth + '%"></div></div>'
+                    + '<div class="keyword-percent">' + item.percent + '%</div>'
+                    + '</div>';
+            });
+            keywordList.innerHTML = html;
+        }
+
+        // HTML 转义
+        function escapeHtml(str) {
+            var div = document.createElement('div');
+            div.textContent = str;
+            return div.innerHTML;
+        }
+
+        // ========== 更新统计 ==========
+        function updateStats() {
+            var text = textInput.value;
+
+            statChars.textContent = countChars(text);
+            statCharsNoSpace.textContent = countCharsNoSpace(text);
+            statWords.textContent = countWords(text);
+            statSentences.textContent = countSentences(text);
+            statParagraphs.textContent = countParagraphs(text);
+            statLines.textContent = countLines(text);
+
+            var minutes = estimateReadingTime(text);
+            readingTimeValue.textContent = text.trim() ? formatReadingTime(minutes) : '0 ' + ((i18nData[currentLang] || i18nData.en).minRead);
+
+            var keywords = analyzeKeywords(text);
+            renderKeywords(keywords);
+        }
+
+        // ========== Toast 提示 ==========
+        var toastTimer = null;
+        function showToast(msg) {
+            toastEl.textContent = msg;
+            toastEl.classList.add('show');
+            if (toastTimer) clearTimeout(toastTimer);
+            toastTimer = setTimeout(function() {
+                toastEl.classList.remove('show');
+            }, 2000);
+        }
+
+        // ========== 大小写转换函数 ==========
+        function toUpperCase(text) {
+            return text.toUpperCase();
+        }
+
+        function toLowerCase(text) {
+            return text.toLowerCase();
+        }
+
+        function toTitleCase(text) {
+            return text.replace(/\S+/g, function(word) {
+                return word.charAt(0).toUpperCase() + word.slice(1).toLowerCase();
+            });
+        }
+
+        function toSentenceCase(text) {
+            // 按句子拆分（保留分隔符），然后句首大写
+            return text.toLowerCase().replace(/(^\s*|[.!?。！？]\s*)([a-zA-ZÀ-ÿ])/g, function(match, prefix, char) {
+                return prefix + char.toUpperCase();
+            });
+        }
+
+        // ========== 事件绑定 ==========
+
+        // 实时统计
+        textInput.addEventListener('input', updateStats);
+
+        // 复制文本
+        document.getElementById('btnCopy').addEventListener('click', function() {
+            var data = i18nData[currentLang] || i18nData.en;
+            var text = textInput.value;
+            if (!text) {
+                showToast(data.noText);
+                return;
+            }
+            navigator.clipboard.writeText(text).then(function() {
+                showToast(data.copied);
+            }).catch(function() {
+                // 回退方案
+                textInput.select();
+                document.execCommand('copy');
+                showToast(data.copied);
+            });
+        });
+
+        // 大写
+        document.getElementById('btnUppercase').addEventListener('click', function() {
+            textInput.value = toUpperCase(textInput.value);
+            updateStats();
+        });
+
+        // 小写
+        document.getElementById('btnLowercase').addEventListener('click', function() {
+            textInput.value = toLowerCase(textInput.value);
+            updateStats();
+        });
+
+        // 标题大小写
+        document.getElementById('btnTitleCase').addEventListener('click', function() {
+            textInput.value = toTitleCase(textInput.value);
+            updateStats();
+        });
+
+        // 句首大写
+        document.getElementById('btnSentenceCase').addEventListener('click', function() {
+            textInput.value = toSentenceCase(textInput.value);
+            updateStats();
+        });
+
+        // 去除多余空格
+        document.getElementById('btnTrimSpaces').addEventListener('click', function() {
+            var data = i18nData[currentLang] || i18nData.en;
+            // 将多个空格合并为一个，去除行首行尾空格
+            textInput.value = textInput.value.split('\n').map(function(line) {
+                return line.replace(/\s+/g, ' ').trim();
+            }).join('\n');
+            updateStats();
+            showToast(data.trimmed);
+        });
+
+        // 去除空行
+        document.getElementById('btnRemoveEmptyLines').addEventListener('click', function() {
+            var data = i18nData[currentLang] || i18nData.en;
+            textInput.value = textInput.value.split('\n').filter(function(line) {
+                return line.trim().length > 0;
+            }).join('\n');
+            updateStats();
+            showToast(data.emptyLinesRemoved);
+        });
+
+        // 清空
+        document.getElementById('btnClear').addEventListener('click', function() {
+            var data = i18nData[currentLang] || i18nData.en;
+            textInput.value = '';
+            updateStats();
+            showToast(data.cleared);
+        });
+
+        // ========== FAQ 手风琴交互 ==========
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = this.closest('.faq-item');
+                var isActive = item.classList.contains('active');
+                // 关闭所有其他 FAQ 项
+                document.querySelectorAll('.faq-item').forEach(function(el) {
+                    el.classList.remove('active');
+                });
+                // 如果当前项之前未激活，则激活它
+                if (!isActive) {
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        // ========== 初始化 ==========
+        applyLanguage(currentLang);
+        updateStats();
+
+    })();
+    </script>
+</body>
+</html>

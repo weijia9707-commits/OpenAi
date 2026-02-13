@@ -1,0 +1,1621 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Base64 Encoder/Decoder - Free Online Base64 Tool | Base64 编解码 | Web Toolbox</title>
+
+    <!-- SEO Meta Tags -->
+    <meta name="description" content="Free online Base64 encoder and decoder. Encode text, files, images to Base64. Decode Base64 strings. Supports UTF-8. No data uploaded. | 在线 Base64 编码解码工具">
+    <meta name="keywords" content="Base64 encoder,Base64 decoder,Base64 encode,Base64 decode,Base64 online,Base64 编码,Base64 解码">
+    <meta name="author" content="heyuan110">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+    <meta name="bingbot" content="index, follow, max-snippet:-1, max-image-preview:large">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="language" content="English">
+    <link rel="alternate" hreflang="en" href="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+    <link rel="alternate" hreflang="fr" href="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+    <link rel="alternate" hreflang="es" href="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+    <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/base64-tool.html">
+    <meta property="og:title" content="Base64 Encoder/Decoder - Free Online Base64 Tool">
+    <meta property="og:description" content="Free online Base64 encoder and decoder. Encode text, files, images to Base64. Decode Base64 strings. Supports UTF-8. No data uploaded.">
+    <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/base64-tool.webp">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:site_name" content="Web Toolbox">
+
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Base64 Encoder/Decoder - Free Online Base64 Tool">
+    <meta name="twitter:description" content="Free online Base64 encoder and decoder. Supports text, files, images and UTF-8.">
+    <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/base64-tool.webp">
+
+    <!-- JSON-LD WebApplication -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "Base64 Encoder/Decoder",
+        "alternateName": ["Base64 编解码", "Base64 Converter", "Base64 Image Encoder"],
+        "url": "https://www.heyuan110.com/web-toolbox/base64-tool.html",
+        "description": "Free online Base64 encoder and decoder. Encode text, files, images to Base64. Decode Base64 strings. Supports UTF-8.",
+        "applicationCategory": "DeveloperApplication",
+        "operatingSystem": "Web Browser",
+        "offers": {"@type": "Offer", "price": "0", "priceCurrency": "USD"},
+        "author": {"@type": "Person", "name": "heyuan110"},
+        "publisher": {
+            "@type": "Organization",
+            "name": "Web Toolbox",
+            "url": "https://www.heyuan110.com/web-toolbox/"
+        },
+        "featureList": [
+            "Text to Base64 encoding and decoding",
+            "File to Base64 encoding with drag and drop",
+            "Image to Base64 encoding with preview",
+            "UTF-8 multi-byte character support",
+            "Auto Base64 validation",
+            "Data URI generation",
+            "Base64 to file download",
+            "Multi-language support (EN/ZH/FR/ES)"
+        ],
+        "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/base64-tool.webp"
+    }
+    </script>
+
+    <!-- JSON-LD FAQPage -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "What is Base64 encoding?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Base64 is a binary-to-text encoding scheme that represents binary data using 64 printable ASCII characters (A-Z, a-z, 0-9, +, /). It is commonly used to embed binary data in text-based formats like JSON, XML, HTML, and email."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Is my data safe when using this Base64 tool?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, all encoding and decoding is performed entirely in your browser using JavaScript. No data is ever sent to any server. Your files, text, and images remain completely private on your device."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Does this tool support Chinese and other non-ASCII characters?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, this tool fully supports UTF-8 encoding, which means Chinese, Japanese, Korean, emoji, and all other Unicode characters are handled correctly during Base64 encoding and decoding."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What is a Base64 Data URI?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Data URI (data:) is a scheme that allows you to embed small files inline in HTML or CSS using Base64. For example, data:image/png;base64,iVBOR... embeds a PNG image directly without needing a separate file request."
+                }
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD BreadcrumbList -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            {
+                "@type": "ListItem",
+                "position": 1,
+                "name": "Home",
+                "item": "https://www.heyuan110.com/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 2,
+                "name": "Web Toolbox",
+                "item": "https://www.heyuan110.com/web-toolbox/"
+            },
+            {
+                "@type": "ListItem",
+                "position": 3,
+                "name": "Base64 Encoder Decoder",
+                "item": "https://www.heyuan110.com/web-toolbox/base64-tool.html"
+            }
+        ]
+    }
+    </script>
+
+    <!-- JSON-LD HowTo -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Encode and Decode Base64",
+        "description": "Learn how to encode text, files, and images to Base64 and decode Base64 strings back to their original form using this free online tool.",
+        "step": [
+            {
+                "@type": "HowToStep",
+                "position": 1,
+                "name": "Choose the encoding mode",
+                "text": "Select the Text, File, or Image tab depending on what you want to encode to Base64."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 2,
+                "name": "Enter or upload your content",
+                "text": "Type or paste text in the input area, or drag and drop a file/image into the upload zone."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 3,
+                "name": "Encode to Base64",
+                "text": "Click the Encode button to convert your content to a Base64 string. The result appears instantly."
+            },
+            {
+                "@type": "HowToStep",
+                "position": 4,
+                "name": "Copy or decode the result",
+                "text": "Copy the Base64 output or Data URI. To decode, paste a Base64 string and click Decode to restore the original content."
+            }
+        ]
+    }
+    </script>
+
+    <style>
+        /* ========== 全局重置与基础样式 ========== */
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e4e4e7;
+            min-height: 100vh;
+            line-height: 1.6;
+        }
+
+        /* ========== 语言切换器 ========== */
+        .lang-switcher { position: fixed; top: 20px; right: 20px; z-index: 1000; }
+        .lang-dropdown { position: relative; display: inline-block; }
+        .lang-current { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2); padding: 8px 16px; border-radius: 8px; cursor: pointer; font-size: 14px; color: #e0e0e0; transition: all 0.3s ease; user-select: none; }
+        .lang-current:hover { background: rgba(255,255,255,0.15); }
+        .lang-menu { position: absolute; top: 100%; right: 0; margin-top: 4px; background: #1e1e2e; border: 1px solid rgba(255,255,255,0.1); border-radius: 8px; padding: 4px; min-width: 140px; opacity: 0; visibility: hidden; transform: translateY(-10px); transition: all 0.3s ease; z-index: 1000; }
+        .lang-dropdown.active .lang-menu { opacity: 1; visibility: visible; transform: translateY(0); }
+        .lang-btn { display: block; width: 100%; padding: 10px 16px; background: none; border: none; color: #e0e0e0; font-size: 14px; text-align: left; cursor: pointer; border-radius: 6px; transition: background 0.2s ease; }
+        .lang-btn:hover { background: rgba(255,255,255,0.1); }
+
+        /* ========== 头部区域 ========== */
+        .header {
+            text-align: center;
+            padding: 50px 20px 30px;
+        }
+        .header h1 {
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #7c3aed, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: 8px;
+        }
+        .header p {
+            color: #a1a1aa;
+            font-size: 1.05rem;
+        }
+        .back-link {
+            position: fixed;
+            top: 20px;
+            left: 20px;
+            color: #a78bfa;
+            text-decoration: none;
+            font-size: 14px;
+            z-index: 1000;
+            background: rgba(255,255,255,0.1);
+            padding: 8px 16px;
+            border-radius: 8px;
+            transition: all 0.3s ease;
+        }
+        .back-link:hover { background: rgba(255,255,255,0.15); }
+
+        /* ========== 主容器 ========== */
+        .container {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px 60px;
+        }
+
+        /* ========== Tab 切换 ========== */
+        .tabs {
+            display: flex;
+            gap: 4px;
+            background: rgba(0,0,0,0.3);
+            border-radius: 12px;
+            padding: 4px;
+            margin-bottom: 24px;
+        }
+        .tab-btn {
+            flex: 1;
+            padding: 12px 16px;
+            background: none;
+            border: none;
+            color: #a1a1aa;
+            font-size: 15px;
+            font-weight: 500;
+            cursor: pointer;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .tab-btn:hover { color: #e4e4e7; }
+        .tab-btn.active {
+            background: #7c3aed;
+            color: #fff;
+            box-shadow: 0 2px 8px rgba(124, 58, 237, 0.3);
+        }
+
+        .tab-content { display: none; }
+        .tab-content.active { display: block; }
+
+        /* ========== 文本编解码面板 ========== */
+        .text-panel {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 16px;
+            align-items: stretch;
+        }
+        .panel-box {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+        }
+        .panel-box label {
+            font-size: 14px;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .panel-box textarea {
+            flex: 1;
+            min-height: 260px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 14px;
+            color: #e4e4e7;
+            font-family: "SF Mono", "Fira Code", "Cascadia Code", Consolas, monospace;
+            font-size: 14px;
+            line-height: 1.5;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .panel-box textarea:focus {
+            border-color: #7c3aed;
+        }
+        .panel-box textarea::placeholder { color: #52525b; }
+
+        /* 中间按钮列 */
+        .action-col {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            gap: 12px;
+            padding: 0 4px;
+        }
+
+        .char-count {
+            font-size: 12px;
+            color: #71717a;
+            margin-top: 8px;
+            text-align: right;
+        }
+
+        .valid-badge {
+            display: inline-block;
+            font-size: 12px;
+            padding: 2px 8px;
+            border-radius: 10px;
+            font-weight: 500;
+        }
+        .valid-badge.valid { background: rgba(34,197,94,0.15); color: #4ade80; }
+        .valid-badge.invalid { background: rgba(239,68,68,0.15); color: #f87171; }
+        .valid-badge.empty { background: rgba(161,161,170,0.1); color: #71717a; }
+
+        /* ========== 按钮样式 ========== */
+        .btn {
+            padding: 10px 20px;
+            border: none;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            gap: 6px;
+            white-space: nowrap;
+        }
+        .btn-primary {
+            background: linear-gradient(135deg, #7c3aed, #6d28d9);
+            color: #fff;
+        }
+        .btn-primary:hover {
+            transform: translateY(-1px);
+            box-shadow: 0 4px 12px rgba(124, 58, 237, 0.4);
+        }
+        .btn-secondary {
+            background: rgba(255,255,255,0.08);
+            color: #e4e4e7;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+        .btn-secondary:hover {
+            background: rgba(255,255,255,0.12);
+        }
+        .btn-danger {
+            background: rgba(239,68,68,0.15);
+            color: #f87171;
+        }
+        .btn-danger:hover {
+            background: rgba(239,68,68,0.25);
+        }
+        .btn-sm {
+            padding: 6px 12px;
+            font-size: 12px;
+            border-radius: 8px;
+        }
+        .btn-row {
+            display: flex;
+            gap: 8px;
+            margin-top: 10px;
+            flex-wrap: wrap;
+        }
+
+        /* ========== 文件上传区 ========== */
+        .file-section {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 24px;
+        }
+        .drop-zone {
+            border: 2px dashed rgba(124,58,237,0.4);
+            border-radius: 12px;
+            padding: 50px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            margin-bottom: 20px;
+        }
+        .drop-zone:hover, .drop-zone.drag-over {
+            border-color: #7c3aed;
+            background: rgba(124,58,237,0.08);
+        }
+        .drop-zone-icon {
+            font-size: 48px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .drop-zone-text {
+            color: #a1a1aa;
+            font-size: 15px;
+        }
+        .drop-zone-text strong { color: #a78bfa; }
+
+        .file-info {
+            background: rgba(255,255,255,0.05);
+            border-radius: 10px;
+            padding: 14px;
+            margin-bottom: 16px;
+            display: none;
+            font-size: 14px;
+        }
+        .file-info .file-name {
+            font-weight: 600;
+            color: #a78bfa;
+        }
+        .file-info .file-size {
+            color: #71717a;
+            margin-left: 8px;
+        }
+
+        .result-area {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 14px;
+            min-height: 120px;
+            font-family: "SF Mono", "Fira Code", Consolas, monospace;
+            font-size: 13px;
+            word-break: break-all;
+            color: #e4e4e7;
+            max-height: 300px;
+            overflow-y: auto;
+            display: none;
+        }
+
+        /* ========== 图片预览 ========== */
+        .image-preview {
+            margin-top: 16px;
+            text-align: center;
+            display: none;
+        }
+        .image-preview img {
+            max-width: 100%;
+            max-height: 300px;
+            border-radius: 10px;
+            border: 1px solid rgba(255,255,255,0.1);
+        }
+
+        /* ========== Base64 解码下载区 ========== */
+        .decode-file-section {
+            background: rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 24px;
+            margin-top: 20px;
+        }
+        .decode-file-section h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #a78bfa;
+            margin-bottom: 16px;
+        }
+        .decode-file-section textarea {
+            width: 100%;
+            min-height: 120px;
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 10px;
+            padding: 14px;
+            color: #e4e4e7;
+            font-family: "SF Mono", "Fira Code", Consolas, monospace;
+            font-size: 13px;
+            resize: vertical;
+            outline: none;
+            transition: border-color 0.3s ease;
+        }
+        .decode-file-section textarea:focus { border-color: #7c3aed; }
+        .decode-file-section textarea::placeholder { color: #52525b; }
+
+        .filename-input {
+            background: rgba(255,255,255,0.05);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 8px;
+            padding: 10px 14px;
+            color: #e4e4e7;
+            font-size: 14px;
+            outline: none;
+            width: 250px;
+            transition: border-color 0.3s ease;
+        }
+        .filename-input:focus { border-color: #7c3aed; }
+        .filename-input::placeholder { color: #52525b; }
+
+        /* ========== Toast 通知 ========== */
+        .toast {
+            position: fixed;
+            bottom: 30px;
+            left: 50%;
+            transform: translateX(-50%) translateY(80px);
+            background: #7c3aed;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 10px;
+            font-size: 14px;
+            font-weight: 500;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 9999;
+            pointer-events: none;
+        }
+        .toast.show {
+            transform: translateX(-50%) translateY(0);
+            opacity: 1;
+        }
+
+        /* ========== 响应式 ========== */
+        @media (max-width: 768px) {
+            .header h1 { font-size: 1.6rem; }
+            .text-panel {
+                grid-template-columns: 1fr;
+            }
+            .action-col {
+                flex-direction: row;
+                justify-content: center;
+                padding: 4px 0;
+            }
+            .tabs { flex-wrap: wrap; }
+            .tab-btn { font-size: 13px; padding: 10px 12px; }
+            .back-link { top: auto; bottom: 20px; left: 20px; }
+            .lang-switcher { top: 10px; right: 10px; }
+            .filename-input { width: 100%; }
+            .features-grid { grid-template-columns: 1fr !important; }
+            .related-grid { grid-template-columns: 1fr !important; }
+        }
+
+        /* ========== 功能特点区域 ========== */
+        .seo-section {
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .seo-section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            text-align: center;
+            margin-bottom: 28px;
+            background: linear-gradient(135deg, #7c3aed, #a78bfa);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+        .feature-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .feature-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(124,58,237,0.15);
+        }
+        .feature-icon {
+            font-size: 36px;
+            margin-bottom: 12px;
+            display: block;
+        }
+        .feature-title {
+            font-size: 15px;
+            font-weight: 600;
+            color: #e4e4e7;
+            margin-bottom: 8px;
+        }
+        .feature-desc {
+            font-size: 13px;
+            color: #a1a1aa;
+            line-height: 1.5;
+        }
+
+        /* ========== FAQ 手风琴 ========== */
+        .faq-section { margin-bottom: 60px; }
+        .faq-item {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 12px;
+            margin-bottom: 10px;
+            overflow: hidden;
+        }
+        .faq-question {
+            width: 100%;
+            background: none;
+            border: none;
+            padding: 18px 24px;
+            color: #e4e4e7;
+            font-size: 15px;
+            font-weight: 600;
+            text-align: left;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            transition: background 0.2s ease;
+        }
+        .faq-question:hover { background: rgba(255,255,255,0.03); }
+        .faq-arrow {
+            font-size: 12px;
+            color: #a78bfa;
+            transition: transform 0.3s ease;
+            flex-shrink: 0;
+            margin-left: 12px;
+        }
+        .faq-item.active .faq-arrow { transform: rotate(180deg); }
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease, padding 0.3s ease;
+        }
+        .faq-item.active .faq-answer {
+            max-height: 300px;
+        }
+        .faq-answer-inner {
+            padding: 0 24px 18px;
+            font-size: 14px;
+            color: #a1a1aa;
+            line-height: 1.7;
+        }
+
+        /* ========== 相关工具推荐 ========== */
+        .related-grid {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 16px;
+            margin-bottom: 60px;
+        }
+        .related-card {
+            background: rgba(0,0,0,0.3);
+            border: 1px solid rgba(255,255,255,0.06);
+            border-radius: 16px;
+            padding: 24px 20px;
+            text-align: center;
+            text-decoration: none;
+            color: inherit;
+            transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
+            display: block;
+        }
+        .related-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 24px rgba(124,58,237,0.15);
+            border-color: rgba(124,58,237,0.3);
+        }
+        .related-icon {
+            font-size: 32px;
+            margin-bottom: 10px;
+            display: block;
+        }
+        .related-title {
+            font-size: 14px;
+            font-weight: 600;
+            color: #a78bfa;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 返回首页 -->
+    <a href="index.html" class="back-link" data-i18n="backHome">← Back to Home</a>
+
+    <!-- 语言切换器 -->
+    <div class="lang-switcher">
+        <div class="lang-dropdown" id="langDropdown">
+            <div class="lang-current" id="langCurrent">🌐 English</div>
+            <div class="lang-menu">
+                <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- 头部 -->
+    <div class="header">
+        <h1 data-i18n="title">Base64 Encoder / Decoder</h1>
+        <p data-i18n="subtitle">Encode and decode Base64 strings, files, and images — all in your browser.</p>
+    </div>
+
+    <div class="container">
+        <!-- Tab 切换 -->
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="text" data-i18n="tabText">Text Encode/Decode</button>
+            <button class="tab-btn" data-tab="file" data-i18n="tabFile">File Encode</button>
+            <button class="tab-btn" data-tab="image" data-i18n="tabImage">Image Encode</button>
+        </div>
+
+        <!-- ===== 文本编解码 Tab ===== -->
+        <div class="tab-content active" id="tab-text">
+            <div class="text-panel">
+                <!-- 左面板：原始文本 -->
+                <div class="panel-box">
+                    <label>
+                        <span data-i18n="inputLabel">Input Text</span>
+                    </label>
+                    <textarea id="textInput" data-i18n-placeholder="inputPlaceholder" placeholder="Enter text here..."></textarea>
+                    <div class="char-count"><span id="inputCount">0</span> <span data-i18n="chars">chars</span></div>
+                    <div class="btn-row">
+                        <button class="btn btn-sm btn-secondary" onclick="B64.copyText('textInput')" data-i18n="copy">Copy</button>
+                        <button class="btn btn-sm btn-danger" onclick="B64.clearField('textInput')" data-i18n="clear">Clear</button>
+                    </div>
+                </div>
+
+                <!-- 中间按钮 -->
+                <div class="action-col">
+                    <button class="btn btn-primary" onclick="B64.encodeText()"><span data-i18n="encodeBtn">Encode</span> →</button>
+                    <button class="btn btn-primary" onclick="B64.decodeText()">← <span data-i18n="decodeBtn">Decode</span></button>
+                </div>
+
+                <!-- 右面板：Base64 结果 -->
+                <div class="panel-box">
+                    <label>
+                        <span data-i18n="outputLabel">Base64 Output</span>
+                        <span class="valid-badge empty" id="validBadge" data-i18n="emptyBadge">—</span>
+                    </label>
+                    <textarea id="textOutput" data-i18n-placeholder="outputPlaceholder" placeholder="Base64 result will appear here..."></textarea>
+                    <div class="char-count"><span id="outputCount">0</span> <span data-i18n="chars">chars</span></div>
+                    <div class="btn-row">
+                        <button class="btn btn-sm btn-secondary" onclick="B64.copyText('textOutput')" data-i18n="copy">Copy</button>
+                        <button class="btn btn-sm btn-danger" onclick="B64.clearField('textOutput')" data-i18n="clear">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 文件编码 Tab ===== -->
+        <div class="tab-content" id="tab-file">
+            <div class="file-section">
+                <!-- 上传区域 -->
+                <div class="drop-zone" id="fileDropZone">
+                    <span class="drop-zone-icon">📁</span>
+                    <div class="drop-zone-text">
+                        <strong data-i18n="dropFile">Drop a file here</strong><br>
+                        <span data-i18n="orClick">or click to select</span>
+                    </div>
+                    <input type="file" id="fileInput" style="display:none">
+                </div>
+                <div class="file-info" id="fileInfo">
+                    <span class="file-name" id="fileName"></span>
+                    <span class="file-size" id="fileSize"></span>
+                </div>
+                <div class="result-area" id="fileResult"></div>
+                <div class="btn-row" id="fileBtnRow" style="display:none">
+                    <button class="btn btn-sm btn-secondary" onclick="B64.copyFileResult()" data-i18n="copyBase64">Copy Base64</button>
+                    <button class="btn btn-sm btn-secondary" onclick="B64.copyDataUri()" data-i18n="copyDataUri">Copy Data URI</button>
+                    <button class="btn btn-sm btn-danger" onclick="B64.clearFile()" data-i18n="clear">Clear</button>
+                </div>
+
+                <!-- Base64 解码为文件下载 -->
+                <div class="decode-file-section">
+                    <h3 data-i18n="decodeFileTitle">Decode Base64 to File</h3>
+                    <textarea id="decodeFileInput" data-i18n-placeholder="decodeFilePlaceholder" placeholder="Paste Base64 string to decode as a file..."></textarea>
+                    <div class="btn-row" style="margin-top:12px;align-items:center;">
+                        <input type="text" class="filename-input" id="downloadFilename" data-i18n-placeholder="filenamePlaceholder" placeholder="filename.bin">
+                        <button class="btn btn-primary btn-sm" onclick="B64.decodeToFile()" data-i18n="downloadFile">Download File</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- ===== 图片编码 Tab ===== -->
+        <div class="tab-content" id="tab-image">
+            <div class="file-section">
+                <div class="drop-zone" id="imageDropZone">
+                    <span class="drop-zone-icon">🖼️</span>
+                    <div class="drop-zone-text">
+                        <strong data-i18n="dropImage">Drop an image here</strong><br>
+                        <span data-i18n="orClickImage">or click to select (PNG, JPG, GIF, WEBP, SVG)</span>
+                    </div>
+                    <input type="file" id="imageInput" accept="image/*" style="display:none">
+                </div>
+                <div class="file-info" id="imageFileInfo">
+                    <span class="file-name" id="imageFileName"></span>
+                    <span class="file-size" id="imageFileSize"></span>
+                </div>
+                <div class="image-preview" id="imagePreview">
+                    <img id="imagePreviewImg" alt="Preview">
+                </div>
+                <div class="result-area" id="imageResult"></div>
+                <div class="btn-row" id="imageBtnRow" style="display:none">
+                    <button class="btn btn-sm btn-secondary" onclick="B64.copyImageResult()" data-i18n="copyBase64">Copy Base64</button>
+                    <button class="btn btn-sm btn-secondary" onclick="B64.copyImageDataUri()" data-i18n="copyDataUri">Copy Data URI</button>
+                    <button class="btn btn-sm btn-danger" onclick="B64.clearImage()" data-i18n="clear">Clear</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 功能特点区域 ===== -->
+    <div class="seo-section">
+        <h2 class="seo-section-title" data-i18n="featuresTitle">Key Features</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <span class="feature-icon">🔤</span>
+                <div class="feature-title" data-i18n="feature1Title">Text Encode/Decode</div>
+                <div class="feature-desc" data-i18n="feature1Desc">Bidirectional conversion between text and Base64, with full UTF-8 multi-byte character support.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">📁</span>
+                <div class="feature-title" data-i18n="feature2Title">File Encode</div>
+                <div class="feature-desc" data-i18n="feature2Desc">Drag and drop any file to encode it as Base64 and generate a Data URI.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">🖼️</span>
+                <div class="feature-title" data-i18n="feature3Title">Image Encode</div>
+                <div class="feature-desc" data-i18n="feature3Desc">Encode images with live preview and generate embeddable Data URIs.</div>
+            </div>
+            <div class="feature-card">
+                <span class="feature-icon">✅</span>
+                <div class="feature-title" data-i18n="feature4Title">Auto Validation</div>
+                <div class="feature-desc" data-i18n="feature4Desc">Automatically detects Base64 validity and displays real-time status.</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== FAQ 手风琴 ===== -->
+    <div class="seo-section faq-section">
+        <h2 class="seo-section-title" data-i18n="faqTitle">Frequently Asked Questions</h2>
+        <div class="faq-list" id="faqList">
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq1Q">What is Base64 encoding?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faq1A">Base64 is a binary-to-text encoding scheme that represents binary data using 64 printable ASCII characters (A-Z, a-z, 0-9, +, /). It is commonly used to embed binary data in text-based formats like JSON, XML, HTML, email, and Data URIs.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq2Q">Is Base64 encryption?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faq2A">No, Base64 is not encryption. It is an encoding scheme designed for data representation, not security. Anyone can decode a Base64 string without a key. Do not use Base64 to protect sensitive information.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq3Q">Does it support Chinese and emoji?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faq3A">Yes! This tool fully supports UTF-8 encoding, which means Chinese, Japanese, Korean, emoji, and all other Unicode characters are handled correctly during Base64 encoding and decoding.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq4Q">What is the file size limit?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faq4A">Since all processing happens in your browser, there is no server-imposed limit. However, very large files (over 50 MB) may cause your browser to slow down depending on your device's memory. For best performance, keep files under 10 MB.</div>
+                </div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq5Q">Is my data safe?</span>
+                    <span class="faq-arrow">▼</span>
+                </button>
+                <div class="faq-answer">
+                    <div class="faq-answer-inner" data-i18n="faq5A">Absolutely. All encoding and decoding is performed entirely in your browser using JavaScript. No data is ever sent to any server. Your files, text, and images remain completely private on your device.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ===== 相关工具推荐 ===== -->
+    <div class="seo-section">
+        <h2 class="seo-section-title" data-i18n="relatedTitle">Related Tools</h2>
+        <div class="related-grid">
+            <a href="url-encoder.html" class="related-card">
+                <span class="related-icon">🔗</span>
+                <div class="related-title" data-i18n="related1">URL Encoder/Decoder</div>
+            </a>
+            <a href="crypto-tools.html" class="related-card">
+                <span class="related-icon">🛡️</span>
+                <div class="related-title" data-i18n="related2">Crypto & Encoding Toolkit</div>
+            </a>
+            <a href="password-generator.html" class="related-card">
+                <span class="related-icon">🔐</span>
+                <div class="related-title" data-i18n="related3">Password Generator</div>
+            </a>
+            <a href="image-converter.html" class="related-card">
+                <span class="related-icon">🖼️</span>
+                <div class="related-title" data-i18n="related4">Image Format Converter</div>
+            </a>
+        </div>
+    </div>
+
+    <!-- Toast 通知 -->
+    <div class="toast" id="toast"></div>
+
+    <script>
+    (function() {
+        'use strict';
+
+        /* ============================================================
+         *  多语言 i18n
+         * ============================================================ */
+        var i18n = {
+            en: {
+                backHome: '← Back to Home',
+                title: 'Base64 Encoder / Decoder',
+                subtitle: 'Encode and decode Base64 strings, files, and images — all in your browser.',
+                tabText: 'Text Encode/Decode',
+                tabFile: 'File Encode',
+                tabImage: 'Image Encode',
+                inputLabel: 'Input Text',
+                outputLabel: 'Base64 Output',
+                inputPlaceholder: 'Enter text here...',
+                outputPlaceholder: 'Base64 result will appear here...',
+                encodeBtn: 'Encode',
+                decodeBtn: 'Decode',
+                copy: 'Copy',
+                clear: 'Clear',
+                chars: 'chars',
+                copyBase64: 'Copy Base64',
+                copyDataUri: 'Copy Data URI',
+                dropFile: 'Drop a file here',
+                orClick: 'or click to select',
+                dropImage: 'Drop an image here',
+                orClickImage: 'or click to select (PNG, JPG, GIF, WEBP, SVG)',
+                decodeFileTitle: 'Decode Base64 to File',
+                decodeFilePlaceholder: 'Paste Base64 string to decode as a file...',
+                filenamePlaceholder: 'filename.bin',
+                downloadFile: 'Download File',
+                copied: 'Copied!',
+                cleared: 'Cleared',
+                encoded: 'Encoded successfully',
+                decoded: 'Decoded successfully',
+                invalidBase64: 'Invalid Base64 string',
+                emptyInput: 'Please enter some text first',
+                emptyFile: 'Please select a file first',
+                emptyBase64: 'Please paste a Base64 string first',
+                validBadge: 'Valid Base64',
+                invalidBadgeTxt: 'Invalid Base64',
+                emptyBadge: '—',
+                fileLoaded: 'File loaded',
+                downloadStarted: 'Download started',
+                featuresTitle: 'Key Features',
+                feature1Title: 'Text Encode/Decode',
+                feature1Desc: 'Bidirectional conversion between text and Base64, with full UTF-8 multi-byte character support.',
+                feature2Title: 'File Encode',
+                feature2Desc: 'Drag and drop any file to encode it as Base64 and generate a Data URI.',
+                feature3Title: 'Image Encode',
+                feature3Desc: 'Encode images with live preview and generate embeddable Data URIs.',
+                feature4Title: 'Auto Validation',
+                feature4Desc: 'Automatically detects Base64 validity and displays real-time status.',
+                faqTitle: 'Frequently Asked Questions',
+                faq1Q: 'What is Base64 encoding?',
+                faq1A: 'Base64 is a binary-to-text encoding scheme that represents binary data using 64 printable ASCII characters (A-Z, a-z, 0-9, +, /). It is commonly used to embed binary data in text-based formats like JSON, XML, HTML, email, and Data URIs.',
+                faq2Q: 'Is Base64 encryption?',
+                faq2A: 'No, Base64 is not encryption. It is an encoding scheme designed for data representation, not security. Anyone can decode a Base64 string without a key. Do not use Base64 to protect sensitive information.',
+                faq3Q: 'Does it support Chinese and emoji?',
+                faq3A: 'Yes! This tool fully supports UTF-8 encoding, which means Chinese, Japanese, Korean, emoji, and all other Unicode characters are handled correctly during Base64 encoding and decoding.',
+                faq4Q: 'What is the file size limit?',
+                faq4A: 'Since all processing happens in your browser, there is no server-imposed limit. However, very large files (over 50 MB) may cause your browser to slow down depending on your device\'s memory. For best performance, keep files under 10 MB.',
+                faq5Q: 'Is my data safe?',
+                faq5A: 'Absolutely. All encoding and decoding is performed entirely in your browser using JavaScript. No data is ever sent to any server. Your files, text, and images remain completely private on your device.',
+                relatedTitle: 'Related Tools',
+                related1: 'URL Encoder/Decoder',
+                related2: 'Crypto & Encoding Toolkit',
+                related3: 'Password Generator',
+                related4: 'Image Format Converter'
+            },
+            'zh-CN': {
+                backHome: '← 返回首页',
+                title: 'Base64 编码 / 解码',
+                subtitle: '在浏览器中编码和解码 Base64 字符串、文件和图片，数据完全本地处理。',
+                tabText: '文本编解码',
+                tabFile: '文件编码',
+                tabImage: '图片编码',
+                inputLabel: '输入文本',
+                outputLabel: 'Base64 结果',
+                inputPlaceholder: '在此输入文本...',
+                outputPlaceholder: 'Base64 结果将显示在这里...',
+                encodeBtn: '编码',
+                decodeBtn: '解码',
+                copy: '复制',
+                clear: '清空',
+                chars: '字符',
+                copyBase64: '复制 Base64',
+                copyDataUri: '复制 Data URI',
+                dropFile: '拖拽文件到此处',
+                orClick: '或点击选择文件',
+                dropImage: '拖拽图片到此处',
+                orClickImage: '或点击选择图片 (PNG, JPG, GIF, WEBP, SVG)',
+                decodeFileTitle: '将 Base64 解码为文件',
+                decodeFilePlaceholder: '粘贴 Base64 字符串以解码为文件...',
+                filenamePlaceholder: '文件名.bin',
+                downloadFile: '下载文件',
+                copied: '已复制！',
+                cleared: '已清空',
+                encoded: '编码成功',
+                decoded: '解码成功',
+                invalidBase64: '无效的 Base64 字符串',
+                emptyInput: '请先输入文本',
+                emptyFile: '请先选择文件',
+                emptyBase64: '请先粘贴 Base64 字符串',
+                validBadge: '有效 Base64',
+                invalidBadgeTxt: '无效 Base64',
+                emptyBadge: '—',
+                fileLoaded: '文件已加载',
+                downloadStarted: '开始下载',
+                featuresTitle: '核心功能',
+                feature1Title: '文本编解码',
+                feature1Desc: '文本与 Base64 双向转换，支持 UTF-8 多字节字符。',
+                feature2Title: '文件编码',
+                feature2Desc: '任意文件拖拽上传编码为 Base64，生成 Data URI。',
+                feature3Title: '图片编码',
+                feature3Desc: '图片编码并预览，生成可嵌入的 Data URI。',
+                feature4Title: '自动校验',
+                feature4Desc: '自动检测 Base64 有效性，实时显示状态。',
+                faqTitle: '常见问题',
+                faq1Q: '什么是 Base64 编码？',
+                faq1A: 'Base64 是一种将二进制数据转换为文本的编码方案，使用 64 个可打印 ASCII 字符（A-Z、a-z、0-9、+、/）表示数据。常用于在 JSON、XML、HTML、邮件和 Data URI 等文本格式中嵌入二进制数据。',
+                faq2Q: 'Base64 是加密吗？',
+                faq2A: '不是。Base64 是一种编码方案，用于数据表示而非安全保护。任何人都可以在没有密钥的情况下解码 Base64 字符串。请勿使用 Base64 保护敏感信息。',
+                faq3Q: '是否支持中文和表情符号？',
+                faq3A: '完全支持！本工具完整支持 UTF-8 编码，中文、日文、韩文、表情符号以及所有其他 Unicode 字符在编解码时都能正确处理。',
+                faq4Q: '文件大小有限制吗？',
+                faq4A: '由于所有处理都在浏览器中进行，没有服务器端的大小限制。但超大文件（超过 50 MB）可能会因设备内存不足而导致浏览器变慢。建议文件大小不超过 10 MB 以获得最佳体验。',
+                faq5Q: '我的数据安全吗？',
+                faq5A: '绝对安全。所有编码和解码都完全在您的浏览器中通过 JavaScript 完成，不会向任何服务器发送数据。您的文件、文本和图片完全保留在本地设备上。',
+                relatedTitle: '相关工具',
+                related1: 'URL 编码/解码',
+                related2: '加密与编码工具箱',
+                related3: '密码生成器',
+                related4: '图片格式转换器'
+            },
+            fr: {
+                backHome: '← Retour à l\'accueil',
+                title: 'Encodeur / Décodeur Base64',
+                subtitle: 'Encodez et décodez des chaînes, fichiers et images Base64 — directement dans votre navigateur.',
+                tabText: 'Texte Encode/Décode',
+                tabFile: 'Encoder Fichier',
+                tabImage: 'Encoder Image',
+                inputLabel: 'Texte d\'entrée',
+                outputLabel: 'Résultat Base64',
+                inputPlaceholder: 'Entrez le texte ici...',
+                outputPlaceholder: 'Le résultat Base64 apparaîtra ici...',
+                encodeBtn: 'Encoder',
+                decodeBtn: 'Décoder',
+                copy: 'Copier',
+                clear: 'Effacer',
+                chars: 'caractères',
+                copyBase64: 'Copier Base64',
+                copyDataUri: 'Copier Data URI',
+                dropFile: 'Déposez un fichier ici',
+                orClick: 'ou cliquez pour sélectionner',
+                dropImage: 'Déposez une image ici',
+                orClickImage: 'ou cliquez pour sélectionner (PNG, JPG, GIF, WEBP, SVG)',
+                decodeFileTitle: 'Décoder Base64 en fichier',
+                decodeFilePlaceholder: 'Collez la chaîne Base64 pour décoder en fichier...',
+                filenamePlaceholder: 'nom_du_fichier.bin',
+                downloadFile: 'Télécharger',
+                copied: 'Copié !',
+                cleared: 'Effacé',
+                encoded: 'Encodé avec succès',
+                decoded: 'Décodé avec succès',
+                invalidBase64: 'Chaîne Base64 invalide',
+                emptyInput: 'Veuillez d\'abord entrer du texte',
+                emptyFile: 'Veuillez d\'abord sélectionner un fichier',
+                emptyBase64: 'Veuillez d\'abord coller une chaîne Base64',
+                validBadge: 'Base64 valide',
+                invalidBadgeTxt: 'Base64 invalide',
+                emptyBadge: '—',
+                fileLoaded: 'Fichier chargé',
+                downloadStarted: 'Téléchargement lancé',
+                featuresTitle: 'Fonctionnalités Clés',
+                feature1Title: 'Encodage/Décodage Texte',
+                feature1Desc: 'Conversion bidirectionnelle entre texte et Base64, avec support complet des caractères multi-octets UTF-8.',
+                feature2Title: 'Encodage de Fichier',
+                feature2Desc: 'Glissez-déposez n\'importe quel fichier pour l\'encoder en Base64 et générer un Data URI.',
+                feature3Title: 'Encodage d\'Image',
+                feature3Desc: 'Encodez des images avec aperçu en direct et générez des Data URI intégrables.',
+                feature4Title: 'Validation Automatique',
+                feature4Desc: 'Détecte automatiquement la validité Base64 et affiche l\'état en temps réel.',
+                faqTitle: 'Questions Fréquentes',
+                faq1Q: 'Qu\'est-ce que l\'encodage Base64 ?',
+                faq1A: 'Base64 est un schéma d\'encodage binaire-vers-texte qui représente les données binaires en utilisant 64 caractères ASCII imprimables (A-Z, a-z, 0-9, +, /). Il est couramment utilisé pour intégrer des données binaires dans des formats texte comme JSON, XML, HTML, e-mail et Data URIs.',
+                faq2Q: 'Base64 est-il un chiffrement ?',
+                faq2A: 'Non, Base64 n\'est pas un chiffrement. C\'est un schéma d\'encodage conçu pour la représentation des données, pas pour la sécurité. N\'importe qui peut décoder une chaîne Base64 sans clé. N\'utilisez pas Base64 pour protéger des informations sensibles.',
+                faq3Q: 'Supporte-t-il le chinois et les emoji ?',
+                faq3A: 'Oui ! Cet outil supporte entièrement l\'encodage UTF-8, ce qui signifie que le chinois, le japonais, le coréen, les emoji et tous les autres caractères Unicode sont traités correctement lors de l\'encodage et du décodage Base64.',
+                faq4Q: 'Quelle est la limite de taille de fichier ?',
+                faq4A: 'Comme tout le traitement se fait dans votre navigateur, il n\'y a pas de limite imposée par le serveur. Cependant, les très gros fichiers (plus de 50 Mo) peuvent ralentir votre navigateur selon la mémoire de votre appareil. Pour de meilleures performances, gardez les fichiers sous 10 Mo.',
+                faq5Q: 'Mes données sont-elles en sécurité ?',
+                faq5A: 'Absolument. Tout l\'encodage et le décodage sont effectués entièrement dans votre navigateur en JavaScript. Aucune donnée n\'est jamais envoyée à un serveur. Vos fichiers, textes et images restent complètement privés sur votre appareil.',
+                relatedTitle: 'Outils Connexes',
+                related1: 'Encodeur/Décodeur URL',
+                related2: 'Boîte à Outils Crypto',
+                related3: 'Générateur de Mots de Passe',
+                related4: 'Convertisseur de Format d\'Image'
+            },
+            es: {
+                backHome: '← Volver al inicio',
+                title: 'Codificador / Decodificador Base64',
+                subtitle: 'Codifica y decodifica cadenas, archivos e imágenes Base64 — todo en tu navegador.',
+                tabText: 'Texto Codificar/Decodificar',
+                tabFile: 'Codificar Archivo',
+                tabImage: 'Codificar Imagen',
+                inputLabel: 'Texto de entrada',
+                outputLabel: 'Resultado Base64',
+                inputPlaceholder: 'Ingrese el texto aquí...',
+                outputPlaceholder: 'El resultado Base64 aparecerá aquí...',
+                encodeBtn: 'Codificar',
+                decodeBtn: 'Decodificar',
+                copy: 'Copiar',
+                clear: 'Limpiar',
+                chars: 'caracteres',
+                copyBase64: 'Copiar Base64',
+                copyDataUri: 'Copiar Data URI',
+                dropFile: 'Suelta un archivo aquí',
+                orClick: 'o haz clic para seleccionar',
+                dropImage: 'Suelta una imagen aquí',
+                orClickImage: 'o haz clic para seleccionar (PNG, JPG, GIF, WEBP, SVG)',
+                decodeFileTitle: 'Decodificar Base64 a archivo',
+                decodeFilePlaceholder: 'Pega la cadena Base64 para decodificar como archivo...',
+                filenamePlaceholder: 'nombre_archivo.bin',
+                downloadFile: 'Descargar',
+                copied: '¡Copiado!',
+                cleared: 'Limpiado',
+                encoded: 'Codificado con éxito',
+                decoded: 'Decodificado con éxito',
+                invalidBase64: 'Cadena Base64 inválida',
+                emptyInput: 'Por favor, ingrese texto primero',
+                emptyFile: 'Por favor, seleccione un archivo primero',
+                emptyBase64: 'Por favor, pegue una cadena Base64 primero',
+                validBadge: 'Base64 válido',
+                invalidBadgeTxt: 'Base64 inválido',
+                emptyBadge: '—',
+                fileLoaded: 'Archivo cargado',
+                downloadStarted: 'Descarga iniciada',
+                featuresTitle: 'Características Clave',
+                feature1Title: 'Codificar/Decodificar Texto',
+                feature1Desc: 'Conversión bidireccional entre texto y Base64, con soporte completo de caracteres multi-byte UTF-8.',
+                feature2Title: 'Codificar Archivo',
+                feature2Desc: 'Arrastra y suelta cualquier archivo para codificarlo en Base64 y generar un Data URI.',
+                feature3Title: 'Codificar Imagen',
+                feature3Desc: 'Codifica imágenes con vista previa en vivo y genera Data URIs integrables.',
+                feature4Title: 'Validación Automática',
+                feature4Desc: 'Detecta automáticamente la validez de Base64 y muestra el estado en tiempo real.',
+                faqTitle: 'Preguntas Frecuentes',
+                faq1Q: '¿Qué es la codificación Base64?',
+                faq1A: 'Base64 es un esquema de codificación de binario a texto que representa datos binarios usando 64 caracteres ASCII imprimibles (A-Z, a-z, 0-9, +, /). Se usa comúnmente para incrustar datos binarios en formatos de texto como JSON, XML, HTML, correo electrónico y Data URIs.',
+                faq2Q: '¿Base64 es cifrado?',
+                faq2A: 'No, Base64 no es cifrado. Es un esquema de codificación diseñado para la representación de datos, no para la seguridad. Cualquiera puede decodificar una cadena Base64 sin una clave. No use Base64 para proteger información sensible.',
+                faq3Q: '¿Soporta chino y emoji?',
+                faq3A: '¡Sí! Esta herramienta soporta completamente la codificación UTF-8, lo que significa que chino, japonés, coreano, emoji y todos los demás caracteres Unicode se manejan correctamente durante la codificación y decodificación Base64.',
+                faq4Q: '¿Cuál es el límite de tamaño de archivo?',
+                faq4A: 'Como todo el procesamiento se realiza en su navegador, no hay límite impuesto por el servidor. Sin embargo, archivos muy grandes (más de 50 MB) pueden hacer que su navegador se ralentice dependiendo de la memoria de su dispositivo. Para mejor rendimiento, mantenga los archivos por debajo de 10 MB.',
+                faq5Q: '¿Mis datos están seguros?',
+                faq5A: 'Absolutamente. Toda la codificación y decodificación se realiza completamente en su navegador usando JavaScript. Ningún dato se envía jamás a ningún servidor. Sus archivos, textos e imágenes permanecen completamente privados en su dispositivo.',
+                relatedTitle: 'Herramientas Relacionadas',
+                related1: 'Codificador/Decodificador URL',
+                related2: 'Kit de Herramientas Cripto',
+                related3: 'Generador de Contraseñas',
+                related4: 'Convertidor de Formato de Imagen'
+            }
+        };
+
+        var langLabels = {
+            en: '🌐 English',
+            'zh-CN': '🌐 中文',
+            fr: '🌐 Français',
+            es: '🌐 Español'
+        };
+
+        var currentLang = localStorage.getItem('base64_lang') || 'en';
+
+        function t(key) {
+            return (i18n[currentLang] && i18n[currentLang][key]) || (i18n.en[key]) || key;
+        }
+
+        function applyLang() {
+            // data-i18n 文本
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                el.textContent = t(key);
+            });
+            // data-i18n-placeholder
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n-placeholder');
+                el.setAttribute('placeholder', t(key));
+            });
+            // 更新语言切换器显示
+            document.getElementById('langCurrent').textContent = langLabels[currentLang] || langLabels.en;
+            // 更新 html lang
+            document.documentElement.lang = currentLang === 'zh-CN' ? 'zh-CN' : currentLang;
+        }
+
+        function switchLang(lang) {
+            currentLang = lang;
+            localStorage.setItem('base64_lang', lang);
+            applyLang();
+            // 重新检测 Base64 有效性（刷新 badge 文本）
+            validateBase64Output();
+        }
+
+        /* ============================================================
+         *  工具函数
+         * ============================================================ */
+
+        // UTF-8 安全的 Base64 编码
+        function utf8ToBase64(str) {
+            var encoder = new TextEncoder();
+            var bytes = encoder.encode(str);
+            var binary = '';
+            for (var i = 0; i < bytes.length; i++) {
+                binary += String.fromCharCode(bytes[i]);
+            }
+            return btoa(binary);
+        }
+
+        // UTF-8 安全的 Base64 解码
+        function base64ToUtf8(b64) {
+            var binary = atob(b64);
+            var bytes = new Uint8Array(binary.length);
+            for (var i = 0; i < binary.length; i++) {
+                bytes[i] = binary.charCodeAt(i);
+            }
+            var decoder = new TextDecoder('utf-8');
+            return decoder.decode(bytes);
+        }
+
+        // 检测是否为有效 Base64
+        function isValidBase64(str) {
+            if (!str || str.trim() === '') return null; // 空值
+            var s = str.trim();
+            // 移除可能的 data URI 前缀
+            if (s.indexOf('data:') === 0) {
+                var commaIdx = s.indexOf(',');
+                if (commaIdx !== -1) s = s.substring(commaIdx + 1);
+            }
+            // Base64 正则（允许换行和空白）
+            s = s.replace(/\s/g, '');
+            if (s.length === 0) return null;
+            var re = /^[A-Za-z0-9+/]*={0,2}$/;
+            if (!re.test(s)) return false;
+            if (s.length % 4 !== 0) return false;
+            try {
+                atob(s);
+                return true;
+            } catch(e) {
+                return false;
+            }
+        }
+
+        // 格式化文件大小
+        function formatSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1024 * 1024) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / (1024 * 1024)).toFixed(2) + ' MB';
+        }
+
+        // Toast 通知
+        function showToast(msg) {
+            var toast = document.getElementById('toast');
+            toast.textContent = msg;
+            toast.classList.add('show');
+            clearTimeout(toast._timer);
+            toast._timer = setTimeout(function() {
+                toast.classList.remove('show');
+            }, 2000);
+        }
+
+        // 复制到剪贴板
+        function copyToClipboard(text) {
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(text).then(function() {
+                    showToast(t('copied'));
+                });
+            } else {
+                var ta = document.createElement('textarea');
+                ta.value = text;
+                ta.style.position = 'fixed';
+                ta.style.left = '-9999px';
+                document.body.appendChild(ta);
+                ta.select();
+                document.execCommand('copy');
+                document.body.removeChild(ta);
+                showToast(t('copied'));
+            }
+        }
+
+        /* ============================================================
+         *  Base64 有效性检测（右侧面板 badge）
+         * ============================================================ */
+        function validateBase64Output() {
+            var badge = document.getElementById('validBadge');
+            var outputVal = document.getElementById('textOutput').value;
+            var result = isValidBase64(outputVal);
+            if (result === null) {
+                badge.className = 'valid-badge empty';
+                badge.textContent = t('emptyBadge');
+            } else if (result) {
+                badge.className = 'valid-badge valid';
+                badge.textContent = t('validBadge');
+            } else {
+                badge.className = 'valid-badge invalid';
+                badge.textContent = t('invalidBadgeTxt');
+            }
+        }
+
+        /* ============================================================
+         *  存储当前文件编码结果（用于复制 Data URI）
+         * ============================================================ */
+        var fileState = { base64: '', dataUri: '', mimeType: '' };
+        var imageState = { base64: '', dataUri: '', mimeType: '' };
+
+        /* ============================================================
+         *  公开 API — 挂到 window.B64
+         * ============================================================ */
+        window.B64 = {
+            /* ---- 文本编码 ---- */
+            encodeText: function() {
+                var input = document.getElementById('textInput');
+                var output = document.getElementById('textOutput');
+                if (!input.value) { showToast(t('emptyInput')); return; }
+                try {
+                    output.value = utf8ToBase64(input.value);
+                    updateCounts();
+                    validateBase64Output();
+                    showToast(t('encoded'));
+                } catch(e) {
+                    showToast('Error: ' + e.message);
+                }
+            },
+
+            /* ---- 文本解码 ---- */
+            decodeText: function() {
+                var input = document.getElementById('textInput');
+                var output = document.getElementById('textOutput');
+                if (!output.value) { showToast(t('emptyInput')); return; }
+                try {
+                    var b64 = output.value.trim();
+                    input.value = base64ToUtf8(b64);
+                    updateCounts();
+                    showToast(t('decoded'));
+                } catch(e) {
+                    showToast(t('invalidBase64'));
+                }
+            },
+
+            /* ---- 复制 ---- */
+            copyText: function(id) {
+                var el = document.getElementById(id);
+                if (el.value) copyToClipboard(el.value);
+            },
+
+            /* ---- 清空 ---- */
+            clearField: function(id) {
+                document.getElementById(id).value = '';
+                updateCounts();
+                validateBase64Output();
+                showToast(t('cleared'));
+            },
+
+            /* ---- 文件编码结果复制 ---- */
+            copyFileResult: function() {
+                if (fileState.base64) copyToClipboard(fileState.base64);
+            },
+            copyDataUri: function() {
+                if (fileState.dataUri) copyToClipboard(fileState.dataUri);
+            },
+            clearFile: function() {
+                fileState = { base64: '', dataUri: '', mimeType: '' };
+                document.getElementById('fileResult').style.display = 'none';
+                document.getElementById('fileResult').textContent = '';
+                document.getElementById('fileInfo').style.display = 'none';
+                document.getElementById('fileBtnRow').style.display = 'none';
+                document.getElementById('fileInput').value = '';
+                showToast(t('cleared'));
+            },
+
+            /* ---- 解码为文件下载 ---- */
+            decodeToFile: function() {
+                var b64Input = document.getElementById('decodeFileInput').value.trim();
+                if (!b64Input) { showToast(t('emptyBase64')); return; }
+                // 移除可能的 data URI 前缀
+                var rawB64 = b64Input;
+                if (rawB64.indexOf('data:') === 0) {
+                    var commaIdx = rawB64.indexOf(',');
+                    if (commaIdx !== -1) rawB64 = rawB64.substring(commaIdx + 1);
+                }
+                rawB64 = rawB64.replace(/\s/g, '');
+                try {
+                    var binary = atob(rawB64);
+                    var bytes = new Uint8Array(binary.length);
+                    for (var i = 0; i < binary.length; i++) {
+                        bytes[i] = binary.charCodeAt(i);
+                    }
+                    var filename = document.getElementById('downloadFilename').value.trim() || 'download.bin';
+                    var blob = new Blob([bytes], { type: 'application/octet-stream' });
+                    var url = URL.createObjectURL(blob);
+                    var a = document.createElement('a');
+                    a.href = url;
+                    a.download = filename;
+                    document.body.appendChild(a);
+                    a.click();
+                    document.body.removeChild(a);
+                    URL.revokeObjectURL(url);
+                    showToast(t('downloadStarted'));
+                } catch(e) {
+                    showToast(t('invalidBase64'));
+                }
+            },
+
+            /* ---- 图片结果复制 ---- */
+            copyImageResult: function() {
+                if (imageState.base64) copyToClipboard(imageState.base64);
+            },
+            copyImageDataUri: function() {
+                if (imageState.dataUri) copyToClipboard(imageState.dataUri);
+            },
+            clearImage: function() {
+                imageState = { base64: '', dataUri: '', mimeType: '' };
+                document.getElementById('imageResult').style.display = 'none';
+                document.getElementById('imageResult').textContent = '';
+                document.getElementById('imageFileInfo').style.display = 'none';
+                document.getElementById('imagePreview').style.display = 'none';
+                document.getElementById('imageBtnRow').style.display = 'none';
+                document.getElementById('imageInput').value = '';
+                showToast(t('cleared'));
+            }
+        };
+
+        /* ============================================================
+         *  字符计数
+         * ============================================================ */
+        function updateCounts() {
+            document.getElementById('inputCount').textContent = document.getElementById('textInput').value.length;
+            document.getElementById('outputCount').textContent = document.getElementById('textOutput').value.length;
+        }
+
+        /* ============================================================
+         *  Tab 切换
+         * ============================================================ */
+        document.querySelectorAll('.tab-btn').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                document.querySelectorAll('.tab-btn').forEach(function(b) { b.classList.remove('active'); });
+                document.querySelectorAll('.tab-content').forEach(function(c) { c.classList.remove('active'); });
+                btn.classList.add('active');
+                document.getElementById('tab-' + btn.getAttribute('data-tab')).classList.add('active');
+            });
+        });
+
+        /* ============================================================
+         *  语言切换器交互
+         * ============================================================ */
+        var dropdown = document.getElementById('langDropdown');
+        document.getElementById('langCurrent').addEventListener('click', function(e) {
+            e.stopPropagation();
+            dropdown.classList.toggle('active');
+        });
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                switchLang(btn.getAttribute('data-lang'));
+                dropdown.classList.remove('active');
+            });
+        });
+        document.addEventListener('click', function() {
+            dropdown.classList.remove('active');
+        });
+
+        /* ============================================================
+         *  文本输入监听
+         * ============================================================ */
+        document.getElementById('textInput').addEventListener('input', updateCounts);
+        document.getElementById('textOutput').addEventListener('input', function() {
+            updateCounts();
+            validateBase64Output();
+        });
+
+        /* ============================================================
+         *  文件拖拽 & 选择
+         * ============================================================ */
+        function setupDropZone(zoneId, inputId, handler) {
+            var zone = document.getElementById(zoneId);
+            var input = document.getElementById(inputId);
+
+            zone.addEventListener('click', function() { input.click(); });
+            input.addEventListener('change', function() {
+                if (input.files && input.files[0]) handler(input.files[0]);
+            });
+            zone.addEventListener('dragover', function(e) {
+                e.preventDefault();
+                zone.classList.add('drag-over');
+            });
+            zone.addEventListener('dragleave', function() {
+                zone.classList.remove('drag-over');
+            });
+            zone.addEventListener('drop', function(e) {
+                e.preventDefault();
+                zone.classList.remove('drag-over');
+                if (e.dataTransfer.files && e.dataTransfer.files[0]) {
+                    handler(e.dataTransfer.files[0]);
+                }
+            });
+        }
+
+        // 处理文件上传（通用文件）
+        function handleFileUpload(file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var dataUri = e.target.result;
+                var base64 = dataUri.split(',')[1] || '';
+                var mime = file.type || 'application/octet-stream';
+
+                fileState.base64 = base64;
+                fileState.dataUri = dataUri;
+                fileState.mimeType = mime;
+
+                document.getElementById('fileName').textContent = file.name;
+                document.getElementById('fileSize').textContent = '(' + formatSize(file.size) + ')';
+                document.getElementById('fileInfo').style.display = 'block';
+
+                var resultEl = document.getElementById('fileResult');
+                resultEl.textContent = base64;
+                resultEl.style.display = 'block';
+
+                document.getElementById('fileBtnRow').style.display = 'flex';
+                showToast(t('fileLoaded'));
+            };
+            reader.readAsDataURL(file);
+        }
+
+        // 处理图片上传
+        function handleImageUpload(file) {
+            var reader = new FileReader();
+            reader.onload = function(e) {
+                var dataUri = e.target.result;
+                var base64 = dataUri.split(',')[1] || '';
+                var mime = file.type || 'image/png';
+
+                imageState.base64 = base64;
+                imageState.dataUri = dataUri;
+                imageState.mimeType = mime;
+
+                document.getElementById('imageFileName').textContent = file.name;
+                document.getElementById('imageFileSize').textContent = '(' + formatSize(file.size) + ')';
+                document.getElementById('imageFileInfo').style.display = 'block';
+
+                // 预览
+                var previewEl = document.getElementById('imagePreview');
+                document.getElementById('imagePreviewImg').src = dataUri;
+                previewEl.style.display = 'block';
+
+                var resultEl = document.getElementById('imageResult');
+                resultEl.textContent = dataUri;
+                resultEl.style.display = 'block';
+
+                document.getElementById('imageBtnRow').style.display = 'flex';
+                showToast(t('fileLoaded'));
+            };
+            reader.readAsDataURL(file);
+        }
+
+        setupDropZone('fileDropZone', 'fileInput', handleFileUpload);
+        setupDropZone('imageDropZone', 'imageInput', handleImageUpload);
+
+        /* ============================================================
+         *  FAQ 手风琴交互
+         * ============================================================ */
+        window.toggleFaq = function(btn) {
+            var item = btn.parentElement;
+            var wasActive = item.classList.contains('active');
+            // 关闭所有
+            document.querySelectorAll('.faq-item').forEach(function(el) {
+                el.classList.remove('active');
+            });
+            // 如果之前没打开，则打开当前项
+            if (!wasActive) {
+                item.classList.add('active');
+            }
+        };
+
+        /* ============================================================
+         *  初始化
+         * ============================================================ */
+        applyLang();
+        updateCounts();
+
+    })();
+    </script>
+</body>
+</html>

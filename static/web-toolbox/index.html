@@ -93,6 +93,12 @@
             {"@type": "WebApplication", "name": "Online Image Editor", "url": "https://www.heyuan110.com/web-toolbox/image-editor.html"},
             {"@type": "WebApplication", "name": "Timestamp Converter", "url": "https://www.heyuan110.com/web-toolbox/timestamp-converter.html"},
             {"@type": "WebApplication", "name": "Social Video Downloader", "url": "https://www.heyuan110.com/web-toolbox/social-video-downloader.html"},
+            {"@type": "WebApplication", "name": "Password Generator", "url": "https://www.heyuan110.com/web-toolbox/password-generator.html"},
+            {"@type": "WebApplication", "name": "QR Code Generator", "url": "https://www.heyuan110.com/web-toolbox/qr-code-generator.html"},
+            {"@type": "WebApplication", "name": "Word Counter", "url": "https://www.heyuan110.com/web-toolbox/word-counter.html"},
+            {"@type": "WebApplication", "name": "Base64 Encoder Decoder", "url": "https://www.heyuan110.com/web-toolbox/base64-tool.html"},
+            {"@type": "WebApplication", "name": "URL Encoder Decoder", "url": "https://www.heyuan110.com/web-toolbox/url-encoder.html"},
+            {"@type": "WebApplication", "name": "Lorem Ipsum Generator", "url": "https://www.heyuan110.com/web-toolbox/lorem-ipsum.html"},
             {"@type": "WebApplication", "name": "Tweet Deleter", "url": "https://github.com/heyuan110/tweet-deleter"},
             {"@type": "WebApplication", "name": "XPorts - Terminal Port Manager", "url": "https://github.com/heyuan110/xports"}
         ]
@@ -1101,6 +1107,108 @@
                 </div>
             </div>
 
+            <!-- 密码生成器 -->
+            <div class="tool-card" data-tool="password">
+                <img src="screenshots/password-generator.webp" alt="密码生成器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔐</div>
+                    <h2 class="tool-title" data-i18n="tool_pwgen_title">密码生成器</h2>
+                    <p class="tool-desc" data-i18n="tool_pwgen_desc">生成安全随机密码，支持自定义长度、字符类型和批量生成</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_pwgen_f1">使用 crypto API 安全随机生成</li>
+                        <li data-i18n="tool_pwgen_f2">自定义长度和字符类型</li>
+                        <li data-i18n="tool_pwgen_f3">密码强度实时评估</li>
+                        <li data-i18n="tool_pwgen_f4">批量生成和历史记录</li>
+                    </ul>
+                    <a href="password-generator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- QR码生成器 -->
+            <div class="tool-card" data-tool="qrcode">
+                <img src="screenshots/qr-code-generator.webp" alt="QR码生成器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">📱</div>
+                    <h2 class="tool-title" data-i18n="tool_qrcode_title">QR 码生成器</h2>
+                    <p class="tool-desc" data-i18n="tool_qrcode_desc">生成自定义二维码，支持 URL、文本、WiFi、邮件等多种格式</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_qrcode_f1">支持 URL/文本/WiFi/邮件/电话/短信</li>
+                        <li data-i18n="tool_qrcode_f2">自定义颜色和大小</li>
+                        <li data-i18n="tool_qrcode_f3">4级容错率可选</li>
+                        <li data-i18n="tool_qrcode_f4">一键下载 PNG 图片</li>
+                    </ul>
+                    <a href="qr-code-generator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 字数统计工具 -->
+            <div class="tool-card" data-tool="wordcount">
+                <img src="screenshots/word-counter.webp" alt="字数统计工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">📊</div>
+                    <h2 class="tool-title" data-i18n="tool_wordcnt_title">字数统计工具</h2>
+                    <p class="tool-desc" data-i18n="tool_wordcnt_desc">实时统计字数、字符数、段落数等，支持关键词密度分析</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_wordcnt_f1">字符/单词/句子/段落/行数统计</li>
+                        <li data-i18n="tool_wordcnt_f2">支持中英文混合文本</li>
+                        <li data-i18n="tool_wordcnt_f3">关键词密度 Top 10 分析</li>
+                        <li data-i18n="tool_wordcnt_f4">阅读时间估算和文本转换</li>
+                    </ul>
+                    <a href="word-counter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- Base64 编解码 -->
+            <div class="tool-card" data-tool="base64">
+                <img src="screenshots/base64-tool.webp" alt="Base64编解码截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔣</div>
+                    <h2 class="tool-title" data-i18n="tool_base64_title">Base64 编解码</h2>
+                    <p class="tool-desc" data-i18n="tool_base64_desc">Base64 文本/文件/图片编解码，支持 UTF-8 和拖拽上传</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_base64_f1">文本/文件/图片三模式</li>
+                        <li data-i18n="tool_base64_f2">UTF-8 安全编码，支持中文/Emoji</li>
+                        <li data-i18n="tool_base64_f3">拖拽上传和图片预览</li>
+                        <li data-i18n="tool_base64_f4">Data URI 生成和文件还原下载</li>
+                    </ul>
+                    <a href="base64-tool.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- URL 编解码 -->
+            <div class="tool-card" data-tool="urlenc">
+                <img src="screenshots/url-encoder.webp" alt="URL编解码截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔗</div>
+                    <h2 class="tool-title" data-i18n="tool_urlenc_title">URL 编解码</h2>
+                    <p class="tool-desc" data-i18n="tool_urlenc_desc">URL 编码解码工具，支持批量处理和 URL 参数解析</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_urlenc_f1">encodeURI 和 encodeURIComponent 两种模式</li>
+                        <li data-i18n="tool_urlenc_f2">批量逐行编解码</li>
+                        <li data-i18n="tool_urlenc_f3">URL 参数解析和可视化</li>
+                        <li data-i18n="tool_urlenc_f4">交互式 URL 参数编辑器</li>
+                    </ul>
+                    <a href="url-encoder.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- Lorem Ipsum 生成器 -->
+            <div class="tool-card" data-tool="lorem">
+                <img src="screenshots/lorem-ipsum.webp" alt="Lorem Ipsum生成器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">📝</div>
+                    <h2 class="tool-title" data-i18n="tool_lorem_title">Lorem Ipsum 生成器</h2>
+                    <p class="tool-desc" data-i18n="tool_lorem_desc">生成占位文本，支持经典拉丁文、中文和 Hipster 三种风格</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_lorem_f1">经典/中文/Hipster 三种文本风格</li>
+                        <li data-i18n="tool_lorem_f2">段落/句子/单词三种单位</li>
+                        <li data-i18n="tool_lorem_f3">可自定义生成数量 1-100</li>
+                        <li data-i18n="tool_lorem_f4">实时文本统计和一键复制</li>
+                    </ul>
+                    <a href="lorem-ipsum.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
             <!-- Tweet Deleter 推文批量删除 -->
             <div class="tool-card" data-tool="tweet">
                 <img src="screenshots/tweet-deleter.webp" alt="Tweet Deleter 截图" class="tool-screenshot">
@@ -1462,6 +1570,42 @@
                     tool_xports_f2: '交互式 TUI 界面，键盘导航',
                     tool_xports_f3: '自动识别常见服务（MySQL/Redis/Nginx）',
                     tool_xports_f4: '支持批量选择和终止进程',
+                    tool_pwgen_title: '密码生成器',
+                    tool_pwgen_desc: '生成安全随机密码，支持自定义长度、字符类型和批量生成',
+                    tool_pwgen_f1: '使用 crypto API 安全随机生成',
+                    tool_pwgen_f2: '自定义长度和字符类型',
+                    tool_pwgen_f3: '密码强度实时评估',
+                    tool_pwgen_f4: '批量生成和历史记录',
+                    tool_qrcode_title: 'QR 码生成器',
+                    tool_qrcode_desc: '生成自定义二维码，支持 URL、文本、WiFi、邮件等多种格式',
+                    tool_qrcode_f1: '支持 URL/文本/WiFi/邮件/电话/短信',
+                    tool_qrcode_f2: '自定义颜色和大小',
+                    tool_qrcode_f3: '4级容错率可选',
+                    tool_qrcode_f4: '一键下载 PNG 图片',
+                    tool_wordcnt_title: '字数统计工具',
+                    tool_wordcnt_desc: '实时统计字数、字符数、段落数等，支持关键词密度分析',
+                    tool_wordcnt_f1: '字符/单词/句子/段落/行数统计',
+                    tool_wordcnt_f2: '支持中英文混合文本',
+                    tool_wordcnt_f3: '关键词密度 Top 10 分析',
+                    tool_wordcnt_f4: '阅读时间估算和文本转换',
+                    tool_base64_title: 'Base64 编解码',
+                    tool_base64_desc: 'Base64 文本/文件/图片编解码，支持 UTF-8 和拖拽上传',
+                    tool_base64_f1: '文本/文件/图片三模式',
+                    tool_base64_f2: 'UTF-8 安全编码，支持中文/Emoji',
+                    tool_base64_f3: '拖拽上传和图片预览',
+                    tool_base64_f4: 'Data URI 生成和文件还原下载',
+                    tool_urlenc_title: 'URL 编解码',
+                    tool_urlenc_desc: 'URL 编码解码工具，支持批量处理和 URL 参数解析',
+                    tool_urlenc_f1: 'encodeURI 和 encodeURIComponent 两种模式',
+                    tool_urlenc_f2: '批量逐行编解码',
+                    tool_urlenc_f3: 'URL 参数解析和可视化',
+                    tool_urlenc_f4: '交互式 URL 参数编辑器',
+                    tool_lorem_title: 'Lorem Ipsum 生成器',
+                    tool_lorem_desc: '生成占位文本，支持经典拉丁文、中文和 Hipster 三种风格',
+                    tool_lorem_f1: '经典/中文/Hipster 三种文本风格',
+                    tool_lorem_f2: '段落/句子/单词三种单位',
+                    tool_lorem_f3: '可自定义生成数量 1-100',
+                    tool_lorem_f4: '实时文本统计和一键复制',
                 },
                 'en': {
                     homeLink: 'Home',
@@ -1667,6 +1811,42 @@
                     tool_xports_f2: 'Interactive TUI with keyboard navigation',
                     tool_xports_f3: 'Auto-detect services (MySQL/Redis/Nginx)',
                     tool_xports_f4: 'Batch select and kill processes',
+                    tool_pwgen_title: 'Password Generator',
+                    tool_pwgen_desc: 'Generate secure random passwords with custom length, character types, and batch generation',
+                    tool_pwgen_f1: 'Cryptographically secure generation',
+                    tool_pwgen_f2: 'Custom length and character types',
+                    tool_pwgen_f3: 'Real-time strength assessment',
+                    tool_pwgen_f4: 'Batch generation and history',
+                    tool_qrcode_title: 'QR Code Generator',
+                    tool_qrcode_desc: 'Generate custom QR codes for URLs, text, WiFi, email and more',
+                    tool_qrcode_f1: 'URL/Text/WiFi/Email/Phone/SMS support',
+                    tool_qrcode_f2: 'Custom colors and size',
+                    tool_qrcode_f3: '4 error correction levels',
+                    tool_qrcode_f4: 'One-click PNG download',
+                    tool_wordcnt_title: 'Word Counter',
+                    tool_wordcnt_desc: 'Real-time word, character, paragraph count with keyword density analysis',
+                    tool_wordcnt_f1: 'Characters/Words/Sentences/Paragraphs/Lines',
+                    tool_wordcnt_f2: 'Chinese & English mixed text support',
+                    tool_wordcnt_f3: 'Top 10 keyword density analysis',
+                    tool_wordcnt_f4: 'Reading time estimate and text transform',
+                    tool_base64_title: 'Base64 Encoder/Decoder',
+                    tool_base64_desc: 'Base64 text/file/image encoding and decoding with UTF-8 and drag-drop',
+                    tool_base64_f1: 'Text/File/Image three modes',
+                    tool_base64_f2: 'UTF-8 safe, supports Chinese/Emoji',
+                    tool_base64_f3: 'Drag-drop upload and image preview',
+                    tool_base64_f4: 'Data URI generation and file download',
+                    tool_urlenc_title: 'URL Encoder/Decoder',
+                    tool_urlenc_desc: 'URL encoding/decoding tool with batch processing and URL parameter parser',
+                    tool_urlenc_f1: 'encodeURI and encodeURIComponent modes',
+                    tool_urlenc_f2: 'Batch line-by-line processing',
+                    tool_urlenc_f3: 'URL parameter parsing and visualization',
+                    tool_urlenc_f4: 'Interactive URL parameter editor',
+                    tool_lorem_title: 'Lorem Ipsum Generator',
+                    tool_lorem_desc: 'Generate placeholder text in Classic Latin, Chinese, and Hipster styles',
+                    tool_lorem_f1: 'Classic/Chinese/Hipster three styles',
+                    tool_lorem_f2: 'Paragraphs/Sentences/Words units',
+                    tool_lorem_f3: 'Custom quantity from 1-100',
+                    tool_lorem_f4: 'Real-time stats and one-click copy',
                 },
                 'fr': {
                     homeLink: 'Accueil',
@@ -1872,6 +2052,42 @@
                     tool_xports_f2: 'Interface TUI interactive avec navigation clavier',
                     tool_xports_f3: 'Détection auto des services (MySQL/Redis/Nginx)',
                     tool_xports_f4: 'Sélection et terminaison en lot',
+                    tool_pwgen_title: 'Générateur de mots de passe',
+                    tool_pwgen_desc: 'Générer des mots de passe aléatoires sécurisés avec longueur et types personnalisables',
+                    tool_pwgen_f1: 'Génération crypto sécurisée',
+                    tool_pwgen_f2: 'Longueur et types personnalisables',
+                    tool_pwgen_f3: 'Évaluation de force en temps réel',
+                    tool_pwgen_f4: 'Génération par lots et historique',
+                    tool_qrcode_title: 'Générateur QR Code',
+                    tool_qrcode_desc: 'Générer des QR codes pour URL, texte, WiFi, e-mail et plus',
+                    tool_qrcode_f1: 'URL/Texte/WiFi/Email/Tél/SMS',
+                    tool_qrcode_f2: 'Couleurs et taille personnalisées',
+                    tool_qrcode_f3: '4 niveaux de correction d\'erreur',
+                    tool_qrcode_f4: 'Téléchargement PNG en un clic',
+                    tool_wordcnt_title: 'Compteur de mots',
+                    tool_wordcnt_desc: 'Compteur de mots, caractères, paragraphes en temps réel avec analyse de densité',
+                    tool_wordcnt_f1: 'Caractères/Mots/Phrases/Paragraphes/Lignes',
+                    tool_wordcnt_f2: 'Support texte mixte chinois et anglais',
+                    tool_wordcnt_f3: 'Analyse densité Top 10 mots-clés',
+                    tool_wordcnt_f4: 'Estimation temps de lecture et transformations',
+                    tool_base64_title: 'Encodeur/Décodeur Base64',
+                    tool_base64_desc: 'Encodage/décodage Base64 texte/fichier/image avec UTF-8 et glisser-déposer',
+                    tool_base64_f1: 'Trois modes: Texte/Fichier/Image',
+                    tool_base64_f2: 'UTF-8 sûr, supporte chinois/Emoji',
+                    tool_base64_f3: 'Glisser-déposer et aperçu image',
+                    tool_base64_f4: 'Génération Data URI et téléchargement fichier',
+                    tool_urlenc_title: 'Encodeur/Décodeur URL',
+                    tool_urlenc_desc: 'Outil d\'encodage/décodage URL avec traitement par lots et analyseur de paramètres',
+                    tool_urlenc_f1: 'Modes encodeURI et encodeURIComponent',
+                    tool_urlenc_f2: 'Traitement par lots ligne par ligne',
+                    tool_urlenc_f3: 'Analyse et visualisation des paramètres URL',
+                    tool_urlenc_f4: 'Éditeur interactif de paramètres URL',
+                    tool_lorem_title: 'Générateur Lorem Ipsum',
+                    tool_lorem_desc: 'Générer du texte de remplissage en style Latin classique, Chinois et Hipster',
+                    tool_lorem_f1: 'Trois styles: Classique/Chinois/Hipster',
+                    tool_lorem_f2: 'Unités: Paragraphes/Phrases/Mots',
+                    tool_lorem_f3: 'Quantité personnalisable de 1 à 100',
+                    tool_lorem_f4: 'Statistiques en temps réel et copie en un clic',
                 },
                 'es': {
                     homeLink: 'Inicio',
@@ -2077,6 +2293,42 @@
                     tool_xports_f2: 'Interfaz TUI interactiva con navegación por teclado',
                     tool_xports_f3: 'Detección automática de servicios (MySQL/Redis/Nginx)',
                     tool_xports_f4: 'Selección y terminación en lote',
+                    tool_pwgen_title: 'Generador de contraseñas',
+                    tool_pwgen_desc: 'Generar contraseñas aleatorias seguras con longitud y tipos personalizables',
+                    tool_pwgen_f1: 'Generación criptográficamente segura',
+                    tool_pwgen_f2: 'Longitud y tipos personalizables',
+                    tool_pwgen_f3: 'Evaluación de fortaleza en tiempo real',
+                    tool_pwgen_f4: 'Generación por lotes e historial',
+                    tool_qrcode_title: 'Generador de código QR',
+                    tool_qrcode_desc: 'Generar códigos QR para URL, texto, WiFi, correo y más',
+                    tool_qrcode_f1: 'URL/Texto/WiFi/Email/Tel/SMS',
+                    tool_qrcode_f2: 'Colores y tamaño personalizados',
+                    tool_qrcode_f3: '4 niveles de corrección de errores',
+                    tool_qrcode_f4: 'Descarga PNG con un clic',
+                    tool_wordcnt_title: 'Contador de palabras',
+                    tool_wordcnt_desc: 'Contador de palabras, caracteres, párrafos en tiempo real con análisis de densidad',
+                    tool_wordcnt_f1: 'Caracteres/Palabras/Oraciones/Párrafos/Líneas',
+                    tool_wordcnt_f2: 'Soporte texto mixto chino e inglés',
+                    tool_wordcnt_f3: 'Análisis densidad Top 10 palabras clave',
+                    tool_wordcnt_f4: 'Estimación tiempo de lectura y transformaciones',
+                    tool_base64_title: 'Codificador/Decodificador Base64',
+                    tool_base64_desc: 'Codificación/decodificación Base64 texto/archivo/imagen con UTF-8 y arrastrar',
+                    tool_base64_f1: 'Tres modos: Texto/Archivo/Imagen',
+                    tool_base64_f2: 'UTF-8 seguro, soporta chino/Emoji',
+                    tool_base64_f3: 'Arrastrar y soltar y vista previa de imagen',
+                    tool_base64_f4: 'Generación Data URI y descarga de archivo',
+                    tool_urlenc_title: 'Codificador/Decodificador URL',
+                    tool_urlenc_desc: 'Herramienta de codificación/decodificación URL con procesamiento por lotes y analizador',
+                    tool_urlenc_f1: 'Modos encodeURI y encodeURIComponent',
+                    tool_urlenc_f2: 'Procesamiento por lotes línea por línea',
+                    tool_urlenc_f3: 'Análisis y visualización de parámetros URL',
+                    tool_urlenc_f4: 'Editor interactivo de parámetros URL',
+                    tool_lorem_title: 'Generador Lorem Ipsum',
+                    tool_lorem_desc: 'Generar texto de relleno en estilo Latín clásico, Chino y Hipster',
+                    tool_lorem_f1: 'Tres estilos: Clásico/Chino/Hipster',
+                    tool_lorem_f2: 'Unidades: Párrafos/Oraciones/Palabras',
+                    tool_lorem_f3: 'Cantidad personalizable de 1 a 100',
+                    tool_lorem_f4: 'Estadísticas en tiempo real y copia con un clic',
                 },
             };
 
