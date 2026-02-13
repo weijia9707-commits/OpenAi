@@ -13,7 +13,7 @@ categories:
     - Elasticsearch
 ---
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/cover/es.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/cover/es.jpg)
 
 
 Elasticsearch是一个基于Apache Lucene(TM)的开源搜索引擎(以下简称ES),是目前全文搜索引擎的首选。它可以快速存储、搜索和分析海量数据，Github，StackOverflow都在采用它。

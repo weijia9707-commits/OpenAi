@@ -23,7 +23,7 @@ RabbitMQ是一个开源的消息代理和队列服务器，用来通过普通协
 ## 2. RabbitMQ工作流程
 
 RabbitMQ架构图
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15647300964346.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15647300964346.jpg)
 
 发布者P-Clients（Publisher）发布消息(Message)，经由交换机X（Exchange）
 交换机根据路由规则将收到的消息分发给与该交换机绑定的队列(Queue)
@@ -41,7 +41,7 @@ RabbitMQ架构图
 
 我们先来看一张RabbitMQ管理界面截图
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15647344884041.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15647344884041.jpg)
 
 这个界面包含了RabbitMQ很关键的几个概念(不是全部)
 
@@ -61,7 +61,7 @@ RabbitMQ架构图
 
 一旦TCP连接建立起来，客户端紧接着可以创建一个AMQP信道（Channel），每个信道都会被指派一个唯一的ID。信道是建立在Connection之上的虚拟连接，Rabbit处理的每条指令都是通过Channel完成的。一般情况程序起始建立TCP连接，第二步就是建立Channel。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15647378165803.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15647378165803.jpg)
 
 为什么要用Channel，而不直接用TCP连接？
 
@@ -75,7 +75,7 @@ Rabbitmq采用类似NIO(也称非阻塞 I/O，包含三大核心部分：Channel
 那为什么需要Exchange而不是直接将消息发送至队列呢？
 
 回到与RabbitM关系紧密的AMQP协议，AMQP协议核心思想就是**生产者和消费者解耦**，生产者不直接将消息发送给队列。生产者不知道消息会被发到哪个队列，它只将消息发给交换机，交换机接收到消息后按照特定的规则转发到队列进行存储。
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15647390185527.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15647390185527.jpg)
 
 在实际应用中我们只需要定义好Exchange的路由策略，而生产者不需要关心消息发送到哪个队列或被谁消费。消费者不需要关心谁生产，只需面向队列消费消息。
 
@@ -83,7 +83,7 @@ Exchange定义了消息路由到Queue的规则，将各个层面的消息传递�
 
 创建一个新的Exchange
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15647425737375.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15647425737375.jpg)
 
 - Virtual host:属于哪个Virtual host。
 - Name：名字，同一个Virtual host里面的Name不能重复。
@@ -95,21 +95,21 @@ Exchange定义了消息路由到Queue的规则，将各个层面的消息传递�
 
 ### 3.6 Exchange类型
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15647424693007.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15647424693007.jpg)
 
 **（1）.Direct exchange**
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649763567956.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649763567956.jpg)
 
 将消息中的Routing key与该Exchange关联的所有Binding中的Routing key进行比较，如果相等，则发送到该Binding对应的Queue中。
 
 **（2）.Topic Exchange**
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649764244812.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649764244812.jpg)
 
 将消息中的Routing key与该Exchange关联的所有Binding中的Routing key进行对比，如果匹配上了，则发送到该Binding对应的Queue中。
 
 **（3）.Fanout Exchange**
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649763997958.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649763997958.jpg)
 
 直接将消息转发到所有binding的对应queue中，这种exchange在路由转发的时候，忽略Routing key，所以fanout交换机也是转消息最快的。
 
@@ -144,11 +144,11 @@ use PhpAmqpLib\Connection\AMQPStreamConnection;
 use PhpAmqpLib\Message\AMQPMessage;
 ```
 
-完整代码：<https://github.com/heyuan110/laravel-rabbitmq>
+完整代码：<https://github.com/*****/laravel-rabbitmq>
 
 ### 4.1 简单队列模式
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649775221394.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649775221394.jpg)
 
 功能：一个生产者P发送消息到队列，一个消费者C消费
 
@@ -223,7 +223,7 @@ public function consumeSimpleMQ()
 
 ### 4.2 工作队列模式
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649775307431.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649775307431.jpg)
 
 功能：一个生产者P发送消息到队列，多个消费者C消费，每个消费者获取到的消息唯一，多个消费者只有一个队列。
 
@@ -325,7 +325,7 @@ public function consumeSimpleMQ()
 
 ### 4.3 发布/订阅模式
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649775451475.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649775451475.jpg)
 
 功能：一个生产者P发送的消息会被多个消费者C消费。一个生产者，一个交换机，多个队列，多个消费者。
 
@@ -428,7 +428,7 @@ RabbitMQ种消息传递模型的核心思想是生产者永远不会将消息直
 
 ### 4.4 路由模式
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649775511731.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649775511731.jpg)
 
 功能：生产者P发送的消息到交换机并指定routing_key，消费者将队列绑定到交换机时需要指定路由key。
 
@@ -543,7 +543,7 @@ public function publishMQ()
 
 ### 4.5 通配符模式
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649775560253.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649775560253.jpg)
 
 功能：生产者P发送的消息到交换机并指定routing_key，并设置类型为topic，消费者将队列绑定到交换机时根据routing_key的值进行通配符匹配。
 
@@ -691,7 +691,7 @@ php artisan produce:topic_mq --routing_key="test" --msg="test6"
 
 ### 4.6 RPC模式
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15649775606069.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15649775606069.jpg)
 
 RPC工作过程：
 
@@ -732,7 +732,7 @@ Ubuntu16.04安装Shell脚本install.sh
 直接执行
 
 ```
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/heyuan110/BashShell/master/rabbitmq_install.sh)"
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/*****/BashShell/master/rabbitmq_install.sh)"
 ```
 
 或者拷贝源码自己建立sh文件
@@ -799,7 +799,7 @@ root@rmq2:/usr/sbin# ll rabbitmq*
 禁用：`rabbitmq-plugins disable rabbitmq_management`
 
 打开浏览器输入<http://192.168.8.131:15672>，输入guest/guest账号密码.
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15664687172489.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15664687172489.jpg)
 
 ### 5.3 用户管理
 
@@ -888,7 +888,7 @@ RabbitMQ有三种模式，其中两种集群模式:
 
 - 普通模式：默认集群模式，集群的所有节点具有相同元数据(队列结构)，但消息实体只存在于集群中一个节点，当存消息实体的节点崩溃后消息不可用。举例rmq1，rmq2，rmq3三个节点，生产者先在rmq2上declare一个队列test_queue2，生产者连rmq1发布消息到集群的test_queue2队列，假设消费者连rmq3消费test_queue2，rmq1突然down掉，不影响消息消费，但如果rmq2 down掉，这时消费消息报错。这种架构的缺点很明显非高可用，如果保存实体消息的机器down掉不能恢复或未做持久化，消息就丢失。上面的例子实体消息存在rmq2，消费者连接的rmq3，消息怎么传递的呢？当消费者连接rmq3时，rabbitmq会临时在rmq2、rmq3间进行消息传输，rmq3再传递给消费者。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15669015983876.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15669015983876.jpg)
 
 - 镜像模式：把需要的队列做成镜像队列，元数据（queue结构）和实体数据（message）存在于多个节点，属于RabbitMQ的[HA(Highly Available)](https://www.rabbitmq.com/ha.html)方案.与普通模式相比，消息实体会主动在镜像节点之间同步，而不是消费者拉取数据时临时传输。镜像队列是基于普通的集群模式的,所以还是得先配置普通集群,然后才能设置镜像队列。镜像队列设置后，会分一个主节点和多个从节点，如果主节点宕机，从节点会有一个选为主节点，原先的主节点起来后会变为从节点。queue和message虽然会存在所有镜像队列中，但客户端读取时不论物理面连接的主节点还是从节点，都是从主节点读取数据，然后主节点再将queue和message的状态同步给从节点，因此多个客户端连接不同的镜像队列不会产生同一message被多次接受的情况。
 
@@ -933,7 +933,7 @@ Cluster status of node rabbit@rmq2 ...
 ```
 
 rmq1和rmq2在一个集群，rmq1上的用户信息也同步给rmq2了，我们可以在web管理界面上刷新看一看
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15670857248129.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15670857248129.jpg)
 依照上面的步骤添加rmq3到rmq1.至此我们可以写demo验证一下集群普通模式下的元数据和实体消息传递方式，试着让不同节点down掉看看。
 
 #### 5.3.2 配置集群镜像模式
@@ -984,7 +984,7 @@ rabbitmqctl cluster_status
 使用`rabbitmqctl list_queues name pid slave_pids synchronised_slave_pids`命令
 ，其中name是队列名字，pid为master节点，slave_pids返回的数组里都是从节点，synchronised_slave_pids是slave节点同步情况。举个例子，集群(HA)现在有三个队列：hello、hello2、hello3，hello和hello3里没有消息，hello2队列里有6条记录，按照上面的步骤给集群增加一个rmq4节点，镜像队列中默认消息不会主动同步到新节点，这时用上面命令查看可以看到结果:
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15671540122491.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15671540122491.jpg)
 
 很明显hello2消息没有同步到rmq4.
 {% endalert %}
@@ -992,7 +992,7 @@ rabbitmqctl cluster_status
 #### 5.3.3 配置HAProxy
 
 基于上面例子加入HAProxy后画一个整体拓扑图如下：
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/15674979648150.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/15674979648150.jpg)
 
 采用VMware ESXi虚拟出的4台服务器，HAProxy没开新机器，和rabbit@rmq1在一台上。四个节点中2个RAM，两个DISC（如果是3个节点建议2个DISC，1个RAM）。
 
@@ -1086,14 +1086,14 @@ RabbitMQ集群服务地址:192.168.8.131:5678，可以写demo测试下。
 
 如果生产环境使用AWS EC2搭建RabbitMQ集群，可以利用ELB做负载均衡,在TCP层做转发，选择网络负载均衡类型.
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/rabbitmq-elb-flow.png)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/rabbitmq-elb-flow.png)
 
 rabbitmq在生产环境部署，为了安全选择internal类型，不提供对外访问。选择TCP protocol，端口5672。注意选择可用区和子网，rabbitmq机器和elb可用区子网相同。
 
 Target Group的health checks选择tcp，traffic port。
 
 对搭建了rabbitmq的EC2赋予相关端口访问权限。
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/rabbitmq/E05FF76B-4A4C-4626-BFF1-E895E9FAA10D.png)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/rabbitmq/E05FF76B-4A4C-4626-BFF1-E895E9FAA10D.png)
 
 端口相关功能介绍参考<https://www.rabbitmq.com/networking.html>
 

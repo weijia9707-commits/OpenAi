@@ -21,7 +21,7 @@ categories:
 
 昨天下午5.30左右，几个同事反馈git代码无法提交，报502错误。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/kerberods/15550614255551.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/kerberods/15550614255551.jpg)
 
 立即安排了一个运维童鞋排查，本来以为和上次一样gitlab并发数达到上限，改改配置重启下就行，结果从18点到20点一直顺着gitlab502错误这个方向搞了2小时，没有任何进展。由于代码无法提交，gitlab访问不了，发布系统也就不能正常做上线操作，赶紧我也投入了排查。 
 
@@ -31,11 +31,11 @@ categories:
 
 1. 检查系统运行指标，先上服务器上执行`top`，如下：
 
-![981554911843_.pic_hd](https://raw.githubusercontent.com/heyuan110/static-source/master/media/kerberods/981554911843_.pic_hd.jpg)
+![981554911843_.pic_hd](https://raw.githubusercontent.com/*****/static-source/master/media/kerberods/981554911843_.pic_hd.jpg)
 
 粗略一看cpu和内存好像正常，按1切换看每个cpu情况问题来了，居然只有一个cpu0，这台ec2机器有16CPU，接着到aws console上看到这台机器cpu，如下：
 
-![881554911487_.pic_hd](https://raw.githubusercontent.com/heyuan110/static-source/master/media/kerberods/881554911487_.pic_hd.jpg)
+![881554911487_.pic_hd](https://raw.githubusercontent.com/*****/static-source/master/media/kerberods/881554911487_.pic_hd.jpg)
 
 5.30左右cpu突然直接100%了，其实这时脑袋闪了一下有想到是病毒，然后去看了机器的network out/in发现没有突然激增，所以没继续朝这想。随后执行`ps -ef`查看进程，发现居然没有php，java相关进程，开始想是不是aws系统故障（之前有前科）？
 

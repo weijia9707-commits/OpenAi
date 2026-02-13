@@ -221,7 +221,7 @@ categories:
 
 成为自己的核心问题：确定身份，个人愿景
 三环理论：
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/leader_power/15665561987496.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/leader_power/15665561987496.jpg)
 
 把自己热爱的、擅长的、机会的写出来，三个里面交叉的就是我们应该做的事情。
 三环是循环的，可以相互促进转化，重新定义这三环：

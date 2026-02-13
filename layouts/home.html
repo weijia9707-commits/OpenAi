@@ -1,0 +1,50 @@
+{{ define "head" }}
+<style>
+  .home-wrap{max-width:1040px;margin:2.2rem auto 3rem;padding:0 1rem}
+  .hero{background:linear-gradient(135deg,#0f766e 0%,#14b8a6 35%,#0ea5e9 100%);color:#fff;border-radius:20px;padding:2.2rem 1.6rem;box-shadow:0 10px 30px rgba(2,132,199,.22)}
+  .hero h1{margin:0 0 .6rem;font-size:2rem;line-height:1.2}
+  .hero p{margin:0;opacity:.95}
+  .quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:1rem}
+  .quick a{display:block;background:rgba(255,255,255,.14);backdrop-filter: blur(3px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.85rem 1rem;color:#fff;text-decoration:none;font-weight:600}
+  .section-title{margin:1.6rem 0 .8rem;font-size:1.2rem}
+  .post-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+  .post-card{border:1px solid #e6e8eb;border-radius:14px;padding:1rem;background:#fff;transition:.2s}
+  .post-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+  .post-card h3{margin:.1rem 0 .5rem;font-size:1.06rem;line-height:1.35}
+  .post-card p{margin:0;color:#5a6372;font-size:.93rem}
+  .post-card .meta{font-size:.82rem;color:#8a93a3;margin-top:.65rem}
+  .home-foot{margin:2rem 0 1rem;text-align:center;opacity:.8}
+  @media (max-width: 860px){
+    .quick{grid-template-columns:1fr}
+    .post-grid{grid-template-columns:1fr}
+    .hero h1{font-size:1.6rem}
+  }
+</style>
+{{ end }}
+
+{{ define "main" }}
+  <main class="home-wrap">
+    <section class="hero">
+      <h1>weijia0707 AI 知识库</h1>
+      <p>聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。</p>
+      <div class="quick">
+        <a href="/categories/ai使用/">AI使用</a>
+        <a href="/categories/ai教程/">AI教程</a>
+        <a href="/categories/ai工具/">AI工具</a>
+      </div>
+    </section>
+
+    <h2 class="section-title">最新文章</h2>
+    <section class="post-grid">
+      {{ range first 8 (where .Site.RegularPages "Section" "posts") }}
+      <article class="post-card">
+        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+        <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 90 }}{{ end }}</p>
+        <div class="meta">{{ .Date.Format "2006-01-02" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</div>
+      </article>
+      {{ end }}
+    </section>
+
+    <div class="home-foot">{{ partial "footer.html" . }}</div>
+  </main>
+{{ end }}

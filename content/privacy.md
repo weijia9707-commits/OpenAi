@@ -6,6 +6,12 @@ description: "本站隐私政策，说明我们如何收集、使用和保护您
 toc: false
 ---
 
+## 概述
+
+欢迎访问 *****.com（以下简称"本站"）。本隐私政策说明了我们如何收集、使用和保护您在访问本站时的信息。
+
+使用本站即表示您同意本隐私政策中描述的数据处理方式。
+
 ---
 
 ## 信息收集
@@ -29,6 +35,17 @@ toc: false
 您可以通过浏览器设置禁用 Cookie，但这可能影响部分功能的正常使用。
 
 ---
+
+## 第三方服务
+
+本站使用以下第三方服务，这些服务可能会收集您的信息：
+
+### Google Analytics
+
+我们使用 Google Analytics 分析网站流量。Google Analytics 会使用 Cookie 收集匿名的访问数据。
+
+- [Google 隐私政策](https://policies.google.com/privacy)
+- [如何停用 Google Analytics](https://tools.google.com/dlpage/gaoptout)
 
 ### Google AdSense
 
@@ -91,6 +108,15 @@ toc: false
 ## 政策变更
 
 我们可能会不时更新本隐私政策。更新后的政策将在本页面发布，并注明生效日期。
+
+---
+
+## 联系我们
+
+如果您对本隐私政策有任何疑问，请通过以下方式联系我们：
+
+- 邮箱：*****@gmail.com
+- GitHub：[*****](https://github.com/*****)
 
 ---
 

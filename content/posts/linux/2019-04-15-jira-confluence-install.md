@@ -23,7 +23,7 @@ jira和confluence都是Atlassian公司产品。jira是项目与事务跟踪工�
 
 前一篇讲了[挖矿病毒](/posts/linux/2019-04-12-linux-kerberods/)的入侵，决定对那台服务器上相关服务拆分迁移。上面的jira和confluence共用jira账号体系，迁移时两者要注意安装顺序，最后确定的方案：
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15553972819985.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15553972819985.jpg)
 
 ### 1.系统
 
@@ -68,7 +68,7 @@ OpenJDK 64-Bit Server VM (build 25.191-b12, mixed mode)
 
 **b)**下载jira7.3.8破解文件
 
->wget https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/jira-lib-7.3.8.zip
+>wget https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/jira-lib-7.3.8.zip
 
 解压`jira-lib-7.3.8.zip`文件
 
@@ -112,7 +112,7 @@ FLUSH PRIVILEGES;
 
 > ./atlassian-jira-software-7.3.8-x64.bin
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554007889877.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554007889877.jpg)
 
 按照提示键入安装即可。
 如果没有自定义目录，jira的程序和应用数据分表装到了两个目录：
@@ -149,19 +149,19 @@ cp /破解文件目录/mysql-connector-java-5.1.39-bin.jar /opt/atlassian/jira/a
 >sudo /etc/init.d/jira start
 
 按下图向导配置:
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554025003672.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554025003672.jpg)
 
 配置数据库
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554025207183.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554025207183.jpg)
 
 设置应用程序属性
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554025578020.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554025578020.jpg)
 
 生成JIRA使用许可证
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554026788338.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554026788338.jpg)
 
 打开Atlassian官网获取许可证
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554028462386.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554028462386.jpg)
 
 继续下一步配置完邮件(也可先跳过)，选择语言，至此Jira的安装和破解完成。
 
@@ -171,14 +171,14 @@ cp /破解文件目录/mysql-connector-java-5.1.39-bin.jar /opt/atlassian/jira/a
 
 点击右上角的"系统"-"导入导出"-"备份系统"，Jira默认会打开自动备份的功能，备份路径为`/var/atlassian/application-data/jira/export`；入如果没有打开，也可以手动进行备份，如下，可以自定义备份的文件名。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554034483507.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554034483507.jpg)
 
 {% alert info %}
 注意:这里的备份数据不包括附件。
 jira附件都保存到服务器的/var/atlassian/application-data/jira/data/attachments路径下，这里的附件数据需要手动写脚本进行备份。点击右上角的"系统"-"高级"-"附件"就可以看到jira附件的设置。
 {% endalert %}
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554036917962.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554036917962.jpg)
 
 将jira的备份文件jira-backup.zip和attachments.zip文件拷贝到新机器。
 
@@ -190,7 +190,7 @@ jira附件都保存到服务器的/var/atlassian/application-data/jira/data/atta
 
 启动jira服务，点击右上角的"系统"-"导入导出"-"恢复系统"，
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554041476782.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554041476782.jpg)
 
 点击 [复原]开始恢复。
 
@@ -208,7 +208,7 @@ jira附件都保存到服务器的/var/atlassian/application-data/jira/data/atta
 
 **b)**下载mysql链接库和破解工具
 
->wget https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/confluence-crack-tool.zip
+>wget https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/confluence-crack-tool.zip
 
 解压`unzip confluence-crack-tool.zip`可以看到mysql链接库和破解工具confluence_keygen
 
@@ -245,7 +245,7 @@ FLUSH PRIVILEGES;
 
 > ./atlassian-confluence-6.6.12-x64.bin
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554719813856.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554719813856.jpg)
 
 （截图用的6.3.1版本，仅参考）按照提示键入安装即可。（注意第一次确认是否继续，第二次选择安装方式(选1express安装)，第三次是否启动服务）
 如果没有自定义目录，jira的程序和应用数据分表装到了两个目录：
@@ -266,15 +266,15 @@ FLUSH PRIVILEGES;
 >sudo /etc/init.d/confluence stop
 
 设置语言
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554744214183.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554744214183.jpg)
 
 选择产品
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554744447563.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554744447563.jpg)
 
 不要选择任何插件
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554744812861.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554744812861.jpg)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554745162747.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554745162747.jpg)
 
 到这一步，**记录服务器ID**,不要关掉页面
 
@@ -292,7 +292,7 @@ FLUSH PRIVILEGES;
 
 2. 运行confluence_keygen.jar(mac里有java环境直接双击打开，win和linux可用java命令打开)，填好ServerID，其他随便填。点击gen生成key并拷贝出来记录好。点击patch，选择刚重命名为atlassian-extras-2.4.jar的文件进行破解
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555684266000.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555684266000.jpg)
 
 3. 破解完成，将破解的文件atlassian-extras-2.4.jar回传到服务器
 
@@ -314,13 +314,13 @@ FLUSH PRIVILEGES;
 
 回到输入key的界面，输入上面记录的key，点击下一步 
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555689505079.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555689505079.jpg)
 
 然后进行配置数据库：我选择的是我自己的数据库，这里需要对数据库进行一些配置。如果选择内置的话，就是使用嵌入式的数据库，不用配置什么东西，等一段（挺长的）时间，就好了。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555689819609.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555689819609.jpg)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555690078229.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555690078229.jpg)
 
 在测试成功后，下一步比较慢，需要往数据库写好多表。
 
@@ -329,21 +329,21 @@ FLUSH PRIVILEGES;
 连接数据库的配置文件：/var/atlassian/application-data/confluence/confluence.cfg.xml。
 
 推荐使用示范站点，先熟悉Confluence，然后再自行进行设置
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555691635256.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555691635256.jpg)
 
 可以选择confluence中管理用户，也可选择jira链接，不过强烈建议选第一个，后面要链接再自己取加，
 这个地方的坑一会在最后面记录。因为我们是基于jira用户，所以选择了第二个。
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555691997258.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555691997258.jpg)
 
 填完信息开始同步jira用户
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15554790883441.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15554790883441.jpg)
 
 （我之前在这一步也失败过,所以我才说建议先创建内部账号。。。）
 
 如果同步完成没报错，继续下一步配置完邮件(也可先跳过)，选择语言，至此Jira的安装和破解完成。
 
 可以打开http://ip:port/admin/license.action查看破解情况
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555696667314.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555696667314.jpg)
 
 
 ### 5.老机器confluence数据备份，新机器confluence数据恢复
@@ -351,13 +351,13 @@ FLUSH PRIVILEGES;
 **a)**管理员账号登录老机器confluence
 
 点击右上角的"一般配置"-"每日备份管理"，如下图（默认配置）：
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555697603764.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555697603764.jpg)
 
 默认每天会自动备份一个zip打包的数据，存放在服务器的/var/atlassian/application-data/confluence/backups路径下。还可以点击"编辑"进行自定义。
 
 默认每天2点左右都会整体备份一次！恢复或迁移的时候，可以直接用这里的zip打包数据进行恢复。除此之外，还可以点击"一般配置"-"备份与还原"里面的备份进行手动备份。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555698570656.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555698570656.jpg)
 
 {% alert info %}
 注意:最好将附件也从原机器备份过来。附件都保存在服务器的/var/atlassian/application-data/confluence/attachments路径下。
@@ -373,7 +373,7 @@ FLUSH PRIVILEGES;
 
 启动confluence服务，点击"一般配置"-"备份与还原"里面的恢复进行数据恢复，
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15553944919153/15555701266334.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15553944919153/15555701266334.jpg)
 
 如果文件放到restore目录下了，会显示在图中列表里，选择文件，点击 [还原]开始恢复。
 

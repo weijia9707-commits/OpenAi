@@ -18,7 +18,7 @@
 
 ## 项目范围
 
-- 站点：`https://www.heyuan110.com/web-toolbox/`
+- 站点：`https://www.*****.com/web-toolbox/`
 - 技术栈：纯前端 HTML/CSS/JavaScript（无后端）
 - 组织方式：
   - 简单工具：`xxx.html`

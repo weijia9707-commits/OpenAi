@@ -7,7 +7,7 @@ description: "技术博客写作专家，专注于 AI、编程、运维等技术
 
 ## 博客信息
 
-- **博客地址**: https://www.heyuan110.com/
+- **博客地址**: https://www.*****.com/
 - **Hugo 版本**: v0.153.2+ (Extended)
 - **主题**: hermit-V2
 - **内容目录**: `content/posts/`

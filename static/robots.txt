@@ -1,4 +1,4 @@
-# Robots.txt for www.heyuan110.com
+# Robots.txt for www.*****.com
 # 优化版本 - 支持搜索引擎和 AI 爬虫 (GEO - Generative Engine Optimization)
 # 更新日期: 2025-01
 
@@ -160,11 +160,11 @@ Disallow: /categories/page/
 # ============================================
 # Sitemaps
 # ============================================
-Sitemap: https://www.heyuan110.com/sitemap.xml
-Sitemap: https://www.heyuan110.com/web-toolbox/sitemap.xml
+Sitemap: https://www.*****.com/sitemap.xml
+Sitemap: https://www.*****.com/web-toolbox/sitemap.xml
 
 # ============================================
 # LLMs.txt - AI 爬虫专用信息文件
 # 规范: https://llmstxt.org/
 # ============================================
-LLMs: https://www.heyuan110.com/llms.txt
+LLMs: https://www.*****.com/llms.txt

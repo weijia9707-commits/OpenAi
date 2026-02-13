@@ -114,7 +114,7 @@ docker build 的工作原理：Docker 在运行时分为 Docker 引擎 (也就�
 
 这并不是要复制执行`docker build`命令所在的目录下的 package.json ，不是复制Dockerfile所在目录下的package.json ，而是复制 上下文(context)目录下的package.json。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15576404978427.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15576404978427.jpg)
 
 docker build还支持从git库，tar压缩包，标准输入等方式构建镜像。
 
@@ -158,7 +158,7 @@ Docker不是虚拟机，容器就是进程。既然是进程，那么在启动�
 Docker 不是虚拟机，容器中的应用都应该以前台执行，而不是像虚拟机、物理机 里面那样，用 upstart/systemd 去启动后台服务，容器内没有后台服务的概念。
 
 CMD 指令的格式
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577263039629.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577263039629.jpg)
 
 如果使用 shell 格式的话，实际的命令会被包装为 sh -c 的参数的形式进行 执行。
 
@@ -175,14 +175,14 @@ ENTRYPOINT和CMD一样都是在指定容器启动程序及参数，不过比CMD�
 既生亮何生瑜，为什么有了CMD又有ENTRYPOINT呢？
 
 1. ENTRYPOINT可以让镜像变成像命令一样使用
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577305262576.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577305262576.jpg)
 
 假如我们使用 docker build -t myip . 来构建镜像的话，如果我们需要查询当 前公网 IP，只需要执行:`docker run myip`
 那如果要在后面加-I参数呢，用`docker run myip -I`会报错，因为跟在镜像后面的是command，运行时会替换默认command，显然单独一个-I无法运行。
 
 那如果把CMD换成ENTRYPOINT会怎样呢
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577306857517.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577306857517.jpg)
 
 再执行`docker run myip -I`不会报错，因为当ENTRYPOINT存在后，CMD 的内容将会作为参数传给ENTRYPOINT ，而这里-I就是新的CMD.
 
@@ -192,18 +192,18 @@ ENTRYPOINT和CMD一样都是在指定容器启动程序及参数，不过比CMD�
 
 - ENV 设置环境变量
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577308032517.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577308032517.jpg)
 
 设置环境变量而已，无论是后面的其它指令，如 RUN ，还 是运行时的应用，都可以直接使用这里定义的环境变量。
 
 例如node镜像的dockerfile:
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577391077696.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577391077696.jpg)
 
 在这里先定义了环境变量 NODE_VERSION ，其后的 RUN 这层里，多次使用$NODE_VERSION 来进行操作定制。可以看到，将来升级镜像构建版本的时候，只
 需要更新$NODE_VERSION即可，Dockerfile 构建维护变得更轻松了。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577398706795.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577398706795.jpg)
 
 - ARG 构建参数
 
@@ -257,17 +257,17 @@ RUN echo "hello" > world.txt
 
 - USER 指定当前用户
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577429025013.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577429025013.jpg)
 
 - HEALTHCHECK 健康检查
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577489951500.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577489951500.jpg)
 
 HEALTHCHECK指令告诉 Docker 应该如何进行判断容器的状态是否正常
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577490221766.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577490221766.jpg)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15577490365000.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15577490365000.jpg)
 
 命令的返回值决定了该次健康检查的成功与否，0成功，1失败，2保留。
 
@@ -369,7 +369,7 @@ g. 执行完毕后容器被终止
 
 - 导出容器
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15579916274906.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15579916274906.jpg)
 
 - 导入容器快照
 
@@ -634,21 +634,21 @@ PING db (172.17.0.9) 56(84) bytes of data.
 
 当 Docker 启动时，会自动在主机上创建一个 docker0 虚拟网桥，实际上是 Linux 的一个 bridge，可以理解为一个软件交换机。它会在挂载到它的网口之间进 行转发。
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15580787948502.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15580787948502.jpg)
 
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15580788457994.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15580788457994.jpg)
 
 
 从网络架构的角度来看，所有的容器通过本地主机的网桥接口相互通信，就像物理机器通过物理交换机通信一样。
 
 一些要熟悉的概念：
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15580795828187.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15580795828187.jpg)
 
 ## 14. Docker基本架构
 
- ![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15575697047773/15580802323092.jpg)
+ ![](https://raw.githubusercontent.com/*****/static-source/master/media/15575697047773/15580802323092.jpg)
 
 Docker 采用了 C/S架构，包括客户端和服务端。 Docker daemon 作为服务端接受 来自客户的请求，并处理这些请求(创建、运行、分发容器)。 客户端和服务端既 可以运行在一个机器上，也可通过 socket 或者 RESTful API 来进行通信。
 

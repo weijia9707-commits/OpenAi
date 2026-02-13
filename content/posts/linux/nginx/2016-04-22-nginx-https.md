@@ -26,13 +26,13 @@ categories:
 ```nginx
 
 server {
-    server_name heyuan110.com;
-    rewrite ^/(.*) http://www.heyuan110.com/$1 permanent;
+    server_name *****.com;
+    rewrite ^/(.*) http://www.*****.com/$1 permanent;
 }
 
 server {
     listen       80;
-    server_name  www.heyuan110.com;
+    server_name  www.*****.com;
 
     gzip on;
     gzip_min_length 1k;
@@ -91,7 +91,7 @@ server {
 
 server {
     listen       443 ssl;
-    server_name  www.heyuan110.com;
+    server_name  www.*****.com;
 
     access_log  /var/log/nginx/sslaccess.log;
     error_log   /var/log/nginx/sslerror.log;

@@ -1,8 +1,8 @@
+baseURL = "https://weijia0707.com/"
 languageCode = "zh-hans"
 defaultContentLanguage = "zh-hans"
-title = "weijia"
+title = "weijia0707 AI 知识库"
 theme = "hermit-V2"
-googleAnalytics = "G-CT8E5N460D"
 
 # ============================================
 # SEO / Indexing 配置
@@ -15,11 +15,6 @@ enableGitInfo = true
 
 # 摘要长度
 summaryLength = 150
-
-# GA4
-[services]
-  [services.googleAnalytics]
-    id = 'G-CT8E5N460D'
 
 # ============================================
 # Sitemap 配置 - SEO 优化
@@ -84,15 +79,20 @@ summaryLength = 150
 # ============================================
 [params]
   # AI 主定位：一句话讲清楚你是什么
-  description = "wj 的 AI 实战与工程笔记：聚焦大模型、AI Agent、RAG、Prompt 工程与工程化落地（旧的 Java/Go/Docker/Linux 文章仍保留归档）。"
-  keywords = "AI,AI Agent,LLM,RAG,Prompt Engineering,Claude Code,AI编程,大模型,Agent工程,系统设计,后端架构,Java,Go,Docker,Linux"
+  description = "weijia0707 的 AI 实战与工程笔记：聚焦 AI 使用、教程与工具落地。"
+  keywords = "AI使用,AI教程,AI工具,AI Agent,LLM,Prompt"
   images = ["/images/og-image.png"]
 
   # 主题配色
   themeColor = "#494f5c"
   accentColor = "#018472"
 
-  homeSubtitle = "专注大模型、AI Agent、工程落地与真实案例"
+  # 作者信息
+  [params.author]
+    name = "weijia0707"
+    about = "/about/"
+
+  homeSubtitle = "专注 AI 使用、教程与工具实践"
 
   # 功能开关
   footerHideThemeName = true
@@ -125,6 +125,11 @@ summaryLength = 150
     NumDateShort = "2006-01-02"
     NumDateLong = "2006-01-02 15:04 -0700"
 
+  # 社交链接
+  [[params.socialLinks]]
+    name = "github"
+    url = "https://github.com/weijia9707-commits"
+
   [[params.socialLinks]]
     name = "rss"
     url = "/index.xml"
@@ -135,14 +140,19 @@ summaryLength = 150
 [menu]
   # AI 两大分类
   [[menu.main]]
-    name = "AI原理"
-    url = "categories/ai原理/"
+    name = "AI使用"
+    url = "categories/ai使用/"
     weight = 10
 
   [[menu.main]]
-    name = "AI实战"
-    url = "categories/ai实战/"
+    name = "AI教程"
+    url = "categories/ai教程/"
     weight = 11
+
+  [[menu.main]]
+    name = "AI工具"
+    url = "categories/ai工具/"
+    weight = 12
 
   # 通用入口（老内容仍可通过"文章/标签"访问）
   [[menu.main]]
@@ -155,11 +165,6 @@ summaryLength = 150
     url = "tags/"
     weight = 21
 
-  # 工具箱
-  [[menu.main]]
-    name = "工具箱"
-    url="web-toolbox/"
-    weight = 30
 
   # 关于
   [[menu.main]]

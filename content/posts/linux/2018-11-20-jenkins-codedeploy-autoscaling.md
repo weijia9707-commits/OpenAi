@@ -44,20 +44,20 @@ Auto Scaling启动配置：EC2实例启动时的模板(指定实例类型，密�
 
 https://console.aws.amazon.com/iam/
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426812146538.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426812146538.jpg)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426812429125.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426812429125.jpg)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426812509358.jpg)
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426812612000.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426812509358.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426812612000.jpg)
 
 2)、为Auto Scaling 创建启动配置(下图为已经设置好的启动配置模板)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426813227709.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426813227709.jpg)
 
 3)、为EC2实例启动时添加必要的用户数据(主要为应用程序事先搭建好基础环境)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426814249267.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426814249267.jpg)
 
 脚本如下：
 
@@ -156,15 +156,15 @@ echo "Install finished!"
 
 备注：具体在创建实例的时候在"配置详细信息"选项卡里面进行添加
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426815907986.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426815907986.jpg)
 
 4)、创建Auto Scaling 组 (下图为已经创建好的Auto Scaling组)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426816027339.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426816027339.jpg)
 
 Auto Scaling结合ELB使用
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426816334272.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426816334272.jpg)
 
 此时aws auto scaling创建完成，随后Auto Scaling会根据给定的按需实例设置启动一台EC2实例
 
@@ -241,7 +241,7 @@ EC2/本地计算平台上的蓝/绿部署：部署组中的实例(原始环境)�
 
 停止部署组中每个实例上的应用程序，安装最新的应用程序修订版，然后启动和验证应用程序的新版本。您可以使用负载均衡器，以便在部署期间取消注册每个实例，然后在部署完成后让其重新提供服务
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426818126546.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426818126546.jpg)
 
 1)、在本地开发计算机或类似环境上创建可部署的内容，然后添加application specification file (AppSpec file)；AppSpec file对AWS CodeDeploy是唯一的；它定义了AWS CodeDeploy执行的部署操作；将可部署的内容和AppSpec file捆绑成一个存档文件，然后将其上传到Amazon S3存储桶或GitHub存储库；此存档文件称为应用程序修订(简称修订)
 
@@ -371,29 +371,29 @@ hooks:                                               # 定义CodeDeploy各阶段
 
 appspec.yml部署生命周期：
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426821571744.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426821571744.jpg)
 
 部署生命周期说明
 
 部署会经过一组预定义阶段，称为部署生命周期事件。部署生命周期事件可让您将代码作为部署的一部分运行
 
 下表以执行顺序列出了目前支持的各种不同的部署生命周期事件，以及您可能想使用它们的时间示例
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426821846445.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426821846445.jpg)
 
 In-place deployments(就地部署)
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426822011681.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426822011681.jpg)
 
 Blue/green deployments(蓝绿部署生命周期)
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426822146656.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426822146656.jpg)
 
 蓝绿部署流量切换过程
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426822261108.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426822261108.jpg)
 
 CodeDeploy部署方式：
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426822356524.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426822356524.jpg)
 
 CodeDeploy与AutoScaling集成原理 https://aws.amazon.com/cn/blogs/devops/under-the-hood-aws-codedeploy-and-auto-scaling-integration/
 
@@ -401,7 +401,7 @@ CodeDeploy与AutoScaling集成原理 https://aws.amazon.com/cn/blogs/devops/unde
 
 使用Auto Scaling配置CodeDeploy非常简单。只需转到AWS CodeDeploy控制台，然后在部署组配置中指定Auto Scaling组名称
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426823243690.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426823243690.jpg)
 
 此外，还需要：
 
@@ -413,7 +413,7 @@ CodeDeploy与AutoScaling集成原理 https://aws.amazon.com/cn/blogs/devops/unde
 
 事件中的Auto Scaling和CodeDeploy之间的通信基于Auto Scaling生命周期挂钩；建议不要尝试手动设置或修改这些挂钩，因为CodeDeploy可以为您执行此操作；Auto Scaling生命周期挂钩告诉Auto Scaling在实例即将更改为某些Auto Scaling生命周期状态时发送通知；CodeDeploy仅侦听有关已启动且即将放入InService的实例的通知；此状态发生在EC2实例完成引导之后，但在它被放置到您已配置的任何Elastic Load Balancing负载平衡器之后；Auto Scaling在继续处理实例之前等待CodeDeploy的成功响应
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426823485910.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426823485910.jpg)
 
 挂钩是Auto Scaling组配置的一部分；您可以使用describe-lifecycle-hooks CLI命令查看Auto Scaling组上安装的挂钩列表；创建或修改部署组以包含Auto Scaling组时，CodeDeploy将执行以下操作：
 
@@ -455,7 +455,7 @@ CodeDeploy与AutoScaling集成原理 https://aws.amazon.com/cn/blogs/devops/unde
 
 2)、如果部署出现问题，CodeDeploy将立即告知Auto Scaling ABANDON实例启动。Auto Scaling终止实例并使用新实例重新启动该过程
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426823677871.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426823677871.jpg)
 
 最佳实践
 1)、设置或修改Auto Scaling生命周期挂钩 -不要手动设置或修改Auto Scaling挂钩，因为配置错误可能会破坏CodeDeploy集成(备注：在CodeDeploy中配置添加AutoScaling组，生命周期挂钩就已经建立)
@@ -474,7 +474,7 @@ CodeDeploy与AutoScaling集成原理 https://aws.amazon.com/cn/blogs/devops/unde
 
 需要Jenkins安装codedeploy插件，插件截图：
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426825748300.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426825748300.jpg)
 
 
 ### Jenkins关于项目配置目录规则
@@ -581,15 +581,15 @@ AWS codedeploy采取蓝绿部署，无状态部署，所以每次修改配置后
 
 ### 构建截图
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426828768145.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426828768145.jpg)
 
 
 ### Jenkins与codedeploy结合部署文件上传至指定的S3存储桶
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426829980489.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426829980489.jpg)
 
 
-![](https://raw.githubusercontent.com/heyuan110/static-source/master/media/15426810514625/15426830240171.jpg)
+![](https://raw.githubusercontent.com/*****/static-source/master/media/15426810514625/15426830240171.jpg)
 
 
 ### 发布流程
