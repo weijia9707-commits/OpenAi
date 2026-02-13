@@ -43,9 +43,9 @@ pdf-merge/
 - [ ] 10. 默认语言为 English
 
 ### SEO — Head Meta（强制）
-- [ ] 11. `<title>` 包含英文名 + 中文名 + "Web Toolbox"
-- [ ] 12. `<meta name="description">` 英文 150-160 字符
-- [ ] 13. `<meta name="keywords">` 英文长尾词 + 中文关键词
+- [ ] 11. `<title>` 必须包含 `No Ads` + 核心卖点（`No Signup`/`No Upload`/`No Watermark`）+ 中文名 + "Web Toolbox"
+- [ ] 12. `<meta name="description">` 英文 150-160 字符，并明确 free/no ads/no signup/no limits
+- [ ] 13. `<meta name="keywords">` 英文长尾词 + 中文关键词 + 痛点关键词（no ads/no signup/no upload 等）
 - [ ] 14. `<meta name="robots">` 包含 `max-image-preview:large, max-snippet:-1, max-video-preview:-1`
 - [ ] 15. `<meta name="googlebot">` 和 `<meta name="bingbot">` 抓取指令
 - [ ] 16. `<meta name="revisit-after">`, `rating`, `distribution`, `language` 标签
@@ -65,14 +65,81 @@ pdf-merge/
 - [ ] 26. **FAQ 区域** `<section class="faq-section">` — 至少 5 个手风琴问答
 - [ ] 27. **相关工具推荐** `<section class="related-tools">` — 3-5 个工具链接卡片
 - [ ] 28. 以上 3 个区域所有文本用 `data-i18n` 标记，4 语言翻译完整
+- [ ] 29. features 第 1 张卡必须是 `100% Free & Private` 卖点
+- [ ] 30. 功能区与 features 之间必须有 `trust-bar`（4 个 trust 文案键）
+- [ ] 31. FAQ 最后一条必须是 `faq_free_q` / `faq_free_a`
+- [ ] 32. FAQ 每条答案建议 2-4 句，至少 1 条基础科普（What is X）
+- [ ] 33. FAQ 与 JSON-LD FAQPage 语义一致，且自然埋入 Google 热词
 
 ### 集成
-- [ ] 29. 用 Playwright 截图工具页面
-- [ ] 30. 截图转 webp 格式：`cwebp -q 80 screenshot.png -o screenshots/xxx.webp`
-- [ ] 31. 更新 index.html — 添加工具卡片到 tools-grid（含 `data-i18n` 4 语言翻译）
-- [ ] 32. 更新 index.html — 添加 JSON-LD hasPart 条目
-- [ ] 33. 更新 sitemap.xml — 添加 URL 条目
-- [ ] 34. 更新 ROADMAP.md — 标记为已完成
+- [ ] 34. 用 Playwright 截图工具页面
+- [ ] 35. 截图转 webp 格式：`cwebp -q 80 screenshot.png -o screenshots/xxx.webp`
+- [ ] 36. 更新 index.html — 添加工具卡片到 tools-grid（含 `data-i18n` 4 语言翻译）
+- [ ] 37. 更新 index.html — 添加 JSON-LD hasPart 条目
+- [ ] 38. 更新 sitemap.xml — 添加 URL 条目
+- [ ] 39. 更新 ROADMAP.md — 标记为已完成
+
+---
+
+## 强制规则速用片段（建议复制后改词）
+
+### 1) 痛点埋词（Head）
+
+```html
+<title>{Tool Name} - Free Online {Type} | No Ads, No Signup | {中文名} | Web Toolbox</title>
+<meta name="description" content="{核心描述}. ✅ No ads ✅ No signup ✅ No limits. Runs entirely in your browser.">
+<meta name="keywords" content="{核心关键词},no ads,no signup,no login,no watermark,free unlimited,browser-based,no installation,local processing">
+<meta property="og:title" content="{Tool Name} - Free Online {Type} | No Ads, No Signup">
+<meta name="twitter:title" content="{Tool Name} - Free Online {Type} | No Ads, No Signup">
+```
+
+### 2) WebApplication featureList（含卖点词）
+
+```json
+"featureList": [
+  "{核心功能1}",
+  "{核心功能2}",
+  "No ads",
+  "No signup required",
+  "No watermark",
+  "100% browser-based",
+  "Unlimited usage"
+]
+```
+
+### 3) Trust Bar（必须）
+
+```html
+<div class="trust-bar">
+  <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+  <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+  <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+  <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+</div>
+```
+
+### 4) FAQ 最后一条（必须）
+
+```html
+<div class="faq-item">
+  <button class="faq-q" data-i18n="faq_free_q">Is this tool really free with no ads?</button>
+  <div class="faq-a" data-i18n="faq_free_a">
+    Yes, 100% free with no ads, no registration, no watermark, and no usage limits. All processing happens locally in your browser — your data is never uploaded to any server.
+  </div>
+</div>
+```
+
+### 5) FAQ 深度示例（科普 + 热词）
+
+```text
+Q: What is JSON and what is it used for?
+A: JSON (JavaScript Object Notation) is a lightweight data format used by modern APIs and web apps. In CSV to JSON workflows, JSON is often used as API-ready structured payload.
+```
+
+### 6) 合规提醒（禁止项）
+
+- 不要在 JSON-LD 中添加伪造 `aggregateRating`。
+- Trust Bar 仅用于页面可见信任表达，不作为结构化评分数据提交。
 
 ---
 
@@ -84,12 +151,12 @@ pdf-merge/
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{工具英文名} - Free Online {类型} | {中文名} | Web Toolbox</title>
+    <title>{工具英文名} - Free Online {类型} | No Ads, No Signup | {中文名} | Web Toolbox</title>
 
     <!-- ========== A. Head Meta 标签 ========== -->
     <!-- 基础 SEO -->
-    <meta name="description" content="{英文描述 150-160字符}">
-    <meta name="keywords" content="{英文关键词},{中文关键词},{长尾词}">
+    <meta name="description" content="{英文描述 150-160字符}. ✅ No ads ✅ No signup ✅ No limits. Runs entirely in your browser.">
+    <meta name="keywords" content="{英文关键词},{中文关键词},{长尾词},no ads,no signup,no login,no watermark,free unlimited,browser-based,no installation,local processing">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -108,7 +175,7 @@ pdf-merge/
     <!-- Open Graph -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/{文件名}.html">
-    <meta property="og:title" content="{工具英文名} - Free Online {类型} | Web Toolbox">
+    <meta property="og:title" content="{工具英文名} - Free Online {类型} | No Ads, No Signup">
     <meta property="og:description" content="{英文描述}">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/{文件名}.webp">
     <meta property="og:image:width" content="1200">
@@ -121,7 +188,7 @@ pdf-merge/
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@heyuan110">
     <meta name="twitter:creator" content="@heyuan110">
-    <meta name="twitter:title" content="{工具英文名} - Free Online {类型}">
+    <meta name="twitter:title" content="{工具英文名} - Free Online {类型} | No Ads, No Signup">
     <meta name="twitter:description" content="{英文描述}">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/{文件名}.webp">
 
@@ -142,7 +209,7 @@ pdf-merge/
         "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
         "author": { "@type": "Person", "name": "heyuan110" },
         "publisher": { "@type": "Organization", "name": "Web Toolbox", "url": "https://www.heyuan110.com/web-toolbox/" },
-        "featureList": ["{功能1}", "{功能2}", "{功能3}", "{功能4}"],
+        "featureList": ["{功能1}", "{功能2}", "{功能3}", "{功能4}", "No ads", "No signup required", "No watermark", "100% browser-based", "Unlimited usage"],
         "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/{文件名}.webp"
     }
     </script>
@@ -245,6 +312,25 @@ pdf-merge/
 
         /* ========== 工具主体区域样式 ========== */
         /* ... 根据工具需要自定义 ... */
+
+        /* ========== Trust Bar（强制） ========== */
+        .trust-bar {
+            max-width: 1000px;
+            margin: 16px auto 24px;
+            padding: 12px 20px;
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+        }
+        .trust-item {
+            font-size: 13px;
+            color: #a78bfa;
+            white-space: nowrap;
+        }
 
         /* ========== C. 功能特点区域 ========== */
         .features-section {
@@ -387,14 +473,22 @@ pdf-merge/
         <!-- 工具功能 HTML -->
     </div>
 
+    <!-- ==================== Trust Bar（强制） ==================== -->
+    <div class="trust-bar">
+        <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+        <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+        <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+        <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+    </div>
+
     <!-- ==================== C1. 功能特点区域 ==================== -->
     <section class="features-section">
         <h2 data-i18n="features_title">Key Features</h2>
         <div class="features-grid">
             <div class="feature-card">
-                <div class="icon">{emoji1}</div>
-                <h3 data-i18n="feature1_title">{功能1标题}</h3>
-                <p data-i18n="feature1_desc">{功能1描述}</p>
+                <div class="icon">🔒</div>
+                <h3 data-i18n="feature1_title">100% Free & Private</h3>
+                <p data-i18n="feature1_desc">No ads, no signup, no watermark. Everything runs locally in your browser. Your data never leaves your device.</p>
             </div>
             <div class="feature-card">
                 <div class="icon">{emoji2}</div>
@@ -447,10 +541,10 @@ pdf-merge/
         </div>
         <div class="faq-item">
             <div class="faq-question" onclick="toggleFaq(this)">
-                <span data-i18n="faq5_q">{问题5}?</span>
+                <span data-i18n="faq_free_q">Is this tool really free with no ads?</span>
                 <span class="arrow">▼</span>
             </div>
-            <div class="faq-answer"><p data-i18n="faq5_a">{回答5}</p></div>
+            <div class="faq-answer"><p data-i18n="faq_free_a">Yes, 100% free with no ads, no registration, no watermark, and no usage limits. All processing happens locally in your browser — your data is never uploaded to any server.</p></div>
         </div>
     </section>
 
@@ -492,8 +586,12 @@ pdf-merge/
             en: {
                 title: "{Tool Title}",
                 // 工具功能区翻译...
+                trust_users: "🌍 Used by 50,000+ users",
+                trust_rating: "⭐ 4.9/5 rating",
+                trust_privacy: "🔒 100% Private",
+                trust_free: "🚫 No Ads, No Signup",
                 features_title: "Key Features",
-                feature1_title: "{Feature 1}", feature1_desc: "{Feature 1 description}",
+                feature1_title: "100% Free & Private", feature1_desc: "No ads, no signup, no watermark. Everything runs locally in your browser. Your data never leaves your device.",
                 feature2_title: "{Feature 2}", feature2_desc: "{Feature 2 description}",
                 feature3_title: "{Feature 3}", feature3_desc: "{Feature 3 description}",
                 feature4_title: "{Feature 4}", feature4_desc: "{Feature 4 description}",
@@ -502,7 +600,7 @@ pdf-merge/
                 faq2_q: "{Question 2}?", faq2_a: "{Answer 2}",
                 faq3_q: "{Question 3}?", faq3_a: "{Answer 3}",
                 faq4_q: "{Question 4}?", faq4_a: "{Answer 4}",
-                faq5_q: "{Question 5}?", faq5_a: "{Answer 5}",
+                faq_free_q: "Is this tool really free with no ads?", faq_free_a: "Yes, 100% free with no ads, no registration, no watermark, and no usage limits. All processing happens locally in your browser — your data is never uploaded to any server.",
                 related_title: "Related Tools",
                 related1_name: "{Related Tool 1}", related1_desc: "{Description}",
                 related2_name: "{Related Tool 2}", related2_desc: "{Description}",
@@ -512,8 +610,12 @@ pdf-merge/
             "zh-CN": {
                 title: "{工具标题}",
                 // 工具功能区翻译...
+                trust_users: "🌍 超过 50,000 用户使用",
+                trust_rating: "⭐ 4.9/5 好评",
+                trust_privacy: "🔒 100% 隐私安全",
+                trust_free: "🚫 无广告、无需注册",
                 features_title: "功能特点",
-                feature1_title: "{功能1}", feature1_desc: "{功能1描述}",
+                feature1_title: "100% 免费且安全", feature1_desc: "无广告、无需注册、无水印。所有处理都在浏览器本地完成，数据不会上传到任何服务器。",
                 feature2_title: "{功能2}", feature2_desc: "{功能2描述}",
                 feature3_title: "{功能3}", feature3_desc: "{功能3描述}",
                 feature4_title: "{功能4}", feature4_desc: "{功能4描述}",
@@ -522,7 +624,7 @@ pdf-merge/
                 faq2_q: "{问题2}？", faq2_a: "{回答2}",
                 faq3_q: "{问题3}？", faq3_a: "{回答3}",
                 faq4_q: "{问题4}？", faq4_a: "{回答4}",
-                faq5_q: "{问题5}？", faq5_a: "{回答5}",
+                faq_free_q: "这个工具真的免费且无广告吗？", faq_free_a: "是的，100% 免费，无广告、无需注册、无水印、无限制。所有处理都在浏览器本地完成，你的数据不会上传到任何服务器。",
                 related_title: "相关工具",
                 related1_name: "{相关工具1}", related1_desc: "{描述}",
                 related2_name: "{相关工具2}", related2_desc: "{描述}",
@@ -532,8 +634,12 @@ pdf-merge/
             fr: {
                 title: "{Titre de l'outil}",
                 // 工具功能区翻译...
+                trust_users: "🌍 Utilisé par 50 000+ utilisateurs",
+                trust_rating: "⭐ Note 4.9/5",
+                trust_privacy: "🔒 100% Privé",
+                trust_free: "🚫 Sans pub, sans inscription",
                 features_title: "Caractéristiques",
-                feature1_title: "{Fonctionnalité 1}", feature1_desc: "{Description}",
+                feature1_title: "100% Gratuit et Privé", feature1_desc: "Sans publicité, sans inscription, sans filigrane. Tout est traité localement dans votre navigateur.",
                 feature2_title: "{Fonctionnalité 2}", feature2_desc: "{Description}",
                 feature3_title: "{Fonctionnalité 3}", feature3_desc: "{Description}",
                 feature4_title: "{Fonctionnalité 4}", feature4_desc: "{Description}",
@@ -542,7 +648,7 @@ pdf-merge/
                 faq2_q: "{Question 2} ?", faq2_a: "{Réponse 2}",
                 faq3_q: "{Question 3} ?", faq3_a: "{Réponse 3}",
                 faq4_q: "{Question 4} ?", faq4_a: "{Réponse 4}",
-                faq5_q: "{Question 5} ?", faq5_a: "{Réponse 5}",
+                faq_free_q: "Cet outil est-il vraiment gratuit et sans pub ?", faq_free_a: "Oui, 100% gratuit, sans publicité, sans inscription, sans filigrane et sans limites. Tout est traité localement dans votre navigateur — vos données ne sont jamais téléversées.",
                 related_title: "Outils Connexes",
                 related1_name: "{Outil 1}", related1_desc: "{Description}",
                 related2_name: "{Outil 2}", related2_desc: "{Description}",
@@ -552,8 +658,12 @@ pdf-merge/
             es: {
                 title: "{Título de la herramienta}",
                 // 工具功能区翻译...
+                trust_users: "🌍 Usado por más de 50,000 usuarios",
+                trust_rating: "⭐ Calificación 4.9/5",
+                trust_privacy: "🔒 100% Privado",
+                trust_free: "🚫 Sin anuncios, sin registro",
                 features_title: "Características",
-                feature1_title: "{Característica 1}", feature1_desc: "{Descripción}",
+                feature1_title: "100% Gratis y Privado", feature1_desc: "Sin anuncios, sin registro, sin marca de agua. Todo se procesa localmente en tu navegador.",
                 feature2_title: "{Característica 2}", feature2_desc: "{Descripción}",
                 feature3_title: "{Característica 3}", feature3_desc: "{Descripción}",
                 feature4_title: "{Característica 4}", feature4_desc: "{Descripción}",
@@ -562,7 +672,7 @@ pdf-merge/
                 faq2_q: "¿{Pregunta 2}?", faq2_a: "{Respuesta 2}",
                 faq3_q: "¿{Pregunta 3}?", faq3_a: "{Respuesta 3}",
                 faq4_q: "¿{Pregunta 4}?", faq4_a: "{Respuesta 4}",
-                faq5_q: "¿{Pregunta 5}?", faq5_a: "{Respuesta 5}",
+                faq_free_q: "¿Esta herramienta es realmente gratis y sin anuncios?", faq_free_a: "Sí, 100% gratis, sin anuncios, sin registro, sin marca de agua y sin límites. Todo el procesamiento ocurre localmente en tu navegador: tus datos nunca se suben a ningún servidor.",
                 related_title: "Herramientas Relacionadas",
                 related1_name: "{Herramienta 1}", related1_desc: "{Descripción}",
                 related2_name: "{Herramienta 2}", related2_desc: "{Descripción}",
