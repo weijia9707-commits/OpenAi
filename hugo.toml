@@ -151,7 +151,7 @@ summaryLength = 150
 
   [[menu.main]]
     name = "AI工具"
-    url = "categories/ai工具/"
+    url = "web-toolbox/"
     weight = 12
 
   [[menu.main]]
