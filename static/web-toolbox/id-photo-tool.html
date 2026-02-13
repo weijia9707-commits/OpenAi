@@ -612,9 +612,9 @@
         <!-- 功能特点区块 -->
         <section class="features-section" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px; margin-bottom: 24px;">
             <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;">
-                <div style="font-size: 2rem; margin-bottom: 12px;">📐</div>
-                <h3 style="font-size: 1rem; margin-bottom: 8px; color: var(--text);" data-i18n="featureMultiSize">Multiple Sizes</h3>
-                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="featureMultiSizeDesc">Supports 1-inch, 2-inch, passport and other common ID photo sizes to meet all document requirements</p>
+                <div style="font-size: 2rem; margin-bottom: 12px;">🔒</div>
+                <h3 style="font-size: 1rem; margin-bottom: 8px; color: var(--text);" data-i18n="feature1_title">100% Free & Private</h3>
+                <p style="font-size: 0.85rem; color: var(--text-muted); line-height: 1.5;" data-i18n="feature1_desc">No ads, no signup, no watermark. Everything runs locally in your browser. Your data never leaves your device.</p>
             </div>
             <div class="feature-card" style="background: var(--bg-card); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px;">
                 <div style="font-size: 2rem; margin-bottom: 12px;">🎨</div>
@@ -1650,6 +1650,8 @@
                 backToToolbox: '← Back to Toolbox',
                 privacyTitle: 'This Tool Runs Completely Offline',
                 privacyDesc: 'All image processing is done locally in your browser with no network requests. Ideal for sensitive documents like ID cards, driver\'s licenses, and passports. Refresh the page to clear all data.',
+                feature1_title: '100% Free & Private',
+                feature1_desc: 'No ads, no signup, no watermark. Everything runs locally in your browser. Your data never leaves your device.',
                 featureMultiSize: 'Multiple Sizes',
                 featureMultiSizeDesc: 'Supports 1-inch, 2-inch, passport and other common ID photo sizes to meet all document requirements',
                 featureBgChange: 'Background Change',
@@ -1740,6 +1742,8 @@
                 faq4Answer: 'Yes, we recommend taking front-facing photos in well-lit environments with a simple background. After uploading, use the crop function to adjust to the appropriate ID photo ratio.',
                 faq5Question: 'What resolution are the exported photos?',
                 faq5Answer: 'Photos are exported at standard print resolution (300dpi). For example, 1-inch photos are 295x413 pixels, 2-inch photos are 413x531 pixels, meeting all ID photo printing requirements.',
+                faq_free_q: 'Is this tool really free? Is it safe?',
+                faq_free_a: 'Yes, this tool is 100% free with no ads, no signup, no usage limits, and no watermarks. All processing happens in your browser — your data never leaves your device. It\'s completely safe and private.',
                 relatedTools: '🔗 Related Tools',
                 toolCompressor: 'Image Compressor',
                 toolCompressorDesc: 'Compress image file size',
@@ -1757,6 +1761,8 @@
                 backToToolbox: '← 返回工具箱',
                 privacyTitle: '本工具完全离线运行',
                 privacyDesc: '所有图片处理均在本地浏览器完成，无任何网络请求，适合身份证、驾照、护照等敏感证件处理。刷新页面即清空所有数据。',
+                feature1_title: '100% 免费且安全',
+                feature1_desc: '无广告、无需注册、无水印。所有处理都在浏览器本地完成，数据不会上传到任何服务器。',
                 featureMultiSize: '多种规格',
                 featureMultiSizeDesc: '支持一寸、二寸、小一寸、护照等常用证件照尺寸，满足各类证件需求',
                 featureBgChange: '背景更换',
@@ -1847,6 +1853,8 @@
                 faq4Answer: '可以，建议在光线充足的环境下拍摄正面照，保持背景简洁。上传后使用裁剪功能调整到合适的证件照比例即可。',
                 faq5Question: '导出的照片分辨率是多少？',
                 faq5Answer: '根据选择的规格导出标准打印分辨率(300dpi)。例如一寸照片为295x413像素，二寸照片为413x531像素，满足各类证件照打印需求。',
+                faq_free_q: '这个工具真的免费吗？安全吗？',
+                faq_free_a: '是的，本工具 100% 免费，无广告、无需注册、无使用限制、无水印。所有处理都在浏览器中完成，数据不会离开你的设备，完全安全且隐私。',
                 relatedTools: '🔗 相关工具推荐',
                 toolCompressor: '图片压缩',
                 toolCompressorDesc: '在线压缩图片大小',
@@ -1864,6 +1872,8 @@
                 backToToolbox: '← Retour à la Boîte à Outils',
                 privacyTitle: 'Cet Outil Fonctionne Entièrement Hors Ligne',
                 privacyDesc: 'Tout le traitement d\'image est effectué localement dans votre navigateur sans requêtes réseau. Idéal pour les documents sensibles comme les cartes d\'identité, permis de conduire et passeports. Actualisez la page pour effacer toutes les données.',
+                feature1_title: '100% Gratuit et Privé',
+                feature1_desc: 'Sans publicité, sans inscription, sans filigrane. Tout est traité localement dans votre navigateur.',
                 featureMultiSize: 'Tailles Multiples',
                 featureMultiSizeDesc: 'Prend en charge les formats 1 pouce, 2 pouces, passeport et autres tailles courantes de photos d\'identité',
                 featureBgChange: 'Changement de Fond',
@@ -1954,6 +1964,8 @@
                 faq4Answer: 'Oui, nous recommandons de prendre des photos de face dans des environnements bien éclairés avec un fond simple.',
                 faq5Question: 'Quelle résolution ont les photos exportées?',
                 faq5Answer: 'Les photos sont exportées à la résolution d\'impression standard (300dpi). Par exemple, les photos 1 pouce font 295x413 pixels.',
+                faq_free_q: 'Cet outil est-il vraiment gratuit ? Est-il sûr ?',
+                faq_free_a: 'Oui, cet outil est 100% gratuit, sans publicité, sans inscription, sans limites d\'utilisation et sans filigrane. Tout le traitement se fait dans votre navigateur — vos données ne quittent jamais votre appareil.',
                 relatedTools: '🔗 Outils Connexes',
                 toolCompressor: 'Compresseur d\'Image',
                 toolCompressorDesc: 'Compresser la taille du fichier',
@@ -1971,6 +1983,8 @@
                 backToToolbox: '← Volver a la Caja de Herramientas',
                 privacyTitle: 'Esta Herramienta Funciona Completamente Sin Conexión',
                 privacyDesc: 'Todo el procesamiento de imágenes se realiza localmente en su navegador sin solicitudes de red. Ideal para documentos sensibles como tarjetas de identificación, licencias de conducir y pasaportes. Actualice la página para borrar todos los datos.',
+                feature1_title: '100% Gratis y Privado',
+                feature1_desc: 'Sin anuncios, sin registro, sin marca de agua. Todo se procesa localmente en tu navegador.',
                 featureMultiSize: 'Múltiples Tamaños',
                 featureMultiSizeDesc: 'Soporta tamaños de 1 pulgada, 2 pulgadas, pasaporte y otros tamaños comunes de fotos de identificación',
                 featureBgChange: 'Cambio de Fondo',
@@ -2061,6 +2075,8 @@
                 faq4Answer: 'Sí, recomendamos tomar fotos frontales en ambientes bien iluminados con un fondo simple.',
                 faq5Question: '¿Qué resolución tienen las fotos exportadas?',
                 faq5Answer: 'Las fotos se exportan a resolución de impresión estándar (300dpi). Por ejemplo, las fotos de 1 pulgada son 295x413 píxeles.',
+                faq_free_q: '¿Esta herramienta es realmente gratuita? ¿Es segura?',
+                faq_free_a: 'Sí, esta herramienta es 100% gratuita, sin anuncios, sin registro, sin límites de uso y sin marcas de agua. Todo el procesamiento ocurre en tu navegador — tus datos nunca salen de tu dispositivo.',
                 relatedTools: '🔗 Herramientas Relacionadas',
                 toolCompressor: 'Compresor de Imágenes',
                 toolCompressorDesc: 'Comprimir tamaño de archivo',
