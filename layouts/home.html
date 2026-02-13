@@ -94,26 +94,26 @@
       const el = document.getElementById('heroTyping');
       const cursor = document.getElementById('heroCursor');
       if (!el) return;
-      const key = 'homeHeroTypedV1';
       const text = el.getAttribute('data-text') || '';
-      const hasPlayed = localStorage.getItem(key) === '1';
+      const cycleMs = 30000;
+      const typeSpeedMs = 90;
 
-      if (hasPlayed) {
-        el.textContent = text;
-        if (cursor) cursor.style.display = 'none';
-      } else {
+      function playTyping() {
         el.textContent = '';
+        if (cursor) cursor.style.display = 'inline-block';
         let i = 0;
         const timer = setInterval(() => {
           i += 1;
           el.textContent = text.slice(0, i);
           if (i >= text.length) {
             clearInterval(timer);
-            localStorage.setItem(key, '1');
-            if (cursor) setTimeout(() => (cursor.style.display = 'none'), 400);
+            if (cursor) setTimeout(() => (cursor.style.display = 'none'), 800);
           }
-        }, 40);
+        }, typeSpeedMs);
       }
+
+      playTyping();
+      setInterval(playTyping, cycleMs);
 
       const links = document.querySelectorAll('.post-link');
       links.forEach((link) => {
