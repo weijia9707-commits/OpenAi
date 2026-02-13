@@ -199,6 +199,9 @@ function applyLanguage(lang) {
 - 问答内容要覆盖用户常搜的关键词
 - 需要 JS 交互逻辑（点击切换 active 状态）
 - 所有文本用 `data-i18n` 标记，4 语言翻译
+- 每条答案不得只写一句空泛描述，必须有解释性内容（建议 2-4 句）
+- 至少 1 条 FAQ 必须包含基础科普（如 “What is JSON/CSV/Cron and what is it used for”）
+- FAQ 文本必须自然嵌入 Google 热搜词（如 `cron expression generator`、`CSV to JSON`、`JSON to CSV`、`Linux crontab` 等），禁止生硬堆砌关键词
 
 **3) 相关工具推荐区域**（`<section class="related-tools">`）
 - 推荐 3-5 个相关工具的链接卡片
@@ -346,6 +349,18 @@ trust_free: "🚫 Sin anuncios, sin registro",
 - **不得**在 JSON-LD 中添加 `aggregateRating`（Google 要求评分基于真实用户数据，伪造会触发手动惩罚）
 - Trust Bar 仅作为页面视觉元素，不写入结构化数据
 - `offers.price: "0"` 已在 WebApplication schema 中标注免费，这是安全合规的
+
+#### G. FAQ 内容深度与热词埋词（强制要求）
+
+> 核心原则：FAQ 不是占位文案，而是“搜索问题 + 实用解释”的内容入口。
+
+每个工具页面的 FAQ 需要同时满足以下要求：
+
+1. **答案深度**：每条 FAQ 答案至少 2 句，优先给出定义 + 适用场景 + 使用建议  
+2. **基础科普**：至少 1 条 FAQ 是 “What is X / X 是什么，有什么用” 类型  
+3. **关键词覆盖**：FAQ 与 JSON-LD FAQPage 中都要自然包含工具相关 Google 热搜词  
+4. **双层一致**：页面可见 FAQ 与 JSON-LD FAQPage 内容语义一致（可简写但不能偏题）  
+5. **可读性优先**：禁止为埋词牺牲可读性，避免机械重复同一关键词  
 
 ### 添加新工具
 
