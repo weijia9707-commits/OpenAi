@@ -1,6 +1,11 @@
 {{ define "head" }}
 <style>
   .home-wrap{max-width:1040px;margin:2.2rem auto 3rem;padding:0 1rem}
+  .home-layout{display:grid;grid-template-columns:220px minmax(0,1fr);gap:18px;align-items:start}
+  .side-index{position:sticky;top:84px;background:#ffffff;border:1px solid #e8edf3;border-radius:14px;padding:12px}
+  .side-index h3{margin:4px 0 8px;font-size:.98rem;color:#0f172a}
+  .side-index a{display:block;padding:8px 10px;margin:4px 0;border-radius:10px;color:#334155;text-decoration:none;font-size:.92rem}
+  .side-index a:hover{background:#f1f5f9;color:#0f172a}
   .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f766e 0%,#14b8a6 35%,#0ea5e9 100%);color:#fff;border-radius:20px;padding:2.2rem 1.6rem;box-shadow:0 10px 30px rgba(2,132,199,.22)}
   .hero::before,.hero::after{content:"";position:absolute;filter:blur(36px);pointer-events:none;opacity:.45}
   .hero::before{width:260px;height:260px;border-radius:50%;background:#67e8f9;top:-90px;left:-60px;animation:floatGlow 11s ease-in-out infinite}
@@ -33,6 +38,8 @@
     .post-link:hover .post-card{transform:none;box-shadow:0 8px 20px rgba(0,0,0,.06)}
   }
   @media (max-width: 860px){
+    .home-layout{grid-template-columns:1fr}
+    .side-index{position:static}
     .quick{grid-template-columns:1fr}
     .post-grid{grid-template-columns:1fr}
     .hero h1{font-size:1.6rem}
@@ -41,32 +48,46 @@
 {{ end }}
 
 {{ define "main" }}
-  <main class="home-wrap">
-    <section class="hero">
-      <h1>weijia0707 AI 知识库</h1>
-      <p id="heroTyping" class="typing-line" data-text="聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。">聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。</p><span id="heroCursor" class="typing-cursor" aria-hidden="true"></span>
-      <div class="quick">
-        <a href="/categories/ai实战/">AI使用</a>
-        <a href="/categories/ai原理/">AI教程</a>
-        <a href="/web-toolbox/">AI工具</a>
-        <a href="/games/">休闲娱乐</a>
-      </div>
-    </section>
+  <main class="home-wrap home-layout">
+    <aside class="side-index">
+      <h3>个人索引导航</h3>
+      <a href="/">🏠 首页</a>
+      <a href="/posts/">📝 所有文章</a>
+      <a href="/categories/ai实战/">🤖 AI使用</a>
+      <a href="/categories/ai原理/">📘 AI教程</a>
+      <a href="/web-toolbox/">🧰 AI工具</a>
+      <a href="/games/">🎮 休闲娱乐</a>
+      <a href="/tags/">🏷️ 标签</a>
+      <a href="/about/">🙋 关于</a>
+    </aside>
 
-    <h2 class="section-title">最新文章</h2>
-    <section class="post-grid">
-      {{ range first 8 (where .Site.RegularPages "Section" "posts") }}
-      <a class="post-link" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
-        <article class="post-card">
-          <h3>{{ .Title }}</h3>
-          <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 90 }}{{ end }}</p>
-          <div class="meta">{{ .Date.Format "2006-01-02" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</div>
-        </article>
-      </a>
-      {{ end }}
-    </section>
+    <div>
+      <section class="hero">
+        <h1>weijia0707 AI 知识库</h1>
+        <p id="heroTyping" class="typing-line" data-text="聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。">聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。</p><span id="heroCursor" class="typing-cursor" aria-hidden="true"></span>
+        <div class="quick">
+          <a href="/categories/ai实战/">AI使用</a>
+          <a href="/categories/ai原理/">AI教程</a>
+          <a href="/web-toolbox/">AI工具</a>
+          <a href="/games/">休闲娱乐</a>
+        </div>
+      </section>
 
-    <div class="home-foot">{{ partial "footer.html" . }}</div>
+      <h2 class="section-title">最新文章</h2>
+      <section class="post-grid">
+        {{ range first 8 (where .Site.RegularPages "Section" "posts") }}
+        <a class="post-link" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+          <article class="post-card">
+            <h3>{{ .Title }}</h3>
+            <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 90 }}{{ end }}</p>
+            <div class="meta">{{ .Date.Format "2006-01-02" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</div>
+          </article>
+        </a>
+        {{ end }}
+      </section>
+
+      <div class="home-foot">{{ partial "footer.html" . }}</div>
+    </div>
   </main>
   <script>
     (function () {
