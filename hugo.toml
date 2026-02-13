@@ -1,7 +1,6 @@
-baseURL = "https://www.heyuan110.com/"
 languageCode = "zh-hans"
 defaultContentLanguage = "zh-hans"
-title = "Bruce's Blog"
+title = "weijia"
 theme = "hermit-V2"
 googleAnalytics = "G-CT8E5N460D"
 
@@ -85,18 +84,13 @@ summaryLength = 150
 # ============================================
 [params]
   # AI 主定位：一句话讲清楚你是什么
-  description = "Bruce 的 AI 实战与工程笔记：聚焦大模型、AI Agent、RAG、Prompt 工程与工程化落地（旧的 Java/Go/Docker/Linux 文章仍保留归档）。"
+  description = "wj 的 AI 实战与工程笔记：聚焦大模型、AI Agent、RAG、Prompt 工程与工程化落地（旧的 Java/Go/Docker/Linux 文章仍保留归档）。"
   keywords = "AI,AI Agent,LLM,RAG,Prompt Engineering,Claude Code,AI编程,大模型,Agent工程,系统设计,后端架构,Java,Go,Docker,Linux"
   images = ["/images/og-image.png"]
 
   # 主题配色
   themeColor = "#494f5c"
   accentColor = "#018472"
-
-  # 作者信息
-  [params.author]
-    name = "Bruce"
-    about = "/about/"
 
   homeSubtitle = "专注大模型、AI Agent、工程落地与真实案例"
 
@@ -130,15 +124,6 @@ summaryLength = 150
     ShortDate = "Jan 2"
     NumDateShort = "2006-01-02"
     NumDateLong = "2006-01-02 15:04 -0700"
-
-  # 社交链接
-  [[params.socialLinks]]
-    name = "x"
-    url = "https://x.com/heyuan110"
-
-  [[params.socialLinks]]
-    name = "github"
-    url = "https://github.com/heyuan110"
 
   [[params.socialLinks]]
     name = "rss"
