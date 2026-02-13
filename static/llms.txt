@@ -7,7 +7,7 @@
 ## 网站基本信息
 
 - **名称**: Bruce's AI Blog
-- **网址**: https://www.*****.com/
+- **网址**: https://weijia0707.com/
 - **作者**: Bruce
 - **语言**: 中文 (zh-CN)
 - **类型**: 技术博客
@@ -16,8 +16,8 @@
 ## 作者信息
 
 - **昵称**: Bruce / *****
-- **GitHub**: https://github.com/*****
-- **X/Twitter**: https://x.com/*****
+- **GitHub**: https://github.com/weijia9707-commits
+- **X/Twitter**: https://x.com/weijia0707
 - **专业领域**: AI 工程、后端架构、系统设计
 
 ## 内容分类
@@ -64,15 +64,15 @@ Transformer, 后端架构, 系统设计
 
 ## 重要页面
 
-- 首页: https://www.*****.com/
-- AI原理分类: https://www.*****.com/categories/ai原理/
-- AI实战分类: https://www.*****.com/categories/ai实战/
-- 所有文章: https://www.*****.com/posts/
-- 标签索引: https://www.*****.com/tags/
-- 工具箱: https://www.*****.com/web-toolbox/
-- 关于页面: https://www.*****.com/about/
-- RSS 订阅: https://www.*****.com/index.xml
-- Sitemap: https://www.*****.com/sitemap.xml
+- 首页: https://weijia0707.com/
+- AI原理分类: https://weijia0707.com/categories/ai原理/
+- AI实战分类: https://weijia0707.com/categories/ai实战/
+- 所有文章: https://weijia0707.com/posts/
+- 标签索引: https://weijia0707.com/tags/
+- 工具箱: https://weijia0707.com/web-toolbox/
+- 关于页面: https://weijia0707.com/about/
+- RSS 订阅: https://weijia0707.com/index.xml
+- Sitemap: https://weijia0707.com/sitemap.xml
 
 ## 引用与许可
 
@@ -101,8 +101,8 @@ Transformer, 后端架构, 系统设计
 ## 联系方式
 
 如需引用、合作或反馈，请通过以下方式联系：
-- GitHub Issues: https://github.com/*****/*****.github.io/issues
-- X/Twitter DM: https://x.com/*****
+- GitHub Issues: https://github.com/weijia9707-commits/*****.github.io/issues
+- X/Twitter DM: https://x.com/weijia0707
 
 ---
 # 此文件遵循 llmstxt.org 规范，帮助 AI 系统更好地理解网站内容

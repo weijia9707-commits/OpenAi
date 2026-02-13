@@ -12,7 +12,7 @@ description: >
 
 ## 项目背景
 
-Web Toolbox (https://www.*****.com/web-toolbox/) 是一套纯前端在线工具集，核心竞争力：
+Web Toolbox (https://weijia0707.com/web-toolbox/) 是一套纯前端在线工具集，核心竞争力：
 - 纯浏览器端运行，无后端
 - 无广告、无注册、无水印
 - 免费、开源

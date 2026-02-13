@@ -23,8 +23,8 @@
 ### 克隆项目
 
 ```bash
-git clone --recursive https://github.com/*****/*****.github.io.git
-cd *****.github.io
+git clone --recursive https://github.com/weijia9707-commits/*****.github.io.git
+cd OpenAi
 ```
 
 ### 本地预览

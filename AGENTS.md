@@ -12,7 +12,7 @@
 
 这是一个基于 Hugo 的个人技术博客，使用 hermit-V2 主题，部署在 GitHub Pages。
 
-- **网站地址**: https://www.*****.com/
+- **网站地址**: https://weijia0707.com/
 - **Hugo 版本**: v0.153.2+ (需要 Extended 版本)
 - **主题**: hermit-V2
 
