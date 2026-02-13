@@ -61,12 +61,3 @@ hugo new posts/my-new-post.md
 ├── hugo.toml      # Hugo 配置
 └── .github/       # GitHub Actions 配置
 ```
-
-## 联系方式
-
-- GitHub: [@heyuan110](https://github.com/heyuan110)
-- X: [@heyuan110](https://x.com/heyuan110)
-
-## License
-
-内容版权归作者所有。
