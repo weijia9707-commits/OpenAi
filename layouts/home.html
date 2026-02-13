@@ -8,8 +8,9 @@
   .quick a{display:block;background:rgba(255,255,255,.14);backdrop-filter: blur(3px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.85rem 1rem;color:#fff;text-decoration:none;font-weight:600}
   .section-title{margin:1.6rem 0 .8rem;font-size:1.2rem}
   .post-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .post-card{border:1px solid #e6e8eb;border-radius:14px;padding:1rem;background:#fff;transition:.2s}
-  .post-card:hover{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+  .post-link{display:block;text-decoration:none;color:inherit}
+  .post-card{border:1px solid #e6e8eb;border-radius:14px;padding:1rem;background:#fff;transition:.2s;height:100%}
+  .post-link:hover .post-card{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
   .post-card h3{margin:.1rem 0 .5rem;font-size:1.06rem;line-height:1.35}
   .post-card p{margin:0;color:#5a6372;font-size:.93rem}
   .post-card .meta{font-size:.82rem;color:#8a93a3;margin-top:.65rem}
@@ -37,11 +38,13 @@
     <h2 class="section-title">最新文章</h2>
     <section class="post-grid">
       {{ range first 8 (where .Site.RegularPages "Section" "posts") }}
-      <article class="post-card">
-        <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
-        <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 90 }}{{ end }}</p>
-        <div class="meta">{{ .Date.Format "2006-01-02" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</div>
-      </article>
+      <a class="post-link" href="{{ .RelPermalink }}" aria-label="{{ .Title }}">
+        <article class="post-card">
+          <h3>{{ .Title }}</h3>
+          <p>{{ with .Description }}{{ . }}{{ else }}{{ .Summary | plainify | truncate 90 }}{{ end }}</p>
+          <div class="meta">{{ .Date.Format "2006-01-02" }}{{ with .Params.categories }} · {{ index . 0 }}{{ end }}</div>
+        </article>
+      </a>
       {{ end }}
     </section>
 
