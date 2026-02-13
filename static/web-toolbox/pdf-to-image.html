@@ -753,9 +753,10 @@
         async function loadPdf(file) {
             if (!file || (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf')) throw new Error('badFile');
             var buffer = await file.arrayBuffer();
-            var task = pdfjsLib.getDocument({ data: buffer });
+            var data = new Uint8Array(buffer);
+            var task = pdfjsLib.getDocument({ data: data.slice() });
             var pdf = await task.promise;
-            source = { file: file, buffer: buffer, pages: pdf.numPages };
+            source = { file: file, data: data, pages: pdf.numPages };
 
             var firstPage = await pdf.getPage(1);
             var viewport = firstPage.getViewport({ scale: 0.4 });
@@ -796,7 +797,7 @@
                 var quality = Number(qualityRange.value);
                 var scale = Number(scaleRange.value);
 
-                var task = pdfjsLib.getDocument({ data: source.buffer });
+                var task = pdfjsLib.getDocument({ data: source.data.slice() });
                 var pdf = await task.promise;
                 var pages = parseRanges(rangeInput.value, pdf.numPages);
                 var results = [];

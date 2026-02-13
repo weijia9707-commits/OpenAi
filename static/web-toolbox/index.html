@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Web Toolbox - Free Online Tools | 在线前端工具集 | M3U8 Downloader, JSON Viewer, Image Compressor</title>
+    <title>Web Toolbox - 56+ Free Online Tools | 在线前端工具集 | PDF, API, OCR, Converter</title>
 
     <!-- SEO Meta Tags -->
-    <meta name="description" content="Web Toolbox: 30+ free online browser tools. M3U8 video downloader, JSON viewer, SQLite browser, crypto encoder, image compressor, timestamp converter, audio cutter & more. No installation needed. | 纯前端在线工具集，包含M3U8下载器、JSON查看器、图片压缩等30+实用工具，无需安装。">
-    <meta name="keywords" content="online tools,free tools,M3U8 downloader,JSON viewer,JSON formatter,SQLite viewer,image compressor,timestamp converter,Base64 encoder,WebSocket tester,ICO maker,color palette,regex tester,audio cutter,video downloader,在线工具,前端工具,M3U8下载器,JSON格式化,图片压缩,时间戳转换,免费工具">
+    <meta name="description" content="Web Toolbox: 56+ free online browser tools. PDF merge/split/compress, API tester, OCR, background remover, screen recorder, image converter, JSON viewer, M3U8 downloader and more. No installation needed. | 纯前端在线工具集，包含 PDF 工具、API 测试、OCR、录屏、图片处理等 56+ 实用工具。">
+    <meta name="keywords" content="online tools,free tools,pdf tools,api tester,ocr tool,background remover,screen recorder,file converter,M3U8 downloader,JSON viewer,JSON formatter,SQLite viewer,image compressor,timestamp converter,Base64 encoder,WebSocket tester,regex tester,audio cutter,在线工具,前端工具,PDF工具,API测试器,OCR识别,去背景,录屏,格式转换,免费工具">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/">
@@ -50,7 +50,7 @@
         "name": "Web Toolbox",
         "alternateName": ["Free Online Tools", "在线前端工具集"],
         "url": "https://www.heyuan110.com/web-toolbox/",
-        "description": "30+ free online browser tools: M3U8 video downloader, JSON viewer, SQLite browser, image compressor, timestamp converter, audio cutter and more. No installation needed.",
+        "description": "56+ free online browser tools: PDF utilities, API tester, OCR, screen recorder, image processing, JSON viewer, M3U8 downloader and more. No installation needed.",
         "inLanguage": ["en", "zh-CN", "fr", "es"],
         "applicationCategory": "UtilitiesApplication",
         "operatingSystem": "Web Browser",
@@ -107,6 +107,20 @@
             {"@type": "WebApplication", "name": "Text Diff Checker", "url": "https://www.heyuan110.com/web-toolbox/text-diff.html"},
             {"@type": "WebApplication", "name": "CSV JSON Converter", "url": "https://www.heyuan110.com/web-toolbox/csv-json.html"},
             {"@type": "WebApplication", "name": "Cron Expression Generator", "url": "https://www.heyuan110.com/web-toolbox/cron-generator.html"},
+            {"@type": "WebApplication", "name": "OCR Tool", "url": "https://www.heyuan110.com/web-toolbox/ocr-tool.html"},
+            {"@type": "WebApplication", "name": "Background Remover", "url": "https://www.heyuan110.com/web-toolbox/bg-remover.html"},
+            {"@type": "WebApplication", "name": "Screen Recorder", "url": "https://www.heyuan110.com/web-toolbox/screen-recorder.html"},
+            {"@type": "WebApplication", "name": "Pomodoro Timer", "url": "https://www.heyuan110.com/web-toolbox/pomodoro.html"},
+            {"@type": "WebApplication", "name": "Unit Converter", "url": "https://www.heyuan110.com/web-toolbox/unit-converter.html"},
+            {"@type": "WebApplication", "name": "Invoice Generator", "url": "https://www.heyuan110.com/web-toolbox/invoice-generator.html"},
+            {"@type": "WebApplication", "name": "API Tester", "url": "https://www.heyuan110.com/web-toolbox/api-tester.html"},
+            {"@type": "WebApplication", "name": "Hex Viewer", "url": "https://www.heyuan110.com/web-toolbox/hex-viewer.html"},
+            {"@type": "WebApplication", "name": "Code Formatter", "url": "https://www.heyuan110.com/web-toolbox/code-formatter.html"},
+            {"@type": "WebApplication", "name": "YAML TOML Editor", "url": "https://www.heyuan110.com/web-toolbox/yaml-editor.html"},
+            {"@type": "WebApplication", "name": "E-Sign Tool", "url": "https://www.heyuan110.com/web-toolbox/e-sign.html"},
+            {"@type": "WebApplication", "name": "PDF Protect", "url": "https://www.heyuan110.com/web-toolbox/pdf-protect.html"},
+            {"@type": "WebApplication", "name": "File Converter Center", "url": "https://www.heyuan110.com/web-toolbox/file-converter.html"},
+            {"@type": "WebApplication", "name": "Watermark Tool", "url": "https://www.heyuan110.com/web-toolbox/watermark-tool.html"},
             {"@type": "WebApplication", "name": "Tweet Deleter", "url": "https://github.com/heyuan110/tweet-deleter"},
             {"@type": "WebApplication", "name": "XPorts - Terminal Port Manager", "url": "https://github.com/heyuan110/xports"}
         ]
@@ -1350,6 +1364,244 @@
                         <li data-i18n="tool_cron_f4">一键复制用于 crontab</li>
                     </ul>
                     <a href="cron-generator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- OCR 图片文字识别 -->
+            <div class="tool-card" data-tool="ocr ai image text">
+                <img src="screenshots/ocr-tool.webp" alt="OCR 图片文字识别截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔤</div>
+                    <h2 class="tool-title">OCR 图片文字识别</h2>
+                    <p class="tool-desc">提取图片中的文本内容，支持多语言识别与本地隐私处理</p>
+                    <ul class="tool-features">
+                        <li>支持截图、拍照图与扫描图识别</li>
+                        <li>支持中英文等多语言 OCR</li>
+                        <li>识别结果可复制或下载</li>
+                        <li>浏览器本地处理，无需上传</li>
+                    </ul>
+                    <a href="ocr-tool.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 图片去背景 -->
+            <div class="tool-card" data-tool="background remover cutout">
+                <img src="screenshots/bg-remover.webp" alt="图片去背景截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">✂️</div>
+                    <h2 class="tool-title">图片去背景</h2>
+                    <p class="tool-desc">AI 自动抠图，快速导出透明 PNG，适合电商图与设计素材</p>
+                    <ul class="tool-features">
+                        <li>自动识别主体与背景边缘</li>
+                        <li>输出透明背景 PNG</li>
+                        <li>无需安装，无需注册</li>
+                        <li>纯前端处理更安全</li>
+                    </ul>
+                    <a href="bg-remover.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 屏幕录制器 -->
+            <div class="tool-card" data-tool="screen recorder video capture">
+                <img src="screenshots/screen-recorder.webp" alt="屏幕录制器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🖥️</div>
+                    <h2 class="tool-title">屏幕录制器</h2>
+                    <p class="tool-desc">在线录制屏幕内容，可选麦克风音频，完成后一键导出 WebM</p>
+                    <ul class="tool-features">
+                        <li>支持标签页、窗口或全屏录制</li>
+                        <li>可叠加麦克风解说音频</li>
+                        <li>暂停/继续/停止全流程控制</li>
+                        <li>录制结束立即下载文件</li>
+                    </ul>
+                    <a href="screen-recorder.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 番茄钟 -->
+            <div class="tool-card" data-tool="pomodoro focus timer">
+                <img src="screenshots/pomodoro.webp" alt="番茄钟截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🍅</div>
+                    <h2 class="tool-title">番茄钟</h2>
+                    <p class="tool-desc">专注计时与休息循环管理，支持阶段提醒、快捷键与节奏预设</p>
+                    <ul class="tool-features">
+                        <li>专注/短休息/长休息自动切换</li>
+                        <li>支持多组预设计时方案</li>
+                        <li>浏览器通知提醒阶段变化</li>
+                        <li>记录已完成的专注轮次</li>
+                    </ul>
+                    <a href="pomodoro.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 单位换算器 -->
+            <div class="tool-card" data-tool="unit converter metric imperial">
+                <img src="screenshots/unit-converter.webp" alt="单位换算器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">📏</div>
+                    <h2 class="tool-title">单位换算器</h2>
+                    <p class="tool-desc">长度、重量、温度、面积、体积、速度等常见单位快速换算</p>
+                    <ul class="tool-features">
+                        <li>覆盖公制与英制主流单位</li>
+                        <li>支持温度公式精确换算</li>
+                        <li>输入即算，结果实时刷新</li>
+                        <li>一键复制换算结果</li>
+                    </ul>
+                    <a href="unit-converter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 发票生成器 -->
+            <div class="tool-card" data-tool="invoice generator pdf business">
+                <img src="screenshots/invoice-generator.webp" alt="发票生成器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🧾</div>
+                    <h2 class="tool-title">发票生成器</h2>
+                    <p class="tool-desc">在线填写发票信息并导出专业 PDF，适合自由职业者和小团队</p>
+                    <ul class="tool-features">
+                        <li>自定义公司、客户与项目明细</li>
+                        <li>自动计算税费与总金额</li>
+                        <li>模板化排版，快速出单</li>
+                        <li>一键导出可打印 PDF</li>
+                    </ul>
+                    <a href="invoice-generator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- API 测试器 -->
+            <div class="tool-card" data-tool="api tester http client postman">
+                <img src="screenshots/api-tester.webp" alt="API 测试器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🧪</div>
+                    <h2 class="tool-title">API 测试器</h2>
+                    <p class="tool-desc">在线发送 HTTP 请求，快速调试 REST 接口、请求头和 JSON Body</p>
+                    <ul class="tool-features">
+                        <li>支持 GET/POST/PUT/PATCH/DELETE</li>
+                        <li>可编辑 Headers 与 JSON Body</li>
+                        <li>展示状态码、耗时与响应大小</li>
+                        <li>响应结果一键复制</li>
+                    </ul>
+                    <a href="api-tester.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- Hex 文件查看器 -->
+            <div class="tool-card" data-tool="hex viewer binary">
+                <img src="screenshots/hex-viewer.webp" alt="Hex 文件查看器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🧬</div>
+                    <h2 class="tool-title">Hex 文件查看器</h2>
+                    <p class="tool-desc">按偏移查看二进制字节内容，支持 HEX 模式搜索和分页浏览</p>
+                    <ul class="tool-features">
+                        <li>显示偏移地址与 ASCII 对照</li>
+                        <li>支持字节序列签名搜索</li>
+                        <li>大文件分页加载不卡顿</li>
+                        <li>适合调试与取证分析</li>
+                    </ul>
+                    <a href="hex-viewer.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 代码格式化器 -->
+            <div class="tool-card" data-tool="code formatter json sql prettier">
+                <img src="screenshots/code-formatter.webp" alt="代码格式化器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">✨</div>
+                    <h2 class="tool-title">代码格式化器</h2>
+                    <p class="tool-desc">一键美化 JSON、JS、TS、HTML、CSS、Markdown、SQL 代码</p>
+                    <ul class="tool-features">
+                        <li>集成 Prettier 与 SQL Formatter</li>
+                        <li>支持压缩与格式化切换</li>
+                        <li>自动整理缩进与空格风格</li>
+                        <li>复制结果快速复用</li>
+                    </ul>
+                    <a href="code-formatter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- YAML/TOML 编辑器 -->
+            <div class="tool-card" data-tool="yaml toml json converter">
+                <img src="screenshots/yaml-editor.webp" alt="YAML TOML 编辑器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">⚙️</div>
+                    <h2 class="tool-title">YAML/TOML 编辑器</h2>
+                    <p class="tool-desc">配置文件校验与互转，支持 YAML、TOML、JSON 三格式工作流</p>
+                    <ul class="tool-features">
+                        <li>YAML/TOML/JSON 双向转换</li>
+                        <li>语法错误定位更直观</li>
+                        <li>适合 DevOps 与配置调试</li>
+                        <li>结果可复制与下载</li>
+                    </ul>
+                    <a href="yaml-editor.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 电子签名工具 -->
+            <div class="tool-card" data-tool="esign signature pdf">
+                <img src="screenshots/e-sign.webp" alt="电子签名工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">✍️</div>
+                    <h2 class="tool-title">电子签名工具</h2>
+                    <p class="tool-desc">上传 PDF 并添加手写签名，设置页码坐标后导出签署文件</p>
+                    <ul class="tool-features">
+                        <li>画布手写签名即时预览</li>
+                        <li>指定页码和签名位置</li>
+                        <li>支持调整签名尺寸</li>
+                        <li>导出签署后的 PDF 文件</li>
+                    </ul>
+                    <a href="e-sign.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- PDF 加密解密 -->
+            <div class="tool-card" data-tool="pdf protect encrypt decrypt">
+                <img src="screenshots/pdf-protect.webp" alt="PDF 加密解密截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔐</div>
+                    <h2 class="tool-title">PDF 加密解密</h2>
+                    <p class="tool-desc">使用浏览器端 AES-GCM 对 PDF 文件进行加密打包与还原解密</p>
+                    <ul class="tool-features">
+                        <li>基于密码派生密钥加密</li>
+                        <li>支持加密与解密双模式</li>
+                        <li>Web Crypto 本地执行</li>
+                        <li>无上传、无账号、更私密</li>
+                    </ul>
+                    <a href="pdf-protect.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 文件格式转换中心 -->
+            <div class="tool-card" data-tool="file converter video mp3 image">
+                <img src="screenshots/file-converter.webp" alt="文件格式转换中心截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔄</div>
+                    <h2 class="tool-title">文件格式转换中心</h2>
+                    <p class="tool-desc">支持图片格式转换与视频转 MP3，覆盖常见多媒体转换场景</p>
+                    <ul class="tool-features">
+                        <li>PNG/JPG/WebP 图片互转</li>
+                        <li>视频提取 MP3（Beta）</li>
+                        <li>支持质量参数控制</li>
+                        <li>转换完成一键下载</li>
+                    </ul>
+                    <a href="file-converter.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 图片水印工具 -->
+            <div class="tool-card" data-tool="watermark image text">
+                <img src="screenshots/watermark-tool.webp" alt="图片水印工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">💧</div>
+                    <h2 class="tool-title">图片水印工具</h2>
+                    <p class="tool-desc">给图片添加文字水印，支持透明度、角度、位置与平铺模式控制</p>
+                    <ul class="tool-features">
+                        <li>自定义品牌或版权文字</li>
+                        <li>支持角度/字号/透明度调节</li>
+                        <li>支持单点与平铺两种布局</li>
+                        <li>导出带水印图片</li>
+                    </ul>
+                    <a href="watermark-tool.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
                 </div>
             </div>
 
