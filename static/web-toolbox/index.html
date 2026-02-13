@@ -82,6 +82,10 @@
             {"@type": "WebApplication", "name": "Regex Tester", "url": "https://www.heyuan110.com/web-toolbox/regex-tester.html"},
             {"@type": "WebApplication", "name": "ID Photo Editor & Watermark", "url": "https://www.heyuan110.com/web-toolbox/id-photo-tool.html"},
             {"@type": "WebApplication", "name": "Images to PDF", "url": "https://www.heyuan110.com/web-toolbox/image-to-pdf.html"},
+            {"@type": "WebApplication", "name": "PDF Merge Tool", "url": "https://www.heyuan110.com/web-toolbox/pdf-merge.html"},
+            {"@type": "WebApplication", "name": "PDF Split Tool", "url": "https://www.heyuan110.com/web-toolbox/pdf-split.html"},
+            {"@type": "WebApplication", "name": "PDF Compress Tool", "url": "https://www.heyuan110.com/web-toolbox/pdf-compress.html"},
+            {"@type": "WebApplication", "name": "PDF to Image Converter", "url": "https://www.heyuan110.com/web-toolbox/pdf-to-image.html"},
             {"@type": "WebApplication", "name": "Batch File Renamer", "url": "https://www.heyuan110.com/web-toolbox/file-renamer.html"},
             {"@type": "WebApplication", "name": "LED Scrolling Banner", "url": "https://www.heyuan110.com/web-toolbox/handheld-danmaku.html"},
             {"@type": "WebApplication", "name": "Online Metronome", "url": "https://www.heyuan110.com/web-toolbox/metronome.html"},
@@ -920,6 +924,74 @@
                 </div>
             </div>
 
+            <!-- PDF 合并 -->
+            <div class="tool-card" data-tool="pdfmerge">
+                <img src="screenshots/pdf-merge.webp" alt="PDF合并工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">📚</div>
+                    <h2 class="tool-title" data-i18n="tool_pdfmerge_title">PDF 合并</h2>
+                    <p class="tool-desc" data-i18n="tool_pdfmerge_desc">合并多个 PDF 文件，支持顺序调整，浏览器本地处理更安全</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_pdfmerge_f1">多文件上传并自由调整顺序</li>
+                        <li data-i18n="tool_pdfmerge_f2">保持原始页面内容和清晰度</li>
+                        <li data-i18n="tool_pdfmerge_f3">无需上传服务器，隐私更安全</li>
+                        <li data-i18n="tool_pdfmerge_f4">一键导出合并后的 PDF</li>
+                    </ul>
+                    <a href="pdf-merge.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- PDF 拆分 -->
+            <div class="tool-card" data-tool="pdfsplit">
+                <img src="screenshots/pdf-split.webp" alt="PDF拆分工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">✂️</div>
+                    <h2 class="tool-title" data-i18n="tool_pdfsplit_title">PDF 拆分</h2>
+                    <p class="tool-desc" data-i18n="tool_pdfsplit_desc">按单页或范围拆分 PDF，支持批量导出并自动打包 ZIP</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_pdfsplit_f1">每页拆分或按页码范围提取</li>
+                        <li data-i18n="tool_pdfsplit_f2">支持 1-3,5,8-10 复杂范围</li>
+                        <li data-i18n="tool_pdfsplit_f3">多个结果自动 ZIP 打包下载</li>
+                        <li data-i18n="tool_pdfsplit_f4">本地拆分，无上传更放心</li>
+                    </ul>
+                    <a href="pdf-split.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- PDF 压缩 -->
+            <div class="tool-card" data-tool="pdfcompress">
+                <img src="screenshots/pdf-compress.webp" alt="PDF压缩工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🗜️</div>
+                    <h2 class="tool-title" data-i18n="tool_pdfcompress_title">PDF 压缩</h2>
+                    <p class="tool-desc" data-i18n="tool_pdfcompress_desc">调节质量和分辨率压缩 PDF，适合扫描件和图片型文档</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_pdfcompress_f1">可调 JPEG 质量和渲染缩放</li>
+                        <li data-i18n="tool_pdfcompress_f2">支持页面最大尺寸限制</li>
+                        <li data-i18n="tool_pdfcompress_f3">压缩前后体积对比直观可见</li>
+                        <li data-i18n="tool_pdfcompress_f4">浏览器本地压缩，保护隐私</li>
+                    </ul>
+                    <a href="pdf-compress.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- PDF 转图片 -->
+            <div class="tool-card" data-tool="pdftoimage">
+                <img src="screenshots/pdf-to-image.webp" alt="PDF转图片工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🖼️</div>
+                    <h2 class="tool-title" data-i18n="tool_pdftoimg_title">PDF 转图片</h2>
+                    <p class="tool-desc" data-i18n="tool_pdftoimg_desc">将 PDF 页面批量转换为 PNG/JPG，支持范围导出和 ZIP 下载</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_pdftoimg_f1">支持导出 PNG 或 JPG 格式</li>
+                        <li data-i18n="tool_pdftoimg_f2">可按页码范围选择性导出</li>
+                        <li data-i18n="tool_pdftoimg_f3">多页图片自动打包 ZIP</li>
+                        <li data-i18n="tool_pdftoimg_f4">本地渲染转换速度快更安全</li>
+                    </ul>
+                    <a href="pdf-to-image.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
             <!-- 文件批量重命名 -->
             <div class="tool-card" data-tool="rename">
                 <img src="screenshots/file-renamer.webp" alt="文件批量重命名截图" class="tool-screenshot">
@@ -1492,6 +1564,30 @@
                     tool_img2pdf_f2: '拖拽调整图片顺序',
                     tool_img2pdf_f3: '自定义页面尺寸和质量',
                     tool_img2pdf_f4: '一键生成PDF并下载',
+                    tool_pdfmerge_title: 'PDF 合并',
+                    tool_pdfmerge_desc: '合并多个 PDF 文件，支持顺序调整，浏览器本地处理更安全',
+                    tool_pdfmerge_f1: '多文件上传并自由调整顺序',
+                    tool_pdfmerge_f2: '保持原始页面内容和清晰度',
+                    tool_pdfmerge_f3: '无需上传服务器，隐私更安全',
+                    tool_pdfmerge_f4: '一键导出合并后的 PDF',
+                    tool_pdfsplit_title: 'PDF 拆分',
+                    tool_pdfsplit_desc: '按单页或范围拆分 PDF，支持批量导出并自动打包 ZIP',
+                    tool_pdfsplit_f1: '每页拆分或按页码范围提取',
+                    tool_pdfsplit_f2: '支持 1-3,5,8-10 复杂范围',
+                    tool_pdfsplit_f3: '多个结果自动 ZIP 打包下载',
+                    tool_pdfsplit_f4: '本地拆分，无上传更放心',
+                    tool_pdfcompress_title: 'PDF 压缩',
+                    tool_pdfcompress_desc: '调节质量和分辨率压缩 PDF，适合扫描件和图片型文档',
+                    tool_pdfcompress_f1: '可调 JPEG 质量和渲染缩放',
+                    tool_pdfcompress_f2: '支持页面最大尺寸限制',
+                    tool_pdfcompress_f3: '压缩前后体积对比直观可见',
+                    tool_pdfcompress_f4: '浏览器本地压缩，保护隐私',
+                    tool_pdftoimg_title: 'PDF 转图片',
+                    tool_pdftoimg_desc: '将 PDF 页面批量转换为 PNG/JPG，支持范围导出和 ZIP 下载',
+                    tool_pdftoimg_f1: '支持导出 PNG 或 JPG 格式',
+                    tool_pdftoimg_f2: '可按页码范围选择性导出',
+                    tool_pdftoimg_f3: '多页图片自动打包 ZIP',
+                    tool_pdftoimg_f4: '本地渲染转换速度快更安全',
                     tool_rename_title: '文件批量重命名',
                     tool_rename_desc: '支持顺序编号、查找替换、添加前后缀等多种模式，完全本地处理',
                     tool_rename_f1: '顺序编号自动补零',
@@ -1733,6 +1829,30 @@
                     tool_img2pdf_f2: 'Drag to reorder images',
                     tool_img2pdf_f3: 'Custom page size & quality',
                     tool_img2pdf_f4: 'One-click PDF generation',
+                    tool_pdfmerge_title: 'PDF Merge',
+                    tool_pdfmerge_desc: 'Combine multiple PDF files with reorder support and secure local processing',
+                    tool_pdfmerge_f1: 'Upload multiple PDF files and reorder freely',
+                    tool_pdfmerge_f2: 'Preserve original page content and quality',
+                    tool_pdfmerge_f3: 'No server upload, better privacy',
+                    tool_pdfmerge_f4: 'One-click merged PDF export',
+                    tool_pdfsplit_title: 'PDF Split',
+                    tool_pdfsplit_desc: 'Split PDF by each page or custom ranges with ZIP export',
+                    tool_pdfsplit_f1: 'Split every page or extract page ranges',
+                    tool_pdfsplit_f2: 'Supports ranges like 1-3,5,8-10',
+                    tool_pdfsplit_f3: 'Auto ZIP packaging for multiple outputs',
+                    tool_pdfsplit_f4: 'Local split processing with no upload',
+                    tool_pdfcompress_title: 'PDF Compress',
+                    tool_pdfcompress_desc: 'Compress PDF with quality and resolution controls, ideal for scanned docs',
+                    tool_pdfcompress_f1: 'Adjustable JPEG quality and render scale',
+                    tool_pdfcompress_f2: 'Maximum page dimension control',
+                    tool_pdfcompress_f3: 'Clear before/after size comparison',
+                    tool_pdfcompress_f4: 'Browser-local compression for privacy',
+                    tool_pdftoimg_title: 'PDF to Image',
+                    tool_pdftoimg_desc: 'Convert PDF pages to PNG/JPG with range export and ZIP download',
+                    tool_pdftoimg_f1: 'Export as PNG or JPG',
+                    tool_pdftoimg_f2: 'Selective page range conversion',
+                    tool_pdftoimg_f3: 'Auto ZIP packaging for multi-page images',
+                    tool_pdftoimg_f4: 'Fast and secure local rendering',
                     tool_rename_title: 'Batch File Renamer',
                     tool_rename_desc: 'Sequential numbering, find-replace, add prefix/suffix, fully local',
                     tool_rename_f1: 'Auto-padded sequential numbering',
@@ -1974,6 +2094,30 @@
                     tool_img2pdf_f2: 'Réorganiser par glisser-déposer',
                     tool_img2pdf_f3: 'Taille de page et qualité personnalisées',
                     tool_img2pdf_f4: 'Génération PDF en un clic',
+                    tool_pdfmerge_title: 'Fusion PDF',
+                    tool_pdfmerge_desc: 'Combiner plusieurs fichiers PDF avec tri libre et traitement local sécurisé',
+                    tool_pdfmerge_f1: 'Importer plusieurs PDF et réorganiser l\'ordre',
+                    tool_pdfmerge_f2: 'Conserver la qualité et le contenu d\'origine',
+                    tool_pdfmerge_f3: 'Aucun upload serveur, meilleure confidentialité',
+                    tool_pdfmerge_f4: 'Export PDF fusionné en un clic',
+                    tool_pdfsplit_title: 'Découper PDF',
+                    tool_pdfsplit_desc: 'Découper PDF par page ou plages personnalisées avec export ZIP',
+                    tool_pdfsplit_f1: 'Découper chaque page ou extraire des plages',
+                    tool_pdfsplit_f2: 'Supporte des plages comme 1-3,5,8-10',
+                    tool_pdfsplit_f3: 'Création ZIP auto pour sorties multiples',
+                    tool_pdfsplit_f4: 'Traitement local sans upload',
+                    tool_pdfcompress_title: 'Compresser PDF',
+                    tool_pdfcompress_desc: 'Compresser PDF avec réglage qualité/résolution, idéal pour scans',
+                    tool_pdfcompress_f1: 'Qualité JPEG et échelle ajustables',
+                    tool_pdfcompress_f2: 'Contrôle de la dimension maximale des pages',
+                    tool_pdfcompress_f3: 'Comparaison claire avant/après',
+                    tool_pdfcompress_f4: 'Compression locale pour protéger la vie privée',
+                    tool_pdftoimg_title: 'PDF vers image',
+                    tool_pdftoimg_desc: 'Convertir PDF en PNG/JPG avec plage de pages et téléchargement ZIP',
+                    tool_pdftoimg_f1: 'Export en PNG ou JPG',
+                    tool_pdftoimg_f2: 'Conversion sélective par plage de pages',
+                    tool_pdftoimg_f3: 'ZIP auto pour images multi-pages',
+                    tool_pdftoimg_f4: 'Rendu local rapide et sécurisé',
                     tool_rename_title: 'Renommage par lots',
                     tool_rename_desc: 'Numérotation séquentielle, rechercher-remplacer, préfixes/suffixes',
                     tool_rename_f1: 'Numérotation auto avec zéros',
@@ -2215,6 +2359,30 @@
                     tool_img2pdf_f2: 'Reorganizar arrastrando',
                     tool_img2pdf_f3: 'Tamaño de página y calidad personalizados',
                     tool_img2pdf_f4: 'Generación PDF con un clic',
+                    tool_pdfmerge_title: 'Unir PDF',
+                    tool_pdfmerge_desc: 'Combina múltiples PDF con orden personalizado y procesamiento local seguro',
+                    tool_pdfmerge_f1: 'Sube varios PDF y reordena libremente',
+                    tool_pdfmerge_f2: 'Mantiene la calidad y contenido original',
+                    tool_pdfmerge_f3: 'Sin subida a servidor, mayor privacidad',
+                    tool_pdfmerge_f4: 'Exportación del PDF unido en un clic',
+                    tool_pdfsplit_title: 'Dividir PDF',
+                    tool_pdfsplit_desc: 'Divide PDF por página o rangos personalizados con exportación ZIP',
+                    tool_pdfsplit_f1: 'Divide cada página o extrae rangos',
+                    tool_pdfsplit_f2: 'Soporta rangos como 1-3,5,8-10',
+                    tool_pdfsplit_f3: 'Empaquetado ZIP automático para múltiples salidas',
+                    tool_pdfsplit_f4: 'Procesamiento local sin subir archivos',
+                    tool_pdfcompress_title: 'Comprimir PDF',
+                    tool_pdfcompress_desc: 'Comprime PDF con control de calidad y resolución, ideal para escaneados',
+                    tool_pdfcompress_f1: 'Calidad JPEG y escala ajustables',
+                    tool_pdfcompress_f2: 'Control de dimensión máxima por página',
+                    tool_pdfcompress_f3: 'Comparación clara de tamaño antes/después',
+                    tool_pdfcompress_f4: 'Compresión local para mayor privacidad',
+                    tool_pdftoimg_title: 'PDF a imagen',
+                    tool_pdftoimg_desc: 'Convierte PDF a PNG/JPG con rangos de páginas y descarga ZIP',
+                    tool_pdftoimg_f1: 'Exporta en PNG o JPG',
+                    tool_pdftoimg_f2: 'Conversión selectiva por rango de páginas',
+                    tool_pdftoimg_f3: 'ZIP automático para imágenes multipágina',
+                    tool_pdftoimg_f4: 'Renderizado local rápido y seguro',
                     tool_rename_title: 'Renombrado por lotes',
                     tool_rename_desc: 'Numeración secuencial, buscar-reemplazar, prefijos/sufijos',
                     tool_rename_f1: 'Numeración auto con ceros',

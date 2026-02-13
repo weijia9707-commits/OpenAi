@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PDF to Image Converter - Convert PDF to JPG PNG | PDF 转图片 | Web Toolbox</title>
+    <meta name="description" content="Free online PDF to image converter. Convert PDF pages to JPG or PNG with custom quality and scale. Export all pages or selected ranges directly in your browser.">
+    <meta name="keywords" content="PDF to image,PDF to JPG,PDF to PNG,convert PDF pages,PDF 转图片,PDF转JPG,PDF转PNG">
+    <meta name="author" content="heyuan110">
+    <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
+    <meta name="googlebot" content="index, follow">
+    <meta name="bingbot" content="index, follow">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
+    <meta name="distribution" content="global">
+    <meta name="language" content="en">
+    <link rel="canonical" href="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+    <link rel="alternate" hreflang="en" href="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+    <link rel="alternate" hreflang="zh-CN" href="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+    <link rel="alternate" hreflang="fr" href="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+    <link rel="alternate" hreflang="es" href="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+    <link rel="alternate" hreflang="x-default" href="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
+    <meta property="og:title" content="PDF to Image Converter - Convert PDF to JPG PNG | Web Toolbox">
+    <meta property="og:description" content="Convert PDF pages to PNG/JPG online with custom quality and scale settings.">
+    <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-to-image.webp">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="en_US">
+    <meta property="og:locale:alternate" content="zh_CN">
+    <meta property="og:site_name" content="Web Toolbox">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@heyuan110">
+    <meta name="twitter:creator" content="@heyuan110">
+    <meta name="twitter:title" content="PDF to Image Converter - Convert PDF to JPG PNG">
+    <meta name="twitter:description" content="Export PDF pages as JPG/PNG images online for free.">
+    <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-to-image.webp">
+
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebApplication",
+        "name": "PDF to Image Converter",
+        "alternateName": ["PDF 转图片", "PDF to JPG", "PDF to PNG"],
+        "url": "https://www.heyuan110.com/web-toolbox/pdf-to-image.html",
+        "description": "Free online PDF to image converter. Convert PDF pages to JPG or PNG in browser with custom quality and range.",
+        "inLanguage": ["en", "zh-CN", "fr", "es"],
+        "applicationCategory": "UtilitiesApplication",
+        "operatingSystem": "Web Browser",
+        "offers": { "@type": "Offer", "price": "0", "priceCurrency": "USD" },
+        "author": { "@type": "Person", "name": "heyuan110" },
+        "publisher": { "@type": "Organization", "name": "Web Toolbox", "url": "https://www.heyuan110.com/web-toolbox/" },
+        "featureList": [
+            "Convert PDF to PNG and JPG",
+            "Batch export all PDF pages",
+            "Select custom page ranges",
+            "Local browser processing for privacy"
+        ],
+        "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/pdf-to-image.webp"
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "BreadcrumbList",
+        "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.heyuan110.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Web Toolbox", "item": "https://www.heyuan110.com/web-toolbox/" },
+            { "@type": "ListItem", "position": 3, "name": "PDF to Image Converter", "item": "https://www.heyuan110.com/web-toolbox/pdf-to-image.html" }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "HowTo",
+        "name": "How to Convert PDF to Image",
+        "totalTime": "PT1M",
+        "step": [
+            { "@type": "HowToStep", "position": 1, "name": "Upload PDF", "text": "Choose a PDF file from your device." },
+            { "@type": "HowToStep", "position": 2, "name": "Set output options", "text": "Choose PNG/JPG, quality, scale, and page ranges." },
+            { "@type": "HowToStep", "position": 3, "name": "Convert and download", "text": "Export selected pages as images and download instantly." }
+        ]
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Can I convert PDF to JPG and PNG?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. You can choose JPG or PNG output format before conversion." }
+            },
+            {
+                "@type": "Question",
+                "name": "Can I export only selected pages?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes. Enter custom ranges like 1-3,5,8 to export specific pages." }
+            },
+            {
+                "@type": "Question",
+                "name": "Will my PDF file be uploaded?",
+                "acceptedAnswer": { "@type": "Answer", "text": "No. All conversion runs in your browser for privacy." }
+            },
+            {
+                "@type": "Question",
+                "name": "How do I download multiple pages?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Multiple images are packaged and downloaded as a ZIP file." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this PDF to image tool free?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, this converter is completely free." }
+            }
+        ]
+    }
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+            color: #e4e4e7;
+            min-height: 100vh;
+            padding: 24px 16px 56px;
+            line-height: 1.6;
+        }
+        .container { max-width: 980px; margin: 0 auto; }
+        .top-bar { display: flex; justify-content: space-between; align-items: center; gap: 12px; margin-bottom: 20px; }
+        .back-link { color: #a78bfa; text-decoration: none; font-size: 14px; display: inline-flex; gap: 6px; }
+        .back-link:hover { color: #c4b5fd; }
+
+        .lang-dropdown { position: relative; }
+        .lang-current { background: rgba(255,255,255,0.08); border: 1px solid rgba(255,255,255,0.2); color: #e4e4e7; padding: 8px 12px; border-radius: 8px; cursor: pointer; font-size: 14px; }
+        .lang-menu { position: absolute; right: 0; top: calc(100% + 4px); min-width: 150px; background: #1f2937; border: 1px solid rgba(255,255,255,0.15); border-radius: 8px; padding: 4px; display: none; z-index: 10; }
+        .lang-dropdown.open .lang-menu { display: block; }
+        .lang-btn { width: 100%; border: 0; background: transparent; color: #e4e4e7; text-align: left; padding: 8px 10px; border-radius: 6px; cursor: pointer; font-size: 14px; }
+        .lang-btn:hover { background: rgba(124,58,237,0.28); }
+
+        h1 { text-align: center; font-size: 2rem; margin-bottom: 8px; background: linear-gradient(120deg, #00d4ff, #7c3aed, #f472b6); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+        .subtitle { text-align: center; color: #a1a1aa; margin-bottom: 26px; }
+
+        .card { background: rgba(0,0,0,0.28); border: 1px solid rgba(255,255,255,0.1); border-radius: 16px; padding: 20px; margin-bottom: 18px; }
+        .card h2 { font-size: 1.05rem; margin-bottom: 14px; color: #f4f4f5; }
+
+        .upload-zone { border: 2px dashed rgba(124,58,237,0.55); border-radius: 14px; background: rgba(124,58,237,0.08); text-align: center; padding: 30px 14px; cursor: pointer; transition: all 0.2s ease; }
+        .upload-zone:hover, .upload-zone.dragover { border-color: #a78bfa; background: rgba(124,58,237,0.18); }
+        .upload-title { font-weight: 600; margin-bottom: 6px; }
+        .upload-hint { color: #a1a1aa; font-size: 14px; }
+        .hidden-input { display: none; }
+
+        .file-info { display: none; background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.09); border-radius: 10px; padding: 12px; margin-top: 12px; }
+        .file-info.show { display: block; }
+        .file-name { font-size: 14px; word-break: break-all; }
+        .file-meta { color: #a1a1aa; font-size: 13px; }
+
+        .controls { display: grid; gap: 14px; }
+        .control-item label { display: block; margin-bottom: 6px; font-size: 14px; }
+        .control-row { display: flex; gap: 12px; align-items: center; }
+
+        .select, .text-input {
+            padding: 9px 10px;
+            border-radius: 8px;
+            border: 1px solid rgba(255,255,255,0.2);
+            background: rgba(255,255,255,0.08);
+            color: #e4e4e7;
+            font-size: 14px;
+        }
+        .select { min-width: 130px; }
+        .text-input { width: 100%; }
+        .range { width: 100%; }
+        .hint { color: #a1a1aa; font-size: 13px; }
+
+        .toolbar { display: flex; flex-wrap: wrap; gap: 10px; align-items: center; margin-top: 12px; }
+        .btn { border: 0; border-radius: 8px; padding: 9px 12px; cursor: pointer; font-size: 13px; color: #fff; background: rgba(124,58,237,0.9); }
+        .btn:hover { background: rgba(124,58,237,1); }
+        .btn.secondary { background: rgba(255,255,255,0.12); color: #e4e4e7; }
+        .btn.secondary:hover { background: rgba(255,255,255,0.2); }
+        .btn:disabled { opacity: 0.55; cursor: not-allowed; }
+
+        .status { color: #93c5fd; font-size: 14px; min-height: 20px; margin-top: 10px; }
+
+        .preview-wrap { margin-top: 12px; }
+        .preview-img { max-width: 240px; border-radius: 8px; border: 1px solid rgba(255,255,255,0.15); display: none; }
+        .preview-img.show { display: block; }
+
+        .features-section, .faq-section, .related-tools { margin-top: 24px; background: rgba(0,0,0,0.26); border: 1px solid rgba(255,255,255,0.08); border-radius: 16px; padding: 22px; }
+        .features-section h2, .faq-section h2, .related-tools h3 { font-size: 1.2rem; margin-bottom: 16px; text-align: center; }
+        .features-grid, .related-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+        .feature-card, .related-card { background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px; padding: 14px; }
+        .feature-card h4, .related-card h4 { margin: 8px 0 6px; font-size: 15px; }
+        .feature-card p, .related-card p { color: #a1a1aa; font-size: 13px; }
+        .related-card { text-decoration: none; color: inherit; display: block; }
+        .related-card:hover { border-color: rgba(124,58,237,0.6); }
+
+        .faq-item { border: 1px solid rgba(255,255,255,0.1); border-radius: 10px; margin-bottom: 10px; overflow: hidden; background: rgba(255,255,255,0.03); }
+        .faq-question { width: 100%; text-align: left; border: 0; background: transparent; color: #f4f4f5; font-size: 14px; padding: 12px 14px; cursor: pointer; }
+        .faq-answer { display: none; padding: 0 14px 12px; color: #a1a1aa; font-size: 14px; }
+        .faq-item.active .faq-answer { display: block; }
+
+        @media (max-width: 900px) { .features-grid, .related-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+        @media (max-width: 640px) {
+            h1 { font-size: 1.7rem; }
+            .features-grid, .related-grid { grid-template-columns: 1fr; }
+            .control-row { flex-direction: column; align-items: stretch; }
+            .select { width: 100%; }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="top-bar">
+            <a class="back-link" href="index.html">← <span data-i18n="backHome">Back to Toolbox</span></a>
+            <div class="lang-dropdown" id="langDropdown">
+                <div class="lang-current" id="langCurrent">🇺🇸 English</div>
+                <div class="lang-menu">
+                    <button class="lang-btn" data-lang="en">🇺🇸 English</button>
+                    <button class="lang-btn" data-lang="zh-CN">🇨🇳 中文</button>
+                    <button class="lang-btn" data-lang="fr">🇫🇷 Français</button>
+                    <button class="lang-btn" data-lang="es">🇪🇸 Español</button>
+                </div>
+            </div>
+        </div>
+
+        <h1 data-i18n="title">PDF to Image Converter</h1>
+        <p class="subtitle" data-i18n="subtitle">Convert PDF pages to PNG or JPG images in your browser</p>
+
+        <section class="card">
+            <h2 data-i18n="uploadTitle">Upload PDF File</h2>
+            <label class="upload-zone" id="uploadZone">
+                <input class="hidden-input" id="fileInput" type="file" accept="application/pdf,.pdf">
+                <div class="upload-title" data-i18n="uploadMain">Click to select a PDF file</div>
+                <div class="upload-hint" data-i18n="uploadHint">or drag and drop one PDF here</div>
+            </label>
+            <div class="file-info" id="fileInfo">
+                <div class="file-name" id="fileName"></div>
+                <div class="file-meta" id="fileMeta"></div>
+            </div>
+        </section>
+
+        <section class="card">
+            <h2 data-i18n="optionsTitle">Export Options</h2>
+            <div class="controls">
+                <div class="control-item">
+                    <label for="formatSelect" data-i18n="formatLabel">Image Format</label>
+                    <select class="select" id="formatSelect">
+                        <option value="png">PNG</option>
+                        <option value="jpg">JPG</option>
+                    </select>
+                </div>
+                <div class="control-item">
+                    <label for="qualityRange"><span data-i18n="qualityLabel">JPG Quality</span>: <strong id="qualityValue">0.90</strong></label>
+                    <input class="range" id="qualityRange" type="range" min="0.5" max="0.98" step="0.02" value="0.9">
+                </div>
+                <div class="control-item">
+                    <label for="scaleRange"><span data-i18n="scaleLabel">Render Scale</span>: <strong id="scaleValue">1.50</strong></label>
+                    <input class="range" id="scaleRange" type="range" min="0.8" max="2.5" step="0.1" value="1.5">
+                </div>
+                <div class="control-item">
+                    <label for="rangeInput" data-i18n="rangeLabel">Page Range (optional)</label>
+                    <input class="text-input" id="rangeInput" data-i18n-placeholder="rangePlaceholder" placeholder="Leave empty for all pages. Example: 1-3,5,8">
+                    <div class="hint" data-i18n="rangeHint">Use commas to separate ranges like 1-2,5,7-9.</div>
+                </div>
+            </div>
+            <div class="toolbar">
+                <button class="btn secondary" id="resetBtn" data-i18n="resetBtn">Reset</button>
+                <button class="btn" id="convertBtn" data-i18n="convertBtn">Convert to Images</button>
+            </div>
+            <div class="status" id="statusText"></div>
+            <div class="preview-wrap">
+                <img id="previewImg" class="preview-img" alt="Preview">
+            </div>
+        </section>
+
+        <section class="features-section">
+            <h2 data-i18n="featuresTitle">Key PDF to Image Features</h2>
+            <div class="features-grid">
+                <article class="feature-card">
+                    <div>🖼️</div>
+                    <h4 data-i18n="feature1Title">PDF to PNG/JPG</h4>
+                    <p data-i18n="feature1Desc">Convert PDF pages into high-quality image formats.</p>
+                </article>
+                <article class="feature-card">
+                    <div>📄</div>
+                    <h4 data-i18n="feature2Title">Select Page Range</h4>
+                    <p data-i18n="feature2Desc">Export all pages or specific ranges in one conversion.</p>
+                </article>
+                <article class="feature-card">
+                    <div>📦</div>
+                    <h4 data-i18n="feature3Title">ZIP Batch Download</h4>
+                    <p data-i18n="feature3Desc">Multiple page images are downloaded as a ZIP file.</p>
+                </article>
+                <article class="feature-card">
+                    <div>🔒</div>
+                    <h4 data-i18n="feature4Title">Local Conversion</h4>
+                    <p data-i18n="feature4Desc">Your PDF stays on device. No server upload required.</p>
+                </article>
+            </div>
+        </section>
+
+        <section class="faq-section">
+            <h2 data-i18n="faqTitle">Frequently Asked Questions</h2>
+            <div class="faq-item">
+                <button class="faq-question" data-i18n="faq1Q">Can I export PDF to JPG and PNG?</button>
+                <div class="faq-answer" data-i18n="faq1A">Yes. Choose the output format before conversion.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-i18n="faq2Q">Can I convert selected pages only?</button>
+                <div class="faq-answer" data-i18n="faq2A">Yes, enter ranges like 1-3,5,8.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-i18n="faq3Q">Will files be uploaded?</button>
+                <div class="faq-answer" data-i18n="faq3A">No, all conversion is done in your browser.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-i18n="faq4Q">How to download many images?</button>
+                <div class="faq-answer" data-i18n="faq4A">The tool packs all images into a ZIP file automatically.</div>
+            </div>
+            <div class="faq-item">
+                <button class="faq-question" data-i18n="faq5Q">Is this converter free?</button>
+                <div class="faq-answer" data-i18n="faq5A">Yes, it is completely free.</div>
+            </div>
+        </section>
+
+        <section class="related-tools">
+            <h3 data-i18n="relatedTitle">Related PDF Tools</h3>
+            <div class="related-grid">
+                <a class="related-card" href="pdf-merge.html">
+                    <div>📚</div>
+                    <h4 data-i18n="rel1Title">PDF Merge</h4>
+                    <p data-i18n="rel1Desc">Combine multiple PDF files into one.</p>
+                </a>
+                <a class="related-card" href="pdf-split.html">
+                    <div>✂️</div>
+                    <h4 data-i18n="rel2Title">PDF Split</h4>
+                    <p data-i18n="rel2Desc">Split a PDF into pages or ranges.</p>
+                </a>
+                <a class="related-card" href="pdf-compress.html">
+                    <div>🗜️</div>
+                    <h4 data-i18n="rel3Title">PDF Compress</h4>
+                    <p data-i18n="rel3Desc">Reduce PDF size for sharing and upload.</p>
+                </a>
+                <a class="related-card" href="image-to-pdf.html">
+                    <div>📄</div>
+                    <h4 data-i18n="rel4Title">Image to PDF</h4>
+                    <p data-i18n="rel4Desc">Create PDF files from multiple images.</p>
+                </a>
+            </div>
+        </section>
+    </div>
+
+    <script>
+    (function() {
+        'use strict';
+
+        if (window.pdfjsLib) {
+            window.pdfjsLib.GlobalWorkerOptions.workerSrc = 'https://cdnjs.cloudflare.com/ajax/libs/pdf.js/3.11.174/pdf.worker.min.js';
+        }
+
+        var i18n = {
+            en: {
+                backHome: 'Back to Toolbox',
+                title: 'PDF to Image Converter',
+                subtitle: 'Convert PDF pages to PNG or JPG images in your browser',
+                uploadTitle: 'Upload PDF File',
+                uploadMain: 'Click to select a PDF file',
+                uploadHint: 'or drag and drop one PDF here',
+                optionsTitle: 'Export Options',
+                formatLabel: 'Image Format',
+                qualityLabel: 'JPG Quality',
+                scaleLabel: 'Render Scale',
+                rangeLabel: 'Page Range (optional)',
+                rangePlaceholder: 'Leave empty for all pages. Example: 1-3,5,8',
+                rangeHint: 'Use commas to separate ranges like 1-2,5,7-9.',
+                resetBtn: 'Reset',
+                convertBtn: 'Convert to Images',
+                fileMeta: '{pages} pages · {size}',
+                statusNeedFile: 'Please upload one PDF file first.',
+                statusBadFile: 'Only PDF files are supported.',
+                statusBadRange: 'Invalid page range format.',
+                statusOutOfRange: 'Range exceeds total page count.',
+                statusStart: 'Converting PDF pages...',
+                statusPage: 'Rendering page {current}/{total}...',
+                statusDone: 'Conversion complete. Download started.',
+                statusError: 'Conversion failed. Please try again.',
+                featuresTitle: 'Key PDF to Image Features',
+                feature1Title: 'PDF to PNG/JPG',
+                feature1Desc: 'Convert PDF pages into high-quality image formats.',
+                feature2Title: 'Select Page Range',
+                feature2Desc: 'Export all pages or specific ranges in one conversion.',
+                feature3Title: 'ZIP Batch Download',
+                feature3Desc: 'Multiple page images are downloaded as a ZIP file.',
+                feature4Title: 'Local Conversion',
+                feature4Desc: 'Your PDF stays on device. No server upload required.',
+                faqTitle: 'Frequently Asked Questions',
+                faq1Q: 'Can I export PDF to JPG and PNG?',
+                faq1A: 'Yes. Choose the output format before conversion.',
+                faq2Q: 'Can I convert selected pages only?',
+                faq2A: 'Yes, enter ranges like 1-3,5,8.',
+                faq3Q: 'Will files be uploaded?',
+                faq3A: 'No, all conversion is done in your browser.',
+                faq4Q: 'How to download many images?',
+                faq4A: 'The tool packs all images into a ZIP file automatically.',
+                faq5Q: 'Is this converter free?',
+                faq5A: 'Yes, it is completely free.',
+                relatedTitle: 'Related PDF Tools',
+                rel1Title: 'PDF Merge',
+                rel1Desc: 'Combine multiple PDF files into one.',
+                rel2Title: 'PDF Split',
+                rel2Desc: 'Split a PDF into pages or ranges.',
+                rel3Title: 'PDF Compress',
+                rel3Desc: 'Reduce PDF size for sharing and upload.',
+                rel4Title: 'Image to PDF',
+                rel4Desc: 'Create PDF files from multiple images.'
+            },
+            'zh-CN': {
+                backHome: '返回工具箱',
+                title: 'PDF 转图片',
+                subtitle: '在浏览器中将 PDF 页面转换为 PNG 或 JPG 图片',
+                uploadTitle: '上传 PDF 文件',
+                uploadMain: '点击选择 PDF 文件',
+                uploadHint: '或拖拽一个 PDF 到此区域',
+                optionsTitle: '导出选项',
+                formatLabel: '图片格式',
+                qualityLabel: 'JPG 质量',
+                scaleLabel: '渲染缩放',
+                rangeLabel: '页码范围（可选）',
+                rangePlaceholder: '留空表示全部页面，例如：1-3,5,8',
+                rangeHint: '可用逗号分隔多个范围，如 1-2,5,7-9。',
+                resetBtn: '重置',
+                convertBtn: '转换为图片',
+                fileMeta: '{pages} 页 · {size}',
+                statusNeedFile: '请先上传一个 PDF 文件。',
+                statusBadFile: '仅支持 PDF 文件。',
+                statusBadRange: '页码范围格式无效。',
+                statusOutOfRange: '页码范围超出总页数。',
+                statusStart: '正在转换 PDF 页面...',
+                statusPage: '正在渲染第 {current}/{total} 页...',
+                statusDone: '转换完成，已开始下载。',
+                statusError: '转换失败，请重试。',
+                featuresTitle: 'PDF 转图片核心功能',
+                feature1Title: 'PDF 转 PNG/JPG',
+                feature1Desc: '将 PDF 页面导出为高质量图片格式。',
+                feature2Title: '按页范围导出',
+                feature2Desc: '支持全部页面或指定页码范围导出。',
+                feature3Title: 'ZIP 批量下载',
+                feature3Desc: '多页图片会自动打包为 ZIP 下载。',
+                feature4Title: '本地转换',
+                feature4Desc: '文件不上传服务器，隐私更安全。',
+                faqTitle: '常见问题',
+                faq1Q: '可以导出 JPG 和 PNG 吗？',
+                faq1A: '可以，转换前可自由选择输出格式。',
+                faq2Q: '可以只导出部分页面吗？',
+                faq2A: '可以，输入 1-3,5,8 这类范围即可。',
+                faq3Q: '文件会上传吗？',
+                faq3A: '不会，全部转换过程都在浏览器本地完成。',
+                faq4Q: '多张图片如何下载？',
+                faq4A: '工具会自动将多张图片打包成 ZIP 下载。',
+                faq5Q: '这个工具免费吗？',
+                faq5A: '是的，完全免费。',
+                relatedTitle: '相关 PDF 工具',
+                rel1Title: 'PDF 合并',
+                rel1Desc: '将多个 PDF 文件合并成一个。',
+                rel2Title: 'PDF 拆分',
+                rel2Desc: '按单页或范围拆分 PDF。',
+                rel3Title: 'PDF 压缩',
+                rel3Desc: '减小 PDF 文件体积，方便分享。',
+                rel4Title: '图片转 PDF',
+                rel4Desc: '将多张图片生成 PDF 文件。'
+            },
+            fr: {
+                backHome: 'Retour à la boîte à outils',
+                title: 'PDF vers image',
+                subtitle: 'Convertissez les pages PDF en images PNG ou JPG',
+                uploadTitle: 'Importer un fichier PDF',
+                uploadMain: 'Cliquez pour choisir un fichier PDF',
+                uploadHint: 'ou glissez-déposez un PDF ici',
+                optionsTitle: 'Options d export',
+                formatLabel: 'Format image',
+                qualityLabel: 'Qualité JPG',
+                scaleLabel: 'Échelle de rendu',
+                rangeLabel: 'Plage de pages (optionnel)',
+                rangePlaceholder: 'Vide = toutes pages. Ex: 1-3,5,8',
+                rangeHint: 'Séparez par virgules, par ex. 1-2,5,7-9.',
+                resetBtn: 'Réinitialiser',
+                convertBtn: 'Convertir en images',
+                fileMeta: '{pages} pages · {size}',
+                statusNeedFile: 'Veuillez importer un fichier PDF d abord.',
+                statusBadFile: 'Seuls les fichiers PDF sont pris en charge.',
+                statusBadRange: 'Format de plage invalide.',
+                statusOutOfRange: 'La plage dépasse le nombre total de pages.',
+                statusStart: 'Conversion des pages PDF...',
+                statusPage: 'Rendu page {current}/{total}...',
+                statusDone: 'Conversion terminée. Téléchargement lancé.',
+                statusError: 'Échec de conversion. Réessayez.',
+                featuresTitle: 'Fonctions clés PDF vers image',
+                feature1Title: 'PDF vers PNG/JPG',
+                feature1Desc: 'Convertissez les pages PDF en images de haute qualité.',
+                feature2Title: 'Sélection de pages',
+                feature2Desc: 'Exporter toutes les pages ou des plages spécifiques.',
+                feature3Title: 'Téléchargement ZIP',
+                feature3Desc: 'Les images multiples sont regroupées en ZIP.',
+                feature4Title: 'Conversion locale',
+                feature4Desc: 'Aucun upload serveur, vos fichiers restent privés.',
+                faqTitle: 'Questions fréquentes',
+                faq1Q: 'Puis-je exporter en JPG et PNG ?',
+                faq1A: 'Oui, choisissez le format avant la conversion.',
+                faq2Q: 'Puis-je convertir certaines pages seulement ?',
+                faq2A: 'Oui, saisissez des plages comme 1-3,5,8.',
+                faq3Q: 'Les fichiers sont-ils envoyés ?',
+                faq3A: 'Non, tout est converti localement dans le navigateur.',
+                faq4Q: 'Comment télécharger plusieurs images ?',
+                faq4A: 'L outil crée automatiquement un ZIP.',
+                faq5Q: 'Cet outil est-il gratuit ?',
+                faq5A: 'Oui, totalement gratuit.',
+                relatedTitle: 'Outils PDF associés',
+                rel1Title: 'Fusion PDF',
+                rel1Desc: 'Combiner plusieurs fichiers PDF en un.',
+                rel2Title: 'Découper PDF',
+                rel2Desc: 'Diviser un PDF par pages ou plages.',
+                rel3Title: 'Compresser PDF',
+                rel3Desc: 'Réduire la taille des PDF.',
+                rel4Title: 'Image vers PDF',
+                rel4Desc: 'Créer un PDF à partir de plusieurs images.'
+            },
+            es: {
+                backHome: 'Volver a la caja de herramientas',
+                title: 'PDF a imagen',
+                subtitle: 'Convierte páginas PDF en imágenes PNG o JPG',
+                uploadTitle: 'Subir archivo PDF',
+                uploadMain: 'Haz clic para seleccionar un archivo PDF',
+                uploadHint: 'o arrastra y suelta un PDF aquí',
+                optionsTitle: 'Opciones de exportación',
+                formatLabel: 'Formato de imagen',
+                qualityLabel: 'Calidad JPG',
+                scaleLabel: 'Escala de renderizado',
+                rangeLabel: 'Rango de páginas (opcional)',
+                rangePlaceholder: 'Vacío = todas las páginas. Ej: 1-3,5,8',
+                rangeHint: 'Usa comas para separar rangos, ej. 1-2,5,7-9.',
+                resetBtn: 'Restablecer',
+                convertBtn: 'Convertir a imágenes',
+                fileMeta: '{pages} páginas · {size}',
+                statusNeedFile: 'Primero sube un archivo PDF.',
+                statusBadFile: 'Solo se admiten archivos PDF.',
+                statusBadRange: 'Formato de rango inválido.',
+                statusOutOfRange: 'El rango supera el total de páginas.',
+                statusStart: 'Convirtiendo páginas PDF...',
+                statusPage: 'Renderizando página {current}/{total}...',
+                statusDone: 'Conversión completada. Descarga iniciada.',
+                statusError: 'Conversión fallida. Inténtalo de nuevo.',
+                featuresTitle: 'Funciones clave PDF a imagen',
+                feature1Title: 'PDF a PNG/JPG',
+                feature1Desc: 'Convierte páginas PDF en imágenes de alta calidad.',
+                feature2Title: 'Seleccionar rango',
+                feature2Desc: 'Exporta todas las páginas o rangos específicos.',
+                feature3Title: 'Descarga ZIP',
+                feature3Desc: 'Múltiples imágenes se descargan en ZIP.',
+                feature4Title: 'Conversión local',
+                feature4Desc: 'Sin subir archivos. Todo se procesa localmente.',
+                faqTitle: 'Preguntas frecuentes',
+                faq1Q: '¿Puedo exportar a JPG y PNG?',
+                faq1A: 'Sí, elige el formato antes de convertir.',
+                faq2Q: '¿Puedo convertir solo algunas páginas?',
+                faq2A: 'Sí, escribe rangos como 1-3,5,8.',
+                faq3Q: '¿Se suben mis archivos?',
+                faq3A: 'No, toda la conversión es local en el navegador.',
+                faq4Q: '¿Cómo descargo muchas imágenes?',
+                faq4A: 'La herramienta empaqueta todo en un ZIP.',
+                faq5Q: '¿Es gratuita esta herramienta?',
+                faq5A: 'Sí, completamente gratuita.',
+                relatedTitle: 'Herramientas PDF relacionadas',
+                rel1Title: 'Unir PDF',
+                rel1Desc: 'Combina varios archivos PDF en uno.',
+                rel2Title: 'Dividir PDF',
+                rel2Desc: 'Divide un PDF por páginas o rangos.',
+                rel3Title: 'Comprimir PDF',
+                rel3Desc: 'Reduce el tamaño de los archivos PDF.',
+                rel4Title: 'Imagen a PDF',
+                rel4Desc: 'Crea PDF a partir de varias imágenes.'
+            }
+        };
+
+        var langNames = { en: '🇺🇸 English', 'zh-CN': '🇨🇳 中文', fr: '🇫🇷 Français', es: '🇪🇸 Español' };
+        var currentLang = localStorage.getItem('pdf_to_image_lang') || 'en';
+
+        var fileInput = document.getElementById('fileInput');
+        var uploadZone = document.getElementById('uploadZone');
+        var fileInfo = document.getElementById('fileInfo');
+        var fileNameEl = document.getElementById('fileName');
+        var fileMetaEl = document.getElementById('fileMeta');
+        var formatSelect = document.getElementById('formatSelect');
+        var qualityRange = document.getElementById('qualityRange');
+        var qualityValue = document.getElementById('qualityValue');
+        var scaleRange = document.getElementById('scaleRange');
+        var scaleValue = document.getElementById('scaleValue');
+        var rangeInput = document.getElementById('rangeInput');
+        var resetBtn = document.getElementById('resetBtn');
+        var convertBtn = document.getElementById('convertBtn');
+        var statusText = document.getElementById('statusText');
+        var previewImg = document.getElementById('previewImg');
+        var langDropdown = document.getElementById('langDropdown');
+        var langCurrent = document.getElementById('langCurrent');
+
+        var source = null;
+
+        function t(key) {
+            var dict = i18n[currentLang] || i18n.en;
+            return dict[key] || i18n.en[key] || key;
+        }
+
+        function applyLanguage(lang) {
+            currentLang = i18n[lang] ? lang : 'en';
+            localStorage.setItem('pdf_to_image_lang', currentLang);
+            document.documentElement.lang = currentLang;
+            langCurrent.textContent = langNames[currentLang];
+
+            document.querySelectorAll('[data-i18n]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n');
+                el.textContent = t(key);
+            });
+            document.querySelectorAll('[data-i18n-placeholder]').forEach(function(el) {
+                var key = el.getAttribute('data-i18n-placeholder');
+                el.placeholder = t(key);
+            });
+            updateFileInfo();
+        }
+
+        function fileSize(bytes) {
+            if (bytes < 1024) return bytes + ' B';
+            if (bytes < 1048576) return (bytes / 1024).toFixed(1) + ' KB';
+            return (bytes / 1048576).toFixed(2) + ' MB';
+        }
+
+        function setStatus(key, custom) {
+            statusText.textContent = custom || t(key);
+        }
+
+        function updateSliderLabels() {
+            qualityValue.textContent = Number(qualityRange.value).toFixed(2);
+            scaleValue.textContent = Number(scaleRange.value).toFixed(2);
+        }
+
+        function updateFileInfo() {
+            if (!source) {
+                fileInfo.classList.remove('show');
+                previewImg.classList.remove('show');
+                previewImg.removeAttribute('src');
+                return;
+            }
+            fileInfo.classList.add('show');
+            fileNameEl.textContent = source.file.name;
+            fileMetaEl.textContent = t('fileMeta').replace('{pages}', String(source.pages)).replace('{size}', fileSize(source.file.size));
+        }
+
+        function parseRanges(input, totalPages) {
+            var text = (input || '').trim();
+            if (!text) {
+                var all = [];
+                for (var i = 1; i <= totalPages; i++) all.push(i);
+                return all;
+            }
+            var parts = text.split(',').map(function(p) { return p.trim(); }).filter(Boolean);
+            if (!parts.length) throw new Error('badRange');
+            var set = new Set();
+
+            for (var j = 0; j < parts.length; j++) {
+                var part = parts[j];
+                var match = part.match(/^(\d+)(?:-(\d+))?$/);
+                if (!match) throw new Error('badRange');
+                var start = parseInt(match[1], 10);
+                var end = match[2] ? parseInt(match[2], 10) : start;
+                if (isNaN(start) || isNaN(end) || start < 1 || end < 1 || start > end) throw new Error('badRange');
+                if (end > totalPages) throw new Error('outOfRange');
+                for (var p = start; p <= end; p++) set.add(p);
+            }
+            return Array.from(set).sort(function(a, b) { return a - b; });
+        }
+
+        async function loadPdf(file) {
+            if (!file || (!/\.pdf$/i.test(file.name) && file.type !== 'application/pdf')) throw new Error('badFile');
+            var buffer = await file.arrayBuffer();
+            var task = pdfjsLib.getDocument({ data: buffer });
+            var pdf = await task.promise;
+            source = { file: file, buffer: buffer, pages: pdf.numPages };
+
+            var firstPage = await pdf.getPage(1);
+            var viewport = firstPage.getViewport({ scale: 0.4 });
+            var canvas = document.createElement('canvas');
+            canvas.width = Math.max(1, Math.round(viewport.width));
+            canvas.height = Math.max(1, Math.round(viewport.height));
+            var ctx = canvas.getContext('2d', { alpha: false });
+            await firstPage.render({ canvasContext: ctx, viewport: viewport }).promise;
+            previewImg.src = canvas.toDataURL('image/png');
+            previewImg.classList.add('show');
+
+            await pdf.destroy();
+            updateFileInfo();
+            setStatus('', '');
+        }
+
+        function downloadBlob(blob, filename) {
+            var url = URL.createObjectURL(blob);
+            var a = document.createElement('a');
+            a.href = url;
+            a.download = filename;
+            document.body.appendChild(a);
+            a.click();
+            a.remove();
+            URL.revokeObjectURL(url);
+        }
+
+        async function convertPdf() {
+            if (!source) {
+                setStatus('statusNeedFile');
+                return;
+            }
+            try {
+                convertBtn.disabled = true;
+                setStatus('statusStart');
+
+                var format = formatSelect.value;
+                var quality = Number(qualityRange.value);
+                var scale = Number(scaleRange.value);
+
+                var task = pdfjsLib.getDocument({ data: source.buffer });
+                var pdf = await task.promise;
+                var pages = parseRanges(rangeInput.value, pdf.numPages);
+                var results = [];
+
+                for (var i = 0; i < pages.length; i++) {
+                    var pageNo = pages[i];
+                    setStatus('statusPage', t('statusPage').replace('{current}', String(i + 1)).replace('{total}', String(pages.length)));
+                    var page = await pdf.getPage(pageNo);
+                    var viewport = page.getViewport({ scale: scale });
+
+                    var canvas = document.createElement('canvas');
+                    canvas.width = Math.max(1, Math.round(viewport.width));
+                    canvas.height = Math.max(1, Math.round(viewport.height));
+                    var ctx = canvas.getContext('2d', { alpha: false });
+                    await page.render({ canvasContext: ctx, viewport: viewport }).promise;
+
+                    var mime = format === 'png' ? 'image/png' : 'image/jpeg';
+                    var dataUrl = canvas.toDataURL(mime, quality);
+                    var base64 = dataUrl.split(',')[1];
+                    results.push({
+                        name: 'page-' + String(pageNo).padStart(3, '0') + '.' + (format === 'png' ? 'png' : 'jpg'),
+                        base64: base64,
+                        mime: mime
+                    });
+                }
+
+                if (results.length === 1) {
+                    var b = atob(results[0].base64);
+                    var bytes = new Uint8Array(b.length);
+                    for (var n = 0; n < b.length; n++) bytes[n] = b.charCodeAt(n);
+                    downloadBlob(new Blob([bytes], { type: results[0].mime }), results[0].name);
+                } else {
+                    var zip = new JSZip();
+                    results.forEach(function(item) {
+                        zip.file(item.name, item.base64, { base64: true });
+                    });
+                    var zipBlob = await zip.generateAsync({ type: 'blob' });
+                    downloadBlob(zipBlob, 'pdf-images.zip');
+                }
+
+                setStatus('statusDone');
+                await pdf.destroy();
+            } catch (err) {
+                if (err && err.message === 'badRange') setStatus('statusBadRange');
+                else if (err && err.message === 'outOfRange') setStatus('statusOutOfRange');
+                else if (err && err.message === 'badFile') setStatus('statusBadFile');
+                else setStatus('statusError');
+            } finally {
+                convertBtn.disabled = false;
+            }
+        }
+
+        fileInput.addEventListener('change', function(e) {
+            loadPdf(e.target.files && e.target.files[0]).catch(function(err) {
+                if (err && err.message === 'badFile') setStatus('statusBadFile');
+                else setStatus('statusError');
+            });
+            fileInput.value = '';
+        });
+
+        ['dragenter', 'dragover'].forEach(function(name) {
+            uploadZone.addEventListener(name, function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadZone.classList.add('dragover');
+            });
+        });
+        ['dragleave', 'drop'].forEach(function(name) {
+            uploadZone.addEventListener(name, function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+                uploadZone.classList.remove('dragover');
+            });
+        });
+        uploadZone.addEventListener('drop', function(e) {
+            var file = e.dataTransfer && e.dataTransfer.files && e.dataTransfer.files[0];
+            loadPdf(file).catch(function(err) {
+                if (err && err.message === 'badFile') setStatus('statusBadFile');
+                else setStatus('statusError');
+            });
+        });
+
+        qualityRange.addEventListener('input', updateSliderLabels);
+        scaleRange.addEventListener('input', updateSliderLabels);
+
+        resetBtn.addEventListener('click', function() {
+            formatSelect.value = 'png';
+            qualityRange.value = '0.9';
+            scaleRange.value = '1.5';
+            rangeInput.value = '';
+            updateSliderLabels();
+            setStatus('', '');
+        });
+
+        convertBtn.addEventListener('click', convertPdf);
+
+        langCurrent.addEventListener('click', function(e) {
+            e.stopPropagation();
+            langDropdown.classList.toggle('open');
+        });
+        document.querySelectorAll('.lang-btn').forEach(function(btn) {
+            btn.addEventListener('click', function(e) {
+                e.stopPropagation();
+                applyLanguage(btn.getAttribute('data-lang'));
+                langDropdown.classList.remove('open');
+            });
+        });
+        document.addEventListener('click', function() {
+            langDropdown.classList.remove('open');
+        });
+
+        document.querySelectorAll('.faq-question').forEach(function(btn) {
+            btn.addEventListener('click', function() {
+                var item = btn.parentElement;
+                var open = item.classList.contains('active');
+                document.querySelectorAll('.faq-item').forEach(function(it) { it.classList.remove('active'); });
+                if (!open) item.classList.add('active');
+            });
+        });
+
+        updateSliderLabels();
+        applyLanguage(currentLang);
+    })();
+    </script>
+</body>
+</html>

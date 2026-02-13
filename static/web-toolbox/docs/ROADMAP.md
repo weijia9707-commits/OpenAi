@@ -7,8 +7,8 @@
 
 ## 项目状态总览
 
-- **已上线工具**: 34 个
-- **待开发工具**: 14 个
+- **已上线工具**: 38 个
+- **待开发工具**: 10 个
 - **目标总计**: 48+ 个工具
 
 ---
@@ -45,6 +45,16 @@
 | 26 | LED 弹幕 | handheld-danmaku.html | 工具 | ✅ 已上线 |
 | 27 | 页面自动刷新 | page-refresher.html | 工具 | ✅ 已上线 |
 | 28 | Claude 历史查看器 | claude-history-viewer.html | 开发者 | ✅ 已上线 |
+| 29 | 密码生成器 | password-generator.html | 安全 | ✅ 已上线 |
+| 30 | QR 码生成器 | qr-code-generator.html | 工具 | ✅ 已上线 |
+| 31 | 字数统计工具 | word-counter.html | 文本 | ✅ 已上线 |
+| 32 | Base64 编解码 | base64-tool.html | 开发者 | ✅ 已上线 |
+| 33 | URL 编解码 | url-encoder.html | 开发者 | ✅ 已上线 |
+| 34 | Lorem Ipsum 生成器 | lorem-ipsum.html | 文本 | ✅ 已上线 |
+| 35 | PDF 合并 | pdf-merge.html | PDF | ✅ 已上线 |
+| 36 | PDF 拆分 | pdf-split.html | PDF | ✅ 已上线 |
+| 37 | PDF 压缩 | pdf-compress.html | PDF | ✅ 已上线 |
+| 38 | PDF 转图片 | pdf-to-image.html | PDF | ✅ 已上线 |
 
 ---
 
@@ -191,10 +201,10 @@ web-toolbox/
 - [x] Lorem Ipsum 生成器 (lorem-ipsum.html) ✅ 2026-02-13
 
 ### Phase 2 进度
-- [ ] PDF 合并 (pdf-merge.html)
-- [ ] PDF 拆分 (pdf-split.html)
-- [ ] PDF 压缩 (pdf-compress.html)
-- [ ] PDF 转图片 (pdf-to-image.html)
+- [x] PDF 合并 (pdf-merge.html) ✅ 2026-02-13
+- [x] PDF 拆分 (pdf-split.html) ✅ 2026-02-13
+- [x] PDF 压缩 (pdf-compress.html) ✅ 2026-02-13
+- [x] PDF 转图片 (pdf-to-image.html) ✅ 2026-02-13
 
 ### Phase 3 进度
 - [ ] Markdown 编辑器 (markdown-editor.html)
