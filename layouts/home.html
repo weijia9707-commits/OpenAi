@@ -20,6 +20,10 @@
   .post-card p{margin:0;color:#5a6372;font-size:.93rem}
   .post-card .meta{font-size:.82rem;color:#8a93a3;margin-top:.65rem}
   .home-foot{margin:2rem 0 1rem;text-align:center;opacity:.8}
+  @media (prefers-reduced-motion: reduce){
+    .post-card,.post-card::before{transition:none!important}
+    .post-link:hover .post-card{transform:none;box-shadow:0 8px 20px rgba(0,0,0,.06)}
+  }
   @media (max-width: 860px){
     .quick{grid-template-columns:1fr}
     .post-grid{grid-template-columns:1fr}
