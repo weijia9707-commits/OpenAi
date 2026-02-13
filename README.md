@@ -1,10 +1,4 @@
 
-## 技术栈
-
-- **静态网站生成器**: Hugo v0.153.2+
-- **主题**: [hermit-V2](https://github.com/1bl4z3r/hermit-V2)
-- **部署**: GitHub Pages + GitHub Actions
-
 ## 内容分类
 
 - AI 系列
@@ -20,12 +14,6 @@
 - [Hugo Extended](https://gohugo.io/installation/) v0.153.2 或更高版本
 - Git
 
-### 克隆项目
-
-```bash
-git clone --recursive https://github.com/heyuan110/heyuan110.github.io.git
-cd heyuan110.github.io
-```
 
 ### 本地预览
 
