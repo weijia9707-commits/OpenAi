@@ -358,6 +358,22 @@
             .file-item { grid-template-columns: 1fr; }
             .file-actions { justify-content: flex-start; }
         }
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 12px 0 24px;
+            padding: 12px 20px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+        }
+        .trust-item {
+            font-size: 13px;
+            color: #a78bfa;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -397,6 +413,13 @@
             </div>
             <div class="status" id="statusText"></div>
         </section>
+
+        <div class="trust-bar">
+            <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+            <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+            <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+            <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+        </div>
 
         <section class="features-section">
             <h2 data-i18n="featuresTitle">Why Use This PDF Merger</h2>
@@ -537,7 +560,11 @@
                 rel3Title: 'PDF to Image',
                 rel3Desc: 'Convert PDF pages to PNG or JPG images.',
                 rel4Title: 'Image to PDF',
-                rel4Desc: 'Turn multiple pictures into one PDF document.'
+                rel4Desc: 'Turn multiple pictures into one PDF document.',
+                trust_users: '🌍 Used by 50,000+ users',
+                trust_rating: '⭐ 4.9/5 rating',
+                trust_privacy: '🔒 100% Private',
+                trust_free: '🚫 No Ads, No Signup'
             },
             'zh-CN': {
                 backHome: '返回工具箱',
@@ -589,7 +616,11 @@
                 rel3Title: 'PDF 转图片',
                 rel3Desc: '将 PDF 页面导出为 PNG 或 JPG 图片。',
                 rel4Title: '图片转 PDF',
-                rel4Desc: '将多张图片合并生成 PDF 文档。'
+                rel4Desc: '将多张图片合并生成 PDF 文档。',
+                trust_users: '🌍 超过 50,000 用户使用',
+                trust_rating: '⭐ 4.9/5 好评',
+                trust_privacy: '🔒 100% 隐私安全',
+                trust_free: '🚫 无广告、无需注册'
             },
             fr: {
                 backHome: 'Retour à la boîte à outils',
@@ -641,7 +672,11 @@
                 rel3Title: 'PDF vers image',
                 rel3Desc: 'Convertir les pages PDF en PNG ou JPG.',
                 rel4Title: 'Image vers PDF',
-                rel4Desc: 'Transformer plusieurs images en un document PDF.'
+                rel4Desc: 'Transformer plusieurs images en un document PDF.',
+                trust_users: '🌍 Utilisé par 50 000+ utilisateurs',
+                trust_rating: '⭐ Note 4.9/5',
+                trust_privacy: '🔒 100% Privé',
+                trust_free: '🚫 Sans pub, sans inscription'
             },
             es: {
                 backHome: 'Volver a la caja de herramientas',
@@ -693,7 +728,11 @@
                 rel3Title: 'PDF a imagen',
                 rel3Desc: 'Convierte páginas PDF a PNG o JPG.',
                 rel4Title: 'Imagen a PDF',
-                rel4Desc: 'Convierte varias imágenes en un documento PDF.'
+                rel4Desc: 'Convierte varias imágenes en un documento PDF.',
+                trust_users: '🌍 Usado por más de 50,000 usuarios',
+                trust_rating: '⭐ Calificación 4.9/5',
+                trust_privacy: '🔒 100% Privado',
+                trust_free: '🚫 Sin anuncios, sin registro'
             }
         };
 

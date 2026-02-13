@@ -103,6 +103,10 @@
             {"@type": "WebApplication", "name": "Base64 Encoder Decoder", "url": "https://www.heyuan110.com/web-toolbox/base64-tool.html"},
             {"@type": "WebApplication", "name": "URL Encoder Decoder", "url": "https://www.heyuan110.com/web-toolbox/url-encoder.html"},
             {"@type": "WebApplication", "name": "Lorem Ipsum Generator", "url": "https://www.heyuan110.com/web-toolbox/lorem-ipsum.html"},
+            {"@type": "WebApplication", "name": "Markdown Editor", "url": "https://www.heyuan110.com/web-toolbox/markdown-editor.html"},
+            {"@type": "WebApplication", "name": "Text Diff Checker", "url": "https://www.heyuan110.com/web-toolbox/text-diff.html"},
+            {"@type": "WebApplication", "name": "CSV JSON Converter", "url": "https://www.heyuan110.com/web-toolbox/csv-json.html"},
+            {"@type": "WebApplication", "name": "Cron Expression Generator", "url": "https://www.heyuan110.com/web-toolbox/cron-generator.html"},
             {"@type": "WebApplication", "name": "Tweet Deleter", "url": "https://github.com/heyuan110/tweet-deleter"},
             {"@type": "WebApplication", "name": "XPorts - Terminal Port Manager", "url": "https://github.com/heyuan110/xports"}
         ]
@@ -1281,6 +1285,74 @@
                 </div>
             </div>
 
+            <!-- Markdown 编辑器 -->
+            <div class="tool-card" data-tool="markdown">
+                <img src="screenshots/markdown-editor.webp" alt="Markdown 编辑器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">📝</div>
+                    <h2 class="tool-title" data-i18n="tool_markdown_title">Markdown 编辑器</h2>
+                    <p class="tool-desc" data-i18n="tool_markdown_desc">在线 Markdown 编辑与实时预览，支持代码高亮和 HTML 导出</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_markdown_f1">实时双栏编辑预览</li>
+                        <li data-i18n="tool_markdown_f2">支持代码块语法高亮</li>
+                        <li data-i18n="tool_markdown_f3">一键复制 Markdown/HTML</li>
+                        <li data-i18n="tool_markdown_f4">本地处理，保护隐私</li>
+                    </ul>
+                    <a href="markdown-editor.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- 文本对比 -->
+            <div class="tool-card" data-tool="diff">
+                <img src="screenshots/text-diff.webp" alt="文本对比工具截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🧾</div>
+                    <h2 class="tool-title" data-i18n="tool_diff_title">文本对比工具</h2>
+                    <p class="tool-desc" data-i18n="tool_diff_desc">快速比较两段文本差异，高亮新增、删除和修改内容</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_diff_f1">增删改差异高亮</li>
+                        <li data-i18n="tool_diff_f2">支持忽略大小写和空格</li>
+                        <li data-i18n="tool_diff_f3">适用于代码和文档审阅</li>
+                        <li data-i18n="tool_diff_f4">比较结果一键复制</li>
+                    </ul>
+                    <a href="text-diff.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- CSV JSON 转换 -->
+            <div class="tool-card" data-tool="csvjson">
+                <img src="screenshots/csv-json.webp" alt="CSV JSON 转换截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">🔁</div>
+                    <h2 class="tool-title" data-i18n="tool_csvjson_title">CSV JSON 转换</h2>
+                    <p class="tool-desc" data-i18n="tool_csvjson_desc">CSV 与 JSON 双向转换工具，适合数据清洗和开发调试</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_csvjson_f1">CSV 转 JSON，JSON 转 CSV</li>
+                        <li data-i18n="tool_csvjson_f2">支持表头与分隔符配置</li>
+                        <li data-i18n="tool_csvjson_f3">支持 JSON 美化输出</li>
+                        <li data-i18n="tool_csvjson_f4">复制结果快速复用</li>
+                    </ul>
+                    <a href="csv-json.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
+            <!-- Cron 表达式生成器 -->
+            <div class="tool-card" data-tool="cron">
+                <img src="screenshots/cron-generator.webp" alt="Cron 表达式生成器截图" class="tool-screenshot">
+                <div class="tool-content">
+                    <div class="tool-icon">⏰</div>
+                    <h2 class="tool-title" data-i18n="tool_cron_title">Cron 表达式生成器</h2>
+                    <p class="tool-desc" data-i18n="tool_cron_desc">可视化生成 Cron 表达式并实时查看可读说明</p>
+                    <ul class="tool-features">
+                        <li data-i18n="tool_cron_f1">分钟/小时/日期可视化配置</li>
+                        <li data-i18n="tool_cron_f2">内置常用定时模板</li>
+                        <li data-i18n="tool_cron_f3">表达式自动语义化解释</li>
+                        <li data-i18n="tool_cron_f4">一键复制用于 crontab</li>
+                    </ul>
+                    <a href="cron-generator.html" class="tool-btn" data-i18n="openTool">打开工具 →</a>
+                </div>
+            </div>
+
             <!-- Tweet Deleter 推文批量删除 -->
             <div class="tool-card" data-tool="tweet">
                 <img src="screenshots/tweet-deleter.webp" alt="Tweet Deleter 截图" class="tool-screenshot">
@@ -1702,6 +1774,30 @@
                     tool_lorem_f2: '段落/句子/单词三种单位',
                     tool_lorem_f3: '可自定义生成数量 1-100',
                     tool_lorem_f4: '实时文本统计和一键复制',
+                    tool_markdown_title: 'Markdown 编辑器',
+                    tool_markdown_desc: '在线 Markdown 编辑与实时预览，支持代码高亮和 HTML 导出',
+                    tool_markdown_f1: '实时双栏编辑预览',
+                    tool_markdown_f2: '支持代码块语法高亮',
+                    tool_markdown_f3: '一键复制 Markdown/HTML',
+                    tool_markdown_f4: '本地处理，保护隐私',
+                    tool_diff_title: '文本对比工具',
+                    tool_diff_desc: '快速比较两段文本差异，高亮新增、删除和修改内容',
+                    tool_diff_f1: '增删改差异高亮',
+                    tool_diff_f2: '支持忽略大小写和空格',
+                    tool_diff_f3: '适用于代码和文档审阅',
+                    tool_diff_f4: '比较结果一键复制',
+                    tool_csvjson_title: 'CSV JSON 转换',
+                    tool_csvjson_desc: 'CSV 与 JSON 双向转换工具，适合数据清洗和开发调试',
+                    tool_csvjson_f1: 'CSV 转 JSON，JSON 转 CSV',
+                    tool_csvjson_f2: '支持表头与分隔符配置',
+                    tool_csvjson_f3: '支持 JSON 美化输出',
+                    tool_csvjson_f4: '复制结果快速复用',
+                    tool_cron_title: 'Cron 表达式生成器',
+                    tool_cron_desc: '可视化生成 Cron 表达式并实时查看可读说明',
+                    tool_cron_f1: '分钟/小时/日期可视化配置',
+                    tool_cron_f2: '内置常用定时模板',
+                    tool_cron_f3: '表达式自动语义化解释',
+                    tool_cron_f4: '一键复制用于 crontab',
                 },
                 'en': {
                     homeLink: 'Home',
@@ -1967,6 +2063,30 @@
                     tool_lorem_f2: 'Paragraphs/Sentences/Words units',
                     tool_lorem_f3: 'Custom quantity from 1-100',
                     tool_lorem_f4: 'Real-time stats and one-click copy',
+                    tool_markdown_title: 'Markdown Editor',
+                    tool_markdown_desc: 'Online markdown editor with live preview, code highlighting, and HTML export',
+                    tool_markdown_f1: 'Two-pane live editing and preview',
+                    tool_markdown_f2: 'Syntax highlighting for code blocks',
+                    tool_markdown_f3: 'Copy Markdown or HTML in one click',
+                    tool_markdown_f4: 'Local processing for privacy',
+                    tool_diff_title: 'Text Diff Checker',
+                    tool_diff_desc: 'Compare two text blocks and highlight additions, deletions, and edits instantly',
+                    tool_diff_f1: 'Added/removed/changed text highlight',
+                    tool_diff_f2: 'Ignore case and extra spaces',
+                    tool_diff_f3: 'Useful for code and doc review',
+                    tool_diff_f4: 'Copy comparison result quickly',
+                    tool_csvjson_title: 'CSV JSON Converter',
+                    tool_csvjson_desc: 'Bidirectional CSV and JSON converter for data cleaning and developer workflows',
+                    tool_csvjson_f1: 'CSV to JSON and JSON to CSV',
+                    tool_csvjson_f2: 'Header and delimiter controls',
+                    tool_csvjson_f3: 'Pretty-print JSON output',
+                    tool_csvjson_f4: 'One-click copy output',
+                    tool_cron_title: 'Cron Expression Generator',
+                    tool_cron_desc: 'Build cron expressions visually with instant human-readable descriptions',
+                    tool_cron_f1: 'Visual minute/hour/day/month/weekday setup',
+                    tool_cron_f2: 'Built-in schedule presets',
+                    tool_cron_f3: 'Instant natural language explanation',
+                    tool_cron_f4: 'Copy cron for crontab in one click',
                 },
                 'fr': {
                     homeLink: 'Accueil',
@@ -2232,6 +2352,30 @@
                     tool_lorem_f2: 'Unités: Paragraphes/Phrases/Mots',
                     tool_lorem_f3: 'Quantité personnalisable de 1 à 100',
                     tool_lorem_f4: 'Statistiques en temps réel et copie en un clic',
+                    tool_markdown_title: 'Éditeur Markdown',
+                    tool_markdown_desc: 'Éditez du markdown en ligne avec aperçu en direct, coloration du code et export HTML',
+                    tool_markdown_f1: 'Édition et aperçu en deux volets',
+                    tool_markdown_f2: 'Coloration syntaxique des blocs de code',
+                    tool_markdown_f3: 'Copie Markdown/HTML en un clic',
+                    tool_markdown_f4: 'Traitement local pour la confidentialité',
+                    tool_diff_title: 'Comparateur de texte',
+                    tool_diff_desc: 'Comparez deux textes et surlignez instantanément ajouts, suppressions et modifications',
+                    tool_diff_f1: 'Surlignage des changements',
+                    tool_diff_f2: 'Ignorer casse et espaces',
+                    tool_diff_f3: 'Idéal pour revue de code et docs',
+                    tool_diff_f4: 'Copie rapide du résultat',
+                    tool_csvjson_title: 'Convertisseur CSV JSON',
+                    tool_csvjson_desc: 'Conversion bidirectionnelle CSV et JSON pour nettoyage de données et développement',
+                    tool_csvjson_f1: 'CSV vers JSON et JSON vers CSV',
+                    tool_csvjson_f2: 'Options en-tête et séparateur',
+                    tool_csvjson_f3: 'Sortie JSON formatée',
+                    tool_csvjson_f4: 'Copie en un clic',
+                    tool_cron_title: 'Générateur d\'expression Cron',
+                    tool_cron_desc: 'Créez des expressions cron visuellement avec une description lisible instantanée',
+                    tool_cron_f1: 'Configuration visuelle des champs cron',
+                    tool_cron_f2: 'Modèles de planification intégrés',
+                    tool_cron_f3: 'Explication en langage naturel',
+                    tool_cron_f4: 'Copie cron en un clic',
                 },
                 'es': {
                     homeLink: 'Inicio',
@@ -2497,6 +2641,30 @@
                     tool_lorem_f2: 'Unidades: Párrafos/Oraciones/Palabras',
                     tool_lorem_f3: 'Cantidad personalizable de 1 a 100',
                     tool_lorem_f4: 'Estadísticas en tiempo real y copia con un clic',
+                    tool_markdown_title: 'Editor Markdown',
+                    tool_markdown_desc: 'Editor markdown en línea con vista previa en vivo, resaltado de código y exportación HTML',
+                    tool_markdown_f1: 'Edición y vista previa en dos paneles',
+                    tool_markdown_f2: 'Resaltado de sintaxis en bloques de código',
+                    tool_markdown_f3: 'Copiar Markdown/HTML con un clic',
+                    tool_markdown_f4: 'Procesamiento local para privacidad',
+                    tool_diff_title: 'Comparador de texto',
+                    tool_diff_desc: 'Compara dos textos y resalta adiciones, eliminaciones y cambios al instante',
+                    tool_diff_f1: 'Resaltado de cambios de contenido',
+                    tool_diff_f2: 'Ignorar mayúsculas y espacios',
+                    tool_diff_f3: 'Útil para revisión de código y docs',
+                    tool_diff_f4: 'Copiar resultado rápidamente',
+                    tool_csvjson_title: 'Convertidor CSV JSON',
+                    tool_csvjson_desc: 'Conversión bidireccional entre CSV y JSON para limpieza de datos y desarrollo',
+                    tool_csvjson_f1: 'CSV a JSON y JSON a CSV',
+                    tool_csvjson_f2: 'Opciones de cabecera y delimitador',
+                    tool_csvjson_f3: 'Salida JSON formateada',
+                    tool_csvjson_f4: 'Copia con un clic',
+                    tool_cron_title: 'Generador de expresión Cron',
+                    tool_cron_desc: 'Construye cron visualmente con descripción legible en tiempo real',
+                    tool_cron_f1: 'Configuración visual de campos cron',
+                    tool_cron_f2: 'Plantillas de programación integradas',
+                    tool_cron_f3: 'Explicación en lenguaje natural',
+                    tool_cron_f4: 'Copiar cron con un clic',
                 },
             };
 

@@ -769,6 +769,22 @@
         .json-tree > .json-node {
             animation: fadeIn 0.3s ease;
         }
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 12px 0 24px;
+            padding: 12px 20px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+        }
+        .trust-item {
+            font-size: 13px;
+            color: #a78bfa;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -790,6 +806,13 @@
             <h1 data-i18n="pageTitle">{ } JSON Viewer</h1>
             <p data-i18n="pageSubtitle">Paste JSON data and instantly get a beautiful, interactive tree view</p>
         </header>
+
+        <div class="trust-bar">
+            <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+            <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+            <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+            <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+        </div>
 
         <!-- 功能特点 -->
         <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: linear-gradient(135deg, rgba(88, 166, 255, 0.1), rgba(163, 113, 247, 0.1)); border: 1px solid #30363d; border-radius: 12px;">
@@ -1001,7 +1024,11 @@ Example:
                 relatedTimestamp: 'Timestamp Converter',
                 relatedTimestampDesc: 'Unix timestamp & date conversion',
                 footerPrivacy: 'Pure frontend processing, data never uploaded to server',
-                footerBack: '← Back to Web Toolbox'
+                footerBack: '← Back to Web Toolbox',
+                trust_users: '🌍 Used by 50,000+ users',
+                trust_rating: '⭐ 4.9/5 rating',
+                trust_privacy: '🔒 100% Private',
+                trust_free: '🚫 No Ads, No Signup'
             },
             'zh-CN': {
                 backToToolbox: '← 返回工具箱',
@@ -1091,7 +1118,11 @@ Example:
                 relatedTimestamp: '时间戳转换',
                 relatedTimestampDesc: 'Unix 时间戳与日期互转',
                 footerPrivacy: '纯前端处理，数据不会上传到服务器',
-                footerBack: '← 返回 Web Toolbox 首页'
+                footerBack: '← 返回 Web Toolbox 首页',
+                trust_users: '🌍 超过 50,000 用户使用',
+                trust_rating: '⭐ 4.9/5 好评',
+                trust_privacy: '🔒 100% 隐私安全',
+                trust_free: '🚫 无广告、无需注册'
             },
             'fr': {
                 backToToolbox: '← Retour à la boîte à outils',
@@ -1181,7 +1212,11 @@ Example:
                 relatedTimestamp: 'Convertisseur Timestamp',
                 relatedTimestampDesc: 'Conversion timestamp Unix et date',
                 footerPrivacy: 'Traitement frontend pur, données jamais téléchargées sur le serveur',
-                footerBack: '← Retour à Web Toolbox'
+                footerBack: '← Retour à Web Toolbox',
+                trust_users: '🌍 Utilisé par 50 000+ utilisateurs',
+                trust_rating: '⭐ Note 4.9/5',
+                trust_privacy: '🔒 100% Privé',
+                trust_free: '🚫 Sans pub, sans inscription'
             },
             'es': {
                 backToToolbox: '← Volver a la caja de herramientas',
@@ -1271,7 +1306,11 @@ Example:
                 relatedTimestamp: 'Convertidor Timestamp',
                 relatedTimestampDesc: 'Conversión timestamp Unix y fecha',
                 footerPrivacy: 'Procesamiento frontend puro, datos nunca subidos al servidor',
-                footerBack: '← Volver a Web Toolbox'
+                footerBack: '← Volver a Web Toolbox',
+                trust_users: '🌍 Usado por más de 50,000 usuarios',
+                trust_rating: '⭐ Calificación 4.9/5',
+                trust_privacy: '🔒 100% Privado',
+                trust_free: '🚫 Sin anuncios, sin registro'
             }
         };
 

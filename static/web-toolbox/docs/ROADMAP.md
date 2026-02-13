@@ -7,8 +7,8 @@
 
 ## 项目状态总览
 
-- **已上线工具**: 38 个
-- **待开发工具**: 10 个
+- **已上线工具**: 42 个
+- **待开发工具**: 6 个
 - **目标总计**: 48+ 个工具
 
 ---
@@ -55,6 +55,10 @@
 | 36 | PDF 拆分 | pdf-split.html | PDF | ✅ 已上线 |
 | 37 | PDF 压缩 | pdf-compress.html | PDF | ✅ 已上线 |
 | 38 | PDF 转图片 | pdf-to-image.html | PDF | ✅ 已上线 |
+| 39 | Markdown 编辑器 | markdown-editor.html | 开发者 | ✅ 已上线 |
+| 40 | 文本对比 Diff | text-diff.html | 开发者 | ✅ 已上线 |
+| 41 | CSV ↔ JSON 转换 | csv-json.html | 开发者 | ✅ 已上线 |
+| 42 | Cron 表达式生成器 | cron-generator.html | 开发者 | ✅ 已上线 |
 
 ---
 
@@ -207,10 +211,10 @@ web-toolbox/
 - [x] PDF 转图片 (pdf-to-image.html) ✅ 2026-02-13
 
 ### Phase 3 进度
-- [ ] Markdown 编辑器 (markdown-editor.html)
-- [ ] 文本对比 Diff (text-diff.html)
-- [ ] CSV ↔ JSON 转换 (csv-json.html)
-- [ ] Cron 表达式生成器 (cron-generator.html)
+- [x] Markdown 编辑器 (markdown-editor.html) ✅ 2026-02-13
+- [x] 文本对比 Diff (text-diff.html) ✅ 2026-02-13
+- [x] CSV ↔ JSON 转换 (csv-json.html) ✅ 2026-02-13
+- [x] Cron 表达式生成器 (cron-generator.html) ✅ 2026-02-13
 
 ### Phase 4 进度
 - [ ] 图片文字识别 OCR (ocr-tool.html)
@@ -221,3 +225,74 @@ web-toolbox/
 - [ ] 番茄钟 (pomodoro.html)
 - [ ] 单位换算器 (unit-converter.html)
 - [ ] 发票生成器 (invoice-generator.html)
+
+---
+
+## 市场调研发现（2026-02-13）
+
+> 数据来源：Reddit、Hacker News、ProductHunt、Google Trends、SimilarWeb
+
+### 竞品流量分析
+
+| 平台 | 月访问量 | 主要流量来源 | 定位 |
+|------|---------|-------------|------|
+| ilovepdf.com | 2.21 亿 | Google 自然搜索 46% + 直接访问 44% | PDF 工具专精 |
+| SmallSeoTools | 1,107 万 | Google 自然搜索 51% + 直接访问 39% | SEO + 多工具平台 |
+| TinyWow | 256 万 | 直接访问 74% + Google 搜索 14% | 品牌驱动多工具平台 |
+
+**关键洞察**: ilovepdf 的成功证明单一品类（PDF）也能做到 2 亿+月访问。SEO 自然搜索是最重要的获客渠道。
+
+### 用户痛点（Reddit/HN 高频吐槽）
+
+1. **广告泛滥** — 现有免费工具广告太多，影响使用体验
+2. **强制注册** — 用户讨厌"先注册才能用"的门槛
+3. **加水印** — 免费版输出带水印是最大痛点之一
+4. **隐私担忧** — 用户不愿将文件上传到未知服务器
+5. **功能限制** — "免费版只能用 3 次"让用户反感
+6. **工具臃肿** — 如 Postman 变得越来越重，用户寻求轻量替代品
+
+**我们的差异化**: 100% 免费、无广告、无注册、无水印、浏览器本地处理、无限使用
+
+### 2026 搜索趋势
+
+- **AI 工具主导**: ChatGPT 全球月搜索 7.68 亿，AI 图片生成、AI 写作助手需求爆发
+- **OCR 多语言需求大**: imagetotext.info 支持 23 种语言，搜索量持续增长
+- **视频/音频 AI**: ElevenLabs（AI 语音）、Pika Labs（AI 视频生成）成为热门工具
+- **隐私优先**: 用户越来越重视本地处理，不愿数据上传云端
+
+### Hacker News 开发者需求（2026 工具许愿清单）
+
+| 工具需求 | 描述 | 适合纯前端实现 |
+|---------|------|--------------|
+| 轻量 HTTP 客户端 | 替代 Postman 的轻量方案 | ✅ 可行 |
+| 函数调用图可视化 | 代码导航和调用关系展示 | ⚠️ 较复杂 |
+| AI 测试用例选择器 | 基于代码变更推荐测试 | ❌ 需要后端 |
+| 本地 CI/CD 原型环境 | 本地调试 YAML CI 配置 | ⚠️ 部分可行 |
+| 二进制文件编辑器 | 支持模糊搜索的 Hex 编辑器 | ✅ WebAssembly |
+
+### ProductHunt 2026 趋势
+
+- **AI 编程工具**: Lovable（对话式全栈生成）、Windsurf（AI IDE）、bolt.new
+- **协作平台**: Figma、Notion、Framer 持续增长
+- **无代码/低代码**: n8n 工作流自动化、Supabase 后端即服务
+- **市场信号**: 简单工具类产品已少见于趋势榜，用户期望更高
+
+### 新工具机会评估
+
+基于调研结果，以下工具具有最高 ROI 潜力：
+
+| 优先级 | 工具 | 搜索量级 | 难度 | 理由 |
+|-------|------|---------|------|------|
+| 🔴 高 | 图片 OCR（已在 Phase 4） | 百万级 | ⭐⭐ | Tesseract.js 纯前端可行，多语言需求大 |
+| 🔴 高 | 图片去背景（已在 Phase 4） | 十万级 | ⭐⭐⭐ | ONNX.js + U2Net，AI 热门赛道 |
+| 🟡 中 | 轻量 HTTP 客户端 | 万级 | ⭐⭐ | HN 开发者强需求，替代 Postman |
+| 🟡 中 | Hex 文件查看器 | 万级 | ⭐⭐ | 开发者工具，竞品少 |
+| 🟢 低 | AI 文本摘要 | 十万级 | ⭐⭐⭐ | 需要 API 调用或本地模型，复杂度高 |
+| 🟢 低 | 语音转文字 | 十万级 | ⭐⭐⭐ | Web Speech API 有限，Whisper.js 体积大 |
+
+### 推广策略建议
+
+1. **Reddit 首发** — r/SideProject (622K)、r/InternetIsBeautiful (17M+) 发布工具集
+2. **HN Show HN** — 开发者工具适合在 Hacker News 引流
+3. **SEO 长尾词** — 每个工具锁定 "free online [tool] no ads no signup" 长尾词
+4. **Notion 式增长** — 通过社区真实使用分享获取口碑，避免硬广

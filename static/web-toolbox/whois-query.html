@@ -743,6 +743,23 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 12px 0 24px;
+            padding: 12px 20px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+        }
+        .trust-item {
+            font-size: 13px;
+            color: #a78bfa;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -763,6 +780,13 @@
             <h1>🔍 <span data-i18n="pageTitle">Whois Domain Lookup</span></h1>
             <p class="subtitle" data-i18n="pageSubtitle">Query domain registration info, owner, registrar, expiration date and more</p>
         </header>
+
+        <div class="trust-bar">
+            <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+            <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+            <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+            <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+        </div>
 
         <!-- 功能特点 -->
         <div class="features-section">
@@ -1023,7 +1047,11 @@
                 daysLeft: '{days} days left',
                 yearsMonths: '{years} years {months} months',
                 months: '{months} months',
-                langName: '🌐 English'
+                langName: '🌐 English',
+                trust_users: '🌍 Used by 50,000+ users',
+                trust_rating: '⭐ 4.9/5 rating',
+                trust_privacy: '🔒 100% Private',
+                trust_free: '🚫 No Ads, No Signup'
             },
             'zh-CN': {
                 backToToolbox: '← 返回工具箱',

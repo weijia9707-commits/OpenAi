@@ -1,6 +1,6 @@
-# CLAUDE.md
+# AGENTS.md
 
-This file provides guidance to Claude Code (claude.ai/code) when working with code in this repository.
+本文件为所有 AI Agent 提供统一协作规范（包括但不限于 Claude Code、Codex、Gemini CLI、Cursor、Copilot、Cline 等）。
 
 ## 项目概述
 
@@ -387,6 +387,7 @@ python3 claude-history-server.py
 - **配色**: 深色主题，主色 `#7c3aed` (紫色)，背景渐变 `#1a1a2e` → `#0f3460`
 - **布局**: CSS Grid 响应式网格，卡片圆角 16px
 - **交互**: hover 上浮效果，渐变按钮，平滑过渡动画
+- **UI 皮肤（强制）**: 新增或重构工具页面默认采用 **shadcn/ui 视觉语言**（卡片、按钮、输入框、边框、层次与间距风格保持一致），在不引入 React 的前提下用原生 HTML/CSS/JS 复刻其设计语义
 
 
 <claude-mem-context>
