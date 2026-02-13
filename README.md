@@ -1,6 +1,3 @@
-# Bruce's Blog
-
-Bruce的博客，使用 [Hugo](https://gohugo.io/) 构建，部署在 GitHub Pages。
 
 ## 技术栈
 
