@@ -1,7 +1,7 @@
 ---
 title: "Jenkins + AWS CodeDeploy + AutoScaling 持续集成实战指南"
 date: 2018-11-20 11:05:40
-author: "bruce"
+author: "weijia"
 description: "基于 Jenkins、AWS CodeDeploy 和 AutoScaling 搭建 CI/CD 持续集成流水线完整教程，详解蓝绿部署、就地部署原理，AppSpec 配置和生命周期钩子"
 toc: true
 tags:

@@ -1,7 +1,7 @@
 ---
 title: "Cursor Agent 编码最佳实践：官方指南完整解读"
 date: 2026-01-19T16:33:00+08:00
-author: "bruce"
+author: "weijia"
 description: "Cursor 官方发布的 Agent 编码最佳实践指南，涵盖计划模式、上下文管理、Rules 与 Skills 配置、测试驱动开发、并行执行等核心技巧，帮助你充分发挥 AI 编程助手的潜力。"
 toc: true
 images:

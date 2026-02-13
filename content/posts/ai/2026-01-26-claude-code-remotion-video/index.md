@@ -139,8 +139,8 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ⏺ 现在我有了完整的抖音热歌榜单数据。开始创建项目：
 
-⏺ Bash(mkdir -p /Users/bruce.he/douyin-top10-2025/{src/{compositions,components,data,styles},public/{images,videos,audio/songs}} && cd /Users/bruce.he/douyin-top10-202…) timeout: 3m 0s
-  ⎿  Wrote to /Users/bruce.he/douyin-top10-2025/package.json:
+⏺ Bash(mkdir -p /Users/weijia.he/douyin-top10-2025/{src/{compositions,components,data,styles},public/{images,videos,audio/songs}} && cd /Users/weijia.he/douyin-top10-202…) timeout: 3m 0s
+  ⎿  Wrote to /Users/weijia.he/douyin-top10-2025/package.json:
 
      {
      … +23 lines (ctrl+o to expand)
@@ -354,13 +354,13 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ⏺ 现在下载歌曲音频预览：
 
-⏺ Bash(cd /Users/bruce.he/douyin-top10-2025/public/audio/songs…) timeout: 1m 30s
+⏺ Bash(cd /Users/weijia.he/douyin-top10-2025/public/audio/songs…) timeout: 1m 30s
   ⎿  📥 下载抖音热歌音频预览...
      ✅ 01-da-zhan-hong-tu.m4a
      ✅ 02-apt.m4a
      … +3 lines (ctrl+o to expand)
 
-⏺ Bash(cd /Users/bruce.he/douyin-top10-2025/public/audio/songs…) timeout: 1m 30s
+⏺ Bash(cd /Users/weijia.he/douyin-top10-2025/public/audio/songs…) timeout: 1m 30s
   ⎿  ✅ 05-wei-yi.m4a
      ✅ 06-di-57-ci.m4a
      ✅ 07-ruo-yue-liang.m4a
@@ -368,13 +368,13 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ⏺ 所有 10 首歌曲下载完成！现在下载视频素材：
 
-⏺ Bash(PEXELS_API_KEY="xxxxxxxx" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "music conc…)
+⏺ Bash(PEXELS_API_KEY="xxxxxxxx" python3 /Users/weijia.he/.claude/skills/media-downloader/media_cli.py video "music conc…)
   ⎿  🔍 搜索视频: music concert red lights
      ✅ 找到 2 个视频
        ⬇️ 下载 1/2: music_concert_red_lights_1_pexels.mp4 (9s)
      … +4 lines (ctrl+o to expand)
 
-⏺ Bash(PEXELS_API_KEY="xxxxxxx" python3 /Users/bruce.he/.claude/skills/media-downloader/media_cli.py video "abstract n…)
+⏺ Bash(PEXELS_API_KEY="xxxxxxx" python3 /Users/weijia.he/.claude/skills/media-downloader/media_cli.py video "abstract n…)
   ⎿  🔍 搜索视频: abstract neon glow
      ✅ 找到 2 个视频
        ⬇️ 下载 1/2: abstract_neon_glow_1_pexels.mp4 (8s)
@@ -382,23 +382,23 @@ Claude Code 里调用 Remotion Skill 全部过程：
 
 ⏺ 现在启动项目：
 
-⏺ Bash(cd /Users/bruce.he/douyin-top10-2025 && npm run dev) timeout: 30s
+⏺ Bash(cd /Users/weijia.he/douyin-top10-2025 && npm run dev) timeout: 30s
   ⎿  Running in the background (↓ to manage)
 
-⏺ Bash(sleep 8 && cat /private/tmp/claude/-Users-bruce-he/tasks/b0b98af.output) timeout: 15s
+⏺ Bash(sleep 8 && cat /private/tmp/claude/-Users-weijia-he/tasks/b0b98af.output) timeout: 15s
   ⎿  > douyin-top10-2025@1.0.0 dev
      > npx remotion studio src/index.ts
      … +2 lines (ctrl+o to expand)
 
-⏺ Bash(ls -la /Users/bruce.he/douyin-top10-2025/public/videos/)
+⏺ Bash(ls -la /Users/weijia.he/douyin-top10-2025/public/videos/)
   ⎿  total 105584
-     drwxr-xr-x@ 6 bruce.he  staff       192 Jan 26 00:16 .
-     drwxr-xr-x@ 5 bruce.he  staff       160 Jan 26 00:11 ..
+     drwxr-xr-x@ 6 weijia.he  staff       192 Jan 26 00:16 .
+     drwxr-xr-x@ 5 weijia.he  staff       160 Jan 26 00:11 ..
      … +4 lines (ctrl+o to expand)
 
 ⏺ ✅ 2025 抖音年度金曲热榜 Top 10 项目已完成！
 
-  项目地址: /Users/bruce.he/douyin-top10-2025
+  项目地址: /Users/weijia.he/douyin-top10-2025
 
   预览地址: http://localhost:3004
 

@@ -1,7 +1,7 @@
 ---
 title: "Linux 挖矿病毒 kerberods 入侵排查与清理实战"
 date: 2019-04-12 16:15:53
-author: "bruce"
+author: "weijia"
 description: "记录 Linux 服务器遭受 kerberods 挖矿病毒入侵的完整排查和处理过程，CPU 持续 100%、top 只显示 1 个 CPU 的诡异现象分析，附清理脚本和 Confluence 漏洞修复"
 toc: true
 tags:

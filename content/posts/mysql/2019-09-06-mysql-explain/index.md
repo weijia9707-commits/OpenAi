@@ -2,7 +2,7 @@
 title = "MySQL EXPLAIN 执行计划详解：从入门到精通的 SQL 性能分析指南"
 date = 2019-09-06T20:10:21+08:00
 lastmod = 2026-01-22T15:49:45+08:00
-author = "bruce"
+author = "weijia"
 description = "深入解析 MySQL EXPLAIN 执行计划的 12 个关键字段，掌握 type 访问类型、key 索引选择、Extra 额外信息的含义，学会通过执行计划分析和优化 SQL 查询性能。"
 toc = true
 tags = ["MySQL", "EXPLAIN", "SQL优化", "性能调优", "索引", "数据库"]

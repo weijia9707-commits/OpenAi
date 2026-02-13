@@ -1,7 +1,7 @@
 ---
 title: "Supervisor 进程管理完全指南：安装配置与实战"
 date: 2018-10-07 00:35:04
-author: "bruce"
+author: "weijia"
 description: "Supervisor 进程管理工具完整教程，从安装配置到实战，实现 Linux 服务器上多进程的统一启动、监控和自动重启，附 Nginx 配置示例"
 toc: true
 tags:

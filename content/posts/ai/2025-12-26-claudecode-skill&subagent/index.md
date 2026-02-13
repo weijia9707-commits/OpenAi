@@ -1,7 +1,7 @@
 ---
 title: "Claude Code的Skill与SubAgent区别 "
 date: 2025-12-26T12:40:02+08:00
-author: "bruce"
+author: "weijia"
 description: "深入对比Claude Code中Skill和SubAgent两种扩展AI Agent能力的方式，分析上下文管理差异和各自适用场景"
 toc: true
 images:

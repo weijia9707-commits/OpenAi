@@ -1,7 +1,7 @@
 ---
 title: "我的AI开发工作流：从需求到上线"
 date: 2026-01-19T17:00:00+08:00
-author: "bruce"
+author: "weijia"
 description: "分享我在软件开发全流程中使用AI工具的实战经验，涵盖需求分析、架构设计、编码实现、测试部署等环节，帮助开发者构建高效的AI辅助开发工作流。"
 toc: true
 images:

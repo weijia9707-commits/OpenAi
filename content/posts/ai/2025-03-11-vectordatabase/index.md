@@ -1,7 +1,7 @@
 ---
 title: "向量数据库到底解决了什么问题？从原理到工程实践一次讲清"
 date: 2025-03-11T14:40:02+08:00
-author: "bruce"
+author: "weijia"
 description: "从原理到工程实践，讲清楚向量数据库为什么火、怎么用、怎么选，以及实际落地中的坑"
 toc: true
 images:

@@ -1,7 +1,7 @@
 ---
 title: "Linux/macOS 常用命令速查手册（持续更新）"
 date: 2020-03-19 10:55:52
-author: "bruce"
+author: "weijia"
 description: "Linux 和 macOS 常用命令速查手册，涵盖文件操作、网络调试、进程管理、文本处理、磁盘管理等日常运维开发必备命令，附带实用示例"
 toc: true
 tags:

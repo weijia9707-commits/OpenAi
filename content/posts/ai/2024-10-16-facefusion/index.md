@@ -1,7 +1,7 @@
 ---
 title: "全面解析FaceFusion：从原理到实战"
 date: 2024-10-16T14:56:30+08:00
-author: "bruce"
+author: "weijia"
 description: "FaceFusion 换脸工具的完整使用指南，包括硬件选型、环境搭建、参数调优和常见问题解决"
 toc: true
 tags:

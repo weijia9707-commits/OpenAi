@@ -43,7 +43,7 @@ OpenClaw 的心智模型可以用一句话概括：
 
 你现在这台机器上：
 
-- `/Users/bruce.he/.openclaw/workspace`
+- `/Users/weijia.he/.openclaw/workspace`
 
 这个目录一般放：
 

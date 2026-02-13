@@ -1,7 +1,7 @@
 ---
 title: "Java 入门教程（一）：JDK/JRE/JVM 概念解析与 IDEA 开发环境配置"
 date: 2024-05-04 21:00:00
-author: "bruce"
+author: "weijia"
 description: "Java 零基础入门教程第一篇，涵盖 Java 发展历史、SE/EE/ME 技术体系，详解 JDK、JRE、JVM 概念区别，IDEA 开发环境配置和常用快捷键"
 toc: true
 tags:

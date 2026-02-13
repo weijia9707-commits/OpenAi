@@ -1,7 +1,7 @@
 ---
 title: "Agent Skills：用大白话写程序的时代来了"
 date: 2026-01-19T16:45:00+08:00
-author: "bruce"
+author: "weijia"
 description: "当 Markdown 文件变成可执行的程序，当人人都能用母语编写软件，Agent Skills 正在重新定义什么是编程。这不是简单的提示词，而是新一代的程序。"
 toc: true
 images:

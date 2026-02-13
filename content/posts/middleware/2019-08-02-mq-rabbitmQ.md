@@ -1,7 +1,7 @@
 ---
 title: "RabbitMQ 入门教程：AMQP 协议、Exchange 交换机与消息投递详解"
 date: 2019-08-02 11:47:04
-author: "bruce"
+author: "weijia"
 description: "RabbitMQ 消息队列入门教程，详解 AMQP 协议原理、四种 Exchange 交换机类型（Direct、Fanout、Topic、Headers）、队列绑定和消息投递工作流程"
 toc: true
 tags:
@@ -808,9 +808,9 @@ root@rmq2:/usr/sbin# ll rabbitmq*
 #### 5.3.1 添加用户
 
 格式：`rabbitmqctl add_user <username> <newpassword>`
-例子：创建一个bruce用户，密码为123456，这时用户没有角色和权限。
+例子：创建一个weijia用户，密码为123456，这时用户没有角色和权限。
 ```
-rabbitmqctl add_user bruce 123456
+rabbitmqctl add_user weijia 123456
 ```
 
 #### 5.3.2 查看用户列表
@@ -821,27 +821,27 @@ rabbitmqctl add_user bruce 123456
 root@rmq1:/usr/sbin# rabbitmqctl list_users
 Listing users ...
 user	tags
-bruce1	[administrator]
+weijia1	[administrator]
 guest	[administrator]
-bruce2	[administrator]
+weijia2	[administrator]
 ```
 
 #### 5.3.3 修改密码
 
 格式：`rabbitmqctl change_password <username> <newpassword>`
-例子：修改bruce用户密码`rabbitmqctl  change_password  bruce 0123456`
+例子：修改weijia用户密码`rabbitmqctl  change_password  weijia 0123456`
 
 #### 5.3.4 删除用户
 
 格式：`rabbitmqctl delete_user <username>`
-例子：删除bruce用户`rabbitmqctl  delete_user bruce`
+例子：删除weijia用户`rabbitmqctl  delete_user weijia`
 
 #### 5.3.4 添加角色
 
 格式：`rabbitmqctl set_user_tags <username> <tag>`
-例子：设置bruce为管理员`rabbitmqctl set_user_tags bruce administrator`
+例子：设置weijia为管理员`rabbitmqctl set_user_tags weijia administrator`
 
-上面新创建的bruce用户没有用户角色，无法访问web插件等，按上面例子设置为管理员。rabbitmq用户角色分为五类：
+上面新创建的weijia用户没有用户角色，无法访问web插件等，按上面例子设置为管理员。rabbitmq用户角色分为五类：
 
 - 超级管理员(administrator)
 可登陆管理控制台(启用management plugin的情况下)，可查看所有的信息，并且可以对用户，策略(policy)进行操作。
@@ -861,14 +861,14 @@ bruce2	[administrator]
 #### 5.3.5 删除角色
 
 格式：`rabbitmqctl clear_permissions [-p VHostPath] <username>`
-例子：清除bruce的角色`rabbitmqctl  clear_permissions  -p /  bruce`
+例子：清除weijia的角色`rabbitmqctl  clear_permissions  -p /  weijia`
 
 #### 5.3.4 用户授权
 
 格式：`rabbitmqctl set_permissions [-pvhostpath] {user} {conf} {write} {read}`
-例子：上面bruce用户设置角色后没有赋予权限，这时bruce用户只能本地登录。赋予bruce用户对vhost/中所有资源的配置，写，读权限，方便管理其中资源。
+例子：上面weijia用户设置角色后没有赋予权限，这时weijia用户只能本地登录。赋予weijia用户对vhost/中所有资源的配置，写，读权限，方便管理其中资源。
 ```
-rabbitmqctl set_permissions -p "/"bruce ".*" ".*" ".*"
+rabbitmqctl set_permissions -p "/"weijia ".*" ".*" ".*"
 ```
 
 #### 5.3.5 查看用户授权
@@ -900,7 +900,7 @@ RabbitMQ有三种模式，其中两种集群模式:
 环境：Ubuntu16.04
 
 - (2)安装Rabbitmq
-用上面[5.2本地安装](#5-2_本地安装)的方法在每台机器安装好RabbitMQ，并确认可以运行。开启每一台的web管理插件，并只在rmq1上创建新用户bruce/123456，授予管理员角色和权限，后面rmq2，rmq3加入集群后直接同步rmq1的用户数据。
+用上面[5.2本地安装](#5-2_本地安装)的方法在每台机器安装好RabbitMQ，并确认可以运行。开启每一台的web管理插件，并只在rmq1上创建新用户weijia/123456，授予管理员角色和权限，后面rmq2，rmq3加入集群后直接同步rmq1的用户数据。
 
 - （3)统一集群节点cookie
 Rabbitmq集群依赖erlang集群，而erlang集群式通过cookie进行通信认证，因此配置Rabbitmq集群第一步统一节点之间的cookie，默认cookie保存在文件`/var/lib/rabbitmq/.erlang.cookie`，400只读权限。
@@ -923,7 +923,7 @@ rabbitmq-server在启动时，会一起启动节点和应用，预先设置了ra
 启动rmq2节点应用执行`rabbitmqctl start_app`
 这时rmq1和rmq2就组成一个集群了，在任意节点执行`rabbitmqctl cluster_status`可以查看集群状态：
 ```
-root@rmq2:/home/bruce# rabbitmqctl cluster_status
+root@rmq2:/home/weijia# rabbitmqctl cluster_status
 Cluster status of node rabbit@rmq2 ...
 [{nodes,[{disc,[rabbit@rmq1,rabbit@rmq2]}]},
  {running_nodes,[rabbit@rmq1,rabbit@rmq2]},

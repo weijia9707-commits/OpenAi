@@ -1,7 +1,7 @@
 ---
 title: "Docker & Docker Compose 完全指南：从入门到精通"
 date: 2026-01-19T10:00:00+08:00
-author: "bruce"
+author: "weijia"
 description: "零基础也能看懂的 Docker 教程，用生活化比喻讲解核心概念，从安装到实战，从单容器到多容器编排，一文掌握容器化技术"
 toc: true
 images:

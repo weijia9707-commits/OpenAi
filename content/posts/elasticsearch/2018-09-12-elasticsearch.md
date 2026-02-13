@@ -1,7 +1,7 @@
 ---
 title: "Elasticsearch 入门教程：索引、文档、查询 API 核心概念详解"
 date: 2018-09-12 18:52:59
-author: "bruce"
+author: "weijia"
 description: "Elasticsearch 入门教程，理解索引、类型、文档等核心概念（类比关系型数据库），掌握 _cat、_search 等常用查询命令和 REST API 操作"
 toc: true
 tags:
@@ -319,10 +319,10 @@ hits.max_score：score的含义，就是document对于一个search的相关度�
 hits.hits：包含了匹配搜索的document的详细数据
 ```
 
-搜索名字为bruce的用户，而且按照email倒序
+搜索名字为weijia的用户，而且按照email倒序
 
 ```
-➜  ~ curl -i -XGET http://192.168.11.119:9200/test_index/user/_search\?pretty\&q=name:'bruce'&sort=email:desc
+➜  ~ curl -i -XGET http://192.168.11.119:9200/test_index/user/_search\?pretty\&q=name:'weijia'&sort=email:desc
 [1] 26574
 HTTP/1.1 200 OK
 content-type: application/json; charset=UTF-8
@@ -346,7 +346,7 @@ content-length: 479
         "_score" : 1.1727304,
         "_source" : {
           "name" : "Bruce",
-          "email" : "bruce@test.com",
+          "email" : "weijia@test.com",
           "tags" : [
             "Hello"
           ]
@@ -476,8 +476,8 @@ content-length: 1895
         "_id" : "5",
         "_score" : 1.0,
         "_source" : {
-          "name" : "bruce",
-          "email" : "bruce@test.com",
+          "name" : "weijia",
+          "email" : "weijia@test.com",
           "tags" : [
             "游泳1"
           ]

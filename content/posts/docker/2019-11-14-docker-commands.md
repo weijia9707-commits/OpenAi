@@ -1,7 +1,7 @@
 ---
 title: "Docker 常用命令速查手册：镜像、容器、数据卷完整操作指南"
 date: 2019-11-14 20:37:13
-author: "bruce"
+author: "weijia"
 description: "Docker 常用命令速查手册，涵盖服务启停、镜像管理（pull/push/rmi）、容器操作（run/exec/logs）、数据卷挂载，附 MySQL、Nginx、Redis、MongoDB 等常用容器启动命令"
 toc: true
 tags:

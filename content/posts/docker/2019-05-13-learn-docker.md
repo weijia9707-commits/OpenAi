@@ -1,7 +1,7 @@
 ---
 title: "Docker 入门教程：镜像、容器、仓库核心概念与 Dockerfile 详解"
 date: 2019-05-13 20:33:33
-author: "bruce"
+author: "weijia"
 description: "Docker 零基础入门教程，详解镜像、容器、仓库三大核心概念，深入理解分层存储原理，Dockerfile 指令全解析（FROM、RUN、COPY、CMD、ENTRYPOINT 等），附私有仓库搭建和数据卷实战"
 toc: true
 tags:

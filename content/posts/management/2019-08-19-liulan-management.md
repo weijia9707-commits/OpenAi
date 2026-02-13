@@ -1,7 +1,7 @@
 ---
 title: "刘澜领导力十项修炼学习总结：领导力本质与管理者成长"
 date: 2019-08-19 21:10:21
-author: "bruce"
+author: "weijia"
 description: "刘澜老师领导力课程学习笔记，解析领导力的本质（责任而非职位）、魅力的副作用，以及领导力十项修炼口诀，适合技术管理者和团队 Leader 阅读"
 toc: true
 tags:

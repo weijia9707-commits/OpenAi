@@ -1,7 +1,7 @@
 ---
 title: "隐私政策"
 date: 2020-01-01
-author: "bruce"
+author: "weijia"
 description: "本站隐私政策，说明我们如何收集、使用和保护您的个人信息"
 toc: false
 ---

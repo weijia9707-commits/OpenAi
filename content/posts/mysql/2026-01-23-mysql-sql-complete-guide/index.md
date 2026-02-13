@@ -1,7 +1,7 @@
 +++
 title = "MySQL SQL 完全指南：从小白到高手的进阶之路（含面试宝典）"
 date = 2026-01-23T20:06:36+08:00
-author = "bruce"
+author = "weijia"
 description = "全面掌握 MySQL SQL 核心知识：从基础语法到高级特性，涵盖索引原理、事务隔离、锁机制、查询优化。包含大量实战案例和高频面试题，助你快速从 SQL 小白进阶为数据库高手。"
 toc = true
 tags = ["MySQL", "SQL", "数据库", "面试", "索引", "事务", "性能优化"]

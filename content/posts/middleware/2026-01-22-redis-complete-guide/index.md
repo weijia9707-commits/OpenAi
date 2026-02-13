@@ -2,7 +2,7 @@
 title = 'Redis 从入门到精通：安装配置与实战指南'
 date = '2026-01-22T17:00:00+08:00'
 draft = false
-author = 'bruce'
+author = 'weijia'
 description = 'Redis 完全指南，详解 macOS 和 Windows 安装方法、五大数据类型、常用命令、持久化机制、主从复制与集群配置。从零基础到精通 Redis 的最佳学习路径。'
 toc = true
 tags = ['Redis', '数据库', '缓存', 'NoSQL', '中间件']

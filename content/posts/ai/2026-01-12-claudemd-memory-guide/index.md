@@ -1,7 +1,7 @@
 ---
 title: "Claude Code 记忆术：一个文件让 AI 永远记住你是谁"
 date: 2026-01-12T00:00:00+08:00
-author: "bruce"
+author: "weijia"
 description: "手把手教你配置 CLAUDE.md，让 Claude Code 记住你的开发环境、代码风格和工作习惯，告别重复自我介绍"
 toc: true
 images:

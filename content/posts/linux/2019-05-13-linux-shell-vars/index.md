@@ -1,7 +1,7 @@
 +++
 title = 'Shell 特殊变量完全指南：$$、$?、$@、$# 等用法详解'
 date = '2026-01-22T15:47:58+08:00'
-author = 'bruce'
+author = 'weijia'
 description = 'Bash Shell 特殊变量完全指南，详解 $$、$!、$?、$-、$*、$@、$#、$0 等变量的含义和实际用法。包含 $* 与 $@ 的区别对比、退出状态码说明、完整示例代码和最佳实践。'
 toc = true
 tags = ['shell', 'bash', 'linux', '脚本', '特殊变量']

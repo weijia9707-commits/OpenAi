@@ -1,7 +1,7 @@
 ---
 title: "Claude Code Skill 完全指南：让 AI 学会你的工作流程"
 date: 2026-01-08T10:00:00+08:00
-author: "bruce"
+author: "weijia"
 description: "手把手教你创建 Claude Code Skill，附带财务分析、面试问题生成、亚马逊 Listing 优化三个实战案例"
 toc: true
 images:

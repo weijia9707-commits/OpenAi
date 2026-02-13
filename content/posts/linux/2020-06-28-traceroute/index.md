@@ -1,7 +1,7 @@
 ---
 title: "Traceroute 网络诊断命令详解：追踪数据包的完整路径"
 date: 2020-06-28T12:12:04+08:00
-author: "bruce"
+author: "weijia"
 description: "Traceroute 是网络诊断必备工具，通过 TTL 机制追踪数据包路由路径。本文详解工作原理、Linux/Windows 用法差异、输出解读技巧和实战案例，帮你快速定位网络延迟和故障节点。"
 toc: true
 images:

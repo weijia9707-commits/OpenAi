@@ -1,7 +1,7 @@
 ---
 title: "Java 入门教程（二）：Arrays 工具类、集合框架与 I/O 操作详解"
 date: 2024-05-13T15:13:10+08:00
-author: bruce
+author: weijia
 description: "Java 入门教程第二篇，详解 Arrays 工具类常用方法（toString、copyOf、sort、setAll），数组遍历、拷贝、排序操作，以及集合框架和 I/O 流技术基础"
 toc: true
 tags:

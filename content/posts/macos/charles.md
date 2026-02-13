@@ -1,7 +1,7 @@
 ---
 title: "Charles 抓包工具使用教程：HTTP/HTTPS 请求拦截与接口调试实战"
 date: 2015-08-15 11:33:11
-author: "bruce"
+author: "weijia"
 description: "Charles 网络抓包工具完整使用教程，实现 HTTP/HTTPS 请求拦截、数据模拟（Mock）、接口调试和网络限速等功能，附代理配置和证书安装步骤"
 toc: true
 tags:
