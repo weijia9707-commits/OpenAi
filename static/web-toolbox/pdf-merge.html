@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Merge Tool - Combine PDF Files Online Free | PDF 合并 | Web Toolbox</title>
-    <meta name="description" content="Free online PDF merge tool to combine multiple PDF files into one document. Reorder pages, merge securely in browser, and download instantly with no upload or registration.">
-    <meta name="keywords" content="merge PDF,combine PDF files,join PDF online,PDF merger,PDF 合并,合并PDF文件,免费PDF工具">
+    <title>Merge PDF - Free Online | No Ads, No Signup, No Upload | PDF 合并 | Web Toolbox</title>
+    <meta name="description" content="Free online PDF merge tool to combine multiple PDF files into one document. Reorder pages, merge securely in browser, and download instantly with no upload or registration. ✅ No ads ✅ No signup ✅ No upload — files never leave your browser.">
+    <meta name="keywords" content="merge PDF,combine PDF files,join PDF online,PDF merger,PDF 合并,合并PDF文件,免费PDF工具, no ads, no signup, no upload, no login, free unlimited, browser-based, local processing, privacy, secure">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -23,7 +23,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/pdf-merge.html">
-    <meta property="og:title" content="PDF Merge Tool - Combine PDF Files Online Free | Web Toolbox">
+    <meta property="og:title" content="Merge PDF - Free Online | No Ads, No Signup, No Upload | PDF 合并">
     <meta property="og:description" content="Combine multiple PDF files into one PDF instantly. 100% browser-based PDF merger with file reordering and secure local processing.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-merge.webp">
     <meta property="og:image:width" content="1200">
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@heyuan110">
     <meta name="twitter:creator" content="@heyuan110">
-    <meta name="twitter:title" content="PDF Merge Tool - Combine PDF Files Online Free">
+    <meta name="twitter:title" content="Merge PDF - Free Online | No Ads, No Signup, No Upload | PDF 合并">
     <meta name="twitter:description" content="Merge PDF files online for free. Reorder files and combine into one PDF in your browser.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-merge.webp">
 
@@ -57,7 +57,13 @@
             "Merge unlimited PDF files in browser",
             "Reorder PDF sequence before combining",
             "No upload required, privacy safe",
-            "Fast one-click PDF download"
+            "Fast one-click PDF download",
+            "No ads",
+            "No signup required",
+            "No file upload",
+            "100% browser-based",
+            "Unlimited usage",
+            "Privacy-first"
         ],
         "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/pdf-merge.webp"
     }
@@ -115,6 +121,11 @@
                 "@type": "Question",
                 "name": "Will merged PDF quality change?",
                 "acceptedAnswer": { "@type": "Answer", "text": "No. The tool copies original PDF pages directly, so page quality remains unchanged." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this tool really free? Are my files safe?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy." }
             }
         ]
     }
@@ -217,6 +228,8 @@
         }
 
         .upload-zone {
+            display: block;
+            width: 100%;
             border: 2px dashed rgba(124,58,237,0.55);
             border-radius: 14px;
             background: rgba(124,58,237,0.08);
@@ -389,9 +402,9 @@
             <h2 data-i18n="featuresTitle">Why Use This PDF Merger</h2>
             <div class="features-grid">
                 <article class="feature-card">
-                    <div>⚡</div>
-                    <h4 data-i18n="feature1Title">Fast PDF Combine</h4>
-                    <p data-i18n="feature1Desc">Merge PDF files online in seconds with instant browser processing.</p>
+                    <div>🔒</div>
+                    <h4 data-i18n="feature1Title">100% Free & Private</h4>
+                    <p data-i18n="feature1Desc">No ads, no signup, no file upload. Everything runs locally in your browser. Your PDF files never leave your device.</p>
                 </article>
                 <article class="feature-card">
                     <div>🔐</div>
@@ -432,6 +445,13 @@
             <div class="faq-item">
                 <button class="faq-question" data-i18n="faq5Q">Will merge affect PDF quality?</button>
                 <div class="faq-answer" data-i18n="faq5A">No. This tool copies pages directly and keeps original quality.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_free_q">Is this tool really free? Are my files safe?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer"><p data-i18n="faq_free_a">Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy.</p></div>
             </div>
         </section>
 
@@ -488,8 +508,8 @@
                 statusInvalid: 'Only PDF files are supported.',
                 statusLoadError: 'Failed to read one or more files. Please try again.',
                 featuresTitle: 'Why Use This PDF Merger',
-                feature1Title: 'Fast PDF Combine',
-                feature1Desc: 'Merge PDF files online in seconds with instant browser processing.',
+                feature1Title: '100% Free & Private',
+                feature1Desc: 'No ads, no signup, no file upload. Everything runs locally in your browser. Your PDF files never leave your device.',
                 feature2Title: 'Private & Secure',
                 feature2Desc: 'No server upload. Your documents stay on your device.',
                 feature3Title: 'Reorder Before Merge',
@@ -507,6 +527,8 @@
                 faq4A: 'No hard limit is set, but very large files depend on your browser memory.',
                 faq5Q: 'Will merge affect PDF quality?',
                 faq5A: 'No. This tool copies pages directly and keeps original quality.',
+                faq_free_q: 'Is this tool really free? Are my files safe?',
+                faq_free_a: 'Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy.',
                 relatedTitle: 'Related PDF Tools',
                 rel1Title: 'PDF Split',
                 rel1Desc: 'Extract pages or split PDF into multiple files.',
@@ -538,8 +560,8 @@
                 statusInvalid: '仅支持 PDF 文件。',
                 statusLoadError: '读取文件失败，请重试。',
                 featuresTitle: '为什么使用这个 PDF 合并工具',
-                feature1Title: '快速合并 PDF',
-                feature1Desc: '在线秒级合并 PDF，浏览器内即时处理。',
+                feature1Title: '100% 免费且安全',
+                feature1Desc: '无广告、无需注册、文件不上传。所有处理都在浏览器本地完成，PDF 文件不会离开您的设备。',
                 feature2Title: '隐私安全',
                 feature2Desc: '无需上传服务器，文档始终保留在本地设备。',
                 feature3Title: '先排序再合并',
@@ -557,6 +579,8 @@
                 faq4A: '没有固定限制，但超大文件取决于设备和浏览器内存。',
                 faq5Q: '合并会影响 PDF 清晰度吗？',
                 faq5A: '不会。工具会直接复制页面，保持原始质量。',
+                faq_free_q: '这个工具真的免费吗？我的文件安全吗？',
+                faq_free_a: '是的，100% 免费，无广告、无需注册、无使用限制。与其他 PDF 工具不同，您的文件不会上传到任何服务器——所有处理都在浏览器本地完成，最大程度保护隐私。',
                 relatedTitle: '相关 PDF 工具',
                 rel1Title: 'PDF 拆分',
                 rel1Desc: '按页提取或按范围拆分 PDF。',
@@ -588,8 +612,8 @@
                 statusInvalid: 'Seuls les fichiers PDF sont pris en charge.',
                 statusLoadError: 'Échec de lecture des fichiers. Réessayez.',
                 featuresTitle: 'Pourquoi utiliser ce fusionneur PDF',
-                feature1Title: 'Fusion PDF rapide',
-                feature1Desc: 'Fusionnez vos PDF en quelques secondes avec un traitement local.',
+                feature1Title: '100% Gratuit et Privé',
+                feature1Desc: 'Sans publicité, sans inscription, sans téléchargement de fichiers. Tout est traité localement dans votre navigateur.',
                 feature2Title: 'Privé et sécurisé',
                 feature2Desc: 'Aucun envoi serveur. Vos documents restent sur votre appareil.',
                 feature3Title: 'Réordonner avant fusion',
@@ -607,6 +631,8 @@
                 faq4A: 'Pas de limite fixe, mais les très gros fichiers dépendent de la mémoire.',
                 faq5Q: 'La fusion réduit-elle la qualité du PDF ?',
                 faq5A: 'Non. L outil conserve la qualité d origine des pages.',
+                faq_free_q: 'Cet outil est-il vraiment gratuit ? Mes fichiers sont-ils en sécurité ?',
+                faq_free_a: 'Oui, 100% gratuit sans publicité, sans inscription et sans limite. Contrairement à d\'autres outils PDF, vos fichiers ne sont jamais téléchargés sur un serveur.',
                 relatedTitle: 'Outils PDF associés',
                 rel1Title: 'Découper PDF',
                 rel1Desc: 'Extraire des pages ou scinder un PDF en plusieurs fichiers.',
@@ -638,8 +664,8 @@
                 statusInvalid: 'Solo se admiten archivos PDF.',
                 statusLoadError: 'No se pudieron leer los archivos. Inténtalo de nuevo.',
                 featuresTitle: 'Por qué usar este unidor de PDF',
-                feature1Title: 'Unión PDF rápida',
-                feature1Desc: 'Combina PDF online en segundos con procesamiento local.',
+                feature1Title: '100% Gratis y Privado',
+                feature1Desc: 'Sin anuncios, sin registro, sin subir archivos. Todo se procesa localmente en tu navegador. Tus archivos PDF nunca salen de tu dispositivo.',
                 feature2Title: 'Privado y seguro',
                 feature2Desc: 'Sin carga al servidor. Tus documentos quedan en tu dispositivo.',
                 feature3Title: 'Reordenar antes de unir',
@@ -657,6 +683,8 @@
                 faq4A: 'No hay límite fijo, pero los archivos muy grandes dependen de la memoria.',
                 faq5Q: '¿La unión afecta la calidad del PDF?',
                 faq5A: 'No. La herramienta mantiene la calidad original.',
+                faq_free_q: '¿Es realmente gratuito? ¿Mis archivos están seguros?',
+                faq_free_a: 'Sí, 100% gratuito sin anuncios, sin registro y sin límites. A diferencia de otras herramientas PDF, sus archivos nunca se suben a ningún servidor.',
                 relatedTitle: 'Herramientas PDF relacionadas',
                 rel1Title: 'Dividir PDF',
                 rel1Desc: 'Extrae páginas o divide PDF por rangos.',

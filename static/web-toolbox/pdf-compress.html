@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF Compress Tool - Reduce PDF Size Online Free | PDF 压缩 | Web Toolbox</title>
-    <meta name="description" content="Free online PDF compressor to reduce PDF file size quickly. Compress large PDF files in browser with adjustable quality and resolution, then download optimized PDF instantly.">
-    <meta name="keywords" content="compress PDF,reduce PDF size,PDF optimizer,shrink PDF online,PDF 压缩,减小PDF大小,在线PDF压缩">
+    <title>Compress PDF - Free Online | No Ads, No Upload, No Limit | PDF 压缩 | Web Toolbox</title>
+    <meta name="description" content="Free online PDF compressor to reduce PDF file size quickly. Compress large PDF files in browser with adjustable quality and resolution, then download optimized PDF instantly. ✅ No ads ✅ No signup ✅ No upload — files never leave your browser.">
+    <meta name="keywords" content="compress PDF,reduce PDF size,PDF optimizer,shrink PDF online,PDF 压缩,减小PDF大小,在线PDF压缩, no ads, no signup, no upload, no login, free unlimited, browser-based, local processing, privacy, secure">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -23,7 +23,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/pdf-compress.html">
-    <meta property="og:title" content="PDF Compress Tool - Reduce PDF Size Online Free | Web Toolbox">
+    <meta property="og:title" content="Compress PDF - Free Online | No Ads, No Upload, No Limit | PDF 压缩">
     <meta property="og:description" content="Compress PDF online with quality controls. Reduce file size in browser for email and web upload.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-compress.webp">
     <meta property="og:image:width" content="1200">
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@heyuan110">
     <meta name="twitter:creator" content="@heyuan110">
-    <meta name="twitter:title" content="PDF Compress Tool - Reduce PDF Size Online Free">
+    <meta name="twitter:title" content="Compress PDF - Free Online | No Ads, No Upload, No Limit | PDF 压缩">
     <meta name="twitter:description" content="Reduce PDF size online with adjustable quality and resolution.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-compress.webp">
 
@@ -57,7 +57,13 @@
             "Compress PDF with adjustable JPEG quality",
             "Control render scale and max dimension",
             "Fast browser-based PDF optimization",
-            "No upload, privacy-safe local processing"
+            "No upload, privacy-safe local processing",
+            "No ads",
+            "No signup required",
+            "No file upload",
+            "100% browser-based",
+            "Unlimited usage",
+            "Privacy-first"
         ],
         "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/pdf-compress.webp"
     }
@@ -115,6 +121,11 @@
                 "@type": "Question",
                 "name": "Is this PDF compressor free?",
                 "acceptedAnswer": { "@type": "Answer", "text": "Yes, the tool is free with no account required." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this tool really free? Are my files safe?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy." }
             }
         ]
     }
@@ -152,6 +163,7 @@
         .card h2 { font-size: 1.05rem; margin-bottom: 14px; color: #f4f4f5; }
 
         .upload-zone { border: 2px dashed rgba(124,58,237,0.55); border-radius: 14px; background: rgba(124,58,237,0.08); text-align: center; padding: 30px 14px; cursor: pointer; transition: all 0.2s ease; }
+        .upload-zone { display: block; width: 100%; }
         .upload-zone:hover, .upload-zone.dragover { border-color: #a78bfa; background: rgba(124,58,237,0.18); }
         .upload-title { font-weight: 600; margin-bottom: 6px; }
         .upload-hint { color: #a1a1aa; font-size: 14px; }
@@ -271,9 +283,9 @@
             <h2 data-i18n="featuresTitle">Why Use This PDF Compressor</h2>
             <div class="features-grid">
                 <article class="feature-card">
-                    <div>🗜️</div>
-                    <h4 data-i18n="feature1Title">Reduce PDF Size</h4>
-                    <p data-i18n="feature1Desc">Compress large PDF files for faster sharing and upload.</p>
+                    <div>🔒</div>
+                    <h4 data-i18n="feature1Title">100% Free & Private</h4>
+                    <p data-i18n="feature1Desc">No ads, no signup, no file upload. Everything runs locally in your browser. Your PDF files never leave your device.</p>
                 </article>
                 <article class="feature-card">
                     <div>🎚️</div>
@@ -314,6 +326,13 @@
             <div class="faq-item">
                 <button class="faq-question" data-i18n="faq5Q">Is this tool free?</button>
                 <div class="faq-answer" data-i18n="faq5A">Yes, it is free without registration.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_free_q">Is this tool really free? Are my files safe?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer"><p data-i18n="faq_free_a">Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy.</p></div>
             </div>
         </section>
 
@@ -376,8 +395,8 @@
                 statusError: 'Compression failed. Please try again.',
                 resultInfo: 'Original: {oldSize} → Compressed: {newSize} ({ratio}% smaller)',
                 featuresTitle: 'Why Use This PDF Compressor',
-                feature1Title: 'Reduce PDF Size',
-                feature1Desc: 'Compress large PDF files for faster sharing and upload.',
+                feature1Title: '100% Free & Private',
+                feature1Desc: 'No ads, no signup, no file upload. Everything runs locally in your browser. Your PDF files never leave your device.',
                 feature2Title: 'Adjustable Quality',
                 feature2Desc: 'Control quality and render scale for size/clarity balance.',
                 feature3Title: 'Great for Scans',
@@ -395,6 +414,8 @@
                 faq4A: 'No. PDF compression runs locally in your browser.',
                 faq5Q: 'Is this tool free?',
                 faq5A: 'Yes, it is free without registration.',
+                faq_free_q: 'Is this tool really free? Are my files safe?',
+                faq_free_a: 'Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy.',
                 relatedTitle: 'Related PDF Tools',
                 rel1Title: 'PDF Merge',
                 rel1Desc: 'Combine multiple PDF files into one document.',
@@ -428,8 +449,8 @@
                 statusError: '压缩失败，请重试。',
                 resultInfo: '原始大小：{oldSize} → 压缩后：{newSize}（减少 {ratio}%）',
                 featuresTitle: '为什么使用这个 PDF 压缩工具',
-                feature1Title: '减小 PDF 体积',
-                feature1Desc: '压缩大文件 PDF，便于上传、发送和分享。',
+                feature1Title: '100% 免费且安全',
+                feature1Desc: '无广告、无需注册、文件不上传。所有处理都在浏览器本地完成，PDF 文件不会离开您的设备。',
                 feature2Title: '可调节质量',
                 feature2Desc: '质量与分辨率可控，平衡清晰度和文件大小。',
                 feature3Title: '扫描件效果好',
@@ -447,6 +468,8 @@
                 faq4A: '不会。PDF 压缩在你的浏览器本地完成。',
                 faq5Q: '这个工具免费吗？',
                 faq5A: '是的，免费且无需注册。',
+                faq_free_q: '这个工具真的免费吗？我的文件安全吗？',
+                faq_free_a: '是的，100% 免费，无广告、无需注册、无使用限制。与其他 PDF 工具不同，您的文件不会上传到任何服务器——所有处理都在浏览器本地完成，最大程度保护隐私。',
                 relatedTitle: '相关 PDF 工具',
                 rel1Title: 'PDF 合并',
                 rel1Desc: '将多个 PDF 文件合并成一个文档。',
@@ -480,8 +503,8 @@
                 statusError: 'Échec de compression. Réessayez.',
                 resultInfo: 'Original: {oldSize} → Compressé: {newSize} ({ratio}% en moins)',
                 featuresTitle: 'Pourquoi utiliser ce compresseur PDF',
-                feature1Title: 'Réduire la taille PDF',
-                feature1Desc: 'Compressez les gros PDF pour un partage plus rapide.',
+                feature1Title: '100% Gratuit et Privé',
+                feature1Desc: 'Sans publicité, sans inscription, sans téléchargement de fichiers. Tout est traité localement dans votre navigateur.',
                 feature2Title: 'Qualité ajustable',
                 feature2Desc: 'Réglez qualité et échelle pour l équilibre taille/netteté.',
                 feature3Title: 'Parfait pour scans',
@@ -499,6 +522,8 @@
                 faq4A: 'Non. Tout se fait localement dans le navigateur.',
                 faq5Q: 'Cet outil est-il gratuit ?',
                 faq5A: 'Oui, gratuit sans inscription.',
+                faq_free_q: 'Cet outil est-il vraiment gratuit ? Mes fichiers sont-ils en sécurité ?',
+                faq_free_a: 'Oui, 100% gratuit sans publicité, sans inscription et sans limite. Contrairement à d\'autres outils PDF, vos fichiers ne sont jamais téléchargés sur un serveur.',
                 relatedTitle: 'Outils PDF associés',
                 rel1Title: 'Fusion PDF',
                 rel1Desc: 'Combiner plusieurs PDF en un seul.',
@@ -532,8 +557,8 @@
                 statusError: 'Error de compresión. Inténtalo de nuevo.',
                 resultInfo: 'Original: {oldSize} → Comprimido: {newSize} ({ratio}% menos)',
                 featuresTitle: 'Por qué usar este compresor PDF',
-                feature1Title: 'Reducir tamaño PDF',
-                feature1Desc: 'Comprime PDFs grandes para compartir y subir más rápido.',
+                feature1Title: '100% Gratis y Privado',
+                feature1Desc: 'Sin anuncios, sin registro, sin subir archivos. Todo se procesa localmente en tu navegador. Tus archivos PDF nunca salen de tu dispositivo.',
                 feature2Title: 'Calidad ajustable',
                 feature2Desc: 'Controla calidad y escala para equilibrar tamaño y claridad.',
                 feature3Title: 'Ideal para escaneados',
@@ -551,6 +576,8 @@
                 faq4A: 'No. La compresión se hace localmente en el navegador.',
                 faq5Q: '¿La herramienta es gratuita?',
                 faq5A: 'Sí, gratuita y sin registro.',
+                faq_free_q: '¿Es realmente gratuito? ¿Mis archivos están seguros?',
+                faq_free_a: 'Sí, 100% gratuito sin anuncios, sin registro y sin límites. A diferencia de otras herramientas PDF, sus archivos nunca se suben a ningún servidor.',
                 relatedTitle: 'Herramientas PDF relacionadas',
                 rel1Title: 'Unir PDF',
                 rel1Desc: 'Combina varios PDF en un solo documento.',

@@ -3,9 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PDF to Image Converter - Convert PDF to JPG PNG | PDF 转图片 | Web Toolbox</title>
-    <meta name="description" content="Free online PDF to image converter. Convert PDF pages to JPG or PNG with custom quality and scale. Export all pages or selected ranges directly in your browser.">
-    <meta name="keywords" content="PDF to image,PDF to JPG,PDF to PNG,convert PDF pages,PDF 转图片,PDF转JPG,PDF转PNG">
+    <title>PDF to JPG/PNG - Free Online | No Ads, No Signup | PDF 转图片 | Web Toolbox</title>
+    <meta name="description" content="Free online PDF to image converter. Convert PDF pages to JPG or PNG with custom quality and scale. Export all pages or selected ranges directly in your browser. ✅ No ads ✅ No signup ✅ No upload — files never leave your browser.">
+    <meta name="keywords" content="PDF to image,PDF to JPG,PDF to PNG,convert PDF pages,PDF 转图片,PDF转JPG,PDF转PNG, no ads, no signup, no upload, no login, free unlimited, browser-based, local processing, privacy, secure">
     <meta name="author" content="heyuan110">
     <meta name="robots" content="index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1">
     <meta name="googlebot" content="index, follow">
@@ -23,7 +23,7 @@
 
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://www.heyuan110.com/web-toolbox/pdf-to-image.html">
-    <meta property="og:title" content="PDF to Image Converter - Convert PDF to JPG PNG | Web Toolbox">
+    <meta property="og:title" content="PDF to JPG/PNG - Free Online | No Ads, No Signup | PDF 转图片">
     <meta property="og:description" content="Convert PDF pages to PNG/JPG online with custom quality and scale settings.">
     <meta property="og:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-to-image.webp">
     <meta property="og:image:width" content="1200">
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:site" content="@heyuan110">
     <meta name="twitter:creator" content="@heyuan110">
-    <meta name="twitter:title" content="PDF to Image Converter - Convert PDF to JPG PNG">
+    <meta name="twitter:title" content="PDF to JPG/PNG - Free Online | No Ads, No Signup | PDF 转图片">
     <meta name="twitter:description" content="Export PDF pages as JPG/PNG images online for free.">
     <meta name="twitter:image" content="https://www.heyuan110.com/web-toolbox/screenshots/pdf-to-image.webp">
 
@@ -57,7 +57,13 @@
             "Convert PDF to PNG and JPG",
             "Batch export all PDF pages",
             "Select custom page ranges",
-            "Local browser processing for privacy"
+            "Local browser processing for privacy",
+            "No ads",
+            "No signup required",
+            "No file upload",
+            "100% browser-based",
+            "Unlimited usage",
+            "Privacy-first"
         ],
         "screenshot": "https://www.heyuan110.com/web-toolbox/screenshots/pdf-to-image.webp"
     }
@@ -115,6 +121,11 @@
                 "@type": "Question",
                 "name": "Is this PDF to image tool free?",
                 "acceptedAnswer": { "@type": "Answer", "text": "Yes, this converter is completely free." }
+            },
+            {
+                "@type": "Question",
+                "name": "Is this tool really free? Are my files safe?",
+                "acceptedAnswer": { "@type": "Answer", "text": "Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy." }
             }
         ]
     }
@@ -152,6 +163,7 @@
         .card h2 { font-size: 1.05rem; margin-bottom: 14px; color: #f4f4f5; }
 
         .upload-zone { border: 2px dashed rgba(124,58,237,0.55); border-radius: 14px; background: rgba(124,58,237,0.08); text-align: center; padding: 30px 14px; cursor: pointer; transition: all 0.2s ease; }
+        .upload-zone { display: block; width: 100%; }
         .upload-zone:hover, .upload-zone.dragover { border-color: #a78bfa; background: rgba(124,58,237,0.18); }
         .upload-title { font-weight: 600; margin-bottom: 6px; }
         .upload-hint { color: #a1a1aa; font-size: 14px; }
@@ -284,9 +296,9 @@
             <h2 data-i18n="featuresTitle">Key PDF to Image Features</h2>
             <div class="features-grid">
                 <article class="feature-card">
-                    <div>🖼️</div>
-                    <h4 data-i18n="feature1Title">PDF to PNG/JPG</h4>
-                    <p data-i18n="feature1Desc">Convert PDF pages into high-quality image formats.</p>
+                    <div>🔒</div>
+                    <h4 data-i18n="feature1Title">100% Free & Private</h4>
+                    <p data-i18n="feature1Desc">No ads, no signup, no file upload. Everything runs locally in your browser. Your PDF files never leave your device.</p>
                 </article>
                 <article class="feature-card">
                     <div>📄</div>
@@ -327,6 +339,13 @@
             <div class="faq-item">
                 <button class="faq-question" data-i18n="faq5Q">Is this converter free?</button>
                 <div class="faq-answer" data-i18n="faq5A">Yes, it is completely free.</div>
+            </div>
+            <div class="faq-item">
+                <div class="faq-question" onclick="toggleFaq(this)">
+                    <span data-i18n="faq_free_q">Is this tool really free? Are my files safe?</span>
+                    <span class="arrow">▼</span>
+                </div>
+                <div class="faq-answer"><p data-i18n="faq_free_a">Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy.</p></div>
             </div>
         </section>
 
@@ -392,8 +411,8 @@
                 statusDone: 'Conversion complete. Download started.',
                 statusError: 'Conversion failed. Please try again.',
                 featuresTitle: 'Key PDF to Image Features',
-                feature1Title: 'PDF to PNG/JPG',
-                feature1Desc: 'Convert PDF pages into high-quality image formats.',
+                feature1Title: '100% Free & Private',
+                feature1Desc: 'No ads, no signup, no file upload. Everything runs locally in your browser. Your PDF files never leave your device.',
                 feature2Title: 'Select Page Range',
                 feature2Desc: 'Export all pages or specific ranges in one conversion.',
                 feature3Title: 'ZIP Batch Download',
@@ -411,6 +430,8 @@
                 faq4A: 'The tool packs all images into a ZIP file automatically.',
                 faq5Q: 'Is this converter free?',
                 faq5A: 'Yes, it is completely free.',
+                faq_free_q: 'Is this tool really free? Are my files safe?',
+                faq_free_a: 'Yes, 100% free with no ads, no registration, and no usage limits. Unlike other PDF tools, your files are never uploaded to any server — all processing happens locally in your browser for maximum privacy.',
                 relatedTitle: 'Related PDF Tools',
                 rel1Title: 'PDF Merge',
                 rel1Desc: 'Combine multiple PDF files into one.',
@@ -447,8 +468,8 @@
                 statusDone: '转换完成，已开始下载。',
                 statusError: '转换失败，请重试。',
                 featuresTitle: 'PDF 转图片核心功能',
-                feature1Title: 'PDF 转 PNG/JPG',
-                feature1Desc: '将 PDF 页面导出为高质量图片格式。',
+                feature1Title: '100% 免费且安全',
+                feature1Desc: '无广告、无需注册、文件不上传。所有处理都在浏览器本地完成，PDF 文件不会离开您的设备。',
                 feature2Title: '按页范围导出',
                 feature2Desc: '支持全部页面或指定页码范围导出。',
                 feature3Title: 'ZIP 批量下载',
@@ -466,6 +487,8 @@
                 faq4A: '工具会自动将多张图片打包成 ZIP 下载。',
                 faq5Q: '这个工具免费吗？',
                 faq5A: '是的，完全免费。',
+                faq_free_q: '这个工具真的免费吗？我的文件安全吗？',
+                faq_free_a: '是的，100% 免费，无广告、无需注册、无使用限制。与其他 PDF 工具不同，您的文件不会上传到任何服务器——所有处理都在浏览器本地完成，最大程度保护隐私。',
                 relatedTitle: '相关 PDF 工具',
                 rel1Title: 'PDF 合并',
                 rel1Desc: '将多个 PDF 文件合并成一个。',
@@ -502,8 +525,8 @@
                 statusDone: 'Conversion terminée. Téléchargement lancé.',
                 statusError: 'Échec de conversion. Réessayez.',
                 featuresTitle: 'Fonctions clés PDF vers image',
-                feature1Title: 'PDF vers PNG/JPG',
-                feature1Desc: 'Convertissez les pages PDF en images de haute qualité.',
+                feature1Title: '100% Gratuit et Privé',
+                feature1Desc: 'Sans publicité, sans inscription, sans téléchargement de fichiers. Tout est traité localement dans votre navigateur.',
                 feature2Title: 'Sélection de pages',
                 feature2Desc: 'Exporter toutes les pages ou des plages spécifiques.',
                 feature3Title: 'Téléchargement ZIP',
@@ -521,6 +544,8 @@
                 faq4A: 'L outil crée automatiquement un ZIP.',
                 faq5Q: 'Cet outil est-il gratuit ?',
                 faq5A: 'Oui, totalement gratuit.',
+                faq_free_q: 'Cet outil est-il vraiment gratuit ? Mes fichiers sont-ils en sécurité ?',
+                faq_free_a: 'Oui, 100% gratuit sans publicité, sans inscription et sans limite. Contrairement à d\'autres outils PDF, vos fichiers ne sont jamais téléchargés sur un serveur.',
                 relatedTitle: 'Outils PDF associés',
                 rel1Title: 'Fusion PDF',
                 rel1Desc: 'Combiner plusieurs fichiers PDF en un.',
@@ -557,8 +582,8 @@
                 statusDone: 'Conversión completada. Descarga iniciada.',
                 statusError: 'Conversión fallida. Inténtalo de nuevo.',
                 featuresTitle: 'Funciones clave PDF a imagen',
-                feature1Title: 'PDF a PNG/JPG',
-                feature1Desc: 'Convierte páginas PDF en imágenes de alta calidad.',
+                feature1Title: '100% Gratis y Privado',
+                feature1Desc: 'Sin anuncios, sin registro, sin subir archivos. Todo se procesa localmente en tu navegador. Tus archivos PDF nunca salen de tu dispositivo.',
                 feature2Title: 'Seleccionar rango',
                 feature2Desc: 'Exporta todas las páginas o rangos específicos.',
                 feature3Title: 'Descarga ZIP',
@@ -576,6 +601,8 @@
                 faq4A: 'La herramienta empaqueta todo en un ZIP.',
                 faq5Q: '¿Es gratuita esta herramienta?',
                 faq5A: 'Sí, completamente gratuita.',
+                faq_free_q: '¿Es realmente gratuito? ¿Mis archivos están seguros?',
+                faq_free_a: 'Sí, 100% gratuito sin anuncios, sin registro y sin límites. A diferencia de otras herramientas PDF, sus archivos nunca se suben a ningún servidor.',
                 relatedTitle: 'Herramientas PDF relacionadas',
                 rel1Title: 'Unir PDF',
                 rel1Desc: 'Combina varios archivos PDF en uno.',

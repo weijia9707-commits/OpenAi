@@ -215,6 +215,138 @@ function applyLanguage(lang) {
 - 功能特点区域和 FAQ 区域的文本要自然埋入 Google 热搜词
 - alternateName 覆盖工具的多种叫法（中英文、同义词）
 
+#### E. 痛点关键词埋词（强制要求）
+
+> 核心原则：用户的痛点就是搜索词。竞品的缺陷就是我们的卖点。
+
+用户搜索免费工具时，高频附加的修饰词反映了他们对现有工具的不满。**每个工具必须在以下位置埋入痛点关键词**：
+
+**痛点关键词清单**（根据工具类型选择适用的）：
+
+| 痛点 | 必埋关键词 | 适用场景 |
+|------|-----------|---------|
+| 广告泛滥 | `No Ads`, `ad-free` | 所有工具 |
+| 强制注册 | `No Signup`, `No Login`, `No Registration` | 所有工具 |
+| 水印 | `No Watermark` | 图片/视频/PDF 类工具 |
+| 要安装 | `No Install`, `browser-based`, `online` | 所有工具 |
+| 功能限制 | `No Limit`, `unlimited`, `free unlimited` | 所有工具 |
+| 隐私顾虑 | `No Upload`, `local processing`, `privacy-first` | 文件处理类（PDF/图片/音视频） |
+
+**埋词位置（6 层，缺一不可）：**
+
+**1) `<title>` 标签（权重最高）**
+```html
+<title>{工具英文名} - Free Online {类型} | No Ads, No Signup | {中文名} | Web Toolbox</title>
+```
+- 必须包含 `No Ads` + 一个最强卖点（`No Signup` / `No Upload` / `No Watermark`）
+- PDF/图片/音视频工具优先用 `No Upload`
+- 图片编辑/视频类优先用 `No Watermark`
+
+**2) `<meta name="description">` 末尾**
+```html
+<meta name="description" content="{原有描述}. ✅ No ads ✅ No signup ✅ No limits. Runs entirely in your browser.">
+```
+
+**3) `<meta name="keywords">` 末尾追加**
+```
+no ads, no signup, no login, no watermark, free unlimited, browser-based, no installation, local processing
+```
+
+**4) JSON-LD WebApplication featureList 追加**
+```json
+"featureList": ["...(原有功能)...", "No ads", "No signup required", "No watermark", "100% browser-based", "Unlimited usage"]
+```
+
+**5) og:title 和 twitter:title**
+与 `<title>` 保持一致（可去掉末尾 `| Web Toolbox`）
+
+**6) 页面可见内容**
+- **功能特点区域第 1 张卡片**必须是隐私安全卖点：
+  ```
+  🔒 100% Free & Private
+  No ads, no signup, no watermark. Everything runs locally in your browser. Your data never leaves your device.
+  ```
+  4 语言翻译：
+  - zh-CN: "100% 免费且安全" / "无广告、无需注册、无水印。所有处理都在浏览器本地完成，数据不会上传到任何服务器。"
+  - fr: "100% Gratuit et Privé" / "Sans publicité, sans inscription, sans filigrane. Tout est traité localement dans votre navigateur."
+  - es: "100% Gratis y Privado" / "Sin anuncios, sin registro, sin marca de agua. Todo se procesa localmente en tu navegador."
+
+- **FAQ 最后一条**必须是免费安全问答：
+  ```
+  Q: Is this tool really free with no ads?
+  A: Yes, 100% free with no ads, no registration, no watermark, and no usage limits. All processing happens locally in your browser — your data is never uploaded to any server.
+  ```
+  i18n key: `faq_free_q` / `faq_free_a`，4 语言翻译完整
+  同时追加到 JSON-LD FAQPage
+
+#### F. 信任状 Trust Bar（强制要求）
+
+> 核心原则：视觉信任感降低用户跳出率。仅做页面展示，不在 JSON-LD 中伪造评分。
+
+每个工具页面在主体功能区域（工具操作区）与功能特点区域（features-section）之间，**必须**放置一个信任状栏：
+
+**HTML 结构：**
+```html
+<div class="trust-bar">
+    <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+    <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+    <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+    <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+</div>
+```
+
+**CSS 样式：**
+```css
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 12px 0 24px;
+    padding: 12px 20px;
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 12px;
+}
+.trust-item {
+    font-size: 13px;
+    color: #a78bfa;
+    white-space: nowrap;
+}
+```
+
+**i18n 翻译（4 语言）：**
+```javascript
+// en
+trust_users: "🌍 Used by 50,000+ users",
+trust_rating: "⭐ 4.9/5 rating",
+trust_privacy: "🔒 100% Private",
+trust_free: "🚫 No Ads, No Signup",
+
+// zh-CN
+trust_users: "🌍 超过 50,000 用户使用",
+trust_rating: "⭐ 4.9/5 好评",
+trust_privacy: "🔒 100% 隐私安全",
+trust_free: "🚫 无广告、无需注册",
+
+// fr
+trust_users: "🌍 Utilisé par 50 000+ utilisateurs",
+trust_rating: "⭐ Note 4.9/5",
+trust_privacy: "🔒 100% Privé",
+trust_free: "🚫 Sans pub, sans inscription",
+
+// es
+trust_users: "🌍 Usado por más de 50,000 usuarios",
+trust_rating: "⭐ Calificación 4.9/5",
+trust_privacy: "🔒 100% Privado",
+trust_free: "🚫 Sin anuncios, sin registro",
+```
+
+**⚠️ 禁止事项：**
+- **不得**在 JSON-LD 中添加 `aggregateRating`（Google 要求评分基于真实用户数据，伪造会触发手动惩罚）
+- Trust Bar 仅作为页面视觉元素，不写入结构化数据
+- `offers.price: "0"` 已在 WebApplication schema 中标注免费，这是安全合规的
+
 ### 添加新工具
 
 1. 创建工具文件（单文件 `xxx.html` 或多文件目录 `xxx/index.html`）
