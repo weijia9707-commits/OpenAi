@@ -18,7 +18,4 @@ Hi，我是 Bruce，一名专注于 AI 工程化落地的技术从业者。
 AI 技术迭代太快，边学边记录是最好的学习方式。希望这些笔记能帮到同样在探索 AI 的你。
 
 ## 联系方式
-
-- GitHub: [heyuan110](https://github.com/heyuan110)
-- X/Twitter: [@heyuan110](https://x.com/heyuan110)
-- 邮箱: heyuan110@gmail.com
+- 邮箱: weijia9707@gmail.com
