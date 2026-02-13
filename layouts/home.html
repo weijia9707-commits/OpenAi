@@ -4,6 +4,9 @@
   .hero{background:linear-gradient(135deg,#0f766e 0%,#14b8a6 35%,#0ea5e9 100%);color:#fff;border-radius:20px;padding:2.2rem 1.6rem;box-shadow:0 10px 30px rgba(2,132,199,.22)}
   .hero h1{margin:0 0 .6rem;font-size:2rem;line-height:1.2}
   .hero p{margin:0;opacity:.95}
+  .typing-line{display:inline-block;min-height:1.4em}
+  .typing-cursor{display:inline-block;width:1px;height:1em;background:rgba(255,255,255,.95);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1,end) infinite}
+  @keyframes blink{50%{opacity:0}}
   .quick{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-top:1rem}
   .quick a{display:block;background:rgba(255,255,255,.14);backdrop-filter: blur(3px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.85rem 1rem;color:#fff;text-decoration:none;font-weight:600}
   .section-title{margin:1.6rem 0 .8rem;font-size:1.2rem}
@@ -27,7 +30,7 @@
   <main class="home-wrap">
     <section class="hero">
       <h1>weijia0707 AI 知识库</h1>
-      <p>聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。</p>
+      <p id="heroTyping" class="typing-line" data-text="聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。">聚焦 AI使用、AI教程、AI工具。内容持续更新，偏实战、可落地、少废话。</p><span id="heroCursor" class="typing-cursor" aria-hidden="true"></span>
       <div class="quick">
         <a href="/categories/ai实战/">AI使用</a>
         <a href="/categories/ai原理/">AI教程</a>
@@ -50,4 +53,32 @@
 
     <div class="home-foot">{{ partial "footer.html" . }}</div>
   </main>
+  <script>
+    (function () {
+      const el = document.getElementById('heroTyping');
+      const cursor = document.getElementById('heroCursor');
+      if (!el) return;
+      const key = 'homeHeroTypedV1';
+      const text = el.getAttribute('data-text') || '';
+      const hasPlayed = localStorage.getItem(key) === '1';
+
+      if (hasPlayed) {
+        el.textContent = text;
+        if (cursor) cursor.style.display = 'none';
+        return;
+      }
+
+      el.textContent = '';
+      let i = 0;
+      const timer = setInterval(() => {
+        i += 1;
+        el.textContent = text.slice(0, i);
+        if (i >= text.length) {
+          clearInterval(timer);
+          localStorage.setItem(key, '1');
+          if (cursor) setTimeout(() => (cursor.style.display = 'none'), 400);
+        }
+      }, 40);
+    })();
+  </script>
 {{ end }}
