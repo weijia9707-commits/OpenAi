@@ -2,112 +2,70 @@
 
 > 最后更新：2026-02-13
 > 目标：通过高搜索量的免费在线工具抢占 SEO 流量
+> 调研报告：[docs/report/market-research-2026-02-13.md](report/market-research-2026-02-13.md)
 
 ---
 
 ## 项目状态总览
 
-- **已上线工具**: 42 个
-- **待开发工具**: 6 个
-- **目标总计**: 48+ 个工具
+| 指标 | 数量 |
+|------|------|
+| 已上线工具 | 42 个 |
+| 待开发工具 | 14 个 |
+| 目标总计 | 56+ 个 |
 
 ---
 
-## 已上线工具清单
+## 已上线工具清单（42 个）
 
-| # | 工具名称 | 文件 | 分类 | 状态 |
-|---|---------|------|------|------|
-| 1 | M3U8 视频下载器 | m3u8-downloader.html | 视频 | ✅ 已上线 |
-| 2 | JSON 查看器 | json-viewer.html | 开发者 | ✅ 已上线 |
-| 3 | SQLite 查看器 | sqlite-viewer.html | 开发者 | ✅ 已上线 |
-| 4 | 加密编码工具箱 | crypto-tools.html | 开发者 | ✅ 已上线 |
-| 5 | WebSocket 测试器 | websocket-tester.html | 开发者 | ✅ 已上线 |
-| 6 | 正则测试器 | regex-tester.html | 开发者 | ✅ 已上线 |
-| 7 | 时间戳转换器 | timestamp-converter.html | 开发者 | ✅ 已上线 |
-| 8 | IP 地理定位 | ip-lookup.html | 网络 | ✅ 已上线 |
-| 9 | Whois 查询 | whois-query.html | 网络 | ✅ 已上线 |
-| 10 | 图片压缩器 | image-compressor.html | 图片 | ✅ 已上线 |
-| 11 | 图片格式转换 | image-converter.html | 图片 | ✅ 已上线 |
-| 12 | 图片编辑器 | image-editor.html | 图片 | ✅ 已上线 |
-| 13 | 图片转 PDF | image-to-pdf.html | 图片/PDF | ✅ 已上线 |
-| 14 | ICO 图标制作 | ico-maker.html | 图片 | ✅ 已上线 |
-| 15 | 证件照工具 | id-photo-tool.html | 图片 | ✅ 已上线 |
-| 16 | 在线画板 | paint-board.html | 图片 | ✅ 已上线 |
-| 17 | 调色板 | color-palette.html | 设计 | ✅ 已上线 |
-| 18 | 音频剪切器 | audio-cutter.html | 音频 | ✅ 已上线 |
-| 19 | 在线节拍器 | metronome.html | 音频 | ✅ 已上线 |
-| 20 | 社交视频下载 | social-video-downloader.html | 视频 | ✅ 已上线 |
-| 21 | 万能计算器 | calculator.html | 工具 | ✅ 已上线 |
-| 22 | 亲戚称谓计算 | relative-calculator.html | 工具 | ✅ 已上线 |
-| 23 | 世界时钟 | world-clock.html | 工具 | ✅ 已上线 |
-| 24 | 批量文件重命名 | file-renamer.html | 文件 | ✅ 已上线 |
-| 25 | 简繁转换 | chinese-converter.html | 文本 | ✅ 已上线 |
-| 26 | LED 弹幕 | handheld-danmaku.html | 工具 | ✅ 已上线 |
-| 27 | 页面自动刷新 | page-refresher.html | 工具 | ✅ 已上线 |
-| 28 | Claude 历史查看器 | claude-history-viewer.html | 开发者 | ✅ 已上线 |
-| 29 | 密码生成器 | password-generator.html | 安全 | ✅ 已上线 |
-| 30 | QR 码生成器 | qr-code-generator.html | 工具 | ✅ 已上线 |
-| 31 | 字数统计工具 | word-counter.html | 文本 | ✅ 已上线 |
-| 32 | Base64 编解码 | base64-tool.html | 开发者 | ✅ 已上线 |
-| 33 | URL 编解码 | url-encoder.html | 开发者 | ✅ 已上线 |
-| 34 | Lorem Ipsum 生成器 | lorem-ipsum.html | 文本 | ✅ 已上线 |
-| 35 | PDF 合并 | pdf-merge.html | PDF | ✅ 已上线 |
-| 36 | PDF 拆分 | pdf-split.html | PDF | ✅ 已上线 |
-| 37 | PDF 压缩 | pdf-compress.html | PDF | ✅ 已上线 |
-| 38 | PDF 转图片 | pdf-to-image.html | PDF | ✅ 已上线 |
-| 39 | Markdown 编辑器 | markdown-editor.html | 开发者 | ✅ 已上线 |
-| 40 | 文本对比 Diff | text-diff.html | 开发者 | ✅ 已上线 |
-| 41 | CSV ↔ JSON 转换 | csv-json.html | 开发者 | ✅ 已上线 |
-| 42 | Cron 表达式生成器 | cron-generator.html | 开发者 | ✅ 已上线 |
-
----
-
-## 新工具开发计划
-
-### 开发流程（每个工具）
-
-1. 创建 HTML 文件（单文件组件模式，复杂工具建文件夹）
-2. 完善 SEO（title, description, canonical, OG, Twitter Card, JSON-LD）
-3. 截图 → 转 webp → 放入 screenshots/
-4. 更新 index.html（工具卡片 + JSON-LD hasPart）
-5. 更新 sitemap.xml
+| # | 工具名称 | 文件 | 分类 | 上线时间 |
+|---|---------|------|------|---------|
+| 1 | M3U8 视频下载器 | m3u8-downloader.html | 视频 | - |
+| 2 | JSON 查看器 | json-viewer.html | 开发者 | - |
+| 3 | SQLite 查看器 | sqlite-viewer.html | 开发者 | - |
+| 4 | 加密编码工具箱 | crypto-tools.html | 开发者 | - |
+| 5 | WebSocket 测试器 | websocket-tester.html | 开发者 | - |
+| 6 | 正则测试器 | regex-tester.html | 开发者 | - |
+| 7 | 时间戳转换器 | timestamp-converter.html | 开发者 | - |
+| 8 | IP 地理定位 | ip-lookup.html | 网络 | - |
+| 9 | Whois 查询 | whois-query.html | 网络 | - |
+| 10 | 图片压缩器 | image-compressor.html | 图片 | - |
+| 11 | 图片格式转换 | image-converter.html | 图片 | - |
+| 12 | 图片编辑器 | image-editor.html | 图片 | - |
+| 13 | 图片转 PDF | image-to-pdf.html | 图片/PDF | - |
+| 14 | ICO 图标制作 | ico-maker.html | 图片 | - |
+| 15 | 证件照工具 | id-photo-tool.html | 图片 | - |
+| 16 | 在线画板 | paint-board.html | 图片 | - |
+| 17 | 调色板 | color-palette.html | 设计 | - |
+| 18 | 音频剪切器 | audio-cutter.html | 音频 | - |
+| 19 | 在线节拍器 | metronome.html | 音频 | - |
+| 20 | 社交视频下载 | social-video-downloader.html | 视频 | - |
+| 21 | 万能计算器 | calculator.html | 工具 | - |
+| 22 | 亲戚称谓计算 | relative-calculator.html | 工具 | - |
+| 23 | 世界时钟 | world-clock.html | 工具 | - |
+| 24 | 批量文件重命名 | file-renamer.html | 文件 | - |
+| 25 | 简繁转换 | chinese-converter.html | 文本 | - |
+| 26 | LED 弹幕 | handheld-danmaku.html | 工具 | - |
+| 27 | 页面自动刷新 | page-refresher.html | 工具 | - |
+| 28 | Claude 历史查看器 | claude-history-viewer.html | 开发者 | - |
+| 29 | 密码生成器 | password-generator.html | 安全 | 2026-02-13 |
+| 30 | QR 码生成器 | qr-code-generator.html | 工具 | 2026-02-13 |
+| 31 | 字数统计工具 | word-counter.html | 文本 | 2026-02-13 |
+| 32 | Base64 编解码 | base64-tool.html | 开发者 | 2026-02-13 |
+| 33 | URL 编解码 | url-encoder.html | 开发者 | 2026-02-13 |
+| 34 | Lorem Ipsum 生成器 | lorem-ipsum.html | 文本 | 2026-02-13 |
+| 35 | PDF 合并 | pdf-merge.html | PDF | 2026-02-13 |
+| 36 | PDF 拆分 | pdf-split.html | PDF | 2026-02-13 |
+| 37 | PDF 压缩 | pdf-compress.html | PDF | 2026-02-13 |
+| 38 | PDF 转图片 | pdf-to-image.html | PDF | 2026-02-13 |
+| 39 | Markdown 编辑器 | markdown-editor.html | 开发者 | 2026-02-13 |
+| 40 | 文本对比 Diff | text-diff.html | 开发者 | 2026-02-13 |
+| 41 | CSV ↔ JSON 转换 | csv-json.html | 开发者 | 2026-02-13 |
+| 42 | Cron 表达式生成器 | cron-generator.html | 开发者 | 2026-02-13 |
 
 ---
 
-### Phase 1 — 流量炸弹（极低难度，极高搜索量）
-
-> 预计每个工具 30-60 分钟，优先级最高
-
-| # | 工具名称 | 文件名 | 月搜索量级 | 难度 | 核心技术 | SEO 关键词 |
-|---|---------|--------|-----------|------|---------|-----------|
-| 29 | 密码生成器 | password-generator.html | 百万级 | ⭐ | 纯 JS crypto | password generator, random password, 密码生成 |
-| 30 | QR 码生成器 | qr-code-generator.html | 百万级 | ⭐ | qrcode.js | QR code generator, 二维码生成, create QR code |
-| 31 | 字数统计工具 | word-counter.html | 十万级 | ⭐ | 纯 JS | word counter, character count, 字数统计 |
-| 32 | Base64 编解码 | base64-tool.html | 十万级 | ⭐ | 原生 btoa/atob | Base64 encode decode, Base64 转换 |
-| 33 | URL 编解码 | url-encoder.html | 十万级 | ⭐ | 原生 API | URL encode decode, URL 编码解码 |
-| 34 | Lorem Ipsum 生成器 | lorem-ipsum.html | 十万级 | ⭐ | 纯 JS | lorem ipsum generator, placeholder text |
-
-### Phase 2 — PDF 工具矩阵（最大流量赛道）
-
-> ilovepdf.com 月访问 2.21 亿，PDF 是在线工具最大的流量池
-
-| # | 工具名称 | 文件名 | 月搜索量级 | 难度 | 核心技术 | SEO 关键词 |
-|---|---------|--------|-----------|------|---------|-----------|
-| 35 | PDF 合并 | pdf-merge.html | 千万级 | ⭐⭐ | pdf-lib.js | merge PDF, combine PDF, PDF 合并 |
-| 36 | PDF 拆分 | pdf-split.html | 百万级 | ⭐⭐ | pdf-lib.js | split PDF, separate PDF pages, PDF 拆分 |
-| 37 | PDF 压缩 | pdf-compress.html | 百万级 | ⭐⭐ | pdf-lib.js + canvas | compress PDF, reduce PDF size, PDF 压缩 |
-| 38 | PDF 转图片 | pdf-to-image.html | 百万级 | ⭐⭐ | pdf.js + canvas | PDF to JPG, PDF to PNG, PDF 转图片 |
-
-### Phase 3 — 开发者高频工具
-
-> 开发者社区 (Reddit r/webdev, HN) 讨论热度高，回访率高
-
-| # | 工具名称 | 文件名 | 月搜索量级 | 难度 | 核心技术 | SEO 关键词 |
-|---|---------|--------|-----------|------|---------|-----------|
-| 39 | Markdown 编辑器 | markdown-editor.html | 十万级 | ⭐⭐ | marked.js + highlight.js | markdown editor online, markdown preview |
-| 40 | 文本对比 (Diff) | text-diff.html | 十万级 | ⭐⭐ | diff-match-patch | text diff, compare text, 文本对比 |
-| 41 | CSV ↔ JSON 转换 | csv-json.html | 十万级 | ⭐⭐ | PapaParse.js | CSV to JSON, JSON to CSV, 数据转换 |
-| 42 | Cron 表达式生成器 | cron-generator.html | 万级 | ⭐⭐ | cronstrue.js | cron expression generator, cron 表达式 |
+## 待开发工具计划（14 个）
 
 ### Phase 4 — AI 时代热门工具
 
@@ -129,21 +87,112 @@
 | 47 | 单位换算器 | unit-converter.html | 十万级 | ⭐ | 纯 JS | unit converter, 单位换算, 温度转换 |
 | 48 | 发票生成器 | invoice-generator.html | 十万级 | ⭐⭐⭐ | jsPDF | invoice generator, 发票生成, free invoice |
 
+### Phase 6 — 开发者进阶工具
+
+> 来源：Hacker News 2026 开发者需求 + Reddit r/webdev 讨论
+
+| # | 工具名称 | 文件名 | 月搜索量级 | 难度 | 核心技术 | SEO 关键词 |
+|---|---------|--------|-----------|------|---------|-----------|
+| 49 | HTTP/API 测试器 | api-tester.html | 万级 | ⭐⭐ | Fetch API + CodeMirror | API tester online, HTTP client, Postman alternative |
+| 50 | Hex 文件查看器 | hex-viewer.html | 万级 | ⭐⭐ | DataView + WebAssembly | hex editor online, binary file viewer, hex viewer |
+| 51 | 代码格式化器 | code-formatter.html | 十万级 | ⭐⭐ | Prettier standalone | code formatter, JSON beautifier, SQL formatter |
+| 52 | YAML/TOML 编辑器 | yaml-editor.html | 万级 | ⭐⭐ | js-yaml + CodeMirror | YAML editor online, TOML editor, config validator |
+
+### Phase 7 — 文件处理工具
+
+> 来源：Reddit 用户高频需求 + Google Trends 搜索量分析
+
+| # | 工具名称 | 文件名 | 月搜索量级 | 难度 | 核心技术 | SEO 关键词 |
+|---|---------|--------|-----------|------|---------|-----------|
+| 53 | 电子签名工具 | e-sign.html | 十万级 | ⭐⭐ | Canvas + pdf-lib.js | sign PDF online, electronic signature, 电子签名 |
+| 54 | PDF 加密/解密 | pdf-protect.html | 十万级 | ⭐⭐ | pdf-lib.js | encrypt PDF, password protect PDF, PDF 加密 |
+| 55 | 文件格式转换中心 | file-converter.html | 百万级 | ⭐⭐⭐ | FFmpeg.wasm | file converter, video to MP3, 格式转换 |
+| 56 | 图片水印工具 | watermark-tool.html | 十万级 | ⭐⭐ | Canvas API | add watermark, image watermark, 图片加水印 |
+
 ---
 
-## 开发优先级排序（推荐执行顺序）
+## 开发优先级
 
 ```
-Phase 1（6 个工具）→ Phase 2（4 个工具）→ Phase 3（4 个工具）→ Phase 4（3 个工具）→ Phase 5（3 个工具）
+Phase 1 ✅ → Phase 2 ✅ → Phase 3 ✅ → Phase 4 → Phase 5 → Phase 6 → Phase 7
 ```
 
-### 为什么这个顺序？
+| Phase | 工具数 | 状态 | 策略 |
+|-------|-------|------|------|
+| Phase 1 流量炸弹 | 6 | ✅ 已完成 | 低难度高搜索量，快速铺量抢占长尾词 |
+| Phase 2 PDF 矩阵 | 4 | ✅ 已完成 | PDF 是在线工具最大流量赛道，ROI 最高 |
+| Phase 3 开发者工具 | 4 | ✅ 已完成 | 回访率高，适合 Reddit/HN 推广引流 |
+| Phase 4 AI 工具 | 3 | 待开发 | AI 话题性强，适合社交媒体传播 |
+| Phase 5 生活效率 | 3 | 待开发 | 稳定长尾流量，补全工具矩阵 |
+| Phase 6 开发者进阶 | 4 | 待开发 | HN 开发者强需求，轻量 Postman 替代引流 |
+| Phase 7 文件处理 | 4 | 待开发 | PDF 生态扩展 + 高搜索量格式转换 |
 
-1. **Phase 1** — 难度最低，30 分钟/个，快速铺量抢占长尾关键词
-2. **Phase 2** — PDF 是在线工具最大流量赛道，ROI 最高
-3. **Phase 3** — 开发者工具回访率高，适合在 Reddit/HN 推广引流
-4. **Phase 4** — AI 相关工具话题性强，适合社交媒体传播
-5. **Phase 5** — 稳定长尾流量，补全工具矩阵
+---
+
+## 进度追踪
+
+### Phase 1 — ✅ 已全部完成
+- [x] 密码生成器 (password-generator.html)
+- [x] QR 码生成器 (qr-code-generator.html)
+- [x] 字数统计工具 (word-counter.html)
+- [x] Base64 编解码 (base64-tool.html)
+- [x] URL 编解码 (url-encoder.html)
+- [x] Lorem Ipsum 生成器 (lorem-ipsum.html)
+
+### Phase 2 — ✅ 已全部完成
+- [x] PDF 合并 (pdf-merge.html)
+- [x] PDF 拆分 (pdf-split.html)
+- [x] PDF 压缩 (pdf-compress.html)
+- [x] PDF 转图片 (pdf-to-image.html)
+
+### Phase 3 — ✅ 已全部完成
+- [x] Markdown 编辑器 (markdown-editor.html)
+- [x] 文本对比 Diff (text-diff.html)
+- [x] CSV ↔ JSON 转换 (csv-json.html)
+- [x] Cron 表达式生成器 (cron-generator.html)
+
+### Phase 4 — 待开发
+- [ ] 图片文字识别 OCR (ocr-tool.html)
+- [ ] 图片去背景 (bg-remover.html)
+- [ ] 屏幕录制器 (screen-recorder.html)
+
+### Phase 5 — 待开发
+- [ ] 番茄钟 (pomodoro.html)
+- [ ] 单位换算器 (unit-converter.html)
+- [ ] 发票生成器 (invoice-generator.html)
+
+### Phase 6 — 待开发
+- [ ] HTTP/API 测试器 (api-tester.html)
+- [ ] Hex 文件查看器 (hex-viewer.html)
+- [ ] 代码格式化器 (code-formatter.html)
+- [ ] YAML/TOML 编辑器 (yaml-editor.html)
+
+### Phase 7 — 待开发
+- [ ] 电子签名工具 (e-sign.html)
+- [ ] PDF 加密/解密 (pdf-protect.html)
+- [ ] 文件格式转换中心 (file-converter.html)
+- [ ] 图片水印工具 (watermark-tool.html)
+
+---
+
+## 开发流程
+
+每个新工具按以下步骤开发：
+
+1. 创建 HTML 文件（单文件组件模式，复杂工具建文件夹）
+2. 完善 SEO（title, description, canonical, OG, Twitter Card, JSON-LD）
+3. 截图 → 转 webp → 放入 screenshots/
+4. 更新 index.html（工具卡片 + JSON-LD hasPart）
+5. 更新 sitemap.xml
+
+### 文件组织规则
+
+| 场景 | 结构 | URL |
+|------|------|-----|
+| 简单工具（纯 HTML/CSS/JS，库走 CDN） | `xxx.html` | `/web-toolbox/xxx.html` |
+| 多文件工具（独立 JS/CSS 模块、本地资源） | `xxx/index.html` | `/web-toolbox/xxx/` |
+
+**判断标准：** 需要拆分 JS/CSS 模块、Web Worker、本地资源文件 → 建目录；否则单文件。
 
 ---
 
@@ -153,12 +202,12 @@ Phase 1（6 个工具）→ Phase 2（4 个工具）→ Phase 3（4 个工具）
 
 | Subreddit | 适合推广的工具 | 用户量 |
 |-----------|--------------|--------|
-| r/webdev | Markdown、Diff、CSV/JSON、Cron | 2M+ |
-| r/SideProject | 全部新工具 | 622K |
 | r/InternetIsBeautiful | 全部新工具 | 17M+ |
-| r/freesoftware | PDF 工具、OCR、去背景 | 100K+ |
+| r/webdev | Markdown、Diff、CSV/JSON、Cron、API 测试器 | 2M+ |
 | r/productivity | 番茄钟、单位换算 | 1.5M+ |
-| r/graphic_design | 去背景、调色板 | 800K+ |
+| r/graphic_design | 去背景、调色板、水印 | 800K+ |
+| r/SideProject | 全部新工具 | 622K |
+| r/freesoftware | PDF 工具、OCR、去背景 | 100K+ |
 
 ### SEO 关键词策略
 
@@ -166,133 +215,4 @@ Phase 1（6 个工具）→ Phase 2（4 个工具）→ Phase 3（4 个工具）
 - 页面内容中英双语，覆盖中文搜索流量
 - JSON-LD 结构化数据确保 Google Rich Snippet
 - 每个工具独立 canonical URL + sitemap 条目
-
----
-
-## 文件组织规则
-
-| 场景 | 结构 | URL |
-|------|------|-----|
-| 简单工具（纯 HTML/CSS/JS，库走 CDN） | `xxx.html` | `/web-toolbox/xxx.html` |
-| 多文件工具（独立 JS/CSS 模块、本地资源） | `xxx/index.html` | `/web-toolbox/xxx/` |
-
-**判断标准：** 代码量大需要拆分 JS/CSS 模块、需要 Web Worker、需要本地资源文件 → 建目录；否则单文件。
-
-```
-web-toolbox/
-├── password-generator.html       # 单文件工具
-├── pdf-merge/                    # 多文件工具
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
-├── ocr-tool/                     # 多文件工具（需要加载模型）
-│   ├── index.html
-│   ├── style.css
-│   └── app.js
-└── ...
-```
-
----
-
-## 进度追踪
-
-### Phase 1 进度
-- [x] 密码生成器 (password-generator.html) ✅ 2026-02-13
-- [x] QR 码生成器 (qr-code-generator.html) ✅ 2026-02-13
-- [x] 字数统计工具 (word-counter.html) ✅ 2026-02-13
-- [x] Base64 编解码 (base64-tool.html) ✅ 2026-02-13
-- [x] URL 编解码 (url-encoder.html) ✅ 2026-02-13
-- [x] Lorem Ipsum 生成器 (lorem-ipsum.html) ✅ 2026-02-13
-
-### Phase 2 进度
-- [x] PDF 合并 (pdf-merge.html) ✅ 2026-02-13
-- [x] PDF 拆分 (pdf-split.html) ✅ 2026-02-13
-- [x] PDF 压缩 (pdf-compress.html) ✅ 2026-02-13
-- [x] PDF 转图片 (pdf-to-image.html) ✅ 2026-02-13
-
-### Phase 3 进度
-- [x] Markdown 编辑器 (markdown-editor.html) ✅ 2026-02-13
-- [x] 文本对比 Diff (text-diff.html) ✅ 2026-02-13
-- [x] CSV ↔ JSON 转换 (csv-json.html) ✅ 2026-02-13
-- [x] Cron 表达式生成器 (cron-generator.html) ✅ 2026-02-13
-
-### Phase 4 进度
-- [ ] 图片文字识别 OCR (ocr-tool.html)
-- [ ] 图片去背景 (bg-remover.html)
-- [ ] 屏幕录制器 (screen-recorder.html)
-
-### Phase 5 进度
-- [ ] 番茄钟 (pomodoro.html)
-- [ ] 单位换算器 (unit-converter.html)
-- [ ] 发票生成器 (invoice-generator.html)
-
----
-
-## 市场调研发现（2026-02-13）
-
-> 数据来源：Reddit、Hacker News、ProductHunt、Google Trends、SimilarWeb
-
-### 竞品流量分析
-
-| 平台 | 月访问量 | 主要流量来源 | 定位 |
-|------|---------|-------------|------|
-| ilovepdf.com | 2.21 亿 | Google 自然搜索 46% + 直接访问 44% | PDF 工具专精 |
-| SmallSeoTools | 1,107 万 | Google 自然搜索 51% + 直接访问 39% | SEO + 多工具平台 |
-| TinyWow | 256 万 | 直接访问 74% + Google 搜索 14% | 品牌驱动多工具平台 |
-
-**关键洞察**: ilovepdf 的成功证明单一品类（PDF）也能做到 2 亿+月访问。SEO 自然搜索是最重要的获客渠道。
-
-### 用户痛点（Reddit/HN 高频吐槽）
-
-1. **广告泛滥** — 现有免费工具广告太多，影响使用体验
-2. **强制注册** — 用户讨厌"先注册才能用"的门槛
-3. **加水印** — 免费版输出带水印是最大痛点之一
-4. **隐私担忧** — 用户不愿将文件上传到未知服务器
-5. **功能限制** — "免费版只能用 3 次"让用户反感
-6. **工具臃肿** — 如 Postman 变得越来越重，用户寻求轻量替代品
-
-**我们的差异化**: 100% 免费、无广告、无注册、无水印、浏览器本地处理、无限使用
-
-### 2026 搜索趋势
-
-- **AI 工具主导**: ChatGPT 全球月搜索 7.68 亿，AI 图片生成、AI 写作助手需求爆发
-- **OCR 多语言需求大**: imagetotext.info 支持 23 种语言，搜索量持续增长
-- **视频/音频 AI**: ElevenLabs（AI 语音）、Pika Labs（AI 视频生成）成为热门工具
-- **隐私优先**: 用户越来越重视本地处理，不愿数据上传云端
-
-### Hacker News 开发者需求（2026 工具许愿清单）
-
-| 工具需求 | 描述 | 适合纯前端实现 |
-|---------|------|--------------|
-| 轻量 HTTP 客户端 | 替代 Postman 的轻量方案 | ✅ 可行 |
-| 函数调用图可视化 | 代码导航和调用关系展示 | ⚠️ 较复杂 |
-| AI 测试用例选择器 | 基于代码变更推荐测试 | ❌ 需要后端 |
-| 本地 CI/CD 原型环境 | 本地调试 YAML CI 配置 | ⚠️ 部分可行 |
-| 二进制文件编辑器 | 支持模糊搜索的 Hex 编辑器 | ✅ WebAssembly |
-
-### ProductHunt 2026 趋势
-
-- **AI 编程工具**: Lovable（对话式全栈生成）、Windsurf（AI IDE）、bolt.new
-- **协作平台**: Figma、Notion、Framer 持续增长
-- **无代码/低代码**: n8n 工作流自动化、Supabase 后端即服务
-- **市场信号**: 简单工具类产品已少见于趋势榜，用户期望更高
-
-### 新工具机会评估
-
-基于调研结果，以下工具具有最高 ROI 潜力：
-
-| 优先级 | 工具 | 搜索量级 | 难度 | 理由 |
-|-------|------|---------|------|------|
-| 🔴 高 | 图片 OCR（已在 Phase 4） | 百万级 | ⭐⭐ | Tesseract.js 纯前端可行，多语言需求大 |
-| 🔴 高 | 图片去背景（已在 Phase 4） | 十万级 | ⭐⭐⭐ | ONNX.js + U2Net，AI 热门赛道 |
-| 🟡 中 | 轻量 HTTP 客户端 | 万级 | ⭐⭐ | HN 开发者强需求，替代 Postman |
-| 🟡 中 | Hex 文件查看器 | 万级 | ⭐⭐ | 开发者工具，竞品少 |
-| 🟢 低 | AI 文本摘要 | 十万级 | ⭐⭐⭐ | 需要 API 调用或本地模型，复杂度高 |
-| 🟢 低 | 语音转文字 | 十万级 | ⭐⭐⭐ | Web Speech API 有限，Whisper.js 体积大 |
-
-### 推广策略建议
-
-1. **Reddit 首发** — r/SideProject (622K)、r/InternetIsBeautiful (17M+) 发布工具集
-2. **HN Show HN** — 开发者工具适合在 Hacker News 引流
-3. **SEO 长尾词** — 每个工具锁定 "free online [tool] no ads no signup" 长尾词
-4. **Notion 式增长** — 通过社区真实使用分享获取口碑，避免硬广
+- 痛点长尾词：`free online [tool] no ads no signup`
