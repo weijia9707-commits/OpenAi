@@ -10,6 +10,11 @@ tags:
   - Claude Code
   - Skill
   - MCP
+keywords:
+  - Skill与MCP的区别：两种扩展AI能力的方式
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI原理
 ---

@@ -11,6 +11,11 @@ tags:
   - Skills
   - Agent
   - 开发工具
+keywords:
+  - 2026 年 Claude Code Skill
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

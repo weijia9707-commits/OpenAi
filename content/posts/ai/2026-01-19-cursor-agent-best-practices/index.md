@@ -10,6 +10,11 @@ tags:
   - AI 编程
   - Agent
   - 最佳实践
+keywords:
+  - Cursor Agent 编码最佳实践：官方指南
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

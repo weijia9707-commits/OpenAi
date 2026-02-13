@@ -11,6 +11,11 @@ tags:
   - Cursor
   - 开发效率
   - 工作流
+keywords:
+  - 我的AI开发工作流：从需求到上线
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

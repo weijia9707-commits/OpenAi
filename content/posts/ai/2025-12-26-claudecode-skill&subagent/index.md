@@ -10,6 +10,11 @@ tags:
   - Claude Code
   - Skill
   - SubAgent
+keywords:
+  - Claude Code的Skill与SubAge
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI原理
 ---

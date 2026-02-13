@@ -12,6 +12,11 @@ tags:
   - 命令行工具
   - 效率工具
   - 自动化
+keywords:
+  - Claude Code从入门到精通：终端里的全能
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

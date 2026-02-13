@@ -9,6 +9,11 @@ tags:
   - AI
   - VectorDatabase
   - RAG
+keywords:
+  - 向量数据库到底解决了什么问题？从原理到工程实践一
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI原理
 ---

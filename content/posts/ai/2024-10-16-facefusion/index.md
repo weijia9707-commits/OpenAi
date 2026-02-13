@@ -7,6 +7,11 @@ toc: true
 tags:
   - AI
   - FaceFusion
+keywords:
+  - 全面解析FaceFusion：从原理到实战
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

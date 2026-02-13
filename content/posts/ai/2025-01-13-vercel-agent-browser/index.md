@@ -11,6 +11,11 @@ tags:
   - Browser Automation
   - Agent
   - CLI
+keywords:
+  - Vercel 发布 Agent Browser：
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI工具
 ---

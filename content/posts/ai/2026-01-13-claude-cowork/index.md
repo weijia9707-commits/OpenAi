@@ -11,6 +11,11 @@ tags:
   - Anthropic
   - Agent
   - Desktop
+keywords:
+  - Anthropic 发布 Claude Cowo
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI工具
 ---

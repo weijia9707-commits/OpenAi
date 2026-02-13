@@ -10,6 +10,11 @@ tags:
   - Claude Code
   - 最佳实践
   - Anthropic
+keywords:
+  - Claude Code创始人的几个最佳实践
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

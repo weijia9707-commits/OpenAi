@@ -10,6 +10,11 @@ tags:
   - Claude Code
   - CLAUDE.md
   - 效率工具
+keywords:
+  - Claude Code 记忆术：一个文件让 AI
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

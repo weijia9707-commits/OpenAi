@@ -10,6 +10,11 @@ tags:
   - Claude Code
   - Skill
   - 效率工具
+keywords:
+  - 小白也能解锁 Claude Code 的秘密武器
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

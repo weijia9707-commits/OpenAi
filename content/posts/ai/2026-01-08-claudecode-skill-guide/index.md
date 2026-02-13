@@ -10,6 +10,11 @@ tags:
   - Claude Code
   - Skill
   - 效率工具
+keywords:
+  - Claude Code Skill 完全指南：让
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI实战
 ---

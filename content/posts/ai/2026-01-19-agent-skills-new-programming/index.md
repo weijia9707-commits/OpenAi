@@ -10,6 +10,11 @@ tags:
   - Skills
   - AI 编程
   - 自然语言编程
+keywords:
+  - Agent Skills：用大白话写程序的时代来
+  - AI 教程
+  - AI 实战
+  - weijia0707
 categories:
   - AI原理
 ---
