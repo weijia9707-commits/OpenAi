@@ -1,14 +1,19 @@
 {{ define "head" }}
 <style>
   .home-wrap{max-width:1040px;margin:2.2rem auto 3rem;padding:0 1rem}
-  .hero{background:linear-gradient(135deg,#0f766e 0%,#14b8a6 35%,#0ea5e9 100%);color:#fff;border-radius:20px;padding:2.2rem 1.6rem;box-shadow:0 10px 30px rgba(2,132,199,.22)}
+  .hero{position:relative;overflow:hidden;background:linear-gradient(135deg,#0f766e 0%,#14b8a6 35%,#0ea5e9 100%);color:#fff;border-radius:20px;padding:2.2rem 1.6rem;box-shadow:0 10px 30px rgba(2,132,199,.22)}
+  .hero::before,.hero::after{content:"";position:absolute;filter:blur(36px);pointer-events:none;opacity:.45}
+  .hero::before{width:260px;height:260px;border-radius:50%;background:#67e8f9;top:-90px;left:-60px;animation:floatGlow 11s ease-in-out infinite}
+  .hero::after{width:320px;height:320px;border-radius:50%;background:#22d3ee;bottom:-150px;right:-90px;animation:floatGlow 14s ease-in-out infinite reverse}
+  @keyframes floatGlow{0%,100%{transform:translate3d(0,0,0)}50%{transform:translate3d(14px,-10px,0)}}
   .hero h1{margin:0 0 .6rem;font-size:2rem;line-height:1.2}
   .hero p{margin:0;opacity:.95}
   .typing-line{display:inline-block;min-height:1.4em}
   .typing-cursor{display:inline-block;width:1px;height:1em;background:rgba(255,255,255,.95);margin-left:3px;vertical-align:-2px;animation:blink 1s steps(1,end) infinite}
   @keyframes blink{50%{opacity:0}}
   .quick{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-top:1rem}
-  .quick a{display:block;background:rgba(255,255,255,.14);backdrop-filter: blur(3px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.85rem 1rem;color:#fff;text-decoration:none;font-weight:600}
+  .quick a{display:block;background:rgba(255,255,255,.14);backdrop-filter: blur(3px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.85rem 1rem;color:#fff;text-decoration:none;font-weight:600;transition:transform .2s ease, box-shadow .2s ease, background .2s ease;will-change:transform}
+  .quick a:hover{background:rgba(255,255,255,.22);box-shadow:0 12px 24px rgba(14,165,233,.26)}
   .section-title{margin:1.6rem 0 .8rem;font-size:1.2rem}
   .post-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
   .post-link{display:block;text-decoration:none;color:inherit;perspective:900px}
@@ -20,8 +25,11 @@
   .post-card p{margin:0;color:#5a6372;font-size:.93rem}
   .post-card .meta{font-size:.82rem;color:#8a93a3;margin-top:.65rem}
   .home-foot{margin:2rem 0 1rem;text-align:center;opacity:.8}
+  .reveal{opacity:0;transform:translateY(14px);transition:opacity .55s ease, transform .55s ease}
+  .reveal.in{opacity:1;transform:none}
   @media (prefers-reduced-motion: reduce){
-    .post-card,.post-card::before{transition:none!important}
+    .hero::before,.hero::after{animation:none}
+    .post-card,.post-card::before,.quick a,.reveal{transition:none!important}
     .post-link:hover .post-card{transform:none;box-shadow:0 8px 20px rgba(0,0,0,.06)}
   }
   @media (max-width: 860px){
@@ -112,6 +120,28 @@
           card.style.setProperty('--rx', '0deg');
         });
       });
+
+      const quickBtns = document.querySelectorAll('.quick a');
+      quickBtns.forEach((btn) => {
+        btn.addEventListener('mousemove', (e) => {
+          const r = btn.getBoundingClientRect();
+          const dx = (e.clientX - (r.left + r.width / 2)) * 0.14;
+          const dy = (e.clientY - (r.top + r.height / 2)) * 0.14;
+          btn.style.transform = `translate(${dx.toFixed(1)}px, ${dy.toFixed(1)}px)`;
+        });
+        btn.addEventListener('mouseleave', () => {
+          btn.style.transform = 'translate(0,0)';
+        });
+      });
+
+      const revealTargets = document.querySelectorAll('.section-title, .post-link');
+      revealTargets.forEach((el) => el.classList.add('reveal'));
+      const io = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add('in');
+        });
+      }, { threshold: 0.14 });
+      revealTargets.forEach((el) => io.observe(el));
     })();
   </script>
 {{ end }}
