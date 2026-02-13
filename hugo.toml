@@ -81,7 +81,7 @@ summaryLength = 150
   # AI 主定位：一句话讲清楚你是什么
   description = "weijia0707 的 AI 实战与工程笔记：聚焦 AI 使用、教程与工具落地。"
   keywords = "AI使用,AI教程,AI工具,AI Agent,LLM,Prompt"
-  images = ["/images/og-image.png"]
+  images = ["/images/og-default.svg"]
 
   # 主题配色
   themeColor = "#494f5c"

@@ -22,3 +22,6 @@ jobs:
 
       - name: Run site validation
         run: bash scripts/ci-validate.sh
+
+      - name: Run content audit
+        run: bash scripts/content-audit.sh
