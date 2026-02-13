@@ -10,6 +10,11 @@ tags:
   - 版本管理
   - 协作开发
   - 开源
+keywords:
+  - Git 教程
+  - Git 分支协作
+  - 版本管理入门
+  - 团队协作开发
 categories:
   - AI实战
 ---

@@ -4,6 +4,7 @@ draft = false
 title = 'CLAUDE.md vs README.md：一个给 AI 看，一个给人看'
 description = 'CLAUDE.md 和 README.md 有什么区别？本文结合 OpenClaw（124k Star）的 AGENTS.md 实践和自己项目的真实案例，讲清楚怎么写好这两个文件，让 AI Agent 和人类开发者各得其所。'
 tags = ['Claude Code', 'CLAUDE.md', 'AGENTS.md', 'AI Agent', 'Anthropic', '开源', '开发规范']
+keywords = ['CLAUDE.md 和 README 区别', 'AI Agent 文档规范', 'AGENTS.md 实践', 'Claude Code 最佳实践']
 categories = ['AI']
 +++
 
