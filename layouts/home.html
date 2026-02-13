@@ -11,9 +11,11 @@
   .quick a{display:block;background:rgba(255,255,255,.14);backdrop-filter: blur(3px);border:1px solid rgba(255,255,255,.25);border-radius:12px;padding:.85rem 1rem;color:#fff;text-decoration:none;font-weight:600}
   .section-title{margin:1.6rem 0 .8rem;font-size:1.2rem}
   .post-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
-  .post-link{display:block;text-decoration:none;color:inherit}
-  .post-card{border:1px solid #e6e8eb;border-radius:14px;padding:1rem;background:#fff;transition:.2s;height:100%}
-  .post-link:hover .post-card{transform:translateY(-2px);box-shadow:0 8px 20px rgba(0,0,0,.06)}
+  .post-link{display:block;text-decoration:none;color:inherit;perspective:900px}
+  .post-card{position:relative;overflow:hidden;border:1px solid #e6e8eb;border-radius:14px;padding:1rem;background:#fff;transition:transform .22s ease, box-shadow .22s ease, border-color .22s ease, background .22s ease;height:100%;transform-style:preserve-3d;will-change:transform}
+  .post-card::before{content:"";position:absolute;inset:-30%;background:radial-gradient(circle at var(--mx,50%) var(--my,50%), rgba(14,165,233,.20), rgba(20,184,166,.10) 35%, rgba(255,255,255,0) 70%);opacity:0;transition:opacity .22s ease;pointer-events:none}
+  .post-link:hover .post-card{transform:translateY(-8px) scale(1.01) rotateX(var(--rx,0deg)) rotateY(var(--ry,0deg));box-shadow:0 16px 36px rgba(14,165,233,.18);border-color:rgba(14,165,233,.35);background:linear-gradient(180deg,#fff 0%, #f6fdff 100%)}
+  .post-link:hover .post-card::before{opacity:1}
   .post-card h3{margin:.1rem 0 .5rem;font-size:1.06rem;line-height:1.35;color:#111;font-weight:800}
   .post-card p{margin:0;color:#5a6372;font-size:.93rem}
   .post-card .meta{font-size:.82rem;color:#8a93a3;margin-top:.65rem}
@@ -65,20 +67,46 @@
       if (hasPlayed) {
         el.textContent = text;
         if (cursor) cursor.style.display = 'none';
-        return;
+      } else {
+        el.textContent = '';
+        let i = 0;
+        const timer = setInterval(() => {
+          i += 1;
+          el.textContent = text.slice(0, i);
+          if (i >= text.length) {
+            clearInterval(timer);
+            localStorage.setItem(key, '1');
+            if (cursor) setTimeout(() => (cursor.style.display = 'none'), 400);
+          }
+        }, 40);
       }
 
-      el.textContent = '';
-      let i = 0;
-      const timer = setInterval(() => {
-        i += 1;
-        el.textContent = text.slice(0, i);
-        if (i >= text.length) {
-          clearInterval(timer);
-          localStorage.setItem(key, '1');
-          if (cursor) setTimeout(() => (cursor.style.display = 'none'), 400);
-        }
-      }, 40);
+      const links = document.querySelectorAll('.post-link');
+      links.forEach((link) => {
+        const card = link.querySelector('.post-card');
+        if (!card) return;
+
+        link.addEventListener('mousemove', (e) => {
+          const r = link.getBoundingClientRect();
+          const x = e.clientX - r.left;
+          const y = e.clientY - r.top;
+          const px = (x / r.width) * 100;
+          const py = (y / r.height) * 100;
+          const ry = ((x - r.width / 2) / r.width) * 6;
+          const rx = -((y - r.height / 2) / r.height) * 6;
+          card.style.setProperty('--mx', `${px}%`);
+          card.style.setProperty('--my', `${py}%`);
+          card.style.setProperty('--ry', `${ry.toFixed(2)}deg`);
+          card.style.setProperty('--rx', `${rx.toFixed(2)}deg`);
+        });
+
+        link.addEventListener('mouseleave', () => {
+          card.style.setProperty('--mx', '50%');
+          card.style.setProperty('--my', '50%');
+          card.style.setProperty('--ry', '0deg');
+          card.style.setProperty('--rx', '0deg');
+        });
+      });
     })();
   </script>
 {{ end }}
