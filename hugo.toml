@@ -154,6 +154,11 @@ summaryLength = 150
     url = "categories/ai工具/"
     weight = 12
 
+  [[menu.main]]
+    name = "休闲娱乐"
+    url = "games/"
+    weight = 13
+
   # 通用入口（老内容仍可通过"文章/标签"访问）
   [[menu.main]]
     name = "文章"
