@@ -141,12 +141,12 @@ summaryLength = 150
   # AI 两大分类
   [[menu.main]]
     name = "AI使用"
-    url = "categories/ai使用/"
+    url = "categories/ai实战/"
     weight = 10
 
   [[menu.main]]
     name = "AI教程"
-    url = "categories/ai教程/"
+    url = "categories/ai原理/"
     weight = 11
 
   [[menu.main]]
