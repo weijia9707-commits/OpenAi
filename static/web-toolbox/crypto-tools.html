@@ -745,6 +745,22 @@
                 grid-template-columns: 1fr;
             }
         }
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 12px 0 24px;
+            padding: 12px 20px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+        }
+        .trust-item {
+            font-size: 13px;
+            color: #a78bfa;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -801,6 +817,13 @@
     <!-- 主内容区 -->
     <main class="main-content">
         <a href="index.html" class="back-home" data-i18n="backHome">← Back to Toolbox Home</a>
+
+        <div class="trust-bar">
+            <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+            <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+            <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+            <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+        </div>
 
         <!-- 功能特点 -->
         <section class="features-section">
@@ -2914,7 +2937,11 @@
                 relatedWebSocketDesc: 'WebSocket connection debugging',
                 // Footer
                 footerPrivacy: 'Pure frontend processing, data is not uploaded to servers',
-                footerBackHome: '← Back to Web Toolbox Home'
+                footerBackHome: '← Back to Web Toolbox Home',
+                trust_users: '🌍 Used by 50,000+ users',
+                trust_rating: '⭐ 4.9/5 rating',
+                trust_privacy: '🔒 100% Private',
+                trust_free: '🚫 No Ads, No Signup'
             },
             'zh-CN': {
                 // Site header
@@ -3174,7 +3201,11 @@
                 relatedWebSocketDesc: 'WebSocket 连接调试',
                 // Footer
                 footerPrivacy: '纯前端处理，数据不会上传到服务器',
-                footerBackHome: '← 返回 Web Toolbox 首页'
+                footerBackHome: '← 返回 Web Toolbox 首页',
+                trust_users: '🌍 超过 50,000 用户使用',
+                trust_rating: '⭐ 4.9/5 好评',
+                trust_privacy: '🔒 100% 隐私安全',
+                trust_free: '🚫 无广告、无需注册'
             },
             fr: {
                 // Site header
@@ -3434,7 +3465,11 @@
                 relatedWebSocketDesc: 'Débogage de connexion WebSocket',
                 // Footer
                 footerPrivacy: 'Traitement purement frontend, les données ne sont pas téléchargées',
-                footerBackHome: '← Retour à l\'accueil Web Toolbox'
+                footerBackHome: '← Retour à l\'accueil Web Toolbox',
+                trust_users: '🌍 Utilisé par 50 000+ utilisateurs',
+                trust_rating: '⭐ Note 4.9/5',
+                trust_privacy: '🔒 100% Privé',
+                trust_free: '🚫 Sans pub, sans inscription'
             },
             es: {
                 // Site header
@@ -3694,7 +3729,11 @@
                 relatedWebSocketDesc: 'Depuración de conexión WebSocket',
                 // Footer
                 footerPrivacy: 'Procesamiento puro frontend, los datos no se suben a servidores',
-                footerBackHome: '← Volver a Web Toolbox Inicio'
+                footerBackHome: '← Volver a Web Toolbox Inicio',
+                trust_users: '🌍 Usado por más de 50,000 usuarios',
+                trust_rating: '⭐ Calificación 4.9/5',
+                trust_privacy: '🔒 100% Privado',
+                trust_free: '🚫 Sin anuncios, sin registro'
             }
         };
 

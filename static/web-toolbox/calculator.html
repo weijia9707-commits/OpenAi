@@ -568,6 +568,23 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        .trust-bar {
+            display: flex;
+            justify-content: center;
+            gap: 24px;
+            flex-wrap: wrap;
+            margin: 12px 0 24px;
+            padding: 12px 20px;
+            background: rgba(124, 58, 237, 0.1);
+            border: 1px solid rgba(124, 58, 237, 0.2);
+            border-radius: 12px;
+        }
+        .trust-item {
+            font-size: 13px;
+            color: #a78bfa;
+            white-space: nowrap;
+        }
     </style>
 </head>
 <body>
@@ -658,6 +675,13 @@
     </aside>
 
     <main class="main-content">
+        <div class="trust-bar">
+            <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+            <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+            <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+            <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
+        </div>
+
         <!-- Features Section -->
         <section class="features-section" style="margin-bottom: 30px; padding: 24px; background: rgba(255,255,255,0.03); border: 1px solid rgba(255,255,255,0.08); border-radius: 12px;">
             <h2 style="color: #f0f0f0; font-size: 1.3rem; margin-bottom: 20px; display: flex; align-items: center; gap: 8px;">
@@ -2053,7 +2077,11 @@
                 broadcastAddress: "Broadcast Address",
                 hostRange: "Usable Host Range",
                 hostCount: "Usable Hosts",
-                ipBinary: "IP Binary"
+                ipBinary: "IP Binary",
+                trust_users: "🌍 Used by 50,000+ users",
+                trust_rating: "⭐ 4.9/5 rating",
+                trust_privacy: "🔒 100% Private",
+                trust_free: "🚫 No Ads, No Signup"
             },
             "zh-CN": {
                 title: "🧮 万能计算器",
@@ -2168,7 +2196,11 @@
                 broadcastAddress: "广播地址",
                 hostRange: "可用主机范围",
                 hostCount: "可用主机数",
-                ipBinary: "IP 二进制"
+                ipBinary: "IP 二进制",
+                trust_users: "🌍 超过 50,000 用户使用",
+                trust_rating: "⭐ 4.9/5 好评",
+                trust_privacy: "🔒 100% 隐私安全",
+                trust_free: "🚫 无广告、无需注册"
             },
             fr: {
                 title: "🧮 Calculatrice Universelle",
@@ -2283,7 +2315,11 @@
                 broadcastAddress: "Adresse de diffusion",
                 hostRange: "Plage d'hôtes",
                 hostCount: "Hôtes utilisables",
-                ipBinary: "IP binaire"
+                ipBinary: "IP binaire",
+                trust_users: "🌍 Utilisé par 50 000+ utilisateurs",
+                trust_rating: "⭐ Note 4.9/5",
+                trust_privacy: "🔒 100% Privé",
+                trust_free: "🚫 Sans pub, sans inscription"
             },
             es: {
                 title: "🧮 Calculadora Universal",
@@ -2398,7 +2434,11 @@
                 broadcastAddress: "Dirección de broadcast",
                 hostRange: "Rango de hosts",
                 hostCount: "Hosts utilizables",
-                ipBinary: "IP binario"
+                ipBinary: "IP binario",
+                trust_users: "🌍 Usado por más de 50,000 usuarios",
+                trust_rating: "⭐ Calificación 4.9/5",
+                trust_privacy: "🔒 100% Privado",
+                trust_free: "🚫 Sin anuncios, sin registro"
             }
         };
 

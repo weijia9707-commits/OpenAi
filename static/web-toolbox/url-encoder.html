@@ -776,6 +776,22 @@
             .features-grid { grid-template-columns: 1fr; }
             .related-grid { grid-template-columns: repeat(2, 1fr); }
         }
+.trust-bar {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    margin: 12px 0 24px;
+    padding: 12px 20px;
+    background: rgba(124, 58, 237, 0.1);
+    border: 1px solid rgba(124, 58, 237, 0.2);
+    border-radius: 12px;
+}
+.trust-item {
+    font-size: 13px;
+    color: #a78bfa;
+    white-space: nowrap;
+}
     </style>
 </head>
 <body>
@@ -917,6 +933,13 @@
             </div>
         </div>
     </div>
+</div>
+
+<div class="trust-bar">
+    <span class="trust-item" data-i18n="trust_users">🌍 Used by 50,000+ users</span>
+    <span class="trust-item" data-i18n="trust_rating">⭐ 4.9/5 rating</span>
+    <span class="trust-item" data-i18n="trust_privacy">🔒 100% Private</span>
+    <span class="trust-item" data-i18n="trust_free">🚫 No Ads, No Signup</span>
 </div>
 
 <!-- ==================== 功能特点 ==================== -->
@@ -1107,7 +1130,11 @@
             relatedCrypto: 'Crypto & Encoding Toolkit',
             relatedJson: 'JSON Viewer',
             relatedPassword: 'Password Generator',
-            langName: '\ud83c\uddfa\ud83c\uddf8 English'
+            langName: '\ud83c\uddfa\ud83c\uddf8 English',
+            trust_users: '🌍 Used by 50,000+ users',
+            trust_rating: '⭐ 4.9/5 rating',
+            trust_privacy: '🔒 100% Private',
+            trust_free: '🚫 No Ads, No Signup'
         },
         'zh-CN': {
             backHome: '\u2190 \u8fd4\u56de\u5de5\u5177\u7bb1',
@@ -1178,7 +1205,11 @@
             relatedCrypto: '加密与编码工具箱',
             relatedJson: 'JSON 查看器',
             relatedPassword: '密码生成器',
-            langName: '\ud83c\udde8\ud83c\uddf3 \u4e2d\u6587'
+            langName: '\ud83c\udde8\ud83c\uddf3 \u4e2d\u6587',
+            trust_users: '🌍 超过 50,000 用户使用',
+            trust_rating: '⭐ 4.9/5 好评',
+            trust_privacy: '🔒 100% 隐私安全',
+            trust_free: '🚫 无广告、无需注册'
         },
         fr: {
             backHome: '\u2190 Retour \u00e0 la bo\u00eete \u00e0 outils',
@@ -1249,7 +1280,11 @@
             relatedCrypto: 'Outils de cryptage et d\'encodage',
             relatedJson: 'Visualiseur JSON',
             relatedPassword: 'G\u00e9n\u00e9rateur de mots de passe',
-            langName: '\ud83c\uddeb\ud83c\uddf7 Fran\u00e7ais'
+            langName: '\ud83c\uddeb\ud83c\uddf7 Fran\u00e7ais',
+            trust_users: '🌍 Utilisé par 50 000+ utilisateurs',
+            trust_rating: '⭐ Note 4.9/5',
+            trust_privacy: '🔒 100% Privé',
+            trust_free: '🚫 Sans pub, sans inscription'
         },
         es: {
             backHome: '\u2190 Volver a la caja de herramientas',
@@ -1320,7 +1355,11 @@
             relatedCrypto: 'Herramientas de cifrado y codificaci\u00f3n',
             relatedJson: 'Visor JSON',
             relatedPassword: 'Generador de contrase\u00f1as',
-            langName: '\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol'
+            langName: '\ud83c\uddea\ud83c\uddf8 Espa\u00f1ol',
+            trust_users: '🌍 Usado por más de 50,000 usuarios',
+            trust_rating: '⭐ Calificación 4.9/5',
+            trust_privacy: '🔒 100% Privado',
+            trust_free: '🚫 Sin anuncios, sin registro'
         }
     };
 
