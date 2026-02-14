@@ -45,6 +45,23 @@ hugo new posts/my-new-post.md
 
 推送到 `main` 分支后，GitHub Actions 会自动构建并部署到 GitHub Pages。
 
+### 发布后自动验收
+
+新增脚本：`scripts/post-deploy-verify.sh`
+
+示例：
+
+```bash
+bash scripts/post-deploy-verify.sh \
+  --path /posts/ai/2026-02-14-free-fs-enterprise-file-system/ \
+  --title "AI使用：开源企业文件管理 Free-FS 快速评估与落地建议"
+```
+
+脚本会自动重试并校验：
+- 首页是否出现文章链接
+- 文章页是否 200 且标题匹配
+- `sitemap.xml` 是否收录文章链接
+
 ## 目录结构
 
 ```
