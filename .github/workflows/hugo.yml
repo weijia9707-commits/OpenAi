@@ -63,3 +63,55 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  post_deploy_verify:
+    name: Post-deploy verify
+    runs-on: ubuntu-latest
+    needs: deploy
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Detect latest changed post in this push
+        id: detect
+        run: |
+          set -euo pipefail
+          BEFORE="${{ github.event.before }}"
+          SHA="${{ github.sha }}"
+
+          if [[ -z "$BEFORE" || "$BEFORE" == "0000000000000000000000000000000000000000" ]]; then
+            BEFORE="$(git rev-list --max-count=1 HEAD~1 || true)"
+          fi
+
+          CHANGED=$(git diff --name-only "$BEFORE" "$SHA" | grep -E '^content/posts/.+/index\.md$' | tail -n1 || true)
+
+          if [[ -z "$CHANGED" ]]; then
+            echo "found=false" >> "$GITHUB_OUTPUT"
+            echo "No post index.md changed in this push; skip content-specific verification."
+            exit 0
+          fi
+
+          TITLE=$(awk -F "'" '/^title\s*=/{print $2; exit}' "$CHANGED")
+          POST_PATH="/${CHANGED#content}/"
+          POST_PATH="${POST_PATH%index.md}"
+
+          echo "found=true" >> "$GITHUB_OUTPUT"
+          echo "post_path=$POST_PATH" >> "$GITHUB_OUTPUT"
+          echo "post_title=$TITLE" >> "$GITHUB_OUTPUT"
+
+          echo "Detected post: $POST_PATH"
+          echo "Detected title: $TITLE"
+
+      - name: Run post-deploy verification
+        if: steps.detect.outputs.found == 'true'
+        run: |
+          bash scripts/post-deploy-verify.sh \
+            --base https://weijia0707.com \
+            --path "${{ steps.detect.outputs.post_path }}" \
+            --title "${{ steps.detect.outputs.post_title }}" \
+            --retries 30 \
+            --interval 10
+
+      - name: Skip note
+        if: steps.detect.outputs.found != 'true'
+        run: echo "✅ Skip: no new/updated post content in this push"
